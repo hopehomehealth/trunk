@@ -1,6 +1,6 @@
 <?php 
 /*
-声明：以下信息并不是本php文件的作者，不对本文件负责；以下信息只是提供了对本php文件加密。如果需要对PHP文件进行加密，请按以下信息联系。
+明：以下信息并不是本php文件的作者，不对本文件负责；以下信息只是提供了对本php文件加密。如果需要对PHP文件进行加密，请按以下信息联系。
 Warning: do not modify this file, otherwise may cause the program to run.
 QQ: 1833596
 Website: http://www.phpjm.net/
