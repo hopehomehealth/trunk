@@ -1,0 +1,590 @@
+.top {
+  width: 100%;
+}
+.sidebar {
+  width: 208px;
+  float: left;
+  margin-top: 20px;
+  margin-right: -230px;
+}
+.sidebar .sidebar-line-top {
+  min-height: 34px;
+  padding-left: 39px;
+  margin-top: -1px;
+  line-height: 34px;
+  border-top: 1px solid #eaeaea;
+}
+.sidebar .sidebar-line {
+  min-height: 34px;
+  margin-top: -1px;
+  border-top: 1px solid #eaeaea;
+  z-index: 0;
+}
+.sidebar .parent-link {
+  float: left;
+  display: block;
+  font-size: 14px;
+}
+.sidebar .f60 {
+  color: #ff6600;
+}
+.sidebar .f33 {
+  color: #333333;
+}
+.sidebar .icon {
+  float: left;
+  margin-left: 15px;
+  margin-right: 7px;
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  background: url(../../img/member_center/icon.png) no-repeat;
+  overflow: hidden;
+}
+.sidebar .ic1 {
+  width: 16px;
+  background: url(../../img/member_center/icon.png) 0 -18px no-repeat;
+}
+.sidebar .ic2 {
+  width: 18px;
+  background: url(../../img/member_center/icon.png) 0 -36px no-repeat;
+}
+.sidebar .ic3 {
+  width: 16px;
+  background: url(../../img/member_center/icon.png) 0 -54px no-repeat;
+}
+.sidebar .ic4 {
+  width: 16px;
+  background: url(../../img/member_center/icon.png) 0 -72px no-repeat;
+}
+.sidebar .relative {
+  height: 20px;
+  padding: 7px 0;
+  clear: both;
+  cursor: pointer;
+}
+.sidebar .arrow {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+  width: 11px;
+  height: 7px;
+  background: url(../../img/member_center/icon.png) top right no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+}
+.sidebar .up {
+  background: url(../../img/member_center/icon.png) right -7px no-repeat;
+  overflow: hidden;
+}
+.sidebar .menu {
+  padding-left: 39px;
+  padding-bottom: 5px;
+  display: block;
+}
+.sidebar .menu a {
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  text-decoration: none;
+  color: #666;
+}
+.sidebar .menu a:hover {
+  color: #f60;
+}
+.sidebar .menu .active {
+  color: #f60;
+  border-left: 2px solid #f60;
+  padding-left: 9px;
+}
+.sidebar .menu span {
+  color: #ff6600;
+}
+.sidebar .sid-banner {
+  padding: 2px;
+  border-top: 1px solid #eaeaea;
+  margin-top: 20px;
+}
+.sidebar .sid-banner img {
+  width: 202px;
+  height: 84px;
+}
+.w-main {
+  float: left;
+  width: 1010px;
+  margin-left: 230px;
+  margin-top: 20px;
+}
+.main {
+  width: 100%;
+}
+.information {
+  padding-left: 14px;
+  height: 110px;
+}
+.head-portrait {
+  float: left;
+  position: relative;
+  z-index: 0;
+  width: 90px;
+  height: 90px;
+  margin: 11px 0 0 0px;
+  background: url(../../img/member_center/none-portrait.png) no-repeat;
+  display: inline;
+}
+.head-portrait .new-portrait {
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+.head-portrait .new-portrait img {
+  width: 90px;
+  height: 90px;
+}
+.head-portrait .none-portrait {
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: url(../../img/member_center/head-portrait.png) no-repeat;
+}
+.inform {
+  float: left;
+  display: inline-block;
+  _width: 290px;
+  height: 74px;
+  margin: 18px 0;
+  padding: 0 20px;
+  border-right: 1px solid #F9F9F9;
+}
+.inform .name {
+  height: 35px;
+  line-height: 45px;
+}
+.inform .name span {
+  display: inline-block;
+  color: #0055aa;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.inform .security {
+  width: 290px;
+}
+.inform .security span {
+  float: left;
+}
+.inform .security .level {
+  float: left;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+.inform .security .level li {
+  float: left;
+  width: 34px;
+  height: 9px;
+  background-color: #E5E5E5;
+  margin-left: 10px;
+  font-size: 4px;
+}
+.inform .security .level.on-ruo li.ruo {
+  background-color: #f90;
+}
+.inform .security .level.on-zhong li.ruo {
+  background-color: #f90;
+}
+.inform .security .level.on-zhong li.zhong {
+  background-color: #f60;
+}
+.inform .security .level.on-qiang li.ruo {
+  background-color: #f90;
+}
+.inform .security .level.on-qiang li.zhong {
+  background-color: #f90;
+}
+.inform .security .level.on-qiang li.qiang {
+  background-color: #f60;
+}
+.inform .security .levelshow {
+  float: left;
+  padding-left: 5px;
+}
+.inform .security .setup {
+  float: left;
+  padding-left: 5px;
+  color: #0055aa;
+}
+.account {
+  float: left;
+  height: 74px;
+  margin: 18px 0;
+  padding: 0 15px;
+  border-right: 1px solid #F9F9F9;
+}
+.account li {
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+.account li .number {
+  height: 35px;
+  line-height: 45px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f60;
+}
+.account li .number em {
+  vertical-align: baseline;
+  font-size: 12px;
+}
+.account li span {
+  line-height: 29px;
+}
+.account li .hui {
+  color: #666;
+}
+.member-level {
+  float: left;
+  height: 74px;
+  margin: 18px 0  ;
+  padding: 0 20px;
+}
+.member-level .m-top {
+  height: 23px;
+  padding-top: 13px;
+}
+.member-level .m-top span {
+  float: left;
+  padding-left: 5px;
+}
+.member-level .m-top span i {
+  float: left;
+  width: 10px;
+  height: 11px;
+  margin-right: 3px ;
+  background: url(../../img/member_center/icon.png) bottom left no-repeat;
+}
+.member-level .m-top a {
+  float: left;
+  width: 50px;
+  text-decoration: none;
+  color: #0055aa;
+  cursor: pointer;
+  margin-left: 40px;
+}
+.member-level .m-top a:hover {
+  color: #ff6600;
+}
+.member-level .m-bot {
+  position: relative;
+  height: 24px;
+}
+.member-level .m-bot .sign {
+  float: left;
+  width: 50px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px dashed #7FBE25;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.member-level .m-bot .sign:hover {
+  border: 1px solid #A5D363;
+  background-color: #A5D363;
+  color: #fff;
+}
+.member-level .m-bot .cheng {
+  float: left;
+  width: 50px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #0055aa;
+  cursor: pointer;
+  margin-left: 21px;
+}
+.member-level .m-bot .on {
+  border: 1px solid #A5D363;
+  background-color: #A5D363;
+  color: #fff;
+}
+.member-level .m-bot .sign-icon {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin: 8px 3px;
+  background: url(../../img/member_center/icon.png) no-repeat;
+}
+.member-level .m-bot .ic1 {
+  background-position: -19px 0;
+}
+.member-level .m-bot .ic2 {
+  background-position: -32px 0;
+}
+.member-level .m-bot .ic3 {
+  background-position: -45px 0;
+}
+.member-level .m-bot .ic4 {
+  background-position: -58px 0;
+}
+.member-level .m-bot .ic5 {
+  background-position: -71px 0;
+}
+.member-level .m-bot .fu {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  height: 24px;
+  line-height: 24px;
+  color: #f60;
+  font-size: 14px;
+}
+.details {
+  width: 100%;
+  margin-top: 20px;
+}
+.details .total {
+  padding: 0 14px;
+  background-color: #fcfcfc;
+}
+.details .total .to1 {
+  float: left;
+  width: 500px;
+  line-height: 47px;
+}
+.details .total .to1 .to1-line {
+  float: left;
+  padding-right: 25px;
+  color: #666;
+}
+.details .total .to1 .to1-line span {
+  color: #f60;
+  padding-left: 5px;
+}
+.details .total .to1 .to1-line .hui {
+  color: #666;
+}
+.details .total .to1 .f16 {
+  font-size: 16px;
+  color: #333;
+}
+.details .total .to2 {
+  float: right;
+  width: 100px;
+  line-height: 47px;
+  margin-right: 5px;
+  text-align: right;
+}
+.details .total .to2 a {
+  cursor: pointer;
+  color: #333;
+}
+.details .total .to2 a:hover {
+  color: #f60;
+}
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 12px;
+}
+.details table td {
+  border-top: 1px solid #e6e6e6;
+  padding: 20px 0;
+}
+.details table p {
+  line-height: 20px;
+}
+.details table .name {
+  width: 420px;
+  padding-left: 20px ;
+}
+.details table .name .orange {
+  color: #f60;
+  padding-right: 0;
+}
+.details table .memo {
+  width: 40px;
+}
+.details table .members {
+  width: 60px;
+  text-align: center;
+}
+.details table .price {
+  width: 60px;
+  text-align: center;
+}
+.details table .price p {
+  color: #f60;
+}
+.details table .price .hui {
+  color: #666;
+}
+.details table .state {
+  width: 80px;
+  text-align: center;
+}
+.details table .state a {
+  cursor: pointer;
+  color: #0055aa;
+}
+.details table .state a:hover {
+  color: #ff6600;
+}
+.details table .action {
+  width: 100px;
+  text-align: center;
+}
+.details table .action .time {
+  padding-left: 10px;
+  position: relative;
+}
+.details table .action .time i {
+  position: absolute;
+  top: 3px;
+  left: 13px;
+  *top: 1px;
+  *left: 8px;
+  width: 14px;
+  height: 14px;
+  background: url(../../img/member_center/icon.png) 0 -90px no-repeat;
+}
+.details table .action a {
+  cursor: pointer;
+  color: #0055aa;
+}
+.details table .action a:hover {
+  color: #ff6600;
+}
+.details table .action .button {
+  display: block;
+  width: 80px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #f90;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.details table .action .button:hover {
+  background-color: #f60;
+  color: #fff;
+}
+.details table .action .review {
+  display: block;
+  width: 80px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #FAFAFA;
+  text-align: center;
+  color: #666;
+  border: 1px solid #B3B3B3;
+  border-radius: 2px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.details table .action .review:hover {
+  background-color: #f60;
+  border-color: #f60;
+  color: #fff;
+}
+.details span {
+  padding-right: 20px;
+  width: 60px;
+}
+.details .platett {
+  padding: 14px 0 0 0;
+  border-top: 1px solid #e6e6e6;
+}
+.details .platett dt {
+  float: left;
+  width: 178px;
+  padding: 2px ;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+}
+.details .platett dt .pic {
+  width: 178px;
+  height: 132px;
+  position: relative;
+}
+.details .platett dt .pic img {
+  width: 178px;
+  height: 132px;
+}
+.details .platett dt .pic .fu {
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+  height: 19px;
+  line-height: 19px;
+  padding: 0 5px;
+  background-color: #f60;
+  color: #fff;
+}
+.details .platett dt .pic .fu1 {
+  position: absolute;
+  bottom: 11px;
+  left: -3px;
+  width: 3px;
+  height: 22px;
+  background: url(../../img/member_center/icon.png) 0 -106px no-repeat;
+}
+.details .platett dt .title {
+  width: 98%;
+  line-height: 20px;
+  color: #333;
+  text-decoration: none;
+  padding: 3px;
+  display: block;
+}
+.details .platett dt .title:hover {
+  color: #ff6600;
+}
+.order-empty {
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  font-size: 18px;
+  border-top: 1px solid #eaeaea;
+}
+.xun-bottom img {
+  width: 100%;
+}
+.ordhead tr {
+  height: 29px;
+  background-color: #fcfcfc;
+  font-size: 14px;
+}
+.ordhead tr p {
+  font-weight: normal;
+}
+.ordhead tr .price p {
+  color: #666;
+}
+.ordhead td {
+  text-align: center;
+  padding: 0  !important;
+}
+.ordhead .name {
+  padding-left: 20px !important;
+}
+@media screen and (max-width: 1240px) {
+  .container {
+    width: 990px;
+  }
+  .w-main {
+    width: 760px;
+  }
+  .details .platett dt {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+}

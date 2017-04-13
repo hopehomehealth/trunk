@@ -1,0 +1,4010 @@
+【2017-04-05 09:23:39】
+http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:23:40' AND `sale_end`>='2017-04-05 09:23:40' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:23:40】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:01】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.439060565084219
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:24:02' AND `sale_end`>='2017-04-05 09:24:02' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:02】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:23】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8863141222391278&v_referer=&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:23】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8863141222391278&v_referer=&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'ssvsuia3791odjf1i0m0gkqro2', '127.0.0.1', '', 'http://travel.bus365.com/', '', '2017-04-05 09:24:23' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:24:30' AND `sale_end`>='2017-04-05 09:24:30' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:30】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:51】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:24:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.8361232541501522
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:25:15' AND `sale_end`>='2017-04-05 09:25:15' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:36】
+http://travel.bus365.com/stat?cmd=do&rnd=0.17259452980943024&v_referer=http://travel.bus365.com/&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:25:36】
+http://travel.bus365.com/stat?cmd=do&rnd=0.17259452980943024&v_referer=http://travel.bus365.com/&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/', 'ssvsuia3791odjf1i0m0gkqro2', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 09:25:36' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:30:20】
+http://travel.bus365.com/search/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:09】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:32:10】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+ SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC  LIMIT 0 , 20
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='zhoubian' ORDER BY `order_id` ASC  LIMIT 0, 8 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000262' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000263' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000264' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000265' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000266' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000267' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000268' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000269' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,10;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:10】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  AND `goods_cat_id`='0' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:31】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.8840297190472484
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:36:32' AND `sale_end`>='2017-04-05 09:36:32' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:32】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:53】
+http://travel.bus365.com/stat?cmd=do&rnd=0.6338522871956229&v_referer=http://travel.bus365.com/menpiao/&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:36:53】
+http://travel.bus365.com/stat?cmd=do&rnd=0.6338522871956229&v_referer=http://travel.bus365.com/menpiao/&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'ssvsuia3791odjf1i0m0gkqro2', '127.0.0.1', '', 'http://travel.bus365.com/zhoubian/', '', '2017-04-05 09:36:53' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+ SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC  LIMIT 0 , 20
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='zhoubian' ORDER BY `order_id` ASC  LIMIT 0, 8 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000262' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000263' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000264' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000265' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000266' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000267' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000268' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000269' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,10;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  AND `goods_cat_id`='0' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.647644056007266
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:39:24' AND `sale_end`>='2017-04-05 09:39:24' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:45】
+http://travel.bus365.com/stat?cmd=do&rnd=0.9383619634900242&v_referer=http://travel.bus365.com/menpiao/&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:39:45】
+http://travel.bus365.com/stat?cmd=do&rnd=0.9383619634900242&v_referer=http://travel.bus365.com/menpiao/&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'ssvsuia3791odjf1i0m0gkqro2', '127.0.0.1', '', 'http://travel.bus365.com/zhoubian/', '', '2017-04-05 09:39:45' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:46:03' AND `sale_end`>='2017-04-05 09:46:03' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:03】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:24】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.23422433156520128
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 09:46:25' AND `sale_end`>='2017-04-05 09:46:25' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:25】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:46】
+http://travel.bus365.com/stat?cmd=do&rnd=0.11378922662697732&v_referer=&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 09:46:46】
+http://travel.bus365.com/stat?cmd=do&rnd=0.11378922662697732&v_referer=&v_session_id=ssvsuia3791odjf1i0m0gkqro2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'ssvsuia3791odjf1i0m0gkqro2', '127.0.0.1', '', 'http://travel.bus365.com/', '', '2017-04-05 09:46:46' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:07:17' AND `sale_end`>='2017-04-05 10:07:17' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:17】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:38】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.45736719388514757
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:07:39' AND `sale_end`>='2017-04-05 10:07:39' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:07:39】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:00】
+http://travel.bus365.com/stat?cmd=do&rnd=0.4603331086691469&v_referer=&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:00】
+http://travel.bus365.com/stat?cmd=do&rnd=0.4603331086691469&v_referer=&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'pvpg2ai0jmn92mrdue2qb26qo6', '127.0.0.1', '', 'http://travel.bus365.com/', '', '2017-04-05 10:08:00' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+ SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC  LIMIT 0 , 20
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='zhoubian' ORDER BY `order_id` ASC  LIMIT 0, 8 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000262' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000263' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000264' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000265' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000266' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000267' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000268' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000269' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,10;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:02】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  AND `goods_cat_id`='0' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.0009963186457753181
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:08:24' AND `sale_end`>='2017-04-05 10:08:24' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:45】
+http://travel.bus365.com/stat?cmd=do&rnd=0.08882566913962364&v_referer=http://travel.bus365.com/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:08:45】
+http://travel.bus365.com/stat?cmd=do&rnd=0.08882566913962364&v_referer=http://travel.bus365.com/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/', 'pvpg2ai0jmn92mrdue2qb26qo6', '127.0.0.1', '', 'http://travel.bus365.com/zhoubian/', '', '2017-04-05 10:08:45' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+ SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC  LIMIT 0 , 20
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='zhoubian' ORDER BY `order_id` ASC  LIMIT 0, 8 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000262' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000263' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000264' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000265' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000266' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000267' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000268' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000269' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,10;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:10:59】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  AND `goods_cat_id`='0' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.6993341587949544
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:11:20' AND `sale_end`>='2017-04-05 10:11:20' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:11:20】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:12:02' AND `sale_end`>='2017-04-05 10:12:02' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:02】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.9333319521974772
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:12:23' AND `sale_end`>='2017-04-05 10:12:23' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:23】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:44】
+http://travel.bus365.com/stat?cmd=do&rnd=0.23649428877979517&v_referer=&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:44】
+http://travel.bus365.com/stat?cmd=do&rnd=0.23649428877979517&v_referer=&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'pvpg2ai0jmn92mrdue2qb26qo6', '127.0.0.1', '', 'http://travel.bus365.com/', '', '2017-04-05 10:12:44' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+ SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC  LIMIT 0 , 20
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='zhoubian' ORDER BY `order_id` ASC  LIMIT 0, 8 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000262' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000263' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000264' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000265' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000266' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000267' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000268' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='8000269' AND `departdate`>='2017-04-05' ORDER BY `sku_id` ASC LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,10;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:12:54】
+http://travel.bus365.com/zhoubian/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  AND `goods_cat_id`='0' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.317835547728464
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:13:15' AND `sale_end`>='2017-04-05 10:13:15' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:15】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:13:36' AND `sale_end`>='2017-04-05 10:13:36' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:13:36】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:14:46】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.002968264278024435
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:15:07' AND `sale_end`>='2017-04-05 10:15:07' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:07】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:28】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8009035112336278&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:15:28】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8009035112336278&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/', 'pvpg2ai0jmn92mrdue2qb26qo6', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:15:28' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:16:54】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:15】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.5393366881180555
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:17:16' AND `sale_end`>='2017-04-05 10:17:16' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:16】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:37】
+http://travel.bus365.com/stat?cmd=do&rnd=0.1491455822251737&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:37】
+http://travel.bus365.com/stat?cmd=do&rnd=0.1491455822251737&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/', 'pvpg2ai0jmn92mrdue2qb26qo6', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:17:37' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:17:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:36】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:57】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.026424889685586095
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:19:58' AND `sale_end`>='2017-04-05 10:19:58' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:19:58】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:20:19】
+http://travel.bus365.com/stat?cmd=do&rnd=0.14208196965046227&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:20:19】
+http://travel.bus365.com/stat?cmd=do&rnd=0.14208196965046227&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/', 'pvpg2ai0jmn92mrdue2qb26qo6', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:20:19' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:41】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:22:42】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.5076134693808854
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:23:03' AND `sale_end`>='2017-04-05 10:23:03' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:03】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:24】
+http://travel.bus365.com/stat?cmd=do&rnd=0.4070225281175226&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:23:24】
+http://travel.bus365.com/stat?cmd=do&rnd=0.4070225281175226&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=pvpg2ai0jmn92mrdue2qb26qo6&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/', 'pvpg2ai0jmn92mrdue2qb26qo6', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:23:24' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:10】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:11】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:32】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.8620116272941232
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:26:33' AND `sale_end`>='2017-04-05 10:26:33' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:53】
+http://travel.bus365.com/stat?cmd=do&rnd=0.32686266442760825&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=jqd7s9f2772r256ebgplamiim0&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:26:53】
+http://travel.bus365.com/stat?cmd=do&rnd=0.32686266442760825&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=jqd7s9f2772r256ebgplamiim0&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/', 'jqd7s9f2772r256ebgplamiim0', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:26:53' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:25】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.3625392713584006
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:28:51' AND `sale_end`>='2017-04-05 10:28:51' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:28:51】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:29:12】
+http://travel.bus365.com/stat?cmd=do&rnd=0.5249725605826825&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:29:12】
+http://travel.bus365.com/stat?cmd=do&rnd=0.5249725605826825&v_referer=http://travel.bus365.com/zhoubian/&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/', 'q14i4mkl9cv56mupl3sf50iac2', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:29:12' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:36:53】
+http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:36:53】
+http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:36:53】
+http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,6;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:36:53】
+http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1 LIMIT 0, 6
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:14】
+http://travel.bus365.com/member/plugin?cmd=browse&goods_id=
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:14】
+http://travel.bus365.com/member/plugin?cmd=browse&goods_id=
+SELECT * FROM t_user WHERE user_id='' AND `state`='1' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:14】
+http://travel.bus365.com/member/plugin?cmd=browse&goods_id=
+SELECT COUNT(*) FROM `t_user_order` WHERE `site_id`='801' AND `user_id`='' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:14】
+http://travel.bus365.com/member/plugin?cmd=browse&goods_id=
+SELECT * FROM t_user WHERE user_id='' AND `state`='1' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:35】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.3406103989109397
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:37:36' AND `sale_end`>='2017-04-05 10:37:36' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:36】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:57】
+http://travel.bus365.com/stat?cmd=do&rnd=0.9118956378661096&v_referer=http://travel.bus365.com/menpiao/&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:37:57】
+http://travel.bus365.com/stat?cmd=do&rnd=0.9118956378661096&v_referer=http://travel.bus365.com/menpiao/&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'q14i4mkl9cv56mupl3sf50iac2', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1', '', '2017-04-05 10:37:57' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:43】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:38:44】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.7099636569619179
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:39:05' AND `sale_end`>='2017-04-05 10:39:05' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:26】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8439726391807199&v_referer=http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:39:26】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8439726391807199&v_referer=http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/ticket_detail-181737-100533.html?isMap=1', 'q14i4mkl9cv56mupl3sf50iac2', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:39:26' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:45:52】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:13】
+http://travel.bus365.com/stat?cmd=ui&goods_id=&rnd=0.5811407205183059
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-05 10:46:14' AND `sale_end`>='2017-04-05 10:46:14' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.`is_sale`=1 AND a.`is_hot`=1  ORDER BY a.`goods_id` DESC LIMIT 0,5
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:14】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:35】
+http://travel.bus365.com/stat?cmd=do&rnd=0.04633238259702921&v_referer=&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 10:46:35】
+http://travel.bus365.com/stat?cmd=do&rnd=0.04633238259702921&v_referer=&v_session_id=q14i4mkl9cv56mupl3sf50iac2&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'q14i4mkl9cv56mupl3sf50iac2', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-05 10:46:35' ); 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ( 2002 )
+
+【2017-04-05 16:35:41】
+http://travel.bus365.com/console/?goods_type=1&kw=&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=36&y=8
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:35:43】
+http://travel.bus365.com/console/?goods_type=1&kw=&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=45&y=12
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:36:07】
+http://travel.bus365.com/console/?goods_type=1&kw=jkhgkj&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=21&y=9
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:36:13】
+http://travel.bus365.com/console/?goods_type=1&kw=%B1%B1%BE%A9&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=-671&y=-215
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:36:32】
+http://travel.bus365.com/console/?goods_type=1&kw=%B1%B1%BE%A9&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=55&y=15
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:36:37】
+http://travel.bus365.com/console/?goods_type=1&kw=%B1%B1&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=-671&y=-215
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:39:19】
+http://travel.bus365.com/console/?goods_type=1&kw=%B1%B1%BE%A9%B5%CF%CA%BF%C4%E1&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=3&floor_title=%D6%DC%B1%DF%D3%CE&x=-671&y=-215
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:39:21】
+http://travel.bus365.com/console/?goods_type=1&kw=%B1%B1%BE%A9%B5%CF%CA%BF%C4%E1&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=3&floor_title=%D6%DC%B1%DF%D3%CE&x=26&y=22
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:39:23】
+http://travel.bus365.com/console/?goods_type=2&kw=%B1%B1%BE%A9%B5%CF%CA%BF%C4%E1&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=3&floor_title=%D6%DC%B1%DF%D3%CE&x=15&y=14
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:39:26】
+http://travel.bus365.com/console/?goods_type=3&kw=%B1%B1%BE%A9%B5%CF%CA%BF%C4%E1&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=3&floor_title=%D6%DC%B1%DF%D3%CE&x=16&y=19
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:39:30】
+http://travel.bus365.com/console/?goods_type=6&kw=%B1%B1%BE%A9%B5%CF%CA%BF%C4%E1&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=3&floor_title=%D6%DC%B1%DF%D3%CE&x=33&y=6
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-05 16:39:39】
+http://travel.bus365.com/console/?goods_type=2&kw=%B1%B1%BE%A9%B5%CF%CA%BF%C4%E1&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=3&floor_title=%D6%DC%B1%DF%D3%CE&x=25&y=6
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+

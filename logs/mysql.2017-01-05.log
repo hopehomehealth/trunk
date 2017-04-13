@@ -1,0 +1,5 @@
+¡¾2017-01-05 23:14:12¡¿
+http://b2b2c.cloota.net/gentuan/jiuhuashan/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='12'  AND a.is_hot=1   ORDER BY `order_id` ASC
+Unknown column 'a.is_hot' in 'where clause' ( 1054 )
+

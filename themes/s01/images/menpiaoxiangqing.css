@@ -1,0 +1,175 @@
+
+
+
+#spotListDetail_mainBox{width: 100%;overflow: hidden;background-color: #f5f5f5;}
+#spotListDetail_main{width: 1190px;overflow: hidden;margin:0 auto;}
+
+/*------------------------广告轮播-----------------------------*/
+.spotListDetail_ad{width: 1190px;height: 62px;margin:12px 0;position: relative;}
+.av{ background-color:#ff6702 !important;}
+
+
+/*--------------------------内容1------------------------------------*/
+.spotListDetail_main1{width: 1150px;height: 328px;background-color: white;padding:20px;}
+.spotListDetail_main1_lunbo{float: left;width:570px;height: 325px;position: relative;}
+.bigPic{width:465px;height: 325px;display: block;float: left;}
+.smallPicBox{width:96px;height:325px;overflow: hidden;float: right;position: relative;}
+.smallPicBox ul{width:96px;height:auto;position: absolute;left: 0;top: 0;}
+.smallPicBox ul li{margin-bottom:5px;width: 90px;height: 60px;border:solid 3px #fff;}
+.smallPicBox ul li img{display: block;width:90px;height: 60px;cursor: pointer;}
+.spotAlbum{display: block;width:96px;height:40px;position: absolute;right: 0;bottom: 0;background-color: #fff;font-size: 14px;color:#9d9d9d;line-height: 55px;text-align: center;}
+#lunbo_pre{width: 28px;height: 28px;float: left;margin:6px 10px;background-image: url("../images/pre_next_btns.jpg");background-repeat: no-repeat;background-position:0 -33px;}
+#lunbo_next{width: 28px;height: 28px;float: left;margin:6px 10px;background-image: url("../images/pre_next_btns.jpg");background-repeat: no-repeat;background-position:-35px -0px;}
+.smallPicBox .smallPic_hover{border:solid 3px #1fcc9e;}
+
+
+
+.spotListDetail_main1_info{float: left;width:550px;height: 325px;padding-left:25px;}
+.detailInfo_title{font-size: 30px;width: 550px;color: #3c4a55;font-weight: bold;line-height:45px;}
+.detailInfo_tips{width: 550px;line-height: 32px;font-size: 15px;color: #898995;padding-bottom:15px;}
+.spotAddress{width: 550px;font-size:16px;line-height:45px;color:#6b6b6b;}
+.spotAddress b{color: #333;}
+.spotAddress .baiduMap{color: #0e75b0;padding-left:20px;background: url("../images/map.png") no-repeat left center;cursor: pointer;}
+.startTime{width: 550px;font-size:16px;line-height:45px;color:#6b6b6b;}
+.startTime b{color: #333;}
+.serveensure{width: 550px;font-size:16px;line-height:45px;color:#333;}
+.serveensure span{display: inline-block;width:58px;height: 25px;border-radius: 5px;background-color: #1cce9c;color: white;font-size: 14px;line-height: 25px;text-align: center;margin:10px 5px;}
+.manyi{width: 550px;font-size:16px;line-height:45px;color:#1ccc9d;}
+.manyi b{color: #333;}
+
+
+.spotListDetail_main2{width: 1188px;overflow: hidden;border:solid 1px #e1e1e1;}
+.spotListDetail_main2_top{width: 1188px;height:45px;border-bottom: solid 1px #e1e1e1;}
+.spotListDetail_main2_top span{display: inline-block;width:140px;height: 36px;line-height: 36px;text-align: center;font-size: 16px;color: #333;margin:10px 0 0 30px;border-radius: 5px 5px 0 0;background-color: white;}
+.spotListDetail_main2_title{width: 1188px;height:50px;line-height: 50px;color: #999;background-color: white;}
+.spotListDetail_main2_title ul{width: 1188px;height:50px;}
+.spotListDetail_main2_title ul li{float: left;height: 50px;text-align: center;font-size: 14px;}
+.ticketType{width:140px;}
+.product{width:340px;}
+.reserveTime{width:180px;}
+.menshiPrice{width:150px;}
+.ourPrice{width:120px;}
+.payType{width:150px;}
+.reserve{width: 100px;}
+
+.spotListDetail_main2_table{width: 1188px;overflow:hidden;background-color:#e6e6e6;}
+.spotListDetail_main2_table1{width: 1188px;overflow: hidden;border-bottom:solid 1px #ddd;}
+.spotListDetail_main2_table1 .ticketType{float: left;width: 140px;font-size: 16px;text-align: center;line-height: 44px;}
+.spotListDetail_main2_table1Right{width:1048px;overflow: hidden;background-color: white;margin-top:4px;}
+.spotListDetail_main2_table1Right ul{width:1048px;overflow: hidden;border-bottom: dashed 1px #ccc;cursor:pointer;}
+.spotListDetail_main2_table1Right ul li{float: left;line-height: 44px;height:44px;color: #666;font-size: 14px;text-align: center;overflow: hidden;}
+.spotListDetail_main2_table1Right .ticketType1{color: #999;width: auto;}
+.spotListDetail_main2_table1Right .product{text-align:left;width: 330px;line-height: 24px;padding:10px 0 10px 10px;}
+.spotListDetail_main2_table1Right .reserveTime{color: #333;}
+.spotListDetail_main2_table1Right .menshiPrice{color: #999;text-decoration:line-through;}
+.spotListDetail_main2_table1Right .ourPrice{color: #ff6306;font-size: 16px;}
+.spotListDetail_main2_table1Right .ourPrice span{font-size: 14px;color: #999;}
+.spotListDetail_main2_table1Right .payType{color: #333;}
+.spotListDetail_main2_table1Right .reserve a{display: block;width: 80px;height: 24px;line-height: 24px;text-align: center;background-color: #1fcc9e;color: white;font-size:16px;border-radius: 5px;margin-top:10px;}
+.subtriangle{background:url("../images/subtriangle.png") no-repeat right center;}
+.uptriangle{background:url("../images/uptriangle.png") no-repeat right center;}
+
+
+.spotListDetail_main2_table .spotTicket_infoHide{overflow:hidden;width:1028px;padding:10px;font-size: 12px;border-top: 1px solid #fc6;display: none;border-bottom: solid 1px #ddd;}
+.spotListDetail_main2_table .spotTicket_infoHide dl{width:1028px;line-height: 24px;overflow: hidden;}
+.spotListDetail_main2_table .spotTicket_infoHide dl dt{float: left;font-weight: bold;width: 70px;}
+.spotListDetail_main2_table .spotTicket_infoHide dl dd{float: left;width:950px;}
+.spotListDetail_main2_table .spotTicket_infoHide .spotTicket_pickUp{width:1028px;height: 24px;line-height: 24px;display: block;text-align: right;color: #009afe;cursor: pointer;font-weight: bold;}
+
+
+
+
+.spotListDetail_main2_table2{width: 1188px;overflow: hidden;border-bottom:solid 1px #ddd;}
+.spotListDetail_main2_table2 .ticketType{float: left;width: 140px;font-size: 16px;text-align: center;line-height: 44px;}
+.spotListDetail_main2_table2Right{width:1048px;overflow: hidden;background-color: white;}
+.spotListDetail_main2_table2Right ul{width:1048px;overflow: hidden;border-bottom: dashed 1px #ccc;cursor:pointer;}
+.spotListDetail_main2_table2Right ul li{float: left;line-height: 44px;color: #666;font-size: 14px;text-align: center;overflow: hidden;}
+.spotListDetail_main2_table2Right .ticketType1{color: #999;width: auto;}
+.spotListDetail_main2_table2Right .product{text-align:left;width: 330px;line-height: 24px;padding:10px 0 10px 10px;}
+.spotListDetail_main2_table2Right .reserveTime{color: #333;}
+.spotListDetail_main2_table2Right .menshiPrice{color: #999;text-decoration:line-through;}
+.spotListDetail_main2_table2Right .ourPrice{color: #ff6306;font-size: 16px;}
+.spotListDetail_main2_table2Right .ourPrice span{font-size: 14px;color: #999;}
+.spotListDetail_main2_table2Right .payType{color: #333;}
+.spotListDetail_main2_table2Right .reserve button{width: 80px;height: 24px;line-height: 24px;text-align: center;background-color: #1fcc9e;color: white;font-size:16px;border-radius: 5px;margin-top:10px;}
+
+
+
+.spotListDetail_main3{width: 1188px;overflow: hidden;border:solid 1px #e1e1e1;margin:20px 0;}
+.spotListDetail_main3Tab{width: 1188px;height:45px;background-color: #1fcc9e;position: relative;}
+.reserveNow{position:absolute;right:25px;top:8px;width:90px;height: 30px;line-height: 30px;text-align: center;background-color: #1fcc9e;color: white;font-size:16px;border-radius: 5px;}
+.spotListDetail_main3Tab ul{width:auto;height:42px;background-color: #f8f8f8;font-size:16px;}
+.spotListDetail_main3Tab ul li{float: left;width:100px;height:42px;line-height: 42px;text-align: center;color: #333;border-right:solid 1px #ddd;cursor:pointer;}
+.spotListDetail_main3Tab .main3TabSelected{background-color:#1fcc9e;color: white;}
+
+.spotListDetail_main3Cont{width: 1188px;overflow: hidden;}
+.spotListDetail_main3Left{float: left;padding:20px;width: 880px;overflow:hidden;background-color: white;border:solid 1px #e1e1e1;}
+.spotListDetail_main3Left1{width: 880px;overflow: hidden;}
+.spotListDetail_main3Left1 .ydxz_title{width: 880px;height:40px;line-height: 40px;border-bottom: solid 3px #ddd;}
+.spotListDetail_main3Left1 .ydxz_title i{float: left;font-style: normal;width: 30px;height:40px;border-bottom: solid 3px #1fcc9e;background: url("../images/ydxz.png") no-repeat center center;}
+.spotListDetail_main3Left1 .ydxz_title b{float: left;font-size:22px;color: #333;padding-left:10px;}
+.spotListDetail_main3Left1 dl{width:820px;overflow: hidden;padding:20px 0 20px 60px;border-bottom: dashed 1px #ddd;}
+.spotListDetail_main3Left1 dl dt{width:820px;line-height: 40px;font-size: 16px;color: #333;font-weight: bold;}
+.spotListDetail_main3Left1 dl dd{width:820px;line-height: 32px;font-size: 14px;color: #666;}
+.spotListDetail_main3Left2 .jdjs_title{width: 880px;height:40px;line-height: 40px;border-bottom: solid 3px #ddd;}
+.spotListDetail_main3Left2 .jdjs_title i{float: left;font-style: normal;width: 30px;height:40px;border-bottom: solid 3px #1fcc9e;background: url("../images/jdjs.png") no-repeat center center;}
+.spotListDetail_main3Left2 .jdjs_title b{float: left;font-size:22px;color: #333;padding-left:10px;}
+.spotListDetail_main3Left2 dl{width:820px;overflow: hidden;padding:20px 0 20px 60px;}
+.spotListDetail_main3Left2 dl dt{width:820px;line-height: 40px;font-size: 16px;color: #333;font-weight: bold;}
+.spotListDetail_main3Left2 dl dd{width:820px;line-height: 32px;font-size: 14px;color: #666;}
+.spotListDetail_main3Left2 .jdjs_dl1 dt{background-color:#f5f5f5;border-radius: 20px;}
+.spotListDetail_main3Left2 .jdjs_dl1 dd li span{display: inline-block;width: 60px;height: 20px;line-height: 20px;background-color: #8ffadc;color: #20cb9e;border-radius: 10px;text-align: center;border:solid 1px #1fcc9f;}
+.spotListDetail_main3Left3{width: 880px;overflow: hidden;}
+.spotListDetail_main3Left3 .jtzn_title{width: 880px;height:40px;line-height: 40px;border-bottom: solid 3px #ddd;}
+.spotListDetail_main3Left3 .jtzn_title i{float: left;font-style: normal;width: 30px;height:40px;border-bottom: solid 3px #1fcc9e;background: url("../images/jtzn.png") no-repeat center center;}
+.spotListDetail_main3Left3 .jtzn_title b{float: left;font-size:22px;color: #333;padding-left:10px;}
+.jtzn_map{width: 700px;height: 390px;padding:40px 0 20px 60px;}
+.jtzn_info{width: 700px;overflow: hidden;padding-left: 60px;padding-bottom: 30px;}
+.jtzn_infoLeft{width:98px;overflow: hidden;float: left;}
+.jtzn_infoLeft ul{width:96px;border-right: solid 2px #f3f3f3;}
+.jtzn_infoLeft ul li{width:90px;height:25px;padding-right:6px;cursor:pointer;text-align: right;line-height: 25px;color: #666;font-size: 14px;}
+.jtzn_infoLeft .li_hover1{background-color: #ff9900;color: white;border-radius: 10px 0 0 10px;border-right: solid 2px #fd6500;}
+.spotListDetail_main3Left4{width: 880px;overflow: hidden;}
+.spotListDetail_main3Left4 .orderSuccess_youLike{width: 880px;min-height:524px;margin:20px auto;background-color: white;overflow: hidden;}
+.spotListDetail_main3Left4 .youLike_title{width:850px;height:52px;line-height: 52px;margin:0 19px;font-size:18px;color:#333;border-bottom: solid 1px #ddd;}
+.spotListDetail_main3Left4 .youLike_title a{float: right;font-size: 13px;color: #999;}
+.spotListDetail_main3Left4 .youLike_btns{width:850px;height:20px;line-height:20px;padding:16px 19px;font-size:14px;color:#666; }
+.spotListDetail_main3Left4 .youLike_btns ul{width: 850px;height: 20px;}
+.spotListDetail_main3Left4 .youLike_btns ul li{float: left;}
+.spotListDetail_main3Left4 .youLike_btns ul li a{display: inline-block;padding:0 10px;font-size: 14px;line-height: 20px;margin-right:10px;}
+.spotListDetail_main3Left4 .youLike_btns ul li a:hover{background-color:#20cb9e;color: white;border-radius:  10px;}
+.spotListDetail_main3Left4 .youLike_btns .youLike_btns_hover{background-color:#20cb9e;color: white;border-radius:  10px;}
+
+
+.spotListDetail_main3Left4 .youLike_content{width: 880px;overflow: hidden;}
+.spotListDetail_main3Left4 .youLike_content ul{width: 880px;overflow: hidden;}
+.spotListDetail_main3Left4 .youLike_content ul li{width: 200px;float: left;padding:0 10px;overflow: hidden;}
+.spotListDetail_main3Left4 .youLike_content ul li a{display:block;width: 200px;height:210px;}
+.spotListDetail_main3Left4 .youLike_content ul li a img{display: block;width: 200px;height:138px;}
+.spotListDetail_main3Left4 .youLike_contentName{width: 200px;font-size: 14px;line-height:30px;color: #676767;}
+.spotListDetail_main3Left4 .youLike_contentPrice{width: 200px;font-size: 14px;color: #fc6800;}
+.spotListDetail_main3Left4 .youLike_contentPrice span{font-size: 13px;color: #999;}
+
+
+.jtzn_infoRight{width:450px;overflow:hidden;padding-left: 20px;}
+.jt_info_tips{margin-top:50px;}
+.jt_info2{display: none;}
+.jt_info3{display: none;}
+
+.spotListDetail_main3Right{float:right;width:242px;overflow:hidden;margin-top:20px;background-color: white;border:solid 1px #e1e1e1;padding-left: 18px;}
+.spotListDetail_main3Right h3{font-size: 20px;line-height: 36px;}
+.spotListDetail_main3Right ul{width: 242px;overflow:hidden;}
+.spotListDetail_main3Right ul li{width: 242px;height: 92px;}
+.spotListDetail_main3Right ul li img{float: left;width: 90px;height: 60px;}
+.spotListDetail_main3Right .img_info{width: 140px;float: left;padding-left: 10px;}
+.img_info_title{font-size: 14px;line-height: 24px;color:#333;}
+.img_info_price{font-size: 14px;line-height: 24px;color:#999;}
+.img_info_price b{color: #ff6203;}
+
+
+
+
+
+
+
+

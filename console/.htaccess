@@ -1,0 +1,9 @@
+# APACHE REWRITE RULE
+
+RewriteEngine on
+RewriteBase /console/
+ 
+RewriteRule ^login$		sso.php?cmd=login [L]
+RewriteRule ^do.sso$		do.sso.php [L]
+RewriteRule ^logout$		do.sso.php?ac=logout [L]
+RewriteRule ^helper$		ajax/ajax\.helper\.php [L]

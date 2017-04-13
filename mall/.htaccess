@@ -1,0 +1,19 @@
+RewriteEngine on
+RewriteBase /
+  
+# 独立页面
+RewriteRule ^([a-z]+).html$    index\.php?cmd=page&key=$1 [L] 
+
+# 产品中心
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^product\/$    index\.php?cmd=product_list&%1 [L]
+
+# 产品明细
+RewriteRule ^product\/list-([0-9]+)\.html$    index\.php?cmd=product_list&id=$1 [L]  
+
+# 蜘蛛文件
+RewriteRule ^robots\.txt$    robots\.php [L]
+
+# 网站地图
+RewriteRule ^sitemap\.xml$    sitemap\.php?cmd=xml [L]
+RewriteRule ^sitemap\.html$    index\.php?cmd=sitemap [L] 

@@ -1,0 +1,243 @@
+【2016-12-02 05:59:44】
+http://b2b2c.cloota.net/youlun/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:21:23】
+http://b2b2c.cloota.net/menpiao/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:21:28】
+http://b2b2c.cloota.net/jiudian/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:21:49】
+http://b2b2c.cloota.net/jiudian/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:27:24】
+http://b2b2c.cloota.net/qianzheng/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:31:40】
+http://b2b2c.cloota.net/menpiao/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:33:28】
+http://b2b2c.cloota.net/youlun/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:33:40】
+http://b2b2c.cloota.net/qianzheng/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:34:02】
+http://b2b2c.cloota.net/qianzheng/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:34:16】
+http://b2b2c.cloota.net/youlun/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:34:38】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:34:55】
+http://b2b2c.cloota.net/qianzheng/
+
+Query was empty ( 1065 )
+
+【2016-12-02 06:38:54】
+http://b2b2c.cloota.net/search?keywords=1&goods_type=0
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:00:21】
+http://b2b2c.cloota.net/jiudian/
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:01:38】
+http://b2b2c.cloota.net/menpiao/
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:09:53】
+http://b2b2c.cloota.net/qianzheng/
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:11:59】
+http://b2b2c.cloota.net/menpiao/
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:13:24】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:14:19】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:28:33】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 07:31:05】
+http://b2b2c.cloota.net/jiudian/
+
+Query was empty ( 1065 )
+
+【2016-12-02 12:02:00】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 12:10:01】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 12:13:25】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 12:13:32】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 12:13:39】
+http://b2b2c.cloota.net/ziyouxing/
+
+Query was empty ( 1065 )
+
+【2016-12-02 12:14:11】
+http://b2b2c.cloota.net/qianzheng/
+
+Query was empty ( 1065 )
+
+【2016-12-02 22:32:14】
+http://b2b2c.cloota.net/console/do.php?cmd=goods_add
+INSERT INTO `t_goods_thread` (`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `base_price`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`) 
+	VALUES ('8000200', '801', '80015', '56', 'huangshan', 'xxxxxxxxx', '584185CC9D3AB', 'x', '', '6', '', '江西省', '南昌市', '山东省', '济南市', '', '2', '1', '', '', '1', '【下单须知】
+
+该产品由具备相关法律资质的第三方旅游商家售卖，我们仅提供产品信息呈现及预订服务。当您有投诉及售后问题时，御途旅游网会第一时间协助您解决。
+
+
+【出行须知】
+
+交　　通：	
+（1）合同一经签订且付全款，团队机票、列车票、船票即为出票，不得更改、签转、退票。
+（2）飞行时间、车程时间、船程时间以当日实际所用时间为准。
+（3）本产品如因淡季或收客人数较少，有可能与相近方向的发班线路拼车出游，届时请游客见谅。
+
+住　　宿：	
+按2人入住1间房核算，如出现单男单女，尽量安排该客人与其他同性别团友拼房；如不愿拼房或未能拼房，请补齐单房差以享用单人房间。
+
+团队用餐：	
+十人一桌，八菜一汤，人数不足十人时，在每人用餐标准不变的前提下调整餐食的分量。
+
+游　　览：	
+（1）景点游览、自由活动、购物店停留的时间以当天实际游览为准。
+（2）行程中需自理门票和当地导游推荐项目，请自愿选择参加。
+（3）请您仔细阅读本行程，根据自身条件选择适合自己的旅游线路，出游过程中，如因身体健康等自身原因需放弃部分行程的，或游客要求放弃部分住宿、交通的，均视为自愿放弃，已发生费用不予退还，放弃行程期间的人身安全由旅游者自行负责。
+（4）团队游览中不允许擅自离团（自由活动除外），中途离团视同游客违约，按照合同总金额的20%赔付旅行社，由此造成未参加行程内景点、用餐、房、车等费用不退，旅行社亦不承担游客离团时发生意外的责任。
+（5）如遇台风、暴雪等不可抗因素导致无法按约定行程游览，行程变更后增加或减少的费用按旅行社团队操作实际发生的费用结算。
+（6）出游过程中，如产生退费情况，以退费项目旅行社折扣价为依据，均不以挂牌价为准。
+
+购　　物：	
+当地购物时请慎重考虑，把握好质量与价格，务必索要发票。
+
+差价说明：	
+（1）如遇国家政策性调整门票、交通价格等，按调整后的实际价格结算。
+（2）赠送项目因航班、天气等不可抗因素导致不能赠送的，费用不退。
+（3）景点门票为旅行社折扣价，如持优待证件（如老年证、军官证、教师证等）产生折扣退费的，按实际差额退还。
+
+出团通知：	
+出团通知最晚于出团前1天发送，若能提前确定，我们将会第一时间通知您。
+
+意见反馈：	
+请配合导游如实填写当地的意见单，不填或虚填者归来后投诉将无法受理。', 'N;', '', '', 'N;', '想', 'a:2:{i:0;s:1:\"2\";i:1;s:1:\"3\";}', '2', '2', '【费用包含】
+
+1、交通：当地正规营运空调旅游车,确保每人一正座；
+2、住宿：入住经济型酒店双人标准间，酒店入住匙牌押金及酒店内消费自理；
+3、用餐：
+4、门票：行程中所列景点首道大门票（如遇政策调价核收差价）；
+5、导服：当地优秀中文导游服务；
+6、儿童：占车位、导服；不占床、不含门票；产生其他费用现付；
+7、保险：赠送旅游责任险、旅游意外险；', '【费用不含】
+
+1、不含所在城市到合肥集合点接送，超过集合时间，做自动退团处理，费用不退；
+2、不含单人房差：酒店不提供自然单间，如行程中无单人拼房不愿拼房或未能拼房，请补齐单房差以享用单人房间。
+3、不含高出服务标准所产生的费用，行程外游客自愿参加项目的费用，客人自愿购物的费用，不含以上“费用包含”中不包含的其它项目及不可抗拒的因素产生的费用；', '201612/2016120210321473728.png', '', '', 'a:4:{s:5:\"title\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:4:\"tool\";a:2:{i:1;a:3:{s:7:\"traffic\";s:0:\"\";s:5:\"house\";s:0:\"\";s:4:\"food\";s:0:\"\";}i:2;a:3:{s:7:\"traffic\";s:0:\"\";s:5:\"house\";s:0:\"\";s:4:\"food\";s:0:\"\";}}s:7:\"content\";a:2:{i:1;s:419:\"【集合】  
+早上约7:15am 酒店大堂集合 
+
+【前往景点】
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。 
+
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。 
+
+＞ 自费项目：XXX / 活动时间：60分钟
+。。。。。。
+ 
+
+午餐：自理 / 约1小时
+ 
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。
+
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。
+
+晚餐：自理(中式) / 约1小时
+
+【结束】  
+ 
+晚上约 9:00pm ~ 9:30pm 驱车返回酒店\";i:2;s:419:\"【集合】  
+早上约7:15am 酒店大堂集合 
+
+【前往景点】
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。 
+
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。 
+
+＞ 自费项目：XXX / 活动时间：60分钟
+。。。。。。
+ 
+
+午餐：自理 / 约1小时
+ 
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。
+
+＞ XXX景点 / 活动时间：约1.5小时
+。。。。。。
+
+晚餐：自理(中式) / 约1小时
+
+【结束】  
+ 
+晚上约 9:00pm ~ 9:30pm 驱车返回酒店\";}s:5:\"image\";a:2:{i:1;a:4:{i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";}i:2;a:4:{i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";}}}', '', '', '', 'a:5:{s:15:\"ref_adult_price\";s:0:\"\";s:15:\"ref_adult_stock\";s:0:\"\";s:13:\"ref_kid_price\";s:0:\"\";s:13:\"ref_kid_stock\";s:0:\"\";s:14:\"ref_diff_price\";s:0:\"\";}', '0', '', '', '', '', '', '1', '', '2016-12-02 22:32:14', 'xxxxxxxxx 山 东 省 济 南 市 邮 轮 ')
+Unknown column 'base_price' in 'field list' ( 1054 )
+

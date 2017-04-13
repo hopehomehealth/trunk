@@ -1,0 +1,135 @@
+
+
+
+#orderDetail_mainBox{width: 100%;overflow: hidden;background-color: #f5f5f5;font-size: 14px;}
+#orderDetail_main{width: 1190px;overflow: hidden;margin:0 auto;}
+.orderDetail_main1{width: 1190px;height:40px;line-height: 40px;color: #5a5a5a;}
+.orderDetail_main1 a{color: #1fcc9e;}
+
+.orderDetail_main2{width: 1158px;overflow: hidden;border:solid 1px #ddd;margin-bottom: 20px;background-color: #fff;padding:0 15px;}
+.orderDetail_main2_title{width: 1158px;height:52px;line-height:52px;border-bottom: solid 1px #1fcc9e;font-size: 18px;color: #333;}
+.visitorInfo{width: 1158px;overflow: hidden;}
+.visitorInfo_title{width: 1158px;color: #333;line-height: 30px;border-bottom: solid 1px #ddd;}
+.visitorInfo1{width:1128px;padding-left: 30px;overflow: hidden;}
+.visitorInfo1 ul{width: 1128px;height:50px;border-bottom: dashed 1px #ddd;line-height: 50px;}
+.visitorInfo1 ul li{float: left;margin-right: 40px;}
+.visitorInfo1 ul li span{color: #1fcc9e;padding-left: 20px;}
+.visitorInfo2{width:1128px;padding-left: 30px;}
+.visitorInfo2 table{width:640px;}
+.visitorInfo2 table tr{line-height: 36px;}
+.visitorInfo2 table tr td{text-align: center;}
+
+.orderInfo{width: 1158px;overflow: hidden;}
+.orderInfo_title{width: 1158px;color: #333;line-height: 30px;border-bottom: solid 1px #ddd;}
+.orderInfo1{width:1128px;padding-left: 30px;overflow: hidden;position: relative;}
+.orderInfo1 ul{width: 520px;padding:10px 0;overflow: hidden;}
+.orderInfo1 ul li{float: left;margin-right: 40px;width: 210px;line-height: 34px;}
+.orderInfo2 table{width: 1126px;border:solid 1px #ddd;border-collapse: collapse;}
+.orderInfo2 table thead{background-color: #f8f8f8;color: #666;}
+.orderInfo2 table tr{line-height: 30px;}
+.orderInfo2 table tr td{text-align: center;border:solid 1px #ddd;}
+.orderInfo2 table tr th{text-align: center;border:solid 1px #ddd;}
+.orderInfo2 table tr td b{color:#1fcc9e;}
+
+.productPrice1{text-decoration: line-through;}
+
+.orderInfo2 p{padding-top:25px;color: #1fcc9e;font-weight: bold;padding-bottom: 60px;}
+.orderInfo2 p span{float: right;}
+.orderInfo2 p span b{font-size: 18px;}
+
+
+
+.orderBtnBox{width: 1158px;overflow: hidden;margin-bottom: 50px;}
+.orderBtn_default{width: 1158px;}
+.orderBtn_default button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left: 490px;}
+
+.orderBtn_success{width: 1158px;}
+.orderBtn_success button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
+
+.orderBtn_noPay{width: 1158px;}
+.orderBtn_noPay button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
+
+.refundErrorText{position: absolute;width: 600px;right: 0;top:10px;line-height:34px; }
+
+.orderBtn_chupiaozhong{width: 1158px;}
+.orderBtn_chupiaozhong button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
+
+.orderBtn_noUse{width: 1158px;}
+.orderBtn_noUse button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
+
+.orderBtn_hasUse{width: 1158px;}
+.orderBtn_hasUse button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
+
+
+#mengban{width: 100%;height: 100%;position:fixed;background-color:black;opacity:0.3;filter: alpha(opacity=30);left:0;top:0;z-index: 9999;}
+.refundInfo{width: 500px;height: 420px;position: absolute;left: 50%;top:50%;margin-left: -250px;margin-top:-210px;background-color: white;z-index: 19999;border:solid 2px #ddd;border-radius: 2px;}
+.refundInfo_top{font-size:16px;color: #333;line-height:30px;width:460px;height: 30px;padding:0 20px;background-color: #eee;}
+.refundInfo_top h3{width: 120px;float: left;}
+.refundInfo_close{float: right;background: url("../images/close.png") no-repeat center center;width: 30px;height: 30px;position: absolute;right: 0;top:0;cursor: pointer;}
+.refundInfoCont{width: 460px;height: 340px;line-height:24px;padding:40px 20px 0 20px;font-size: 13px;color: #666;letter-spacing: 1px;}
+.refundInfoCont1{width: 460px;height:25px;line-height: 25px;}
+.refundInfoCont1 span{float: left;width: 80px;height: 25px;font-size: 14px;color: #4d4d4d;}
+.refundInfoCont1 select{width:205px;height: 23px;outline:none;border:solid 1px #ddd;font-size: 12px;line-height:23px;color: #000;}
+.refundInfoCont1 select option{font-size: 12px;}
+.refundInfoCont2{width: 460px;padding-top:15px;height: 220px;}
+.refundInfoCont2 h4{border-bottom:solid 1px #ddd;line-height: 20px;}
+.orderInfo_table{width:460px;margin-top:20px;}
+.orderInfo_table_title{width: 78px;float: left;border:solid 1px #ddd;background-color: #f8f8f8;overflow: hidden;}
+.orderInfo_table_title ul{overflow: hidden;}
+.orderInfo_table_title ul li{padding-left:8px;border-bottom: solid 1px #ddd;height: 30px;line-height: 30px;color: #555;}
+.orderInfo_table_tr3{min-height: 82px;overflow: hidden;}
+.orderInfo_table_tr4{border-bottom: none;}
+.orderInfo_table_cont{width: 378px;float: left;border: solid 1px #ddd;border-left: none;}
+.orderInfo_table_cont ul{overflow: hidden;}
+.orderInfo_table_cont ul li{padding-left:8px;border-bottom: solid 1px #ddd;height: 30px;line-height: 30px;color: #555;}
+.orderInfo_table_cont .orderInfo_table_tr3 p{line-height: 24px;}
+.refundInfoCont3{width: 460px;height:30px;line-height: 25px;margin-top:30px;}
+.refundInfoCont3 .tijiao{width: 70px;height: 30px;float: left;margin-left: 135px;border-radius: 5px;background-color: #f60;color: #fff;text-align: center;line-height: 30px;}
+.refundInfoCont3 .quxiao{width: 68px;height: 28px;border:solid 1px #ddd;float: left;margin-left: 12px;border-radius: 5px;background-color: #fff;text-align: center;line-height: 28px;}
+
+.applyRefund{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.applyRefund_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.applyRefund_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.applyRefund_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.applyRefund_cont{width: 544px;height: 150px;overflow: hidden;}
+.applyRefund_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/refund_tips.jpg") no-repeat left center;font-size: 20px;color: #333;}
+.applyRefund_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
+.applyRefund_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
+
+
+.msgRetryBox{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.msgRetryBox_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.msgRetryBox_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.msgRetryBox_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.msgRetryBox_cont{width: 544px;height: 150px;overflow: hidden;}
+.msgRetryBox_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/refund_tips.jpg") no-repeat left center;font-size: 20px;color: #333;}
+.msgRetryBox_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
+.msgRetryBox_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
+
+.msgRetryBox1{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.msgRetryBox1_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.msgRetryBox1_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.msgRetryBox1_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.msgRetryBox1_cont{width: 544px;height: 150px;overflow: hidden;}
+.msgRetryBox1_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}
+
+.cancelBox{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.cancelBox_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.cancelBox_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.cancelBox_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.cancelBox_cont{width: 544px;height: 150px;overflow: hidden;}
+.cancelBox_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/refund_tips.jpg") no-repeat left center;font-size: 20px;color: #333;}
+.cancelBox_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
+.cancelBox_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
+
+.cancelBox1{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.cancelBox1_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.cancelBox1_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.cancelBox1_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.cancelBox1_cont{width: 544px;height: 150px;overflow: hidden;}
+.cancelBox1_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}

@@ -1,0 +1,5 @@
+【2016-12-26 14:45:22】
+http://b2b2c.cloota.net/console/do.php?cmd=local_store_edit_fast&store_id=2&item=address
+UPDATE `t_local_store` SET `profile`='a:5:{s:10:"store_name";s:8:"大铺头店";s:7:"address";s:47:"合肥市 望江西路与西二环路交口 亚夏汽车大厦 20F1";s:3:"tel";s:13:"0551-12261777";s:8:"order_id";s:1:"1";s:5:"state";s:1:"1";}', address='合肥市 望江西路与西二环路交口 亚夏汽车大厦 20F1' WHERE `site_id`='801' AND `store_id`='2'
+Unknown column 'address' in 'field list' ( 1054 )
+

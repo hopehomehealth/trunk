@@ -1,0 +1,117 @@
+/* CSS Document */
+*{ margin:0;padding:0;}
+body{ background-color: #f5f5f5; font-size:14px;font-family:"微软雅黑","arial";color:#666;min-width: 1190px;}
+ul,li{padding:0; margin:0; list-style:none;}
+h1,h2,h3,h4,h5,h6,b{padding:0; margin:0;}
+div,p,span{padding:0; margin:0;}
+input,button,form{padding:0px; margin:0px;}
+img{ border:0px;}
+form{padding:0px; margin:0px;}
+a{ text-decoration:none; color:#666;padding:0; margin:0;}
+input {outline: none;border:none;font-family:"微软雅黑","arial";}
+button{outline: none;border:none;font-family:"微软雅黑","arial";}
+textarea {outline: none;}
+.show{display: block;}
+.hide{display: none;}
+
+/*------------------------------------首页头部 start------------------------------------------*/
+
+#topBox{width: 100%;height:78px;background: #fff;}
+
+#top{width: 1190px;height: 78px;margin:0 auto;background: url("/themes/s01/images/bj-top.png") no-repeat 230px bottom;}
+.topLeft{float: left;width: auto;height:78px;overflow: hidden;}
+.topLeft .logo{width: 131px;height: 45px;float: left;margin-top:16px;}
+.topLeft .logo_text{width:209px;height: 45px;float: left;margin-top:16px;}
+.topRight{float: right;width: auto;height:78px;color: #807e7f;font-size:16px;/*margin-top:10px;padding-left:54px; background: url("/public/images/v3.1image/dianhua.png") no-repeat left 25px; */}
+
+.topAboveCont{width:auto;height: 25px;margin:20px auto 0;line-height: 25px;font-size: 14px;}
+.topAboveCont_left{width:auto;height: 25px;float:left;}
+.topAboveCont_right{width:auto;height: 25px;float: left;}
+.top_phoneApp{width:auto;height: 25px;float: left;position: relative;}
+.top_phoneApp span{width:auto;height: 25px;padding:0 18px 0 23px;display:block;background: url("/themes/s01/images/phone.png") no-repeat left center;}
+.top_phoneApp:hover span{color: #1fcc9e;background: url("/themes/s01/images/phone_hover.png") no-repeat left center;}
+.top_phoneApp img{position: absolute;left:0;top:25px;display: none;z-index: 1999;}
+.top_phoneApp:hover img{display: block;}
+.top_wechat{width:auto;height: 25px;float: left;position: relative;}
+.top_wechat span{width:auto;height: 25px;padding:0 18px 0 27px;display:block;background: url("/themes/s01/images/wechat.png") no-repeat left center;}
+.top_wechat:hover span{color: #1fcc9e;background: url("/themes/s01/images/wechat_hover.png") no-repeat left center;}
+.top_wechat img{position: absolute;left:0;top:25px;display: none;z-index: 1999;}
+.top_wechat:hover img{display: block;}
+
+
+
+
+
+#topTime{float: left;}
+#topAddress{float: left;}
+#topAddress .currentCity{color: #016ddc;}
+#changeCity:hover{color: #016ddc;text-decoration:underline;}
+.topRight .hotline{letter-spacing:2px;color: #999;font-size:18px;text-align:right;background:url("/themes/s01/images/dh.png") no-repeat 5px center;}
+.topRight .hotline span{color: #1fcc9e;letter-spacing:0px;}
+/*------------------------------------首页头部 end------------------------------------------*/
+
+/*------------------------------------nav start------------------------------------------*/
+#navBox{width: 100%;height:41px;background-color: #2ecba0;}
+#nav{width: 1190px;height: 41px;margin:0 auto;}
+.navLeft{float: left;width:auto;height: 41px;line-height: 41px;}
+.navLeft ul{}
+.navLeft ul li{float: left;padding:0 22px;height: 41px;}
+.navLeft ul li a{height: 41px;color: white;text-align: center;font-size:18px;display: inline-block;}
+.navLeft ul li:hover{background-color: #24a481;}
+.nav_hover{background-color: #24a481;}
+.navLeft ul li .trip_list{position:absolute;left:-25%;top:41px;z-index:999;width:150%;overflow: hidden;background-color:white;border:solid 2px #2ecba0;border-top:none;}
+.navLeft ul li .trip_list li{float: none;height: 35px;line-height: 35px;}
+.navLeft ul li .trip_list li a{width:100%;height: 35px;color: #666;}
+
+.navRight{float: right;width:260px;height: 41px;line-height: 41px;}
+.mybus365{width:140px;height: 41px;float: left;position: relative;}
+.mybus365 #mybus365_btn{width:140px;height: 41px;text-align: center;display: inline-block;font-size: 16px;color: white;}
+.mybus365 .before_login{position: absolute;left: 0;top:41px;z-index:999;background-color:white;width:136px;overflow:hidden;border-bottom:solid 2px #2ecba0;border-left:solid 2px #2ecba0;border-right:solid 2px #2ecba0;}
+.before_login li{width: 140px;height: 35px;line-height: 35px;}
+.before_login li a{display: block;width:126px;height: 34px;margin:0 5px;border-bottom: dotted 1px #666;text-align: center;}
+.before_login li:hover{background-color: #24a481;color: white;}
+.mybus365 .after_login{position: absolute;left: 0;top:50px;z-index:999;background-color:white;width:136px;overflow:hidden;border-bottom:solid 2px #2ecba0;border-left:solid 2px #2ecba0;border-right:solid 2px #2ecba0;}
+.after_login li{width: 140px;height: 35px;line-height: 35px;}
+.after_login li a{display: block;width:126px;height: 34px;margin:0 5px;border-bottom: dotted 1px #666;text-align: center;}
+.after_login li:hover{background-color: #24a481;color: white;}
+
+
+.navRight .loginAndReg{width:120px;height: 41px;float: left;color: white;}
+.navRight .loginAndReg a{display: inline-block;width: 55px;text-align: center;font-size: 16px;color: white;}
+/*------------------------------------nav end------------------------------------------*/
+
+/*------------------------------------foot start------------------------------------------*/
+#footBox{width: 100%;min-height:200px;background-color:#ebebeb;overflow: hidden;}
+#foot{width: 1190px;min-height: 200px;margin:0 auto;font-size:14px;overflow: hidden;}
+.foot1{width: 800px;height: 42px;margin:25px auto 0;}
+.foot1 a{margin:0 30px;float: left;width: 140px;height: 42px;}
+.foot2{width: 1190px;line-height: 25px;text-align: center;margin-top:10px;}
+.foot2 a{font-size:14px;color: #666;}
+.foot2 a:hover{color: #3b86ef;text-decoration: underline;}
+
+.foot3{width:800px;line-height: 25px;margin:0 auto;font-size: 14px;overflow: hidden;}
+.foot3 dl{width:800px;line-height: 25px;font-size: 14px;overflow: hidden;}
+.foot3 dl dt{float: left;width: 80px;text-align: center;}
+.foot3 dl dd{float: left;width: 650px;overflow: hidden;}
+.foot3 dl dd ul{width: 650px;height:25px;overflow: hidden;}
+.foot3 dl dd ul li{float: left;}
+.foot3 dl .unfold{width: 70px;text-align:center;background:url("/themes/s01/images/subtriangle.png") no-repeat right center;cursor: pointer;}
+.foot3 a:hover{color: #3b86ef;text-decoration: underline;}
+
+.foot4{width: 1190px;line-height: 25px;text-align: center;margin-top:5px;background:url("/themes/s01/images/china_flag.png") no-repeat 290px center;}
+.foot5{width: 1190px;line-height: 25px;text-align: center;margin-top:5px;}
+/*------------------------------------foot end------------------------------------------*/
+
+/*--------------------------------搜索框样式--------------------------------------------*/
+#searchMainBox{width:100%;height:76px;}
+#searchMain{width: 1190px;height: 76px;margin: 0 auto;}
+.searchMain1{width: 550px;height:26px;/*margin: 21px 0 0 245px;*/border:solid 2px #fa9520;border-radius: 5px 0 0 5px;background-color: white;position: relative;top: 21px;left:245px; }
+.searchMain1_l{float: left;width: 149px;height: 26px;line-height: 26px;text-align: center;font-size: 16px;color: #999;border-right: solid 1px #fa9520;background-image: url("/themes/s01/images/lv_xiala.jpg");background-repeat: no-repeat;background-position: 115px center;cursor: pointer;position: relative;}
+.searchMain1_l span{display: block;width: 149px;height: 26px;}
+.searchMain1_l ul{width: 148px;z-index:999;overflow: hidden;border:solid 1px #ddd;position: absolute;left: 0;top:26px;background-color: white;display: none;}
+.searchMain1_l ul li{width: 148px;height: 25px;line-height: 25px;}
+.searchMain1_l ul li:hover{background-color:#1fcc9e;color: white;}
+
+.searchMain1_c{float: left;width: 315px;height: 26px;line-height: 26px;font-size: 12px;padding-left: 35px}
+.searchMain1_r{position:absolute;right:-180px;top:-2px;width:200px;height: 30px;background:url("/themes/s01/images/seach_03.png") no-repeat center center;}
+

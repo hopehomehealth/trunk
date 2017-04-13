@@ -1,0 +1,246 @@
+<?
+if (!defined('IN_CLOOTA')) {
+    exit('Access Denied');
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/themes/s01/images/pay_detail.css">
+    <title>周边游订单详情</title>
+    <?include('static.php');?>
+</head>
+<body>
+<!--  head  start -->
+
+<? include 'head.php'; ?>
+
+<!--  nav导航  end -->
+
+<!-- 订单详情 start -->
+<div id="orderDetail_mainBox">
+    <div id="orderDetail_main">
+        <div class="orderDetail_main1">我的Bus365 &gt; 我的订单 &gt; <a href="">订单详情</a></div>
+        <div class="orderDetail_main2">
+            <div class="orderDetail_main2_title">订单详情</div>
+
+            <div class="visitorInfo">
+                <div class="visitorInfo_title">联系人信息</div>
+                <div class="visitorInfo1">
+                    <ul>
+                        <li>姓名 <span><? $linker = $order_detail_data['linker'];
+                                echo $linker; ?></span></li>
+                        <li>手机 <span><? $linkerMobile = $order_detail_data['linkerMobile'];
+                                echo $linkerMobile; ?></span></li>
+                    </ul>
+                </div>
+                <div class="visitorInfo_title">出游人信息</div>
+                <div class="visitorInfo2">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>手机</th>
+                            <th>证件号码</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?
+                        foreach ($order_detail_data['playPeopleList'] as $key => $value) {
+                            ?>
+
+                            <tr>
+                                <td><? echo $value['userName']; ?></td>
+                                <td><? echo $value['userPhone']; ?></td>
+                                <td><? echo $value['userIdCard']; ?></td>
+                            </tr>
+                        <? } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="orderInfo">
+                <div class="orderInfo_title">订单信息</div>
+                <div class="orderInfo1">
+                    <ul>
+                        <li>订单号：<? echo $order_detail_data['orderCode']; ?></li>
+                        <li>订单状态：<? echo $order_detail_data['orderStatusName']; ?></li>
+                        <li>下单时间：<? echo $order_detail_data['orderDate']; ?></li>
+                        <li>支付方式：<? echo $order_detail_data['paymentType']; ?></li>
+                    </ul>
+                    <div class="refundErrorText hide">
+                        退款原因：预定提前期与付款期。
+                    </div>
+                </div>
+                <div class="orderInfo2">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>产品名称</th>
+                            <th>人数</th>
+                            <th>游玩日期</th>
+                            <th>现售价</th>
+                            <th>小计</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                            <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?></td>
+                            <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
+                            <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
+                            <td class="productXiaoji"><? echo $order_detail_data['adultTotalFee']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                            <td class="productOther">儿童×<? echo $order_detail_data['kidNum']; ?></td>
+                            <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
+                            <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
+                            <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                    <p><span>订单总金额：￥<b><? echo $order_detail_data['orderFee']; ?></b></span></p>
+                </div>
+
+
+                <div class="orderBtnBox">
+                    <? if ($st == 0) { ?>
+                        <!-- 默认按钮（已取消、退款中。退款成功。退款失败）-->
+                        <div class="orderBtn_default">
+                            <button onclick="order_again()">再次预定</button>
+                        </div>
+                    <? } elseif($st == 1){ ?>
+                        <!-- //已支付 或者 已确认 并且  当前时间没有到出行日期-->
+                        <!-- 已支付未确认/已支付已确认 按钮 -->
+                        <div class="orderBtn_chupiaozhong">
+                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
+                            <button>申请退款</button>
+                        </div>
+                    <? } elseif($st == 2){ ?>
+                        <!-- //已完成-->
+                        <!-- 已支付-已确认-评价 按钮 -->
+                        <div class="orderBtn_hasUse">
+                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
+                            <button onclick="comment_commit()">去评价</button>
+                        </div>
+                    <? } elseif($st == 3){ ?>
+                        <!-- //已确认-->
+                        <!-- 已支付-已确认-确认回团 按钮 -->
+                        <div class="orderBtn_chupiaozhong">
+                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
+                            <button>确认回团</button>
+                        </div>
+                    <? } elseif($st == 4){ ?>
+                    <!--  //待付款-->
+                    <!-- 待支付按钮 -->
+                    <a class="orderBtn_noPay">
+                        <button style="margin-left:360px;" class="zby_cancel">取消订单</button>
+                        <button>去支付</button>
+                </div>
+                <? } ?>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- 订单详情 end -->
+
+
+<!-- 黑色蒙层 -->
+<div id="mengban hide"></div>
+
+
+<!-- 退款说明信息 -->
+<div class="refundInfo hide">
+    <div class="refundInfo_top">
+        <h3>退款说明</h3>
+        <span class="refundInfo_close"></span>
+    </div>
+    <div class="refundInfoCont">
+        (1)免费政策：a. 1.2米（不含）以下的儿童免票。（每名购票成人限带一名身高低于1.2米的儿童）b. 70周岁（含）以上的老人（凭本人身份证件入园）免费。c.
+        持国家残联颁发第二代《残疾证》的残疾人免票，盲人、智障、生活不能自理的残疾人需家人（需购票）陪同入园。免费。<br>(2) a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b.
+        60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
+        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
+        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
+        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
+        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
+        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
+        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
+        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
+        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
+        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。
+    </div>
+</div>
+
+<!-- 申请退款点击后弹窗 -->
+<div class="applyRefund hide">
+    <div class="applyRefund_title">
+        <div class="applyRefund_title_left">待支付订单</div>
+        <span class="applyRefund_title_right"></span>
+    </div>
+
+    <div class="applyRefund_cont">
+        <div class="applyRefund_cont_tips">&nbsp;&nbsp;是否申请退款?</div>
+        <button class="applyRefund_sure">确认</button>
+        <button class="applyRefund_cancel">取消</button>
+    </div>
+</div>
+
+<!-- 取消订单弹窗 -->
+<div class="cancelBox hide">
+    <div class="cancelBox_title">
+        <div class="cancelBox_title_left">取消订单</div>
+        <span class="cancelBox_title_right"></span>
+    </div>
+
+    <div class="cancelBox_cont">
+        <div class="cancelBox_cont_tips">&nbsp;&nbsp;是否取消订单?</div>
+        <a href="/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=cl"><button class="cancelBox_sure">确认</button></a>
+        <button class="cancelBox_cancel">取消</button>
+    </div>
+</div>
+
+<!--  foot  start -->
+<? include 'foot.php'; ?>
+<!--  foot  end -->
+</body>
+<script type="text/javascript" src="/thmes/s01/js/jquery.js"></script>
+<script type="text/javascript" src="/themes/s01/js/common.js"></script>
+<script type="text/javascript">
+    // 关闭退款说明信息
+    $('.refundInfo_close').click(function () {
+        $("#mengban").hide();
+        $(".refundInfo").hide();
+    });
+    // 关闭是否退款对话框
+    $('.applyRefund_title_right').click(function () {
+        $(".applyRefund").hide();
+    });
+    function comment_commit(){
+        var url = "/menpiao/ticket_comment_commit-<?=$orderCode;?>.html";
+        window.location.href = url;
+    }
+    function order_again(){
+        var url = "";
+        window.location.href = url;
+    }
+
+    //取消订单确认弹窗
+    $('.zby_cancel').click(function(){
+        $("#mengban").show();
+        $('.cancelBox').show();
+    });
+    $('.cancelBox_title_right').click(function(){
+        $("#mengban").hide();
+        $(".cancelBox").hide();
+    });
+    $('.cancelBox_cancel').click(function(){
+        $("#mengban").hide();
+        $(".cancelBox").hide();
+    });
+</script>
+</html>

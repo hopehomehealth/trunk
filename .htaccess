@@ -1,0 +1,175 @@
+RewriteEngine on
+RewriteBase /
+
+# 禁止解析目录
+RewriteRule ^(upfiles|libs|union|pay|logs|core|qr|cache|model|console|member|seller|common|static|ajax|system)\/$ - [L]
+
+# 静态资源转换
+RewriteRule ^images/(.*)$    resource\.php?cmd=image [L]
+RewriteRule ^js/(.*)$    resource\.php?cmd=js [L]
+
+# 访问统计
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^stat$    stat\.php [L]
+
+# 商家主页（手机版）
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^shop([0-9]+)/$    index\.php?cmd=shop&id=$1&%1 [L]
+
+
+# 产品搜索
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^search$    index\.php?cmd=product_search&%1 [L]
+
+# 产品筛选
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^filter$    index\.php?cmd=product_list&action=filter&%1 [L]
+
+# 主题
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^subject/([0-9a-zA-Z]+).html$    index\.php?cmd=product_subject&mode_key=$1&%1 [L]
+
+# 区域
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^(zhoubian|guonei|chujing)/$    index\.php?cmd=product_list&action=zone&goods_type=1&goods_zone=$1&%1 [L]
+
+# 门票
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^(menpiao)/$    index\.php?cmd=product_ticket&action=filter&%1 [L]
+
+#门票候选ajax
+RewriteRule ^(search)/$    index\.php?cmd=search%1 [L]
+
+#周边游候选ajax
+RewriteRule ^(searcha)/$    index\.php?cmd=searcha%1 [L]
+
+#门票主题筛选
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^(menpiao/zhuti)/$    index\.php?cmd=product_ticket&action=filter&%1 [L]
+
+#门票订单详情
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^menpiao/dingdan_detail-([0-9]+).html$    index\.php?cmd=dingdan_detail&orderCode=$1&%1 [L]
+#退款成功
+RewriteRule ^menpiao/ticket_refund-([0-9]+).html$     index\.php?cmd=ticket_refund&orderCode=$1 [L]
+
+#旅游协议
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^menpiao/xy.html$    index\.php?cmd=xieyi [L]
+
+# 产品类型
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^(gentuan|ziyouxing|qianzheng|menpiao|jiudian|youlun)/$    index\.php?cmd=product_index&goods_type_key=$1&%1 [L]
+
+# 签证列表
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^qianzheng/zone-([0-9a-z]+).html$    index\.php?cmd=product_list&action=visa&goods_type=3&zone_id=$1&%1 [L]
+
+
+# 签证列表
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^qianzheng/list$    index\.php?cmd=product_list&action=visa&goods_type=3&%1 [L]
+
+# 邮轮列表
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^youlun/list$    index\.php?cmd=product_list&action=ship&goods_type=6&%1 [L]
+
+# 线路列表
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^(gentuan|ziyouxing|menpiao|jiudian)/([0-9a-z]+)/$    index\.php?cmd=product_list&action=list&goods_type_key=$1&cat_key=$2&%1 [L]
+RewriteRule ^(gentuan|ziyouxing|menpiao|jiudian)/([0-9a-z]+)$    $1\/ [R]
+RewriteRule ^(gentuan|ziyouxing|menpiao|jiudian)/([0-9a-z]+)/page-([0-9]+).html$    index\.php?cmd=product_list&action=list&goods_type_key=$1&cat_key=$2&p=$3 [L]
+
+# 线路明细
+RewriteRule ^product/detail-([0-9]+).html$    index\.php?cmd=product_detail&id=$1 [L]
+
+# 门票相关页面
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^menpiao/ticket_detail-(.*)-(.*).html$    index\.php?cmd=ticket_detail&lvProductId=$1&scenicId=$2&%1 [L]
+RewriteRule ^menpiao/ticket_order-(.*)-(.*)-(.*)-(.*)-([0-9]+)-([0-9]+)-([0-9]+).html$    index\.php?cmd=ticket_order&lvGoodsName=$1&ticketTypeName=$2&isEmail=$3&ticketType=$4&goodsId=$5&lvProductId=$6&lvGoodsId=$7&%1 [L]
+RewriteRule ^menpiao/ticket_online_pay-(.*).html$    index\.php?cmd=ticket_online_pay&flag=$1 [L]
+RewriteRule ^menpiao/ticket_pay_status.html$    index\.php?cmd=ticket_pay_status [L]
+RewriteRule ^menpiao/ticket_pay_jump-(.*).html$    index\.php?cmd=ticket_pay_jump&topayinfoid=$1 [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^menpiao/ticket_comment_commit-(.*).html$     index\.php?cmd=ticket_comment_commit&orderCode=$1&%1 [L]
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^menpiao/ticket_comment_success-(.*).html$    index\.php?cmd=ticket_comment_success&orderCode=$1&%1 [L]
+RewriteRule ^menpiao/ticket_comment_detail-(.*).html$     index\.php?cmd=ticket_comment_detail&orderCode=$1 [L]
+
+# 周边游详情
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubianyou/zbyform_submit-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*).html$    index\.php?cmd=zbyform_submit&goods_type=$1&goods_id=$2&goods_name=$3&adult_num=$4&kid_num=$5&departdate=$6&payPrice=$7&%1 [L]
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubianyou/zbyonline_pay-(.*)-(.*)-(.*).html$    index\.php?cmd=zbyonline_pay&goodsName=$1&payPrice=$2&orderCode=$3&%1 [L]
+RewriteRule ^zhoubianyou/zbypay_jump-(.*)-(.*)-(.*).html$    index\.php?cmd=zbypay_jump&topayinfoid=$1&orderno=$2&totalprice=$3 [L]
+RewriteRule ^zhoubianyou/zbypay_success-(.*).html$    index\.php?cmd=zbypay_success&orderCode=$1 [L]
+RewriteRule ^zhoubianyou/zbyorder_detail-(.*).html$    index\.php?cmd=zbyorder_detail&orderCode=$1 [L]
+
+
+
+# 团购
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^groupbuy/$    index\.php?cmd=product_groupbuy&%1 [L]
+RewriteRule ^groupbuy$    groupbuy\/ [R]
+
+
+# 资讯列表
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^news/$    index\.php?cmd=news_list&%1 [L]
+RewriteRule ^news$    news\/ [R]
+
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^news/([0-9a-zA-Z]+)/$    index\.php?cmd=news_list&cat_key=$1&%1 [L]
+
+# 资讯明细
+RewriteRule ^news/detail-([0-9]+).html$    index\.php?cmd=news_detail&id=$1 [L]
+
+
+# 积分商品列表
+RewriteRule ^jifen/$    index\.php?cmd=score_list [L]
+RewriteRule ^jifen$    jifen\/ [R]
+
+RewriteRule ^jifen/list-([0-9]+)-([0-9]+).html$    index\.php?cmd=score_list&id=$1&p=$2 [L]
+
+# 积分商品明细
+RewriteRule ^jifen/detail-([0-9]+).html$    index\.php?cmd=score_detail&id=$1 [L]
+
+# 门店
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^local/$    index\.php?cmd=local_store&%1 [L]
+RewriteRule ^local$    local\/ [R]
+
+# 顾问
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^leader/$    index\.php?cmd=leader&%1 [L]
+RewriteRule ^leader$    leader\/ [R]
+
+# 顾问首页
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^leader/([0-9]+)$    index\.php?cmd=index_leader&vcard_id=$1&%1 [L]
+
+# 帮助
+RewriteRule ^help/$    index\.php?cmd=help [L]
+RewriteRule ^help$    help\/ [R]
+RewriteRule ^help/([a-z]+).html$    index\.php?cmd=help&key=$1 [L]
+RewriteRule ^help/([0-9]+).html$    index\.php?cmd=help&id=$1 [L]
+
+# 页面
+RewriteRule ^page/(.*).html$    index\.php?cmd=page&key=$1 [L]
+
+# AJAX
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^ajax@(.*)$    index\.php?cmd=$1&%1 [L]
+
+# 网站地图
+RewriteRule ^sitemap\.xml$    sitemap\.php?cmd=xml [L]
+RewriteRule ^sitemap\.html$    index\.php?cmd=sitemap [L]
+
+# SSO登录
+RewriteRule ^sso$    index\.php?cmd=member [L]
+
+# 手机端产品分类
+RewriteRule ^category\.html$    index\.php?cmd=category [L]
+
+

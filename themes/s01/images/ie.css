@@ -1,0 +1,132 @@
+.home-icon {
+	_background-image: url("home-icon-ie6.png")
+}
+
+.home-mg {
+	_line-height: 19px
+}
+
+.home-tit {
+	_line-height: 21px
+}
+
+.home-section .imgbox,.home-ship dl dt .imgbox,.home-gonglue li .imgbox,.ticket-procon li .imgbox,.ticket-theme li .imgbox,.ticket-dianping li .imgbox,.ticket-gonglue li .imgbox {
+	*display: block;
+	*font-family: Arial
+}
+
+.home-section .hs-best {
+	_display: inline
+}
+
+.home-section .hs-best .imgbox {
+	*font-size: 267.138px
+}
+
+.home-ship {
+	_height: 360px;
+	_overflow: hidden;
+	_zoom: 1
+}
+
+.home-ship .ship-logo {
+	_height: 359px;
+	_display: inline
+}
+
+.home-ship dl {
+	_display: inline
+}
+
+.home-ship dl dt .imgbox {
+	*font-size: 151.029px
+}
+
+.home-ship dl dd .ship-route {
+	_height: 52px
+}
+
+.home-ship dl dd .ship-date {
+	_height: 32px
+}
+
+.home-gonglue li.first {
+	_display: inline
+}
+
+.home-gonglue li.first .imgbox {
+	*font-size: 138.807px
+}
+
+.home-gonglue li .imgbox {
+	*font-size: 113.49px
+}
+
+.home-gonglue li .gname {
+	_height: 36px
+}
+
+.ticket-procon li .imgbox {
+	*font-size: 125.712px
+}
+
+.ticket-procon li.first .imgbox {
+	*font-size: 249.678px
+}
+
+.ticket-theme li .imgbox {
+	*font-size: 154.521px
+}
+
+.ticket-dianping li .imgbox {
+	*font-size: 144.045px
+}
+
+.ticket-dianping li.first .imgbox {
+	*font-size: 186.822px
+}
+
+.ticket-gonglue li .imgbox {
+	*font-size: 91.665px
+}
+
+.aside-rowli.ul2 li .snum {
+	_display: inline;
+	_background-image: url("home-icon-ie6.png")
+}
+
+.icon {
+	_background-image: url("icon-arr-ie6.png")
+}
+
+.ico-add {
+	_line-height: 8px
+}
+
+.arr-up,.arr-down,.arr-up-blue,.arr-down-blue,.arr-up-gray,.arr-down-gray {
+	_line-height: 5px
+}
+
+.arr-sdown {
+	_line-height: 5px
+}
+
+.sort-up,.sort-down {
+	_line-height: 12px
+}
+
+.close-x-white,.close-x-yellow {
+	_line-height: 9px
+}
+
+.waring-sm {
+	_line-height: 16px
+}
+
+.waring-lg {
+	_line-height: 46px
+}
+
+.ico-stars1,.ico-stars2,.ico-stars3,.ico-stars4,.ico-stars5,.ico-stars1x,.ico-stars2x,.ico-stars3x,.ico-stars4x,.ico-stars5x {
+	_line-height: 11px
+}

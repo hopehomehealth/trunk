@@ -1,0 +1,62 @@
+
+#onlinePay_mainBox{width: 100%;overflow: hidden;}
+#onlinePay_main{width: 1190px;overflow: hidden;margin:25px auto 0;}
+.onlinePay_main_title{width: 1190px;height: 48px;margin-bottom: 25px;}
+.onlinePay_main1{width: 1148px;position:relative;overflow: hidden;border:solid 1px #ddd;padding:0 20px 30px;background-color: white;margin-bottom: 10px;}
+.onlinePay_main1:hover{background-color: #e4f5ff;}
+.onlinePay_main1_simInfo{width: 1128px;height:58px;line-height: 58px;border-bottom: dashed 1px #ddd;font-size: 18px;color: #333;padding-left: 20px;}
+.onlinePay_main1_left{float: left;}
+.onlinePay_main1_right{float: right;}
+.onlinePay_main1_right b{color: #fe8802;font-size: 24px;}
+.onlinePay_main1_right span{font-size:14px;}
+
+.onlinePay_main1_allInfo{width: 1128px;overflow:hidden;line-height: 58px;font-size: 16px;padding-left: 20px;}
+.onlinePay_main1_allInfo p{width: 1128px;height:34px;line-height: 34px;color: #999;}
+.onlinePay_main1_allInfo p b{color: #333;}
+.onlinePay_main1_allInfo p span{color: #20cb9e;}
+
+.unfoldInfo{position: absolute;bottom:0px;right:30px;width:100px;height:30px;line-height:30px;font-size: 14px;color: #333;text-align: center;cursor:pointer; }
+.subtriangle{background:url("../images/subtriangle.png") no-repeat right center;}
+.uptriangle{background:url("../images/uptriangle.png") no-repeat right center;}
+
+.onlinePay_main2{width: 1148px;height:175px;border:solid 1px #ddd;padding:0 20px;background-color: white;}
+.onlinePay_main2 h3{width: 1123px;height:20px;line-height:20px;color: #0054a7;padding-top:30px;font-size: 18px;padding-left: 25px;}
+.onlinePay_main2_left{float: left;width: 360px;height: 110px;padding-left:90px;}
+.onlinePay_main2_left input{float: left;margin:50px 30px 0 20px;}
+.onlinePay_main2_left label{float: left;width:280px;height:110px;background: url("../images/alipay.jpg") no-repeat left center;}
+.onlinePay_main2_center{float: left;width: 360px;height: 110px;}
+.onlinePay_main2_center input{float: left;margin:50px 30px 0 20px;}
+.onlinePay_main2_center label{float: left;width:280px;height:110px;background: url("../images/chinaUnionPay.jpg") no-repeat left center;}
+.onlinePay_main2_right{float: left;width: 330px;height: 110px;}
+.onlinePay_main2_right input{float: left;margin:50px 30px 0 20px;}
+.onlinePay_main2_right label{float: left;width:250px;height:110px;background: url("../images/weChatPay.jpg") no-repeat left center;}
+
+.onlinePay_main3{width: 1190px;height: 165px;}
+.onlinePay_cancle{width: 168px;height: 48px;text-align: center;border:solid 2px #1fcc9e;background-color: #fff;font-size: 24px;line-height: 48px;color: #1fcc9f;margin:54px 75px 0 405px;border-radius: 5px;}
+.onlinePay_payNow{width: 172px;height: 52px;text-align: center;background-color: #1fcc9e;font-size: 24px;line-height: 48px;color: #fff;border-radius: 5px;}
+
+
+
+
+.nowPay{display:none;z-index:12;position:absolute;left:50%;top:50%;width:400px;height:200px;margin-top:-100px;margin-left:-200px;border:solid 2px #ddd;padding:10px;background:white;font-size:18px;line-height: 60px;}
+.nowPay button{height:30px;padding:0 20px;font-size:18px;color:white;background:#1fcc9e;border:none;border-radius:5px;}
+.nowPay p{width:100%;text-align:center;}
+.nowPay .timeRun{width:100%;font-size:20px;text-align:center;}
+.timeRun b{color: #eb4545;}
+.onlineBtn3{margin:0 30px;}
+
+
+
+#mengban{display:none;width:100%;height:100%;background-color:black;opacity:0.5;filter: alpha(opacity=50);position:absolute;left:0;top:0;z-index:10;}
+
+#weChatPay{display: none;border-radius: 5px;background:white;z-index: 15;font-size: 18px;width:800px;height: 550px;position: fixed;left:50%;top: 50%;margin-top: -275px;margin-left:-400px;border: solid 5px #4a4a4a;}
+.weChatPay1{width: 100%;height:47px;border-bottom: solid 1px #ddd; }
+.weChatPay1 h3{height:47px;line-height: 47px;float: left;padding-left: 20px;}
+#weChatPay_close{outline: none;margin:15px 20px 15px 0;float: right;width:15px;height: 15px; border:none;background:url(../images/close.png) no-repeat center center;}
+.weChatPay2{width: 100%;height:500px;background:url(/themes/s01/images/wechatPay_bg.jpg) no-repeat center center;position: relative;}
+#weChatPay_sure{outline: none;border-radius: 5px;border: none;background: #22953a;width:125px;height: 33px;color: white; font-size: 16px; position: absolute;right:30px;bottom: 20px;}
+.weChatPay2 img{width: 200px;height:200px;margin-left:215px;margin-top:80px;  }
+
+#weChatPay_loading{z-index: 12;display: none;border-radius: 5px;width:400px;height:200px;background:white;position: fixed;left:50%;top: 50%;margin-top: -100px;margin-left:-200px;border: solid 5px #4a4a4a;}
+.loading_box{width: 200px;height:90px;padding:60px 0 0 190px;}
+#weChatPay_loading p{width: 100%;height: 40px;line-height: 40px;font-size: 16px;text-align: center;}

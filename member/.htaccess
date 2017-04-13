@@ -1,0 +1,15 @@
+# APACHE CONFIG
+# ½ûÖ¹Ê¹ÓÃ»º´æ
+
+RewriteEngine on
+RewriteBase /member/
+ 
+RewriteRule ^plugin$    plugin\.php [L]
+RewriteRule ^do$    do\.php [L]
+RewriteRule ^do.passport$    do\.passport\.php [L]
+RewriteRule ^login$    login\.php [L]
+RewriteRule ^register$    register\.php [L]
+RewriteRule ^findpwd$    findpwd\.php [L]
+RewriteRule ^pay.gateway$    pay.gateway\.php [L]
+RewriteRule ^logout$    logout\.php [L]
+RewriteRule ^plugin$    plugin\.php [L]

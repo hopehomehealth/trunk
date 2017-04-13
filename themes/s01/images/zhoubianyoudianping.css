@@ -1,0 +1,43 @@
+
+
+#myOrder_mainBox{width: 100%;overflow: hidden;background-color: white;}
+#myOrder_main{width: 1190px;overflow: hidden;margin:0 auto;}
+.currentPos{width: 1190px;height:40px;line-height: 40px;font-size: 14px;color: #6d6d6d;}
+.currentPos a{color: #1fcc9e;}
+.myOrder_mainContent{width: 1190px;overflow: hidden;}
+.myOrder_mainLeft{float: left;width:220px;overflow: hidden;border:solid 1px #ebe9ea;border-top: solid 3px #1fcc9f;margin-right:8px;}
+.myOrder_mainLeftTitle{font-size: 18px;color: #1fcc9e;height: 45px;line-height:45px;border-bottom:solid 1px #ebe9ea;width:220px;text-align: center;}
+.myOrder_mainLeft dl{width: 220px;padding-bottom:20px;overflow: hidden;border-bottom:solid 1px #ebe9ea;}
+.myOrder_mainLeft dl dt{width: 175px;height: 45px;padding-left: 45px;line-height: 45px;color: #222;font-size: 16px;background-image: url("/themes/s01/images/myOrder1.png");background-repeat: no-repeat;}
+.myOrder_mainLeft dl dd{width: 197px;height: 32px;padding-left: 20px;line-height: 32px;color: #222;font-size: 14px;border-left: solid 3px white;}
+.myOrder_mainLeft dl dd span{float: right;color:#20cd98;padding-right: 15px;font-size: 16px;}
+.myOrder_mainLeft dl dd:hover{border-left: solid 3px #1db890;color: white;background-color: #1fcc9e;}
+.myOrder_mainLeft dl dd:hover span{color:white;}
+.myOrder_mainLeft .myOrder_hover1{border-left: solid 3px #1db890;color: white;background-color: #1fcc9e;}
+.myOrder_mainLeft .myOrder_hover1 span{color:white;}
+
+.orderDetail_noEvaluate_main{float: left;width:950px;overflow: hidden;border:solid 1px #e6e6e6;margin-bottom: 40px;}
+.orderDetail_noEvaluate_main1{width: 905px;height:50px;line-height: 50px;font-size: 16px;color: #333;border-bottom:solid 1px #e6e6e6;margin:0 30px 0 15px;}
+.orderDetail_noEvaluate_main1 span{padding-right: 100px;}
+
+.orderDetail_noEvaluate_main2{width: 905px;height:220px;margin:0 30px 0 15px;}
+.orderDetail_noEvaluate_main2 ul{width: 725px;height:40px;padding:90px 50px;}
+.orderDetail_noEvaluate_main2 ul li{float: left;width: 240px;height: 40px;line-height: 40px;font-size:22px;font-weight: bold;color: #333;text-align: center;}
+.orderDetail_noEvaluate_main2 ul li span{float: right;width: 32px;height: 32px;margin:4px 0;cursor:pointer;background-image: url("/themes/s01/images/pingjia.png");background-repeat: no-repeat;}
+.orderDetail_noEvaluate_main2 .haoping{background-position: 0 -32px;}
+.orderDetail_noEvaluate_main2 .zhongping{background-position: -32px 0px;}
+.orderDetail_noEvaluate_main2 .chaping{background-position: -64px 0px;}
+
+.dianpingneirong{width:905px;min-height:174px;overflow: hidden;border:solid 1px #e6e6e6;padding:25px 30px 25px 15px;font-size: 14px;line-height: 28px;color: #333;}
+
+
+.evaluateCont{width: 770px;height:120px;margin:0 auto;}
+.evaluateCont textarea{width:680px;resize:none;height:80px;font-family: "微软雅黑";border:solid 2px #20cb9e;border-radius:15px;font-size: 14px;color: #333;padding:20px 40px;}
+.orderDetail_noEvaluate_main button{width: 220px;height: 45px;background-color: #1fcc9e;color: #fff;font-size: 24px;text-align: center;line-height: 45px;border-radius: 10px;margin:35px 0 25px 325px;}
+
+.orderDetail_noEvaluate_main2 .starLabel{background:url("/themes/s01/images/starLabel.png") no-repeat center center;cursor: pointer;}
+.orderDetail_noEvaluate_main2 .starLabel_hover{background:url("/themes/s01/images/starLabel_hover.png") no-repeat center center;cursor: pointer;}
+
+.pjSuccess_logo{margin:95px 0 100px 235px;width:auto;height: 110px;padding-left: 150px;line-height: 110px;font-size: 24px;color: #1fcc9e;background:url("/themes/s01/images/pingjiasuccess.png") no-repeat left center;}
+.pj_tips{font-size: 20px;color: #999;text-align: center;margin-bottom: 55px;}
+

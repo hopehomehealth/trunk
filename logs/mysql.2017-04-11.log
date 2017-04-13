@@ -1,0 +1,2034 @@
+【2017-04-11 11:22:05】
+http://travel.bus365.com/console/?goods_type=1&kw=&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=48&y=13
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-11 11:22:11】
+http://travel.bus365.com/console/?goods_type=2&kw=&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=55&y=19
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-11 11:22:13】
+http://travel.bus365.com/console/?goods_type=2&kw=&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=42&y=11
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-11 11:22:17】
+http://travel.bus365.com/console/?goods_type=1&kw=&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=41&y=12
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-11 11:22:45】
+http://travel.bus365.com/console/?goods_type=2&kw=&cmd=Z29vZHNfZmxvb3JfZ29vZHMucGhw&floor_id=98&floor_title=%C8%C8%C3%C5%CD%C6%BC%F6&x=58&y=11
+SELECT * FROM `t_refund_fee_apply`  ORDER BY `create_time` DESC  LIMIT -5, 5
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 ( 1064 )
+
+【2017-04-11 18:52:27】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8456919444724917&v_referer=http://travel.bus365.com/menpiao/&v_session_id=pk5bv1vokvj5hpqu8i2285hct3&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%B1%B1%BE%A9
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'pk5bv1vokvj5hpqu8i2285hct3', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/?keyWord=景点门票&amp;keyWord=北京', '', '2017-04-11 18:52:27' ); 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 18:52:28' AND `sale_end`>='2017-04-11 18:52:28' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 18:52:32】
+http://travel.bus365.com/stat?cmd=do&rnd=0.7797523855697364&v_referer=http://travel.bus365.com/menpiao/&v_session_id=pk5bv1vokvj5hpqu8i2285hct3&v_ip_address=58.132.202.249&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%B1%B1%BE%A9
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'pk5bv1vokvj5hpqu8i2285hct3', '58.132.202.249', '', 'http://travel.bus365.com/menpiao/?keyWord=景点门票&amp;keyWord=北京', '', '2017-04-11 18:52:32' ); 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 18:52:33' AND `sale_end`>='2017-04-11 18:52:33' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:33】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 18:52:35】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/stat?cmd=do&rnd=0.0664132465608418&v_referer=http://travel.bus365.com/menpiao/&v_session_id=pk5bv1vokvj5hpqu8i2285hct3&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%B1%B1%BE%A9
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'pk5bv1vokvj5hpqu8i2285hct3', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/?keyWord=景点门票&amp;keyWord=北京', '', '2017-04-11 18:52:37' ); 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 18:52:37' AND `sale_end`>='2017-04-11 18:52:37' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:37】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%B1%B1%BE%A9
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 18:52:40】
+http://travel.bus365.com/stat?cmd=do&rnd=0.12259163614362478&v_referer=http://travel.bus365.com/menpiao/&v_session_id=pk5bv1vokvj5hpqu8i2285hct3&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%B1%B1%BE%A9
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'pk5bv1vokvj5hpqu8i2285hct3', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/?keyWord=景点门票&amp;keyWord=北京', '', '2017-04-11 18:52:40' ); 
+No database selected ( 1046 )
+
+【2017-04-11 18:52:49】
+http://travel.bus365.com/stat?cmd=do&rnd=0.9372648329008371&v_referer=http://travel.bus365.com/menpiao/&v_session_id=pk5bv1vokvj5hpqu8i2285hct3&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%B1%B1%BE%A9
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'pk5bv1vokvj5hpqu8i2285hct3', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/?keyWord=景点门票&amp;keyWord=北京', '', '2017-04-11 18:52:49' ); 
+No database selected ( 1046 )
+
+【2017-04-11 18:53:12】
+http://travel.bus365.com/stat?cmd=do&rnd=0.6955723997671157&v_referer=http://travel.bus365.com/menpiao/&v_session_id=pk5bv1vokvj5hpqu8i2285hct3&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%B1%B1%BE%A9
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'pk5bv1vokvj5hpqu8i2285hct3', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/?keyWord=景点门票&amp;keyWord=北京', '', '2017-04-11 18:53:12' ); 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/stat?cmd=do&rnd=0.3318084729835391&v_referer=&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-11 19:48:30' ); 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 19:48:30' AND `sale_end`>='2017-04-11 19:48:30' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 19:48:41】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/stat?cmd=do&rnd=0.6967804704327136&v_referer=&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-11 19:48:42' ); 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 19:48:42' AND `sale_end`>='2017-04-11 19:48:42' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:48:42】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:04】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:04】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:49:04】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 19:49:04】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 19:49:05' AND `sale_end`>='2017-04-11 19:49:05' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 19:49:05' AND `sale_end`>='2017-04-11 19:49:05' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:05】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 19:49:06】
+http://travel.bus365.com/stat?cmd=do&rnd=0.43421058263629675&v_referer=http://travel.bus365.com/menpiao/&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231465%3B%26%2365533%3B
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/?keyWord=景点门票&amp;keyWord=&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#1465;&amp;#65533;', '', '2017-04-11 19:49:06' ); 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:47:27' AND `sale_end`>='2017-04-11 20:47:27' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:27】
+http://travel.bus365.com/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/stat?cmd=do&rnd=0.9218995089177042&v_referer=&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', '', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/', '', '2017-04-11 20:47:28' ); 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:47:28' AND `sale_end`>='2017-04-11 20:47:28' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:47:28】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:51:41' AND `sale_end`>='2017-04-11 20:51:41' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:51:41' AND `sale_end`>='2017-04-11 20:51:41' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:41】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:51:42】
+http://travel.bus365.com/stat?cmd=do&rnd=0.8297053386922926&v_referer=http://travel.bus365.com/&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1%26keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/?keyWord=景点门票&amp;keyWord=&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#1328;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#554;', '', '2017-04-11 20:51:41' ); 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/stat?cmd=do&rnd=0.26345592038705945&v_referer=http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/?keyWord=景点门票', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-11 20:52:24' ); 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:52:24' AND `sale_end`>='2017-04-11 20:52:24' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:52:24】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/stat?cmd=do&rnd=0.5859713105019182&v_referer=http://travel.bus365.com/?keyWord=%BE%B0%B5%E3%C3%C5%C6%B1&keyWord=%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%231328%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23554%3B&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/?keyWord=景点门票', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-11 20:58:30' ); 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:58:30' AND `sale_end`>='2017-04-11 20:58:30' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:30】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:51】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:51】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+ SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC  LIMIT 0 , 20
+No database selected ( 1046 )
+
+【2017-04-11 20:58:51】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:58:51】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:58:51】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_goods_sku` WHERE `site_id`='801' AND goods_id='0' AND `departdate`>='2017-04-11' ORDER BY `sku_id` ASC LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,10;
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 10
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  AND `goods_cat_id`='0' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:58:52' AND `sale_end`>='2017-04-11 20:58:52' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:58:52】
+http://travel.bus365.com/stat?cmd=do&rnd=0.2766021587885916&v_referer=http://travel.bus365.com/menpiao/&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE%26keyWord=%C9%CF%BA%A3
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/zhoubian/?keyWord=周边游&amp;keyWord=上海', '', '2017-04-11 20:58:52' ); 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/stat?cmd=do&rnd=0.48957325145602226&v_referer=http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/?keyWord=周边游', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-11 20:59:19' ); 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 20:59:19' AND `sale_end`>='2017-04-11 20:59:19' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 20:59:19】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,3;
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 3
+No database selected ( 1046 )
+
+【2017-04-11 21:01:12】
+http://travel.bus365.com/menpiao/
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/stat?cmd=do&rnd=0.12448441633023322&v_referer=http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%C9%CF%BA%A3&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/menpiao/
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/zhoubian/?keyWord=周边游', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/menpiao/', '', '2017-04-11 21:01:13' ); 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 21:01:13' AND `sale_end`>='2017-04-11 21:01:13' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:13】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT COUNT(*) FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+ SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC  LIMIT 0 , 20
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='' AND `site_id`='801'
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT `cat_id`,`parent_id` FROM `t_goods_catalog` WHERE `cat_id`='0' 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_goods_catalog` WHERE `parent_id`='' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_goods_catalog` WHERE `cat_id`='0' AND `site_id`='801' 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='p_r' ORDER BY `order_id` ASC  LIMIT 0, 3 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, b.`addtime` AS browse_time, b.`browse_id` AS browse_id, b.goods_id AS goods_id , a.goods_type AS  goods_type, a.`lv_scenic_id` AS lv_scenic_id FROM `t_goods_thread` a, ( SELECT * FROM `t_goods_browse` t WHERE t.`site_id` = 801 -- AND (t.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR t.`user_id` = '-1')
+GROUP BY t.`goods_id` ) b WHERE a.`goods_id` = b.`goods_id` AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
+UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id , tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = 801 -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
+-- ORDER BY tb.`browse_id` DESC
+) AS aaa ORDER BY browse_id DESC limit 0,10;
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM ( SELECT a.* FROM `t_goods_thread` a WHERE a.`site_id`='801' AND a.is_sale=1 AND a.sale_type='0' AND a.`goods_type`='1' AND a.`goods_zone`='1'  ORDER BY a.`order_id` ASC, a.`goods_id` DESC ) tmp WHERE tmp.`is_hot`=1 LIMIT 0, 10
+No database selected ( 1046 )
+
+【2017-04-11 21:01:39】
+http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE&keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+SELECT * FROM `t_article_thread` WHERE `site_id`='801'  AND `goods_cat_id`='0' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_config` WHERE `state`='1' ORDER BY site_id ASC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_hotspot` WHERE `site_id`='801' AND `parent_id`='0' ORDER BY `order_id` ASC
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_menu` WHERE unshow='0' AND `parent_id`='0' AND `site_id`='801' ORDER BY order_id ASC LIMIT 0,10
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ppt` WHERE `site_id`='801' AND ppt_type='0' ORDER BY order_id ASC  
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT `cat_id` FROM `t_article_catalog` WHERE `site_id`='801' AND `cat_key`='notice' 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_article_thread` WHERE `site_id`='801' AND `cat_id`='' ORDER BY `order_id` ASC LIMIT 0, 5
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT a.* FROM `t_goods_floor` a WHERE a.`site_id`='801' AND a.`goods_type`='0'  AND a.`parent_id`='0' AND a.`state`='1' ORDER BY a.`order_id` ASC 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_goods_thread` WHERE `is_sale`=1 AND `sale_type`='2' AND `site_id`='801' AND `sale_start`<='2017-04-11 21:01:40' AND `sale_end`>='2017-04-11 21:01:40' ORDER BY `is_hot` DESC, `order_id` ASC, `goods_id` DESC LIMIT 0, 1
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,5;
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f1' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/index.php?c=cindexcontroller&m=getFlightYHInfo&city=SZX
+SELECT * FROM `t_site_ad` WHERE `site_id`='801' AND `ad_key`='i_r_f2' ORDER BY `order_id` ASC  LIMIT 0, 5 
+No database selected ( 1046 )
+
+【2017-04-11 21:01:40】
+http://travel.bus365.com/stat?cmd=do&rnd=0.6460027454886585&v_referer=http://travel.bus365.com/menpiao/&v_session_id=amim60cskusacoilbo7dqgaj52&v_ip_address=127.0.0.1&v_site_id=801&v_goods_id=&v_search_bot=&v_href=http://travel.bus365.com/zhoubian/?keyWord=%D6%DC%B1%DF%D3%CE%26keyWord=%26%2365533%3B%A6%C6%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%231018%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%23695%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%A7%DB%26%2365533%3B%2B%26%2365533%3B%26%231469%3B%26%2365533%3B%26%2365533%3B%A6%C4%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%26%2365533%3B%2B%26%2365533%3B%26%2365533%3B%26%23818%3B...
+INSERT INTO `t_stat` ( `site_id` , `referer` , `session_id` , `ip_address` , `ip_name`, `href` , `bot`, `addtime` ) VALUES ( '801', 'http://travel.bus365.com/menpiao/', 'amim60cskusacoilbo7dqgaj52', '127.0.0.1', '', 'http://travel.bus365.com/zhoubian/?keyWord=周边游&amp;keyWord=&amp;#65533;ζ&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;+&amp;#65533;&amp;#1018;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#695;&amp;#65533;&amp;#65533;&amp;#65533;й&amp;#65533;+&amp;#65533;&amp;#1469;&amp;#65533;&amp;#65533;δ&amp;#65533;+&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;&amp;#65533;+&amp;#65533;&amp;#65533;&amp;#818;...', '', '2017-04-11 21:01:40' ); 
+No database selected ( 1046 )
+

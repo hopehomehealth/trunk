@@ -1,0 +1,26 @@
+
+
+
+#zby_orderSuccess_mainBox{width: 100%;overflow: hidden;background-color: #f5f5f5;}
+#zby_orderSuccess_main{width: 1190px;overflow: hidden;margin:0 auto;}
+.zby_orderSuccess_main_title{width: 1190px;height:48px;padding:41px 0;}
+.zby_orderSuccess_main_title img{display: block;width: 1190px;height: 48px;}
+.zby_orderSuccess_main1{width: 1190px;height: 346px;overflow: hidden;border-bottom: solid 1px #ddd;background-color: #fff;}
+.zby_orderSuccess_main1_cont{margin:55px 0 45px 308px;padding-left: 50px;background: url("../images/success_logo1.jpg") no-repeat left top;}
+.zby_orderSuccess_main1_cont span{display:inline-block;color: #333;font-size: 18px;line-height: 48px;padding-left: 20px;padding-bottom: 10px;font-weight: bold;}
+.zby_orderSuccess_main1_cont p{font-size: 14px;line-height: 24px;color: #999;}
+.zby_orderSuccess_main1_cont p a{color: #2da1e7;}
+.zby_orderSuccess_main1_cont input{width: 195px;height: 44px;line-height: 44px;color: #fff;font-size:18px;background-color: #1fcc9e;text-align: center;display: block;margin:0 auto;border-radius: 5px;}
+
+.zby_orderSuccess_main2{width: 1190px;height: 600px;background-color: #fff;overflow: hidden;margin-bottom: 40px;}
+.zby_orderSuccess_main2_title{line-height:92px;width:1150px;padding-left: 40px;font-size: 20px;color: #333;background: url("../images/aixin.png") no-repeat left center;}
+.zby_orderSuccess_main2_cont{width: 1190px;overflow: hidden;}
+.zby_orderSuccess_main2_cont ul{width: 1190px;overflow: hidden;}
+.zby_orderSuccess_main2_cont ul li{float: left;width: 218px;height:222px;margin:0 10px 10px;background-color: #f5f5f5;}
+.zby_orderSuccess_main2_cont ul li img{display: block;width: 218px;height: 139px;}
+.zby_orderSuccess_main2_cont ul li p{width: 198px;padding:0 10px;line-height:32px;font-size: 14px;color: #333;}
+.zby_orderSuccess_main2_cont ul li p span{color: #999;}
+.zby_orderSuccess_main2_cont .cnxh_infoLeft{float: left;padding-top:15px;}
+.zby_orderSuccess_main2_cont .cnxh_infoLeft b{color: #ff7000;}
+.zby_orderSuccess_main2_cont .cnxh_infoRight{float:right;padding-top:15px;}
+.zby_orderSuccess_main2_cont .cnxh_infoRight b{color: #ff7000;font-size: 16px;}

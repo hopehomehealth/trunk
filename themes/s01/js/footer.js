@@ -1,0 +1,4 @@
+/*!
+ * Created by xbill on 15/3/16.
+ */
+define(function(require,exports,module){require("base64");function e(){var e=new Base64;var t="";var r=false;$("#footer_index_title").hide();$("#footer_index_list").hide();for(var i in FooterIndexArray){var o=FooterIndexArray[i];if(i=="index"){for(var n in o){$("#footer_index_title").show();$("#footer_index_title").html(n);break}}else{t=t+"<li>";t=t+"<label>"+i+"</label>";for(var n in o){var a=o[n];t=t+'<a href="'+a["url"]+'" target="_blank" title="'+a["text"]+'">'+a["text"]+"</a>"}t=t+"</li>"}}if(t){$("#footer_index_list").show();$("#footer_index_list").html(t)}}var t={linkFooterIndex:function(){e()}};module.exports=t});
