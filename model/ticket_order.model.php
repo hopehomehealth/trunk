@@ -1,6 +1,5 @@
 <?
 $db->check_cookie($loginUrl,$host);
-
 //获取参数
 $lvGoodsName = urldecode($_GET['lvGoodsName']);
 $ticketTypeName = urldecode($_GET['ticketTypeName']);
@@ -11,7 +10,6 @@ $lvProductId = req('lvProductId');
 $lvGoodsId = req('lvGoodsId');
 $ticketType = req('ticketType');
 
-//var_dump($goodsId);
 // 获取预定界面url
 $urll = $db->getUrl();
 $_SESSION['urll'] = $urll;

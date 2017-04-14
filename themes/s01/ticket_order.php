@@ -163,28 +163,32 @@
     $("#shuliangs").val(counts);
 
     function change_calendar(yyyy, mm) {
-        var v_url = "";
-        v_url = "/member/ajax.calendars.php?rnd=" + Math.random();
-        v_url += "&goods_id=" + <?=$goodsId?>;
-        v_url += "&lvProductId=" + <?=$lvProductId?>;
-        v_url += "&lvGoodsId=" + <?=$lvGoodsId?>;
-        v_url += "&yyyy=" + yyyy;
-        v_url += "&mm=" + mm;
-        var html_calendar = $.ajax({url: v_url, async: false});
-        $("#date_price").html(html_calendar.responseText);
-        $('.date_blue').click(function () {
-            if ($(this).find('.date_yen').eq(0).html() != "") {
-                $('#datepicker').val(yyyy + '-' + mm + '-' + $(this).html().split("<br>")[0]);
-                var $price1 = $(this).find('.date_yen').eq(0).html().split('</span>')[1].slice(1).split('/»À')[0];
-                $('#zongjia').val($price1);
-                singlePrice = $('#zongjia').val();
-                $('.danjia').html("&yen;" + $price1);
-                $('.danjia1').html($('.counts').html() + "x &yen;" + $price1);
-                $('.totalPrice').html($('.counts').html() * $price1);
-                $('#v_calendar').hide();
-                $("#danjias").val(singlePrice);
-            }
-        });
+        if(mm<(new Date().getMonth() + 1)){
+            return;
+        }else{
+            var v_url = "";
+            v_url = "/member/ajax.calendars.php?rnd=" + Math.random();
+            v_url += "&goods_id=" + <?=$goodsId?>;
+            v_url += "&lvProductId=" + <?=$lvProductId?>;
+            v_url += "&lvGoodsId=" + <?=$lvGoodsId?>;
+            v_url += "&yyyy=" + yyyy;
+            v_url += "&mm=" + mm;
+            var html_calendar = $.ajax({url: v_url, async: false});
+            $("#date_price").html(html_calendar.responseText);
+            $('.date_blue').click(function () {
+                if ($(this).find('.date_yen').eq(0).html() != "") {
+                    $('#datepicker').val(yyyy + '-' + mm + '-' + $(this).html().split("<br>")[0]);
+                    var $price1 = $(this).find('.date_yen').eq(0).html().split('</span>')[1].slice(1).split('/»À')[0];
+                    $('#zongjia').val($price1);
+                    singlePrice = $('#zongjia').val();
+                    $('.danjia').html("&yen;" + $price1);
+                    $('.danjia1').html($('.counts').html() + "x &yen;" + $price1);
+                    $('.totalPrice').html($('.counts').html() * $price1);
+                    $('#v_calendar').hide();
+                    $("#danjias").val(singlePrice);
+                }
+            });
+        }
     }
     change_calendar(<?=date("'Y','m'")?>);
     $('#datepicker').focus(function () {

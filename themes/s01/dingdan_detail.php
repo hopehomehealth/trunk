@@ -97,12 +97,12 @@
                     <!-- 默认按钮 -->
                     <? if($st == 0){ ?>
                         <div class="orderBtn_default">
-                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($list['lvGoodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button>再次预定</button></a>
+                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button>再次预定</button></a>
                         </div>
                     <?}elseif($st == 1){?>
                         <!-- 出票成功按钮 -->
                         <div class="orderBtn_success">
-                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($list['lvGoodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button>再次预定</button></a>
+                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button>再次预定</button></a>
                             <button class="applyRefundBtn">申请退款</button>
                             <button class="msgRetry">重发短信凭证</button>
                         </div>
@@ -125,7 +125,7 @@
                     <?}elseif($st == 3){?>
                         <!-- 已付款出票中 按钮 -->
                         <div class="orderBtn_chupiaozhong">
-                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($list['lvGoodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button style="margin-left:360px;">再次预定</button></a>
+                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button style="margin-left:360px;">再次预定</button></a>
                             <button class="applyRefundBtn">申请退款</button>
                         </div>
                         <!-- 已付款未使用 按钮 -->
@@ -137,7 +137,7 @@
                         <!-- 已付款已使用 按钮 -->
                     <?}elseif($st == 4){?>
                         <div class="orderBtn_hasUse">
-                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($list['lvGoodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button style="margin-left:360px;">再次预定</button></a>
+                            <a href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $list['isEmail'] ?>-<?= $list['isCredentials'] ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $list['lvGoodsId'] ?>.html"><button style="margin-left:360px;">再次预定</button></a>
                             <button onclick="comment_commit()">去评价</button>
                             <!--                            <a href="/menpiao/ticket_comment_commit.html><button>去评价</button></a>-->
                         </div>

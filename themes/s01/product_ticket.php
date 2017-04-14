@@ -272,7 +272,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 										<div class="ourPrice">&yen;<?=($data['ticketMapList'][0]['minPrice']);?></div>
 										<div class="payType"><?=($data['ticketMapList'][0]['paymentType']);?></div>
 										
-										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['ticketMapList'][0]['lvGoodsName'])?>-<?=urlencode($data['ticketMapList'][0]['ticketTypeName'])?>-<?=($data['ticketMapList'][0]['isEmail'])?>-<?=($data['ticketMapList'][0]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][0]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
+										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($data['ticketMapList'][0]['ticketTypeName'])?>-<?=($data['ticketMapList'][0]['isEmail'])?>-<?=($data['ticketMapList'][0]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][0]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
 									</div>
 									
 									<div class="spotTicket_infoHide">
@@ -296,7 +296,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 										<div class="meshiPrice">&yen;<?=($data['ticketMapList'][1]['marketPrice']);?></div>
 										<div class="ourPrice">&yen;<?=($data['ticketMapList'][1]['minPrice']);?></div>
 										<div class="payType"><?=($data['ticketMapList'][1]['paymentType']);?></div>
-										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['ticketMapList'][1]['lvGoodsName'])?>-<?=urlencode($data['ticketMapList'][1]['ticketTypeName'])?>-<?=($data['ticketMapList'][1]['isEmail'])?>-<?=($data['ticketMapList'][1]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][1]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
+										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($data['ticketMapList'][1]['ticketTypeName'])?>-<?=($data['ticketMapList'][1]['isEmail'])?>-<?=($data['ticketMapList'][1]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][1]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
 									</div>
 									<div class="spotTicket_infoHide">
 										<dl class=""><dt>费用包含</dt><dd><?=($data['ticketMapList'][1]['costInclude'])?></dd></dl>
@@ -318,7 +318,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 										<div class="meshiPrice">&yen;<?=($data['ticketMapList'][2]['marketPrice']);?></div>
 										<div class="ourPrice">&yen;<?=($data['ticketMapList'][2]['minPrice']);?></div>
 										<div class="payType"><?=($data['ticketMapList'][2]['paymentType']);?></div>
-										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['ticketMapList'][2]['lvGoodsName'])?>-<?=urlencode($data['ticketMapList'][2]['ticketTypeName'])?>-<?=($data['ticketMapList'][2]['isEmail'])?>-<?=($data['ticketMapList'][2]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][2]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
+										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($data['ticketMapList'][2]['ticketTypeName'])?>-<?=($data['ticketMapList'][2]['isEmail'])?>-<?=($data['ticketMapList'][2]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][2]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
 									</div>
 									<div class="spotTicket_infoHide">
 										<dl class=""><dt>费用包含</dt><dd><?=($data['ticketMapList'][2]['costInclude'])?></dd></dl>
@@ -346,7 +346,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 										<div class="meshiPrice">&yen;<?=($value['marketPrice']);?></div>
 										<div class="ourPrice">&yen;<?=($value['minPrice']);?></div>
 										<div class="payType"><?=($value['paymentType']);?></div>
-										<div class="reserve"><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($value['lvGoodsName'])?>-<?=urlencode($value['ticketTypeName'])?>-<?=($value['isEmail'])?>-<?=($value['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($value['lvGoodsId'])?>.html" target="_blank">预定</a></div>
+										<div class="reserve"><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($value['ticketTypeName'])?>-<?=($value['isEmail'])?>-<?=($value['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($value['lvGoodsId'])?>.html" target="_blank">预定</a></div>
 									</div>
 									<div class="spotTicket_infoHide">
 										<dl class=""><dt>费用包含</dt><dd><?=($value['costInclude'])?></dd></dl>
@@ -383,7 +383,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 										<div class="meshiPrice">&yen;<?=($value['marketPrice']);?></div>
 										<div class="ourPrice">&yen;<?=($value['minPrice']);?></div>
 										<div class="payType"><?=($value['paymentType']);?></div>
-										<div class="reserve"><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($value['lvGoodsName'])?>-<?=urlencode($value['ticketTypeName'])?>-<?=($value['isEmail'])?>-<?=($value['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($value['lvGoodsId'])?>.html" target="_blank">预定</a></div>
+										<div class="reserve"><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($value['ticketTypeName'])?>-<?=($value['isEmail'])?>-<?=($value['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($value['lvGoodsId'])?>.html" target="_blank">预定</a></div>
 										
 									</div>
 									<div class="spotTicket_infoHide">
