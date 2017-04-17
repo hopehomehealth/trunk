@@ -42,7 +42,7 @@ if($flag == 'check'){
     $payPrice = $check_form_data['payPrice'];
     $orderCode = $check_form_data['orderCode'];
     $payTime = $check_form_data['payTime'];
-    var_dump($check_form_data);
+//    var_dump($check_form_data);
 //    $js = "<script>window.location.href='/zhoubianyou/zbyonline_pay-".$goodsName."-".$payPrice."-".$orderCode.".html?time=$payTime'; </script>";
 //    echo $js;
 
