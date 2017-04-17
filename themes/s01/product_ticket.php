@@ -172,12 +172,14 @@ $('.searchMain1_c input').on('keydown',function(event) {
 					 	<dt>主题</dt>
 					 	<dd class="list1">
 					 		<ul>
-					 			<?foreach($zhuti['data'] as $key=>$data){ $data = ($data); ?>
+					 			<?foreach($zhuti['data'] as $key=>$data){ ?>
 								<?if($_GET['scenicTheme']!=$data){?>
 					 			<li>
-					 			
+					 			<? if($data=='不限'){$data = ''; ?>
+					 			<a href="/menpiao/zhuti/?&scenicTheme=<?=$data?>"><span>不限</span></a>
+					 			<?}else{?>
 					 			<a href="/menpiao/zhuti/?&scenicTheme=<?=$data?>"><span><?=$data?></span></a>
-					 			
+					 			<?}?>
 					 			</li>
 					 			<?}else{?>
 					 			<li>
