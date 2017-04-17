@@ -101,7 +101,7 @@ RewriteRule ^menpiao/ticket_comment_detail-(.*).html$     index\.php?cmd=ticket_
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^zhoubianyou/zbyform_submit-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*).html$    index\.php?cmd=zbyform_submit&goods_type=$1&goods_id=$2&goods_name=$3&adult_num=$4&kid_num=$5&departdate=$6&payPrice=$7&%1 [L]
 RewriteCond %{QUERY_STRING} ^(.*)$
-RewriteRule ^zhoubianyou/zbyonline_pay-(.*)-(.*)-(.*).html$    index\.php?cmd=zbyonline_pay&goodsName=$1&payPrice=$2&orderCode=$3&%1 [L]
+RewriteRule ^zhoubianyou/zbyonline_pay-(.*).html$    index\.php?cmd=zbyonline_pay&orderCode=$1&%1 [L]
 RewriteRule ^zhoubianyou/zbypay_jump-(.*)-(.*)-(.*).html$    index\.php?cmd=zbypay_jump&topayinfoid=$1&orderno=$2&totalprice=$3 [L]
 RewriteRule ^zhoubianyou/zbypay_success-(.*).html$    index\.php?cmd=zbypay_success&orderCode=$1 [L]
 RewriteRule ^zhoubianyou/zbyorder_detail-(.*).html$    index\.php?cmd=zbyorder_detail&orderCode=$1 [L]
