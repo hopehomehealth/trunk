@@ -352,12 +352,14 @@
                             $val['itemInfo'] = gbk_to_utf8($val['itemInfo']);
                             $val['itemInfo'] = json_decode($val['itemInfo'],true);
                             $val['itemInfo'] = array_iconv($val['itemInfo']);
+                            $valnum = count($val['itemInfo']);
                             ?>
                             <dd>
                                 <?
                                 if (notnull($val['itemInfo'])){
                                     foreach($val['itemInfo'] as $key => $value){ ?>
-                                        <?=$value['text']?>:<span class="mr30"><?=$value['desc']?></span><br>
+                                        <?=$value['text']?>:<span class="mr30" title="<?if(mb_strlen($value['desc'],'gbk')>27) echo $value['desc'];?>"><?if(mb_strlen($value['desc'],'gbk')>27 && $valnum > 3) echo jiequ(30,$value['desc']);else echo $value['desc'];?></span><br>
+<!--                                        --><?//=$value['text']?><!--:<span class="mr30">--><?//=$value['desc']?><!--</span><br>-->
                                     <?}}?>
 
                             </dd>
@@ -490,3 +492,13 @@
 <?include('foot.php');?>
 </body>
 </html>
+<?
+function jiequ($num,$data){
+    if(mb_strlen($data,'gbk')>$num){
+        return mb_substr($data, 0, $num,'gbk').'...';
+    }else{
+        return $data;
+    }
+
+}
+?>
