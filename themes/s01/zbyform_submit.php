@@ -163,6 +163,18 @@ if(!defined('IN_CLOOTA')) {
             <input type="hidden" name="payPrice" value="<?echo $pay_price;?>">
             <input type="hidden" name="departdate" value="<?echo $departdate1;?>">
         </form>
+
+        <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
+            <input type="hidden" name="payPrice" id="payPrice" value="<?=$payPrice?>">
+            <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName?>">
+            <input type="hidden" name="payTime" id="payTime" value="<?=$payTime?>">
+        </form>
+        <?
+        if (notnull($check_form_data)){
+            $js = "<script>document.getElementById('onlineForm').submit();</script>";
+            echo $js;
+        }
+        ?>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
                     <div class="zbyOrder_main31_left">Ó¦¸¶×Ü¼Û£º£¤<?echo $pay_price;?></div>
