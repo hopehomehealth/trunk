@@ -89,7 +89,7 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                     <li class="ourPrice">&yen; <?= $values['minPrice'] ?><span>起</span></li>
                                     <li class="payType">在线支付</li>
                                     <li class="reserve"><a
-                                            href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $values['isEmail'] ?>-<?= $ticketType ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $values['lvGoodsId'] ?>.html">预定</a>
+                                            href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $values['isEmail'] ?>-<?= $ticketType ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $values['lvGoodsId'] ?>.html">预定</a> 
                                     </li>
                                 </ul>
                                 <div class="spotTicket_infoHide">
