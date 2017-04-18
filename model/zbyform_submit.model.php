@@ -38,7 +38,7 @@ if($flag == 'check'){
         exit();
     }
 
-    $goodsName = urlencode($check_form_data['goodsName']);
+    $goodsName = $check_form_data['goodsName'];
     $payPrice = $check_form_data['payPrice'];
     $orderCode = $check_form_data['orderCode'];
     $payTime = $check_form_data['payTime'];

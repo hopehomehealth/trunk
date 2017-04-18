@@ -33,7 +33,9 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                 <a class="spotAlbum"><span id="lunbo_pre"></span><span id="lunbo_next"></span></a>
             </div>
             <div class="spotListDetail_main1_info">
-                <div class="detailInfo_title"><?= $db->to_gbk($obj['scenicInfo']['goodsName']) ?></div>
+                <a title="<?= $obj['scenicInfo']['goodsName'] ?>">
+                <div class="detailInfo_title"><?= $db->to_gbk(jiequ(21, $obj['scenicInfo']['goodsName'])) ?></div>
+                </a>
                 <a title="<?= $db->to_gbk($obj['scenicInfo']['productIntroduce']) ?>">
                     <div
                         class="detailInfo_tips"><?= $db->to_gbk(jiequ(105, $obj['scenicInfo']['productIntroduce'])) ?></div>
@@ -161,16 +163,6 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                             </dd>
                         </dl>
                         <dl>
-                            <dt>开具发票</dt>
-                            <dd>
-                                <ul>
-                                    <li>1.
-                                        请致电10106060，告知客服专员发票抬头和邮件地址，我公司在收到完整信息后向您寄送发票。为避免因发生不可抗力或意外事项致实际消费额与发票开具的相应数额不符，建议您在游玩归来后两个月内领取发票。（在线支付）
-                                    </li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <dl>
                             <dt>重要说明</dt>
                             <dd>
                                 <ul>
@@ -202,7 +194,9 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                 <dd>
                                     <?= $db->to_gbk($item['scenicSpotInfo']) ?>
                                 </dd>
-                                <image src="<?= $db->to_gbk($item['imgUrl']) ?>"></image>
+                                <?foreach ($item['imgUrl'] as $k => $val){?>
+                                    <image src="<?= $db->to_gbk($val) ?>"></image>
+                                <?}?>
                             </dl>
                         <? } ?>
                     </div>

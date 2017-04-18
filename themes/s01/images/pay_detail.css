@@ -89,3 +89,11 @@
 .cancelBox_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/refund_tips.jpg") no-repeat left center;font-size: 20px;color: #333;}
 .cancelBox_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
 .cancelBox_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
+
+.cancelBox1{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.cancelBox1_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.cancelBox1_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.cancelBox1_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.cancelBox1_cont{width: 544px;height: 150px;overflow: hidden;}
+.cancelBox1_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}

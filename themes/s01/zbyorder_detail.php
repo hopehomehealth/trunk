@@ -203,6 +203,17 @@ if (!defined('IN_CLOOTA')) {
         <button class="cancelBox_cancel">取消</button>
     </div>
 </div>
+<!-- 取消订单成功或失败弹窗 -->
+<div class="cancelBox1">
+    <div class="cancelBox1_title">
+        <div class="cancelBox1_title_left">bus365提示您</div>
+        <a href="<?=$aurl?>"><span class="cancelBox1_title_right"></span></a>
+    </div>
+    <div class="cancelBox1_cont">
+        <div class="cancelBox1_cont_tips">&nbsp;&nbsp;<?=utf8_to_gbk($res['data']['message'])?></div>
+    </div>
+</div>
+
 
 <!--  foot  start -->
 <? include 'foot.php'; ?>
@@ -241,6 +252,16 @@ if (!defined('IN_CLOOTA')) {
     $('.cancelBox_cancel').click(function(){
         $("#mengban").hide();
         $(".cancelBox").hide();
+    });
+
+    //取消订单成功或失败弹窗
+    $('.cancelBox_sure').click(function(){
+        $('.cancelBox1').show();
+        $(".cancelBox").hide();
+    });
+    $('.cancelBox1_title_right').click(function(){
+        $("#mengban").hide();
+        $(".cancelBox1").hide();
     });
 </script>
 </html>
