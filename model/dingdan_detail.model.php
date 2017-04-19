@@ -110,6 +110,7 @@ $orderStatus = $orderInfoExceptTicket['orderStatus'];
 $credenceStatus = $orderInfoExceptTicket['credenceStatus'];
 $touristList = $pay_detail['touristList'];//游玩人列表
 $paymentType = $orderInfoExceptTicket['paymentType'];//支付方式
+$values['lvGoodsId'] =$orderTicketItem[0]['lvGoodsId'] ;
 
 $ur = $host . "/travel/interface/menpiao/getTicketProductDetail";
 $da = array();
@@ -120,6 +121,8 @@ $arr = json_decode($rst, true);
 $obj = $arr['data'];
 $list = $obj['ticketMapList']['0']['ticketList']['0'];//var_dump($obj['ticketMapList']);die;
 $jingdian = $obj['scenicSpotList'];
+$ticketTypeName = $obj['ticketMapList']['0']['ticketTypeName'];
+$ticketType = $list['ticketType'];
 
 
 if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8){
