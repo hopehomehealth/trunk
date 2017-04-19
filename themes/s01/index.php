@@ -452,7 +452,7 @@
                                             <div class="hs-best"><a href="<?= $g_self_domain; ?>/menpiao/" target=""
                                                                     title="">
                                                     <div class="imgbox"><img
-                                                            src="/upfiles/801/2016040602533176598.jpg" alt="">
+                                                            src="/upfiles/801/2017033110041987229.png" alt="">
                                                     </div>
                                                     <div class="hs-txt">
                                                         <div class="sname"></div>

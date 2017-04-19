@@ -148,7 +148,7 @@ if($g_config['site_notice']!='' && $is_index==true){
 					<li><a href="<?=$g_bus365_domain?>/aviation/toair_index">飞机票</a></li>
 					<li><a href="<?=$g_bus365_domain?>/train/toTrain_index">火车票</a></li>
 					<li style="position: relative;background-image:url(/themes/s01/images/xiala.png);background-repeat:no-repeat;background-position:65px center;" class="trip_list_btn nav_hover">
-						<a style="width: 100%;height: 50px;">旅游</a>
+						<a style="width: 100%;height: 50px;" href="<?=$g_self_domain?>">旅游</a>
 						<ul class="trip_list hide">
 							<li><a href="<?=$g_self_domain?>/zhoubian/">周边游</a></li>
 							<li><a href="<?=$g_self_domain?>/menpiao/">门票</a></li>

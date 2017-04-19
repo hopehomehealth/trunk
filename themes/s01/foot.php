@@ -66,7 +66,7 @@
             </dl>
         </div>
         <div class="foot4">
-            <a style="color: #666;" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802021288">&nbsp;&nbsp;京公网安备&nbsp;&nbsp;11010802021288&nbsp;|&nbsp;</a>&nbsp;Copyright?&nbsp;&nbsp;2013-2020&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;经营许可证编号：京ICP证160290号 
+            <a style="color: #666;" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802021288">&nbsp;&nbsp;京公网安备&nbsp;&nbsp;11010802021288&nbsp;|&nbsp;</a>&nbsp;Copyright&nbsp;&nbsp;2013-2020&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;经营许可证编号：京ICP证160290号 
         </div>
         <div class="foot5">
             北京盛威时代科技有限公司   电话:010-58858850  地址:北京市海淀区上地东路一号盈创动力大厦E座西区7层<br>旅行社业务许可证：L-BJ-CJ00419

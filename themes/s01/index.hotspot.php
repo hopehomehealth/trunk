@@ -61,7 +61,7 @@ if(notnull($hotspot1)){
 			<a href="javascript:void();"><img src="<?if($hs_ad1!=''){?>/upfiles/<?=$g_siteid?>/<?=$hs_ad1?><?}else{?>/themes/s01/images/hotspot_ad1.jpg<?}?>" style="width:256px;height:133px;"/></a> 
 		</div>
 		<div class="subad">
-			<a href="<?=$hs_ad2_link?>"><img src="<?if($hs_ad2!=''){?>/upfiles/<?=$g_siteid?>/<?=$hs_ad2?><?}else{?>/themes/s01/images/hotspot_ad2.jpg<?}?>" style="width:328px;height:462px;"/></a> 
+			<a href="<?=$hs_ad2_link?>"><img src="<?if($hs_ad2!=''){?>/upfiles/<?=$g_siteid?>/<?=$hs_ad2?><?}else{?>/themes/s01/images/hotspot_ad2.png<?}?>" style="width:328px;height:462px;"/></a> 
 		</div>
 	</div>
 	<?}else{?>
@@ -98,7 +98,7 @@ if(notnull($hotspot1)){
 			?>  
 		</dl>
 		<div class="dl-ad fullrow">
-			<img src="<?if($hs_ad1!=''){?>/upfiles/<?=$g_siteid?>/<?=$hs_ad1?><?}else{?>/images/hotspot_ad1.jpg<?}?>" style="width:256px;height:133px;"/>
+			<img src="<?if($hs_ad1!=''){?>/upfiles/<?=$g_siteid?>/<?=$hs_ad1?><?}else{?>themes/s01/images/hotspot_ad1.jpg<?}?>" style="width:256px;height:133px;"/>
 		</div>
 	</div>
 	<?}?>

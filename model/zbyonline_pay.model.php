@@ -1,7 +1,7 @@
 <?
 //var_dump($_REQUEST);
 $db->check_cookie($loginUrl, $host);
-$goodsName = urldecode(req('goodsName'));
+$goodsName = req('goodsName');
 $payPrice = req('payPrice');
 $orderCode = req('orderCode');
 $payTime = req('time');
