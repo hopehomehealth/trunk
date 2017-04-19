@@ -33,9 +33,7 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                 <a class="spotAlbum"><span id="lunbo_pre"></span><span id="lunbo_next"></span></a>
             </div>
             <div class="spotListDetail_main1_info">
-                <a title="<?= $obj['scenicInfo']['goodsName'] ?>">
-                <div class="detailInfo_title"><?= $db->to_gbk(jiequ(21, $obj['scenicInfo']['goodsName'])) ?></div>
-                </a>
+                <div class="detailInfo_title"><?= $db->to_gbk($obj['scenicInfo']['goodsName']) ?></div>
                 <a title="<?= $db->to_gbk($obj['scenicInfo']['productIntroduce']) ?>">
                     <div
                         class="detailInfo_tips"><?= $db->to_gbk(jiequ(105, $obj['scenicInfo']['productIntroduce'])) ?></div>
@@ -195,7 +193,7 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                     <?= $db->to_gbk($item['scenicSpotInfo']) ?>
                                 </dd>
                                 <?foreach ($item['imgUrl'] as $k => $val){?>
-                                    <image src="<?= $db->to_gbk($val) ?>"></image>
+                                    <image src="<?= $db->to_gbk($val) ?>" style="width: 720px;height: 480px;"></image>
                                 <?}?>
                             </dl>
                         <? } ?>

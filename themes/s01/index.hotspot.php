@@ -98,7 +98,7 @@ if(notnull($hotspot1)){
 			?>  
 		</dl>
 		<div class="dl-ad fullrow">
-			<img src="<?if($hs_ad1!=''){?>/upfiles/<?=$g_siteid?>/<?=$hs_ad1?><?}else{?>/images/hotspot_ad1.jpg<?}?>" style="width:256px;height:133px;"/>
+			<img src="<?if($hs_ad1!=''){?>/upfiles/<?=$g_siteid?>/<?=$hs_ad1?><?}else{?>themes/s01/images/hotspot_ad1.jpg<?}?>" style="width:256px;height:133px;"/>
 		</div>
 	</div>
 	<?}?>

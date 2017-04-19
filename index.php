@@ -5,7 +5,6 @@ if (!isset($_SESSION)){
     session_start();
 }
 $runtime_start = microtime(true); 
-
 include("config.php"); 
 
 //判断cookie正确性
@@ -15,13 +14,11 @@ if(!empty($_COOKIE['5fe845d7c136951446ff6a80b8144467'])){
     $login = $db->api_post("$host/getuserinfo",$usertoken);
     if(strpos($login, '#') !== false){
         $check = 'check';
-        $host_user = "$host/auth/userdetail?usertoken=".$token['token2'];
-        $bus365_user = array_iconv(json_decode(file_get_contents("http://$host/auth/userdetail?usertoken=".$token['token2']),true),'utf-8','gbk');
-        $realname = $bus365_user['realname'];
     }
 }else{
     $check = '';
 }
+
 /// 备案期间
 if($g_misc['is_icp_date']=='1'){
 	if(date('H')>=8 && date('H')<=17){

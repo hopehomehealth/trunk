@@ -1,5 +1,5 @@
 <?php
-function jiequ($data,$num=28){
+function jiequ($data,$num=26){
 	if(mb_strlen($data,'utf-8')>=$num){
 		return mb_substr($data, 0, $num-1,'utf-8').'...';
 	}else{

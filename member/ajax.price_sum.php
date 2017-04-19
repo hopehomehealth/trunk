@@ -1,6 +1,5 @@
 <?
 include('config.php');
-header("Content-type: text/html; charset=gbk");
 
 $ac			= req('ac');
 $adult_num	= req('adult_num');

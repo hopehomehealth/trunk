@@ -135,11 +135,7 @@ if(!defined('IN_CLOOTA')) {
 				<span onclick="dialog_edit('./?cmd=<?=base64_encode('goods_cat_selecter.php')?>&modal=true&goods_id=<?=$val['goods_id']?>')" style="cursor:pointer">关联分类</span> 
 				&nbsp;
 				<a href="?cmd=<?=base64_encode('goods_edit.php')?>&ac=copy&goods_id=<?=$val['goods_id']?>" style="cursor:pointer">复制</a> &nbsp; 
-				<?if (req('goods_type' != 4)){?>
-                <a href="preview.php?ac=goods&goods_id=<?=$val['goods_id']?>" target="_blank"><img src="static/image/view.gif" title="预览"/></a>
-                <?}else{?>
-                    <a href="<?=$g_self_domain?>/menpiao/ticket_detail-<?=$val['lv_product_id']?>-<?=$val['lv_scenic_id']?>.html" target="_blank"><img src="static/image/view.gif" title="预览"/></a>
-                  <?}?>
+				<a href="preview.php?ac=goods&goods_id=<?=$val['goods_id']?>" target="_blank"><img src="static/image/view.gif" title="预览"/></a> 
 				&nbsp;
 				<a href="?cmd=<?=base64_encode('goods_edit.php')?>&goods_id=<?=$val['goods_id']?>" style="cursor:pointer"><img src="static/image/edit.gif" title="编辑"/></a> 
 				&nbsp;

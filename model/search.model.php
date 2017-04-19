@@ -1,4 +1,12 @@
 <?php
+function jiequ($data,$num=28){
+	if(mb_strlen($data,'utf-8')>=$num){
+		return mb_substr($data, 0, $num-1,'utf-8').'...';
+	}else{
+		return $data;
+	}
+	
+}
 $s_search['keyWord'] = req('value');
 $s_search['dataUser'] = 1;
 $s_liebiao = json_decode($db->api_post($host."/travel/interface/ticket/getTicketGoodsListFromMongoByKeyWord",$s_search),true);
@@ -9,8 +17,9 @@ if(empty($s_liebiao)){
 echo '<ul>';
 foreach($s_liebiao as $key=>$value){
 	if($key<7){
-		echo '<li>'.utf8_to_gbk($value['goodsName']).'</li>';
-		//echo '<li>'.$value['goodsName'].'</li>';
+		$goodsName = str_replace(' ','　',$value['goodsName']) ;
+		$jiequ = jiequ($value['goodsName']);
+		echo '<li title='.utf8_to_gbk($goodsName).'>'.utf8_to_gbk($jiequ).'</li>';
 	}
 	
 } 

@@ -38,14 +38,12 @@ if($flag == 'check'){
         exit();
     }
 
-    $goodsName = $check_form_data['goodsName'];
+    $goodsName = urlencode($check_form_data['goodsName']);
     $payPrice = $check_form_data['payPrice'];
     $orderCode = $check_form_data['orderCode'];
     $payTime = $check_form_data['payTime'];
-//    var_dump($check_form_data);
-//    $js = "<script>window.location.href='/zhoubianyou/zbyonline_pay-".$goodsName."-".$payPrice."-".$orderCode.".html?time=$payTime'; </script>";
-//    echo $js;
-
+    $js = "<script>window.location.href='/zhoubianyou/zbyonline_pay-".$goodsName."-".$payPrice."-".$orderCode.".html?time=$payTime'; </script>";
+    echo $js;
 }
 
 function get_product_detail()
