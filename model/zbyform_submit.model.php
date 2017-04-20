@@ -17,6 +17,7 @@ $mobile = req('mobile');
 $user_id = req('user_id');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 
+
 $flag = req('flag');
 $touristList = '[{"userIdcard":"211481198401154411","userName":"wangge","userPhone":"18841184568"},{"userIdcard":"211481198401154411","userName":"laozhao","userPhone":"18242984568"}]';
 

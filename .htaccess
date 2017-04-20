@@ -126,7 +126,6 @@ RewriteRule ^news/([0-9a-zA-Z]+)/$    index\.php?cmd=news_list&cat_key=$1&%1 [L]
 # 资讯明细
 RewriteRule ^news/detail-([0-9]+).html$    index\.php?cmd=news_detail&id=$1 [L]
 
-
 # 积分商品列表
 RewriteRule ^jifen/$    index\.php?cmd=score_list [L]
 RewriteRule ^jifen$    jifen\/ [R]
