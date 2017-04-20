@@ -1,7 +1,7 @@
 <?php
 function jiequ($data,$num=56){
 	if(mb_strwidth($data,'utf-8')>=$num){
-		return mb_strimwidth($data, 0, $num-1,'...','utf-8');
+		return mb_strimwidth($data, 0, $num-3,'...','utf-8');
 	}else{
 		return $data;
 	}
