@@ -48,6 +48,11 @@ if (!defined('IN_CLOOTA')) {
     </tr>
 
     <tr>
+        <td style="text-align:right"><strong>数据来源：</strong></td>
+        <td><?if($details['data_sources'] == 0){ ?>bus365<?}else{?>驴妈妈<?}?></td>
+    </tr>
+
+    <tr>
         <td style="text-align:right"><strong>联系方式：</strong></td>
         <td><?= $details['mobile'] ?></td>
     </tr>
