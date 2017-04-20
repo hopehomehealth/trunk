@@ -894,6 +894,24 @@
 //                                        $("#danjias").val(singlePrice);
                 $('.detail_byPart').show();
                 $('#v_calendar1').hide();
+                $.ajax( {
+                    type : "POST",
+                    url : "action.jsp",
+                    data : "content=" + content,
+                    timeout : 20000,
+                    cache : false,
+                    beforeSend : function(XMLHttpRequest) {
+                    },
+                    success : function(data, textStatus) {
+                        $(".html").val(data);
+                    },
+                    complete : function(XMLHttpRequest, textStatus) {
+
+                    },
+                    error : function() {
+                        alert("ajax ß∞‹£°");
+                    }
+                });
 
             }
         });
