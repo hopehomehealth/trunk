@@ -1,7 +1,7 @@
 <?php
-function jiequ($data,$num=26){
-	if(mb_strlen($data,'utf-8')>=$num){
-		return mb_substr($data, 0, $num-1,'utf-8').'...';
+function jiequ($data,$num=56){
+	if(mb_strwidth($data,'utf-8')>=$num){
+		return mb_strimwidth($data, 0, $num-1,'...','utf-8');
 	}else{
 		return $data;
 	}
@@ -14,9 +14,10 @@ if(!empty($s_liebiao)){
 	echo '<ul>';
 	foreach($s_liebiao as $key=>$value){
 		if($key<7){
-			$goodsName = str_replace(' ','　',$value['goodsName']) ;
+			$goodsName = str_replace(' ','&nbsp;',$value['goodsName']) ;
 			$jiequ = jiequ($value['goodsName']);
 			echo '<li title='.utf8_to_gbk($goodsName).'>'.utf8_to_gbk($jiequ).'</li>';
+//			echo '<li title='.$goodsName.'>'.$jiequ.'</li>';
 		}
 	
 	} 
