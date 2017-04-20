@@ -270,40 +270,14 @@
                 }
                 ?>
                 </select> -->
-                <input type="text" name="出发日期" id="startDate" value="2017-4-18   星期二">
+                <input type="text" name="出发日期" id="startDate" placeholder="请选择出发日期">
                 <div id="cal-loading1" class="cal-loading"
                      style="height:auto;height:auto;width: 560px;position:absolute;left:0;top:35px;padding-bottom:10px;<? if ($c_goods['goods_type'] == '3') { ?>display:none<? } ?>">
                     <link type="text/css" rel="stylesheet" href="/themes/s01/images/calendar.css">
                     <div id="v_calendar1"
                          style="height:auto;display: none;width: 560px;border:solid 1px #ddd;background-color:#fff;">
                         <div id="date_price1"></div>
-                        <script type="text/javascript">
-                            function change_calendar(yyyy, mm) {
-                                var v_url = "";
-                                v_url = "/member/ajax.calendarss.php?rnd=" + Math.random();
-                                v_url += "&id=<?=$goodsId?>";
-                                v_url += "&yyyy=" + yyyy;
-                                v_url += "&mm=" + mm;
-                                var html_calendar = $.ajax({url: v_url, async: false});
-                                $("#date_price1").html(html_calendar.responseText);
-                            }
-                            change_calendar(<?=date("'Y','m'")?>);
 
-//                            $('#startDate').focus(function () {
-//                                $('#v_calendar1').show();
-//                            });
-                            $('#startDate').focus(function () {
-                                $('#v_calendar1').show();
-                                $(document).click(function(event){
-                                    var clickObj = event.srcElement || event.target;
-                                    if($(clickObj).attr("id") == "cal-loading~"||$(clickObj).attr("id")=="datepicker"||$(clickObj).attr("id")=="v_calendar"||$(clickObj).attr("alt")=='前一月'||$(clickObj).attr("alt")=='后一月'){
-
-                                    }else{
-                                        $('#v_calendar2').hide();
-                                    }
-                                });
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
@@ -371,10 +345,7 @@
 
 
             <a href="javascript:void(0);" class="form-tips rel">
-                儿童价说明<span class="box-tips child_tips" style="display:none"><i class="icon"></i>2-12岁儿童：<br/>
-		1.若含机票，全价收取<br/>
-		2.酒店按房间数收费<br/>
-		3.景点以实际套餐为准</span>
+                儿童价说明<span class="box-tips child_tips" style="display:none"><i class="icon"></i><?= $data['childPriceInfo']?></span>
             </a>
 
             <script type="text/javascript">
@@ -884,6 +855,51 @@
 
 </div>
 <!--js-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        change_calendar(<?=date("'Y','m'")?>);
+
+//                            $('#startDate').focus(function () {
+//                                $('#v_calendar1').show();
+//                            });
+        $('#startDate').focus(function () {
+            $('#v_calendar1').show();
+            $(document).click(function(event){
+                var clickObj = event.srcElement || event.target;
+                if($(clickObj).attr("id") == "cal-loading~"||$(clickObj).attr("id")=="startDate"||$(clickObj).attr("id")=="v_calendar1"||$(clickObj).attr("alt")=='前一月'||$(clickObj).attr("alt")=='后一月'){
+
+                }else{
+                    $('#v_calendar1').hide();
+                }
+            });
+        });
+    });
+    function change_calendar(yyyy, mm) {
+        var v_url = "";
+        v_url = "/member/ajax.calendarss.php?rnd=" + Math.random();
+        v_url += "&id=<?=$goodsId?>";
+        v_url += "&yyyy=" + yyyy;
+        v_url += "&mm=" + mm;
+        var html_calendar = $.ajax({url: v_url, async: false});
+        $("#date_price1").html(html_calendar.responseText);
+        $('.date_blue').click(function () {
+            if ($(this).find('.date_yen').eq(0).html() != "") {
+                $('#startDate').val(yyyy + '-' + mm + '-' + $(this).html().split("<br>")[0]);
+//                var $price1 = $(this).find('.date_yen').eq(0).html().split('</span>')[1].slice(1).split('/人')[0];
+//                                        $('#zongjia').val($price1);
+//                                        singlePrice = $('#zongjia').val();
+//                                        $('.danjia').html("&yen;" + $price1);
+//                                        $('.danjia1').html($('.counts').html() + "x &yen;" + $price1);
+//                                        $('.totalPrice').html($('.counts').html() * $price1);
+//                                        $("#danjias").val(singlePrice);
+                $('.detail_byPart').show();
+                $('#v_calendar1').hide();
+
+            }
+        });
+    }
+
+</script>
 <script>
     seajs.use(["freeproduct", 'comment', 'yoslide'], function (product, comment, yoslide) {
         $(function () {
