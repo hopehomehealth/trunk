@@ -92,7 +92,7 @@ textarea {outline: none;}
 .foot1{width: 800px;height: 42px;margin:25px auto 0;}
 .foot1 a{margin:0 30px;float: left;width: 140px;height: 42px;}
 .foot2{width: 1190px;line-height: 25px;text-align: center;margin-top:10px;}
-.foot2 a{font-size:14px;color: #666;}
+.foot2 a{font-size:14px;color: #666;padding:0 10px;}
 .foot2 a:hover{color: #3b86ef;text-decoration: underline;}
 
 .foot3{width:800px;line-height: 25px;margin:0 auto;font-size: 14px;overflow: hidden;}

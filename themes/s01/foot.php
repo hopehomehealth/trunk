@@ -9,12 +9,12 @@
             <a href="http://www.moc.gov.cn/"><img src="/themes/s01/images/foot_4.png"></a>
         </div>
         <div class="foot2">
-            <a href="<?=$g_bus365_domain?>/ourdeclare" target="_blank" title="网站声明">网站声明</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/media" target="_blank" title="媒体报道">媒体报道</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/hunt" target="_blank" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/about" target="_blank" title="关于Bus365">关于Bus365</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/contactour" target="_blank" title="联系我们">联系我们</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/friendLink" target="_blank" title="友情链接">友情链接</a>&nbsp;|&nbsp;
+            <a href="<?=$g_bus365_domain?>/ourdeclare" target="_blank" title="网站声明">网站声明</a>|
+            <a href="<?=$g_bus365_domain?>/media" target="_blank" title="媒体报道">媒体报道</a>|
+            <a href="<?=$g_bus365_domain?>/hunt" target="_blank" title="诚聘英才">诚聘英才</a>|
+            <a href="<?=$g_bus365_domain?>/about" target="_blank" title="关于Bus365">关于Bus365</a>|
+            <a href="<?=$g_bus365_domain?>/contactour" target="_blank" title="联系我们">联系我们</a>|
+            <a href="<?=$g_bus365_domain?>/friendLink" target="_blank" title="友情链接">友情链接</a>|
             <a href="<?=$g_bus365_domain?>/sitemap" target="_blank" title="网站地图">网站地图</a>
         </div>
         <div class="foot3">
