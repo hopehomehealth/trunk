@@ -43,8 +43,30 @@ if($cmd == 'goods_add'){
 	$sale_type			= req('sale_type'); 
 	$sale_start			= req('sale_start'); 
 	$sale_end			= req('sale_end');  
-	$goods_doc			= req('goods_doc');  
-  
+	$goods_doc			= req('goods_doc');
+	//以下为套餐数据
+	$package 					= req('package');//是否为套餐
+	$package_id					= time();//套餐id  
+	$package_status				= 'true';//产品可用状态
+	$is_package					= 'false';//按人安份卖
+	$adult_num					= 'NULL';//成人数 当isPackage为true时该字段才有实际值
+	$child_num					= 'NULL';//儿童数当isPackage为true时该字段才有实际值
+	$room_max					= req('room_max');//房间最大入住数每个房间最多可以住多少人
+	$min 						= req('min');//最小订购数量
+	$max 						= req('max');//最大订购数量
+	$booker_name				= 'true';//联系人信息姓名是否必填 true：需要；false：不需要
+	$booker_mobile				= 'true';//手机号是否必填 true：需要；false：不需要
+	$booker_email				= req('booker_email');//email 是否必填 true：需要；false：不需要
+	$traveller_name				= req('traveller_name');//姓名是否必填  
+	$traveller_en_name			= req('traveller_en_name');//英文名是否必填  
+	$traveller_mobile			= req('traveller_mobile');//手机号是否必填  
+	$traveller_email			= req('traveller_email');//email是否必填  
+	$traveller_person_type  	= req('traveller_person_type');//人群是否必填  
+	$traveller_credentials		= req('traveller_credentials');//证件是否必填  
+	$traveller_credentials_type	= req('traveller_credentials_type');//证件类型  ID_CARD：身份证；HUZHAO：护照；HUKOUBO：户口薄；GANGAO：港澳通行证；TAIBAO：台湾通行证；HUIXIANG：回乡证；SHIBING：士兵
+	$traveller_gender			= req('traveller_gender');//性别是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
+	$traveller_birthday			= req('traveller_birthday');//生日是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
+	$emergency					= req('emergency');//是否需要紧急联系人  true：需要；false：不需要	
 	if(notnull($goods_name) == false){ 
 		senderror('请填写产品名称');
 	} 
@@ -156,17 +178,25 @@ if($cmd == 'goods_add'){
 	$ref_price['ref_kid_stock']   = req('ref_kid_stock');
 	$ref_price['ref_diff_price']  = req('ref_diff_price'); 
 	$ref_price_txt = addslashes(serialize($ref_price));
-
+	
 	// 获取主分类关键词
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
-	$goods_cat_key = $db->get_value($sql); 
+	$goods_cat_key = $db->get_value($sql);
  
 	$sql = "INSERT INTO `t_goods_thread` (`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`) 
 	VALUES ('$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '$goods_zone', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft')"; 
-	$db->query($sql);  
+	$db->query($sql);
 
+	//套餐添加
+
+	$sql = "INSERT INTO `t_zby_package` (`goods_id`, `package_id`, `package_name`, `package_status`, `is_package`, `adult_num`, `child_num`, `room_max`, `min`, `max`, `booker_name`, `booker_mobile`, `booker_email`, `traveller_name`, `traveller_en_name`, `traveller_mobile`, `traveller_email`, `traveller_person_type`, `traveller_credentials`, `traveller_credentials_type`, `traveller_gender`, `traveller_birthday`, `emergency`) 
+	VALUES ('$goods_id', '$package_id', '$goods_name', '$package_status', '$is_package', '$adult_num', '$child_num', '$room_max', '$min', '$max', '$booker_name', '$booker_mobile', '$booker_email', '$traveller_name','$traveller_en_name', '$traveller_mobile', '$traveller_email', '$traveller_person_type', '$traveller_credentials', '$traveller_credentials_type', '$traveller_gender', '$traveller_birthday', '$emergency')";
+	$db->query($sql);
+
+	
 	// 团期SKU
 	$adult_price_array = $_POST['adult_price'];
+
 	if(notnull($adult_price_array)){
 		foreach ($adult_price_array as $key => $value) { 
 			$adult_price  = $_POST['adult_price'][$key];
@@ -174,16 +204,18 @@ if($cmd == 'goods_add'){
 			$kid_price    = $_POST['kid_price'][$key];
 			$kid_stock    = $_POST['kid_stock'][$key];
 			$diff_price   = $_POST['diff_price'][$key];
-			 
+			$lv_market_price = $_POST['ref_diff_price'];
+			$sum_stock = ($adult_stock + $kid_stock);
 			if($value>0){ 
 				$sql = "SELECT `sku_id` FROM `t_goods_sku` WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id' AND `departdate`='$key'";
 				$last_sku_id = $db->get_value($sql);
-
 				if($last_sku_id!=''){
-					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$adult_stock', `kid_stock`='$kid_stock' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
+					
+					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
 					$db->query($sql); 
 				} else { 
-					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$adult_stock', '$kid_stock')";
+
+					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price')";
 					$db->query($sql);
 				}
 			}
@@ -261,6 +293,29 @@ if($cmd == 'goods_update'){
 	$shop_cat_id		= req('shop_cat_id');
 	$is_sale 			= req('is_sale');	
 	$cats				= $_POST['cat_id'];
+	//以下为套餐数据
+	$package 					= req('package');//是否为套餐
+	$package_id					= time();//套餐id  
+	$package_status				= 'true';//产品可用状态
+	$is_package					= 'false';//按人安份卖
+	$adult_num					= 'NULL';//成人数 当isPackage为true时该字段才有实际值
+	$child_num					= 'NULL';//儿童数当isPackage为true时该字段才有实际值
+	$room_max					= req('room_max');//房间最大入住数每个房间最多可以住多少人
+	$min 						= req('min');//最小订购数量
+	$max 						= req('max');//最大订购数量
+	$booker_name				= 'true';//联系人信息姓名是否必填 true：需要；false：不需要
+	$booker_mobile				= 'true';//手机号是否必填 true：需要；false：不需要
+	$booker_email				= req('booker_email');//email 是否必填 true：需要；false：不需要
+	$traveller_name				= req('traveller_name');//姓名是否必填  
+	$traveller_en_name			= req('traveller_en_name');//英文名是否必填  
+	$traveller_mobile			= req('traveller_mobile');//手机号是否必填  
+	$traveller_email			= req('traveller_email');//email是否必填  
+	$traveller_person_type  	= req('traveller_person_type');//人群是否必填  
+	$traveller_credentials		= req('traveller_credentials');//证件是否必填  
+	$traveller_credentials_type	= req('traveller_credentials_type');//证件类型  ID_CARD：身份证；HUZHAO：护照；HUKOUBO：户口薄；GANGAO：港澳通行证；TAIBAO：台湾通行证；HUIXIANG：回乡证；SHIBING：士兵
+	$traveller_gender			= req('traveller_gender');//性别是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
+	$traveller_birthday			= req('traveller_birthday');//生日是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
+	$emergency					= req('emergency');//是否需要紧急联系人  true：需要；false：不需要
  
 	if(notnull($goods_name) == false){ 
 		senderror('请填写产品名称');
@@ -388,7 +443,10 @@ if($cmd == 'goods_update'){
 	$goods_cat_key = $db->get_value($sql); 
 	
 	$sql = "UPDATE `t_goods_thread` SET `shop_id`='$shop_id', `cat_id`='$goods_cat_id', `shop_cat_id`='$shop_cat_id', `cat_key`='$goods_cat_key', `goods_name`='$goods_name', `goods_code`='$goods_code', `goods_doc`='$goods_doc', `summary`='$summary' $goods_image_sql , `content`='$goods_content' , `content_day`='$content_day', `price_note`='$price_note', `unprice_note`='$unprice_note', `market_price`='$market_price', `real_price`='$real_price', `stock`='$stock', `ref_price`='$ref_price_txt', `stock`='$stock', `sale_type`='$sale_type', `sale_start`='$sale_start', `sale_end`='$sale_end', `ft`='$ft', `goods_package`='$goods_package', `goods_type`='$goods_type', `goods_zone`='$goods_zone', `src_prov`='$src_prov', `src_city`='$src_city', `dist_prov`='$dist_prov', `dist_city`='$dist_city', `line_days`='$line_days', `line_nights`='$line_nights', `goto_transport`='$goto_transport', `back_transport`='$back_transport', `before_days`='$before_days', `order_note`='$order_note', `line_tag`='$line_tag', `visa_zone_id`='$visa_zone_id', `visa_type`='$visa_type', `visa_profile`='$visa_profile', `ship_name`='$ship_name', `ship_line`='$ship_line', `ship_port`='$ship_port', `ship_brand`='$ship_brand', `is_sale`='$is_sale'  WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
-	$db->query($sql);  
+	$db->query($sql);
+	//套餐 修改
+	$sql = "UPDATE `t_zby_package` SET `room_max`='$room_max', `min`='$min', `max`='$max', `booker_name`='$booker_name', `booker_mobile`='$booker_mobile', `booker_email`='$booker_email', `traveller_name`='$traveller_name', `traveller_en_name`='$traveller_en_name', `traveller_mobile`='$traveller_mobile', `traveller_email`='$traveller_email', `traveller_person_type`='$traveller_person_type', `traveller_credentials`='$traveller_credentials', `traveller_credentials_type`='$traveller_credentials_type', `traveller_gender`='$traveller_gender', `traveller_birthday`='$traveller_birthday', `emergency`='$emergency' WHERE `goods_id`='$goods_id'";
+	$db->query($sql);
 
 	// 团期SKU
 	$adult_price_array = $_POST['adult_price'];
@@ -399,16 +457,18 @@ if($cmd == 'goods_update'){
 			$kid_price    = $_POST['kid_price'][$key];
 			$kid_stock    = $_POST['kid_stock'][$key];
 			$diff_price   = $_POST['diff_price'][$key];
-			 
+			$lv_market_price = $_POST['ref_diff_price'];
+			$sum_stock = ($adult_stock + $kid_stock);
 			if($value>0){ 
 				$sql = "SELECT `sku_id` FROM `t_goods_sku` WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id' AND `departdate`='$key'";
 				$last_sku_id = $db->get_value($sql);
-
 				if($last_sku_id!=''){
-					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$adult_stock', `kid_stock`='$kid_stock' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
+					
+					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
 					$db->query($sql); 
 				} else { 
-					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$adult_stock', '$kid_stock')";
+
+					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price')";
 					$db->query($sql);
 				}
 			}
@@ -519,7 +579,7 @@ if($cmd == 'goods_del'){
 	}
 
 	$db->query("DELETE FROM `t_goods_thread` WHERE site_id='$g_siteid' AND goods_id='$goods_id'");   
-
+	$db->query("DELETE FROM `t_zby_package` WHERE goods_id='$goods_id'");   
 	$db->query("DELETE FROM `t_goods_image` WHERE site_id='$g_siteid' AND goods_id='$goods_id'"); 
 
 	bingo();

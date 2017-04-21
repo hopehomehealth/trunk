@@ -2,11 +2,14 @@
 if(!defined('IN_CLOOTA')) {
 	exit('Access Denied');
 } 
- 
+$check_p = 'checked="checked"';
 $goods_id = req('goods_id');
 
 $sql = "SELECT * FROM t_goods_thread WHERE site_id='$g_siteid' AND goods_id='$goods_id' ";  
 $goods = $db->get_one($sql); 
+//Ì×²Í±í
+$sql = "SELECT * FROM t_zby_package WHERE goods_id='$goods_id' ";  
+$package = $db->get_one($sql);
 
 $c_goods_type = $goods['goods_type'];
  

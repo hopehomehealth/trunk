@@ -7,14 +7,15 @@ if(!defined('IN_CLOOTA')) {
 <ul class="nav nav-tabs">   
 	<?
 	$m=1;
-	foreach ($g_product_type as $k => $v) {
+	foreach ($g_product_type as $k => $v) { if($k == '1'){ //通过if判断 暂时隐藏其他选项
 	?>
 	<li <?if(nav_active('goods_list.php') && req('goods_type')==$k){?>class="active"<?}?> <?if($m==1){?>style="padding-left:20px;"<?}?>>
 		<a href="?cmd=<?=base64_encode('goods_list.php')?>&goods_type=<?=$k?>"><?=$v?></a>
 	</li>
+	<? }else{}?>
 	<?
 		$m++;
-	}
+	} 
 	?>
 	<a href="javascript:void(0)" onclick="location.reload()" class="pull-right btn btn-small">刷新</a>
 </ul>  

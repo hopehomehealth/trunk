@@ -60,10 +60,10 @@ KindEditor.ready(function(K) {
 function form_check(){
 	var myform = document.getElementById('goods_form');
 	
-	if(myform.goods_cat_id.value==''){
+	/*if(myform.goods_cat_id.value==''){
 		alert('对不起，请选择分类！');
 		return false;
-	}  
+	}*/  
 	if(myform.goods_name.value==''){
 		alert('对不起，请输入产品名称！');
 		return false;
@@ -105,11 +105,12 @@ $(document).ready(function(){
 </script>
 
 <ul class="nav nav-tabs" id="myTab">  
-  <li style="padding-left:20px"><a href="#tabs-1">选择分类</a></li>
+  <!-- <li style="padding-left:20px"><a href="#tabs-1">选择分类</a></li> -->
   <li class="active" ><a href="#tabs-2">基本信息</a></li>
   <li><a href="#tabs-3">产品图片</a></li>
   <li><a href="#tabs-4">产品描述</a></li>
-  <li><a href="#tabs-5">团期/价格</a></li> 
+  <li><a href="#tabs-5">团期/价格</a></li>
+  <li><a href="#tabs-6">其它设置</a></li>  
 
   <input type="button" value=" 返回 " class="btn pull-right" onclick="history.back()" style="margin-left:5px"/>
   <a href="javascript:void(0)" onclick="window.open('preview.php?ac=goods&goods_id=<?=$goods['goods_id']?>')" target="_blank" class="btn btn-info pull-right " style="color:white;margin-left:5px"/>预览</a>
@@ -117,57 +118,57 @@ $(document).ready(function(){
 </ul>
 
 <div class="tab-content"> 
-    <div class="tab-pane" id="tabs-1">  
-			<div class="alert">提示：如果分类较多，可按CTRL+F，输入产品关键词，快速定位到该分类。</div>
-			<?
-			$cat01 = son_cat('0');
-			if(notnull($cat01)){
-			?>
-			<table class="table table-hover" id="mytab">  
-			  <?   
-			  if(notnull($cat01)){
-				  foreach ($cat01 as $val01){   
-					  echo get_cat_html($val01, -1); 
-					  
-					  $cat02 = son_cat($val01['cat_id']);
-					  if(notnull($cat02)){
-						  foreach ($cat02 as $val02){   
-							  echo get_cat_html($val02, 0);
-							
-							  $cat03 = son_cat($val02['cat_id']);
-							  if(notnull($cat03)){
-								  foreach ($cat03 as $val03){   
-									  echo get_cat_html($val03, 1); 
-								  }
-							  }
-						  }
-					  }
-				  }
-			  }
-			  ?>
-			</table> 
-			<?}?> 
-			<?
-			function get_cat_html($val, $level){ 
-				global $goods;
-			?>
-			  <tbody>  
-			  <tr data-tt-id="<?=$val['cat_id']?>" <?if($val['parent_id']>0){?>data-tt-parent-id="<?=$val['parent_id']?>"<?}?> >  
-				<td onclick="autoFrame();"><?=$val['cat_name']?></td>    
-				<td style="width:60px">
-				<?if(has_son_cat($val['cat_id'])==false){?>
-				<label <?if($goods['cat_id']==$val['cat_id']){?>style="color:red;"<?}?>><input type="radio" name="goods_cat_id" value="<?=$val['cat_id']?>" <?if($goods['cat_id']==$val['cat_id']){?>checked<?}?>> 选择</label>
-				<?}?>
-				</td>
-			  </tr>
-			  </tbody> 
-			<?
-			}
-			?> 
-			<script type="text/javascript"> 
-			$("#mytab").treetable({ expandable: false }); 
-			</script>
-	</div>
+    <!-- <div class="tab-pane" id="tabs-1">  
+    			<div class="alert">提示：如果分类较多，可按CTRL+F，输入产品关键词，快速定位到该分类。</div>
+    			<?
+    			$cat01 = son_cat('0');
+    			if(notnull($cat01)){
+    			?>
+    			<table class="table table-hover" id="mytab">  
+    			  <?   
+    			  if(notnull($cat01)){
+    				  foreach ($cat01 as $val01){   
+    					  echo get_cat_html($val01, -1); 
+    					  
+    					  $cat02 = son_cat($val01['cat_id']);
+    					  if(notnull($cat02)){
+    						  foreach ($cat02 as $val02){   
+    							  echo get_cat_html($val02, 0);
+    							
+    							  $cat03 = son_cat($val02['cat_id']);
+    							  if(notnull($cat03)){
+    								  foreach ($cat03 as $val03){   
+    									  echo get_cat_html($val03, 1); 
+    								  }
+    							  }
+    						  }
+    					  }
+    				  }
+    			  }
+    			  ?>
+    			</table> 
+    			<?}?> 
+    			<?
+    			function get_cat_html($val, $level){ 
+    				global $goods;
+    			?>
+    			  <tbody>  
+    			  <tr data-tt-id="<?=$val['cat_id']?>" <?if($val['parent_id']>0){?>data-tt-parent-id="<?=$val['parent_id']?>"<?}?> >  
+    				<td onclick="autoFrame();"><?=$val['cat_name']?></td>    
+    				<td style="width:60px">
+    				<?if(has_son_cat($val['cat_id'])==false){?>
+    				<label <?if($goods['cat_id']==$val['cat_id']){?>style="color:red;"<?}?>><input type="radio" name="goods_cat_id" value="<?=$val['cat_id']?>" <?if($goods['cat_id']==$val['cat_id']){?>checked<?}?>> 选择</label>
+    				<?}?>
+    				</td>
+    			  </tr>
+    			  </tbody> 
+    			<?
+    			}
+    			?> 
+    			<script type="text/javascript"> 
+    			$("#mytab").treetable({ expandable: false }); 
+    			</script>
+    	</div> -->
 	<div class="tab-pane in active" id="tabs-2">   
       <table width="100%">  
 	    <tr>
@@ -826,9 +827,204 @@ $(document).ready(function(){
 			<?}?>
 		</table>
 	</div>
-</div> 
-</form>
+	<div class="tab-pane" id="tabs-6">
 
+		<table width="100%">
+			<tr>
+			  <td width="100" align="right"><font color="red">*</font> 房间最大入住数：</td>
+			  <td><input type="number" class="span1 text-center" name="room_max" value="<?=$package['room_max']?>"/></td>
+			</tr>
+			<tr>
+			  <td width="100" align="right"><font color="red">*</font> 最大订购数量：</td>
+			  <td><input type="number" class="span1 text-center" name="max" value="<?=$package['max']?>"/></td>
+			</tr>
+			<tr>
+			  <td width="100" align="right"><font color="red">*</font> 最大订购数量：</td>
+			  <td><input type="number" class="span1 text-center" name="min" value="<?=$package['min']?>"/></td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>姓名是否必填：</td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_name" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_name'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_name" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_name'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_name" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_name'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>英文名是否必填：</td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_en_name" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_en_name'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_en_name" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_en_name'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_en_name" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_en_name'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>手机号是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_mobile" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_mobile'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_mobile" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_mobile'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_mobile" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_mobile'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>email是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_email" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_email'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_email" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_email'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_email" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_email'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>证件是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_credentials" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_credentials'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_credentials" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_credentials'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_credentials" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_credentials'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr> 
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>性别是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_gender" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_gender'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_gender" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_gender'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_gender" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_gender'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>人群是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_person_type" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_person_type'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_person_type" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_person_type'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_person_type" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_person_type'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>生日是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_birthday" type="radio" value="TRAV_NUM_ALL" <? if($package['traveller_birthday'] == 'TRAV_NUM_ALL'){?><?=$check_p?><?} ?>>
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_birthday" type="radio" value="TRAV_NUM_ONE" <? if($package['traveller_birthday'] == 'TRAV_NUM_ONE'){?><?=$check_p?><?} ?>>
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_birthday" type="radio" value="TRAV_NUM_NO"  <? if($package['traveller_birthday'] == 'TRAV_NUM_NO'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>是否需要紧急联系人： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="emergency" type="radio" value="true" <? if($package['emergency'] == 'true'){?><?=$check_p?><?} ?>>
+				需要</label>
+				<label class="radio inline">
+				<input name="emergency" type="radio" value="false"  <? if($package['emergency'] == 'false'){?><?=$check_p?><?} ?>>
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font> 购买人email是否必填：</td>
+			  <td height="30">
+				<label class="radio inline">
+				<input name="booker_email" type="radio" id="sale_type" value="true" <? if($package['booker_email'] == 'true'){?><?=$check_p?><?} ?> />
+				是
+				</label>
+				<label class="radio inline">
+				<input name="booker_email" type="radio" id="sale_type" value="false"  <? if($package['booker_email'] == 'false'){?><?=$check_p?><?} ?> />
+				否
+				</label>
+				</td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>证件类型： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="ID_CARD" <? if($package['traveller_credentials_type'] == 'ID_CARD'){?><?=$check_p?><?} ?>>
+				身份证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="HUZHAO" <? if($package['traveller_credentials_type'] == 'HUZHAO'){?><?=$check_p?><?} ?>>
+				护照</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="HUKOUBO" <? if($package['traveller_credentials_type'] == 'HUKOUBO'){?><?=$check_p?><?} ?>>
+				户口簿</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="GANGAO" <? if($package['traveller_credentials_type'] == 'GANGAO'){?><?=$check_p?><?} ?>>
+				港澳通行证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="TAIBAO" <? if($package['traveller_credentials_type'] == 'TAIBAO'){?><?=$check_p?><?} ?>>
+				台湾通行证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="HUIXIANG" <? if($package['traveller_credentials_type'] == 'HUIXIANG'){?><?=$check_p?><?} ?>>
+				回乡证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="SHIBING" <? if($package['traveller_credentials_type'] == 'SHIBING'){?><?=$check_p?><?} ?>>
+				士兵证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="JUNGUAN" <? if($package['traveller_credentials_type'] == 'JUNGUAN'){?><?=$check_p?><?} ?>>
+				军官证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="CHUSHENGZHENGMING" <? if($package['traveller_credentials_type'] == 'CHUSHENGZHENGMING'){?><?=$check_p?><?} ?>>
+				出生证明</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="TAIBAOZHENG" <? if($package['traveller_credentials_type'] == 'TAIBAOZHENG'){?><?=$check_p?><?} ?>>
+				台胞证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="OTHER" <? if($package['traveller_credentials_type'] == 'OTHER'){?><?=$check_p?><?} ?>>
+				其他</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="ERTONG" <? if($package['traveller_credentials_type'] == 'ERTONG'){?><?=$check_p?><?} ?>>
+				儿童无证件</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="CUSTOMER_SERVICE_ADVICE" <? if($package['traveller_credentials_type'] == 'CUSTOMER_SERVICE_ADVICE'){?><?=$check_p?><?} ?>>
+				客服联系我</label>
+			  </td>
+			</tr>      
+		</table>
+	</div>    
+</div> 
 
 <script type="text/javascript">
 		function change_fileds(v){

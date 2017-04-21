@@ -1,4 +1,4 @@
-<?  
+<?
 include('auth.php');
 include('config.php');
 include($g_dir.'/libs/image_zoom.php');

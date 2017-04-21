@@ -15,7 +15,7 @@ if(!defined('IN_CLOOTA')) {
 
 <body class="bodybox">
 
-<?include($g_tpl_dir.'head.common.php');?>
+<? include($g_tpl_dir.'head.php');?>
 
 <div class="container clear">
 	<div class="sidebar">
@@ -26,8 +26,9 @@ if(!defined('IN_CLOOTA')) {
 					<div class="relative"> <i class="icon"></i> <a class="parent-link f33" href="javascript:void(0);"><strong>产品管理</strong></a> <i class="arrow up"></i> </div>
 					<ul class="menu"> 
 						<li><a href="<?=url('shop_goods_cat.php')?>" class="<?=get_active('shop_goods_cat.php')?>">自定义分类</a></li> 
-						<?foreach ($g_product_type as $k => $v) {?> 
-						<li><a href="<?=url('goods_list.php')?>&goods_type=<?=$k?>" class="<?if(req('goods_type')==$k){?>active<?}?>"><?=$v?>产品 <span style="color:red">(<?=get_goods_count($k)?>)</span></a></li>  
+						<?foreach ($g_product_type as $k => $v) { if($k == '1'){ ?> 
+						<li><a href="<?=url('goods_list.php')?>&goods_type=<?=$k?>" class="<?if(req('goods_type')==$k){?>active<?}?>"><?=$v?>产品 <span style="color:red">(<?=get_goods_count($k)?>)</span></a></li>
+						<?}else{}?>  
 						<?}?> 
 					</ul>
 				</li>
@@ -92,7 +93,7 @@ if(!defined('IN_CLOOTA')) {
 </div>
 <div class="clear"></div> 
 
-<?include($g_tpl_dir.'foot.common.php');?> 
+<?include($g_tpl_dir.'foot.php');?> 
 <div style="display:none;z-index:100000000000;position:absolute;top:0px;left:0px;width:100%;height:100%;"></div>
 </body>
 </html>
