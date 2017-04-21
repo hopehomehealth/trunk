@@ -268,7 +268,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 											<span class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 										</div>
 										
-										<div class="meshiPrice">&yen;<?=($data['ticketMapList'][0]['marketPrice']);?></div>
+										<div class="meshiPrice">&yen;<? if($data['ticketMapList'][0]['marketPrice'] != $data['ticketMapList'][0]['marketPrice']){ ?><?=($data['ticketMapList'][0]['marketPrice']);?><?}else{ echo $data['ticketMapList'][0]['marketPrice']+5;}?></div>
 										<div class="ourPrice">&yen;<?=($data['ticketMapList'][0]['minPrice']);?></div>
 										<div class="payType"><?=($data['ticketMapList'][0]['paymentType']);?></div>
 										
@@ -293,7 +293,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 											<span class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 										</div>
 										
-										<div class="meshiPrice">&yen;<?=($data['ticketMapList'][1]['marketPrice']);?></div>
+										<div class="meshiPrice">&yen;<? if($data['ticketMapList'][1]['marketPrice'] != $data['ticketMapList'][1]['minPrice']){ ?><?=($data['ticketMapList'][1]['marketPrice']);?><?}else{ echo $data['ticketMapList'][1]['marketPrice']+5;}?></div>
 										<div class="ourPrice">&yen;<?=($data['ticketMapList'][1]['minPrice']);?></div>
 										<div class="payType"><?=($data['ticketMapList'][1]['paymentType']);?></div>
 										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($data['ticketMapList'][1]['ticketTypeName'])?>-<?=($data['ticketMapList'][1]['isEmail'])?>-<?=($data['ticketMapList'][1]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][1]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
@@ -315,7 +315,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 											<span class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 										</div>
 										
-										<div class="meshiPrice">&yen;<?=($data['ticketMapList'][2]['marketPrice']);?></div>
+										<div class="meshiPrice">&yen;<? if($data['ticketMapList'][2]['marketPrice'] != $data['ticketMapList'][2]['minPrice']){ ?><?=($data['ticketMapList'][2]['marketPrice']);?><?}else{echo $data['ticketMapList'][2]['marketPrice']+5;}?></div>
 										<div class="ourPrice">&yen;<?=($data['ticketMapList'][2]['minPrice']);?></div>
 										<div class="payType"><?=($data['ticketMapList'][2]['paymentType']);?></div>
 										<div class="reserve" ><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($data['ticketMapList'][2]['ticketTypeName'])?>-<?=($data['ticketMapList'][2]['isEmail'])?>-<?=($data['ticketMapList'][2]['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($data['ticketMapList'][2]['lvGoodsId'])?>.html" target="_blank">预定</a></div>
@@ -343,7 +343,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 											<span class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 										</div>
 										
-										<div class="meshiPrice">&yen;<?=($value['marketPrice']);?></div>
+										<div class="meshiPrice">&yen;<? if($value['marketPrice'] != $value['minPrice']){ ?><?=($value['marketPrice']);?><?}else{echo $value['marketPrice']+5;}?></div>
 										<div class="ourPrice">&yen;<?=($value['minPrice']);?></div>
 										<div class="payType"><?=($value['paymentType']);?></div>
 										<div class="reserve"><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($value['ticketTypeName'])?>-<?=($value['isEmail'])?>-<?=($value['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($value['lvGoodsId'])?>.html" target="_blank">预定</a></div>
@@ -380,7 +380,7 @@ $('.searchMain1_c input').on('keydown',function(event) {
 											<span class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 										</div>
 										
-										<div class="meshiPrice">&yen;<?=($value['marketPrice']);?></div>
+										<div class="meshiPrice">&yen;<? if($value['marketPrice'] != $value['minPrice']){ ?><?=($value['marketPrice']);?><?}else{echo $value['marketPrice']+5;}?></div>
 										<div class="ourPrice">&yen;<?=($value['minPrice']);?></div>
 										<div class="payType"><?=($value['paymentType']);?></div>
 										<div class="reserve"><a href="<?=$g_self_domain?>/menpiao/ticket_order-<?=urlencode($data['goodsName'])?>-<?=urlencode($value['ticketTypeName'])?>-<?=($value['isEmail'])?>-<?=($value['ticketType'])?>-<?=($data['goodsId'])?>-<?=($data['lvProductId'])?>-<?=($value['lvGoodsId'])?>.html" target="_blank">预定</a></div>
