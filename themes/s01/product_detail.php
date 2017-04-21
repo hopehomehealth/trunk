@@ -87,8 +87,8 @@
                     <li class="gallery-item active"><a href="javascript:void(0)"> <img src="<?= $data['goodsImage'] ?>"
                                                                                        alt=""> </a></li>
                     <?
-                    if (notnull($data['goodsImage'])) {
-                        foreach ($data['goodsImage'] as $val) {
+                    if (notnull($data['imageList'])) {
+                        foreach ($data['imageList'] as $val) {
                             ?>
                             <li class="gallery-item "><a href="javascript:void(0)"> <img src="<?= $val ?>"
                                                                                          alt=""> </a></li>
@@ -102,7 +102,7 @@
                         <li class="active">
                             <a class="selected" data-slide="0" data-page="1" data-mimetype="image/jpg"
                                href="javascript:void(0)">
-                                <img src="<?= $data['imageList']['0'] ?>" alt=""> <span></span> </a>
+                                <img src="<?= $data['goodsImage'] ?>" alt=""> <span></span> </a>
 
                             <?
                             if (notnull($data['imageList'])) {
@@ -295,12 +295,14 @@
             <div class="qijia_tips">
                 本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变.
             </div> -->
+            <span style="display: none">
             <label for="">成人</label>
             <select name="adult_num" id="adult_num" style="width:60px" onChange="count_price()">
                 <? for ($i = 1; $i <= 50; $i++) { ?>
                     <option value="<?= $i ?>"><?= $i ?></option>
                 <? } ?>
             </select>
+
 
             <a href="javascript:void(0);" class="qijia1" style="">起价说明</a>
             <div class="qijia1_tips">
@@ -314,71 +316,18 @@
                     <option value="<?= $i ?>"><?= $i ?></option>
                 <? } ?>
             </select>
+            </span>
             <iframe id="frm" name="frm" src="" frameborder="0" scrolling="no" width="0" height="0"></iframe>
 
-            <script type="text/javascript">
-                function order_window() {
-                    if ($('#departdate').val() == '') {
-                        alert('亲，您没有选择出发日期！');
-                        return false;
-                    }
 
-                    if ($('#adult_num').val() == '0') {
-                        alert('亲，您没有选择人数！');
-                        return false;
-                    }
-
-
-                    var url = "";
-                    url = "/zhoubianyou/zbyform_submit";
-                    url += "-<?=$c_goods['goods_type']?>";
-                    url += "-<?=$c_goods['goods_id']?>";
-                    url += "-<?=$c_goods['goods_name']?>";
-                    url += "-" + $('#adult_num').val();
-                    url += "-" + $('#kid_num').val();
-                    url += "-" + $('#departdate').val();
-                    url += "-" + $('#payPrice').val();
-                    url += ".html";
-                    window.top.location.href = url;
-                }
-            </script>
 
 
             <a href="javascript:void(0);" class="form-tips rel">
-                儿童价说明<span class="box-tips child_tips" style="display:none"><i class="icon"></i><?= $data['childPriceInfo']?></span>
+                儿童价说明<span class="box-tips child_tips" style="display:none"><i
+                        class="icon"></i><?= $data['childPriceInfo'] ?></span>
             </a>
 
-            <script type="text/javascript">
-                function getNum(text) {
-                    var value = text.replace(/[^0-9]/ig, "");
-                    value = value.substring(1);
-                    return value;
-                }
-                function count_price() {
-                    var v_url = "";
-                    v_url = "/member/ajax.price_sum.php?rnd=" + Math.random();
-                    v_url += "&goods_id=<?=$c_goods['goods_id']?>";
-                    v_url += "&adult_num=" + $('#adult_num').val();
-                    v_url += "&kid_num=" + $('#kid_num').val();
-                    v_url += "&departdate=" + $('#departdate').val();
 
-                    if ($('#departdate').val() != '') {
-                        var html_list = $.ajax({url: v_url + "&ac=list", async: false});
-                        $("#sum_result").html(html_list.responseText);
-
-                        var html_count = $.ajax({url: v_url + "&ac=count", async: false});
-                        $("#count_result").html(html_count.responseText);
-                        var str1 = $("#count_result").html();
-                        //alert(str1);
-                        var str2 = getNum(str1);
-                        //alert(str2);
-                        $("#payPrice").val(str2);
-                    } else {
-                        $("#sum_result").html('');
-                        $("#count_result").html('');
-                    }
-                }
-            </script>
 
             <div class="form-btn">
 			<span>套餐价：<span id="count_result" class="form-price yellow-b">--</span>　
@@ -640,17 +589,17 @@
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
                                                     class="fa fa-building-o"></em> 住宿：<?= $all_tools[$key]['house'] ?>
                                             </div>
-                                        <?
+                                            <?
                                         } ?>
                                         <? if ($all_tools[$key]['food'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
                                                     class="fa fa-coffee"></em> 用餐：<?= $all_tools[$key]['food'] ?></div>
-                                        <?
+                                            <?
                                         } ?>
                                         <? if ($all_tools[$key]['traffic'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
                                                     class="fa fa-bus"></em> 交通：<?= $all_tools[$key]['traffic'] ?></div>
-                                        <?
+                                            <?
                                         } ?>
                                         <div style="clear:both"><br/></div>
                                     </div>
@@ -669,9 +618,9 @@
                         <div class="fl">费用说明</div>
                         <ul class="detail-menu tab-menu">
                             <li id="pro-tab1" onclick="price_note(1)">费用包含</li>
-                            <li ><?= $db->to_gbk($data['priceExplainList']['0'])?></li>
+                            <li><?= $db->to_gbk($data['priceExplainList']['0']) ?></li>
                             <li id="pro-tab2" onclick="price_note(2)">费用不包含</li>
-                            <li ><?= $db->to_gbk($data['priceExplainList']['1'])?></li>
+                            <li><?= $db->to_gbk($data['priceExplainList']['1']) ?></li>
                         </ul>
                     </div>
                     <div class="detail-article no-border tab-content">
@@ -740,19 +689,22 @@
                                 </div>
                                 <ul class="progress">
                                     <li>
-                                        <label for="">好评<span class="gray-c">（<?= $data['favorableRate'] ?>）</span></label>
+                                        <label for="">好评<span class="gray-c">（<?= $data['favorableRate'] ?>
+                                                ）</span></label>
                                         <div class="bar-group">
                                             <div class="bar-green" style="width:0%"></div>
                                         </div>
                                     </li>
                                     <li>
-                                        <label for="">中评<span class="gray-c">（<?= $data['favorableRate'] ?>）</span></label>
+                                        <label for="">中评<span class="gray-c">（<?= $data['favorableRate'] ?>
+                                                ）</span></label>
                                         <div class="bar-group">
                                             <div class="bar-green" style="width:0%"></div>
                                         </div>
                                     </li>
                                     <li>
-                                        <label for="">差评<span class="gray-c">（<?= $data['favorableRate'] ?>）</span></label>
+                                        <label for="">差评<span class="gray-c">（<?= $data['favorableRate'] ?>
+                                                ）</span></label>
                                         <div class="bar-group">
                                             <div class="bar-green" style="width:0%"></div>
                                         </div>
@@ -856,6 +808,63 @@
 </div>
 <!--js-->
 <script type="text/javascript">
+    function order_window() {
+        if ($('#departdate').val() == '') {
+            alert('亲，您没有选择出发日期！');
+            return false;
+        }
+
+        if ($('#adult_num').val() == '0') {
+            alert('亲，您没有选择人数！');
+            return false;
+        }
+
+
+        var url = "";
+        url = "/zhoubianyou/zbyform_submit";
+        url += "-<?=$c_goods['goods_type']?>";
+        url += "-<?=$c_goods['goods_id']?>";
+        url += "-<?=$c_goods['goods_name']?>";
+        url += "-" + $('#adult_num').val();
+        url += "-" + $('#kid_num').val();
+        url += "-" + $('#departdate').val();
+        url += "-" + $('#payPrice').val();
+        url += ".html";
+        window.top.location.href = url;
+    }
+</script>
+<script type="text/javascript">
+    function getNum(text) {
+        var value = text.replace(/[^0-9]/ig, "");
+        value = value.substring(1);
+        return value;
+    }
+    function count_price() {
+        var v_url = "";
+        v_url = "/member/ajax.price_sum.php?rnd=" + Math.random();
+        v_url += "&goods_id=<?=$c_goods['goods_id']?>";
+        v_url += "&adult_num=" + $('#adult_num').val();
+        v_url += "&kid_num=" + $('#kid_num').val();
+        v_url += "&departdate=" + $('#departdate').val();
+
+        if ($('#departdate').val() != '') {
+            var html_list = $.ajax({url: v_url + "&ac=list", async: false});
+            $("#sum_result").html(html_list.responseText);
+
+            var html_count = $.ajax({url: v_url + "&ac=count", async: false});
+            $("#count_result").html(html_count.responseText);
+            var str1 = $("#count_result").html();
+            //alert(str1);
+            var str2 = getNum(str1);
+            //alert(str2);
+            $("#payPrice").val(str2);
+        } else {
+            $("#sum_result").html('');
+            $("#count_result").html('');
+        }
+    }
+</script>
+<script type="text/javascript">
     $(document).ready(function () {
         change_calendar(<?=date("'Y','m'")?>);
 
@@ -864,11 +873,11 @@
 //                            });
         $('#startDate').focus(function () {
             $('#v_calendar1').show();
-            $(document).click(function(event){
+            $(document).click(function (event) {
                 var clickObj = event.srcElement || event.target;
-                if($(clickObj).attr("id") == "cal-loading~"||$(clickObj).attr("id")=="startDate"||$(clickObj).attr("id")=="v_calendar1"||$(clickObj).attr("alt")=='前一月'||$(clickObj).attr("alt")=='后一月'){
+                if ($(clickObj).attr("id") == "cal-loading~" || $(clickObj).attr("id") == "startDate" || $(clickObj).attr("id") == "v_calendar1" || $(clickObj).attr("alt") == '前一月' || $(clickObj).attr("alt") == '后一月') {
 
-                }else{
+                } else {
                     $('#v_calendar1').hide();
                 }
             });
@@ -892,27 +901,20 @@
 //                                        $('.danjia1').html($('.counts').html() + "x &yen;" + $price1);
 //                                        $('.totalPrice').html($('.counts').html() * $price1);
 //                                        $("#danjias").val(singlePrice);
-                $('.detail_byPart').show();
                 $('#v_calendar1').hide();
-                $.ajax( {
-                    type : "POST",
-                    url : "action.jsp",
-                    data : "content=" + content,
-                    timeout : 20000,
-                    cache : false,
-                    beforeSend : function(XMLHttpRequest) {
-                    },
-                    success : function(data, textStatus) {
-                        $(".html").val(data);
-                    },
-                    complete : function(XMLHttpRequest, textStatus) {
-
-                    },
-                    error : function() {
-                        alert("ajax失败！");
+                var departDate = $('#startDate').val();
+                var goodsId = <?= $goodsId ?>;
+                alert(goodsId);
+                $.ajax({
+                    type: "POST",
+                    url: "../model/get_meal.php",
+                    data: {"goodsId": goodsId, "departDate": departDate},
+                    async: false,
+                    success: function (data) {
+                        alert(data);
+                        $('.detail_byPart').show();
                     }
                 });
-
             }
         });
     }
