@@ -139,14 +139,14 @@ if(!defined('IN_CLOOTA')) {
 		<div style="text-align:right;padding-right:10px;">  
 			<br/>
 			共计<b><?=$total_number?></b>条 &nbsp;
-			<a href="<?=get_page_args()?>p=1">首页</a>
-			<a href="<?=get_page_args()?>p=<?=$prev_number?>">上一页</a> 
+			<a href="<?=get_page_args()?>p=1" target="_parent">首页</a>
+			<a href="<?=get_page_args()?>p=<?=$prev_number?>" target="_parent">上一页</a> 
 			第<?=$now_page?> / <b><?=$total_page?></b>页 
-			<a href="<?=get_page_args()?>p=<?=$next_number?>">下一页</a>
-			<a href="<?=get_page_args()?>p=<?=$total_page?>">尾页</a>
+			<a href="<?=get_page_args()?>p=<?=$next_number?>" target="_parent">下一页</a>
+			<a href="<?=get_page_args()?>p=<?=$total_page?>" target="_parent">尾页</a>
 			&nbsp;
 			转到
-			<input type="number" class="span1 text-center" value="<?=req('p')?>" onchange="location.replace('<?=get_page_args()?>p='+this.value)">页
+			<input type="number" class="span1 text-center" value="<?=req('p')?>" onchange="/*location.replace*/window.parent.location.href=('<?=get_page_args()?>p='+this.value)">页
 		</div>
 
 		<?}else{?>
