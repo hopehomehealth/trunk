@@ -162,10 +162,12 @@ $url = $host . "/travel/interface/zbyV3.2/getZbyGoodsDtailV_3.2?goodsId=" . $goo
 $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
+
 //var_dump($data['imageList']);
 //echo "<pre>";
 //var_dump($arr);
 //die;
+
 function seo(){
 	global $g_sitename, $c_goods;
 ?>
