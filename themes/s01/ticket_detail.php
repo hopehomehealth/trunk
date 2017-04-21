@@ -192,7 +192,7 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                 <dd>
                                     <?= $db->to_gbk($item['scenicSpotInfo']) ?>
                                 </dd>
-                                <?foreach ($item['imgUrl'] as $k => $val){?>
+                                <?foreach ($item['imgUrlList'] as $k => $val){?>
                                     <image src="<?= $db->to_gbk($val) ?>" style="width: 720px;height: 480px;"></image>
                                 <?}?>
                             </dl>
