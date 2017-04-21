@@ -221,9 +221,9 @@
     <!--        17:50:50-->
     <!--        北京-邢广凯 2017/3/22 17:50:50-->
     <!-- 退款成功弹窗 -->
-    <div class="tuikuanSuccessBox" style="width: 400px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;">
-        <p style="width: 400px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?if ($require_refund['status'] != '0000'){echo $require_refund_data['failReason'];}else {echo $require_refund_data['refundCustomerInfo'];}?></p>
-        <a href="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?rstatus=<?echo $require_refund['status'];?>"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 300px;border:none;border-radius: 2px;">确定</button></a>
+    <div class="tuikuanSuccessBox" style="width: 500px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;">
+        <p style="width: 500px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?if ($require_refund['status'] != '0000'){echo $require_refund_data['failReason'];}else {echo $require_refund_data['refundCustomerInfo'];}?></p>
+        <a href="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?rstatus=<?echo $require_refund['status'];?>"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 390px;border:none;border-radius: 2px;">确定</button></a>
     </div>
 
 <?}?>
