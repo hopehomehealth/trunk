@@ -49,7 +49,7 @@ $curr_ym_html = date('Y年m月', strtotime($yyyy.'-'.$mm.'-01'));
 		$this_adult_price = $adult_price["$yyyy-$mm-$dd"];
 
         if($this_adult_price>0){
-            $this_adult_price = '<span class="date_yen_text" title="成人价格"></span>&yen;'.$this_adult_price.'/人';
+            $this_adult_price = '<span class="date_yen_text" title="成人价格"></span>&yen;'.$this_adult_price.'起';
             echo "<li class='date_blue' style='height:50px;cursor: pointer'>".$i."<br/><span class='date_yen'>".$this_adult_price."</span></li>";
         } else {
             $this_adult_price = '';

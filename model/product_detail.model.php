@@ -163,17 +163,8 @@ $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
 
-
-
-//$post['goodsId'] = $goodsId;
-//$post['departDate'] = "2017-04-27";
-//$url = $host . "/travel/interface/zbyV3.2/getZbyPackageByGoodsIdV_3.2";
-//$rst = $db->api_post($url, $post);
-//$arr = json_decode($rst, true);
-//$data = $arr['data'];
-//
 //echo "<pre>";
-//var_dump($data);
+//var_dump($arr);
 //die;
 
 function seo(){

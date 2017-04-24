@@ -198,7 +198,7 @@
 
 
                     服务商： <span class="gray-b"><a href="<?= $c_shop_url ?>"
-                                                 target="_blank"><?= $c_shop_name ?></a> </span>
+                                                 target="_blank"><?= $db->to_gbk($data['shopName']) ?></a> </span>
                 </div>
 
                 <a href="/member/?cmd=<?= base64_encode('checkout.php') ?>&goods_type=<?= $c_goods['goods_type'] ?>&goods_id=<?= $c_goods['goods_id'] ?>"
@@ -220,7 +220,7 @@
             <div class="u-name">旅游顾问 <br> 产品推荐</div>
             <div class="recommend-info">
                 <?
-                $summary = stripslashes($c_goods['summary']);
+                $summary = stripslashes($db->to_gbk($data['summary']));
                 $summary = str_replace('font-family', '~font-family', $summary);
                 echo $summary;
                 ?>
@@ -281,51 +281,11 @@
                     </div>
                 </div>
             </div>
+<!--            按人或按份-->
+            <span class="number">
 
-            <!-- <label for="">购买份数:</label>
-            <select>
-                <option>1份</option>
-                <option>2份</option>
-                <option>3份</option>
-            </select>
-            <label for="">其中包含:</label>
-            <span style="display: inline-block;padding:0 5px;background-color: #fff;">成人：2/儿童：1</span>
-            
-            <a href="javascript:void(0);" class="qijia" style="">起价说明</a>
-            <div class="qijia_tips">
-                本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变.
-            </div> -->
-            <span style="display: none">
-            <label for="">成人</label>
-            <select name="adult_num" id="adult_num" style="width:60px" onChange="count_price()">
-                <? for ($i = 1; $i <= 50; $i++) { ?>
-                    <option value="<?= $i ?>"><?= $i ?></option>
-                <? } ?>
-            </select>
-
-
-            <a href="javascript:void(0);" class="qijia1" style="">起价说明</a>
-            <div class="qijia1_tips">
-                本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变.
-            </div>
-
-            <label for="">儿童</label>
-            <select name="kid_num" id="kid_num" style="width:60px" onChange="count_price()">
-                <option value="0">0</option>
-                <? for ($i = 1; $i <= 50; $i++) { ?>
-                    <option value="<?= $i ?>"><?= $i ?></option>
-                <? } ?>
-            </select>
             </span>
-            <iframe id="frm" name="frm" src="" frameborder="0" scrolling="no" width="0" height="0"></iframe>
 
-
-
-
-            <a href="javascript:void(0);" class="form-tips rel">
-                儿童价说明<span class="box-tips child_tips" style="display:none"><i
-                        class="icon"></i><?= $data['childPriceInfo'] ?></span>
-            </a>
 
 
 
@@ -363,94 +323,7 @@
 
     <!-- 详情页按份分与按人分 -->
     <div class="detail_byPart">
-        <ul class="byPart_title">
-            <li class="product_name">套餐名称</li>
-            <li class="hotel_contain">包含酒店</li>
-            <li class="ticket_contain">包含门票</li>
-            <li class="fangcha">房差</li>
-            <li class="product_mounts">库存</li>
-            <li class="product_price">价格</li>
-            <li class="product_select">选择</li>
-        </ul>
-        <div class="byPart_cont">
-            <ul>
-                <li class="product_name1">一期客房（大床房）</li>
-                <li class="hotel_contain1">速八酒店<br>扬州彭大酒店</li>
-                <li class="ticket_contain1">欢乐谷夜场<br>西湖风景区</li>
-                <li class="fangcha1">
-                    <select>
-                        <option>1</option>
-                        <option>3</option>
-                    </select>
-                </li>
-                <li class="product_mounts1">充足</li>
-                <li class="product_price1"><b>&yen;299</b>/份</li>
-                <li class="product_select1 select_selected">
-                    <span></span>
-                </li>
-            </ul>
-            <div class="hide_content">
-                周末温泉门票2张，1小盒新鲜草莓，颈枕1个。普罗旺斯餐厅代金券20元（消费满166元以上），卡丁车俱乐部四项（卡丁车1圈、射箭10支、射击10发、双人自行车1圈），幸福农场菜园租赁8折，幸福农场菜园采摘8.5折，参加蓝调部落周年庆活动（消费多少送双倍）<i></i>
-            </div>
-            <div class="product_name_tips">
-                豪华总统套房（含双人早餐）<i></i>
-            </div>
-            <div class="ticket_contain_tips">
-                包含：东方明珠门票两张，迪士尼小镇、宝藏湾风暴来临；杰克船长之惊天特技大冒险（现场娱乐演出，舞台表演，室内娱乐）<i></i>
-            </div>
-            <div class="change_rule_tips">
-                如需取消、修改订单，请在2017-04-24 12:00前申请退款，过期扣除套餐全部费用。若您的旅程尚未确定，建议购买取消险。<i></i>
-            </div>
-            <div class="change_rule">退改规则</div>
-        </div>
-
-        <div class="byPart_cont">
-            <ul>
-                <li class="product_name1">一期客房（大床房）</li>
-                <li class="hotel_contain1">速八酒店<br>扬州彭大酒店</li>
-                <li class="ticket_contain1">欢乐谷夜场<br>西湖风景区</li>
-                <li class="fangcha1">
-                    <select>
-                        <option>1</option>
-                        <option>3</option>
-                    </select>
-                </li>
-                <li class="product_mounts1">充足</li>
-                <li class="product_price1"><b>&yen;299</b>/份</li>
-                <li class="product_select1">
-                    <span></span>
-                </li>
-            </ul>
-            <div class="hide_content">
-                周末温泉门票2张，1小盒新鲜草莓，颈枕1个。普罗旺斯餐厅代金券20元（消费满166元以上），卡丁车俱乐部四项（卡丁车1圈、射箭10支、射击10发、双人自行车1圈），幸福农场菜园租赁8折，幸福农场菜园采摘8.5折，参加蓝调部落周年庆活动（消费多少送双倍）<i></i>
-            </div>
-            <div class="product_name_tips">
-                豪华总统套房（含双人早餐）<i></i>
-            </div>
-            <div class="ticket_contain_tips">
-                包含：东方明珠门票两张，迪士尼小镇、宝藏湾风暴来临；杰克船长之惊天特技大冒险（现场娱乐演出，舞台表演，室内娱乐）<i></i>
-            </div>
-            <div class="change_rule_tips">
-                如需取消、修改订单，请在2017-04-24 12:00前申请退款，过期扣除套餐全部费用。若您的旅程尚未确定，建议购买取消险。<i></i>
-            </div>
-            <div class="change_rule">退改规则</div>
-        </div>
-
-        <div class="feiyongshuoming">
-            <h3>费用说明</h3>
-            <ul>
-                <li>【住】扬州杨鹏大酒店客房1间1晚（自选房型）</li>
-                <li>【吃】入住次日清晨酒店自助早餐2份（身高≥1.2米的儿童早餐按成人标准58元/份收费）</li>
-                <li>【游】景点门票4选1【瘦西湖风景区/瘦西湖温泉/何园/个园/大明寺景区】（敬请下单时自行选择确定具体景点名称、游玩时间及游玩人数）</li>
-                <li>&nbsp;&nbsp;即日起至2017.12.31日，凡此期间入住客人均可享受5楼湖苑餐厅零点餐饮9折优惠（海鲜、特价菜、酒水除外）</li>
-            </ul>
-            <dl>
-                <dt>温馨提示:</dt>
-                <dd>1.套餐内容及出行人数可按需调整</dd>
-                <dd>2.套餐总价会根据内容和出行日期变化</dd>
-                <dd>3.礼包赠送与否及所赠内容由您入住日期和房型决定</dd>
-            </dl>
-        </div>
+        
     </div>
 
     <!--  <div class="detail_byPerson">
@@ -695,20 +568,6 @@
                                             <div class="bar-green" style="width:0%"></div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <label for="">中评<span class="gray-c">（<?= $data['favorableRate'] ?>
-                                                ）</span></label>
-                                        <div class="bar-group">
-                                            <div class="bar-green" style="width:0%"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label for="">差评<span class="gray-c">（<?= $data['favorableRate'] ?>
-                                                ）</span></label>
-                                        <div class="bar-group">
-                                            <div class="bar-green" style="width:0%"></div>
-                                        </div>
-                                    </li>
                                 </ul>
                                 <div class="go-order">进入"<a
                                         href="<?= $g_domain ?>member/?cmd=<?= base64_encode('order.php') ?>">我的订单</a>"点评已成功出行的旅游产品吧~
@@ -834,35 +693,7 @@
     }
 </script>
 <script type="text/javascript">
-    function getNum(text) {
-        var value = text.replace(/[^0-9]/ig, "");
-        value = value.substring(1);
-        return value;
-    }
-    function count_price() {
-        var v_url = "";
-        v_url = "/member/ajax.price_sum.php?rnd=" + Math.random();
-        v_url += "&goods_id=<?=$c_goods['goods_id']?>";
-        v_url += "&adult_num=" + $('#adult_num').val();
-        v_url += "&kid_num=" + $('#kid_num').val();
-        v_url += "&departdate=" + $('#departdate').val();
 
-        if ($('#departdate').val() != '') {
-            var html_list = $.ajax({url: v_url + "&ac=list", async: false});
-            $("#sum_result").html(html_list.responseText);
-
-            var html_count = $.ajax({url: v_url + "&ac=count", async: false});
-            $("#count_result").html(html_count.responseText);
-            var str1 = $("#count_result").html();
-            //alert(str1);
-            var str2 = getNum(str1);
-            //alert(str2);
-            $("#payPrice").val(str2);
-        } else {
-            $("#sum_result").html('');
-            $("#count_result").html('');
-        }
-    }
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -904,15 +735,199 @@
                 $('#v_calendar1').hide();
                 var departDate = $('#startDate').val();
                 var goodsId = <?= $goodsId ?>;
-                alert(goodsId);
                 $.ajax({
                     type: "POST",
-                    url: "../model/get_meal.php",
+                    url: "/model/get_meal.model.php",
                     data: {"goodsId": goodsId, "departDate": departDate},
                     async: false,
                     success: function (data) {
-                        alert(data);
+                        $('.detail_byPart').html("");
+                        $('.detail_byPart').html(data);
                         $('.detail_byPart').show();
+                        //点击套餐吗，名称展开具体信息
+                        for (var i = 0; i < $('.product_name1').length; i++) {
+                            $('.product_name1').eq(i).attr("hide_flag", "1");
+                            $('.product_name1').eq(i).attr("index", i);
+
+                            $('.product_name1').eq(i).click(function () {
+                                //console.log($(this).attr("index"));
+                                if ($(this).attr("hide_flag") == '1') {
+                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao1.jpg)");
+                                    $('.hide_content').eq($(this).attr("index")).show();
+                                    $(this).attr("hide_flag", "0");
+                                } else {
+                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao2.jpg)");
+                                    $('.hide_content').eq($(this).attr("index")).hide();
+                                    $(this).attr("hide_flag", "1");
+                                }
+                            });
+
+                            $('.product_name1').eq(i).hover(function () {
+                                $(this).css({
+                                    "color": "#fa9520"
+                                });
+                                var offsetLeft = $(this).offset().left;
+                                var offsetTop = $(this).offset().top;
+                                var elementHeight = 30;
+                                var left = offsetLeft;
+                                var top = offsetTop + elementHeight;
+                                $('.product_name_tips').eq($(this).attr('index')).show();
+                                $('.product_name_tips').eq($(this).attr('index')).css({
+                                    "position": "absolute",
+                                    "left": left,
+                                    "top": top
+                                });
+                            }, function () {
+                                $(this).css({
+                                    "color": ""
+                                });
+                                $('.product_name_tips').eq($(this).attr('index')).hide();
+                            });
+                        }
+                        //退改规则hover
+                        for (var i = 0; i < $('.change_rule').length; i++) {
+                            $('.change_rule').eq(i).attr("index", i);
+                            $('.change_rule').eq(i).hover(function () {
+                                $(this).css({
+                                    "color": "#0054a7",
+                                    "textDecoration": "underline"
+                                });
+                                var offsetLeft = $(this).offset().left;
+                                var offsetTop = $(this).offset().top;
+                                var elementHeight = 32;
+                                var left = offsetLeft;
+                                var top = offsetTop + elementHeight;
+                                $('.change_rule_tips').eq($(this).attr('index')).show();
+                                $('.change_rule_tips').eq($(this).attr('index')).css({
+                                    "position": "absolute",
+                                    "left": left,
+                                    "top": top
+                                });
+                            }, function () {
+                                $(this).css({
+                                    "color": "",
+                                    "textDecoration": ""
+                                });
+                                $('.change_rule_tips').eq($(this).attr('index')).hide();
+                            });
+                        };
+                        //包含门票hover
+                        for (var i = 0; i < $('.ticket_contain1').length; i++) {
+                            $('.ticket_contain1').eq(i).attr("index", i);
+                            $('.ticket_contain1').eq(i).hover(function () {
+                                $(this).css({
+                                    "color": "#fa9520"
+                                });
+                                var offsetLeft = $(this).offset().left;
+                                var offsetTop = $(this).offset().top;
+                                var elementHeight = 54;
+                                var left = offsetLeft;
+                                var top = offsetTop + elementHeight;
+                                $('.ticket_contain_tips').eq($(this).attr('index')).show();
+                                $('.ticket_contain_tips').eq($(this).attr('index')).css({
+                                    "position": "absolute",
+                                    "left": (left + 70),
+                                    "top": top
+                                });
+                            }, function () {
+                                $(this).css({
+                                    "color": ""
+                                });
+                                $('.ticket_contain_tips').eq($(this).attr('index')).hide();
+                            });
+                        };
+                        //套餐选择按钮
+                        for (var i = 0; i < $('.product_select1').length; i++) {
+                            $('.product_select1').eq(i).click(function () {
+                                $('.product_select1').removeClass('select_selected');
+                                $(this).addClass("select_selected");
+                                var packageId = $(this).find("input").eq(0).val();
+                                var isPackage = $(this).find("input").eq(1).val();
+                                var min = $(this).find("input").eq(2).val();
+                                var max = $(this).find("input").eq(3).val();
+//                                alert(departDate);
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/model/get_number.model.php",
+                                    data: {"goodsId": goodsId, "departDate": departDate, "packageId": packageId, "isPackage": isPackage, "min": min, "max": max},
+                                    async: false,
+                                    success: function (data) {
+                                        $('.number').html("");
+                                        $('.number').html(data);
+                                        $('.number').show();
+                                        //起价提示qijia
+                                        $('.qijia').hover(function () {
+                                            $(this).css({
+                                                "text-decoration": "underline"
+                                            });
+                                            $('.qijia_tips').show();
+                                            $('.qijia_tips').css({
+                                                "position": "absolute",
+                                                "left": 700,
+                                                //"top":top
+                                            });
+                                        }, function () {
+                                            $('.qijia_tips').hide();
+                                        });
+                                        $('.qijia1').hover(function () {
+                                            $(this).css({
+                                                "text-decoration": "underline"
+                                            });
+                                            $('.qijia1_tips').show();
+                                            $('.qijia1_tips').css({
+                                                "position": "absolute",
+                                                "left": 450,
+                                                //"top":top
+                                            });
+                                        }, function () {
+                                            $('.qijia1_tips').hide();
+                                        });
+
+
+                                        //儿童价格提示
+                                        $('.form-tips').hover(function () {
+                                            $('.child_tips').show();
+                                        }, function () {
+                                            $('.child_tips').hide();
+                                        });
+                                        function getNum(text) {
+                                            var value = text.replace(/[^0-9]/ig, "");
+                                            value = value.substring(1);
+                                            return value;
+                                        }
+                                        function count_price() {
+                                            var adultNum = $('#adult_num').val();
+                                            alert(adultNum);
+                                            var v_url = "";
+                                            v_url = "/member/ajax.price.php?rnd=" + Math.random();
+                                            v_url += "&adultNum=" + adultNum;
+                                            v_url += "&roomMax=" + max;
+                                            v_url += "&goodsType=" + <?= $data['goodsType']?>;
+                                            v_url += "&isPackage=" + isPackage;
+
+                                            if ($('#departdate').val() != '') {
+                                                var html_list = $.ajax({url: v_url + "&ac=list", async: false});
+                                                $("#sum_result").html(html_list.responseText);
+
+                                                var html_count = $.ajax({url: v_url + "&ac=count", async: false});
+                                                $("#count_result").html(html_count.responseText);
+                                                var str1 = $("#count_result").html();
+                                                //alert(str1);
+                                                var str2 = getNum(str1);
+                                                //alert(str2);
+                                                $("#payPrice").val(str2);
+                                            } else {
+                                                $("#sum_result").html('');
+                                                $("#count_result").html('');
+                                            }
+                                        }
+
+                                    }
+                                });
+                            });
+                        }
+
+
                     }
                 });
             }
@@ -920,6 +935,7 @@
     }
 
 </script>
+
 <script>
     seajs.use(["freeproduct", 'comment', 'yoslide'], function (product, comment, yoslide) {
         $(function () {
@@ -946,140 +962,7 @@
 
     });
 
-    //起价提示qijia
-    $('.qijia').hover(function () {
-        $(this).css({
-            "text-decoration": "underline"
-        });
-        $('.qijia_tips').show();
-        $('.qijia_tips').css({
-            "position": "absolute",
-            "left": 700,
-            //"top":top
-        });
-    }, function () {
-        $('.qijia_tips').hide();
-    });
-    $('.qijia1').hover(function () {
-        $(this).css({
-            "text-decoration": "underline"
-        });
-        $('.qijia1_tips').show();
-        $('.qijia1_tips').css({
-            "position": "absolute",
-            "left": 450,
-            //"top":top
-        });
-    }, function () {
-        $('.qijia1_tips').hide();
-    });
-    //点击套餐吗，名称展开具体信息
-    for (var i = 0; i < $('.product_name1').length; i++) {
-        $('.product_name1').eq(i).attr("hide_flag", "1");
-        $('.product_name1').eq(i).attr("index", i);
 
-        $('.product_name1').eq(i).click(function () {
-            //console.log($(this).attr("index"));
-            if ($(this).attr("hide_flag") == '1') {
-                $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao1.jpg)");
-                $('.hide_content').eq($(this).attr("index")).show();
-                $(this).attr("hide_flag", "0");
-            } else {
-                $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao2.jpg)");
-                $('.hide_content').eq($(this).attr("index")).hide();
-                $(this).attr("hide_flag", "1");
-            }
-        });
-
-        $('.product_name1').eq(i).hover(function () {
-            $(this).css({
-                "color": "#fa9520"
-            });
-            var offsetLeft = $(this).offset().left;
-            var offsetTop = $(this).offset().top;
-            var elementHeight = 30;
-            var left = offsetLeft;
-            var top = offsetTop + elementHeight;
-            $('.product_name_tips').eq($(this).attr('index')).show();
-            $('.product_name_tips').eq($(this).attr('index')).css({
-                "position": "absolute",
-                "left": left,
-                "top": top
-            });
-        }, function () {
-            $(this).css({
-                "color": ""
-            });
-            $('.product_name_tips').eq($(this).attr('index')).hide();
-        });
-    }
-    //退改规则hover
-    for (var i = 0; i < $('.change_rule').length; i++) {
-        $('.change_rule').eq(i).attr("index", i);
-        $('.change_rule').eq(i).hover(function () {
-            $(this).css({
-                "color": "#0054a7",
-                "textDecoration": "underline"
-            });
-            var offsetLeft = $(this).offset().left;
-            var offsetTop = $(this).offset().top;
-            var elementHeight = 32;
-            var left = offsetLeft;
-            var top = offsetTop + elementHeight;
-            $('.change_rule_tips').eq($(this).attr('index')).show();
-            $('.change_rule_tips').eq($(this).attr('index')).css({
-                "position": "absolute",
-                "left": left,
-                "top": top
-            });
-        }, function () {
-            $(this).css({
-                "color": "",
-                "textDecoration": ""
-            });
-            $('.change_rule_tips').eq($(this).attr('index')).hide();
-        });
-    }
-    ;
-    //包含门票hover 
-    for (var i = 0; i < $('.ticket_contain1').length; i++) {
-        $('.ticket_contain1').eq(i).attr("index", i);
-        $('.ticket_contain1').eq(i).hover(function () {
-            $(this).css({
-                "color": "#fa9520"
-            });
-            var offsetLeft = $(this).offset().left;
-            var offsetTop = $(this).offset().top;
-            var elementHeight = 54;
-            var left = offsetLeft;
-            var top = offsetTop + elementHeight;
-            $('.ticket_contain_tips').eq($(this).attr('index')).show();
-            $('.ticket_contain_tips').eq($(this).attr('index')).css({
-                "position": "absolute",
-                "left": (left + 70),
-                "top": top
-            });
-        }, function () {
-            $(this).css({
-                "color": ""
-            });
-            $('.ticket_contain_tips').eq($(this).attr('index')).hide();
-        });
-    }
-    ;
-    //套餐选择按钮
-    for (var i = 0; i < $('.product_select1').length; i++) {
-        $('.product_select1').eq(i).click(function () {
-            $('.product_select1').removeClass('select_selected');
-            $(this).addClass("select_selected");
-        });
-    }
-    //儿童价格提示
-    $('.form-tips').hover(function () {
-        $('.child_tips').show();
-    }, function () {
-        $('.child_tips').hide();
-    });
 </script>
 <div class="clear"></div>
 <? include('foot.php'); ?>
