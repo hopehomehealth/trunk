@@ -8,46 +8,38 @@ if(!defined('IN_CLOOTA')) {
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/themes/s01/images/tianxie.css">
+<script type="text/javascript" src="/themes/s01/js/menpiaoliebiao.js"></script>
+<link rel="stylesheet" type="text/css" href="/themes/s01/images/common.css">
+<link rel="stylesheet" type="text/css" href="/themes/s01/images/menpiaoliebiao.css">
+<link rel="stylesheet" type="text/css" href="/themes/s01/images/list.css">
+<script type="text/javascript" src="/themes/s01/js/jquery.js "></script>
+<script type="text/javascript" src="/themes/s01/js/common.js"></script>
 <title>周边游订单</title>
 </head>
 <?include('static.php');?>
 <?include 'head.php';?>
 
-<?
-//var_dump($_REQUEST);
-//echo $goods_type."<hr>";
-//echo $goods_id."<hr>";
-//echo $adult_num."<hr>";
-//echo $kid_num."<hr>";
-//echo $departdate."<hr>";
-//echo $goods_name."<hr>";
-//echo $pay_price."<hr>";
-
-//RewriteRule ^zhoubianyou/zbyform_submit-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*).html$    index\.php?cmd=zbyform_submit&goods_type=$1&goods_id=$2&goods_name=$3&adult_num=$4&kid_num=$5&departdate=$6&payPrice=$7 [L]
-?>
 <body>
-<!-- main start -->
-<!--<form name="write_form" id="write_form" method="post" action="/member/?cmd=--><?//=base64_encode('zhifu.php');?><!--">-->
-<!-- <form name="write_form" id="write_form" method="post" action="zbyonline_pay.html"> -->
 <div id="zbyOrder_mainBox">
     <div id="zbyOrder_main">
         <div class="zbyOrder_main_title">
             <img src="/themes/s01/images/zby_fillInOrder.jpg">
         </div>
-<!--        <form name="write_form" id="write_form" method="post" action="/zhoubianyou/zbyonline_pay.html">-->
         <form name="write_form" id="write_form" method="post" action="/zhoubianyou/zbyform_submit-<?=$goods_type;?>-<?=$goods_id;?>-<?=$goods_name;?>-<?=$adult_num;?>-<?=$kid_num;?>-<?=$departdate;?>-<?=$pay_price;?>.html?flag=check">
+        <? if($_POST['isPackage'] == 'false'){ ?>
             <div class="zbyOrder_main1">
+
                 <div class="zbyOrder_main1_title">
-                    <?echo $goods_name;?>
+                    <?//echo $goods_name;?>商品名称-按人卖
                 </div>
                 <div class="zbyOrder_main1Cont">
-                    <div class="zbyOrder_main1ContLeft">当地游</div>
+                    <div class="zbyOrder_main1ContLeft">周边游</div>
                     <div class="zbyOrder_main1ContRight">
                         <table>
                             <thead>
                             <tr>
                                 <td>产品信息</td>
-                                <td>游玩时间</td>
+                                <td>单价</td>
                                 <td>人数</td>
                             </tr>
                             </thead>
@@ -55,34 +47,91 @@ if(!defined('IN_CLOOTA')) {
                             <tr>
                                 <td>成人</td>
                                 <td>
-                                    <?echo $departdate1;?>
+                                    120<?//echo $departdate1;?>
                                 </td>
                                 <td>
-											<span class="caculate">
-												<span class="subtract">-</span>
-												<span class="counts"><?php echo $adult_num;?></span>
-												<span class="add">+</span>
-											</span>
+									2<?//php echo $adult_num;?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>儿童</td>
                                 <td>
-                                    <?echo $departdate1;?>
+                                    100<?//echo $departdate1;?>
                                 </td>
                                 <td>
-											<span class="caculate">
-												<span class="subtract">-</span>
-												<span class="counts"><?php echo $kid_num;?></span>
-												<span class="add">+</span>
-											</span>
+									2<?//php echo $kid_num;?>
                                 </td>
                             </tr>
                             </tbody>
+                            <thead>
+                            <tr>
+                                <td>房差：50</td>
+                                <td>游玩时间：2017-4-22</td>
+                                <td>总价：￥440</td>
+                            </tr>
+                            </thead>
                         </table>
+                        
                     </div>
                 </div>
             </div>
+            <?}else{?>
+            <div class="zbyOrder_main1">
+                <div class="zbyOrder_main1_title">
+                    <?//echo $goods_name;?>商品名称-按份卖
+                </div>
+                <div class="zbyOrder_main1Cont">
+                    <div class="zbyOrder_main1ContLeft">XX套餐</div>
+                    <div class="zbyOrder_main1ContRight">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td>产品信息</td>
+                                <td>退改信息</td>
+                                <td>出游日期</td>
+                                <td>份数</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td  onclick="changeTR()" style="cursor:pointer;" onselectstart="return false">一期客房一间(含双人套餐)&nbsp;&nbsp;<span id="change" class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                <td>
+                                    不可退改<?//echo $departdate1;?>
+                                </td>
+                                <td>2017-04-22
+                                <td>
+                                    2<?//php echo $adult_num;?>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <!-- <tr id="sample"  style="display:none"  >  
+                                  <td align="left">  
+                                      描述:..... 
+                                  </td>  
+                              </tr> -->  
+                        </table>
+                        <div class="spotTicket_infoHide" id="sample"  style="display:none;width:1402px;">描述:..... </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                function changeTR()  
+                {  
+                    var tr1 = document.getElementById("sample");  
+                  
+                    if (tr1.style.display == 'none')  
+                    {  
+                        tr1.style.display = 'block';
+                        document.getElementById("change").className = "subtriangle uptriangle";  
+                    }  
+                    else  
+                    {  
+                        tr1.style.display = 'none';
+                        document.getElementById("change").className = "subtriangle";  
+                    }  
+                }  
+            </script>
+            <? } ?>
             <div class="zbyOrder_main2">
                 <div class="zbyOrder_main2_title">联系人信息</div>
 
@@ -104,6 +153,7 @@ if(!defined('IN_CLOOTA')) {
                         </ul>
                     </div>
                 </div>
+
                 <div class="zbyOrder_main2_youwan">
                     <div class="zbyOrder_main2_youwanLeft">游玩人1</div>
                     <div class="zbyOrder_main2_youwanRight">
@@ -119,10 +169,16 @@ if(!defined('IN_CLOOTA')) {
                                 <span class="youwan_phoneTips">游玩人手机号不能为空！</span>
                             </li>
                             <li>
+                                    <label><b>＊</b>人群：</label>
+                                    <select name="userType">
+                                        <option value="adult">成人</option>
+                                        <option value="child">儿童</option>
+                                    </select>
+                            </li>
+                            <li>
                                 <label><b>＊</b>证件类型：</label>
                                 <select style="width: 138px;" name="userIdcard">
                                     <option>身份证</option>
-                                    <option>户口本</option>
                                 </select>
                                 <input type="text" name="userIdcard" autocomplete="off"  id="youwan_userIdcard">
                                 <span class="youwan_idTips">游玩人证件号不能为空！</span>
@@ -130,45 +186,28 @@ if(!defined('IN_CLOOTA')) {
                         </ul>
                     </div>
                 </div>
-<!--                <div class="zbyOrder_main2_youwan">-->
-<!--                    <div class="zbyOrder_main2_youwanLeft">游玩人1</div>-->
-<!--                    <div class="zbyOrder_main2_youwanRight">-->
-<!--                        <ul>-->
-<!--                            <li>-->
-<!--                                <label><b>＊</b>姓名：</label>-->
-<!--                                <input type="text" name="userName" autocomplete="off">-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <label><b>＊</b>手机号码：</label>-->
-<!--                                <input type="text" name="userPhone" autocomplete="off">-->
-<!--                                <span></span>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <label><b>＊</b>证件类型：</label>-->
-<!--                                <select style="width: 138px;" name="userIdcard">-->
-<!--                                    <option>身份证</option>-->
-<!--                                    <option>户口本</option>-->
-<!--                                </select>-->
-<!--                                <input type="text" name="userIdcard" autocomplete="off">-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
+                
+                <div class="zbyOrder_main2_youwan">
+                    <div class="zbyOrder_main2_youwanLeft">紧急联系人</div>
+                    <div class="zbyOrder_main2_youwanRight">
+                        <ul>
+                           <li>
+                               <label><b>＊</b>姓名：</label>
+                                <input type="text" name="userName" autocomplete="off">
+                            </li>
+                            <li>
+                                <label><b>＊</b>手机号码：</label>
+                                <input type="text" name="userPhone" autocomplete="off">
+                                <span></span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <input type="hidden" name="goodsId" value="<?echo $goods_id;?>">
-            <input type="hidden" name="userId" value="<?echo $user_id;?>">
-            <input type="hidden" name="kidNum" class="Num" value="<?php echo $kid_num;?>">
-            <input type="hidden" name="adultNum" class="Num" value="<?php echo $adult_num;?>">
-            <input type="hidden" name="payPrice" value="<?echo $pay_price;?>">
-            <input type="hidden" name="departdate" value="<?echo $departdate1;?>">
+        <input type="hidden" name="" value="">
         </form>
 
-        <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
-            <input type="hidden" name="payPrice" id="payPrice" value="<?=$payPrice?>">
-            <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName?>">
-            <input type="hidden" name="payTime" id="payTime" value="<?=$payTime?>">
-        </form>
         <?
         if (notnull($check_form_data)){
             $js = "<script>document.getElementById('onlineForm').submit();</script>";
@@ -177,9 +216,8 @@ if(!defined('IN_CLOOTA')) {
         ?>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
-                    <div class="zbyOrder_main31_left">应付总价：￥<?echo $pay_price;?></div>
-<!--                    <div ><input value="同意以下条款，去付款" type="submit" class="zbyOrder_main31_right"></div>-->
-<!--                    <div ><button onclickclass="onlinePay_payNow" onclick = "check_form()" >同意以下条款，去付款</button></div>-->
+                    <div class="zbyOrder_main31_left">应付总价：￥440<?//echo $pay_price;?></div>
+
                     <button class="zbyOrder_main31_right" onclick = "check_form()">同意以下条款，去付款</button>
 
                 </div>
@@ -193,52 +231,17 @@ if(!defined('IN_CLOOTA')) {
                     温馨提示：请您仔细阅读预订须知及旅游合同条款，订单提交后，视为您同意以下各项条款内容
                 </div>
             </div>
-        <!-- </form> -->
         <div class="zbyOrder_main4">
             <div class="zbyOrder_main4_title">预订须知</div>
-<!--            <div class="zbyOrder_main4_cont">-->
-<!--                <span>费用包含</span>-->
-<!--                <dl>-->
-<!--                    <dt>套餐1:经典双人套餐</dt>-->
-<!--                    <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>-->
-<!--                    <dd>【住】：宋城千古情主题酒店大/双床房</dd>-->
-<!--                    <dd>【吃】：中式自助早2份</dd>-->
-<!--                </dl>-->
-<!--                <dl>-->
-<!--                    <dt>套餐1:经典双人套餐</dt>-->
-<!--                    <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>-->
-<!--                    <dd>【住】：宋城千古情主题酒店大/双床房</dd>-->
-<!--                    <dd>【吃】：中式自助早2份</dd>-->
-<!--                </dl>-->
-<!--                <dl>-->
-<!--                    <dt>套餐1:经典双人套餐</dt>-->
-<!--                    <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>-->
-<!--                    <dd>【住】：宋城千古情主题酒店大/双床房</dd>-->
-<!--                    <dd>【吃】：中式自助早2份</dd>-->
-<!--                </dl>-->
-<!--                <dl>-->
-<!--                    <dt>套餐1:经典双人套餐</dt>-->
-<!--                    <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>-->
-<!--                    <dd>【住】：宋城千古情主题酒店大/双床房</dd>-->
-<!--                </dl>-->
-<!--                <dl>-->
-<!--                    <dt>套餐1:经典双人套餐</dt>-->
-<!--                    <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>-->
-<!--                    <dd>【吃】：中式自助早2份</dd>-->
-<!--                </dl>-->
-<!--                <dl>-->
-<!--                    <dt>套餐1:经典双人套餐</dt>-->
-<!--                    <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>-->
-<!--                    <dd>【住】：宋城千古情主题酒店大/双床房</dd>-->
-<!--                </dl>-->
-<!--            </div>-->
-            <?
-//            $html = file_get_contents($product_detail_data['orderNoteLink']);
-//            $html = file_get_contents('http://wwwd.bus365.cn/travel/interface/zby/getZbyOrderNote?goodsId=8000000&charset=gbk');
-
-//            echo $html;
-            ?>
-
+                <div class="zbyOrder_main4_cont">
+                <span>费用包含</span>
+                <dl>
+                <dt>套餐1:经典双人套餐</dt>
+                <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>
+                <dd>【住】：宋城千古情主题酒店大/双床房</dd>
+                <dd>【吃】：中式自助早2份</dd>
+                </dl>
+            </div>
         </div>
     </div>
 </div>
@@ -247,7 +250,6 @@ if(!defined('IN_CLOOTA')) {
 
 	<!--  foot  start -->
     <?include 'foot.php';?>
-<!--	<!--  foot  end -->-->
 </body>
 <script type="text/javascript" src="/themes/s01/js/jquery.js"></script>
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
