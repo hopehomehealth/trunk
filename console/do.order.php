@@ -147,4 +147,43 @@ if($cmd == 'score_order_delete'){
 	$url = "./?cmd=".base64_encode("score_order.php")."&kw=".req('kw')."&state=".req('state')."&p=".req('p');
 	gourl($url);
 }
+
+//添加退款记录
+if ($cmd == 'order_refund_add'){
+    $reason = req('reason');//退款原因
+    $orderno = req('orderno');//订单号
+    if(!is_numeric($orderno)) {
+        echo"<script>alert('订单号必须为数字！');history.go(-1);</script>";
+        die;
+    } else {
+        $sql = "SELECT * FROM t_refund_fee_apply  WHERE order_code = '$orderno'";
+        $results = $db->get_one($sql);
+        if ($results !== false){
+            echo"<script>alert('该订单号已申请退款！');history.go(-1);</script>";
+            die;
+        } else {
+            $sql = "SELECT a.*, b.gateway_id, b.gateway_order_code FROM t_user_order a, t_user_bill b WHERE a.order_code = '$orderno' AND b.site_order_code = '$orderno' AND a.state in (2,3)";
+            $result = $db->get_one($sql);
+            if ($result == false){
+                echo"<script>alert('订单号不存在！');history.go(-1);</script>";
+                die;
+            } else {
+                $create_time = date("Y-m-d H:i:s",time());
+                $flag = '0';
+                $order_code = $result['order_code'];
+                $user_id = $result['user_id'];
+                $user_type = $result['user_type'];
+                $goods_type = $result['goods_type'];
+                $order_fee = $result['pay_price'];
+                $gateway_id = $result['gateway_id'];
+                $gateway_order_code = $result['gateway_order_code'];
+                $sql = "INSERT INTO `t_refund_fee_apply` (`create_time`,`flag`,`reason`,`order_code`,`user_id`,`user_type`,`goods_type`,`order_fee`,`gateway_id`,`gateway_order_code`) VALUES ('$create_time','$flag','$reason','$order_code','$user_id','$user_type','$goods_type','$order_fee','$gateway_id','$gateway_order_code')";
+                $rst = $db->query($sql);
+                echo"<script>alert('添加成功！')</script>";
+                $url = "./?cmd=".base64_encode("order_refund.php");
+                gourl($url);
+            }
+        }
+    }
+}
 ?>

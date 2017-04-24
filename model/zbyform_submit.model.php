@@ -11,10 +11,12 @@ $departdate1 = date('Y-m-d',strtotime($departdate));
 $linker = req('linker');
 $linker = iconv('GBK', 'UTF-8', $linker); //将字符串的编码从GB2312转到UTF-8
 $goods_name = req('goods_name');
-$pay_price = req('payPrice');
+//$pay_price = req('payPrice');
+$pay_price = 0.01;
 $mobile = req('mobile');
 $user_id = req('user_id');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
+
 
 $flag = req('flag');
 $touristList = '[{"userIdcard":"211481198401154411","userName":"wangge","userPhone":"18841184568"},{"userIdcard":"211481198401154411","userName":"laozhao","userPhone":"18242984568"}]';

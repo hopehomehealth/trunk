@@ -12,10 +12,10 @@ if($arr['refundmoney'] == ''){
     echo "<script>alert('应退金额不能为空！');history.go(-1);</script>";
     exit();
 }
-if($arr['refundmoney'] > $arr['refund_fee']){
-    echo "<script>alert('应退金额不能大于退款金额！');history.go(-1);</script>";
-    exit();
-}
+//if($arr['refundmoney'] > $arr['refund_fee']){
+//    echo "<script>alert('应退金额不能大于退款金额！');history.go(-1);</script>";
+//    exit();
+//}
 $arr['security'] = md5("098f6bcd4621d373cade4e832627b4f6");//签名
 $url = $host . "/travel/interface/refund";//接口地址
 //接口传参

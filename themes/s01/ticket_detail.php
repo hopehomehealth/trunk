@@ -80,8 +80,7 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                 <ul>
                                     <li class="product">
                                         <span class="ticketType1"><?= $db->to_gbk($type['ticketTypeName']) ?></span>
-                                        --<?= $db->to_gbk($values['lvGoodsName']) ?>
-                                        £¨<?= $db->to_gbk($values['limitTime']) ?>£©
+                                        --<a title="<?=$db->to_gbk($values['limitTime'])?>"><?= $db->to_gbk(jiequ(45, $values['lvGoodsName'] . "--" . $values['limitTime']))?></a>
                                         <span class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                     </li>
                                     <li class="reserveTime"><?= $db->to_gbk($values['bookTime']) ?></li>

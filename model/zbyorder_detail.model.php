@@ -9,6 +9,7 @@ $refund_product = json_decode($refund_product, true);
 $refund_product = array_iconv($refund_product);
 $refund_product_data = $refund_product['data'];
 $isChange = $refund_product_data['isChange'];
+
 //订单详情展示
 function get_order_detail()
 {
@@ -26,15 +27,15 @@ function get_order_detail()
 $order_detail = get_order_detail();
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
-
 //取消订单
-if($_GET['flag']=='cl'){
+if($_GET['flag'] == 'cn'){
     $cancle_order = juhecurl($host."/travel/interface/order/cancleUserOrder",$post, 1);
     $cancle_order = json_decode($cancle_order, true);
     $cancle_order = array_iconv($cancle_order);
     $cancle_order_data = $cancle_order['data'];
 //    echo "<pre>";
 //    var_dump($cancle_order);
+    
 }
 
 //按钮对应状态判断

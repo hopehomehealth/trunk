@@ -42,7 +42,7 @@ if (!defined('IN_CLOOTA')) {
     </select>
 
     <input type="image" src="static/image/find.gif" class="input_img" title="ËÑË÷"/>
-
+    <span onclick="dialog_edit('./?cmd=<?= base64_encode('order_refund_add.php')?>&modal=true')" style="float:right;ursor:pointer" class="btn btn-info btn-small">Ìí¼ÓÍË¿î¼ÇÂ¼</span>
 </form>
 
 <div class="tab-content">

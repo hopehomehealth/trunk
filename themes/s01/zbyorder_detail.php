@@ -13,6 +13,7 @@ if (!defined('IN_CLOOTA')) {
 <body>
 <!--  head  start -->
 
+
 <? include 'head.php'; ?>
 
 <!--  nav导航  end -->
@@ -199,21 +200,22 @@ if (!defined('IN_CLOOTA')) {
 
     <div class="cancelBox_cont">
         <div class="cancelBox_cont_tips">&nbsp;&nbsp;是否取消订单?</div>
-        <a href="/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=cl"><button class="cancelBox_sure">确认</button></a>
+        <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=cn"><button class="cancelBox_sure">确认</button></a>
         <button class="cancelBox_cancel">取消</button>
     </div>
 </div>
 <!-- 取消订单成功或失败弹窗 -->
+<?if(!empty($cancle_order)){ ?>
 <div class="cancelBox1">
     <div class="cancelBox1_title">
         <div class="cancelBox1_title_left">bus365提示您</div>
-        <a href="<?=$aurl?>"><span class="cancelBox1_title_right"></span></a>
+        <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html"><span class="cancelBox1_title_right"></span></a>
     </div>
     <div class="cancelBox1_cont">
-        <div class="cancelBox1_cont_tips">&nbsp;&nbsp;<?=utf8_to_gbk($res['data']['message'])?></div>
+        <div class="cancelBox1_cont_tips">&nbsp;&nbsp;<?echo $cancle_order_data['message'];?></div>
     </div>
 </div>
-
+<?}?>
 
 <!--  foot  start -->
 <? include 'foot.php'; ?>
