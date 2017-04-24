@@ -118,13 +118,21 @@ if (!defined('IN_CLOOTA')) {
                                     target="_top" class="btn btn-small btn-info">详情</a></td>
                             <td style="text-align:center">
                                 <? if ($val['goods_type'] == '4') { ?>
-                                    <? if ($val['third_refund_status'] == '2' && $val['flag'] != '2' && $val['data_sources'] == '1') { ?>
-                                        <span
-                                            onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
-                                            class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                                    <? if ($val['data_sources'] == '1') { ?>
+                                        <? if ($val['flag'] !== '2') { ?>
+                                            <span
+                                                onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                                class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                                        <? } ?>
+                                    <? } else { ?>
+                                        <? if ($val['third_refund_status'] == '2' && $val['flag'] != '2') { ?>
+                                            <span
+                                                onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                                class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                                        <? } ?>
                                     <? } ?>
                                 <? } else if ($val['goods_type'] == '1') { ?>
-                                    <? if ($val['flag'] == '0' && $val['data_sources'] == '1') { ?>
+                                    <? if ($val['flag'] == '0') { ?>
                                         <span
                                             onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
                                             class="btn btn-info btn-small" style="cursor:pointer">退款</span>
