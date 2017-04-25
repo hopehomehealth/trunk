@@ -155,6 +155,7 @@ if (!defined('IN_CLOOTA')) {
 <div id="mengban hide"></div>
 
 
+
 <!-- 退款说明信息 -->
 <div class="refundInfo hide">
     <div class="refundInfo_top">
@@ -177,20 +178,6 @@ if (!defined('IN_CLOOTA')) {
     </div>
 </div>
 
-<!-- 申请退款点击后弹窗 -->
-<div class="applyRefund hide">
-    <div class="applyRefund_title">
-        <div class="applyRefund_title_left">待支付订单</div>
-        <span class="applyRefund_title_right"></span>
-    </div>
-
-    <div class="applyRefund_cont">
-        <div class="applyRefund_cont_tips">&nbsp;&nbsp;是否申请退款?</div>
-        <button class="applyRefund_sure">确认</button>
-        <button class="applyRefund_cancel">取消</button>
-    </div>
-</div>
-
 <!-- 取消订单弹窗 -->
 <div class="cancelBox hide">
     <div class="cancelBox_title">
@@ -206,15 +193,58 @@ if (!defined('IN_CLOOTA')) {
 </div>
 <!-- 取消订单成功或失败弹窗 -->
 <?if(!empty($cancle_order)){ ?>
-<div class="cancelBox1">
-    <div class="cancelBox1_title">
-        <div class="cancelBox1_title_left">bus365提示您</div>
-        <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html"><span class="cancelBox1_title_right"></span></a>
+    <div class="cancelBox1">
+        <div class="cancelBox1_title">
+            <div class="cancelBox1_title_left">bus365提示您</div>
+            <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html"><span class="cancelBox1_title_right"></span></a>
+        </div>
+        <div class="cancelBox1_cont">
+            <div class="cancelBox1_cont_tips">&nbsp;&nbsp;<?echo $cancle_order_data['message'];?></div>
+        </div>
     </div>
-    <div class="cancelBox1_cont">
-        <div class="cancelBox1_cont_tips">&nbsp;&nbsp;<?echo $cancle_order_data['message'];?></div>
+<?}?>
+
+<!-- 申请退款点击后弹窗 -->
+<div class="applyRefund hide">
+    <div class="applyRefund_title">
+        <div class="applyRefund_title_left">已支付订单</div>
+        <span class="applyRefund_title_right"></span>
+    </div>
+
+    <div class="applyRefund_cont">
+        <div class="applyRefund_cont_tips">&nbsp;&nbsp;是否申请退款?</div>
+        <button class="applyRefund_sure">确认</button>
+        <!--			<a href="--><?//=$nowUrl?><!----><?//=$flagch?><!--"><button class="applyRefund_sure">确认</button></a>-->
+        <button class="applyRefund_cancel">取消</button>
     </div>
 </div>
+
+<!-- 确认会团点击后弹窗 -->
+<div class="querenhuituan hide">
+    <div class="querenhuituan_title">
+        <div class="querenhuituan_title_left">已支付订单</div>
+        <span class="querenhuituan_title_right"></span>
+    </div>
+
+    <div class="querenhuituan_cont">
+        <div class="querenhuituan_cont_tips">&nbsp;&nbsp;是否确认会团?</div>
+        <button class="querenhuituan_sure">确认</button>
+        <!--			<a href="--><?//=$nowUrl?><!----><?//=$flagch?><!--"><button class="applyRefund_sure">确认</button></a>-->
+        <button class="querenhuituan_cancel">取消</button>
+    </div>
+</div>
+
+<!-- 确认会团成功或失败弹窗 -->
+<?if(!empty($cancle_orderx)){ ?>
+    <div class="querenhuituan1">
+        <div class="querenhuituan1_title">
+            <div class="querenhuituan1_title_left">bus365提示您</div>
+            <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html"><span class="querenhuituan1_title_right"></span></a>
+        </div>
+        <div class="querenhuituan1_cont">
+            <div class="querenhuituan1_cont_tips">&nbsp;&nbsp;<?echo $cancle_order_data['message'];?></div>
+        </div>
+    </div>
 <?}?>
 
 <!--  foot  start -->

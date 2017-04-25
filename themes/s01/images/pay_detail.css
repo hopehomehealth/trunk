@@ -70,15 +70,6 @@
 .refundInfo_close{float: right;background: url("../images/close.png") no-repeat center center;width: 60px;height: 60px;position: absolute;right: 0;top:0;cursor: pointer;}
 .refundInfoCont{width: 778px;border:solid 1px #ddd;height: 356px;line-height:24px;padding:10px;font-size: 13px;color: #666;overflow-y: scroll;letter-spacing: 1px;}
 
-.applyRefund{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-110px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;}
-.applyRefund_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
-.applyRefund_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
-.applyRefund_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
-
-.applyRefund_cont{width: 544px;height: 150px;overflow: hidden;}
-.applyRefund_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/refund_tips.jpg") no-repeat left center;font-size: 20px;color: #333;}
-.applyRefund_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
-.applyRefund_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
 
 .cancelBox{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
 .cancelBox_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
@@ -97,3 +88,35 @@
 
 .cancelBox1_cont{width: 544px;height: 150px;overflow: hidden;}
 .cancelBox1_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}
+
+
+.applyRefund{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.applyRefund_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.applyRefund_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.applyRefund_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.applyRefund_cont{width: 544px;height: 150px;overflow: hidden;}
+.applyRefund_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/refund_tips.jpg") no-repeat left center;font-size: 20px;color: #333;}
+.applyRefund_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
+.applyRefund_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
+
+/*确认会团*/
+.querenhuituan{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.querenhuituan_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.querenhuituan_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.querenhuituan_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.querenhuituan_cont{width: 544px;height: 150px;overflow: hidden;}
+.querenhuituan_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/refund_tips.jpg") no-repeat left center;font-size: 20px;color: #333;}
+.querenhuituan_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
+.querenhuituan_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
+
+
+.querenhuituan1{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.querenhuituan1_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
+.querenhuituan1_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
+.querenhuituan1_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
+
+.querenhuituan1_cont{width: 544px;height: 150px;overflow: hidden;}
+.querenhuituan1_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}
+
