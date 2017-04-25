@@ -1,5 +1,8 @@
 <?
 //$db->check_cookie($loginUrl, $host);
+//获取套餐信息
+$taocan = array_iconv(json_decode($db->api_post($host."/travel/interface/zby/v3.2/getZbyPackageByPackageId_v3.2",$post),true),'utf-8','gbk');
+
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
 $is_package = req('is_package');
@@ -19,10 +22,10 @@ if($flag == 'check'){
     $post['emergencyMobile'] = req('emergencyMobile');
     $post['userType'] = req('userType');
     //游玩人数量判断  
-    if(req('traveller_name')=='TRAV_NUM_ONE'){
+    if($taocan['traveller_name']=='TRAV_NUM_ONE'){
         $num = 1;
-    }elseif (req('traveller_name') == 'TRAV_NUM_ALL'){
-        $num = req('adultNum')+req('childNum');
+    }elseif ($taocan['traveller_name'] == 'TRAV_NUM_ALL'){
+        $num = $taocan['adultNum']+$taocan['childNum'];
     }else{
         $num = 0;
     }
@@ -83,7 +86,7 @@ if($flag == 'check'){
 
 }*/
 
-function get_product_detail()
+/*function get_product_detail()
 {
     global $host;
     $post['token'] = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
@@ -94,6 +97,5 @@ function get_product_detail()
     $product_detail = json_decode($product_detail, true);
     $product_detail = array_iconv($product_detail);
     return $product_detail;
-}
-$num = 2;
+}*/
 ?>
