@@ -18,7 +18,6 @@ $data = curl_exec($ch);
 curl_close($ch);
 $arr = json_decode($data, true);
 $datas = $arr['data'];
-
 echo "<ul class=\"byPart_title\">
     <li class=\"product_name\">套餐名称</li>
     <li class=\"hotel_contain\">包含酒店</li>
@@ -28,16 +27,21 @@ echo "<ul class=\"byPart_title\">
     <li class=\"product_select\">选择</li>
 </ul>";
 
-foreach ($datas['list'] as $val) {
-    $packageId =to_gbk($val['packageId']);
-    $packageName =to_gbk($val['packageName']);
-    $hotelName =to_gbk($val['hotelList']['0']['hotelName']);
-    $ticketName =to_gbk($val['ticketList']['0']['ticketName']);
-    $lvStock =to_gbk($val['skuList']['0']['lvStock']);
-    $adultPrice =to_gbk($val['adultPrice']);
-    $isPackage =to_gbk($val['isPackage']);
+foreach ($datas['list'] as $key => $val) {
+//    echo "<pre>";
+//    echo var_dump($val);
+    $packageId =to_gbk($val['packageId']);//套餐ID
+    $packageName =to_gbk($val['packageName']);//套餐名
+    $hotelName =to_gbk($val['hotelList']['0']['hotelName']);//酒店名
+    $ticketName =to_gbk($val['ticketList']['0']['ticketName']);//门票名
+    $lvStock =to_gbk($val['skuList']['0']['lvStock']);//库存
+    $changeRuler =to_gbk($val['skuList']['0']['changeRuler']);//退改规则
+    $adultPrice =to_gbk($val['skuList']['0']['adultPrice']);
+    $kidPrice =to_gbk($val['skuList']['0']['kidPrice']);
+    $isPackage =to_gbk($val['isPackage']);//true是按份
     $min =to_gbk($val['min']);
     $max =to_gbk($val['max']);
+    $roomMax =to_gbk($val['roomMax']);//最大房间数
     echo "<div class=\"byPart_cont\">
         <ul>
             <li class=\"product_name1\">$packageId<br>$packageName</li>
@@ -45,12 +49,15 @@ foreach ($datas['list'] as $val) {
             <li class=\"ticket_contain1\">$ticketName<br>西湖风景区</li>
             <li class=\"product_mounts1\">充足</li>
             <li class=\"product_price1\"><b>&yen;$adultPrice</b>/份</li>
-            <li class=\"product_select1 select_selected\">
+            <li class=\"product_select1\">
                 <span></span>
                 <input type='hidden' value='$packageId'>
                 <input type='hidden' value='$isPackage'>
                 <input type='hidden' value='$min'>
                 <input type='hidden' value='$max'>
+                <input type='hidden' value='$roomMax'>
+                <input type='hidden' value='$adultPrice'>
+                <input type='hidden' value='$kidPrice'>
             </li>
         </ul>
         <div class=\"hide_content\">
@@ -63,10 +70,15 @@ foreach ($datas['list'] as $val) {
             包含：东方明珠门票两张，迪士尼小镇、宝藏湾风暴来临；杰克船长之惊天特技大冒险（现场娱乐演出，舞台表演，室内娱乐）<i></i>
         </div>
         <div class=\"change_rule_tips\">
-            如需取消、修改订单，请在2017-04-24 12:00前申请退款，过期扣除套餐全部费用。若您的旅程尚未确定，建议购买取消险。<i></i>
+            $changeRuler<i></i>
         </div>
-       <div class=\"change_rule\">退改规则</div>
-       <div class='fangcha' style='float: right'>3213</div>
+       <div class=\"fcj_box\">
+                 <div class=\"change_rule\">退改规则</div>
+
+                <div class=\"fangchajia\">
+                    
+                </div>
+            </div>
     </div>";
 }
 

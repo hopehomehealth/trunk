@@ -24,19 +24,19 @@ $data = curl_exec($ch);
 curl_close($ch);
 $arr = json_decode($data, true);
 $datass = $arr['data'];
-$adultmin = strval($datass['0']);
-$adultmax = strval($datass['1']);
+$adultmin = $datass['0'];
+$adultmax = $datass['1'];
 
-if($isPackage == 'true'){
+if($post['isPackage'] == 'true'){
     echo "<span class='fenshu'>
             <label for=\"\">购买份数:</label>
-            <select>";
+            <select onChange=\"count_price()\">";
             for ($i = $adultmin; $i <= $adultmax; $i++) {
                 echo "<option value=\"$i\">$i</option>";
             }
             echo"</select>
             <label for=\"\">其中包含:</label>
-            <span style=\"display: inline-block;padding:0 5px;background-color: #fff;\">成人：2/儿童：1</span>
+            成人：2 / 儿童：1
 
             <a href=\"javascript:void(0);\" class=\"qijia\" style=\"\">起价说明</a>
             <div class=\"qijia_tips\">
@@ -46,7 +46,8 @@ if($isPackage == 'true'){
 } else {
     echo "<span class='renshu'>
             <label for=\"\">成人</label>
-            <select name=\"adult_num\" id=\"adult_num\" style=\"width:60px\" onChange=\"count_price()\">";
+            <select name=\"adult_num\" id=\"adult_num\" style=\"width:60px\" onChange=\"count_price()\">
+            <option value=\"0\">0</option>";
                  for ($i = $adultmin; $i <= $adultmax; $i++) {
     echo "<option value=\"$i\">$i</option>";
  }
