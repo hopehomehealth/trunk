@@ -9,12 +9,12 @@
             <a href="http://www.moc.gov.cn/"><img src="/themes/s01/images/foot_4.png"></a>
         </div>
         <div class="foot2">
-            <a href="<?=$g_bus365_domain?>/ourdeclare" target="_blank" title="网站声明">网站声明</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/media" target="_blank" title="媒体报道">媒体报道</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/hunt" target="_blank" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/about" target="_blank" title="关于Bus365">关于Bus365</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/contactour" target="_blank" title="联系我们">联系我们</a>&nbsp;|&nbsp;
-            <a href="<?=$g_bus365_domain?>/friendLink" target="_blank" title="友情链接">友情链接</a>&nbsp;|&nbsp;
+            <a href="<?=$g_bus365_domain?>/ourdeclare" target="_blank" title="网站声明">网站声明</a>|
+            <a href="<?=$g_bus365_domain?>/media" target="_blank" title="媒体报道">媒体报道</a>|
+            <a href="<?=$g_bus365_domain?>/hunt" target="_blank" title="诚聘英才">诚聘英才</a>|
+            <a href="<?=$g_bus365_domain?>/about" target="_blank" title="关于Bus365">关于Bus365</a>|
+            <a href="<?=$g_bus365_domain?>/contactour" target="_blank" title="联系我们">联系我们</a>|
+            <a href="<?=$g_bus365_domain?>/friendLink" target="_blank" title="友情链接">友情链接</a>|
             <a href="<?=$g_bus365_domain?>/sitemap" target="_blank" title="网站地图">网站地图</a>
         </div>
         <div class="foot3">
@@ -66,7 +66,7 @@
             </dl>
         </div>
         <div class="foot4">
-            <a style="color: #666;" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802021288">&nbsp;&nbsp;京公网安备&nbsp;&nbsp;11010802021288&nbsp;|&nbsp;</a>&nbsp;Copyright?&nbsp;&nbsp;2013-2020&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;经营许可证编号：京ICP证160290号 
+            <a style="color: #666;" target="_blank"  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802021288">&nbsp;<img style="vertical-align:middle;" src="/themes/s01/images/china_flag.png">&nbsp;京公网安备&nbsp;&nbsp;11010802021288&nbsp;|&nbsp;</a>&nbsp;Copyright&copy;&nbsp;&nbsp;2013-2020&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;经营许可证编号：京ICP证160290号
         </div>
         <div class="foot5">
             北京盛威时代科技有限公司   电话:010-58858850  地址:北京市海淀区上地东路一号盈创动力大厦E座西区7层<br>旅行社业务许可证：L-BJ-CJ00419
@@ -87,7 +87,7 @@
 <?
 //与bus365跳转页面
 $back_url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"'); 
+header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
 $encrypted = $db->encrypt($back_url);
 setcookie( MD5("backurl"),  $encrypted,  time() + 3600,  "/",'bus365.cn');
 ?>
