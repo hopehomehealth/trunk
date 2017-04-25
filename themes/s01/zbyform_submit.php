@@ -165,6 +165,8 @@ if(!defined('IN_CLOOTA')) {
                         </ul>
                     </div>
                 </div>
+                <!-- 如果需要填写游玩人 -->
+                <?if($traveller_name == 'TRAV_NUM_ONE' || $traveller_name == 'TRAV_NUM_ALL'){ ?>
                 <? for($i=0;$i<$num;$i++){ ?>
                 <div class="zbyOrder_main2_youwan">
                     <div class="zbyOrder_main2_youwanLeft">游玩人1</div>
@@ -180,16 +182,27 @@ if(!defined('IN_CLOOTA')) {
                                 <input type="text" name="mobile_<?=$i?>" autocomplete="off" id="youwan_userPhone_<?=$i?>">
                                 <span class="youwan_phoneTips_<?=$i?>"></span>
                             </li>
+                            <script type="text/javascript">
+
+                            </script>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
                                 <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="">
                                 <span class="youwan_emailTips_<?=$i?>"></span>
                             </li>
+                            <script type="text/javascript">
+                                
+                            </script>
+
                             <li>
                                 <label><b>＊</b>英文名</label>
                                 <input type="text" name="enName_<?=$i?>" autocomplete="off" id="youwan_enName_<?=$i?>">
                                 <span class="youwan_enNameTips_<?=$i?>"></span>
                             </li>
+                            <script type="text/javascript">
+                                
+                            </script>
+
                             <li>
                                     <label><b>＊</b>人群：</label>
                                     <select name="personType_<?=$i?>">
@@ -203,6 +216,10 @@ if(!defined('IN_CLOOTA')) {
                                     </select>
 
                             </li>
+                            <script type="text/javascript">
+                                
+                            </script>
+
                             <li>
                                 <label><b>＊</b>证件类型：</label>
                                 <select style="width: 138px;">
@@ -211,10 +228,18 @@ if(!defined('IN_CLOOTA')) {
                                 <input type="text" name="credentials_<?=$i?>" autocomplete="off"  id="youwan_userIdcard_<?=$i?>">
                                 <span class="youwan_idTips_<?=$i?>"></span>
                             </li>
+                            <script type="text/javascript">
+                                
+                            </script>
+
                             <li>
                                 <label><b>＊</b>生日</label>
                                 <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_userName"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"></span>
                             </li>
+                            <script type="text/javascript">
+                                
+                            </script>
+
                         </ul>
                     </div>
                     <script type="text/javascript">
@@ -283,6 +308,9 @@ if(!defined('IN_CLOOTA')) {
                     </script>
                 </div>
                 <?}?>
+                <?}?>
+                <!-- 游玩人结束 -->
+                <?if($emergency == 'true'){?>
                 <div class="zbyOrder_main2_youwan">
                     <div class="zbyOrder_main2_youwanLeft">紧急联系人</div>
                     <div class="zbyOrder_main2_youwanRight">
@@ -300,24 +328,10 @@ if(!defined('IN_CLOOTA')) {
                         </ul>
                     </div>
                 </div>
+                <?}?>
             </div>
-        <input type="hidden" name="goodsId" value="">
-        <input type="hidden" name="lvProductId" value="">
-        <input type="hidden" name="packageId" value="">
-        <input type="hidden" name="departdate" value="">
-        <input type="hidden" name="payPrice" value="">
-        <input type="hidden" name="packageNum" value="">
-        <input type="hidden" name="adultNum" value="">
-        <input type="hidden" name="childNum" value="">
-        <input type="hidden" name="roomCount" value="">
+        
         </form>
-
-        <?
-        if (notnull($check_form_data)){
-            $js = "<script>document.getElementById('onlineForm').submit();</script>";
-            echo $js;
-        }
-        ?>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
                     <div class="zbyOrder_main31_left">应付总价：￥440<?//echo $pay_price;?></div>
@@ -335,18 +349,6 @@ if(!defined('IN_CLOOTA')) {
                     温馨提示：请您仔细阅读预订须知及旅游合同条款，订单提交后，视为您同意以下各项条款内容
                 </div>
             </div>
-        <div class="zbyOrder_main4">
-            <div class="zbyOrder_main4_title">预订须知</div>
-                <div class="zbyOrder_main4_cont">
-                <span>费用包含</span>
-                <dl>
-                <dt>套餐1:经典双人套餐</dt>
-                <dd>【玩】：宋城景区+千古情演出贵宾席门票2张</dd>
-                <dd>【住】：宋城千古情主题酒店大/双床房</dd>
-                <dd>【吃】：中式自助早2份</dd>
-                </dl>
-            </div>
-        </div>
     </div>
 </div>
 <!-- </form> -->
@@ -358,32 +360,7 @@ if(!defined('IN_CLOOTA')) {
 <script type="text/javascript" src="/themes/s01/js/jquery.js"></script>
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
 <script type="text/javascript">
-/*$(document).ready(function(){
 
-	var adds = $('.add');
-	for (var i = 0; i < adds.length; i++) {
-		adds[i].index = i;
-		adds[i].onclick = function(){
-			var count1 = $('.counts').eq(this.index).html();
-			count1++;
-			$('.counts').eq(this.index).html(count1);
-
-		};
-	}
-	var subtracts = $('.subtract');
-	for (var i = 0; i < subtracts.length; i++) {
-		subtracts[i].index = i;
-		subtracts[i].onclick = function(){
-			var count1 = $('.counts').eq(this.index).html();
-			if(count1!=1){
-				count1--;
-				$('.counts').eq(this.index).html(count1);
-			}
-		};
-	}
-
-
-});*/
 
 //表单合发性验证
 var reg1 = /^([\u4e00-\u9fa5]){2,6}$/;//匹配中文
@@ -449,14 +426,7 @@ function check_form(){
     // alert(buyerName_flag+'----'+buyerPhone_flag+'----'+youwanName_flag+'----'+youwanPhone_flag+'----'+youwanIdNum_flag);
         document.getElementById("write_form").submit();
     }
-    
-//    var url="";
-//  url = "/member/?cmd=<?//=base64_encode('zhifu.php')?>//&goodsId=<?//echo $goods_id;?>//&userId=<?//echo $user_id;?>//&kidNum=<?php //echo $kid_num;?>//&adultNum=<?php //echo $adult_num;?>//&payPrice=<?//echo $pay_price;?>//&departdate=<?//echo $departdate;?>//";
-//    url += "&linker="+$('#linker').val();
-//    url += "&mobile="+$('#mobile').val();
-////    url = "/member/?cmd='zhifu.php'";
-//    window.top.location.href = url;
-    //document.getElementById("write_form").submit();
+
 }
 
 
