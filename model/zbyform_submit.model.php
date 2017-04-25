@@ -45,7 +45,7 @@ if($flag == 'check'){
         $travellerLis[$i] = array_filter($travellerLis[$i]);
     }
     $post['travellerLis'] = $travellerLis;
-    if(req('is_package') == 'true'){//按份卖
+    if($taocan['is_package'] == 'true'){//按份卖
         $post['packageNum'] = req('packageNum');
      }else{//按人卖
         $post['adultNum'] = req('adultNum');
