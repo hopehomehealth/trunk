@@ -1,30 +1,63 @@
 <?
-$db->check_cookie($loginUrl, $host);
-//获取上一页值
-$goods_type = req('goods_type');
-$goods_id = req('goods_id');
-$adult_num = req('adult_num');
-$kid_num = req('kid_num');
-$departdate = req('departdate');
-//$departdate1 = substr($departdate,0,4).'-'.substr($departdate,4,2).'-'.substr($departdate,6,2);
-$departdate1 = date('Y-m-d',strtotime($departdate));
-$linker = req('linker');
-$linker = iconv('GBK', 'UTF-8', $linker); //将字符串的编码从GB2312转到UTF-8
-$goods_name = req('goods_name');
-//$pay_price = req('payPrice');
-$pay_price = 0.01;
-$mobile = req('mobile');
-$user_id = req('user_id');
+//$db->check_cookie($loginUrl, $host);
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
-
-
+//判断按人安份
+$is_package = req('is_package');
+//生成订单
 $flag = req('flag');
-$touristList = '[{"userIdcard":"211481198401154411","userName":"wangge","userPhone":"18841184568"},{"userIdcard":"211481198401154411","userName":"laozhao","userPhone":"18242984568"}]';
+if($flag == 'check'){
+    $post['token'] = $token;
+    $post['id'] = $realid;
+    $post['lvProductId'] = req('lvProductId');
+    $post['packageId'] = req('packageId');
+    $post['departdate'] = req('departdate');
+    $post['payPrice'] = req('payPrice');
+    $post['bookerName'] = req('bookerName');
+    $post['bookerMobile'] = req('bookerMobile');
+    $post['bookerEmail'] = req('bookerEmail');
+    $post['emergencyName'] = req('emergencyName');
+    $post['emergencyMobile'] = req('emergencyMobile');
+    $post['userType'] = req('userType');
+    //游玩人数量判断  
+    if(req('traveller_name')=='TRAV_NUM_ONE'){
+        $num = 1;
+    }elseif (req('traveller_name') == 'TRAV_NUM_ALL'){
+        $num = req('adultNum')+req('childNum');
+    }else{
+        $num = 0;
+    }
+    //游玩人数组处理
+    
+    for($i=0;$i<$num;$i++){
+        $travellerLis[$i]['name'] = req('name_'.$i);
+        $travellerLis[$i]['enName'] = req('enName_'.$i);
+        $travellerLis[$i]['personType'] = req('personType_'.$i);
+        $travellerLis[$i]['mobile'] = req('mobile_'.$i);
+        $travellerLis[$i]['email'] = req('email_'.$i);
+        $travellerLis[$i]['credentials'] = req('credentials_'.$i);
+        $travellerLis[$i]['credentialsType'] = 'ID_CARD';
+        $travellerLis[$i]['gender'] = req('gender_'.$i);
+        $travellerLis[$i]['birthday'] = req('birthday_'.$i);
+        //去除空值
+        $travellerLis[$i] = array_filter($travellerLis[$i]);
+    }
+    $post['travellerLis'] = $travellerLis;
+    if(req('is_package') == 'true'){//按份卖
+        $post['packageNum'] = req('packageNum');
+     }else{//按人卖
+        $post['adultNum'] = req('adultNum');
+        $post['childNum'] = req('childNum');
+        $post['roomCount'] = req('roomCount');
+     }
+     $post = array_filter($post);
+     $dingdan = array_iconv(json_decode($db->api_post($host."/travel/interface/zbyV3.2/saveZbyOrderV_3.2",$post),true),'utf-8','gbk');
+}
 
-$post = array('token' => $token, 'goodsId' => $goods_id, 'departdate' => $departdate1, 'adultNum' => $adult_num, 'kidNum' => $kid_num, 'payPrice' => $pay_price, 'linker' => $linker, 'mobile' => $mobile, 'userId' => '', 'touristList' => $touristList);
 
 
-//校验订单
+
+
+/*//校验订单
 
 
 if($flag == 'check'){
@@ -48,7 +81,7 @@ if($flag == 'check'){
 //    $js = "<script>window.location.href='/zhoubianyou/zbyonline_pay-".$goodsName."-".$payPrice."-".$orderCode.".html?time=$payTime'; </script>";
 //    echo $js;
 
-}
+}*/
 
 function get_product_detail()
 {
@@ -62,9 +95,5 @@ function get_product_detail()
     $product_detail = array_iconv($product_detail);
     return $product_detail;
 }
-$product_detail = get_product_detail();
-$product_detail_data = $product_detail['data'];
-
-
-
+$num = 2;
 ?>
