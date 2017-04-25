@@ -18,6 +18,7 @@ if(!empty($_COOKIE['5fe845d7c136951446ff6a80b8144467'])){
         $host_user = "$host/auth/userdetail?usertoken=".$token['token2'];
         $bus365_user = array_iconv(json_decode(file_get_contents("http://$host/auth/userdetail?usertoken=".$token['token2']),true),'utf-8','gbk');
         $realname = $bus365_user['realname'];
+        $realid = $bus365_user['id'];
     }
 }else{
     $check = '';
