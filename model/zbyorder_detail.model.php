@@ -1,5 +1,5 @@
 <?
-//$db->check_cookie($loginUrl, $host);
+$db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
 //退款产品信息检验
 $post['orderCode'] = $orderCode;
@@ -16,7 +16,7 @@ function get_order_detail()
     global $host;
     $post['orderCode'] = req('orderCode');
     $post['token'] = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
-    $order_detail = juhecurl($host . "/travel/interface/zby/getZbyOrderDetail", $post, 1);
+    $order_detail = juhecurl($host . "/travel/interface/zby/v3.2/getZbyOrderDtail_v3.2", $post, 1);
     $order_detail = json_decode($order_detail, true);
     $order_detail = array_iconv($order_detail);
 //    if ($order_detail['status'] != '0000') {

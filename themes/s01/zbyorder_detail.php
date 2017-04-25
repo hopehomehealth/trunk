@@ -78,7 +78,11 @@ if (!defined('IN_CLOOTA')) {
                         <thead>
                         <tr>
                             <th>产品名称</th>
+                            <?if($order_detail_data['isPackage'] == 'false'){ ?>
                             <th>人数</th>
+                            <? }else if($order_detail_data['isPackage'] == 'true') { ?>
+                            <th>份数</th>
+                            <? } ?>
                             <th>游玩日期</th>
                             <th>现售价</th>
                             <th>小计</th>
@@ -86,6 +90,7 @@ if (!defined('IN_CLOOTA')) {
                         </thead>
                         <tbody>
 
+                        <?if($order_detail_data['isPackage'] == 'false'){ ?>
                         <tr>
                             <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
                             <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?></td>
@@ -100,7 +105,13 @@ if (!defined('IN_CLOOTA')) {
                             <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
                             <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
                         </tr>
-
+                        <? }else if($order_detail_data['isPackage'] == 'true') { ?>
+                        <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                        <td class="productOther"><? echo $order_detail_data['num']; ?></td>
+                        <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
+                        <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
+                        <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
+                        <? } ?>
                         </tbody>
                     </table>
 
