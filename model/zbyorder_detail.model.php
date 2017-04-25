@@ -1,5 +1,5 @@
 <?
-$db->check_cookie($loginUrl, $host);
+//$db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
 //退款产品信息检验
 $post['orderCode'] = $orderCode;
@@ -24,6 +24,7 @@ function get_order_detail()
 //    }
     return $order_detail;
 }
+
 $order_detail = get_order_detail();
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
