@@ -2691,7 +2691,36 @@ a:hover .ico-shopping {
 	padding:10px 0;
 	cursor: pointer;
 	position: relative;
+	float: left;
 }
+
+.fcj_box{
+	width: 100%;
+	height: 36px;
+}
+.fangchajia{
+	float: right;
+	width:auto;
+	position: ;
+	height: 36px;
+	line-height: 36px;
+}
+.fangchajia select{
+	display: inline-block;
+	width: 60px;
+	height: 20px;
+	border:solid 1px #ebebeb;
+	margin:0 30px;
+}
+.fangchajia span{
+	display: inline-block;
+}
+.fangchajia span.jiage{
+	color: #f55f38;
+	font-weight: bold;
+}
+
+
 .product_name_tips{
 	display: none;
 	width: auto;

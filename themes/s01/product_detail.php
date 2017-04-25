@@ -281,12 +281,10 @@
                     </div>
                 </div>
             </div>
-<!--            按人或按份-->
+            <!--            按人或按份-->
             <span class="number">
 
             </span>
-
-
 
 
             <div class="form-btn">
@@ -323,7 +321,7 @@
 
     <!-- 详情页按份分与按人分 -->
     <div class="detail_byPart">
-        
+
     </div>
 
     <!--  <div class="detail_byPerson">
@@ -692,13 +690,18 @@
         window.top.location.href = url;
     }
 </script>
-<script type="text/javascript">
 
-</script>
 <script type="text/javascript">
+    var isPackage = '';
+    var roomMax = '';
+    var adultPrice = '';
+    var adultNum = '';
+    var kidPrice = '';
+    var kidNum = '';
+    var fangchaPrice = '';
+    var fangchaNum = '';
     $(document).ready(function () {
         change_calendar(<?=date("'Y','m'")?>);
-
 //                            $('#startDate').focus(function () {
 //                                $('#v_calendar1').show();
 //                            });
@@ -725,13 +728,6 @@
         $('.date_blue').click(function () {
             if ($(this).find('.date_yen').eq(0).html() != "") {
                 $('#startDate').val(yyyy + '-' + mm + '-' + $(this).html().split("<br>")[0]);
-//                var $price1 = $(this).find('.date_yen').eq(0).html().split('</span>')[1].slice(1).split('/人')[0];
-//                                        $('#zongjia').val($price1);
-//                                        singlePrice = $('#zongjia').val();
-//                                        $('.danjia').html("&yen;" + $price1);
-//                                        $('.danjia1').html($('.counts').html() + "x &yen;" + $price1);
-//                                        $('.totalPrice').html($('.counts').html() * $price1);
-//                                        $("#danjias").val(singlePrice);
                 $('#v_calendar1').hide();
                 var departDate = $('#startDate').val();
                 var goodsId = <?= $goodsId ?>;
@@ -810,7 +806,8 @@
                                 });
                                 $('.change_rule_tips').eq($(this).attr('index')).hide();
                             });
-                        };
+                        }
+                        ;
                         //包含门票hover
                         for (var i = 0; i < $('.ticket_contain1').length; i++) {
                             $('.ticket_contain1').eq(i).attr("index", i);
@@ -835,21 +832,31 @@
                                 });
                                 $('.ticket_contain_tips').eq($(this).attr('index')).hide();
                             });
-                        };
+                        }
+                        ;
                         //套餐选择按钮
                         for (var i = 0; i < $('.product_select1').length; i++) {
                             $('.product_select1').eq(i).click(function () {
                                 $('.product_select1').removeClass('select_selected');
                                 $(this).addClass("select_selected");
                                 var packageId = $(this).find("input").eq(0).val();
-                                var isPackage = $(this).find("input").eq(1).val();
+                                isPackage = $(this).find("input").eq(1).val();
                                 var min = $(this).find("input").eq(2).val();
                                 var max = $(this).find("input").eq(3).val();
-//                                alert(departDate);
+                                roomMax = $(this).find("input").eq(4).val();
+                                adultPrice = $(this).find("input").eq(5).val();
+                                kidPrice = $(this).find("input").eq(6).val();
                                 $.ajax({
                                     type: "POST",
                                     url: "/model/get_number.model.php",
-                                    data: {"goodsId": goodsId, "departDate": departDate, "packageId": packageId, "isPackage": isPackage, "min": min, "max": max},
+                                    data: {
+                                        "goodsId": goodsId,
+                                        "departDate": departDate,
+                                        "packageId": packageId,
+                                        "isPackage": isPackage,
+                                        "min": min,
+                                        "max": max
+                                    },
                                     async: false,
                                     success: function (data) {
                                         $('.number').html("");
@@ -890,37 +897,7 @@
                                         }, function () {
                                             $('.child_tips').hide();
                                         });
-                                        function getNum(text) {
-                                            var value = text.replace(/[^0-9]/ig, "");
-                                            value = value.substring(1);
-                                            return value;
-                                        }
-                                        function count_price() {
-                                            var adultNum = $('#adult_num').val();
-                                            alert(adultNum);
-                                            var v_url = "";
-                                            v_url = "/member/ajax.price.php?rnd=" + Math.random();
-                                            v_url += "&adultNum=" + adultNum;
-                                            v_url += "&roomMax=" + max;
-                                            v_url += "&goodsType=" + <?= $data['goodsType']?>;
-                                            v_url += "&isPackage=" + isPackage;
 
-                                            if ($('#departdate').val() != '') {
-                                                var html_list = $.ajax({url: v_url + "&ac=list", async: false});
-                                                $("#sum_result").html(html_list.responseText);
-
-                                                var html_count = $.ajax({url: v_url + "&ac=count", async: false});
-                                                $("#count_result").html(html_count.responseText);
-                                                var str1 = $("#count_result").html();
-                                                //alert(str1);
-                                                var str2 = getNum(str1);
-                                                //alert(str2);
-                                                $("#payPrice").val(str2);
-                                            } else {
-                                                $("#sum_result").html('');
-                                                $("#count_result").html('');
-                                            }
-                                        }
 
                                     }
                                 });
@@ -935,7 +912,48 @@
     }
 
 </script>
+<script type="text/javascript">
+    function getNum(text) {
+        var value = text.replace(/[^0-9]/ig, "");
+        value = value.substring(1);
+        return value;
+    }
+    ;
 
+    function count_price() {
+        adultNum = $('#adult_num').val();
+        kidNum = $('#kid_num').val();
+        var goodsType = "<?= $data['goodsType']?>";
+        if (isPackage != '') {
+            $.ajax({
+                type: "POST",
+                url: "/member/ajax.price.php",
+                data: {
+                    "adultNum": adultNum,
+                    "roomMax": roomMax,
+                    "goodsType": goodsType,
+                    "isPackage": isPackage
+                },
+                async: false,
+                success: function (data) {
+                    $('.fangchajia').html("");
+                    $('.fangchajia').html(data);
+                    $('.fangchajia').show();
+                }
+            });
+        }
+        var zongjia = adultPrice*adultNum + kidPrice*kidNum;
+        $("#count_result").html(zongjia);
+        //                var $price1 = $(this).find('.date_yen').eq(0).html().split('</span>')[1].slice(1).split('/人')[0];
+//                                        $('#zongjia').val($price1);
+//                                        singlePrice = $('#zongjia').val();
+//                                        $('.danjia').html("&yen;" + $price1);
+//                                        $('.danjia1').html($('.counts').html() + "x &yen;" + $price1);
+//                                        $('.totalPrice').html($('.counts').html() * $price1);
+//                                        $("#danjias").val(singlePrice);
+    }
+    ;
+</script>
 <script>
     seajs.use(["freeproduct", 'comment', 'yoslide'], function (product, comment, yoslide) {
         $(function () {
