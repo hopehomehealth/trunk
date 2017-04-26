@@ -7,7 +7,8 @@ $post['adultNum'] = $_POST['adultNum'];
 $post['roomMax'] = $_POST['roomMax'];
 $post['goodsType'] = $_POST['goodsType'];
 $post['isPackage'] = $_POST['isPackage'];
-$url = "wwwd.bus365.cn" . "/travel/interface/zbyV3.2/getDiffRoomNumV_3.2";
+$diffPrice = $_POST['diffPrice'];
+$url = "wwwd.bus365.cn" . "/travel/interface/zby/v3.2/getDiffRoomNum_v3.2";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -19,10 +20,10 @@ curl_close($ch);
 $arr = json_decode($data, true);
 $fangcha = $arr['data'];
 
-echo "<span>购买房差价</span>
-                    <select>";
+echo "<span>房差</span>
+                    <select id='diffPrice' onchange='get_price()'>
+                    ";
 foreach ($fangcha as $key => $val) {
     echo "<option value='$val'>$val</option>";
 }
-echo "</select>
-                    <span class=\"jiage\">+ &yen;80</span>";
+echo "</select><span class=\"jiage\"> &yen;$diffPrice/ 份</span>";
