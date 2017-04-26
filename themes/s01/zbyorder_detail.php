@@ -271,7 +271,12 @@ if (!defined('IN_CLOOTA')) {
         $(".refundInfo").hide();
     });
     // 关闭是否退款对话框
-    $('.applyRefund_title_right').click(function () {
+    $('.applyRefund_title_right').click(function(){
+        $("#mengban").hide();
+        $(".applyRefund").hide();
+    });
+    $('.applyRefund_cancel').click(function(){
+        $("#mengban").hide();
         $(".applyRefund").hide();
     });
     function comment_commit(){
@@ -306,5 +311,37 @@ if (!defined('IN_CLOOTA')) {
         $("#mengban").hide();
         $(".cancelBox1").hide();
     });
+
+    //申请退款按钮弹框
+    for(var i=0;i<$('.applyRefundBtn').length;i++){
+        $('.applyRefundBtn').eq(i).click(function(){
+            $("#mengban").show();
+            $('.applyRefund').show();
+        });
+    }
+    //确认会团弹框
+    $('.querenhuituanbt').click(function(){
+        $("#mengban").show();
+        $('.querenhuituan').show();
+    });
+    // 关闭是否确认会团对话框
+    $('.querenhuituan_title_right').click(function(){
+        $("#mengban").hide();
+        $(".querenhuituan").hide();
+    });
+    $('.querenhuituan_cancel').click(function(){
+        $("#mengban").hide();
+        $(".querenhuituan").hide();
+    });
+    //退款请求接口
+    function refund_commit(){
+        var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=rf";
+        window.location.href = url;
+    }
+    //确认会团请求接口
+    function confirm_return(){
+        var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=cf";
+        window.location.href = url;
+    }
 </script>
 </html>

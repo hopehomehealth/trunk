@@ -71,8 +71,8 @@ if(!defined('IN_CLOOTA')) {
             </div>
             </form>
             <div class="onlinePay_main3">
-                <button onclick = "cancle_pay()" class="onlinePay_cancle">取消订单</button>
-                <button onclick = "select_pay()" class="onlinePay_payNow">立即付款</button>
+                <button  class="onlinePay_cancle">取消订单</button>
+                <button  class="onlinePay_payNow">立即付款</button>
             </div>
         </div>
     </div>
@@ -178,7 +178,7 @@ if(!defined('IN_CLOOTA')) {
         });
         //取消订单
         $('.onlinePay_cancle').click(function () {
-            window.location.href = "/zhoubianyou/zbyorder_detail-" + <?=$orderCode;?> +".html?flag=qx" ;
+            window.location.href = "/zhoubianyou/zbyorder_detail-" + <?=$orderCode;?> +".html?flag=cn" ;
         });
         //微信支付
         $('#weChatPay_close').click(function () {

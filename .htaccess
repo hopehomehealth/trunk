@@ -112,7 +112,8 @@ RewriteRule ^zhoubianyou/zbypay_jump-(.*)-(.*)-(.*).html$    index\.php?cmd=zbyp
 RewriteRule ^zhoubianyou/zbypay_success-(.*).html$    index\.php?cmd=zbypay_success&orderCode=$1 [L]
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^zhoubianyou/zbyorder_detail-(.*).html$    index\.php?cmd=zbyorder_detail&orderCode=$1&%1 [L]
-
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubianyou/zbyrefund-(.*).html$    index\.php?cmd=zbyrefund&orderCode=$1&%1 [L]
 
 
 # Õ≈π∫

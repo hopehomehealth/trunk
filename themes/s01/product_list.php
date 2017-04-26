@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/common.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/imagesst.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/list.css">
-    
+
     <style type="text/css">
         #partner_box{width: 100%;height: 200px;background-color: white;}
         #partner{width: 1190px;height:200px;margin: 0 auto;padding:15px 0;}

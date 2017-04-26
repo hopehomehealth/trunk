@@ -10,6 +10,14 @@ $refund_product = array_iconv($refund_product);
 $refund_product_data = $refund_product['data'];
 $isChange = $refund_product_data['isChange'];
 
+//确认会团
+if(req('flag') == 'cf'){
+    $confirm_return = juhecurl($host."/travel/interface/zby/confirmBackGroup",$post, 1);
+    $confirm_return = json_decode($confirm_return, true);
+    $confirm_return = array_iconv($confirm_return);
+    $confirm_return_data = $confirm_return['data'];
+}
+
 //订单详情展示
 function get_order_detail()
 {
@@ -38,7 +46,7 @@ if($_GET['flag'] == 'cn'){
     $cancle_order_data = $cancle_order['data'];
 //    echo "<pre>";
 //    var_dump($cancle_order);
-    
+
 }
 
 //按钮对应状态判断
