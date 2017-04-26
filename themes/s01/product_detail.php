@@ -323,7 +323,7 @@
 
     <!-- 详情页按份分与按人分 -->
     <div class="detail_byPart">
-        
+
     </div>
 
     <!--  <div class="detail_byPerson">

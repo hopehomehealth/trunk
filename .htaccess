@@ -97,6 +97,12 @@ RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^menpiao/ticket_comment_success-(.*).html$    index\.php?cmd=ticket_comment_success&orderCode=$1&%1 [L]
 RewriteRule ^menpiao/ticket_comment_detail-(.*).html$     index\.php?cmd=ticket_comment_detail&orderCode=$1 [L]
 
+
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubianyou/zbycomment_commit-(.*).html$     index\.php?cmd=zbycomment_commit&orderCode=$1&%1 [L]
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubianyou/zbycomment_success-(.*).html$    index\.php?cmd=zbycomment_success&orderCode=$1&%1 [L]
+RewriteRule ^zhoubianyou/zbycomment_detail-(.*).html$     index\.php?cmd=zbycomment_detail&orderCode=$1 [L]
 # 周边游详情
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^zhoubianyou/zbyform_submit-(.*).html$    index\.php?cmd=zbyform_submit&packageId=$1&%1 [L]
@@ -106,7 +112,8 @@ RewriteRule ^zhoubianyou/zbypay_jump-(.*)-(.*)-(.*).html$    index\.php?cmd=zbyp
 RewriteRule ^zhoubianyou/zbypay_success-(.*).html$    index\.php?cmd=zbypay_success&orderCode=$1 [L]
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^zhoubianyou/zbyorder_detail-(.*).html$    index\.php?cmd=zbyorder_detail&orderCode=$1&%1 [L]
-
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubianyou/zbyrefund-(.*).html$    index\.php?cmd=zbyrefund&orderCode=$1&%1 [L]
 
 
 # 团购
