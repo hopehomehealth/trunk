@@ -2,43 +2,110 @@
 <html>
 <head>
     <title>周边游【Bus365周边游】</title>
-    <?include('meta.php');?>
-    <?seo();?>
-    <?load_mobile('http://'.$g_config['mobile_domain'].'/'.$c_catalog_key.'/');?>
+    <? include('meta.php'); ?>
+    <? seo(); ?>
+    <? load_mobile('http://' . $g_config['mobile_domain'] . '/' . $c_catalog_key . '/'); ?>
 
-    <?include('static.php');?>
+    <? include('static.php'); ?>
     <script type="text/javascript" src="/themes/s01/js/jquery.js "></script>
     <script type="text/javascript" src="/themes/s01/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/common.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/imagesst.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/list.css">
-    
-    <style type="text/css">
-        #partner_box{width: 100%;height: 200px;background-color: white;}
-        #partner{width: 1190px;height:200px;margin: 0 auto;padding:15px 0;}
-        .partner_top{width: 1190px;line-height: 37px;height: 37px;}
-        .partner_title{float: left;color:#1fcc9e;font-size:24px;width: 120px;padding-left:40px;background: url("/themes/s01/images/partner_logo.jpg") no-repeat left center;}
-        .partner_border{float: left;width:1030px;height: 1px;background-color:#dedede;margin-top:18px;}
 
+    <style type="text/css">
+        #partner_box {
+            width: 100%;
+            height: 200px;
+            background-color: white;
+        }
+
+        #partner {
+            width: 1190px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 15px 0;
+        }
+
+        .partner_top {
+            width: 1190px;
+            line-height: 37px;
+            height: 37px;
+        }
+
+        .partner_title {
+            float: left;
+            color: #1fcc9e;
+            font-size: 24px;
+            width: 120px;
+            padding-left: 40px;
+            background: url("/themes/s01/images/partner_logo.jpg") no-repeat left center;
+        }
+
+        .partner_border {
+            float: left;
+            width: 1030px;
+            height: 1px;
+            background-color: #dedede;
+            margin-top: 18px;
+        }
 
         /*//分页*/
-        .spotList_main2_title{width: 900px;height:36px;}
-        .spotList_main2_title_right{float: right;width:160px;height:35px;line-height: 35px;font-size: 14px;}
-        .spotList_main2_title_right .yema{float: left;margin-right: 20px;}
-        .spotList_main2_title_right .yema b{font-style: normal;color: #fd803e;}
-        .spotList_main2_title_right span{float: left;width: 19px;height: 19px;border:solid 1px #eaeaea;margin-top:6px;margin-right: 5px;background-color: white;}
-        .leftBtn_hover{background:url("/themes/s01/images/lefttriangle1.png") no-repeat center center;}
-        .rightBtn_hover{background:url("/themes/s01/images/righttriangle1.png") no-repeat center center;}
-        .leftBtn{background:url("/themes/s01/images/lefttriangle2.png") no-repeat center center;}
-        .rightBtn{background:url("/themes/s01/images/righttriangle2.png") no-repeat center center;}
-    </style>
+        .spotList_main2_title {
+            width: 900px;
+            height: 36px;
+        }
 
+        .spotList_main2_title_right {
+            float: right;
+            width: 160px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+        }
+
+        .spotList_main2_title_right .yema {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .spotList_main2_title_right .yema b {
+            font-style: normal;
+            color: #fd803e;
+        }
+
+        .spotList_main2_title_right span {
+            float: left;
+            width: 19px;
+            height: 19px;
+            border: solid 1px #eaeaea;
+            margin-top: 6px;
+            margin-right: 5px;
+            background-color: white;
+        }
+
+        .leftBtn_hover {
+            background: url("/themes/s01/images/lefttriangle1.png") no-repeat center center;
+        }
+
+        .rightBtn_hover {
+            background: url("/themes/s01/images/righttriangle1.png") no-repeat center center;
+        }
+
+        .leftBtn {
+            background: url("/themes/s01/images/lefttriangle2.png") no-repeat center center;
+        }
+
+        .rightBtn {
+            background: url("/themes/s01/images/righttriangle2.png") no-repeat center center;
+        }
+    </style>
 
 
 </head>
 
 <body class="bodybox" onselectstart="return false">
-<?include('head.php');?>
+<? include('head.php'); ?>
 <!-- 搜索区域 start -->
 <div id="searchMainBox">
     <div id="searchMain" style="position: relative;">
@@ -51,11 +118,11 @@
                 </ul>
             </div>
             <div class="searchMain1_c">
-                <?if(!empty($Word)){?>
-                    <input type="text" name="请输入目的地/产品名称" value="<?=$keyWord?>">
-                <?}else{?>
+                <? if (!empty($Word)) { ?>
+                    <input type="text" name="请输入目的地/产品名称" value="<?= $keyWord ?>">
+                <? } else { ?>
                     <input type="text" name="请输入目的地/产品名称" placeholder="请输入目的地/产品名称">
-                <?}?>
+                <? } ?>
             </div>
             <div class="searchMain1_r"></div>
         </div>
@@ -65,44 +132,45 @@
 <!-- 搜索区域 end -->
 <script type="text/javascript">
     var currentLis = 0;
-    $('.searchMain1_c input').on('keyup',function(event){
+    $('.searchMain1_c input').on('keyup', function (event) {
         var e = event || window.event;
-        if(e.keyCode==38||e.keyCode==40||e.keyCode==13){
+        if (e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 13) {
 
-        }else{currentLis = 0;
-            if($(".searchMain1_l span").html()=='景点门票'){
-                $.post('<?=$g_self_domain?>/search/',{'value':$(this).val()},function(data){
+        } else {
+            currentLis = 0;
+            if ($(".searchMain1_l span").html() == '景点门票') {
+                $.post('<?=$g_self_domain?>/search/', {'value': $(this).val()}, function (data) {
                     // if(data=='0') $('#search_auto').html('').css('display','none');
                     // else $('#search_auto').html(data).css('display','block');
-                    if(data=='0'){
-                        $('#search_auto').html('').css('display','none');
-                    }else{
-                        $('#search_auto').html(data).css('display','block');
-                        $('#search_auto ul li').click(function(){
+                    if (data == '0') {
+                        $('#search_auto').html('').css('display', 'none');
+                    } else {
+                        $('#search_auto').html(data).css('display', 'block');
+                        $('#search_auto ul li').click(function () {
                             $('.searchMain1_c input').val($(this).html());
                             $('.search_form').remove();
                             $('body').append('<form  action="<?=$g_self_domain?>/menpiao/" method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="' + $(".searchMain1_l span").html() + '"><input type="hidden" name="keyWord" class="search_cont2" value="' + $('.searchMain1_c input').val() + '"></form>');
                             //$('.search_form').attr('action','');
                             $('.search_form').submit();
-                            $('#search_auto').html('').css('display','none');
+                            $('#search_auto').html('').css('display', 'none');
                         });
                     }
                 });
-            }else if($(".searchMain1_l span").html()=='周边游'){
-                $.post('<?=$g_self_domain?>/searcha/',{'value':$(this).val()},function(data){
+            } else if ($(".searchMain1_l span").html() == '周边游') {
+                $.post('<?=$g_self_domain?>/searcha/', {'value': $(this).val()}, function (data) {
                     // if(data=='0') $('#search_auto').html('').css('display','none');
                     // else $('#search_auto').html(data).css('display','block');
-                    if(data=='0'){
-                        $('#search_auto').html('').css('display','none');
-                    }else{
-                        $('#search_auto').html(data).css('display','block');
-                        $('#search_auto ul li').click(function(){
+                    if (data == '0') {
+                        $('#search_auto').html('').css('display', 'none');
+                    } else {
+                        $('#search_auto').html(data).css('display', 'block');
+                        $('#search_auto ul li').click(function () {
                             $('.searchMain1_c input').val($(this).html());
                             $('.search_form').remove();
                             $('body').append('<form  action="<?=$g_self_domain?>/zhoubian/  " method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="' + $(".searchMain1_l span").html() + '"><input type="hidden" name="keyWord" class="search_cont2" value="' + $('.searchMain1_c input').val() + '"></form>');
                             //$('.search_form').attr('action','http://traveld.bus365.cn/zhoubian/');
                             $('.search_form').submit();
-                            $('#search_auto').html('').css('display','none');
+                            $('#search_auto').html('').css('display', 'none');
                         });
                     }
                 });
@@ -111,60 +179,55 @@
 
     });
 
-    $('.searchMain1_c input').on('keydown',function(event) {
+    $('.searchMain1_c input').on('keydown', function (event) {
         //event.preventDefault();
         var e = event || window.event;
         var lis = $('#search_auto ul li').length;
         //alert(lis);
-        if(e.keyCode==38){//up
-            if(lis>1||lis==1&&currentLis>1){
+        if (e.keyCode == 38) {//up
+            if (lis > 1 || lis == 1 && currentLis > 1) {
                 currentLis--;
                 //$('#search_auto ul li').eq(currentLis-1).addClass('searchLi_hover').siblings('li').removeClass('searchLi_hover');
-                $('.searchMain1_c input').val($('#search_auto ul li').eq(currentLis-1).html());
-            }else if(currentLis==1){
+                $('.searchMain1_c input').val($('#search_auto ul li').eq(currentLis - 1).html());
+            } else if (currentLis == 1) {
                 return;
             }
         }
-        else if(e.keyCode==40){//down
-            if(lis>1||lis==1&&currentLis<lis){
+        else if (e.keyCode == 40) {//down
+            if (lis > 1 || lis == 1 && currentLis < lis) {
                 currentLis++;
                 //$('#search_auto ul li').eq(currentLis-1).addClass('searchLi_hover').siblings('li').removeClass('searchLi_hover');
-                $('.searchMain1_c input').val($('#search_auto ul li').eq(currentLis-1).html());
+                $('.searchMain1_c input').val($('#search_auto ul li').eq(currentLis - 1).html());
             }
         }
-        else if(e.keyCode==13){//enter
-            if($(".searchMain1_l span").html()!='' && $('.searchMain1_c input').val()!=''){
+        else if (e.keyCode == 13) {//enter
+            if ($(".searchMain1_l span").html() != '' && $('.searchMain1_c input').val() != '') {
                 //alert(2);
-                if($(".searchMain1_l span").html()=='景点门票'){
+                if ($(".searchMain1_l span").html() == '景点门票') {
                     $('.search_form').remove();
-                    $('body').append('<form  action="<?=$g_self_domain?>/menpiao/" method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="'+$(".searchMain1_l span").html()+'"><input type="hidden" name="keyWord" class="search_cont2" value="'+$('.searchMain1_c input').val()+'"></form>');
+                    $('body').append('<form  action="<?=$g_self_domain?>/menpiao/" method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="' + $(".searchMain1_l span").html() + '"><input type="hidden" name="keyWord" class="search_cont2" value="' + $('.searchMain1_c input').val() + '"></form>');
                     //$('.search_form').attr('action','');
                     $('.search_form').submit();
-                }else if($(".searchMain1_l span").html()=='周边游'){
+                } else if ($(".searchMain1_l span").html() == '周边游') {
                     $('.search_form').remove();
-                    $('body').append('<form  action="<?=$g_self_domain?>/zhoubian/  " method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="'+$(".searchMain1_l span").html()+'"><input type="hidden" name="keyWord" class="search_cont2" value="'+$('.searchMain1_c input').val()+'"></form>');
+                    $('body').append('<form  action="<?=$g_self_domain?>/zhoubian/  " method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="' + $(".searchMain1_l span").html() + '"><input type="hidden" name="keyWord" class="search_cont2" value="' + $('.searchMain1_c input').val() + '"></form>');
                     //$('.search_form').attr('action','http://traveld.bus365.cn/zhoubian/');
                     $('.search_form').submit();
                 }
 
-            };
+            }
+            ;
         }
-        $('#search_auto ul li').eq(currentLis-1).addClass('searchLi_hover').siblings('li').removeClass('searchLi_hover');
+        $('#search_auto ul li').eq(currentLis - 1).addClass('searchLi_hover').siblings('li').removeClass('searchLi_hover');
     });
 
 
-
-
-
-
-
-
-    $('.searchMain1_c input').blur(function(){
+    $('.searchMain1_c input').blur(function () {
         //if($('#search_auto').html()==''){
-        setTimeout(function(){
+        setTimeout(function () {
             //$('.searchMain1_c input').val($('#search_auto ul li').eq(0).html());
-            $('#search_auto').html('').css('display','none');
-        },200)
+            $('#search_auto').html('').css('display', 'none');
+        }, 200)
         //}
     });
 </script>
@@ -173,66 +236,73 @@
 <div class="container">
     <!--更改目的地-->
     <!-- <ul class="breadcrumbs">
-	  <li class="item"><a href="<?=$g_domain?>">首页</a> </li>
+	  <li class="item"><a href="<?= $g_domain ?>">首页</a> </li>
 	  <?
-    if($c_goods_type=='1'){
+    if ($c_goods_type == '1') {
         ?>
 	  <li class="item"><span>&gt</span><a href="/gentuan/all/">跟团游</a></li>
-	  <?}?>
+	  <? } ?>
 	  <?
-    if($c_goods_type=='2'){
+    if ($c_goods_type == '2') {
         ?>
 	  <li class="item"><span>&gt</span><a href="/ziyouxing/all/">自由行</a></li>
-	  <?}?>
+	  <? } ?>
 	  <?
-    if($c_goods_type=='3'){
+    if ($c_goods_type == '3') {
         ?>
 	  <li class="item"><span>&gt</span><a href="/qianzheng/">签证</a></li>
-	  <?}?>
+	  <? } ?>
 	  <?
-    if($c_goods_type=='6'){
+    if ($c_goods_type == '6') {
         ?>
 	  <li class="item"><span>&gt</span><a href="/youlun/">邮轮</a></li>
-	  <?}?>
+	  <? } ?>
 	  <?
-    if($c_goods_type=='1' || $c_goods_type=='2'){
-        if(notnull($c_breadcrumb)){
+    if ($c_goods_type == '1' || $c_goods_type == '2') {
+        if (notnull($c_breadcrumb)) {
             $n = 0;
             foreach ($c_breadcrumb as &$v) {
-                if(notnull($v)){
+                if (notnull($v)) {
                     ?>
-		  <li class="item"><span>&gt;</span><a href="<?=$g_domain?><?=$g_product_type_url[$c_goods_type]?>/<?=$v['cat_key']?>/" class="check_more">
-		  <?=$v['cat_name']?>
+		  <li class="item"><span>&gt;</span><a href="<?= $g_domain ?><?= $g_product_type_url[$c_goods_type] ?>/<?= $v['cat_key'] ?>/" class="check_more">
+		  <?= $v['cat_name'] ?>
 		  </a></li>
-	  <?			$n++;
+	  <? $n++;
                 }
             }
         }
     }
     ?>
-	  <?if($n==0){?>
-		  <?if(req('action')=='subject'){?>
-		  <li class="item current"><span>&gt;</span><?=$this_page_title?></li>
-		  <?}else{?>
+	  <? if ($n == 0) { ?>
+		  <? if (req('action') == 'subject') { ?>
+		  <li class="item current"><span>&gt;</span><?= $this_page_title ?></li>
+		  <? } else { ?>
 		  <li class="item current"><span>&gt;</span>全部产品</li>
-		  <?}?>
-	  <?}?>
+		  <? } ?>
+	  <? } ?>
 <!--	</ul> -->
-    <div class="allProduct_title" style="width: 1160px;padding-left: 30px;font-size: 21px;color: #666;padding-bottom: 20px;background:url(/themes/s01/images/all_product_title.jpg) no-repeat left 2px;"><?if(!empty($keyWord) || $orderby == 'true') echo '全部产品';else echo '推荐产品';?></div>
-    <? if(!empty($keyWord) || $orderby == 'true'){echo '';}else{
+    <div class="allProduct_title"
+         style="width: 1160px;padding-left: 30px;font-size: 21px;color: #666;padding-bottom: 20px;background:url(/themes/s01/images/all_product_title.jpg) no-repeat left 2px;"><? if (!empty($keyWord) || $orderby == 'true') echo '全部产品'; else echo '推荐产品'; ?></div>
+    <? if (!empty($keyWord) || $orderby == 'true') {
+        echo '';
+    } else {
         $ad_list = get_ad(req('goods_zone'), '0', 8);
-        if(notnull($ad_list)){
+        if (notnull($ad_list)) {
             ?>
             <ul class="tour-mainlist">
                 <?
-                $n=1;
-                foreach ($ad_list as $val){
+                $n = 1;
+                foreach ($ad_list as $val) {
                     ?>
-                    <li <?if($n % 2 == 0 && $n<=4){?>class="half"<?}?> <?if($n % 2 != 0 && $n>=4){?>class="half"<?}?>>
-                        <a target="_blank" href="<?=$val['ad_url']?>">
-                            <img src="/upfiles/<?=$g_siteid.'/'.$val['ad_image']?>">
+                    <li <? if ($n % 2 == 0 && $n <= 4){
+                        ?>class="half"<?
+                    } ?> <? if ($n % 2 != 0 && $n >= 4){
+                        ?>class="half"<?
+                    } ?>>
+                        <a target="_blank" href="<?= $val['ad_url'] ?>">
+                            <img src="/upfiles/<?= $g_siteid . '/' . $val['ad_image'] ?>">
                             <span class="li-txt">
-					<em><?=$val['ad_title']?></em>
+					<em><?= $val['ad_title'] ?></em>
 				</span>
                         </a>
                     </li>
@@ -241,12 +311,14 @@
                 }
                 ?>
             </ul>
-        <?}}?>
+        <? }
+    } ?>
 
 
-    <?if($c_catalog['cat_name']!=''){?>
+    <? if ($c_catalog['cat_name'] != '') { ?>
         <div class="mg-citypath">
-            <div class="fl"><a href="<?=$g_full_url?>"><?=$c_catalog['cat_name']?><span>&nbsp;&nbsp;</span> </a></div>
+            <div class="fl"><a href="<?= $g_full_url ?>"><?= $c_catalog['cat_name'] ?><span>&nbsp;&nbsp;</span> </a>
+            </div>
 
             <!--
             <div class="more-city">
@@ -266,8 +338,7 @@
             </div>
             -->
         </div>
-    <?}?>
-
+    <? } ?>
 
 
     <!-- 主体 -->
@@ -276,29 +347,34 @@
 
         <!--分页-->
 
-        <?if (!empty($keyWord) || $orderby == 'true') {?>
+        <? if (!empty($keyWord) || $orderby == 'true') { ?>
             <div class="spotList_main2_title">
                 <div class="spotList_main2_title_right">
-                    <div class="yema">页码：<b><? echo $pageNo;?></b>/<?=$totalPage?></div>
-                    <a href="<?=$nowUrl?>&pageNo=<?=$prePage;?>"><? if($pageNo>1){ ?><span class="leftBtn_hover"><?}else{?><span class="leftBtn"><?}?></span></a>
-                    <a href="<?=$nowUrl?>&pageNo=<?=$nextPage?>"><? if($pageNo==$totalPage){ ?><span class="rightBtn_hover"><?}else{ ?><span class="rightBtn"><?}?></span></a>
+                    <div class="yema">页码：<b><? echo $pageNo; ?></b>/<?= $totalPage ?></div>
+                    <a href="<?= $nowUrl ?>&pageNo=<?= $prePage; ?>"><? if ($pageNo > 1){ ?><span
+                            class="leftBtn_hover"><? }else{ ?><span class="leftBtn"><? } ?></span></a>
+                    <a href="<?= $nowUrl ?>&pageNo=<?= $nextPage ?>"><? if ($pageNo == $totalPage){ ?><span
+                            class="rightBtn_hover"><? }else{ ?><span class="rightBtn"><? } ?></span></a>
                 </div>
             </div>
-        <?}?>
+        <? } ?>
 
-        <?if(in_array($c_goods_type, array(1,2,4,5)) && 1==2){?>
+        <? if (in_array($c_goods_type, array(1, 2, 4, 5)) && 1 == 2) { ?>
             <ul class="filter-nav">
                 <?
                 foreach ($g_product_type as $k => $v) {
-                    if(in_array($k, array(1,2,4,5))){
+                    if (in_array($k, array(1, 2, 4, 5))) {
                         ?>
-                        <li><a href="javascript:filter('type', '<?=$k?>')" data-id="recommend" <?if($c_goods_type==$k){?>class="selected"<?}?>><?=$v?></a></li>
+                        <li><a href="javascript:filter('type', '<?= $k ?>')" data-id="recommend"
+                               <? if ($c_goods_type == $k){
+                               ?>class="selected"<?
+                            } ?>><?= $v ?></a></li>
                         <?
                     }
                 }
                 ?>
             </ul>
-        <?}?>
+        <? } ?>
 
         <?
         // if($c_goods_type=='3'){
@@ -312,81 +388,130 @@
         ?>
 
 
-        <?if(!empty($keyWord) || $orderby == 'true'){
+        <? if (!empty($keyWord) || $orderby == 'true') {
             $order_type = req('sc');
-            if($order_type=='' || $order_type=='asc') $order_type = 'desc';
+            if ($order_type == '' || $order_type == 'asc') $order_type = 'desc';
             else $order_type = 'asc';
             ?>
             <div class="mg-sort">
-                <div class="jingdian_title" style="float: left;padding-left: 37px;background:url(/themes/s01/images/jingdian_title.jpg) no-repeat left center;padding-right: 15px;">景点</div>
+                <div class="jingdian_title"
+                     style="float: left;padding-left: 37px;background:url(/themes/s01/images/jingdian_title.jpg) no-repeat left center;padding-right: 15px;">
+                    景点
+                </div>
                 <ul class="sort-group fl mr10">
-                    <li><a id="list-f-312-1" <?if(req('hot')=='yes'){?>class="select"<?}?> href="javascript:filter('hot', '<?if(req('hot')=='yes'){?><?}else{?>yes<?}?>')">推荐</a></li>
-                    <li><a id="list-f-312-2" <?if(req('col')=='sale'){?>class="select"<?}?> title="点击按销量从高到低排序" href="/zhoubian/?<?=$page_args?>&ord=true&col=sale&sc=<?=$order_type?>">销量<i class="icon <?if(req('sc')=='desc'){?>sort-up<?}else{?>sort-down<?}?>"> &nbsp;</i></a></li>
-                    <li><a id="list-f-312-4" <?if(req('col')=='price'){?>class="select"<?}?> title="点击按价格从低到高排序" href="/zhoubian/?<?=$page_args?>&ord=true&col=price&sc=<?=$order_type?>">价格<i class="icon <?if(req('sc')=='desc'){?>sort-up<?}else{?>sort-down<?}?>"> &nbsp;</i></a> </li>
+                    <li><a id="list-f-312-1" <? if (req('hot') == 'yes'){ ?>class="select"<? } ?>
+                           href="javascript:filter('hot', '<? if (req('hot') == 'yes') { ?><? } else { ?>yes<? } ?>')">推荐</a>
+                    </li>
+                    <li><a id="list-f-312-2" <? if (req('col') == 'sale'){ ?>class="select"<? } ?> title="点击按销量从高到低排序"
+                           href="/zhoubian/?<?= $page_args ?>&ord=true&col=sale&sc=<?= $order_type ?>">销量<i
+                                class="icon <? if (req('sc') == 'desc') { ?>sort-up<? } else { ?>sort-down<? } ?>">
+                                &nbsp;</i></a></li>
+                    <li><a id="list-f-312-4" <? if (req('col') == 'price'){ ?>class="select"<? } ?> title="点击按价格从低到高排序"
+                           href="/zhoubian/?<?= $page_args ?>&ord=true&col=price&sc=<?= $order_type ?>">价格<i
+                                class="icon <? if (req('sc') == 'desc') { ?>sort-up<? } else { ?>sort-down<? } ?>">
+                                &nbsp;</i></a></li>
                 </ul>
             </div>
-        <?}?>
+        <? } ?>
 
 
         <?
-        if(notnull($zbyHotGoodsList)){
+        if (notnull($zbyHotGoodsList)) {
 //            var_dump($zbyHotGoodsList);
-            foreach ($zbyHotGoodsList as $val){
+            foreach ($zbyHotGoodsList as $val) {
                 $goodsImage = $val['goodsImage'];
-                $sku_list	 = get_sku_list($val['goodsId'], 5);
-                $goods_url	 = $val['pcALiDetailLink'];
+                $sku_list = get_sku_list($val['goodsId'], 5);
+                $goods_url = $val['pcALiDetailLink'];
                 $goodsId = $val['goodsId'];
-                $ziyingurl = "/product/detail-".$goodsId.".html"
+                $ziyingurl = "/product/detail-" . $goodsId . ".html"
                 ?>
                 <div class="lv-list">
                     <!-- 产品信息 -->
                     <div class="info">
-                        <a class="imgbox" title="" href="<?if($val['aLiData'] != '飞猪自营'){echo $ziyingurl;}else{echo $goods_url;}?>"> <img alt="<?=$val['goodsName']?>" src="<?=$goodsImage?>" onerror= "javascript:this.src='/themes/s01/images/lv_list_default.png' "> </a>
+                        <a class="imgbox" title="" href="<? if ($val['aLiData'] != '飞猪自营') {
+                            echo $ziyingurl;
+                        } else {
+                            echo $goods_url;
+                        } ?>"> <img alt="<?= $val['goodsName'] ?>" src="<?= $goodsImage ?>"
+                                    onerror="javascript:this.src='/themes/s01/images/lv_list_default.png' "> </a>
                         <dl class="text">
-                            <dt style="width:550px"><a href="<?if($val['aLiData'] != '飞猪自营'){echo $ziyingurl;}else{echo $goods_url;}?>" target="_blank" <?if($val['is_hot']==1){?>style="color:red;font-weight:bold;"<?}?>><?=$val['goodsName']?></a></dt>
+                            <dt style="width:550px"><a href="<? if ($val['aLiData'] != '飞猪自营') {
+                                    echo $ziyingurl;
+                                } else {
+                                    echo $goods_url;
+                                } ?>" target="_blank" <? if ($val['is_hot'] == 1){
+                                                       ?>style="color:red;font-weight:bold;"<?
+                                } ?>><?= $val['goodsName'] ?></a></dt>
 
                             <?
-                            //                    if(in_array($val['goods_type'],array(1,2,6))){?>
+                            //                    if(in_array($val['goods_type'],array(1,2,6))){
+                            ?>
 
                             <?
                             $val['itemInfo'] = gbk_to_utf8($val['itemInfo']);
-                            $val['itemInfo'] = json_decode($val['itemInfo'],true);
+                            $val['itemInfo'] = json_decode($val['itemInfo'], true);
                             $val['itemInfo'] = array_iconv($val['itemInfo']);
                             $valnum = count($val['itemInfo']);
                             ?>
                             <dd>
                                 <?
-                                if (notnull($val['itemInfo'])){
-                                    foreach($val['itemInfo'] as $key => $value){ ?>
-                                        <?=$value['text']?>:<span class="mr30" title="<?if(mb_strlen($value['desc'],'gbk')>27) echo $value['desc'];?>"><?if(mb_strlen($value['desc'],'gbk')>27 && $valnum > 3) echo jiequ(30,$value['desc']);else echo $value['desc'];?></span><br>
-<!--                                        --><?//=$value['text']?><!--:<span class="mr30">--><?//=$value['desc']?><!--</span><br>-->
-                                    <?}}?>
+                                if (notnull($val['itemInfo'])) {
+                                    foreach ($val['itemInfo'] as $key => $value) { ?>
+                                        <?= $value['text'] ?>:<span class="mr30"
+                                                                    title="<? if (mb_strlen($value['desc'], 'gbk') > 27) echo $value['desc']; ?>"><? if (mb_strlen($value['desc'], 'gbk') > 27 && $valnum > 3) echo jiequ(30, $value['desc']); else echo $value['desc']; ?></span>
+                                        <br>
+                                        <!--                                        --><?//=$value['text']
+                                        ?><!--:<span class="mr30">--><?//=$value['desc']
+                                        ?><!--</span><br>-->
+                                    <?
+                                    }
+                                } ?>
 
                             </dd>
 
                             <dd style="padding-top: 10px;line-height: 32px;">
-                                <?if($val['aLiData'] != '飞猪自营'){?>
-                                    出发城市：<span class="mr30"><?=$val['disCity']?></span>
-                                <?}?>
+                                <? if ($val['aLiData'] != '飞猪自营') {
+                                    ?>
+                                    出发城市：<span class="mr30"><?= $val['srcCity'] ?></span>
+                                <?
+                                } ?>
                             </dd>
 
                             <dd style="padding-top: 10px;line-height: 32px;">
-                                <?if($val['aLiData'] != '飞猪自营'){?>
-                                    行程天数：<?=$val['lineDays']?>天<?=$val['lineNights']?>晚
-                                <?}?>
+                                <? if ($val['aLiData'] != '飞猪自营') {
+                                    ?>
+                                    到达城市：<span class="mr30"><?= $val['disCity'] ?></span>
+                                    <?
+                                } ?>
+                            </dd>
+
+                            <dd style="padding-top: 10px;line-height: 32px;">
+                                <? if ($val['aLiData'] != '飞猪自营') {
+                                    ?>
+                                    行程天数：<?= $val['lineDays'] ?>天<?= $val['lineNights'] ?>晚
+                                <?
+                                } ?>
                             </dd>
 
                             <?
                             //出行日期
                             ?>
 
-                            <?/*}else{*/?><!--
-                    <dd style="margin-top:20px"><?/*=show_substr(removehtml($val['summary']),180)*/?></dd>
-                    --><?/*}*/?>
+                            <?/*}else{*/
+                            ?><!--
+                    <dd style="margin-top:20px"><?/*=show_substr(removehtml($val['summary']),180)*/
+                            ?></dd>
+                    --><?/*}*/
+                            ?>
                         </dl>
                         <div class="lv-lineright">
-                            <div class="price yellow-a"><sub>&yen;</sub> <span class="num"><?=$val['minPrice']?></span> <sub>起/人</sub></div>
-                            <a href="<?if($val['aLiData'] == '飞猪自营'){echo $goods_url;}else{echo $ziyingurl;}?>" target="_blank" class="btn  btn-sm">查看详情</a>
+                            <div class="price yellow-a"><sub>&yen;</sub> <span
+                                    class="num"><?= $val['minPrice'] ?></span> <sub>起/人</sub></div>
+                            <a href="<? if ($val['aLiData'] == '飞猪自营') {
+                                echo $goods_url;
+                            } else {
+                                echo $ziyingurl;
+                            } ?>" target="_blank" class="btn  btn-sm">查看详情</a>
                             <div class="count"> </a></div>
                         </div>
                     </div>
@@ -396,25 +521,28 @@
         } else {
             ?>
             <div class="box-warning bw-bold mb15" style="margin-top:20px">
-                <i class="icon waring-sm"></i>很抱歉，没有找到<?if($keywords!=''){?>与 <b class="yellow-a">“<?=$keywords?>”</b> <?}?>相关的产品，要不看看其它产品，或者换个关键词搜索！
+                <i class="icon waring-sm"></i>很抱歉，没有找到<? if ($keywords != '') { ?>与 <b
+                    class="yellow-a">“<?= $keywords ?>”</b> <? } ?>相关的产品，要不看看其它产品，或者换个关键词搜索！
             </div>
-        <?}?>
+        <? } ?>
 
 
-        <?if(notnull($zbyHotGoodsList)){?>
+        <? if (notnull($zbyHotGoodsList)) { ?>
             <!--分页-->
 
-        <?}?>
+        <? } ?>
 
-        <?if (!empty($keyWord) || $orderby == 'true') {?>
+        <? if (!empty($keyWord) || $orderby == 'true') { ?>
             <div class="spotList_main2_title">
                 <div class="spotList_main2_title_right">
-                    <div class="yema">页码：<b><? echo $pageNo;?></b>/<?=$totalPage?></div>
-                    <a href="<?=$nowUrl?>&pageNo=<?=$prePage;?>"><? if($pageNo>1){ ?><span class="leftBtn_hover"><?}else{?><span class="leftBtn"><?}?></span></a>
-                    <a href="<?=$nowUrl?>&pageNo=<?=$nextPage?>"><? if($pageNo==$totalPage){ ?><span class="rightBtn_hover"><?}else{ ?><span class="rightBtn"><?}?></span></a>
+                    <div class="yema">页码：<b><? echo $pageNo; ?></b>/<?= $totalPage ?></div>
+                    <a href="<?= $nowUrl ?>&pageNo=<?= $prePage; ?>"><? if ($pageNo > 1){ ?><span
+                            class="leftBtn_hover"><? }else{ ?><span class="leftBtn"><? } ?></span></a>
+                    <a href="<?= $nowUrl ?>&pageNo=<?= $nextPage ?>"><? if ($pageNo == $totalPage){ ?><span
+                            class="rightBtn_hover"><? }else{ ?><span class="rightBtn"><? } ?></span></a>
                 </div>
             </div>
-        <?}?>
+        <? } ?>
     </div>
 
 
@@ -424,13 +552,16 @@
         <div class="mb15">
             <?
             $ad_list = get_ad('p_r', '0', 3);
-            if(notnull($ad_list)){
+            if (notnull($ad_list)) {
                 ?>
-                <?foreach ($ad_list as $cval){?>
-                    <a href="<?=$cval['ad_url']?>" target="_blank" title="<?=$val['ad_title']?>"> <img src="/upfiles/<?=$g_siteid.'/'.$cval['ad_image']?>" alt="<?=$val['ad_title']?>"> </a><br/>
-                <?}?>
-            <?}?>
-            <?//include(load_user_diy('diy.x05.html'));?>
+                <? foreach ($ad_list as $cval) {
+                    ?>
+                    <a href="<?= $cval['ad_url'] ?>" target="_blank" title="<?= $val['ad_title'] ?>"> <img
+                            src="/upfiles/<?= $g_siteid . '/' . $cval['ad_image'] ?>" alt="<?= $val['ad_title'] ?>">
+                    </a><br/>
+                <? } ?>
+            <? } ?>
+            <? //include(load_user_diy('diy.x05.html'));?>
         </div>
 
         <div class="aside-box aside-hot">
@@ -439,22 +570,24 @@
                 <?
                 $guess_list = get_guess_list(10);
                 //                var_dump($guess_list);
-                if(notnull($guess_list)){
+                if (notnull($guess_list)) {
                     $n = 1;
-                    foreach ($guess_list as $val){
-                        $goodsImage = $g_domain."upfiles/$g_siteid/".$val['goods_image'];
+                    foreach ($guess_list as $val) {
+                        $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
 //                var_dump($val['goods_type']);
-                        if ($val['goods_type'] == '4'){
-                            $href = "/menpiao/ticket_detail-".$val['goods_id']."-".$val['lv_scenic_id'].".html";
-                        }else {
-                            $href = "/product/detail-".$val['goods_id'].".html";
+                        if ($val['goods_type'] == '4') {
+                            $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                        } else {
+                            $href = "/product/detail-" . $val['goods_id'] . ".html";
 
                         }
                         ?>
-                        <li> <i class="lv-icon ico-snum"><?=$n?></i> <a href="<?echo $href;?>" target="_blank" title="<?=$val['goods_name']?>">
-                                <?=$val['goods_name']?> </a>
-                            <div class="yellow-a"><sub>&yen;</sub> <strong><?=$val['min_price']?></strong> 起
-                                <span style="float:right"><?=date('m/d H:i', strtotime($val['browse_time']))?>浏览过</span>
+                        <li><i class="lv-icon ico-snum"><?= $n ?></i> <a href="<? echo $href; ?>" target="_blank"
+                                                                         title="<?= $val['goods_name'] ?>">
+                                <?= $val['goods_name'] ?> </a>
+                            <div class="yellow-a"><sub>&yen;</sub> <strong><?= $val['min_price'] ?></strong> 起
+                                <span style="float:right"><?= date('m/d H:i', strtotime($val['browse_time'])) ?>
+                                    浏览过</span>
                             </div>
                         </li>
                         <?
@@ -467,38 +600,41 @@
 
         <?
         $goods_article = list_goods_article(5);
-        if(notnull($goods_article)){
+        if (notnull($goods_article)) {
             ?>
             <div class="aside-box aside-hot">
-                <div class="aside-title"><?=$c_catalog['cat_name']?>旅游攻略</div>
+                <div class="aside-title"><?= $c_catalog['cat_name'] ?>旅游攻略</div>
                 <ul class="order-news">
                     <?
-                    foreach ($goods_article as $val){
+                    foreach ($goods_article as $val) {
                         $news_url = get_news_url($val['thread_id']);
                         ?>
                         <li>
-                            <a href="<?=$news_url?>" targe="_blank"><?=$val['title']?></a>
+                            <a href="<?= $news_url ?>" targe="_blank"><?= $val['title'] ?></a>
 
-                            <div class="mt10"><?=date('Y/m/d', strtotime($val['addtime']))?> <span class="gray-b">浏览<?=$val['clicks']?>次</span></div>
+                            <div class="mt10"><?= date('Y/m/d', strtotime($val['addtime'])) ?> <span
+                                    class="gray-b">浏览<?= $val['clicks'] ?>次</span></div>
                         </li>
-                    <?}?>
+                    <? } ?>
                 </ul>
             </div>
-        <?}?>
+        <? } ?>
     </div>
     <div class="clear"></div>
 </div>
 <div class="clear"></div>
-<?include('foot.php');?>
+<? include('foot.php'); ?>
 </body>
 </html>
 <?
-function jiequ($num,$data){
-    if(mb_strlen($data,'gbk')>$num){
-        return mb_substr($data, 0, $num,'gbk').'...';
-    }else{
+function jiequ($num, $data)
+{
+    if (mb_strlen($data, 'gbk') > $num) {
+        return mb_substr($data, 0, $num, 'gbk') . '...';
+    } else {
         return $data;
     }
 
 }
+
 ?>
