@@ -25,12 +25,12 @@ if(!defined('IN_CLOOTA')) {
         <div class="zbyOrder_main_title">
             <img src="/themes/s01/images/zby_fillInOrder.jpg">
         </div>
-        <form name="write_form" id="write_form" method="post" action="/zhoubianyou/zbyform_submit-<?=$goods_type;?>-<?=$goods_id;?>-<?=$goods_name;?>-<?=$adult_num;?>-<?=$kid_num;?>-<?=$departdate;?>-<?=$pay_price;?>.html?flag=check">
+        <form name="write_form" id="write_form" method="post" action="/zhoubianyou/zbyform_submit-9090902.html?flag=check">
         <? if($is_package == 'false'){ ?>
             <div class="zbyOrder_main1">
 
                 <div class="zbyOrder_main1_title">
-                    <?//echo $goods_name;?>商品名称-按人卖
+                    <?=$taocan['goodsName']?>
                 </div>
                 <div class="zbyOrder_main1Cont">
                     <div class="zbyOrder_main1ContLeft">周边游</div>
@@ -47,27 +47,27 @@ if(!defined('IN_CLOOTA')) {
                             <tr>
                                 <td>成人</td>
                                 <td>
-                                    120<?//echo $departdate1;?>
+                                    <?=$taocan['adultPrice']?>
                                 </td>
                                 <td>
-									2<?//php echo $adult_num;?>
+									<?=$post['adultNum']?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>儿童</td>
                                 <td>
-                                    100<?//echo $departdate1;?>
+                                    <?=$taocan['kidPrice']?>
                                 </td>
                                 <td>
-									2<?//php echo $kid_num;?>
+									<?=$post['childNum']?>
                                 </td>
                             </tr>
                             </tbody>
                             <thead>
                             <tr>
-                                <td>房差：50</td>
-                                <td>游玩时间：2017-4-22</td>
-                                <td>总价：￥440</td>
+                                <td>房差：<?=$post['roomCount']?></td>
+                                <td>游玩时间：<?=$tc['departDate']?></td>
+                                <td>总价：￥<?=$post['payPrice']?></td>
                             </tr>
                             </thead>
                         </table>
@@ -78,10 +78,10 @@ if(!defined('IN_CLOOTA')) {
             <?}else{?>
             <div class="zbyOrder_main1">
                 <div class="zbyOrder_main1_title">
-                    <?//echo $goods_name;?>商品名称-按份卖
+                    <?=$taocan['goodsName']?>
                 </div>
                 <div class="zbyOrder_main1Cont">
-                    <div class="zbyOrder_main1ContLeft">XX套餐</div>
+                    <div class="zbyOrder_main1ContLeft">周边游</div>
                     <div class="zbyOrder_main1ContRight">
                         <table>
                             <thead>
@@ -94,13 +94,13 @@ if(!defined('IN_CLOOTA')) {
                             </thead>
                             <tbody>
                             <tr>
-                                <td  onclick="changeTR()" style="cursor:pointer;" onselectstart="return false">一期客房一间(含双人套餐)&nbsp;&nbsp;<span id="change" class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                <td  onclick="changeTR()" style="cursor:pointer;" onselectstart="return false"><?=$taocan['packageName']?>&nbsp;&nbsp;<span id="change" class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
                                 <td>
-                                    不可退改<?//echo $departdate1;?>
+                                    不可退改
                                 </td>
-                                <td>2017-04-22
+                                <td><?=$tc['departDate']?>
                                 <td>
-                                    2<?//php echo $adult_num;?>
+                                    <?=$post['packageNum']?>
                                 </td>
                             </tr>
                             </tbody>
@@ -139,87 +139,234 @@ if(!defined('IN_CLOOTA')) {
                     <div class="zbyOrder_main2_buyLeft">联系人</div>
                     <div class="zbyOrder_main2_buyRight">
                         <ul>
+                            <?//if($taocan['booker_name']=='true'){?>
                             <li>
                                 <label><b>＊</b>姓名：</label>
                                 <input type="text" name="bookerName" id="linker" value="">
                                 <span class="buyer_nameTips">购买人姓名不能为空！</span>
                             </li>
+                            <?//}?>
+                            <?//if($taocan['booker_mobile']=='true'){?>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
                                 <input type="text" name="bookerMobile" id="mobile" value="">
                                 <span>此手机为接受短信所用，作为订购于取票凭证，请准确填写。</span>
                                 <span class="buyer_phoneTips">购买人手机号不能为空！</span>
                             </li>
+                            <?//}?>
+                            <?//if($taocan['booker_email']=='true'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
                                 <input type="text" name="bookerEmail" id="email" value="">
                                 <span class="buyer_emailTips"></span>
                             </li>
-                            <li>
-                                <label><b>＊</b>用户类型：</label>
-                                <select style="width: 138px;" name="userType">
-                                    <option value="0">bus365用户</option>
-                                    <option value="1">企业用户</option>
-                                </select>
-                            </li>
+                            <?//}?>
                         </ul>
                     </div>
                 </div>
                 <!-- 如果需要填写游玩人 -->
-                <?if($traveller_name == 'TRAV_NUM_ONE' || $traveller_name == 'TRAV_NUM_ALL'){ ?>
-                <? for($i=0;$i<$num;$i++){ ?>
+                <?if($num > 0){ ?>
+                <? for($i=1;$i<=$num;$i++){ ?>
                 <div class="zbyOrder_main2_youwan">
-                    <div class="zbyOrder_main2_youwanLeft">游玩人1</div>
+                    <div class="zbyOrder_main2_youwanLeft">游玩人<?=$i?></div>
                     <div class="zbyOrder_main2_youwanRight">
                         <ul>
+                            <?if($taocan['traveller_name']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>姓名：</label>
                                 <input type="text" name="name_<?=$i?>" autocomplete="off" id="youwan_userName_<?=$i?>">
                                 <span class="youwan_nameTips_<?=$i?>"></span>
                             </li>
+                            <script type="text/javascript">
+                            $('#youwan_userName_<?=$i?>').blur(function(){
+                                if($('#youwan_userName_<?=$i?>').val()==''){
+                                    $('.youwan_nameTips_<?=$i?>').show().html('游玩人姓名不能为空').css('color','red');
+                                    youwanName_flag_<?=$i?>=0;
+                                }else{
+                                    $('.youwan_nameTips_<?=$i?>').hide();
+                                    youwanName_flag_<?=$i?>=1;
+                                }
+                            });
+                            </script>
+                            <?}elseif($taocan['traveller_name']=='TRAV_NUM_ONE' && $i==1){?>
+                            <li>
+                                <label><b>＊</b>姓名：</label>
+                                <input type="text" name="name_<?=$i?>" autocomplete="off" id="youwan_userName_<?=$i?>">
+                                <span class="youwan_nameTips_<?=$i?>"></span>
+                            </li>
+                            <script type="text/javascript">
+                            $('#youwan_userName_<?=$i?>').blur(function(){
+                                if($('#youwan_userName_<?=$i?>').val()==''){
+                                    $('.youwan_nameTips_<?=$i?>').show().html('游玩人姓名不能为空').css('color','red');
+                                    youwanName_flag_<?=$i?>=0;
+                                }else{
+                                    $('.youwan_nameTips_<?=$i?>').hide();
+                                    youwanName_flag_<?=$i?>=1;
+                                }
+                            });
+                            </script>
+                            <?}?>
+                            <?if($taocan['traveller_mobile']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
                                 <input type="text" name="mobile_<?=$i?>" autocomplete="off" id="youwan_userPhone_<?=$i?>">
                                 <span class="youwan_phoneTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
-
+                            $('#youwan_userPhone_<?=$i?>').blur(function(){
+                                if($('#youwan_userPhone_<?=$i?>').val()==''){
+                                    $('.youwan_phoneTips_<?=$i?>').show().html('游玩人手机号不能为空').css('color','red');
+                                }else if(reg2.test($('#youwan_userPhone_<?=$i?>').val())){
+                                    $('.youwan_phoneTips_<?=$i?>').show();
+                                    $('.youwan_phoneTips_<?=$i?>').html('');
+                                    youwanPhone_flag_<?=$i?>=1;
+                                }else if(!reg2.test($('#youwan_userPhone_<?=$i?>').val())){
+                                    $('.youwan_phoneTips_<?=$i?>').show();
+                                    $('.youwan_phoneTips_<?=$i?>').html('请输入正确的手机号！').css('color','red');
+                                    youwanPhone_flag_<?=$i?>=0;
+                                }
+                            });
                             </script>
+                            <?}elseif($taocan['traveller_mobile']=='TRAV_NUM_ONE' && $i==1){?>
+                            <li>
+                                <label><b>＊</b>手机号码：</label>
+                                <input type="text" name="mobile_<?=$i?>" autocomplete="off" id="youwan_userPhone_<?=$i?>">
+                                <span class="youwan_phoneTips_<?=$i?>"></span>
+                            </li>
+                            <script type="text/javascript">
+                            $('#youwan_userPhone_<?=$i?>').blur(function(){
+                                if($('#youwan_userPhone_<?=$i?>').val()==''){
+                                    $('.youwan_phoneTips_<?=$i?>').show().html('游玩人手机号不能为空').css('color','red');
+                                }else if(reg2.test($('#youwan_userPhone_<?=$i?>').val())){
+                                    $('.youwan_phoneTips_<?=$i?>').show();
+                                    $('.youwan_phoneTips_<?=$i?>').html('');
+                                    youwanPhone_flag_<?=$i?>=1;
+                                }else if(!reg2.test($('#youwan_userPhone_<?=$i?>').val())){
+                                    $('.youwan_phoneTips_<?=$i?>').show();
+                                    $('.youwan_phoneTips_<?=$i?>').html('请输入正确的手机号！').css('color','red');
+                                    youwanPhone_flag_<?=$i?>=0;
+                                }
+                            });
+                            </script>
+                            <?}?>
+                            <?if($taocan['traveller_email']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
                                 <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="">
                                 <span class="youwan_emailTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
-                                
+                            //邮箱
+                            $('#youwan_email_<?=$i?>').blur(function(){
+                                if($('#youwan_email_<?=$i?>').val()==''){
+                                    $('.youwan_emailTips_<?=$i?>').show().html('游玩人邮箱不能为空').css('color','red');
+                                }else if(reg4.test($('#youwan_email_<?=$i?>').val())){
+                                    $('.youwan_emailTips_<?=$i?>').show();
+                                    $('.youwan_emailTips_<?=$i?>').html('');
+                                    youwanEmail_flag_<?=$i?>=1;
+                                }else if(!reg4.test($('#youwan_email_<?=$i?>').val())){
+                                    $('.youwan_emailTips_<?=$i?>').show();
+                                    $('.youwan_emailTips_<?=$i?>').html('请输入正确的邮箱！').css('color','red');
+                                    youwanEmail_flag_<?=$i?>=0;
+                                }
+                            });
                             </script>
-
+                            <?}elseif($taocan['traveller_email']=='TRAV_NUM_ONE' && $i==1){?>
                             <li>
-                                <label><b>＊</b>英文名</label>
-                                <input type="text" name="enName_<?=$i?>" autocomplete="off" id="youwan_enName_<?=$i?>">
-                                <span class="youwan_enNameTips_<?=$i?>"></span>
+                                <label><b>＊</b>邮箱：</label>
+                                <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="">
+                                <span class="youwan_emailTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
-                                
+                            //邮箱
+                            $('#youwan_email_<?=$i?>').blur(function(){
+                                if($('#youwan_email_<?=$i?>').val()==''){
+                                    $('.youwan_emailTips_<?=$i?>').show().html('游玩人邮箱不能为空').css('color','red');
+                                }else if(reg4.test($('#youwan_email_<?=$i?>').val())){
+                                    $('.youwan_emailTips_<?=$i?>').show();
+                                    $('.youwan_emailTips_<?=$i?>').html('');
+                                    youwanEmail_flag_<?=$i?>=1;
+                                }else if(!reg4.test($('#youwan_email_<?=$i?>').val())){
+                                    $('.youwan_emailTips_<?=$i?>').show();
+                                    $('.youwan_emailTips_<?=$i?>').html('请输入正确的邮箱！').css('color','red');
+                                    youwanEmail_flag_<?=$i?>=0;
+                                }
+                            });
                             </script>
-
+                            <?}?>
+                            <?if($taocan['traveller_en_name']=='TRAV_NUM_ALL'){?>
                             <li>
+                                <label><b>＊</b>英文名</label>
+                                <input type="text" name="eName_<?=$i?>" autocomplete="off" id="youwan_eName_<?=$i?>">
+                                <span class="youwan_eNameTips_<?=$i?>"></span>
+                            </li>
+                            <script type="text/javascript">
+                            $('#youwan_eName_<?=$i?>').blur(function(){
+                                if($('#youwan_eName_<?=$i?>').val()==''){
+                                    $('.youwan_eNameTips_<?=$i?>').show().html('游玩人英文名不能为空').css('color','red');
+                                }else if(reg5.test($('#youwan_eName_<?=$i?>').val())){
+                                    $('.youwan_eNameTips_<?=$i?>').show();
+                                    $('.youwan_eNameTips_<?=$i?>').html('');
+                                    youwaneName_flag_<?=$i?>=1;
+                                }else if(!reg5.test($('#youwan_eName_<?=$i?>').val())){
+                                    $('.youwan_eNameTips_<?=$i?>').show();
+                                    $('.youwan_eNameTips_<?=$i?>').html('请输入正确的英文名！').css('color','red');
+                                    youwaneName_flag_<?=$i?>=0;
+                                }
+                            });
+                            </script>
+                            <?}elseif($taocan['traveller_en_name']=='TRAV_NUM_ONE' && $i==1){?>
+                            <li>
+                                <label><b>＊</b>英文名</label>
+                                <input type="text" name="eName_<?=$i?>" autocomplete="off" id="youwan_eName_<?=$i?>">
+                                <span class="youwan_eNameTips_<?=$i?>"></span>
+                            </li>
+                            <script type="text/javascript">
+                            $('#youwan_eName_<?=$i?>').blur(function(){
+                                if($('#youwan_eName_<?=$i?>').val()==''){
+                                    $('.youwan_eNameTips_<?=$i?>').show().html('游玩人英文名不能为空').css('color','red');
+                                }else if(reg5.test($('#youwan_eName_<?=$i?>').val())){
+                                    $('.youwan_eNameTips_<?=$i?>').show();
+                                    $('.youwan_eNameTips_<?=$i?>').html('');
+                                    youwaneName_flag_<?=$i?>=1;
+                                }else if(!reg5.test($('#youwan_eName_<?=$i?>').val())){
+                                    $('.youwan_eNameTips_<?=$i?>').show();
+                                    $('.youwan_eNameTips_<?=$i?>').html('请输入正确的英文名！').css('color','red');
+                                    youwaneName_flag_<?=$i?>=0;
+                                }
+                            });
+                            </script>
+                            <?}?>
+                            
+                            <li><?if($taocan['traveller_person_type']=='TRAV_NUM_ALL'){?>
                                     <label><b>＊</b>人群：</label>
                                     <select name="personType_<?=$i?>">
                                         <option value="adult">成人</option>
                                         <option value="child">儿童</option>
                                     </select>
+                                    <?}elseif($taocan['traveller_person_type']=='TRAV_NUM_ONE' && $i==1){?>
+                                    <label><b>＊</b>人群：</label>
+                                    <select name="personType_<?=$i?>">
+                                        <option value="adult">成人</option>
+                                        <option value="child">儿童</option>
+                                    </select>
+                                    <?}?>
+                                <?if($taocan['traveller_gender']=='TRAV_NUM_ALL'){?>    
                                     <label><b>＊</b>性别：</label>
                                     <select name="gender_<?=$i?>">
                                         <option value="male">男</option>
                                         <option value="chifemaleld">女</option>
                                     </select>
+                                <?}elseif($taocan['traveller_gender']=='TRAV_NUM_ONE' && $i==1){?>
+                                    <label><b>＊</b>性别：</label>
+                                    <select name="gender_<?=$i?>">
+                                        <option value="male">男</option>
+                                        <option value="chifemaleld">女</option>
+                                    </select>
+                                <?}?>
 
                             </li>
-                            <script type="text/javascript">
-                                
-                            </script>
-
+                            <?if($taocan['traveller_credentials']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>证件类型：</label>
                                 <select style="width: 138px;">
@@ -229,88 +376,77 @@ if(!defined('IN_CLOOTA')) {
                                 <span class="youwan_idTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
-                                
+                            $('#youwan_userIdcard_<?=$i?>').blur(function(){
+                                if($('#youwan_userIdcard_<?=$i?>').val()==''){
+                                    $('.an_idTipsyouw_<?=$i?>').show().html('游玩人证件号不能为空').css('color','red');
+                                }else if(reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
+                                    $('.youwan_idTips_<?=$i?>').show();
+                                    $('.youwan_idTips_<?=$i?>').html('');
+                                    youwanIdNum_flag_<?=$i?>=1;
+                                }else if(!reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
+                                    $('.youwan_idTips_<?=$i?>').show();
+                                    $('.youwan_idTips_<?=$i?>').html('请输入正确的证件号！').css('color','red');
+                                    youwanIdNum_flag_<?=$i?>=0;
+                                }
+                            });
                             </script>
-
+                            <?}elseif($taocan['traveller_credentials']=='TRAV_NUM_ONE' && $i==1){?>
                             <li>
-                                <label><b>＊</b>生日</label>
-                                <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_userName"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"></span>
+                                <label><b>＊</b>证件类型：</label>
+                                <select style="width: 138px;">
+                                    <option>身份证</option>
+                                </select>
+                                <input type="text" name="credentials_<?=$i?>" autocomplete="off"  id="youwan_userIdcard_<?=$i?>">
+                                <span class="youwan_idTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
-                                
+                            $('#youwan_userIdcard_<?=$i?>').blur(function(){
+                                if($('#youwan_userIdcard_<?=$i?>').val()==''){
+                                    $('.an_idTipsyouw_<?=$i?>').show().html('游玩人证件号不能为空').css('color','red');
+                                }else if(reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
+                                    $('.youwan_idTips_<?=$i?>').show();
+                                    $('.youwan_idTips_<?=$i?>').html('');
+                                    youwanIdNum_flag_<?=$i?>=1;
+                                }else if(!reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
+                                    $('.youwan_idTips_<?=$i?>').show();
+                                    $('.youwan_idTips_<?=$i?>').html('请输入正确的证件号！').css('color','red');
+                                    youwanIdNum_flag_<?=$i?>=0;
+                                }
+                            });
                             </script>
-
+                            <?}?>
+                            <?if($taocan['traveller_birthday']=='TRAV_NUM_ALL'){?>
+                            <li>
+                                <label><b>＊</b>生日</label>
+                                <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_birthday_<?=$i?>"></span>
+                            </li>
+                            <script type="text/javascript">
+                            $('#youwan_birthday_<?=$i?>').blur(function(){
+                                if($('#youwan_birthday_<?=$i?>').val()==''){
+                                    $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
+                                }
+                            });
+                            </script>
+                            <?}elseif($taocan['traveller_birthday']=='TRAV_NUM_ONE' && $i==1){?>
+                            <li>
+                                <label><b>＊</b>生日</label>
+                                <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_idTips_<?=$i?>"></span>
+                            </li>
+                            <script type="text/javascript">
+                            $('#youwan_birthday_<?=$i?>').blur(function(){
+                                if($('#youwan_birthday_<?=$i?>').val()==''){
+                                    $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
+                                }
+                            });
+                            </script>
+                            <?}?>
                         </ul>
                     </div>
-                    <script type="text/javascript">
-                    $('#youwan_userName_<?=$i?>').blur(function(){
-                        if($('#youwan_userName_<?=$i?>').val()==''){
-                            $('.youwan_nameTips_<?=$i?>').show().html('游玩人姓名不能为空').css('color','red');
-                            youwanName_flag_<?=$i?>=0;
-                        }else{
-                            $('.youwan_nameTips_<?=$i?>').hide();
-                            youwanName_flag_<?=$i?>=1;
-                        }
-                    });
-                    $('#youwan_userPhone_<?=$i?>').blur(function(){
-                        if($('#youwan_userPhone_<?=$i?>').val()==''){
-                            $('.youwan_phoneTips_<?=$i?>').show().html('游玩人手机号不能为空').css('color','red');
-                        }else if(reg2.test($('#youwan_userPhone_<?=$i?>').val())){
-                            $('.youwan_phoneTips_<?=$i?>').show();
-                            $('.youwan_phoneTips_<?=$i?>').html('');
-                            youwanPhone_flag_<?=$i?>=1;
-                        }else if(!reg2.test($('#youwan_userPhone_<?=$i?>').val())){
-                            $('.youwan_phoneTips_<?=$i?>').show();
-                            $('.youwan_phoneTips_<?=$i?>').html('请输入正确的手机号！').css('color','red');
-                            youwanPhone_flag_<?=$i?>=0;
-                        }
-                    });
-                    $('#youwan_enName_<?=$i?>').blur(function(){
-                        if($('#youwan_enName_<?=$i?>').val()==''){
-                            $('.youwan_enNameTips_<?=$i?>').show().html('游玩人英文名不能为空').css('color','red');
-                        }else if(reg5.test($('#youwan_enName_<?=$i?>').val())){
-                            $('.youwan_enNameTips_<?=$i?>').show();
-                            $('.youwan_enNameTips_<?=$i?>').html('');
-                            youwanenName_flag_<?=$i?>=1;
-                        }else if(!reg5.test($('#youwan_enName_<?=$i?>').val())){
-                            $('.youwan_enNameTips_<?=$i?>').show();
-                            $('.youwan_enNameTips_<?=$i?>').html('请输入正确的英文名！').css('color','red');
-                            youwanenName_flag_<?=$i?>=0;
-                        }
-                    });
-                    //邮箱
-                    $('#youwan_email_<?=$i?>').blur(function(){
-                        if($('#youwan_email_<?=$i?>').val()==''){
-                            $('.youwan_emailTips_<?=$i?>').show().html('游玩人邮箱不能为空').css('color','red');
-                        }else if(reg4.test($('#youwan_email_<?=$i?>').val())){
-                            $('.youwan_emailTips_<?=$i?>').show();
-                            $('.youwan_emailTips_<?=$i?>').html('');
-                            youwanEmail_flag_<?=$i?>=1;
-                        }else if(!reg4.test($('#youwan_email_<?=$i?>').val())){
-                            $('.youwan_emailTips_<?=$i?>').show();
-                            $('.youwan_emailTips_<?=$i?>').html('请输入正确的邮箱！').css('color','red');
-                            youwanEmail_flag_<?=$i?>=0;
-                        }
-                    });
-                    $('#youwan_userIdcard_<?=$i?>').blur(function(){
-                        if($('#youwan_userIdcard_<?=$i?>').val()==''){
-                            $('.an_idTipsyouw_<?=$i?>').show().html('游玩人证件号不能为空').css('color','red');
-                        }else if(reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
-                            $('.youwan_idTips_<?=$i?>').show();
-                            $('.youwan_idTips_<?=$i?>').html('');
-                            youwanIdNum_flag_<?=$i?>=1;
-                        }else if(!reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
-                            $('.youwan_idTips_<?=$i?>').show();
-                            $('.youwan_idTips_<?=$i?>').html('请输入正确的证件号！').css('color','red');
-                            youwanIdNum_flag_<?=$i?>=0;
-                        }
-                    });
-                    </script>
                 </div>
                 <?}?>
                 <?}?>
                 <!-- 游玩人结束 -->
-                <?if($emergency == 'true'){?>
+                <?//if($taocan['emergency'] == 'true'){?>
                 <div class="zbyOrder_main2_youwan">
                     <div class="zbyOrder_main2_youwanLeft">紧急联系人</div>
                     <div class="zbyOrder_main2_youwanRight">
@@ -328,13 +464,13 @@ if(!defined('IN_CLOOTA')) {
                         </ul>
                     </div>
                 </div>
-                <?}?>
+                <?//}?>
             </div>
         
         </form>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
-                    <div class="zbyOrder_main31_left">应付总价：￥440<?//echo $pay_price;?></div>
+                    <div class="zbyOrder_main31_left">应付总价：￥<?=$post['payPrice']?></div>
 
                     <button class="zbyOrder_main31_right" onclick = "check_form()">同意以下条款，去付款</button>
 
@@ -377,7 +513,7 @@ var buyerName_flag=0,
     // tiaokuan_flag=1
     youwanName_flag=0,
     youwanPhone_flag=0,
-    youwanenName_flag=0,
+    youwaneName_flag=0,
     youwanIdNum_flag=0,
     buyerEmail_flag=0
     ;
