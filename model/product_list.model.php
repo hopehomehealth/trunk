@@ -55,7 +55,7 @@ function get_product_list($keyWord)
             $post['pageNo'] = 1;
         }
 //        $product_list = post_curl($host . "/travel/interface/zby/getZbyList", $post);
-        $product_list = $db->api_post($host . "/travel/interface/zby/getZbyList", $post);
+        $product_list = $db->api_post($host . "/travel/interface/zby/v3.2/getZbyList_v3.2", $post);
 //        $product_list = post_curl("http://192.168.0.132:8080/travel/interface/zby/getZbyList", $post);
         $product_list = json_decode($product_list, true);
         $product_list = array_iconv($product_list,'utf-8','gbk');
