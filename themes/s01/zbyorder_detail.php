@@ -275,7 +275,7 @@ if (!defined('IN_CLOOTA')) {
         $(".applyRefund").hide();
     });
     function comment_commit(){
-        var url = "/menpiao/ticket_comment_commit-<?=$orderCode;?>.html";
+        var url = "/zhoubianyou/zbycomment_commit-<?=$orderCode;?>.html";
         window.location.href = url;
     }
     function order_again(){

@@ -22,7 +22,7 @@ if($flag == 'cm'){
     }
     $ticket_comment_data = $ticket_comment['data'];
     $message = urlencode($ticket_comment_data['message']);
-    $js = "<script>window.location.href='/menpiao/zbycomment_success-".$orderCode.".html?message=".$message."' </script>";
+    $js = "<script>window.location.href='/zhoubianyou/zbycomment_success-".$orderCode.".html?message=".$message."' </script>";
     echo $js;
 
 
