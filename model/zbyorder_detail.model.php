@@ -3,22 +3,25 @@ $db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $refundReasonCode = req('refundReasonCode');
-
+echo $refundReasonCode;
+echo $orderCode;
 //退款产品信息检验
-if (req('flag') == 'chk') {
-    $post1 = array('orderCode' => $orderCode, 'token' => $token);
-    $refund_product = juhecurl($host . "/travel/interface/zby/zbyRefundInfo", $post1, 1);
-    $refund_product = json_decode($refund_product, true);
-    $refund_product = array_iconv($refund_product);
-    $refund_product_data = $refund_product['data'];
-    $refundReasonList = $refund_product_data['refundReasonList'];
-    $isChange = $refund_product_data['isChange'];
-    $failReason = $refund_product_data['failReason'];
-    if (!$isChange !== "true"){
-        echo "<script>alert('该产品不能申请退款！');history.go(-1)</script>";
-        exit;
-    }
-}
+$post1 = array('orderCode' => $orderCode, 'token' => $token);
+$refund_product = juhecurl($host . "/travel/interface/zby/zbyRefundInfo", $post1, 1);
+$refund_product = json_decode($refund_product, true);
+$refund_product = array_iconv($refund_product);
+$refund_product_data = $refund_product['data'];
+$refundReasonList = $refund_product_data['refundReasonList'];
+$isChange = $refund_product_data['isChange'];
+$failReason = $refund_product_data['failReason'];
+//echo "<pre>";
+//var_dump($refund_product_data);
+//    if (!$isChange !== "true"){
+//        echo "<script>alert('该产品不能申请退款！');history.go(-1)</script>";
+//        exit;
+//    }
+//    var_dump($refund_product_data);
+//}
 //退款申请
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
@@ -26,8 +29,8 @@ if(req('flag') == 'rf'){
     $require_refund = json_decode($require_refund, true);
     $require_refund = array_iconv($require_refund);
     $require_refund_data = $require_refund['data'];
-//    var_dump($require_refund_data);
     $refund_message = $require_refund_data['message'];
+    var_dump($require_refund_data);
 }
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
@@ -35,7 +38,7 @@ if(req('flag') == 'rf'){
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName;?>">
 </form>
 <?
-if (notnull($check_form_data)){
+if (notnull($require_refund_data)){
     $js = "<script>document.getElementById('refundForm').submit();</script>";
     echo $js;
 }

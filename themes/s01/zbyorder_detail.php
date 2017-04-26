@@ -175,7 +175,7 @@ if (!defined('IN_CLOOTA')) {
         <span class="refundInfo_close"></span>
     </div>
     <div class="refundInfoCont">
-        <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?flag=rf">
+        <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html?flag=rf">
             <input type="hidden" name="orderCode" value="<?echo $orderCode;?>">
             <div class="refundInfoCont1">
                 <span>退款原因：</span>
@@ -190,35 +190,18 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo_table">
                     <div class="orderInfo_table_title">
                         <ul>
-                            <li class="orderInfo_table_tr1">订单名称</li>
-                            <li class="orderInfo_table_tr2">订单金额</li>
-                            <?if($refund_product_data['deductFee'] == null && $refund_product_data['refundFee'] == null){ ?>
-                                <li class="orderInfo_table_tr2">退款说明</li>
-                            <? }else { ?>
-                                <li class="orderInfo_table_tr3">扣款金额</li>
-                                <li class="orderInfo_table_tr4">退款金额</li>
-                            <? } ?>
+                            <li class="orderInfo_table_tr1">产品名</li>
+                            <li class="orderInfo_table_tr2">套餐名称</li>
+                            <li class="orderInfo_table_tr2">客服说明</li>
                         </ul>
                     </div>
                     <div class="orderInfo_table_cont">
                         <ul>
                             <li class="orderInfo_table_tr1"><? echo $refund_product_data['goodsName']; ?></li>
                             <li class="orderInfo_table_tr2"
-                                style="color: #ff6600;">&yen;<? echo $refund_product_data['totalFee'] ?></li>
-                            <?if($refund_product_data['deductFee'] == null && $refund_product_data['refundFee'] == null) { ?>
-                                <li class="orderInfo_table_tr2"
-                                    style="color: #ff6600;">具体的退款规则会有工作人员与您说明</li>
-                            <? } else { ?>
-                                <li class="orderInfo_table_tr3">
-                                    <p style="color: #ff6600;">&yen;<? echo $refund_product_data['deductFee']; ?></p>
-                                    <p>&yen;<? echo $refund_product_data['deductFee']; ?>
-                                        | <? echo $refund_product_data['goodsName']; ?></p>
-                                    <p style="color: #bababa;">
-                                        扣款说明：<? echo $refund_product_data['refundExplain']; ?></p>
-                                </li>
-                                <li class="orderInfo_table_tr4"
-                                    style="color: #ff6600;">&yen;<? echo $refund_product_data['refundFee']; ?>  </li>
-                            <? } ?>
+                                style="color: #ff6600;"><? echo $refund_product_data['packageName'] ?></li>
+                            <li class="orderInfo_table_tr2"
+                                style="color: #ff6600;"><? echo $refund_product_data['refundCustomerInfo'] ?></li>
                         </ul>
                     </div>
                 </div>
@@ -303,11 +286,11 @@ if (!defined('IN_CLOOTA')) {
 <?}?>
 
 
-<!--    //退款成功失败提示-->
+<!--    //能否退款提示-->
 
-    <div class="tuikuanSuccessBox" style="width: 400px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;display: none;">
-        <p style="width: 400px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?if ($require_refund['status'] != '0000'){echo $require_refund_data['failReason'];}else {echo $require_refund_data['refundCustomerInfo'];}?></p>
-        <a href="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?rstatus=<?echo $require_refund['status'];?>"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 300px;border:none;border-radius: 2px;">确定</button></a>
+    <div class="tuikuanSuccessBox" style="width: 400px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;display:none;">
+        <p style="width: 400px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?echo $failReason;?></p>
+        <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 300px;border:none;border-radius: 2px;">确定</button></a>
     </div>
 
 
@@ -351,14 +334,15 @@ if (!defined('IN_CLOOTA')) {
             },
             async: false,
             success: function (data) {
-                alert(data);
-//                if(data = 'false'){
-//                    $('.refundInfo').show();
-//                    $('.applyRefund').hide();
-//                } else {
-//                    $('.tuikuanSuccessBox').show();
-////                    $('.applyRefund').hide();
-//                }
+//                alert(data);
+                if(data = true){
+                    $('.refundInfo').show();
+                    $('.applyRefund').hide();
+                } else {
+                    $('.tuikuanSuccessBox').show();
+                    $('.applyRefund').hide();
+                    $("#mengban").hide();
+                }
             }
         });
 
