@@ -149,68 +149,68 @@
             <div class="detail-title">
                 <a href="/product/detail-<?= $c_goods['goods_id'] ?>.html"
                    title="<?= $c_goods['goods_name'] ?>"><?= $c_goods['goods_name'] ?></a>
-                <? if ($c_goods['is_sale'] == '0') { ?>
-                    <i style="color:red">【已下架】</i>
-                <? } ?>
-                <?
-                if ($c_goods['sale_type'] > 0) {
-                    if (date('Y-m-d H:i:s') >= $c_goods['sale_end']) {
-                        ?>
-                        <i style="color:red">【已过期】</i>
-                        <?
-                    }
-                }
-                ?>
+<!--                --><?// if ($c_goods['is_sale'] == '0') { ?>
+<!--                    <i style="color:red">【已下架】</i>-->
+<!--                --><?// } ?>
+<!--                --><?//
+//                if ($c_goods['sale_type'] > 0) {
+//                    if (date('Y-m-d H:i:s') >= $c_goods['sale_end']) {
+//                        ?>
+<!--                        <i style="color:red">【已过期】</i>-->
+<!--                        --><?//
+//                    }
+//                }
+//                ?>
 
-                <? if ($c_goods['is_sale'] == '1') { ?>
-                    <? if ($c_goods['is_hot'] == '1') { ?><i class="tag-btn">热卖</i><? } ?>
-                <? } ?>
+<!--                --><?// if ($c_goods['is_sale'] == '1') { ?>
+<!--                    --><?// if ($c_goods['is_hot'] == '1') { ?><!--<i class="tag-btn">热卖</i>--><?// } ?>
+<!--                --><?// } ?>
                 <i class="tag-btn"><?= $g_product_type[$c_goods_type] ?></i>
             </div>
             <div class="d-con">
                 <div class="d_row gray-c">原 价：
                     <del>&yen;<?= $data['realPrice'] ?></del>
-                    <a href="javascript:void(0);" class="rel d_sm">起价说明<span class="box-tips" style="display:none "><i
-                                class="icon"></i><strong>起价说明</strong><br>本起价是按双人出行共用一间房核算的单人价格，产品价格根据您所选择的出发日期、出行人数、入住酒店房型、航班或交通以及所选附加服务的不同而有所差别。</span>
-                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
+<!--                    <a href="javascript:void(0);" class="rel d_sm">起价说明<span class="box-tips" style="display:none "><i-->
+<!--                                class="icon"></i><strong>起价说明</strong><br>本起价是按双人出行共用一间房核算的单人价格，产品价格根据您所选择的出发日期、出行人数、入住酒店房型、航班或交通以及所选附加服务的不同而有所差别。</span>-->
+<!--                    </a>&nbsp;&nbsp;&nbsp;&nbsp;-->
                     <span class="yellow-a">【编号：<?= $data['goodsCode'] ?>】</span>
                 </div>
                 <div class="d_row gray-c d_price">优惠价
                     <span class="yellow-a"><i>&yen;</i> <em><?= $data['minPrice'] ?></em><sub> 起</sub></span>
-                    <a href="javascript:void(0);" class="rel">支付说明<span class="box-tips"
-                                                                        style="display:none; width:162px;">
-					<i class="icon"></i>享受<?= $g_sitename ?>直减价格</span></a>
+<!--                    <a href="javascript:void(0);" class="rel">支付说明<span class="box-tips"-->
+<!--                                                                        style="display:none; width:162px;">-->
+<!--					<i class="icon"></i>享受--><?//= $g_sitename ?><!--直减价格</span></a>-->
                 </div>
                 <div class="d_row gray-c route-line">
                     <label>建议提前</label>
-                    <div><span class="route-day"><?= $c_goods['before_days'] ?></span><span class="gray-b">天预订</span>
+                    <div><span class="route-day"><?= $data['before_days'] ?></span><span class="gray-b">天预订</span>
                     </div>
                 </div>
 
                 <div class="d_row gray-c">
-                    <? if ($c_goods['src_prov'] != '') { ?>
-                        出发地：<span class="gray-b">  <?= $c_goods['src_prov'] ?> <?= $c_goods['src_city'] ?> </span><br/>
-                    <? } ?>
+<!--                    --><?// if ($c_goods['src_prov'] != '') { ?>
+                        出发地：<span class="gray-b"><?= $db->to_gbk($data['departureCity']) ?> </span><br/>
+<!--                    --><?// } ?>
 
-                    <? if ($c_goods['dist_prov'] != '') { ?>
-                        目的地： <span class="gray-b"><?= $c_goods['dist_prov'] ?> <?= $c_goods['dist_city'] ?> </span><br/>
-                    <? } ?>
+<!--                    --><?// if ($c_goods['dist_prov'] != '') { ?>
+                        目的地： <span class="gray-b"> <?= $db->to_gbk($data['distCity']) ?> </span><br/>
+<!--                    --><?// } ?>
 
 
-                    服务商： <span class="gray-b"><a href="<?= $c_shop_url ?>"
-                                                 target="_blank"><?= $db->to_gbk($data['shopName']) ?></a> </span>
+                    服务商： <span class="gray-b"><?= $db->to_gbk($data['shopName']) ?> </span><br/>
+                    好评率： <span class="gray-b"><?= $db->to_gbk($data['favorableRate']) ?> </span>
                 </div>
 
                 <a href="/member/?cmd=<?= base64_encode('checkout.php') ?>&goods_type=<?= $c_goods['goods_type'] ?>&goods_id=<?= $c_goods['goods_id'] ?>"
                    class="btn btn-lg" target="_blank"
                    <? if ($c_goods['goods_type'] != '3'){ ?>style="display:none"<? } ?>>立即预订</a>
 
-                <dl class="d-code">
-                    <dd>
-                        <img src="<?= $g_sys_home ?>/qr/?v=<?= $g_full_url ?>" style="width:94px;height:94px"
-                             title="微信扫描二维码">
-                    </dd>
-                </dl>
+<!--                <dl class="d-code">-->
+<!--                    <dd>-->
+<!--                        <img src="--><?//= $g_sys_home ?><!--/qr/?v=--><?//= $g_full_url ?><!--" style="width:94px;height:94px"-->
+<!--                             title="微信扫描二维码">-->
+<!--                    </dd>-->
+<!--                </dl>-->
             </div>
         </div>
         <div class="detail-recommend" <? if ($c_goods['goods_type'] == '3'){ ?>style="display:none"<? } ?>>
@@ -336,7 +336,7 @@
         </li>
         <li href="#cost"><a href="#cost">费用说明</a></li>
         <li href="#infomation"><a href="#infomation">预订须知</a></li>
-        <li href="#commentzone"><a href="#commentzone">游客点评</a></li>
+<!--        <li href="#commentzone"><a href="#commentzone">游客点评</a></li>-->
         <li class="last"><a class="btn" href="#searchzone">立即预订</a></li>
     </ul>
     <div class="container">
@@ -423,10 +423,10 @@
                     <div class="detail-article d-pad no-border">
                         <ul class="detail-daylist">
                             <?
-                            if (notnull($all_titles)) {
-                                foreach ($all_titles as $key => $v) {
+                            if (notnull($scheduling)) {
+                                foreach ($scheduling as $key => $v) {
                                     ?>
-                                    <li id="pro-days" class="selected" data-id="day<?= $key ?>">第<?= $key ?>天</li>
+                                    <li id="pro-days" class="selected" data-id="day<?= $key ?>">第<?= $key+1 ?>天</li>
                                     <?
                                 }
                             }
@@ -434,17 +434,17 @@
                         </ul>
                         <div class="detail-route">
                             <?
-                            if (notnull($all_titles)) {
-                                foreach ($all_titles as $key => $v) {
+                            if (notnull($scheduling)) {
+                                foreach ($scheduling as $key => $v) {
                                     ?>
                                     <div id="day1">
-                                        <div class="detail-h5"><i class="lv-icon ico-day">D<?= $key ?></i><?= $v ?>
+                                        <div class="detail-h5"><i class="lv-icon ico-day">D<?= $key+1 ?></i><?= $db->to_gbk($v['title']) ?>
                                         </div>
-                                        <div> <?= nl2br($all_contents[$key]) ?> </div>
+                                        <div> <?= nl2br($db->to_gbk($v['content'])) ?> </div>
 
                                         <ul class="detail-column">
-                                            <? for ($g = 1; $g <= 4; $g++) {
-                                                $img = $all_images[$key][$g];
+                                            <? foreach($v['image'] as $img) {
+//                                                $img = $all_images[$key][$g];
                                                 if ($img != '') {
                                                     ?>
                                                     <li><a class="showBig" rel="group1" href="#"> <img src="<?= $img ?>"
@@ -456,20 +456,20 @@
                                             ?>
                                         </ul>
                                         <div style="clear:both"></div>
-                                        <? if ($all_tools[$key]['house'] != '') { ?>
+                                        <? if ($v['tool']['house'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
-                                                    class="fa fa-building-o"></em> 住宿：<?= $all_tools[$key]['house'] ?>
+                                                    class="fa fa-building-o"></em> 住宿：<?= $db->to_gbk($v['tool']['food']) ?>
                                             </div>
                                             <?
                                         } ?>
-                                        <? if ($all_tools[$key]['food'] != '') { ?>
+                                        <? if ($v['tool']['food'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
-                                                    class="fa fa-coffee"></em> 用餐：<?= $all_tools[$key]['food'] ?></div>
+                                                    class="fa fa-coffee"></em> 用餐：<?= $db->to_gbk($v['tool']['food']) ?></div>
                                             <?
                                         } ?>
-                                        <? if ($all_tools[$key]['traffic'] != '') { ?>
+                                        <? if ($v['tool']['traffic'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
-                                                    class="fa fa-bus"></em> 交通：<?= $all_tools[$key]['traffic'] ?></div>
+                                                    class="fa fa-bus"></em> 交通：<?= $db->to_gbk($v['tool']['traffic']) ?></div>
                                             <?
                                         } ?>
                                         <div style="clear:both"><br/></div>
@@ -489,9 +489,7 @@
                         <div class="fl">费用说明</div>
                         <ul class="detail-menu tab-menu">
                             <li id="pro-tab1" onclick="price_note(1)">费用包含</li>
-                            <li><?= $db->to_gbk($data['priceExplainList']['0']) ?></li>
                             <li id="pro-tab2" onclick="price_note(2)">费用不包含</li>
-                            <li><?= $db->to_gbk($data['priceExplainList']['1']) ?></li>
                         </ul>
                     </div>
                     <div class="detail-article no-border tab-content">
@@ -501,10 +499,10 @@
                             </ol>
                         </div>
                         <div style="display:none;" id="price_note_html">
-                            <?= nl2br(stripslashes($c_goods['price_note'])) ?>
+                            <?= nl2br(stripslashes( $db->to_gbk($data['priceExplainList']['0']) )) ?>
                         </div>
                         <div style="display:none;" id="unprice_note_html">
-                            <?= nl2br(stripslashes($c_goods['unprice_note'])) ?>
+                            <?= nl2br(stripslashes( $db->to_gbk($data['priceExplainList']['1']) )) ?>
                         </div>
                     </div>
                 </div>
@@ -542,83 +540,83 @@
                 <!-- 旅游攻略 -->
 
                 <!-- 游客点评 -->
-                <div id="commentzone" class="toscroll">
-                    <div class="detail-h2"><i class="lv-icon ico-h25">&nbsp;</i>用户点评</div>
-                    <div class="detail-comment">
-                        <?
-                        if (notnull($comment_list)) {
-                            ?>
-                            <div class="info">
-                                <div class="count">
-                                    <div class="green-a"><strong class="num"><?= $avg_comment_score ?></strong>&nbsp;分
-                                    </div>
-                                    <div><i title="5星" class="icon ico-stars<?= round($avg_comment_score) ?>">&nbsp;</i>
-                                    </div>
-                                    <div class="line-height"><? if ($stat_comment_total > 0) {
-                                            ?>来自<?= $stat_comment_total ?>位用户<? } else {
-                                            ?>暂无点评<? } ?></div>
-                                </div>
-                                <ul class="progress">
-                                    <li>
-                                        <label for="">好评<span class="gray-c">（<?= $data['favorableRate'] ?>
-                                                ）</span></label>
-                                        <div class="bar-group">
-                                            <div class="bar-green" style="width:0%"></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="go-order">进入"<a
-                                        href="<?= $g_domain ?>member/?cmd=<?= base64_encode('order.php') ?>">我的订单</a>"点评已成功出行的旅游产品吧~
-                                </div>
-                            </div>
-
-                            <div><br/></div>
-                        <? } ?>
-
-                        <?
-                        if (notnull($comment_list)) {
-                            ?>
-                            <div>
-                                <?
-                                foreach ($comment_list as $val) {
-                                    if ($val['nickname'] != '') $nick = $val['nickname'];
-                                    elseif ($val['username'] != '') $nick = $val['username'];
-                                    elseif ($val['account'] != '') $nick = $val['account'];
-
-                                    $nick = substr($nick, 0, 5) . '***'
-                                    ?>
-                                    <dl class="comment-row">
-                                        <dt>
-                                        <div class="uhead"></div>
-                                        <div><?= $nick ?></div>
-                                        </dt>
-                                        <dd><i class="icon ico-smile"></i>
-                                            <div class="line-height"> <?= $val['content'] ?> </div>
-                                            <div
-                                                class="font12 gray-c mt10"><?= $g_comment_level[$val['comment_level']] ?> </div>
-                                            <div
-                                                class="font12 gray-c mt10"><?= date('Y-m-d', strtotime($val['addtime'])) ?></div>
-                                            <div class="userful"><a href="javascript:;"><i
-                                                        class="lv-icon ico-zan"></i><span
-                                                        class="zan selected">+1</span></a></div>
-                                        </dd>
-                                    </dl>
-                                <? } ?>
-                            </div>
-                        <? } else {
-                            ?>
-                            <div class="tab-content">
-                                <div id="comment">
-                                    <div class="nothing">
-                                        <p>还没有游客点评呢~</p>
-                                        <p>发表评价可获得积分，前5位评价的游客可获得更多惊喜哦！</p>
-                                    </div>
-                                </div>
-                            </div>
-                        <? } ?>
-                    </div>
-                </div>
-            </div>
+<!--                <div id="commentzone" class="toscroll">-->
+<!--                    <div class="detail-h2"><i class="lv-icon ico-h25">&nbsp;</i>用户点评</div>-->
+<!--                    <div class="detail-comment">-->
+<!--                        --><?//
+//                        if (notnull($comment_list)) {
+//                            ?>
+<!--                            <div class="info">-->
+<!--                                <div class="count">-->
+<!--                                    <div class="green-a"><strong class="num">--><?//= $avg_comment_score ?><!--</strong>&nbsp;分-->
+<!--                                    </div>-->
+<!--                                    <div><i title="5星" class="icon ico-stars--><?//= round($avg_comment_score) ?><!--">&nbsp;</i>-->
+<!--                                    </div>-->
+<!--                                    <div class="line-height">--><?// if ($stat_comment_total > 0) {
+//                                            ?><!--来自--><?//= $stat_comment_total ?><!--位用户--><?// } else {
+//                                            ?><!--暂无点评--><?// } ?><!--</div>-->
+<!--                                </div>-->
+<!--                                <ul class="progress">-->
+<!--                                    <li>-->
+<!--                                        <label for="">好评<span class="gray-c">（--><?//= $data['favorableRate'] ?>
+<!--                                                ）</span></label>-->
+<!--                                        <div class="bar-group">-->
+<!--                                            <div class="bar-green" style="width:0%"></div>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                                <div class="go-order">进入"<a-->
+<!--                                        href="--><?//= $g_domain ?><!--member/?cmd=--><?//= base64_encode('order.php') ?><!--">我的订单</a>"点评已成功出行的旅游产品吧~-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!---->
+<!--                            <div><br/></div>-->
+<!--                        --><?// } ?>
+<!---->
+<!--                        --><?//
+//                        if (notnull($comment_list)) {
+//                            ?>
+<!--                            <div>-->
+<!--                                --><?//
+//                                foreach ($comment_list as $val) {
+//                                    if ($val['nickname'] != '') $nick = $val['nickname'];
+//                                    elseif ($val['username'] != '') $nick = $val['username'];
+//                                    elseif ($val['account'] != '') $nick = $val['account'];
+//
+//                                    $nick = substr($nick, 0, 5) . '***'
+//                                    ?>
+<!--                                    <dl class="comment-row">-->
+<!--                                        <dt>-->
+<!--                                        <div class="uhead"></div>-->
+<!--                                        <div>--><?//= $nick ?><!--</div>-->
+<!--                                        </dt>-->
+<!--                                        <dd><i class="icon ico-smile"></i>-->
+<!--                                            <div class="line-height"> --><?//= $val['content'] ?><!-- </div>-->
+<!--                                            <div-->
+<!--                                                class="font12 gray-c mt10">--><?//= $g_comment_level[$val['comment_level']] ?><!-- </div>-->
+<!--                                            <div-->
+<!--                                                class="font12 gray-c mt10">--><?//= date('Y-m-d', strtotime($val['addtime'])) ?><!--</div>-->
+<!--                                            <div class="userful"><a href="javascript:;"><i-->
+<!--                                                        class="lv-icon ico-zan"></i><span-->
+<!--                                                        class="zan selected">+1</span></a></div>-->
+<!--                                        </dd>-->
+<!--                                    </dl>-->
+<!--                                --><?// } ?>
+<!--                            </div>-->
+<!--                        --><?// } else {
+//                            ?>
+<!--                            <div class="tab-content">-->
+<!--                                <div id="comment">-->
+<!--                                    <div class="nothing">-->
+<!--                                        <p>还没有游客点评呢~</p>-->
+<!--                                        <p>发表评价可获得积分，前5位评价的游客可获得更多惊喜哦！</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        --><?// } ?>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <!-- 点评内容 end -->
 
             <!-- 底部猜你喜欢 -->
@@ -664,32 +662,7 @@
 
 </div>
 <!--js-->
-<script type="text/javascript">
-    function order_window() {
-        if ($('#departdate').val() == '') {
-            alert('亲，您没有选择出发日期！');
-            return false;
-        }
 
-        if ($('#adult_num').val() == '0') {
-            alert('亲，您没有选择人数！');
-            return false;
-        }
-
-
-        var url = "";
-        url = "/zhoubianyou/zbyform_submit";
-        url += "-<?=$c_goods['goods_type']?>";
-        url += "-<?=$c_goods['goods_id']?>";
-        url += "-<?=$c_goods['goods_name']?>";
-        url += "-" + $('#adult_num').val();
-        url += "-" + $('#kid_num').val();
-        url += "-" + $('#departdate').val();
-        url += "-" + $('#payPrice').val();
-        url += ".html";
-        window.top.location.href = url;
-    }
-</script>
 
 <script type="text/javascript">
     var isPackage = '';
@@ -698,8 +671,10 @@
     var adultNum = '';
     var kidPrice = '';
     var kidNum = '';
-    var fangchaPrice = '';
-    var fangchaNum = '';
+    var departDate = '';
+    var packageId = '';
+    var diffPrice = '';
+    var diffPriceNum = '';
     $(document).ready(function () {
         change_calendar(<?=date("'Y','m'")?>);
 //                            $('#startDate').focus(function () {
@@ -717,6 +692,7 @@
             });
         });
     });
+
     function change_calendar(yyyy, mm) {
         var v_url = "";
         v_url = "/member/ajax.calendarss.php?rnd=" + Math.random();
@@ -729,7 +705,7 @@
             if ($(this).find('.date_yen').eq(0).html() != "") {
                 $('#startDate').val(yyyy + '-' + mm + '-' + $(this).html().split("<br>")[0]);
                 $('#v_calendar1').hide();
-                var departDate = $('#startDate').val();
+                departDate = $('#startDate').val();
                 var goodsId = <?= $goodsId ?>;
                 $.ajax({
                     type: "POST",
@@ -837,15 +813,20 @@
                         //套餐选择按钮
                         for (var i = 0; i < $('.product_select1').length; i++) {
                             $('.product_select1').eq(i).click(function () {
+                                $('.fangchajia').html("");
                                 $('.product_select1').removeClass('select_selected');
                                 $(this).addClass("select_selected");
-                                var packageId = $(this).find("input").eq(0).val();
+                                packageId = $(this).find("input").eq(0).val();
                                 isPackage = $(this).find("input").eq(1).val();
                                 var min = $(this).find("input").eq(2).val();
                                 var max = $(this).find("input").eq(3).val();
                                 roomMax = $(this).find("input").eq(4).val();
                                 adultPrice = $(this).find("input").eq(5).val();
                                 kidPrice = $(this).find("input").eq(6).val();
+                                adultNum = $(this).find("input").eq(7).val();
+                                kidNum = $(this).find("input").eq(8).val();
+                                diffPrice = $(this).find("input").eq(9).val();
+                                var childPriceInfo = "<?= $data['childPriceInfo']?>";
                                 $.ajax({
                                     type: "POST",
                                     url: "/model/get_number.model.php",
@@ -855,13 +836,17 @@
                                         "packageId": packageId,
                                         "isPackage": isPackage,
                                         "min": min,
-                                        "max": max
+                                        "max": max,
+                                        "adultNum": adultNum,
+                                        "kidNum": kidNum,
+                                        "childPriceInfo":childPriceInfo
                                     },
                                     async: false,
                                     success: function (data) {
                                         $('.number').html("");
                                         $('.number').html(data);
                                         $('.number').show();
+                                        $("#count_result").html();
                                         //起价提示qijia
                                         $('.qijia').hover(function () {
                                             $(this).css({
@@ -909,22 +894,23 @@
                 });
             }
         });
-    }
+    };
 
-</script>
-<script type="text/javascript">
-    function getNum(text) {
-        var value = text.replace(/[^0-9]/ig, "");
-        value = value.substring(1);
-        return value;
-    }
-    ;
-
-    function count_price() {
-        adultNum = $('#adult_num').val();
-        kidNum = $('#kid_num').val();
-        var goodsType = "<?= $data['goodsType']?>";
-        if (isPackage != '') {
+    function get_price() {
+        if(isPackage == 'false') {
+            adultNum = $('#adult_num').val();
+            kidNum = $('#kid_num').val();
+            diffPriceNum = $('#diffPrice').val();
+            var zongjia = "&yen;";
+            zongjia += adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
+            $("#count_result").html(zongjia);
+        }
+    };
+    function count_price(){
+        if(isPackage == 'false'){
+            adultNum = $('#adult_num').val();
+            kidNum = $('#kid_num').val();
+            var goodsType = "<?= $data['goodsType']?>";
             $.ajax({
                 type: "POST",
                 url: "/member/ajax.price.php",
@@ -932,27 +918,76 @@
                     "adultNum": adultNum,
                     "roomMax": roomMax,
                     "goodsType": goodsType,
-                    "isPackage": isPackage
+                    "isPackage": isPackage,
+                    "diffPrice": diffPrice
                 },
                 async: false,
                 success: function (data) {
                     $('.fangchajia').html("");
                     $('.fangchajia').html(data);
                     $('.fangchajia').show();
+                    diffPriceNum = $('#diffPrice').val();
+                    var zongjia = "&yen;";
+                        zongjia += adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
+                    $("#count_result").html(zongjia);
                 }
             });
+        }else{
+            var fenshu = $('#fenshu').val();
+            var zongjia = "&yen;";
+                zongjia += (adultPrice*adultNum + kidPrice*kidNum)*fenshu;
+            $("#count_result").html(zongjia);
         }
-        var zongjia = adultPrice*adultNum + kidPrice*kidNum;
-        $("#count_result").html(zongjia);
-        //                var $price1 = $(this).find('.date_yen').eq(0).html().split('</span>')[1].slice(1).split('/人')[0];
-//                                        $('#zongjia').val($price1);
-//                                        singlePrice = $('#zongjia').val();
-//                                        $('.danjia').html("&yen;" + $price1);
-//                                        $('.danjia1').html($('.counts').html() + "x &yen;" + $price1);
-//                                        $('.totalPrice').html($('.counts').html() * $price1);
-//                                        $("#danjias").val(singlePrice);
+    };
+</script>
+<script type="text/javascript">
+    function order_window() {
+        if ($('#departdate').val() == '') {
+            alert('亲，您没有选择出发日期！');
+            return false;
+        }
+
+        if ($('#adult_num').val() == '0') {
+            alert('亲，您没有选择人数！');
+            return false;
+        }
+        if(isPackage == false){
+            $.ajax({
+                type: "POST",
+                url: "zbyform_submit.php",
+                data: {
+                    "isPackage": isPackage,
+                    "packageId": packageId,
+                    "departDate": departDate,
+                    "adultNum": adultNum,
+                    "kidNum": kidNum,
+                    "diffPrice": diffPrice
+                },
+                async: false,
+                success: function (data) {
+                    window.location.href = <?= $g_self_domain ?> + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+                }
+            })
+        } else {
+            var fenshu = $('#fenshu').val();
+            $.ajax({
+                type: "POST",
+                url: "zbyform_submit.php",
+                data: {
+                    "isPackage": isPackage,
+                    "packageId": packageId,
+                    "departDate": departDate,
+                    "adultNum": adultNum,
+                    "kidNum": kidNum,
+                    "packageNum": fenshu
+                },
+                async: false,
+                success: function (data) {
+                    window.location.href = <?= $g_self_domain ?> + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+                }
+            })
+        }
     }
-    ;
 </script>
 <script>
     seajs.use(["freeproduct", 'comment', 'yoslide'], function (product, comment, yoslide) {
