@@ -53,6 +53,7 @@ $order_detail = array_iconv($order_detail);
 //    if ($order_detail['status'] != '0000') {
 //        exit('订单失败');
 //    }
+//var_dump($order_detail);
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
 //取消订单
@@ -83,5 +84,5 @@ $rstatus = req('rstatus');
 if($rstatus == '0000'){
     $st = 0;
 }
-$st = 1;
+$st = 2;
 //?>
