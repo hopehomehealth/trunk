@@ -109,14 +109,14 @@ if (!defined('IN_CLOOTA')) {
                             <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
                             <td class="productOther"><? echo $order_detail_data['num']; ?></td>
                             <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                            <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
-                            <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
+                            <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
+                            <td class="productXiaoji"><? echo $order_detail_data['num'] * $order_detail_data['adultPrice']; ?></td>
                         <? } ?>
 
                         </tbody>
                     </table>
 
-                    <p><span>订单总金额：￥<b><? echo $order_detail_data['orderFee']; ?></b></span></p>
+                    <p><span>订单总金额：￥<b><? echo $order_detail_data['payPrice']; ?></b></span></p>
                 </div>
 
 
@@ -233,6 +233,7 @@ if (!defined('IN_CLOOTA')) {
 </div>
 
 
+
 <!-- 取消订单弹窗 -->
 <div class="cancelBox hide">
     <div class="cancelBox_title">
@@ -301,6 +302,15 @@ if (!defined('IN_CLOOTA')) {
     </div>
 <?}?>
 
+
+<!--    //退款成功失败提示-->
+
+    <div class="tuikuanSuccessBox" style="width: 400px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;display: none;">
+        <p style="width: 400px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?if ($require_refund['status'] != '0000'){echo $require_refund_data['failReason'];}else {echo $require_refund_data['refundCustomerInfo'];}?></p>
+        <a href="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?rstatus=<?echo $require_refund['status'];?>"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 300px;border:none;border-radius: 2px;">确定</button></a>
+    </div>
+
+
 <!--  foot  start -->
 <? include 'foot.php'; ?>
 <!--  foot  end -->
@@ -325,14 +335,35 @@ if (!defined('IN_CLOOTA')) {
     //申请退款按钮弹框
     for(var i=0;i<$('.applyRefundBtn').length;i++){
         $('.applyRefundBtn').eq(i).click(function(){
+//            alert('sdfsfs');
             $("#mengban").show();
             $('.applyRefund').show();
         });
     }
 
     $('.applyRefund_sure').click(function(){
-        $('.refundInfo').show();
-        $('.applyRefund').hide();
+        var orderCode = "<?= $orderCode ?>";
+        $.ajax({
+            type: "POST",
+            url: "/model/zbycheck_refund.model.php",
+            data: {
+                "orderCode": orderCode
+            },
+            async: false,
+            success: function (data) {
+                alert(data);
+//                if(data = 'false'){
+//                    $('.refundInfo').show();
+//                    $('.applyRefund').hide();
+//                } else {
+//                    $('.tuikuanSuccessBox').show();
+////                    $('.applyRefund').hide();
+//                }
+            }
+        });
+
+
+
     });
     $('.applyRefund_cancel').click(function(){
         $('.applyRefund').hide();
@@ -398,7 +429,8 @@ if (!defined('IN_CLOOTA')) {
         window.location.href = url;
     }
     function order_again(){
-        var url = "";
+//        var url = "<?//=$g_self_domain;?>///product/detail-8000000.html";
+        var url = "<?=$g_self_domain;?>/product/detail-<?=$order_detail_data['goodsId']?>.html";
         window.location.href = url;
     }
 </script>

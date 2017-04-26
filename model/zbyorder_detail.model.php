@@ -5,16 +5,20 @@ $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $refundReasonCode = req('refundReasonCode');
 
 //退款产品信息检验
-$post1 = array('orderCode' => $orderCode, 'token' => $token);
-$refund_product = juhecurl($host."/travel/interface/zby/zbyRefundInfo",$post1, 1);
-$refund_product = json_decode($refund_product, true);
-$refund_product = array_iconv($refund_product);
-$refund_product_data = $refund_product['data'];
-//echo "<pre>";
-//var_dump($refund_product_data);
-$refundReasonList = $refund_product_data['refundReasonList'];
-
-
+if (req('flag') == 'chk') {
+    $post1 = array('orderCode' => $orderCode, 'token' => $token);
+    $refund_product = juhecurl($host . "/travel/interface/zby/zbyRefundInfo", $post1, 1);
+    $refund_product = json_decode($refund_product, true);
+    $refund_product = array_iconv($refund_product);
+    $refund_product_data = $refund_product['data'];
+    $refundReasonList = $refund_product_data['refundReasonList'];
+    $isChange = $refund_product_data['isChange'];
+    $failReason = $refund_product_data['failReason'];
+    if (!$isChange !== "true"){
+        echo "<script>alert('该产品不能申请退款！');history.go(-1)</script>";
+        exit;
+    }
+}
 //退款申请
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
@@ -84,5 +88,5 @@ $rstatus = req('rstatus');
 if($rstatus == '0000'){
     $st = 0;
 }
-$st = 2;
+$st = 1;
 //?>
