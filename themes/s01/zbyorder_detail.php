@@ -164,31 +164,74 @@ if (!defined('IN_CLOOTA')) {
 
 
 <!-- 黑色蒙层 -->
-<div id="mengban hide"></div>
-
+<div id="mengban" class="hide"></div>
 
 
 <!-- 退款说明信息 -->
+
 <div class="refundInfo hide">
     <div class="refundInfo_top">
-        <h3>退款说明</h3>
+        <h3 style="font-weight:bold;">退款申请</h3>
         <span class="refundInfo_close"></span>
     </div>
     <div class="refundInfoCont">
-        (1)免费政策：a. 1.2米（不含）以下的儿童免票。（每名购票成人限带一名身高低于1.2米的儿童）b. 70周岁（含）以上的老人（凭本人身份证件入园）免费。c.
-        持国家残联颁发第二代《残疾证》的残疾人免票，盲人、智障、生活不能自理的残疾人需家人（需购票）陪同入园。免费。<br>(2) a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b.
-        60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
-        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
-        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
-        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
-        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
-        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
-        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
-        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。<br>(2)
-        a. 1.2米（含）~1.5米（含）的儿童享160元/人。（至景区办理）b. 60周岁（含）~69周岁（含）的老人（凭有效身份证件入园）享60元/人。（至景区办理）c.
-        2016年3月16日--2016年11月15日，凡中国籍游客生日当天（以身份证日期为准）（凭本人身份证件）【身份证、驾驶证、户口本（需配合含本人头像的有效证件）】门市购买日场全价门票）享半价优惠即130元/张。
+        <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?flag=rf">
+            <input type="hidden" name="orderCode" value="<?echo $orderCode;?>">
+            <div class="refundInfoCont1">
+                <span>退款原因：</span>
+                <select name="refundReasonCode">
+                    <? foreach ($refundReasonList as $key => $value) { ?>
+                        <option  value="<? echo $value['code']; ?>"><? echo $value['name']; ?></option>
+                    <? } ?>
+                </select>
+            </div>
+            <div class="refundInfoCont2">
+                <h4 style="font-weight:bold;font-size:14px;">退款明细</h4>
+                <div class="orderInfo_table">
+                    <div class="orderInfo_table_title">
+                        <ul>
+                            <li class="orderInfo_table_tr1">订单名称</li>
+                            <li class="orderInfo_table_tr2">订单金额</li>
+                            <?if($refund_product_data['deductFee'] == null && $refund_product_data['refundFee'] == null){ ?>
+                                <li class="orderInfo_table_tr2">退款说明</li>
+                            <? }else { ?>
+                                <li class="orderInfo_table_tr3">扣款金额</li>
+                                <li class="orderInfo_table_tr4">退款金额</li>
+                            <? } ?>
+                        </ul>
+                    </div>
+                    <div class="orderInfo_table_cont">
+                        <ul>
+                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['goodsName']; ?></li>
+                            <li class="orderInfo_table_tr2"
+                                style="color: #ff6600;">&yen;<? echo $refund_product_data['totalFee'] ?></li>
+                            <?if($refund_product_data['deductFee'] == null && $refund_product_data['refundFee'] == null) { ?>
+                                <li class="orderInfo_table_tr2"
+                                    style="color: #ff6600;">具体的退款规则会有工作人员与您说明</li>
+                            <? } else { ?>
+                                <li class="orderInfo_table_tr3">
+                                    <p style="color: #ff6600;">&yen;<? echo $refund_product_data['deductFee']; ?></p>
+                                    <p>&yen;<? echo $refund_product_data['deductFee']; ?>
+                                        | <? echo $refund_product_data['goodsName']; ?></p>
+                                    <p style="color: #bababa;">
+                                        扣款说明：<? echo $refund_product_data['refundExplain']; ?></p>
+                                </li>
+                                <li class="orderInfo_table_tr4"
+                                    style="color: #ff6600;">&yen;<? echo $refund_product_data['refundFee']; ?>  </li>
+                            <? } ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="refundInfoCont3">
+            <button class="tijiao" onclick="refund_commit()">提交</button>
+            <!--                    <a href="--><?//=$nowUrl?><!----><?//=$flagr?><!--"><button class="tijiao">提交</button></a>-->
+            <button class="quxiao">取消</button>
+        </div>
     </div>
 </div>
+
 
 <!-- 取消订单弹窗 -->
 <div class="cancelBox hide">
@@ -225,8 +268,7 @@ if (!defined('IN_CLOOTA')) {
 
     <div class="applyRefund_cont">
         <div class="applyRefund_cont_tips">&nbsp;&nbsp;是否申请退款?</div>
-        <button class="applyRefund_sure" onclick="refund_commit()">确认</button>
-        <!--			<a href="--><?//=$nowUrl?><!----><?//=$flagch?><!--"><button class="applyRefund_sure">确认</button></a>-->
+        <button class="applyRefund_sure"">确认</button>
         <button class="applyRefund_cancel">取消</button>
     </div>
 </div>
@@ -280,14 +322,31 @@ if (!defined('IN_CLOOTA')) {
         $("#mengban").hide();
         $(".applyRefund").hide();
     });
-    function comment_commit(){
-        var url = "/zhoubianyou/zbycomment_commit-<?=$orderCode;?>.html";
-        window.location.href = url;
+    //申请退款按钮弹框
+    for(var i=0;i<$('.applyRefundBtn').length;i++){
+        $('.applyRefundBtn').eq(i).click(function(){
+            $("#mengban").show();
+            $('.applyRefund').show();
+        });
     }
-    function order_again(){
-        var url = "";
-        window.location.href = url;
-    }
+
+    $('.applyRefund_sure').click(function(){
+        $('.refundInfo').show();
+        $('.applyRefund').hide();
+    });
+    $('.applyRefund_cancel').click(function(){
+        $('.applyRefund').hide();
+        $("#mengban").hide();
+    });
+    $('.quxiao').click(function(){
+        $('.refundInfo').hide();
+        $("#mengban").hide();
+    });
+    // 关闭是否确认会团对话框
+    $('.querenhuituan_title_right').click(function(){
+        $("#mengban").hide();
+        $(".querenhuituan").hide();
+    });
 
     //取消订单确认弹窗
     $('.zby_cancel').click(function(){
@@ -312,23 +371,13 @@ if (!defined('IN_CLOOTA')) {
         $("#mengban").hide();
         $(".cancelBox1").hide();
     });
-    //申请退款按钮弹框
-    for(var i=0;i<$('.applyRefundBtn').length;i++){
-        $('.applyRefundBtn').eq(i).click(function(){
-            $("#mengban").show();
-            $('.applyRefund').show();
-        });
-    }
+
     //确认会团弹框
     $('.querenhuituanbt').click(function(){
         $("#mengban").show();
         $('.querenhuituan').show();
     });
-    // 关闭是否确认会团对话框
-    $('.querenhuituan_title_right').click(function(){
-        $("#mengban").hide();
-        $(".querenhuituan").hide();
-    });
+
     $('.querenhuituan_cancel').click(function(){
         $("#mengban").hide();
         $(".querenhuituan").hide();
@@ -341,6 +390,15 @@ if (!defined('IN_CLOOTA')) {
     //确认会团请求接口
     function confirm_return(){
         var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=cf";
+        window.location.href = url;
+    }
+
+    function comment_commit(){
+        var url = "/zhoubianyou/zbycomment_commit-<?=$orderCode;?>.html";
+        window.location.href = url;
+    }
+    function order_again(){
+        var url = "";
         window.location.href = url;
     }
 </script>

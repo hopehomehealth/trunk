@@ -1,52 +1,69 @@
 <?
 $db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
+$token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
+$refundReasonCode = req('refundReasonCode');
+
 //退款产品信息检验
-$post['orderCode'] = $orderCode;
-$post['token'] = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
-$refund_product = juhecurl($host."/travel/interface/zby/zbyRefundInfo",$post, 1);
+$post1 = array('orderCode' => $orderCode, 'token' => $token);
+$refund_product = juhecurl($host."/travel/interface/zby/zbyRefundInfo",$post1, 1);
 $refund_product = json_decode($refund_product, true);
 $refund_product = array_iconv($refund_product);
 $refund_product_data = $refund_product['data'];
-$isChange = $refund_product_data['isChange'];
+//echo "<pre>";
+//var_dump($refund_product_data);
+$refundReasonList = $refund_product_data['refundReasonList'];
+
+
+//退款申请
+if(req('flag') == 'rf'){
+    $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
+    $require_refund = juhecurl($host."/travel/interface/zby/refundZby",$post2, 1);
+    $require_refund = json_decode($require_refund, true);
+    $require_refund = array_iconv($require_refund);
+    $require_refund_data = $require_refund['data'];
+//    var_dump($require_refund_data);
+    $refund_message = $require_refund_data['message'];
+}
+?>
+<form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
+    <input type="hidden" name="message" id="payPrice" value="<?=$refund_message;?>">
+    <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName;?>">
+</form>
+<?
+if (notnull($check_form_data)){
+    $js = "<script>document.getElementById('refundForm').submit();</script>";
+    echo $js;
+}
 
 //确认会团
 if(req('flag') == 'cf'){
-    $confirm_return = juhecurl($host."/travel/interface/zby/confirmBackGroup",$post, 1);
+    $post3 = array('orderCode' => $orderCode, 'token' => $token);
+    $confirm_return = juhecurl($host."/travel/interface/zby/confirmBackGroup",$post3, 1);
     $confirm_return = json_decode($confirm_return, true);
     $confirm_return = array_iconv($confirm_return);
     $confirm_return_data = $confirm_return['data'];
 }
 
 //订单详情展示
-function get_order_detail()
-{
-    global $host;
-    $post['orderCode'] = req('orderCode');
-    $post['token'] = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
-    $order_detail = juhecurl($host . "/travel/interface/zby/v3.2/getZbyOrderDtail_v3.2", $post, 1);
-    $order_detail = json_decode($order_detail, true);
-    $order_detail = array_iconv($order_detail);
+$post4 = array('orderCode' => $orderCode, 'token' => $token);
+$order_detail = juhecurl($host . "/travel/interface/zby/v3.2/getZbyOrderDtail_v3.2", $post4, 1);
+$order_detail = json_decode($order_detail, true);
+$order_detail = array_iconv($order_detail);
 //    if ($order_detail['status'] != '0000') {
 //        exit('订单失败');
 //    }
-    return $order_detail;
-}
-
-
-
-$order_detail = get_order_detail();
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
 //取消订单
 if($_GET['flag'] == 'cn'){
-    $cancle_order = juhecurl($host."/travel/interface/order/cancleUserOrder",$post, 1);
+    $post5 = array('orderCode' => $orderCode, 'token' => $token);
+    $cancle_order = juhecurl($host."/travel/interface/order/cancleUserOrder",$post5, 1);
     $cancle_order = json_decode($cancle_order, true);
     $cancle_order = array_iconv($cancle_order);
     $cancle_order_data = $cancle_order['data'];
 //    echo "<pre>";
 //    var_dump($cancle_order);
-
 }
 
 //按钮对应状态判断
@@ -66,5 +83,5 @@ $rstatus = req('rstatus');
 if($rstatus == '0000'){
     $st = 0;
 }
-//$st = 4;
+$st = 1;
 //?>

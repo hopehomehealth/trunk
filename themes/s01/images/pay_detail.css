@@ -63,12 +63,8 @@
 .orderBtn_hasUse button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
 
 
-#mengban{width: 100%;height: 100%;position:fixed;background-color:black;opacity:0.3;filter: alpha(opacity=30);left:0;top:0;z-index: 9999;}
-.refundInfo{width: 800px;height: 456px;padding:0 20px;position: absolute;left: 50%;top:50%;margin-left: -400px;margin-top:-228px;background-color: white;z-index: 19999;}
-.refundInfo_top{font-size:24px;color: #333;line-height:60px;width: 800px;height: 60px;}
-.refundInfo_top h3{width: 120px;float: left;}
-.refundInfo_close{float: right;background: url("../images/close.png") no-repeat center center;width: 60px;height: 60px;position: absolute;right: 0;top:0;cursor: pointer;}
-.refundInfoCont{width: 778px;border:solid 1px #ddd;height: 356px;line-height:24px;padding:10px;font-size: 13px;color: #666;overflow-y: scroll;letter-spacing: 1px;}
+#mengban{width: 100%;height: 100%;position:fixed;background-color:black;opacity:0.5;filter: alpha(opacity=50);left:0;top:0;z-index: 9999;}
+
 
 
 .cancelBox{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
@@ -119,4 +115,30 @@
 
 .querenhuituan1_cont{width: 544px;height: 150px;overflow: hidden;}
 .querenhuituan1_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}
+
+/*ÍË¿îÑ¡Ôñ¿ò*/
+.refundInfo{width: 500px;height: 420px;position: absolute;left: 50%;top:50%;margin-left: -250px;margin-top:-210px;background-color: white;z-index: 19999;border:solid 2px #ddd;border-radius: 2px;}
+.refundInfo_top{font-size:16px;color: #333;line-height:30px;width:460px;height: 30px;padding:0 20px;background-color: #eee;}
+.refundInfo_top h3{width: 120px;float: left;}
+.refundInfo_close{float: right;background: url("../images/close.png") no-repeat center center;width: 30px;height: 30px;position: absolute;right: 0;top:0;cursor: pointer;}
+.refundInfoCont{width: 460px;height: 340px;line-height:24px;padding:40px 20px 0 20px;font-size: 13px;color: #666;letter-spacing: 1px;}
+.refundInfoCont1{width: 460px;height:25px;line-height: 25px;}
+.refundInfoCont1 span{float: left;width: 80px;height: 25px;font-size: 14px;color: #4d4d4d;}
+.refundInfoCont1 select{width:205px;height: 23px;outline:none;border:solid 1px #ddd;font-size: 12px;line-height:23px;color: #000;}
+.refundInfoCont1 select option{font-size: 12px;}
+.refundInfoCont2{width: 460px;padding-top:15px;height: 220px;}
+.refundInfoCont2 h4{border-bottom:solid 1px #ddd;line-height: 20px;}
+.orderInfo_table{width:460px;margin-top:20px;}
+.orderInfo_table_title{width: 78px;float: left;border:solid 1px #ddd;background-color: #f8f8f8;overflow: hidden;}
+.orderInfo_table_title ul{overflow: hidden;}
+.orderInfo_table_title ul li{padding-left:8px;border-bottom: solid 1px #ddd;height: 30px;line-height: 30px;color: #555;}
+.orderInfo_table_tr3{min-height: 82px;overflow: hidden;}
+.orderInfo_table_tr4{border-bottom: none;}
+.orderInfo_table_cont{width: 378px;float: left;border: solid 1px #ddd;border-left: none;}
+.orderInfo_table_cont ul{overflow: hidden;}
+.orderInfo_table_cont ul li{padding-left:8px;border-bottom: solid 1px #ddd;height: 30px;line-height: 30px;color: #555;}
+.orderInfo_table_cont .orderInfo_table_tr3 p{line-height: 24px;}
+.refundInfoCont3{width: 460px;height:30px;line-height: 25px;margin-top:30px;}
+.refundInfoCont3 .tijiao{width: 70px;height: 30px;float: left;margin-left: 135px;border-radius: 5px;background-color: #f60;color: #fff;text-align: center;line-height: 30px;}
+.refundInfoCont3 .quxiao{width: 68px;height: 28px;border:solid 1px #ddd;float: left;margin-left: 12px;border-radius: 5px;background-color: #fff;text-align: center;line-height: 28px;}
 

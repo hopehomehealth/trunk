@@ -2,38 +2,41 @@
 if (!defined('IN_CLOOTA')) {
     exit('Access Denied');
 }
+$refund_message = req('message');
+$goodsName = req('goodsName');
+$orderCode = req('orderCode');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="gbk">
-    <title>å‘¨è¾¹æ¸¸é€€æ¬¾</title>
+    <title>ÖÜ±ßÓÎÍË¿î</title>
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/common.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/zhoubianyoushenqingtuikuan.css">
 </head>
 <body>
 <!--  head  start -->
 <?include 'head.php';?>
-<!--  navå¯¼èˆª  end -->
+<!--  navµ¼º½  end -->
 
-<!-- ç”³è¯·é€€æ¬¾ start -->
+<!-- ÉêÇëÍË¿î start -->
 <div id="applyRefund_mainBox">
     <div id="applyRefund_main">
         <div class="applyRefund_main_cont">
-            <p>æ‚¨çš„ç”³è¯·é€€æ¬¾å·²ç»æäº¤ï¼Œç¨åŽä¼šæœ‰å·¥ä½œäººå‘˜ä¸Žæ‚¨è”ç³»ï¼</p>
+            <p>ÄúµÄÉêÇëÍË¿îÒÑ¾­Ìá½»£¬ÉÔºó»áÓÐ¹¤×÷ÈËÔ±ÓëÄúÁªÏµ£¡</p>
             <div class="applyRefund_main_info">
-                <div class="applyRefund_main_info_title">è®¢å•ä¿¡æ¯ï¼š</div>
+                <div class="applyRefund_main_info_title">¶©µ¥ÐÅÏ¢£º</div>
                 <ul>
-                    <li>è®¢å•å·ï¼š32145863</li>
-                    <li>äº§å“åï¼šxxxxxxxxæ»‘é›ªåœº</li>
+                    <li>¶©µ¥ºÅ£º<?=$orderCode;?></li>
+                    <li>²úÆ·Ãû£º<?=$goodsName;?></li>
                 </ul>
             </div>
         </div>
-        <button class="cancelOrder">æŸ¥çœ‹è®¢å•</button>
-        <button class="payNow">è¿”å›žé¦–é¡µ</button>
+        <button class="cancelOrder">²é¿´¶©µ¥</button>
+        <button class="payNow">·µ»ØÊ×Ò³</button>
     </div>
 </div>
-<!-- ç”³è¯·é€€æ¬¾ end -->
+<!-- ÉêÇëÍË¿î end -->
 
 
 <!--  foot  start -->
