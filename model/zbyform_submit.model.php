@@ -1,59 +1,89 @@
 <?
 //$db->check_cookie($loginUrl, $host);
 //获取套餐信息
-$taocan = array_iconv(json_decode($db->api_post($host."/travel/interface/zby/v3.2/getZbyPackageByPackageId_v3.2",$post),true),'utf-8','gbk');
+$tc['goodsId'] = req('lvProductId');
+$tc['packageId'] = req('packageId');
+$tc['departdate'] = req('departdate');
+$tc['goodsId'] = '8000000';
+$tc['packageId'] = '9090902';
+$tc['departDate'] = '2017-05-10';
+//var_dump($tc);
+$api_url = 'http://wwwd.bus365.cn/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$tc['goodsId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
+$tcs = array_iconv(json_decode(juhecurl("$api_url", false, 0),true),'utf-8','gbk');
+//设置变量
+$taocan = $tcs['data'][0];
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
-$is_package = req('is_package');
+$is_package = $taocan['isPackage'];
+//订单接口参数
+$post['token'] = "{\"token1\":\"34d996bc-bc3f-4ed5-8020-868a68398352%2315122991536%23%25E5%2585%259A%25E5%25A6%25B9%25E5%25AD%2590%2376061060000000341\",\"token2\":\"2C8EBC684DBE4F930096E68FE24F8550F53F78A0E79634E0F6668F99659D83BB449A51AF37EADCA8D775097E26A6A13958D3B455DF850CFE35567C783187C0EE7A4D04972B0B38E271997D96941AD1A8\"}";//$token;
+//$post['userId'] = '90841060000026700';//$realid;
+$post['goodsId'] = '8017691';//$taocan['goodsId'];
+$post['lvProductId'] = '9999999';//$taocan['lvProductId'];
+$post['packageId'] = '6666666';//$tc['packageId'];
+$post['departdate'] = '2017-05-31';//$tc['departDate'];
+$post['payPrice'] = '150';//req('payPrice');
+$post['packageNum'] = '3';
+/*if($taocan['isPackage'] == 'true'){//按份卖
+    $post['packageNum'] = '3';//req('packageNum');
+}else{//按人卖
+    $post['adultNum'] = '1';//req('adultNum');
+    $post['childNum'] = '1';//req('childNum');
+    $post['roomCount'] = '0';//req('roomCount');
+}*/
+//游玩人数量判断  
+if($taocan['traveller_name']=='TRAV_NUM_ONE'){
+    $num = 1;
+}elseif ($taocan['traveller_name'] == 'TRAV_NUM_ALL'){
+    $num = req('adultNum')+req('childNum');
+}else{
+    $num = 0;
+}
+
+
 //生成订单
 $flag = req('flag');
 if($flag == 'check'){
-    $post['token'] = $token;
-    $post['id'] = $realid;
-    $post['lvProductId'] = req('lvProductId');
-    $post['packageId'] = req('packageId');
-    $post['departdate'] = req('departdate');
-    $post['payPrice'] = req('payPrice');
-    $post['bookerName'] = req('bookerName');
+    $post['bookerName'] = gbk_to_utf8(req('bookerName'));
     $post['bookerMobile'] = req('bookerMobile');
     $post['bookerEmail'] = req('bookerEmail');
-    $post['emergencyName'] = req('emergencyName');
+    $post['emergencyName'] = gbk_to_utf8(req('emergencyName'));
     $post['emergencyMobile'] = req('emergencyMobile');
-    $post['userType'] = req('userType');
-    //游玩人数量判断  
-    if($taocan['traveller_name']=='TRAV_NUM_ONE'){
-        $num = 1;
-    }elseif ($taocan['traveller_name'] == 'TRAV_NUM_ALL'){
-        $num = $taocan['adultNum']+$taocan['childNum'];
-    }else{
-        $num = 0;
-    }
     //游玩人数组处理
     
     for($i=0;$i<$num;$i++){
-        $travellerLis[$i]['name'] = req('name_'.$i);
-        $travellerLis[$i]['enName'] = req('enName_'.$i);
-        $travellerLis[$i]['personType'] = req('personType_'.$i);
-        $travellerLis[$i]['mobile'] = req('mobile_'.$i);
-        $travellerLis[$i]['email'] = req('email_'.$i);
-        $travellerLis[$i]['credentials'] = req('credentials_'.$i);
-        $travellerLis[$i]['credentialsType'] = 'ID_CARD';
-        $travellerLis[$i]['gender'] = req('gender_'.$i);
-        $travellerLis[$i]['birthday'] = req('birthday_'.$i);
+        $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
+        $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
+        $travellerList[$i]['personType'] = gbk_to_utf8(req('personType_'.$i));
+        $travellerList[$i]['mobile'] = req('mobile_'.$i);
+        $travellerList[$i]['email'] = req('email_'.$i);
+        $travellerList[$i]['credentials'] = req('credentials_'.$i);
+        $travellerList[$i]['credentialsType'] = 'ID_CARD';
+        $travellerList[$i]['gender'] = req('gender_'.$i);
+        $travellerList[$i]['birthday'] = req('birthday_'.$i);
         //去除空值
-        $travellerLis[$i] = array_filter($travellerLis[$i]);
+        $travellerList[$i] = array_filter($travellerList[$i]);
     }
-    $post['travellerLis'] = $travellerLis;
-    if($taocan['is_package'] == 'true'){//按份卖
-        $post['packageNum'] = req('packageNum');
-     }else{//按人卖
-        $post['adultNum'] = req('adultNum');
-        $post['childNum'] = req('childNum');
-        $post['roomCount'] = req('roomCount');
-     }
+    $post['travellerList'] = json_encode($travellerList);
+    
      $post = array_filter($post);
-     $dingdan = array_iconv(json_decode($db->api_post($host."/travel/interface/zbyV3.2/saveZbyOrderV_3.2",$post),true),'utf-8','gbk');
+     //测试 先传空
+     $post['travellerList'] = '';
+     //var_dump($post);
+     $dingdan = array_iconv(json_decode($db->api_post("http://wwwd.bus365.cn/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
+     var_dump($dingdan);
+     $orderCode = $dingdan['data']['orderCode'];
+     if($dingdan['status'] == '1000'){
+        $dingdan['msg'] = '\''.$dingdan['msg'].'\'';
+        echo '<script>alert('.$dingdan['msg'].')</script>';
+     }
+     
+     //跳转到付款页面
+     header("Location: $g_self_domain/zhoubianyou/zbyonline_pay-$orderCode.html"); //exit;
+    
+     
+
 }
 
 
