@@ -79,9 +79,9 @@ if (!defined('IN_CLOOTA')) {
                         <tr>
                             <th>产品名称</th>
                             <?if($order_detail_data['isPackage'] == 'false'){ ?>
-                            <th>人数</th>
+                                <th>人数</th>
                             <? }else if($order_detail_data['isPackage'] == 'true') { ?>
-                            <th>份数</th>
+                                <th>份数</th>
                             <? } ?>
                             <th>游玩日期</th>
                             <th>现售价</th>
@@ -91,27 +91,28 @@ if (!defined('IN_CLOOTA')) {
                         <tbody>
 
                         <?if($order_detail_data['isPackage'] == 'false'){ ?>
-                        <tr>
+                            <tr>
+                                <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                                <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?></td>
+                                <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
+                                <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
+                                <td class="productXiaoji"><? echo $order_detail_data['adultTotalFee']; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                                <td class="productOther">儿童×<? echo $order_detail_data['kidNum']; ?></td>
+                                <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
+                                <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
+                                <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
+                            </tr>
+                        <? }else if($order_detail_data['isPackage'] == 'true') { ?>
                             <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                            <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?></td>
-                            <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                            <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
-                            <td class="productXiaoji"><? echo $order_detail_data['adultTotalFee']; ?></td>
-                        </tr>
-                        <tr>
-                            <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                            <td class="productOther">儿童×<? echo $order_detail_data['kidNum']; ?></td>
+                            <td class="productOther"><? echo $order_detail_data['num']; ?></td>
                             <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
                             <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
                             <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
-                        </tr>
-                        <? }else if($order_detail_data['isPackage'] == 'true') { ?>
-                        <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                        <td class="productOther"><? echo $order_detail_data['num']; ?></td>
-                        <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                        <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
-                        <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
                         <? } ?>
+
                         </tbody>
                     </table>
 
@@ -130,7 +131,7 @@ if (!defined('IN_CLOOTA')) {
                         <!-- 已支付未确认/已支付已确认 按钮 -->
                         <div class="orderBtn_chupiaozhong">
                             <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
-                            <button>申请退款</button>
+                            <button class="applyRefundBtn">申请退款</button>
                         </div>
                     <? } elseif($st == 2){ ?>
                         <!-- //已完成-->
@@ -144,7 +145,7 @@ if (!defined('IN_CLOOTA')) {
                         <!-- 已支付-已确认-确认回团 按钮 -->
                         <div class="orderBtn_chupiaozhong">
                             <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
-                            <button>确认回团</button>
+                            <button class="querenhuituanbt">确认回团</button>
                         </div>
                     <? } elseif($st == 4){ ?>
                     <!--  //待付款-->
@@ -224,7 +225,7 @@ if (!defined('IN_CLOOTA')) {
 
     <div class="applyRefund_cont">
         <div class="applyRefund_cont_tips">&nbsp;&nbsp;是否申请退款?</div>
-        <button class="applyRefund_sure">确认</button>
+        <button class="applyRefund_sure" onclick="refund_commit()">确认</button>
         <!--			<a href="--><?//=$nowUrl?><!----><?//=$flagch?><!--"><button class="applyRefund_sure">确认</button></a>-->
         <button class="applyRefund_cancel">取消</button>
     </div>
@@ -239,7 +240,7 @@ if (!defined('IN_CLOOTA')) {
 
     <div class="querenhuituan_cont">
         <div class="querenhuituan_cont_tips">&nbsp;&nbsp;是否确认会团?</div>
-        <button class="querenhuituan_sure">确认</button>
+        <button class="querenhuituan_sure" onclick="confirm_return()">确认</button>
         <!--			<a href="--><?//=$nowUrl?><!----><?//=$flagch?><!--"><button class="applyRefund_sure">确认</button></a>-->
         <button class="querenhuituan_cancel">取消</button>
     </div>
@@ -311,7 +312,6 @@ if (!defined('IN_CLOOTA')) {
         $("#mengban").hide();
         $(".cancelBox1").hide();
     });
-
     //申请退款按钮弹框
     for(var i=0;i<$('.applyRefundBtn').length;i++){
         $('.applyRefundBtn').eq(i).click(function(){
