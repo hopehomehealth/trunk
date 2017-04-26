@@ -9,11 +9,15 @@ $post['goodsId'] = $_POST['goodsId'];
 $post['departDate'] = $_POST['departDate'];
 $post['departDate'] = "2016-08-03";
 $post['packageId'] = $_POST['packageId'];
+$post['packageId'] = "2";
 $post['isPackage'] = $_POST['isPackage'];
 $post['min'] = $_POST['min'];
 $post['max'] = $_POST['max'];
+$adultNum = $_POST['adultNum'];
+$kidNum = $_POST['kidNum'];
+$childPriceInfo = $_POST['childPriceInfo'];
 
-$url = "wwwd.bus365.cn" . "/travel/interface/zbyV3.2/getNumberSelectionV_3.2";
+$url = "wwwd.bus365.cn" . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -30,13 +34,14 @@ $adultmax = $datass['1'];
 if($post['isPackage'] == 'true'){
     echo "<span class='fenshu'>
             <label for=\"\">购买份数:</label>
-            <select onChange=\"count_price()\">";
+            <select id='fenshu' onchange='count_price()'>
+            <option value=\"0\">0</option>";
             for ($i = $adultmin; $i <= $adultmax; $i++) {
                 echo "<option value=\"$i\">$i</option>";
             }
             echo"</select>
             <label for=\"\">其中包含:</label>
-            成人：2 / 儿童：1
+            成人：$adultNum / 儿童：$kidNum
 
             <a href=\"javascript:void(0);\" class=\"qijia\" style=\"\">起价说明</a>
             <div class=\"qijia_tips\">
@@ -65,14 +70,9 @@ echo "</select>
     echo "</select>
 <iframe id=\"frm\" name=\"frm\" src=\"\" frameborder=\"0\" scrolling=\"no\" width=\"0\" height=\"0\"></iframe>
 <a href=\"javascript:void(0);\" class=\"form-tips rel\">
-    儿童价说明<span class=\"box-tips child_tips\" style=\"display:none\"><i class=\"icon\"></i>2-12岁儿童：<br/>
-		1.若含机票，全价收取<br/>
-		2.酒店按房间数收费<br/>
-		3.景点以实际套餐为准</span>
+    儿童价说明<span class=\"box-tips child_tips\" style=\"display:none\"><i class=\"icon\"></i>$childPriceInfo</span>
 </a>
 </span>";
 }
 
-
 ?>
-

@@ -158,13 +158,14 @@ $all_tools		= $all_days['tool'];
 $all_images		= $all_days['image'];
 
 $goodsId = req('id');
-$url = $host . "/travel/interface/zbyV3.2/getZbyGoodsDtailV_3.2?goodsId=" . $goodsId;
+$url = $host . "/travel/interface/zby/v3.2/getZbyGoodsDtail_v3.2?goodsId=" . $goodsId;
 $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
-
+$scheduling = $data['scheduling'];
+//header("Content-type:text/html;charset=utf8");
 //echo "<pre>";
-//var_dump($arr);
+//var_dump($scheduling);
 //die;
 
 function seo(){
