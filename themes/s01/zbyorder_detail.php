@@ -288,7 +288,7 @@ if (!defined('IN_CLOOTA')) {
 
 <!--    //能否退款提示-->
 
-<div class="nengtuifou">
+<div class="nengtuifou" style="display:none">
     <div class="nengtuifou_title">
         <div class="nengtuifou_title_left">bus365提示您</div>
         <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html"><span class="nengtuifou_title_right"></span></a>
@@ -340,7 +340,7 @@ if (!defined('IN_CLOOTA')) {
             success: function (data) {
 //                alert(data);
                 if(data = 'false'){
-                    $('.tuikuanSuccessBox').show();
+                    $('.nengtuifou').show();
                     $('.applyRefund').hide();
                     $("#mengban").hide();
                 } else {
