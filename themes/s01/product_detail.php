@@ -288,11 +288,9 @@
 
 
             <div class="form-btn">
-			<span>套餐价：<span id="count_result" class="form-price yellow-b">--</span>　
-			<span id="orderPriceYes" style="display:none"> <sub class="yellow-b">&yen;</sub><span
-                    class="form-price yellow-b" id="orderPrice">0</span></span> </span> <input id="payPrice"
-                                                                                               type="hidden"
-                                                                                               name="payPrice" value="">
+			<span>套餐价：
+			<span id="orderPriceYes" style=""> <sub class="yellow-b">&yen;</sub><span
+                    class="form-price yellow-b" id="orderPrice">0</span></span> </span>
                 <span id="order_span">
 				<a onclick="order_window()" class="btn btn-lg"
                    id="order_button">开始预订</a>
@@ -823,6 +821,7 @@
                         for (var i = 0; i < $('.product_select1').length; i++) {
                             $('.product_select1').eq(i).click(function () {
                                 $('.fangchajia').html("");
+                                $("#orderPrice").html("0");
                                 $('.product_select1').removeClass('select_selected');
                                 $(this).addClass("select_selected");
                                 packageId = $(this).find("input").eq(0).val();
@@ -855,7 +854,7 @@
                                         $('.number').html("");
                                         $('.number').html(data);
                                         $('.number').show();
-                                        $("#count_result").html();
+                                        $("#orderPrice").html();
                                         //起价提示qijia
                                         $('.qijia').hover(function () {
                                             $(this).css({
@@ -912,7 +911,7 @@
             diffPriceNum = $('#diffPrice').val();
             var zongjia = "&yen;";
             zongjia += adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
-            $("#count_result").html(zongjia);
+            $("#orderPrice").html(zongjia);
         }
     };
     function count_price(){
@@ -938,36 +937,42 @@
                     diffPriceNum = $('#diffPrice').val();
 //                    var zongjia = "&yen;";
                     var zongjia = adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
-                    $("#count_result").html(zongjia);
+                    $("#orderPrice").html(zongjia);
                 }
             });
         }else{
             var fenshu = $('#fenshu').val();
 //          var zongjia = "&yen;";
             var zongjia = (adultPrice*adultNum + kidPrice*kidNum)*fenshu;
-            $("#count_result").html(zongjia);
+            $("#orderPrice").html(zongjia);
         }
     };
 </script>
 <script type="text/javascript">
     function order_window() {
+        var biaoji1 = '';
+        var biaoji2 = '';
         var goodsId = "<?=$goodsId?>";
         var fenshu = $('#fenshu').val();
-        var zongjia = $("#count_result").html();
+        var zongjia = $("#orderPrice").html();
         if ($('#startDate').val() == '') {
             alert('亲，您没有选择出发日期！');
             return false;
+        } else {
+            biaoji1 = '1';
+        }
+        if( zongjia != '0'){
+            biaoji2 = '1';
         }
 
-        if ( fenshu == '0') {
-            alert('亲，您没有选择份数！');
-            return false;
-        }
-
-        if (adultNum == '0') {
-            alert('亲，您没有选择人数！');
-            return false;
-        }
+//        if ( fenshu == '0') {
+//            alert('亲，您没有选择份数！');
+//            return false;
+//        }
+//        if (adultNum == '0') {
+//            alert('亲，您没有选择人数！');
+//            return false;
+//        }
         var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
         $('#chufa').attr('action',url);
         $('#goodsId').val(goodsId);
@@ -979,7 +984,12 @@
         $('#roomCount').val(diffPriceNum);
         $('#payPrice').val(zongjia);
         $('#packageNum').val(fenshu);
-        $('#chufa').submit();
+        if(biaoji1 == '1' && biaoji2 == '1'){
+            $('#chufa').submit();
+        } else {
+            alert('亲，套餐价不能为0！');
+        }
+
 
 
 //        if(isPackage == false){
