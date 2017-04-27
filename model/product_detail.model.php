@@ -164,7 +164,6 @@ $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
 $scheduling = $data['scheduling'];
-echo $goodsId;
 
 function seo(){
 	global $g_sitename, $c_goods;
