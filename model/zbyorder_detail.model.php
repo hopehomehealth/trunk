@@ -3,8 +3,6 @@ $db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $refundReasonCode = req('refundReasonCode');
-echo $refundReasonCode;
-echo $orderCode;
 //退款产品信息检验
 $post1 = array('orderCode' => $orderCode, 'token' => $token);
 $refund_product = juhecurl($host . "/travel/interface/zby/zbyRefundInfo", $post1, 1);
@@ -16,12 +14,6 @@ $isChange = $refund_product_data['isChange'];
 $failReason = $refund_product_data['failReason'];
 //echo "<pre>";
 //var_dump($refund_product_data);
-//    if (!$isChange !== "true"){
-//        echo "<script>alert('该产品不能申请退款！');history.go(-1)</script>";
-//        exit;
-//    }
-//    var_dump($refund_product_data);
-//}
 //退款申请
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
@@ -91,5 +83,5 @@ $rstatus = req('rstatus');
 if($rstatus == '0000'){
     $st = 0;
 }
-$st = 1;
+//$st = 3;
 //?>

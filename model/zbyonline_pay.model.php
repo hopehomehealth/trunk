@@ -1,10 +1,10 @@
 <?
-//var_dump($_REQUEST);
 $db->check_cookie($loginUrl, $host);
 $goodsName = req('goodsName');
 $payPrice = req('payPrice');
 $orderCode = req('orderCode');
-$payTime = req('time');
+$payTime = req('payTime');
+$lvGoodsName = req('lvGoodsName');
 function get_pay_way()
 {
     global $host;

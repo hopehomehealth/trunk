@@ -8,7 +8,7 @@ $tc['goodsId'] = '8000000';
 $tc['packageId'] = '9090902';
 $tc['departDate'] = '2017-05-10';
 //var_dump($tc);
-$api_url = 'http://wwwd.bus365.cn/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$tc['goodsId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
+$api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$tc['goodsId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
 $tcs = array_iconv(json_decode(juhecurl("$api_url", false, 0),true),'utf-8','gbk');
 //设置变量
@@ -24,14 +24,13 @@ $post['lvProductId'] = '9999999';//$taocan['lvProductId'];
 $post['packageId'] = '6666666';//$tc['packageId'];
 $post['departdate'] = '2017-05-31';//$tc['departDate'];
 $post['payPrice'] = '150';//req('payPrice');
-$post['packageNum'] = '3';
-/*if($taocan['isPackage'] == 'true'){//按份卖
+if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = '3';//req('packageNum');
 }else{//按人卖
     $post['adultNum'] = '1';//req('adultNum');
     $post['childNum'] = '1';//req('childNum');
     $post['roomCount'] = '0';//req('roomCount');
-}*/
+}
 //游玩人数量判断  
 if($taocan['traveller_name']=='TRAV_NUM_ONE'){
     $num = 1;
@@ -70,9 +69,7 @@ if($flag == 'check'){
      $post = array_filter($post);
      //测试 先传空
      $post['travellerList'] = '';
-     var_dump($post);
-     $dingdan = array_iconv(json_decode($db->api_post("http://wwwd.bus365.cn/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
-     var_dump($dingdan);
+     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
      $payTime = $dingdan['data']['payTime'];
@@ -81,14 +78,6 @@ if($flag == 'check'){
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-     if($dingdan['status'] == '1000'){
-        $dingdan['msg'] = '\''.$dingdan['msg'].'\'';
-        echo '<script>alert('.$dingdan['msg'].')</script>';
-     }
-     
-    
-     
-
 }
 
 
