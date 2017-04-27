@@ -20,6 +20,21 @@ if(!defined('IN_CLOOTA')) {
 <?include 'head.php';?>
 
 <body>
+
+<?if (notnull($orderCode)){ ?>
+    <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
+        <input type="hidden" name="payPrice" id="payPrice" value="<?=$payPrice?>">
+        <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName?>">
+        <input type="hidden" name="payTime" id="payTime" value="<?=$payTime?>">
+        <input type="hidden" name="payTime" id="payTime" value="<?=$departdate?>">
+        <input type="hidden" name="payTime" id="payTime" value="<?=$peopleNum?>">
+        <input type="hidden" name="payTime" id="payTime" value="<?=$unitPrice?>">
+        <input type="hidden" name="payTime" id="payTime" value="<?=$lvGoodsName?>">
+        <input type="hidden" name="payTime" id="payTime" value="<?=$orderCode?>">
+    </form>
+    
+<?  $js = "<script>document.getElementById('onlineForm').submit();</script>";
+    echo $js;}?>
 <div id="zbyOrder_mainBox">
     <div id="zbyOrder_main">
         <div class="zbyOrder_main_title">
