@@ -332,7 +332,7 @@ if (!defined('IN_CLOOTA')) {
         var orderCode = "<?= $orderCode ?>";
         $.ajax({
             type: "POST",
-            url: "/model/zbycheck_refund.model.php",
+            url: "/model/zbyajax_check.model.php",
             data: {
                 "orderCode": orderCode
             },
