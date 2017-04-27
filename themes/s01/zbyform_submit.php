@@ -484,7 +484,7 @@ if(!defined('IN_CLOOTA')) {
         </form>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
-                    <div class="zbyOrder_main31_left">应付总价：￥<?=$post['payPrice']?></div>
+                    <div class="zbyOrder_main31_left">应付总价：<?=$post['payPrice']?></div>
 
                     <button class="zbyOrder_main31_right" onclick = "check_form()">同意以下条款，去付款</button>
 
