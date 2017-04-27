@@ -424,7 +424,7 @@
                 $goods_url = $val['pcALiDetailLink'];
                 $goodsId = $val['goodsId'];
                 $productId = $val['productId'];
-                $ziyingurl = "/product/detail-" . $goodsId . "-".$productId.".html"
+                $ziyingurl = "/product/detail-" . $goodsId . "-" . $productId . ".html"
                 ?>
                 <div class="lv-list">
                     <!-- 产品信息 -->
