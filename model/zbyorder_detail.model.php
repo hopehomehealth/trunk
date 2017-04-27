@@ -63,6 +63,7 @@ if($_GET['flag'] == 'cn'){
     $cancle_order_data = $cancle_order['data'];
 }
 
+
 //°´Å¥¶ÔÓ¦×´Ì¬ÅÐ¶Ï
 $st = 1;
 if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8){
@@ -76,5 +77,5 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 }elseif($orderStatus == 1){
     $st = 4;
 }
-$st = 1;
-//?>
+//$st = 1;
+?>
