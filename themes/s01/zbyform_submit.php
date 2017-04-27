@@ -81,7 +81,7 @@ if(!defined('IN_CLOOTA')) {
                             <tr>
                                 <td>房差：<?=$post['roomCount']?></td>
                                 <td>游玩时间：<?=$tc['departDate']?></td>
-                                <td>总价：￥<?=$post['payPrice']?></td>
+                                <td>总价：<?=$post['payPrice']?></td>
                             </tr>
                             </thead>
                         </table>
