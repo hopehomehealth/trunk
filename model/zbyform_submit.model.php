@@ -72,11 +72,10 @@ if($flag == 'check'){
         //去除空值
         $travellerList[$i] = array_filter($travellerList[$i]);
     }
-    $post['travellerList'] = json_encode($travellerList);
+    
     
      $post = array_filter($post);
-     //测试 先传空
-     
+     $post['travellerList'] = json_encode($travellerList);
      //var_dump($post);die;
      $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
