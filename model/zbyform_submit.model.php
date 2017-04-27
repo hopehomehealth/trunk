@@ -16,6 +16,7 @@ $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $tc['lvProductId'] = req('lvProductId');
 $tc['packageId'] = req('packageId');
 $tc['departDate'] = req('departDate');
+var_dump($tc);
 //var_dump($tc);
 $api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$tc['goodsId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
