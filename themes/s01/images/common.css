@@ -21,7 +21,7 @@ textarea {outline: none;}
 #top{width: 1190px;height: 78px;margin:0 auto;background: url("/themes/s01/images/title_02.png") no-repeat 270px bottom
 ;}
 .topLeft{float: left;width: auto;height:78px;overflow: hidden;}
-.topLeft .logo{width: 131px;height: 45px;float: left;margin-top:16px;}
+.topLeft .logo{width: 131px;height: 45px;float: left;margin-top:17px;margin-right:8px;}
 .topLeft .logo_text{width:209px;height: 45px;float: left;margin-top:18px;}
 .topRight{float: right;width: auto;height:78px;color: #807e7f;font-size:16px;/*margin-top:10px;padding-left:54px; background: url("/public/images/v3.1image/dianhua.png") no-repeat left 25px; */}
 
@@ -92,7 +92,7 @@ textarea {outline: none;}
 .foot1{width: 800px;height: 42px;margin:25px auto 0;}
 .foot1 a{margin:0 30px;float: left;width: 140px;height: 42px;}
 .foot2{width: 1190px;line-height: 25px;text-align: center;margin-top:10px;}
-.foot2 a{font-size:14px;color: #666;}
+.foot2 a{font-size:14px;color: #666;padding:0 10px;}
 .foot2 a:hover{color: #3b86ef;text-decoration: underline;}
 
 .foot3{width:800px;line-height: 25px;margin:0 auto;font-size: 14px;overflow: hidden;}

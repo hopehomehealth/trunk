@@ -35,27 +35,29 @@ KindEditor.ready(function(K) {
 	});
 	prettyPrint();
 });
+
 KindEditor.ready(function(K) {
-	var editor1 = K.create('textarea[name="goods_content"]', {
-		cssPath : 'js/kindeditor/plugins/code/prettify.css',
-		uploadJson : 'util/ke_upload_json.php',
-		fileManagerJson : 'util/ke_file_manager_json.php',
-		allowFileManager : true,
-		urlType : 'domain',
-		afterCreate : function() {
-			var self = this;
-			K.ctrl(document, 13, function() {
-				self.sync();
-				K('form[name=goods_form]')[0].submit();
+			var editor1 = K.create('textarea[name="goods_content"]', {
+				cssPath : 'js/kindeditor/plugins/code/prettify.css',
+				uploadJson : 'util/ke_upload_json.php',
+				fileManagerJson : 'util/ke_file_manager_json.php',
+				allowFileManager : true,
+				urlType : 'domain',
+				afterCreate : function() {
+					var self = this;
+					K.ctrl(document, 13, function() {
+						self.sync();
+						K('form[name=goods_form]')[0].submit();
+					});
+					K.ctrl(self.edit.doc, 13, function() {
+						self.sync();
+						K('form[name=goods_form]')[0].submit();
+					});
+				}
 			});
-			K.ctrl(self.edit.doc, 13, function() {
-				self.sync();
-				K('form[name=goods_form]')[0].submit();
-			});
-		}
-	});
-	prettyPrint();
-}); 
+			prettyPrint();
+});
+
 </script>
 
 
@@ -63,10 +65,10 @@ KindEditor.ready(function(K) {
 function form_check(){
 	var myform = document.getElementById('goods_form');
  
-	if(myform.goods_cat_id.value==''){
+	/*if(myform.goods_cat_id.value==''){
 		alert('对不起，请选择分类！');
 		return false;
-	}
+	}*/
 	if(myform.goods_name.value==''){
 		alert('对不起，请输入产品名称！');
 		return false;
@@ -98,17 +100,18 @@ $(document).ready(function(){
 <input type="hidden" name="shop_id" value="<?=$g_shopid?>">
 
 <ul class="nav nav-tabs" id="myTab"> 
-  <li class="active" style="padding-left:20px"><a href="#tabs-1">选择分类</a></li>
-  <li><a href="#tabs-2">基本信息</a></li>
+  <!-- <li class="active" style="padding-left:20px"><a href="#tabs-1">选择分类</a></li> -->
+  <li class="active" style="padding-left:20px"><a href="#tabs-2">基本信息</a></li>
   <li><a href="#tabs-3">产品图片</a></li>
   <li><a href="#tabs-4">产品描述</a></li>
-  <li><a href="#tabs-5">团期/价格</a></li> 
+  <li><a href="#tabs-5">团期/价格</a></li>
+  <li><a href="#tabs-6">其它设置</a></li> 
   <input type="button" value=" 返回 " class="btn pull-right" onclick="history.back()" style="margin-left:5px"/>
   <input type="submit" value=" 立即发布 " class="btn pull-right btn-warning"/>
 </ul>
 
 <div class="tab-content"> 
-	<div class="tab-pane in active" id="tabs-1">   
+	<!-- <div class="tab-pane in active" id="tabs-1">   
 			<div class="alert"><strong>提示：</strong>请展开下面的分类，选择您所需要发布的子分类。</div>
 			<?
 			$cat01 = son_cat('0');
@@ -156,10 +159,10 @@ $(document).ready(function(){
 			}
 			?> 
 			<script type="text/javascript"> 
-			$("#mytab").treetable({ expandable: true }); 
+			$("#mytab").treetable({ expandable： true }); 
 			</script>
-	</div> 
-	<div class="tab-pane" id="tabs-2">
+	</div>  -->
+	<div class="tab-pane in active" id="tabs-2">
 	
 		<table width="100%">   
 			<tr>
@@ -479,14 +482,14 @@ $(document).ready(function(){
 	<div class="tab-pane" id="tabs-4">   
 		<table width="100%">
 			<tr>
-			  <td align="right">产品特色：</td>
-			  <td><br/><textarea name="summary" cols="70" rows="3" id="summary" style="width:97%;height:100px;visibility:hidden;"></textarea><br/>
-			  </td>
-			</tr> 
-			<tr>
-			  <td align="right" valign="top"><font color="red">*</font> 产品描述：</td>
-			  <td><textarea id="goods_content" name="goods_content" style="width:97%;height:400px;visibility:hidden;"></textarea><br/></td>
-			</tr> 
+		  <td align="right">产品特色：</td>
+		  <td><br/><textarea name="summary" cols="70" rows="3" id="summary" style="width:97%;height:100px;visibility:hidden;"><?=stripslashes($goods['summary'])?></textarea><br/>
+		  </td>
+		</tr>
+		<tr>
+          <td align="right"><font color="red">*</font> 产品描述：</td>
+          <td><textarea id="goods_content" name="goods_content" style="width:97%;height:400px;visibility:hidden;"><?=stripslashes($goods['content'])?></textarea> <br/></td>
+        </tr>
 
 			<?if(in_array($c_goods_type, array(1,2,6))){?>
 			<tr>
@@ -766,7 +769,204 @@ $(document).ready(function(){
 			</tr> 
 			<?}?>
 	  </table>
-  </div> 
+  </div>
+  <div class="tab-pane" id="tabs-6">
+
+		<table width="100%">
+			<tr>
+			  <td width="100" align="right"><font color="red">*</font> 房间最大入住数：</td>
+			  <td><input type="number" class="span1 text-center" name="room_max" value="1"/></td>
+			</tr>
+			<tr>
+			  <td width="100" align="right"><font color="red">*</font> 最大订购数量：</td>
+			  <td><input type="number" class="span1 text-center" name="max" value="1"/></td>
+			</tr>
+			<tr>
+			  <td width="100" align="right"><font color="red">*</font> 最大订购数量：</td>
+			  <td><input type="number" class="span1 text-center" name="min" value="1"/></td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>姓名是否必填：</td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_name" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_name" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_name" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>英文名是否必填：</td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_en_name" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_en_name" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_en_name" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>手机号是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_mobile" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_mobile" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_mobile" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>email是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_email" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_email" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_email" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>证件是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_credentials" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_credentials" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_credentials" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr> 
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>性别是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_gender" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_gender" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_gender" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>人群是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_person_type" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_person_type" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_person_type" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>生日是否必填： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_birthday" type="radio" value="TRAV_NUM_ALL">
+				全部需要</label>
+				<label class="radio inline">
+				<input name="traveller_birthday" type="radio" value="TRAV_NUM_ONE">
+				只要一个</label>
+				<label class="radio inline">
+				<input name="traveller_birthday" type="radio" value="TRAV_NUM_NO" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>是否需要紧急联系人： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="emergency" type="radio" value="true">
+				需要</label>
+				<label class="radio inline">
+				<input name="emergency" type="radio" value="false" checked="checked">
+				不需要</label>
+			  </td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font> 购买人email是否必填：</td>
+			  <td height="30">
+				<label class="radio inline">
+				<input name="booker_email" type="radio" id="sale_type" value="true" />
+				是
+				</label>
+				<label class="radio inline">
+				<input name="booker_email" type="radio" id="sale_type" value="false" checked="checked" />
+				否
+				</label>
+				</td>
+			</tr>
+			<tr>
+			  <td width="20%" align="right"><font color="red">*</font>证件类型： </td>
+			  <td>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="ID_CARD" checked="checked">
+				身份证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="HUZHAO">
+				护照</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="HUKOUBO">
+				户口簿</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="GANGAO">
+				港澳通行证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="TAIBAO">
+				台湾通行证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="HUIXIANG">
+				回乡证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="SHIBING">
+				士兵证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="JUNGUAN">
+				军官证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="CHUSHENGZHENGMING">
+				出生证明</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="TAIBAOZHENG">
+				台胞证</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="OTHER">
+				其他</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="ERTONG">
+				儿童无证件</label>
+				<label class="radio inline">
+				<input name="traveller_credentials_type" type="radio" value="CUSTOMER_SERVICE_ADVICE">
+				客服联系我</label>
+			  </td>
+			</tr>      
+		</table>
+	</div>  
 </div> 
 </form>
 

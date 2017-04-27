@@ -7,14 +7,15 @@ if(!defined('IN_CLOOTA')) {
 <ul class="nav nav-tabs">   
 	<?
 	$m=1;
-	foreach ($g_product_type as $k => $v) {
+	foreach ($g_product_type as $k => $v) { if($k == '1'){ //通过if判断 暂时隐藏其他选项
 	?>
 	<li <?if(nav_active('goods_list.php') && req('goods_type')==$k){?>class="active"<?}?> <?if($m==1){?>style="padding-left:20px;"<?}?>>
 		<a href="?cmd=<?=base64_encode('goods_list.php')?>&goods_type=<?=$k?>"><?=$v?></a>
 	</li>
+	<? }else{}?>
 	<?
 		$m++;
-	}
+	} 
 	?>
 	<a href="javascript:void(0)" onclick="location.reload()" class="pull-right btn btn-small">刷新</a>
 </ul>  
@@ -138,14 +139,14 @@ if(!defined('IN_CLOOTA')) {
 		<div style="text-align:right;padding-right:10px;">  
 			<br/>
 			共计<b><?=$total_number?></b>条 &nbsp;
-			<a href="<?=get_page_args()?>p=1">首页</a>
-			<a href="<?=get_page_args()?>p=<?=$prev_number?>">上一页</a> 
+			<a href="<?=get_page_args()?>p=1" target="_parent">首页</a>
+			<a href="<?=get_page_args()?>p=<?=$prev_number?>" target="_parent">上一页</a> 
 			第<?=$now_page?> / <b><?=$total_page?></b>页 
-			<a href="<?=get_page_args()?>p=<?=$next_number?>">下一页</a>
-			<a href="<?=get_page_args()?>p=<?=$total_page?>">尾页</a>
+			<a href="<?=get_page_args()?>p=<?=$next_number?>" target="_parent">下一页</a>
+			<a href="<?=get_page_args()?>p=<?=$total_page?>" target="_parent">尾页</a>
 			&nbsp;
 			转到
-			<input type="number" class="span1 text-center" value="<?=req('p')?>" onchange="location.replace('<?=get_page_args()?>p='+this.value)">页
+			<input type="number" class="span1 text-center" value="<?=req('p')?>" onchange="/*location.replace*/window.parent.location.href=('<?=get_page_args()?>p='+this.value)">页
 		</div>
 
 		<?}else{?>
