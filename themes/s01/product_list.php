@@ -441,7 +441,7 @@
                                     echo $goods_url;
                                 } ?>" target="_blank" <? if ($val['is_hot'] == 1){
                                                        ?>style="color:red;font-weight:bold;"<?
-                                } ?>><?= $val['goodsName'] ?></a></dt>
+                                } ?>><?= jiequ(38, $val['goodsName']) ?></a></dt>
 
                             <?
                             //                    if(in_array($val['goods_type'],array(1,2,6))){
@@ -458,7 +458,7 @@
                                 if (notnull($val['itemInfo'])) {
                                     foreach ($val['itemInfo'] as $key => $value) { ?>
                                         <?= $value['text'] ?>:<span class="mr30"
-                                                                    title="<? if (mb_strlen($value['desc'], 'gbk') > 7) echo $value['desc']; ?>"><? if (mb_strlen($value['desc'], 'gbk') > 7 && $valnum > 3) echo jiequ(2, $value['desc']); else echo $value['desc']; ?></span>
+                                                                    title="<? if (mb_strlen($value['desc'], 'gbk') > 27) echo $value['desc']; ?>"><? if (mb_strlen($value['desc'], 'gbk') > 27 && $valnum > 23) echo jiequ(22, $value['desc']); else echo $value['desc']; ?></span>
                                         <br>
                                         <!--                                        --><?//=$value['text']
                                         ?><!--:<span class="mr30">--><?//=$value['desc']
@@ -480,7 +480,7 @@
                             <dd style="padding-top: 10px;line-height: 32px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
-                                    到达城市：<span class="mr30"><?= $val['disCity'] ?></span>
+                                    到达城市：<span class="mr30"><?= jiequ(22, $val['disCity']) ?></span>
                                     <?
                                 } ?>
                             </dd>
