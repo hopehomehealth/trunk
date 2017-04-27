@@ -5,11 +5,9 @@ function to_gbk($str){
     return mb_convert_encoding($str, 'gbk', 'utf-8');
 }
 $post = array();
-$post['goodsId'] = $_POST['goodsId'];
+$post['lvProductIdId'] = $_POST['productId'];
 $post['departDate'] = $_POST['departDate'];
-$post['departDate'] = "2016-08-03";
 $post['packageId'] = $_POST['packageId'];
-$post['packageId'] = "2";
 $post['isPackage'] = $_POST['isPackage'];
 $post['min'] = $_POST['min'];
 $post['max'] = $_POST['max'];
