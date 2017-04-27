@@ -334,7 +334,8 @@ if (!defined('IN_CLOOTA')) {
             type: "POST",
             url: "/model/zbyajax_check.model.php",
             data: {
-                "orderCode": orderCode
+                "orderCode": orderCode,
+                "flag" : 'chk'
             },
             async: false,
             success: function (data) {
