@@ -1,10 +1,9 @@
 <?
-echo "123";
 /// 首页标识
 $is_goods_detail = true;
 
 //  产品ID
-$c_goods_id = req('id');
+$c_goods_id = req('goodsId');
 
 // 产品详细信息
 $sql = "SELECT * FROM t_goods_thread WHERE goods_id='$c_goods_id' AND site_id='$g_siteid' LIMIT 0,1";
