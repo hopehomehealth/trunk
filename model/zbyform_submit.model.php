@@ -4,9 +4,9 @@
 $tc['goodsId'] = req('lvProductId');
 $tc['packageId'] = req('packageId');
 $tc['departdate'] = req('departdate');
-$tc['goodsId'] = '8000000';
-$tc['packageId'] = '9090902';
-$tc['departDate'] = '2017-05-10';
+//$tc['goodsId'] = '8000000';
+//$tc['packageId'] = '9090902';
+//$tc['departDate'] = '2017-05-10';
 //var_dump($tc);
 $api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$tc['goodsId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
@@ -17,19 +17,18 @@ $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
 $is_package = $taocan['isPackage'];
 //订单接口参数
-$post['token'] = "{\"token1\":\"34d996bc-bc3f-4ed5-8020-868a68398352%2315122991536%23%25E5%2585%259A%25E5%25A6%25B9%25E5%25AD%2590%2376061060000000341\",\"token2\":\"2C8EBC684DBE4F930096E68FE24F8550F53F78A0E79634E0F6668F99659D83BB449A51AF37EADCA8D775097E26A6A13958D3B455DF850CFE35567C783187C0EE7A4D04972B0B38E271997D96941AD1A8\"}";//$token;
-//$post['userId'] = '90841060000026700';//$realid;
-$post['goodsId'] = '8017691';//$taocan['goodsId'];
-$post['lvProductId'] = '9999999';//$taocan['lvProductId'];
-$post['packageId'] = '6666666';//$tc['packageId'];
-$post['departdate'] = '2017-05-31';//$tc['departDate'];
-$post['payPrice'] = '150';//req('payPrice');
+$post['token'] = $token;//"{\"token1\":\"34d996bc-bc3f-4ed5-8020-868a68398352%2315122991536%23%25E5%2585%259A%25E5%25A6%25B9%25E5%25AD%2590%2376061060000000341\",\"token2\":\"2C8EBC684DBE4F930096E68FE24F8550F53F78A0E79634E0F6668F99659D83BB449A51AF37EADCA8D775097E26A6A13958D3B455DF850CFE35567C783187C0EE7A4D04972B0B38E271997D96941AD1A8\"}";
+$post['goodsId'] = $taocan['goodsId'];//'8017691';//
+$post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
+$post['packageId'] = $tc['packageId'];//'6666666';//
+$post['departdate'] = $tc['departDate'];//'2017-05-31';
+$post['payPrice'] = req('payPrice');//'150';//
 if($taocan['isPackage'] == 'true'){//按份卖
-    $post['packageNum'] = '3';//req('packageNum');
+    $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
-    $post['adultNum'] = '1';//req('adultNum');
-    $post['childNum'] = '1';//req('childNum');
-    $post['roomCount'] = '0';//req('roomCount');
+    $post['adultNum'] = req('adultNum');//'1';//
+    $post['childNum'] = req('childNum');//'1';//
+    $post['roomCount'] = req('roomCount');//'0';//
 }
 //游玩人数量判断  
 if($taocan['traveller_name']=='TRAV_NUM_ONE'){

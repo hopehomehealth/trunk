@@ -23,7 +23,7 @@ $orderCode = req('orderCode');
 <div id="applyRefund_mainBox">
     <div id="applyRefund_main">
         <div class="applyRefund_main_cont">
-            <p>您的申请退款已经提交，稍后会有工作人员与您联系！</p>
+            <p><?=$refund_message;?></p>
             <div class="applyRefund_main_info">
                 <div class="applyRefund_main_info_title">订单信息：</div>
                 <ul>
@@ -32,8 +32,8 @@ $orderCode = req('orderCode');
                 </ul>
             </div>
         </div>
-        <button class="cancelOrder">查看订单</button>
-        <button class="payNow">返回首页</button>
+        <button class="cancelOrder" onclick="order_view()">查看订单</button>
+        <button class="payNow" onclick="return_index()">返回首页</button>
     </div>
 </div>
 <!-- 申请退款 end -->
@@ -46,6 +46,13 @@ $orderCode = req('orderCode');
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
-
+  function order_view(){
+      var url = "<?=$g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html";
+      window.location.href = url;
+  }
+  function return_index(){
+      var url = "<?=$g_self_domain;?>/zhoubian/";
+      window.location.href = url;
+  }
 </script>
 </html>

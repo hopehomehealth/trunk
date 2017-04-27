@@ -22,7 +22,7 @@ if(req('flag') == 'rf'){
     $require_refund = array_iconv($require_refund);
     $require_refund_data = $require_refund['data'];
     $refund_message = $require_refund_data['message'];
-    var_dump($require_refund_data);
+//    var_dump($require_refund_data);
 }
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
@@ -52,7 +52,6 @@ $order_detail = array_iconv($order_detail);
 //    if ($order_detail['status'] != '0000') {
 //        exit('订单失败');
 //    }
-//var_dump($order_detail);
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
 //取消订单
@@ -62,8 +61,6 @@ if($_GET['flag'] == 'cn'){
     $cancle_order = json_decode($cancle_order, true);
     $cancle_order = array_iconv($cancle_order);
     $cancle_order_data = $cancle_order['data'];
-//    echo "<pre>";
-//    var_dump($cancle_order);
 }
 
 //按钮对应状态判断
@@ -79,9 +76,5 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 }elseif($orderStatus == 1){
     $st = 4;
 }
-$rstatus = req('rstatus');
-if($rstatus == '0000'){
-    $st = 0;
-}
-//$st = 3;
+$st = 1;
 //?>

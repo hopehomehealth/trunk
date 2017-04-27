@@ -335,13 +335,13 @@ if (!defined('IN_CLOOTA')) {
             async: false,
             success: function (data) {
 //                alert(data);
-                if(data = true){
-                    $('.refundInfo').show();
-                    $('.applyRefund').hide();
-                } else {
+                if(data = 'false'){
                     $('.tuikuanSuccessBox').show();
                     $('.applyRefund').hide();
                     $("#mengban").hide();
+                } else {
+                    $('.refundInfo').show();
+                    $('.applyRefund').hide();
                 }
             }
         });
@@ -413,7 +413,6 @@ if (!defined('IN_CLOOTA')) {
         window.location.href = url;
     }
     function order_again(){
-//        var url = "<?//=$g_self_domain;?>///product/detail-8000000.html";
         var url = "<?=$g_self_domain;?>/product/detail-<?=$order_detail_data['goodsId']?>.html";
         window.location.href = url;
     }
