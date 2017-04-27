@@ -165,7 +165,7 @@
 <!--                --><?// if ($c_goods['is_sale'] == '1') { ?>
 <!--                    --><?// if ($c_goods['is_hot'] == '1') { ?><!--<i class="tag-btn">»»¬Ù</i>--><?// } ?>
 <!--                --><?// } ?>
-                <i class="tag-btn"><?= $g_product_type[$c_goods_type] ?></i>
+                <i class="tag-btn"><?= $db->to_gbk($data['typeNames']) ?></i>
             </div>
             <div class="d-con">
 <!--                <div class="d_row gray-c">‘≠ º€£∫-->
