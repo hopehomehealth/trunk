@@ -78,6 +78,7 @@ if($flag == 'check'){
      $post = array_filter($post);
      //²âÊÔ ÏÈ´«¿Õ
      $post['travellerList'] = '';
+     var_dump($post);die;
      $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
@@ -87,6 +88,7 @@ if($flag == 'check'){
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
+
 }
 
 
