@@ -49,7 +49,7 @@ if($taocan['traveller_name']=='TRAV_NUM_ONE'){
     $num = 0;
 }
 
-
+echo $num;
 //Éú³É¶©µ¥
 $flag = req('flag');
 if($flag == 'check'){
