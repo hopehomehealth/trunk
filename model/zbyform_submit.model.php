@@ -1,9 +1,11 @@
 <?
 //$db->check_cookie($loginUrl, $host);
 //获取套餐信息
-$tc['goodsId'] = req('lvProductId');
+var_dump($_POST);
+$tc['goodsId'] = req('goodsId');
 $tc['packageId'] = req('packageId');
-$tc['departdate'] = req('departdate');
+$tc['departDate'] = req('departDate');
+var_dump($tc);
 //$tc['goodsId'] = '8000000';
 //$tc['packageId'] = '9090902';
 //$tc['departDate'] = '2017-05-10';
