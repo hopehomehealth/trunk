@@ -1,5 +1,5 @@
 <?
-//$db->check_cookie($loginUrl, $host);
+$db->check_cookie($loginUrl, $host);
 //获取套餐信息
 $tc['goodsId'] = req('goodsId');
 $tc['packageId'] = req('packageId');
