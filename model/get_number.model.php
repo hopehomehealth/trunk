@@ -14,7 +14,13 @@ $post['isPackage'] = $_POST['isPackage'];
 $post['min'] = $_POST['min'];
 $post['max'] = $_POST['max'];
 $adultNum = $_POST['adultNum'];
+if($adultNum == ''){
+    $adultNum = '0';
+}
 $kidNum = $_POST['kidNum'];
+if($kidNum == ''){
+    $kidNum = '0';
+}
 $childPriceInfo = $_POST['childPriceInfo'];
 
 $url = $host . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
@@ -34,7 +40,7 @@ if($post['isPackage'] == 'true'){
             }
             echo"</select>
             <label for=\"\">其中包含:</label>
-            成人：$adultNum / 儿童：$kidNum
+            成人：$adultNum  儿童：$kidNum
 
             <a href=\"javascript:void(0);\" class=\"qijia\" style=\"\">起价说明</a>
             <div class=\"qijia_tips\">
