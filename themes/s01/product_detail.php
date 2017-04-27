@@ -976,7 +976,7 @@
 //            alert('亲，您没有选择人数！');
 //            return false;
 //        }
-        var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+        var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-1.html";
         $('#chufa').attr('action',url);
         $('#goodsId').val(goodsId);
         $('#lvProductId').val(lvProductId);
