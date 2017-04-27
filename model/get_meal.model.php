@@ -7,7 +7,6 @@ function to_gbk($str){
 $post = array();
 $post['lvProductId'] = $_POST['productId'];
 $post['departDate'] = $_POST['departDate'];
-//$post['departDate'] = "2016-09-15";
 $url = $host. "/travel/interface/zby/v3.2/getZbyPackageByGoodsId_v3.2";
 $data = $db->api_post($url, $post);
 $arr = json_decode($data, true);

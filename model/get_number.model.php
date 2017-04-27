@@ -5,10 +5,10 @@ function to_gbk($str){
     return mb_convert_encoding($str, 'gbk', 'utf-8');
 }
 $post = array();
-$post['lvProductIdId'] = $_POST['productId'];
+$post['lvProductId'] = $_POST['productId'];
 $post['departDate'] = $_POST['departDate'];
 $post['packageId'] = $_POST['packageId'];
-$post['isPackage'] = $_POST['isPackage'];
+//$post['isPackage'] = $_POST['isPackage'];
 $post['min'] = $_POST['min'];
 $post['max'] = $_POST['max'];
 $adultNum = $_POST['adultNum'];
@@ -27,6 +27,7 @@ $arr = json_decode($data, true);
 $datass = $arr['data'];
 $adultmin = $datass['0'];
 $adultmax = $datass['1'];
+
 
 if($post['isPackage'] == 'true'){
     echo "<span class='fenshu'>
