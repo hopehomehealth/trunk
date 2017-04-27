@@ -480,7 +480,7 @@
                             <dd style="padding-top: 10px;line-height: 32px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
-                                    到达城市：<span class="mr30"><?= jiequ(22, $val['disCity']) ?></span>
+                                    到达城市：<span class="mr30"><?= jiequ(22, $val['disCity']) ?></span> 
                                     <?
                                 } ?>
                             </dd>
