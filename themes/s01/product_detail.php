@@ -168,24 +168,24 @@
                 <i class="tag-btn"><?= $g_product_type[$c_goods_type] ?></i>
             </div>
             <div class="d-con">
-                <div class="d_row gray-c">原 价：
-                    <del>&yen;<?= $data['realPrice'] ?></del>
+<!--                <div class="d_row gray-c">原 价：-->
+<!--                    <del>&yen;--><?//= $data['realPrice'] ?><!--</del>-->
 <!--                    <a href="javascript:void(0);" class="rel d_sm">起价说明<span class="box-tips" style="display:none "><i-->
 <!--                                class="icon"></i><strong>起价说明</strong><br>本起价是按双人出行共用一间房核算的单人价格，产品价格根据您所选择的出发日期、出行人数、入住酒店房型、航班或交通以及所选附加服务的不同而有所差别。</span>-->
 <!--                    </a>&nbsp;&nbsp;&nbsp;&nbsp;-->
-                    <span class="yellow-a">【编号：<?= $data['goodsCode'] ?>】</span>
-                </div>
+<!--                    <span class="yellow-a">【编号：--><?//= $data['goodsCode'] ?><!--】</span>-->
+<!--                </div>-->
                 <div class="d_row gray-c d_price">优惠价
                     <span class="yellow-a"><i>&yen;</i> <em><?= $data['minPrice'] ?></em><sub> 起</sub></span>
 <!--                    <a href="javascript:void(0);" class="rel">支付说明<span class="box-tips"-->
 <!--                                                                        style="display:none; width:162px;">-->
 <!--					<i class="icon"></i>享受--><?//= $g_sitename ?><!--直减价格</span></a>-->
                 </div>
-                <div class="d_row gray-c route-line">
-                    <label>建议提前</label>
-                    <div><span class="route-day"><?= $data['before_days'] ?></span><span class="gray-b">天预订</span>
-                    </div>
-                </div>
+<!--                <div class="d_row gray-c route-line">-->
+<!--                    <label>建议提前</label>-->
+<!--                    <div><span class="route-day">--><?//= $data['before_days'] ?><!--</span><span class="gray-b">天预订</span>-->
+<!--                    </div>-->
+<!--                </div>-->
 
                 <div class="d_row gray-c">
 <!--                    --><?// if ($c_goods['src_prov'] != '') { ?>
