@@ -25,7 +25,11 @@ echo "<ul class=\"byPart_title\">
 foreach ($datas['list'] as $key => $val) {
     $packageId = to_gbk($val['packageId']);//套餐ID
     $packageName = to_gbk($val['packageName']);//套餐名
-//    $hotelName = to_gbk($val['hotelList']['0']['hotelName']);//酒店名
+//    if($val['hotelList'] !== ''){
+//        $hotelName = to_gbk($val['hotelList']['0']['hotelName']);//酒店名
+//    } else {
+//        $hotelName = '当前套餐下无酒店';
+//    }
 //    $hotelInfo = to_gbk($val['hotelList']['0']['hotelInfo']);//酒店简介
     $ticketName = to_gbk($val['ticketList']['0']['ticketName']);//门票名
     $ticketInfo = to_gbk($val['ticketList']['0']['ticketInfo']);//门票简介
