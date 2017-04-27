@@ -714,7 +714,7 @@
                 $('#v_calendar1').hide();
                 departDate = $('#startDate').val();
                 var goodsId = <?= $goodsId ?>;
-                var productId = <?= $productId ?>;
+                var productId = <?= $productId ?>; 
                 $.ajax({
                     type: "POST",
                     url: "/model/get_meal.model.php",
