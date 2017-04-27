@@ -250,7 +250,7 @@
     <div class="detail-search toscroll" id="searchzone"
          <? if ($c_goods['goods_type'] == '3'){ ?>style="display:none"<? } ?>>
         <i class="lv-icon form-i"></i>
-        <form name="order" action="" id="chufa" class="detail-form" method="post">
+        <form name="order" action="" id="chufa" class="detail-form" method="GET">
             <label for="">出发日期:</label>
             <div class="input-group">
                 <!-- <select name="departdate" id="departdate" onChange="count_price()" style="font-size:12px;width:100%">
