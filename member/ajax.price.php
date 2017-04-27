@@ -19,4 +19,4 @@ echo "<span>·¿²î</span>
 foreach ($fangcha as $key => $val) {
     echo "<option value='$val'>$val</option>";
 }
-echo "</select><span class=\"jiage\"> &yen;$diffPrice/ ·Ý</span>";
+echo "</select><span class=\"jiage\"> &yen;<span class='roomPrice'>$diffPrice</span>/ ·Ý</span>";
