@@ -1,12 +1,23 @@
 <?
+/*if(req('flag') == 1){
+    $canshu = $db->base64url_encode($_SERVER['QUERY_STRING']);
+    $dizhi = $_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
+    $wangzhi = $dizhi.$canshu;
+
+
+
+
+    header("location: http://$wangzhi");
+}
+$canshu = */
 $db->check_cookie($loginUrl, $host);
 $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //获取套餐信息
-$tc['goodsId'] = req('goodsId');
+$tc['lvProductId'] = req('lvProductId');
 $tc['packageId'] = req('packageId');
 $tc['departDate'] = req('departDate');
 //var_dump($tc);
-$api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$tc['goodsId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
+$api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?lvProductId='.$tc['lvProductId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
 $tcs = array_iconv(json_decode(juhecurl("$api_url", false, 0),true),'utf-8','gbk');
 //设置变量
@@ -21,7 +32,7 @@ $post['goodsId'] = $taocan['goodsId'];//'8017691';//
 $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
-$post['payPrice'] = req('payPrice');//'150';//
+$post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
