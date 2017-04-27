@@ -714,10 +714,11 @@
                 $('#v_calendar1').hide();
                 departDate = $('#startDate').val();
                 var goodsId = <?= $goodsId ?>;
+                var productId = <?= $productId ?>;
                 $.ajax({
                     type: "POST",
                     url: "/model/get_meal.model.php",
-                    data: {"goodsId": goodsId, "departDate": departDate},
+                    data: {"productId": productId, "departDate": departDate},
                     async: false,
                     success: function (data) {
                         $('.detail_byPart').html("");
