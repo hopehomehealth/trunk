@@ -105,6 +105,10 @@ if(!defined('IN_CLOOTA')) {
     <p>支付处理中,请稍后······</p>
 </div>
 
+<form action="" method="post" id="jumpForm" name="jumpForm">
+    <input type="hidden" name="payPrice" id="payPrice" value="<?=$payPrice?>">
+</form>
+
 <!--  foot  start -->
 <?include 'foot.php'?>
 <!--  foot  end -->
@@ -145,13 +149,14 @@ if(!defined('IN_CLOOTA')) {
                         clearInterval(timer);
                     }
                 }, 1000)
-                window.open("zbypay_jump-" + val + "-" + <?=$orderCode;?> + "-"+ <?=$payPrice;?> +".html");
+                $("#jumpForm").attr("action", "zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html");
+                $('#jumpForm').submit();
             }
             if ($("#wxqrcode").attr("checked")) {
                 var val = $("#wxqrcode").val();
                 $.ajax({
                     type: 'post',
-                    url: "/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + "-"+ <?=$payPrice;?> +".html",
+                    url: "zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
                     data: {"val" : val},
                     success: function (data)
                     {
@@ -173,7 +178,9 @@ if(!defined('IN_CLOOTA')) {
                         clearInterval(timer);
                     }
                 }, 1000)
-                window.open("zbypay_jump-" + val + "-" + <?=$orderCode;?> + "-"+ <?=$payPrice;?> +".html");
+//                window.open("zbypay_jump-" + val + "-" + <?//=$orderCode;?>// + "-"+ <?//=$payPrice;?>// +".html");
+                $("#jumpForm").attr("action", "zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html");
+                $('#jumpForm').submit();
             }
         });
         //取消订单
