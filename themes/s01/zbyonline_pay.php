@@ -67,8 +67,6 @@ if(!defined('IN_CLOOTA')) {
                 }
 
                 ?>
-                <input type="hidden" name="orderno" value="<?echo $orderCode;?>">
-                <input type="hidden" name="totalprice" value="<?echo $payPrice;?>">
             </div>
             </form>
             <div class="onlinePay_main3">
@@ -106,9 +104,10 @@ if(!defined('IN_CLOOTA')) {
     <p>支付处理中,请稍后······</p>
 </div>
 
-<form action="" method="post" id="jumpForm" name="jumpForm">
+<form action="" method="post" id="jumpForm" name="jumpForm" target="_blank">
     <input type="hidden" name="payPrice" id="payPrice" value="<?=$payPrice?>">
 </form>
+
 
 <!--  foot  start -->
 <?include 'foot.php'?>
@@ -135,6 +134,7 @@ if(!defined('IN_CLOOTA')) {
 
 
         var timer;
+        var payPrice = <?=$payPrice;?>
         // 支付弹窗
         $('.onlinePay_payNow').click(function () {
             clearInterval(timer);
@@ -158,7 +158,10 @@ if(!defined('IN_CLOOTA')) {
                 $.ajax({
                     type: 'post',
                     url: "zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
-                    data: {"val" : val},
+                    data: {
+                        "val" : val,
+                        "payPrice" : payPrice
+                    },
                     success: function (data)
                     {
                         var data1 = data.split('<!')[0];
