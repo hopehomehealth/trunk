@@ -41,10 +41,10 @@ if($taocan['isPackage'] == 'true'){//按份卖
     $post['roomCount'] = req('roomCount');//'0';//
 }
 //游玩人数量判断  
-if($taocan['traveller_name']=='TRAV_NUM_ONE'){
+if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
-}elseif ($taocan['traveller_name'] == 'TRAV_NUM_ALL'){
-    $num = req('adultNum')+req('childNum');
+}elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
+    $num = $post['adultNum']+$post['childNum'];
 }else{
     $num = 0;
 }
