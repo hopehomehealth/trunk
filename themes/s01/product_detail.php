@@ -840,7 +840,7 @@
                                     type: "POST",
                                     url: "/model/get_number.model.php",
                                     data: {
-                                        "goodsId": goodsId,
+                                        "productId": productId,
                                         "departDate": departDate,
                                         "packageId": packageId,
                                         "isPackage": isPackage,
