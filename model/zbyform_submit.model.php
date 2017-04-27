@@ -70,17 +70,22 @@ if($flag == 'check'){
      $post = array_filter($post);
      //测试 先传空
      $post['travellerList'] = '';
-     //var_dump($post);
+     var_dump($post);
      $dingdan = array_iconv(json_decode($db->api_post("http://wwwd.bus365.cn/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      var_dump($dingdan);
      $orderCode = $dingdan['data']['orderCode'];
+     $goodsName = $dingdan['data']['goodsName'];
+     $payTime = $dingdan['data']['payTime'];
+     $departdate = $dingdan['data']['departdate'];
+     $payPrice = $dingdan['data']['payPrice'];
+     $peopleNum = $dingdan['data']['peopleNum'];
+     $unitPrice = $dingdan['data']['unitPrice'];
+     $lvGoodsName = $dingdan['data']['lvGoodsName'];
      if($dingdan['status'] == '1000'){
         $dingdan['msg'] = '\''.$dingdan['msg'].'\'';
         echo '<script>alert('.$dingdan['msg'].')</script>';
      }
      
-     //跳转到付款页面
-     header("Location: $g_self_domain/zhoubianyou/zbyonline_pay-$orderCode.html"); //exit;
     
      
 
