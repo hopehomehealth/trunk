@@ -32,6 +32,7 @@ if(!defined('IN_CLOOTA')) {
                 </div>
                 <div class="onlinePay_main1_allInfo">
                     <p>订单编号：<b><?echo $orderCode;?></b></p>
+                    <p>商品描述：<b><?=$lvGoodsName;?></b></p>
                     <p>交易类型：<b>在线支付</b></p>
                     <p>建议您在<span><?= date("H:i:s", time() + ($payTime / 1000)) ?></span>内完成付款，过期订单会自动取消哦。</p>
                 </div>
