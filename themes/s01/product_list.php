@@ -441,7 +441,7 @@
                                     echo $goods_url;
                                 } ?>" target="_blank" <? if ($val['is_hot'] == 1){
                                                        ?>style="color:red;font-weight:bold;"<?
-                                } ?>><?= jiequ(38, $val['goodsName']) ?></a></dt>
+                                } ?>><?= jiequ(30, $val['goodsName']) ?></a></dt>
 
                             <?
                             //                    if(in_array($val['goods_type'],array(1,2,6))){
