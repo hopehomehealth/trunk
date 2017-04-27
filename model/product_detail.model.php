@@ -157,9 +157,9 @@ $all_contents	= $all_days['content'];
 $all_tools		= $all_days['tool'];
 $all_images		= $all_days['image'];
 
-$goodsId = req('id');
+$goodsId = req('goodsId');
 $productId = req('productId');
-$url = $host . "/travel/interface/zbyV3.2/getZbyGoodsDtailV_3.2?goodsId=" . $goodsId;
+$url = "wwwt.bus365.cn" . "/travel/interface/zbyV3.2/getZbyGoodsDtailV_3.2?goodsId=" . $goodsId;
 $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
