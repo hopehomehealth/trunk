@@ -288,11 +288,15 @@ if (!defined('IN_CLOOTA')) {
 
 <!--    //能否退款提示-->
 
-    <div class="tuikuanSuccessBox" style="width: 400px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;display:none;">
-        <p style="width: 400px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?echo $failReason;?></p>
-        <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 300px;border:none;border-radius: 2px;">确定</button></a>
+<div class="nengtuifou">
+    <div class="nengtuifou_title">
+        <div class="nengtuifou_title_left">bus365提示您</div>
+        <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html"><span class="nengtuifou_title_right"></span></a>
     </div>
-
+    <div class="nengtuifou_cont">
+        <div class="nengtuifou_cont_tips">&nbsp;&nbsp;<?echo $failReason;?></div>
+    </div>
+</div>
 
 <!--  foot  start -->
 <? include 'foot.php'; ?>
