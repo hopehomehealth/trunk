@@ -250,7 +250,7 @@
     <div class="detail-search toscroll" id="searchzone"
          <? if ($c_goods['goods_type'] == '3'){ ?>style="display:none"<? } ?>>
         <i class="lv-icon form-i"></i>
-        <form name="order" action="#" class="detail-form" method="get">
+        <form name="order" action="" id="chufa" class="detail-form" method="post">
             <label for="">出发日期:</label>
             <div class="input-group">
                 <!-- <select name="departdate" id="departdate" onChange="count_price()" style="font-size:12px;width:100%">
@@ -296,6 +296,15 @@
                 <span id="order_span">
 				<a onclick="order_window()" class="btn btn-lg"
                    id="order_button">开始预订</a>
+                    <input type="hidden" id="goodsId" name="goodsId" value="">
+                    <input type="hidden" id="isPackage" name="isPackage" value="">
+                    <input type="hidden" id="packageId" name="packageId" value="">
+                    <input type="hidden" id="departDate" name="departDate" value="">
+                    <input type="hidden" id="adultNum" name="adultNum" value="">
+                    <input type="hidden" id="childNum" name="childNum" value="">
+                    <input type="hidden" id="roomCount" name="roomCount" value="">
+                    <input type="hidden" id="payPrice" name="payPrice" value="">
+                    <input type="hidden" id="packageNum" name="packageNum" value="">
 			</span>
             </div>
         </form>
@@ -945,62 +954,79 @@
         var goodsId = "<?=$goodsId?>";
         var fenshu = $('#fenshu').val();
         var zongjia = $("#count_result").html();
-//        alert(zongjia);
-//        alert($("#count_result").html());
-//        if ($('#startDate').val() == '') {
-//            alert('亲，您没有选择出发日期！');
-//            return false;
-//        }
+        if ($('#startDate').val() == '') {
+            alert('亲，您没有选择出发日期！');
+            return false;
+        }
 
-//        if ( fenshu == '0') {
-//            alert('亲，您没有选择分数数！');
-//            return false;
-//        }
-//
-//        if (adultNum == '0' || kidNum == '0' || fenshu == '0') {
-//            alert('亲，您没有选择人数！');
-//            return false;
-//        }
-        if(isPackage == false){
-            alert(isPackage);exit;
-            $.ajax({
-                type: "POST",
-                url: "/model/zbyform_submit.model.php",
-                data: {
-                    "goodsId": goodsId,
-                    "isPackage": isPackage,
-                    "packageId": packageId,
-                    "departDate": departDate,
-                    "adultNum": adultNum,
-                    "childNum": kidNum,
-                    "roomCount": diffPriceNum,
-                    "payPrice": zongjia
-                },
-                async: false,
-                success: function (data) {aler(123);
-//                    window.location.href = <?//= $g_self_domain ?>// + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
-                }
-            });
-        } else {
-            $.ajax({
-                type: "POST",
-                url: "/model/zbyform_submit.model.php",
-                data: {
-                    "goodsId": goodsId,
-                    "isPackage": isPackage,
-                    "packageId": packageId,
-                    "departDate": departDate,
-                    "adultNum": adultNum,
-                    "kidNum": kidNum,
-                    "packageNum": fenshu,
-                    "payPrice": zongjia
-                },
-                async: false,
-                success: function (data) {aler(123);
-//                    window.location.href = <?//= $g_self_domain ?>// + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
-                }
-            });
-        };
+        if ( fenshu == '0') {
+            alert('亲，您没有选择份数！');
+            return false;
+        }
+
+        if (adultNum == '0') {
+            alert('亲，您没有选择人数！');
+            return false;
+        }
+        var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+        $('#chufa').attr('action',url);
+        $('#goodsId').val(goodsId);
+        $('#isPackage').val(isPackage);
+        $('#packageId').val(packageId);
+        $('#departDate').val(departDate);
+        $('#adultNum').val(adultNum);
+        $('#childNum').val(kidNum);
+        $('#roomCount').val(diffPriceNum);
+        $('#payPrice').val(zongjia);
+        $('#packageNum').val(fenshu);
+        $('#chufa').submit();
+
+
+//        if(isPackage == false){
+//            $.ajax({
+//                type: "POST",
+//                url: "/model/zbyform_submit.model.php",
+//                data: {
+//                    "goodsId": goodsId,
+//                    "isPackage": isPackage,
+//                    "packageId": packageId,
+//                    "departDate": departDate,
+//                    "adultNum": adultNum,
+//                    "childNum": kidNum,
+//                    "roomCount": diffPriceNum,
+//                    "payPrice": zongjia
+//                },
+//                async: false,
+//                success: function (data) {console.log(data);
+////                    window.location.href = "<?////= $g_self_domain ?>////" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+//        },
+//                error: function() {
+//                    alert(error);
+//                }
+//            });
+//        } else {
+//            $.ajax({
+//                type: "POST",
+//                url: "/model/zbyform_submit.model.php",
+//                data: {
+//                    "goodsId": goodsId,
+//                    "isPackage": isPackage,
+//                    "packageId": packageId,
+//                    "departDate": departDate,
+//                    "adultNum": adultNum,
+//                    "kidNum": kidNum,
+//                    "packageNum": fenshu,
+//                    "payPrice": zongjia
+//                },
+//                async: false,
+//                success: function (data) {console.log(data);
+//                    window.location.href = "<?//= $g_self_domain ?>//" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+//                },
+//                error: function() {
+//                    alert(error);
+//                }
+//            });
+//        };
     };
 </script>
 <script>
