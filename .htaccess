@@ -105,7 +105,7 @@ RewriteRule ^zhoubianyou/zbycomment_success-(.*).html$    index\.php?cmd=zbycomm
 RewriteRule ^zhoubianyou/zbycomment_detail-(.*).html$     index\.php?cmd=zbycomment_detail&orderCode=$1 [L]
 # ÷‹±ﬂ”ŒœÍ«È
 RewriteCond %{QUERY_STRING} ^(.*)$
-RewriteRule ^zhoubianyou/zbyform_submit-(.*).html$    index\.php?cmd=zbyform_submit&flag=$1&%1 [L]
+RewriteRule ^zhoubianyou/zbyform_submit-(.*).html$    index\.php?cmd=zbyform_submit&packageId=$1&%1 [L]
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^zhoubianyou/zbyonline_pay-(.*).html$    index\.php?cmd=zbyonline_pay&orderCode=$1&%1 [L]
 RewriteRule ^zhoubianyou/zbypay_jump-(.*)-(.*).html$    index\.php?cmd=zbypay_jump&topayinfoid=$1&orderno=$2 [L]
