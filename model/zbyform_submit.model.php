@@ -16,13 +16,12 @@ $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $tc['lvProductId'] = req('lvProductId');
 $tc['packageId'] = req('packageId');
 $tc['departDate'] = req('departDate');
-var_dump($tc);
 //var_dump($tc);
-$api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$tc['goodsId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
+$api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?lvProductId='.$tc['lvProductId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
 $tcs = array_iconv(json_decode(juhecurl("$api_url", false, 0),true),'utf-8','gbk');
 //设置变量
-$taocan = $tcs['data'][0];var_dump($tancan);
+$taocan = $tcs['data'][0];
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
 $is_package = $taocan['isPackage'];
