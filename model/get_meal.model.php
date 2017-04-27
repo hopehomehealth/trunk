@@ -1,5 +1,5 @@
 <?
-include('config.php');
+include('../config.php');
 header("Content-type:text/html;charset=gbk");
 function to_gbk($str){
     return mb_convert_encoding($str, 'gbk', 'utf-8');
@@ -8,15 +8,8 @@ $post = array();
 $post['goodsId'] = $_POST['goodsId'];
 $post['departDate'] = $_POST['departDate'];
 $post['departDate'] = "2016-09-15";
-$url = "wwwd.bus365.cn" . "/travel/interface/zby/v3.2/getZbyPackageByGoodsId_v3.2";
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-$data = curl_exec($ch);
-curl_close($ch);
+$url = $host. "/travel/interface/zby/v3.2/getZbyPackageByGoodsId_v3.2";
+$data = $db->api_post($url, $post);
 $arr = json_decode($data, true);
 $datas = $arr['data'];
 

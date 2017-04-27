@@ -163,10 +163,6 @@ $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
 $scheduling = $data['scheduling'];
-//header("Content-type:text/html;charset=utf8");
-//echo "<pre>";
-//var_dump($scheduling);
-//die;
 
 function seo(){
 	global $g_sitename, $c_goods;

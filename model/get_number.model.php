@@ -1,5 +1,5 @@
 <?
-include_once 'config/cfg.php';
+include_once '../config.php';
 header("Content-type:text/html;charset=gbk");
 function to_gbk($str){
     return mb_convert_encoding($str, 'gbk', 'utf-8');
@@ -17,15 +17,8 @@ $adultNum = $_POST['adultNum'];
 $kidNum = $_POST['kidNum'];
 $childPriceInfo = $_POST['childPriceInfo'];
 
-$url = "wwwd.bus365.cn" . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-$data = curl_exec($ch);
-curl_close($ch);
+$url = $host . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
+$data = $db->api_post($url, $post);
 $arr = json_decode($data, true);
 $datass = $arr['data'];
 $adultmin = $datass['0'];
