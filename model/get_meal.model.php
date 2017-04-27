@@ -32,8 +32,8 @@ echo "<ul class=\"byPart_title\">
 foreach ($datas['list'] as $key => $val) {
     $packageId = to_gbk($val['packageId']);//Ì×²ÍID
     $packageName = to_gbk($val['packageName']);//Ì×²ÍÃû
-    $hotelName = to_gbk($val['hotelList']['0']['hotelName']);//¾ÆµêÃû
-    $hotelInfo = to_gbk($val['hotelList']['0']['hotelInfo']);//¾Æµê¼ò½é
+//    $hotelName = to_gbk($val['hotelList']['0']['hotelName']);//¾ÆµêÃû
+//    $hotelInfo = to_gbk($val['hotelList']['0']['hotelInfo']);//¾Æµê¼ò½é
     $ticketName = to_gbk($val['ticketList']['0']['ticketName']);//ÃÅÆ±Ãû
     $ticketInfo = to_gbk($val['ticketList']['0']['ticketInfo']);//ÃÅÆ±¼ò½é
     $lvStock = to_gbk($val['skuList']['0']['lvStock']);//¿â´æ
@@ -62,7 +62,7 @@ foreach ($datas['list'] as $key => $val) {
     echo "<div class=\"byPart_cont\">
         <ul>
             <li class=\"product_name1\">$packageId<br>$packageName</li>
-            <li class=\"hotel_contain1\">$hotelName</li>
+            <li class=\"hotel_contain1\">$packageName<br>$hotelName</li>
             <li class=\"ticket_contain1\">$ticketName<br></li>
             <li class=\"product_mounts1\">$lvStock</li>";
             if($isPackage == 'false'){
