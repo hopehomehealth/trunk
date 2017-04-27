@@ -157,7 +157,8 @@ $all_contents	= $all_days['content'];
 $all_tools		= $all_days['tool'];
 $all_images		= $all_days['image'];
 
-$goodsId = req('id');
+$goodsId = req('goodsId');
+$productId = req('productId');
 $url = $host . "/travel/interface/zby/v3.2/getZbyGoodsDtail_v3.2?lvProductId=" . $goodsId;
 $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
