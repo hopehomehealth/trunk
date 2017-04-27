@@ -1,16 +1,16 @@
 <?
 header("Content-type: text/html; charset=utf-8");
-$post['totalprice'] = req('totalprice');
+$post['totalprice'] = req('payPrice');
 $post['orderno'] = req('orderno');
 $post['topayinfoid'] = req('topayinfoid');
 $post['token'] = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
-
 $aaa = $post['orderno'];
 $post['successpage'] = 'traveld.bus365.cn/zhoubianyou/zbypay_success-' . $aaa . '.html';
 $url = $host . '/travel/interface/pay/createpayparam';
 $pay_parameter = juhecurl($url, $post, 1);
 $pay_parameter = json_decode($pay_parameter, true);
-$errormsg = $db->to_utf8("Ö§¸¶Ê§°Ü!");;
+$errormsg = $db->to_utf8("Ö§¸¶Ê§°Ü!");
+//var_dump($pay_parameter);die;
 // ÅÐ¶Ï·µ»Ø²ÎÊý
 if ($pay_parameter['status'] != '0000') {
     echo "<script>alert('$errormsg');window.location.href = '/zhoubian/';</script>";

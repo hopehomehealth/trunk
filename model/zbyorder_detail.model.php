@@ -3,8 +3,6 @@ $db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $refundReasonCode = req('refundReasonCode');
-echo $refundReasonCode;
-echo $orderCode;
 //退款产品信息检验
 $post1 = array('orderCode' => $orderCode, 'token' => $token);
 $refund_product = juhecurl($host . "/travel/interface/zby/zbyRefundInfo", $post1, 1);

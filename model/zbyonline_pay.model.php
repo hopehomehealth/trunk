@@ -1,5 +1,4 @@
 <?
-//var_dump($_REQUEST);
 $db->check_cookie($loginUrl, $host);
 $goodsName = req('goodsName');
 $payPrice = req('payPrice');
