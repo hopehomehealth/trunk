@@ -1,8 +1,19 @@
 <?
+/*if(req('flag') == 1){
+    $canshu = $db->base64url_encode($_SERVER['QUERY_STRING']);
+    $dizhi = $_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
+    $wangzhi = $dizhi.$canshu;
+
+
+
+
+    header("location: http://$wangzhi");
+}
+$canshu = */
 $db->check_cookie($loginUrl, $host);
 $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //获取套餐信息
-$tc['goodsId'] = req('goodsId');
+$tc['lvProductId'] = req('lvProductId');
 $tc['packageId'] = req('packageId');
 $tc['departDate'] = req('departDate');
 //var_dump($tc);
