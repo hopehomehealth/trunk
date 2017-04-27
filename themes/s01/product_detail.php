@@ -304,6 +304,7 @@
                     <input type="hidden" id="roomCount" name="roomCount" value="">
                     <input type="hidden" id="payPrice" name="payPrice" value="">
                     <input type="hidden" id="packageNum" name="packageNum" value="">
+                    <input type="hidden" id="roomPrice" name="roomPrice" value="">
 			</span>
             </div>
         </form>
@@ -957,6 +958,7 @@
         var goodsId = "<?=$goodsId?>";
         var lvProductId = "<?=$productId?>";
         var fenshu = $('#fenshu').val();
+        var roomPrice = $('.roomPrice').val();
         var zongjia = $("#orderPrice").html();
         if ($('#startDate').val() == '') {
             alert('亲，您没有选择出发日期！');
@@ -988,6 +990,7 @@
         $('#roomCount').val(diffPriceNum);
         $('#payPrice').val(zongjia);
         $('#packageNum').val(fenshu);
+        $('#roomPrice').val(roomPrice);
         if(biaoji1 == '1' && biaoji2 == '1'){
             $('#chufa').submit();
         } else {
