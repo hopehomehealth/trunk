@@ -14,12 +14,6 @@ $isChange = $refund_product_data['isChange'];
 $failReason = $refund_product_data['failReason'];
 //echo "<pre>";
 //var_dump($refund_product_data);
-//    if (!$isChange !== "true"){
-//        echo "<script>alert('该产品不能申请退款！');history.go(-1)</script>";
-//        exit;
-//    }
-//    var_dump($refund_product_data);
-//}
 //退款申请
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
@@ -89,5 +83,5 @@ $rstatus = req('rstatus');
 if($rstatus == '0000'){
     $st = 0;
 }
-$st = 1;
+//$st = 3;
 //?>

@@ -273,14 +273,14 @@ if (!defined('IN_CLOOTA')) {
 </div>
 
 <!-- 确认会团成功或失败弹窗 -->
-<?if(!empty($cancle_orderx)){ ?>
+<?if(!empty($confirm_return_data)){ ?>
     <div class="querenhuituan1">
         <div class="querenhuituan1_title">
             <div class="querenhuituan1_title_left">bus365提示您</div>
             <a href="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html"><span class="querenhuituan1_title_right"></span></a>
         </div>
         <div class="querenhuituan1_cont">
-            <div class="querenhuituan1_cont_tips">&nbsp;&nbsp;<?echo $cancle_order_data['message'];?></div>
+            <div class="querenhuituan1_cont_tips">&nbsp;&nbsp;<?echo $confirm_return_data['message'];?></div>
         </div>
     </div>
 <?}?>
