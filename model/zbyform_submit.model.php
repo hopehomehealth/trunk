@@ -32,7 +32,7 @@ $post['goodsId'] = $taocan['goodsId'];//'8017691';//
 $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
-$post['payPrice'] = req('payPrice');//'150';//
+$post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
