@@ -422,7 +422,7 @@
                 $goodsImage = $val['goodsImage'];
                 $sku_list = get_sku_list($val['goodsId'], 5);
                 $goods_url = $val['pcALiDetailLink'];
-                $goodsId = $val['goodsId'];
+                $goodsId = $val['productId'];
                 $ziyingurl = "/product/detail-" . $goodsId . ".html"
                 ?>
                 <div class="lv-list">
