@@ -294,7 +294,7 @@
                                                                                                type="hidden"
                                                                                                name="payPrice" value="">
                 <span id="order_span">
-				<a href="javascript:void(0);" onclick="return order_window()" class="btn btn-lg"
+				<a onclick="order_window()" class="btn btn-lg"
                    id="order_button">开始预订</a>
 			</span>
             </div>
@@ -927,67 +927,81 @@
                     $('.fangchajia').html(data);
                     $('.fangchajia').show();
                     diffPriceNum = $('#diffPrice').val();
-                    var zongjia = "&yen;";
-                        zongjia += adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
+//                    var zongjia = "&yen;";
+                    var zongjia = adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
                     $("#count_result").html(zongjia);
                 }
             });
         }else{
             var fenshu = $('#fenshu').val();
-            var zongjia = "&yen;";
-                zongjia += (adultPrice*adultNum + kidPrice*kidNum)*fenshu;
+//          var zongjia = "&yen;";
+            var zongjia = (adultPrice*adultNum + kidPrice*kidNum)*fenshu;
             $("#count_result").html(zongjia);
         }
     };
 </script>
 <script type="text/javascript">
     function order_window() {
-        if ($('#departdate').val() == '') {
-            alert('亲，您没有选择出发日期！');
-            return false;
-        }
+        var goodsId = "<?=$goodsId?>";
+        var fenshu = $('#fenshu').val();
+        var zongjia = $("#count_result").html();
+//        alert(zongjia);
+//        alert($("#count_result").html());
+//        if ($('#startDate').val() == '') {
+//            alert('亲，您没有选择出发日期！');
+//            return false;
+//        }
 
-        if ($('#adult_num').val() == '0') {
-            alert('亲，您没有选择人数！');
-            return false;
-        }
+//        if ( fenshu == '0') {
+//            alert('亲，您没有选择分数数！');
+//            return false;
+//        }
+//
+//        if (adultNum == '0' || kidNum == '0' || fenshu == '0') {
+//            alert('亲，您没有选择人数！');
+//            return false;
+//        }
         if(isPackage == false){
+            alert(isPackage);exit;
             $.ajax({
                 type: "POST",
-                url: "zbyform_submit.php",
+                url: "/model/zbyform_submit.model.php",
                 data: {
+                    "goodsId": goodsId,
                     "isPackage": isPackage,
                     "packageId": packageId,
                     "departDate": departDate,
                     "adultNum": adultNum,
-                    "kidNum": kidNum,
-                    "diffPrice": diffPrice
+                    "childNum": kidNum,
+                    "roomCount": diffPriceNum,
+                    "payPrice": zongjia
                 },
                 async: false,
-                success: function (data) {
-                    window.location.href = <?= $g_self_domain ?> + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+                success: function (data) {aler(123);
+//                    window.location.href = <?//= $g_self_domain ?>// + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
                 }
-            })
+            });
         } else {
-            var fenshu = $('#fenshu').val();
             $.ajax({
                 type: "POST",
-                url: "zbyform_submit.php",
+                url: "/model/zbyform_submit.model.php",
                 data: {
+                    "goodsId": goodsId,
                     "isPackage": isPackage,
                     "packageId": packageId,
                     "departDate": departDate,
                     "adultNum": adultNum,
                     "kidNum": kidNum,
-                    "packageNum": fenshu
+                    "packageNum": fenshu,
+                    "payPrice": zongjia
                 },
                 async: false,
-                success: function (data) {
-                    window.location.href = <?= $g_self_domain ?> + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
+                success: function (data) {aler(123);
+//                    window.location.href = <?//= $g_self_domain ?>// + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
                 }
-            })
-        }
-    }
+            });
+        };
+    };
 </script>
 <script>
     seajs.use(["freeproduct", 'comment', 'yoslide'], function (product, comment, yoslide) {
