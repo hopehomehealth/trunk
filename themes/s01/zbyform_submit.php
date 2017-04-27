@@ -39,7 +39,7 @@ if(!defined('IN_CLOOTA')) {
         <div class="zbyOrder_main_title">
             <img src="/themes/s01/images/zby_fillInOrder.jpg">
         </div>
-        <form name="write_form" id="write_form" method="post" action="/zhoubianyou/zbyform_submit-9090902.html?flag=check">
+        <form name="write_form" id="write_form" method="post" action="http://<?=$getUrl?>&flag=check">
         <? if($is_package == 'false'){ ?>
             <div class="zbyOrder_main1">
 
@@ -460,7 +460,7 @@ if(!defined('IN_CLOOTA')) {
                 <?}?>
                 <?}?>
                 <!-- 游玩人结束 -->
-                <?//if($taocan['emergency'] == 'true'){?>
+                <?if($taocan['emergency'] == 'true'){?>
                 <div class="zbyOrder_main2_youwan">
                     <div class="zbyOrder_main2_youwanLeft">紧急联系人</div>
                     <div class="zbyOrder_main2_youwanRight">
@@ -478,7 +478,7 @@ if(!defined('IN_CLOOTA')) {
                         </ul>
                     </div>
                 </div>
-                <?//}?>
+                <?}?>
             </div>
         
         </form>
