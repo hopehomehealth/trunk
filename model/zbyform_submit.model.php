@@ -22,7 +22,7 @@ $api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?goodsId='.$t
 
 $tcs = array_iconv(json_decode(juhecurl("$api_url", false, 0),true),'utf-8','gbk');
 //设置变量
-$taocan = $tcs['data'][0];
+$taocan = $tcs['data'][0];var_dump($tancan);
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
 $is_package = $taocan['isPackage'];
