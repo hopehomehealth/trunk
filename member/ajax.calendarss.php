@@ -2,7 +2,7 @@
 include('config.php');
 header("Content-type: text/html; charset=gbk");
 $goodsId = req('id');
-$url =  $host . "/travel/interface/zby/v3.2/getZbyGoodsDtail_v3.2?lvProductId=" . $goodsId;
+$url =  $host . "/travel/interface/zby/v3.2/getZbyGoodsDtail_v3.2?goodsId=" . $goodsId;
 $yyyy = req('yyyy');
 $mm = req('mm');
 $arr['dateTime'] = $yyyy.'-'.$mm;
