@@ -75,7 +75,7 @@ if($flag == 'check'){
     
     
      $post = array_filter($post);
-     $post['travellerList'] = json_encode($travellerList);
+     //$post['travellerList'] = json_encode($travellerList);
      //var_dump($post);die;
      $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
