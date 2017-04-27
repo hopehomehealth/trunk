@@ -77,7 +77,6 @@
 
 
 
-
 <script language="javascript">
     seajs.use(['banner', 'index', 'unveil'], function (banner, index) {
         banner.init();

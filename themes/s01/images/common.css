@@ -122,6 +122,7 @@ textarea {outline: none;}
 .searchMain1_c input{display: block;width: 315px;height: 26px;line-height: 26px;}
 .searchMain1_r{position:absolute;right:-180px;top:-2px;width:200px;height: 30px;cursor:pointer;background:url("/themes/s01/images/seach_03.png") no-repeat center center;}
 
+
 #search_auto{position: absolute;z-index:991;top: 51px;left: 396px;width:400px;overflow: hidden;background-color: white;}
 #search_auto ul{width: 398px;overflow: hidden;border:solid 1px #ddd;}
 #search_auto ul li{width: 378px;height: 32px;line-height: 32px;padding:0 10px;cursor: pointer;}
