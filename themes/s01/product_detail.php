@@ -295,6 +295,7 @@
 				<a onclick="order_window()" class="btn btn-lg"
                    id="order_button">¿ªÊ¼Ô¤¶©</a>
                     <input type="hidden" id="goodsId" name="goodsId" value="">
+                    <input type="hidden" id="lvProductId" name="lvProductId" value="">
                     <input type="hidden" id="isPackage" name="isPackage" value="">
                     <input type="hidden" id="packageId" name="packageId" value="">
                     <input type="hidden" id="departDate" name="departDate" value="">
@@ -954,6 +955,7 @@
         var biaoji1 = '';
         var biaoji2 = '';
         var goodsId = "<?=$goodsId?>";
+        var lvProductId = "<?=$productId?>";
         var fenshu = $('#fenshu').val();
         var zongjia = $("#orderPrice").html();
         if ($('#startDate').val() == '') {
@@ -977,6 +979,7 @@
         var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
         $('#chufa').attr('action',url);
         $('#goodsId').val(goodsId);
+        $('#lvProductId').val(lvProductId);
         $('#isPackage').val(isPackage);
         $('#packageId').val(packageId);
         $('#departDate').val(departDate);
