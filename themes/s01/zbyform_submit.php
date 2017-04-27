@@ -81,7 +81,7 @@ if(!defined('IN_CLOOTA')) {
                             <tr>
                                 <td>房差：<?=$post['roomCount']?></td>
                                 <td>游玩时间：<?=$tc['departDate']?></td>
-                                <td>总价：<?=$post['payPrice']?></td>
+                                <td>总价：￥<?=$post['payPrice']?></td>
                             </tr>
                             </thead>
                         </table>
@@ -484,7 +484,7 @@ if(!defined('IN_CLOOTA')) {
         </form>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
-                    <div class="zbyOrder_main31_left">应付总价：<?=$post['payPrice']?></div>
+                    <div class="zbyOrder_main31_left">应付总价：￥<?=$post['payPrice']?></div>
 
                     <button class="zbyOrder_main31_right" onclick = "check_form()">同意以下条款，去付款</button>
 
