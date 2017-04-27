@@ -20,7 +20,6 @@ if(!defined('IN_CLOOTA')) {
 <?include 'head.php';?>
 
 <body>
-
 <?if (notnull($orderCode)){ ?>
     <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
         <input type="hidden" name="payPrice" value="<?=$payPrice?>">
