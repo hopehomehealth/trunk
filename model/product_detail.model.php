@@ -162,7 +162,7 @@ $productId = req('productId');
 $url = $host . "/travel/interface/zby/v3.2/getZbyGoodsDtail_v3.2?goodsId=" . $goodsId;
 $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
-$data = $arr['data'];
+$data = $arr['data'];   
 $scheduling = $data['scheduling'];
 
 function seo(){
