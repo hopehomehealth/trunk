@@ -153,28 +153,28 @@ if(!defined('IN_CLOOTA')) {
                     <div class="zbyOrder_main2_buyLeft">联系人</div>
                     <div class="zbyOrder_main2_buyRight">
                         <ul>
-                            <?//if($taocan['booker_name']=='true'){?>
+                            <?if($taocan['booker_name']=='true'){?>
                             <li>
                                 <label><b>＊</b>姓名：</label>
                                 <input type="text" name="bookerName" id="linker" value="">
                                 <span class="buyer_nameTips">购买人姓名不能为空！</span>
                             </li>
-                            <?//}?>
-                            <?//if($taocan['booker_mobile']=='true'){?>
+                            <?}?>
+                            <?if($taocan['booker_mobile']=='true'){?>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
                                 <input type="text" name="bookerMobile" id="mobile" value="">
                                 <span>此手机为接受短信所用，作为订购于取票凭证，请准确填写。</span>
                                 <span class="buyer_phoneTips">购买人手机号不能为空！</span>
                             </li>
-                            <?//}?>
-                            <?//if($taocan['booker_email']=='true'){?>
+                            <?}?>
+                            <?if($taocan['booker_email']=='true'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
                                 <input type="text" name="bookerEmail" id="email" value="">
                                 <span class="buyer_emailTips"></span>
                             </li>
-                            <?//}?>
+                            <?}?>
                         </ul>
                     </div>
                 </div>

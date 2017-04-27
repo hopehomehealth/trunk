@@ -41,15 +41,15 @@ if($taocan['isPackage'] == 'true'){//按份卖
     $post['roomCount'] = req('roomCount');//'0';//
 }
 //游玩人数量判断  
-if($taocan['traveller_name']=='TRAV_NUM_ONE'){
+if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
-}elseif ($taocan['traveller_name'] == 'TRAV_NUM_ALL'){
-    $num = req('adultNum')+req('childNum');
+}elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
+    $num = $post['adultNum']+$post['childNum'];
 }else{
     $num = 0;
 }
 
-
+echo $num;
 //生成订单
 $flag = req('flag');
 if($flag == 'check'){
@@ -78,6 +78,7 @@ if($flag == 'check'){
      $post = array_filter($post);
      //测试 先传空
      $post['travellerList'] = '';
+     var_dump($post);die;
      $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
@@ -87,6 +88,7 @@ if($flag == 'check'){
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
+
 }
 
 
