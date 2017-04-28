@@ -70,7 +70,7 @@ if($flag == 'check'){
         //$travellerList[$i] = array_filter($travellerList[$i]);
     }
     $post['travellerList'] = json_encode($travellerList);  
-    
+     
 
      //$post = array_filter($post); 
 if($taocan['isPackage'] == 'true'){//°´·ÝÂô
