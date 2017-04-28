@@ -354,6 +354,7 @@
             <div class="detail-aside wrap">
                 <div class="aside-title">²ÂÄãÏ²»¶</div>
                 <ul class="detail-asidelike">
+                    
                     <?
                     $guess_list = get_guess_list(6);
                     if (notnull($guess_list)) {
