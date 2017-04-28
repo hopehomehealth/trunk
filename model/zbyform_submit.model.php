@@ -54,8 +54,9 @@ if($flag == 'check'){
     $post['emergencyName'] = gbk_to_utf8(req('emergencyName'));
     $post['emergencyMobile'] = req('emergencyMobile');
     //游玩人数组处理
-    
+    echo $num."123";
     for($i=0;$i<$num;$i++){
+        echo $num;
         $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
         $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
         $travellerList[$i]['personType'] = gbk_to_utf8(req('personType_'.$i));
