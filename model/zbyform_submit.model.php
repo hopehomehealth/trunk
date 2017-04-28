@@ -69,10 +69,8 @@ if($flag == 'check'){
         //去除空值
         //$travellerList[$i] = array_filter($travellerList[$i]);
     }
-    var_dump($travellerList);echo '<br>';
-    $post['travellerList'] = json_encode($travellerList);  
-    echo $post['travellerList'].'<br>';
-    var_dump($_POST);
+    var_dump($post['bookerEmail']);echo '<br>';
+    var_dump($_POST['bookerEmail']);
 
      //$post = array_filter($post); 
 if($taocan['isPackage'] == 'true'){//按份卖
