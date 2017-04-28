@@ -81,7 +81,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
     $post['adultNum'] = req('adultNum');//'1';//
     $post['kidNum'] = req('childNum');//'1';//
      //测试 先传空
-     $post['travellerList'] = '';
+     //$post['travellerList'] = '';
      $dingdan = array_iconv(json_decode($db->api_post("192.168.3.177:8080/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
