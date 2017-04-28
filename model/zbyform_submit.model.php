@@ -39,7 +39,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
     $post['adultNum'] = req('adultNum');//'1';//
     $post['childNum'] = req('childNum');//'1';//
     $post['roomCount'] = req('roomCount');//'0';//
-    
+
 }
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
@@ -87,7 +87,6 @@ if($flag == 'check'){
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-     echo $post['childNum'];die;
 
 }
 
