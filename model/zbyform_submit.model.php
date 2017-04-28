@@ -35,7 +35,7 @@ $post['departdate'] = $tc['departDate'];//'2017-05-31';
 $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
 $post['adultNum'] = req('adultNum');//'1';//
 $post['kidNum'] = req('childNum');//'1';//
-
+echo $post['kidNum'];
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
