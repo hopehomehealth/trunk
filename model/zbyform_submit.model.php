@@ -78,7 +78,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
     $post['roomCount'] = req('roomCount');//'0';//
 
 }
-     $post['adultNum'] = req('adultNum');//'1';//
+    $post['adultNum'] = req('adultNum');//'1';//
     $post['kidNum'] = req('childNum');//'1';//
      //测试 先传空
      $post['travellerList'] = '';
@@ -91,7 +91,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-
+     var_dump($post);die;
 }
 
 
