@@ -77,7 +77,7 @@ if($flag == 'check'){
      $post = array_filter($post);
      //²âÊÔ ÏÈ´«¿Õ
      $post['travellerList'] = '';
-     $dingdan = array_iconv(json_decode($db->api_post("192.168.3.79/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
+     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
      $payTime = $dingdan['data']['payTime'];
