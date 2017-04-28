@@ -163,6 +163,7 @@ $url = $host . "/travel/interface/zbyV3.2/getZbyGoodsDtailV_3.2?goodsId=" . $goo
 $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
+
 $scheduling = $data['scheduling'];
 
 
