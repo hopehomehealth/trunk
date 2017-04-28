@@ -27,7 +27,7 @@ $g_sys_version			= 'C';
 ///-----------------------------------------------// ”Ú√˚œ˚œ¢
 $g_host_root_domain		= 'echinabus.cn';
 $g_host_console			= 'http://'.$_SERVER['HTTP_HOST'].'/console/';
-$g_shop_root_domain		= 'echinabus.cn';
+$g_shop_root_domain		= 'echinabus.cn';  
 
 $host 					= 'www.bus365.com';
 $loginUrl				= 'http://www.bus365.com/login0';
