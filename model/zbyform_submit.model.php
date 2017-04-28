@@ -35,7 +35,6 @@ $post['departdate'] = $tc['departDate'];//'2017-05-31';
 $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
 $post['adultNum'] = req('adultNum');//'1';//
 $post['kidNum'] = req('childNum');//'1';//
-echo $post['kidNum'];
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
@@ -76,7 +75,9 @@ if($flag == 'check'){
         $travellerList[$i] = array_filter($travellerList[$i]);
     }
     $post['travellerList'] = json_encode($travellerList);
-    
+    if($post['kidNum']==0){
+        $post['kidNum'] == "0";
+    }
      $post = array_filter($post);
      //测试 先传空
      $post['travellerList'] = '';
