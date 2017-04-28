@@ -42,7 +42,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
 }
 $post['adultNum'] = req('adultNum');//'1';//
 $post['childNum'] = req('childNum');//'1';//
-echo $post['childNum'];
+echo req('childNum');
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
