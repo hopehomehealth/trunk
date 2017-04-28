@@ -51,29 +51,29 @@
 
         <li class="item current"><?= $c_goods['goods_name'] ?></li>
 
-        <?
-        /// 编辑的快捷方式
-        $is_edit = false;
-        if ($_COOKIE['CLOOTA_B2B2C_ADMIN_UUID'] != '') {
-            $is_edit = true;
-            $edit_dir = 'console';
-        }
-        if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] != '') {
-            if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] == $c_goods['shop_id']) {
-                $is_edit = true;
-                $edit_dir = 'seller';
-            }
-        }
-        ?>
-        <? if ($is_edit == true) { ?>
-            <a href="/<?= $edit_dir ?>/?cmd=<?= base64_encode('goods_add.php') ?>&cat_id=<?= $c_goods['cat_id'] ?>"
-               target="_blank" style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;">
-                新增 </a>
-            <a href="/<?= $edit_dir ?>/?cmd=<?= base64_encode('goods_edit.php') ?>&goods_id=<?= $c_goods['goods_id'] ?>"
-               target="_blank"
-               style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;margin-right:5px;">
-                编辑 </a>
-        <? } ?>
+<!--        --><?//
+//        /// 编辑的快捷方式
+//        $is_edit = false;
+//        if ($_COOKIE['CLOOTA_B2B2C_ADMIN_UUID'] != '') {
+//            $is_edit = true;
+//            $edit_dir = 'console';
+//        }
+//        if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] != '') {
+//            if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] == $c_goods['shop_id']) {
+//                $is_edit = true;
+//                $edit_dir = 'seller';
+//            }
+//        }
+//        ?>
+<!--        --><?// if ($is_edit == true) { ?>
+<!--            <a href="/--><?//= $edit_dir ?><!--/?cmd=--><?//= base64_encode('goods_add.php') ?><!--&cat_id=--><?//= $c_goods['cat_id'] ?><!--"-->
+<!--               target="_blank" style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;">-->
+<!--                新增 </a>-->
+<!--            <a href="/--><?//= $edit_dir ?><!--/?cmd=--><?//= base64_encode('goods_edit.php') ?><!--&goods_id=--><?//= $c_goods['goods_id'] ?><!--"-->
+<!--               target="_blank"-->
+<!--               style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;margin-right:5px;">-->
+<!--                编辑 </a>-->
+<!--        --><?// } ?>
 
     </ul>
     <!-- 主体内容区 -->
