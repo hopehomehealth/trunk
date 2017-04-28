@@ -34,8 +34,8 @@ $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
 $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
 $post['adultNum'] = req('adultNum');//'1';//
-$post['childNum'] = req('childNum');//'1';//
-echo $post['adultNum'],$post['childNum'];die;
+$post['kidNum'] = req('childNum');//'1';//
+
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
@@ -47,7 +47,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
 }elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
-    $num = $post['adultNum']+$post['childNum'];
+    $num = $post['adultNum']+$post['kidNum'];
 }else{
     $num = 0;
 }
@@ -92,7 +92,7 @@ if($flag == 'check'){
 
 }
 
-
+echo $post['adultNum'],$post['kidNum'];die;
 
 
 
