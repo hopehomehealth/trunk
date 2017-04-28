@@ -36,13 +36,12 @@ $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
-    
+    $post['adultNum'] = req('adultNum');//'1';//
+    $post['childNum'] = req('childNum');//'1';//
     $post['roomCount'] = req('roomCount');//'0';//
 
 }
-$post['adultNum'] = req('adultNum');//'1';//
-$post['childNum'] = req('childNum');//'1';//
-echo req('childNum');
+//echo $post['childNum'];
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
