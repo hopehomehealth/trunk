@@ -418,7 +418,7 @@ if (!defined('IN_CLOOTA')) {
         window.location.href = url;
     }
     function order_again(){
-        var url = "<?=$g_self_domain;?>/product/detail-<?=$order_detail_data['goodsId']?>.html";
+        var url = "<?=$g_self_domain;?>/product/detail-<?=$order_detail_data['goodsId']?>-<?=$order_detail_data['productId']?>.html";
         window.location.href = url;
     }
 </script>
