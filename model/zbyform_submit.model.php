@@ -91,7 +91,7 @@ if($taocan['isPackage'] == 'true'){//°´·ÝÂô
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-     //var_dump($post);die;
+    var_dump($post);die;
 }
 
 
