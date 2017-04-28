@@ -81,7 +81,7 @@ RewriteRule ^(gentuan|ziyouxing|menpiao|jiudian)/([0-9a-z]+)$    $1\/ [R]
 RewriteRule ^(gentuan|ziyouxing|menpiao|jiudian)/([0-9a-z]+)/page-([0-9]+).html$    index\.php?cmd=product_list&action=list&goods_type_key=$1&cat_key=$2&p=$3 [L]
 
 # 线路明细
-RewriteRule ^product/detail-([0-9]+)-([0-9]+).html$    index\.php?cmd=product_detail&goodsId=$1&lvProductId=$2 [L]
+RewriteRule ^product/detail-([0-9]+)-([0-9]+).html$    index\.php?cmd=product_detail&goodsId=$1&lvProductId=$2  [L]
 
 # 门票相关页面
 RewriteCond %{QUERY_STRING} ^(.*)$
