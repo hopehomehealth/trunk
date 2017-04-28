@@ -66,11 +66,11 @@ if($flag == 'check'){
         $travellerList[$i]['gender'] = req('gender_'.$i);
         $travellerList[$i]['birthday'] = req('birthday_'.$i);
         //去除空值
-        $travellerList[$i] = array_filter($travellerList[$i]);
+        //$travellerList[$i] = array_filter($travellerList[$i]);
     }
     //$post['travellerList'] = json_encode($travellerList);
 
-     $post = array_filter($post);
+     //$post = array_filter($post);
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
