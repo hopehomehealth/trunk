@@ -363,7 +363,7 @@
                                 $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                 $goods_image = $val['goods_image'];
                             } else {
-                                $href = "/product/detail-" . $val['goods_id'] . ".html";
+                                $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                 $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
                             }
