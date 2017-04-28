@@ -70,7 +70,7 @@ if($flag == 'check'){
     }
     //$post['travellerList'] = json_encode($travellerList);
 
-     //$post = array_filter($post);
+     //$post = array_filter($post); 
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
