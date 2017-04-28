@@ -574,25 +574,26 @@
                 if (notnull($guess_list)) {
                     $n = 1;
                     foreach ($guess_list as $val) {
-                        $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
+                        if(notnull($val['goods_id'])) {
+                            $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
 //                var_dump($val['goods_type']);
-                        if ($val['goods_type'] == '4') {
-                            $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                        } else {
-                            $href = "/product/detail-" . $val['goods_id'] . ".html";
-
+                            if ($val['goods_type'] == '4') {
+                                $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                            } else {
+                                $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                            }
+                            ?>
+                            <li><i class="lv-icon ico-snum"><?= $n ?></i> <a href="<? echo $href; ?>" target="_blank"
+                                                                             title="<?= $val['goods_name'] ?>">
+                                    <?= $val['goods_name'] ?> </a>
+                                <div class="yellow-a"><sub>&yen;</sub> <strong><?= $val['min_price'] ?></strong> 起
+                                    <span style="float:right"><?= date('m/d H:i', strtotime($val['browse_time'])) ?>
+                                        浏览过</span>
+                                </div>
+                            </li>
+                            <?
+                            $n++;
                         }
-                        ?>
-                        <li><i class="lv-icon ico-snum"><?= $n ?></i> <a href="<? echo $href; ?>" target="_blank"
-                                                                         title="<?= $val['goods_name'] ?>">
-                                <?= $val['goods_name'] ?> </a>
-                            <div class="yellow-a"><sub>&yen;</sub> <strong><?= $val['min_price'] ?></strong> 起
-                                <span style="float:right"><?= date('m/d H:i', strtotime($val['browse_time'])) ?>
-                                    浏览过</span>
-                            </div>
-                        </li>
-                        <?
-                        $n++;
                     }
                 }
                 ?>
