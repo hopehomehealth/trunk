@@ -69,7 +69,7 @@ if($flag == 'check'){
         //È¥³ý¿ÕÖµ
         //$travellerList[$i] = array_filter($travellerList[$i]);
     }
-    var_dump($travellerList);echo '<br>'
+    var_dump($travellerList);echo '<br>';
     $post['travellerList'] = json_encode($travellerList);  
     echo $post['travellerList'].'<br>';
     var_dump($_POST);
