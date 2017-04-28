@@ -10,7 +10,7 @@
     header("location: http://$wangzhi");
 }
 $canshu = */
-$db->check_cookie($loginUrl, $host);
+//$db->check_cookie($loginUrl, $host);
 $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //获取套餐信息
 $tc['lvProductId'] = req('lvProductId');
@@ -25,7 +25,7 @@ $taocan = $tcs['data'][0];
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
 $is_package = $taocan['isPackage'];
-//var_dump($tcs);echo '<br>';
+//var_dump($tcs);echo '<br>'; 
 //订单接口参数
 $post['token'] = $token;//"{\"token1\":\"34d996bc-bc3f-4ed5-8020-868a68398352%2315122991536%23%25E5%2585%259A%25E5%25A6%25B9%25E5%25AD%2590%2376061060000000341\",\"token2\":\"2C8EBC684DBE4F930096E68FE24F8550F53F78A0E79634E0F6668F99659D83BB449A51AF37EADCA8D775097E26A6A13958D3B455DF850CFE35567C783187C0EE7A4D04972B0B38E271997D96941AD1A8\"}";
 $post['goodsId'] = $taocan['goodsId'];//'8017691';//
@@ -33,23 +33,18 @@ $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
 $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
-if($taocan['isPackage'] == 'true'){//按份卖
-    $post['packageNum'] = req('packageNum');//'3';//
-}else{//按人卖
-    $post['adultNum'] = req('adultNum');//'1';//
-    $post['childNum'] = req('childNum');//'1';//
-    $post['roomCount'] = req('roomCount');//'0';//
-}
+$post['adultNum'] = req('adultNum');//'1';//
+$post['kidNum'] = req('childNum');//'1';//
+
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
 }elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
-    $num = $post['adultNum']+$post['childNum'];
+    $num = $post['adultNum']+$post['kidNum'];
 }else{
     $num = 0;
 }
 
-echo $num;
 //生成订单
 $flag = req('flag');
 if($flag == 'check'){
@@ -74,12 +69,20 @@ if($flag == 'check'){
         $travellerList[$i] = array_filter($travellerList[$i]);
     }
     $post['travellerList'] = json_encode($travellerList);
-    
+
      $post = array_filter($post);
+if($taocan['isPackage'] == 'true'){//按份卖
+    $post['packageNum'] = req('packageNum');//'3';//
+}else{//按人卖
+    
+    $post['roomCount'] = req('roomCount');//'0';//
+
+}
+    $post['adultNum'] = req('adultNum');//'1';//
+    $post['kidNum'] = req('childNum');//'1';//
      //测试 先传空
      $post['travellerList'] = '';
-     var_dump($post);die;
-     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
+     $dingdan = array_iconv(json_decode($db->api_post("192.168.3.177:8080/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
      $payTime = $dingdan['data']['payTime'];
@@ -88,9 +91,8 @@ if($flag == 'check'){
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-
+     //var_dump($post);die;
 }
-
 
 
 

@@ -147,7 +147,7 @@
         <!-- right info -->
         <div class="detail-info">
             <div class="detail-title">
-                <a href="/product/detail-<?= $c_goods['goods_id'] ?>.html"
+                <a href="/product/detail-<?= $goodsId ?>-<?= $productId ?>.html"
                    title="<?= $c_goods['goods_name'] ?>"><?= $c_goods['goods_name'] ?></a>
 <!--                --><?// if ($c_goods['is_sale'] == '0') { ?>
 <!--                    <i style="color:red">¡¾ÒÑÏÂ¼Ü¡¿</i>-->

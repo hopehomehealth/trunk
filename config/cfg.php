@@ -24,16 +24,18 @@ $g_sys_home				= "http://www.cloota.com";
 $g_sys_version			= 'C';
 
 
-///-----------------------------------------------// 域名消息 
+///-----------------------------------------------// 域名消息
 $g_host_root_domain		= 'echinabus.cn';
 $g_host_console			= 'http://'.$_SERVER['HTTP_HOST'].'/console/';
 $g_shop_root_domain		= 'echinabus.cn';
 
-$host 					= 'wwwd.bus365.cn';//接口地址
-$loginUrl				= 'http://wwwd.bus365.cn/login0';//登录地址
-$registerUrl			= 'http://wwwd.bus365.cn/user/registerpage/?ismock=0';//注册地址
-$g_self_domain			= 'http://traveld.bus365.cn';//旅游板块地址(旅游这块的域名)
-$g_bus365_domain        = 'http://wwwd.bus365.cn';
+$host 					= 'www.bus365.com';
+$loginUrl				= 'http://www.bus365.com/login0';
+$registerUrl			= 'http://www.bus365.com/user/registerpage/?ismock=0';//注册地址
+//http://wwwd.bus365.cn,http://wwwt.bus365.cn,http://wwwm.bus365.cn
+//https://www.bus365.cn
+$g_self_domain			= 'http://travel.bus365.com';
+$g_bus365_domain        = 'http://www.bus365.com';
 ///-----------------------------------------------// DEBUG模式
 $g_console_debug		= true;
 $g_is_demo_site			= false;
