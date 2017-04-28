@@ -86,7 +86,7 @@ if($flag == 'check'){
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-     echo $post['childNum'];
+     echo $post['childNum'];die;
 
 }
 
