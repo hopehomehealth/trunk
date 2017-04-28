@@ -68,7 +68,7 @@ if($flag == 'check'){
         //去除空值
         $travellerList[$i] = array_filter($travellerList[$i]);
     }
-    $post['travellerList'] = json_encode($travellerList);
+    //$post['travellerList'] = json_encode($travellerList);
 
      $post = array_filter($post);
 if($taocan['isPackage'] == 'true'){//按份卖
