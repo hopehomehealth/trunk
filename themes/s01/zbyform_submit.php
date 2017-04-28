@@ -180,7 +180,7 @@ if(!defined('IN_CLOOTA')) {
                 </div>
                 <!-- 如果需要填写游玩人 -->
                 <?if($num > 0){ ?>
-                <? for($i=1;$i<=$num;$i++){ ?>
+                <? for($i=0;$i<$num;$i++){ ?>
                 <div class="zbyOrder_main2_youwan">
                     <div class="zbyOrder_main2_youwanLeft">游玩人<?=$i?></div>
                     <div class="zbyOrder_main2_youwanRight">
@@ -202,7 +202,7 @@ if(!defined('IN_CLOOTA')) {
                                 }
                             });
                             </script>
-                            <?}elseif($taocan['travellerName']=='TRAV_NUM_ONE' && $i==1){?>
+                            <?}elseif($taocan['travellerName']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>姓名：</label>
                                 <input type="text" name="name_<?=$i?>" autocomplete="off" id="youwan_userName_<?=$i?>">
@@ -241,7 +241,7 @@ if(!defined('IN_CLOOTA')) {
                                 }
                             });
                             </script>
-                            <?}elseif($taocan['travellerMobile']=='TRAV_NUM_ONE' && $i==1){?>
+                            <?}elseif($taocan['travellerMobile']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
                                 <input type="text" name="mobile_<?=$i?>" autocomplete="off" id="youwan_userPhone_<?=$i?>">
@@ -285,7 +285,7 @@ if(!defined('IN_CLOOTA')) {
                                 }
                             });
                             </script>
-                            <?}elseif($taocan['travellerEmail']=='TRAV_NUM_ONE' && $i==1){?>
+                            <?}elseif($taocan['travellerEmail']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
                                 <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="">
@@ -329,7 +329,7 @@ if(!defined('IN_CLOOTA')) {
                                 }
                             });
                             </script>
-                            <?}elseif($taocan['travellerEnName']=='TRAV_NUM_ONE' && $i==1){?>
+                            <?}elseif($taocan['travellerEnName']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>英文名</label>
                                 <input type="text" name="eName_<?=$i?>" autocomplete="off" id="youwan_eName_<?=$i?>">
@@ -358,7 +358,7 @@ if(!defined('IN_CLOOTA')) {
                                         <option value="adult">成人</option>
                                         <option value="child">儿童</option> 
                                     </select>
-                                    <?}elseif($taocan['travellerPersonType']=='TRAV_NUM_ONE' && $i==1){?>
+                                    <?}elseif($taocan['travellerPersonType']=='TRAV_NUM_ONE' && $i=='0'){?>
                                     <label><b>＊</b>人群：</label>
                                     <select name="personType_<?=$i?>">
                                         <option value="adult">成人</option>
@@ -371,7 +371,7 @@ if(!defined('IN_CLOOTA')) {
                                         <option value="male">男</option>
                                         <option value="chifemaleld">女</option>
                                     </select>
-                                <?}elseif($taocan['travellerGender']=='TRAV_NUM_ONE' && $i==1){?>
+                                <?}elseif($taocan['travellerGender']=='TRAV_NUM_ONE' && $i=='0'){?>
                                     <label><b>＊</b>性别：</label>
                                     <select name="gender_<?=$i?>">
                                         <option value="male">男</option>
@@ -404,7 +404,7 @@ if(!defined('IN_CLOOTA')) {
                                 }
                             });
                             </script>
-                            <?}elseif($taocan['travellerCredentials']=='TRAV_NUM_ONE' && $i==1){?>
+                            <?}elseif($taocan['travellerCredentials']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>证件类型：</label>
                                 <select style="width: 138px;">
@@ -441,7 +441,7 @@ if(!defined('IN_CLOOTA')) {
                                 }
                             });
                             </script>
-                            <?}elseif($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i==1){?>
+                            <?}elseif($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
                                 <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_idTips_<?=$i?>"></span>
