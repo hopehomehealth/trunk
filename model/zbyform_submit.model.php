@@ -54,9 +54,8 @@ if($flag == 'check'){
     $post['emergencyName'] = gbk_to_utf8(req('emergencyName'));
     $post['emergencyMobile'] = req('emergencyMobile');
     //游玩人数组处理
-    echo $num."123";
+    
     for($i=0;$i<$num;$i++){
-        echo $num;
         $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
         $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
         $travellerList[$i]['personType'] = gbk_to_utf8(req('personType_'.$i));
@@ -66,6 +65,7 @@ if($flag == 'check'){
         $travellerList[$i]['credentialsType'] = 'ID_CARD';
         $travellerList[$i]['gender'] = req('gender_'.$i);
         $travellerList[$i]['birthday'] = req('birthday_'.$i);
+        var_dump($travellerList[$i]);
         //去除空值
         //$travellerList[$i] = array_filter($travellerList[$i]);
     }
