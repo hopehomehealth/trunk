@@ -25,7 +25,7 @@ $taocan = $tcs['data'][0];
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
 $is_package = $taocan['isPackage'];
-//var_dump($tcs);echo '<br>';
+//var_dump($tcs);echo '<br>'; 
 //订单接口参数
 $post['token'] = $token;//"{\"token1\":\"34d996bc-bc3f-4ed5-8020-868a68398352%2315122991536%23%25E5%2585%259A%25E5%25A6%25B9%25E5%25AD%2590%2376061060000000341\",\"token2\":\"2C8EBC684DBE4F930096E68FE24F8550F53F78A0E79634E0F6668F99659D83BB449A51AF37EADCA8D775097E26A6A13958D3B455DF850CFE35567C783187C0EE7A4D04972B0B38E271997D96941AD1A8\"}";
 $post['goodsId'] = $taocan['goodsId'];//'8017691';//
