@@ -73,7 +73,7 @@ if(!defined('IN_CLOOTA')) {
                                     <?=$taocan['kidPrice']?>
                                 </td>
                                 <td>
-									<?=$post['childNum']?>
+									<?=$post['kidNum']?>
                                 </td>
                             </tr>
                             </tbody>
