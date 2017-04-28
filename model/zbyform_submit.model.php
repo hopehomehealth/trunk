@@ -76,7 +76,7 @@ if($flag == 'check'){
     }
     $post['travellerList'] = json_encode($travellerList);
     if($post['kidNum']==0){
-        $post['kidNum'] == "0";
+        $post['kidNum'] == strval("0");
     }
      $post = array_filter($post);
      //≤‚ ‘ œ»¥´ø’
