@@ -83,6 +83,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
     $post['kidNum'] = req('childNum');//'1';//
      //测试 先传空
      //$post['travellerList'] = '';
+     var_dump($post);die;
      $dingdan = array_iconv(json_decode($db->api_post("192.168.3.177:8080/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
@@ -92,7 +93,7 @@ if($taocan['isPackage'] == 'true'){//按份卖
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-    var_dump($post);die;
+    
 }
 
 
