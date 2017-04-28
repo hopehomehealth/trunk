@@ -10,7 +10,7 @@
     header("location: http://$wangzhi");
 }
 $canshu = */
-$db->check_cookie($loginUrl, $host);
+//$db->check_cookie($loginUrl, $host);
 $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //获取套餐信息
 $tc['lvProductId'] = req('lvProductId');
@@ -33,11 +33,13 @@ $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
 $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
+$post['adultNum'] = req('adultNum');//'1';//
+$post['childNum'] = req('childNum');//'1';//
+echo $post['adultNum'],$post['childNum'];die;
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
 }else{//按人卖
-    $post['adultNum'] = req('adultNum');//'1';//
-    $post['childNum'] = req('childNum');//'1';//
+    
     $post['roomCount'] = req('roomCount');//'0';//
 
 }
