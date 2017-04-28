@@ -574,7 +574,7 @@
                 if (notnull($guess_list)) {
                     $n = 1;
                     foreach ($guess_list as $val) {
-                        if(notnull($val)) {
+                        if(notnull($guest_list[$n])) {
                             $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
 //                var_dump($val['goods_type']);
                             if ($val['goods_type'] == '4') {
