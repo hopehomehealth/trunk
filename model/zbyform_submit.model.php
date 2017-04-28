@@ -35,13 +35,7 @@ $post['departdate'] = $tc['departDate'];//'2017-05-31';
 $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
 $post['adultNum'] = req('adultNum');//'1';//
 $post['kidNum'] = req('childNum');//'1';//
-if($taocan['isPackage'] == 'true'){//按份卖
-    $post['packageNum'] = req('packageNum');//'3';//
-}else{//按人卖
-    
-    $post['roomCount'] = req('roomCount');//'0';//
 
-}
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
@@ -75,10 +69,17 @@ if($flag == 'check'){
         $travellerList[$i] = array_filter($travellerList[$i]);
     }
     $post['travellerList'] = json_encode($travellerList);
-    if($post['kidNum']==0){
-        $post['kidNum'] == strval("0");
-    }
+
      $post = array_filter($post);
+if($taocan['isPackage'] == 'true'){//按份卖
+    $post['packageNum'] = req('packageNum');//'3';//
+}else{//按人卖
+    
+    $post['roomCount'] = req('roomCount');//'0';//
+
+}
+     $post['adultNum'] = req('adultNum');//'1';//
+    $post['kidNum'] = req('childNum');//'1';//
      //测试 先传空
      $post['travellerList'] = '';
      $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
