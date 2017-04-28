@@ -94,7 +94,6 @@ if($taocan['isPackage'] == 'true'){//°´·ÝÂô
 
 }
 
-echo $post['adultNum'],$post['kidNum'];die;
 
 
 
