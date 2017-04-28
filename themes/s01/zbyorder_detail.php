@@ -152,7 +152,7 @@ if (!defined('IN_CLOOTA')) {
                     <!-- 待支付按钮 -->
                     <a class="orderBtn_noPay">
                         <button style="margin-left:360px;" class="zby_cancel">取消订单</button>
-                        <button>去支付</button>
+                        <button onclick="pay_online()">去支付</button>
                 </div>
                 <? } ?>
             </div>
@@ -297,7 +297,14 @@ if (!defined('IN_CLOOTA')) {
         <div class="nengtuifou_cont_tips">&nbsp;&nbsp;<?echo $failReason;?></div>
     </div>
 </div>
-
+<!--去支付表单-->
+<form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
+    <input type="hidden" name="payPrice" value="<?=$order_detail_data['payPrice']?>">
+    <input type="hidden" name="goodsName" id="goodsName" value="<?=$order_detail_data['goodsName']?>">
+    <input type="hidden" name="payTime"  value="<?=$order_detail_data['leftPayTime']?>">
+    <input type="hidden" name="lvGoodsName"  value="<?=$order_detail_data['lvGoodsName']?>">
+    <input type="hidden" name="orderCode"  value="<?=$order_detail_data['orderCode']?>">
+</form>
 <!--  foot  start -->
 <? include 'foot.php'; ?>
 <!--  foot  end -->
@@ -412,14 +419,19 @@ if (!defined('IN_CLOOTA')) {
         var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=cf";
         window.location.href = url;
     }
-
+   //去评价
     function comment_commit(){
         var url = "/zhoubianyou/zbycomment_commit-<?=$orderCode;?>.html";
         window.location.href = url;
     }
+    //再次预订
     function order_again(){
         var url = "<?=$g_self_domain;?>/product/detail-<?=$order_detail_data['goodsId']?>-<?=$order_detail_data['productId']?>.html";
         window.location.href = url;
+    }
+    //去支付
+    function order_again(){
+        $('onlineForm').submit();
     }
 </script>
 </html>
