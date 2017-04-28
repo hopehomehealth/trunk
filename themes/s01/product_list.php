@@ -574,14 +574,13 @@
                 if (notnull($guess_list)) {
                     $n = 1;
                     foreach ($guess_list as $val) {
-                        if(notnull($guest_list[$n])) {
+                        if(notnull($val['goods_id'])) {
                             $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
 //                var_dump($val['goods_type']);
                             if ($val['goods_type'] == '4') {
                                 $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                             } else {
                                 $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-
                             }
                             ?>
                             <li><i class="lv-icon ico-snum"><?= $n ?></i> <a href="<? echo $href; ?>" target="_blank"
@@ -593,8 +592,8 @@
                                 </div>
                             </li>
                             <?
+                            $n++;
                         }
-                        $n++;
                     }
                 }
                 ?>
