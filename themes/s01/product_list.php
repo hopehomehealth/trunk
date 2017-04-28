@@ -579,7 +579,7 @@
                         if ($val['goods_type'] == '4') {
                             $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                         } else {
-                            $href = "/product/detail-" . $val['goods_id'] . ".html";
+                            $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] .".html";
 
                         }
                         ?>
