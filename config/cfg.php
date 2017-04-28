@@ -1,4 +1,5 @@
 <?php
+//测试环境
 date_default_timezone_set('Asia/Shanghai');
 
 
@@ -29,13 +30,13 @@ $g_host_root_domain		= 'echinabus.cn';
 $g_host_console			= 'http://'.$_SERVER['HTTP_HOST'].'/console/';
 $g_shop_root_domain		= 'echinabus.cn';
 
-$host 					= 'www.bus365.com';
-$loginUrl				= 'http://www.bus365.com/login0';
-$registerUrl			= 'http://www.bus365.com/user/registerpage/?ismock=0';//注册地址
+$host 					= 'wwwt.bus365.cn';//api address
+$loginUrl				= 'http://wwwt.bus365.cn/login0';
+$registerUrl			= 'http://wwwt.bus365.cn/user/registerpage/?ismock=0';//注册地址
 //http://wwwd.bus365.cn,http://wwwt.bus365.cn,http://wwwm.bus365.cn
 //https://www.bus365.cn
-$g_self_domain			= 'http://travel.bus365.com';
-$g_bus365_domain        = 'http://www.bus365.com';
+$g_bus365_domain        = 'http://wwwt.bus365.cn';
+$g_self_domain			= 'http://travelt.bus365.cn';
 ///-----------------------------------------------// DEBUG模式
 $g_console_debug		= true;
 $g_is_demo_site			= false;
