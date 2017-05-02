@@ -1,5 +1,5 @@
 <?
-$db->check_cookie($loginUrl, $host);
+//$db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $refundReasonCode = req('refundReasonCode');
@@ -12,8 +12,8 @@ $refund_product_data = $refund_product['data'];
 $refundReasonList = $refund_product_data['refundReasonList'];
 $isChange = $refund_product_data['isChange'];
 $failReason = $refund_product_data['failReason'];
-//echo "<pre>";
-//var_dump($refund_product_data);
+echo "<pre>";
+var_dump($refund_product_data);
 //退款申请
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
@@ -49,9 +49,10 @@ $post4 = array('orderCode' => $orderCode, 'token' => $token);
 $order_detail = juhecurl($host . "/travel/interface/zby/v3.2/getZbyOrderDtail_v3.2", $post4, 1);
 $order_detail = json_decode($order_detail, true);
 $order_detail = array_iconv($order_detail);
-//    if ($order_detail['status'] != '0000') {
-//        exit('订单失败');
-//    }
+$error_message = $order_detail['msg'];
+if ($order_detail['status'] != '0000') {
+    exit('$error_message');
+}
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
 //取消订单
