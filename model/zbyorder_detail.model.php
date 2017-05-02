@@ -18,7 +18,7 @@ $failReason = $refund_product_data['failReason'];
 //ÍË¿îÉêÇë
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
-    $require_refund = juhecurl($host."/travel/interface/zby/v3.2/refundZby_v3.2",$post2, 1);
+    $require_refund = $db->api_post($host."/travel/interface/zby/v3.2/refundZby_v3.2",$post2);
     $require_refund = json_decode($require_refund, true);
     $require_refund = array_iconv($require_refund);
     $require_refund_data = $require_refund['data'];
