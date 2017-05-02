@@ -23,6 +23,7 @@ if(req('flag') == 'rf'){
     $require_refund = array_iconv($require_refund);
     $require_refund_data = $require_refund['data'];
     $refund_message = $require_refund_data['message'];
+    var_dump($require_refund_data);
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
     <input type="hidden" name="message" id="message" value="<?=$refund_message;?>">
