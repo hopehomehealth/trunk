@@ -440,7 +440,7 @@
                                     echo $ziyingurl;
                                 } else {
                                     echo $goods_url;
-                                } ?>" target="_blank" alt="<?= $val['goodsName']?>" <? if ($val['is_hot'] == 1){
+                                } ?>" target="_blank" alt="<?= $val['goodsName']?>" title="<?= $val['goodsName']?>" <? if ($val['is_hot'] == 1){
                                                        ?>style="color:red;font-weight:bold;"<?
                                 } ?>><?= jiequ(25, $val['goodsName']) ?></a></dt>
 
