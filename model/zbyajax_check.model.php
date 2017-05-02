@@ -12,7 +12,7 @@ if(!empty($orderCode) && $flag == 'chk') {
     $refundReasonList = $refund_product_data['refundReasonList'];
     $isChange = $refund_product_data['isChange'];
     $failReason = $refund_product_data['failReason'];
-    echo $isChange;
+    echo $isChange.$flag;
 //var_dump($refund_product);
 }
 
