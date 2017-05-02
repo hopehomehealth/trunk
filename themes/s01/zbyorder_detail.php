@@ -346,7 +346,7 @@ if (!defined('IN_CLOOTA')) {
             },
             async: false,
             success: function (data) {
-//                alert(data);
+                alert(data);
                 if(data = 'false'){
                     $('.nengtuifou').show();
                     $('.applyRefund').hide();
