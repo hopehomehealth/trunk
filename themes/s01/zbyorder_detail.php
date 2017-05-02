@@ -335,7 +335,7 @@ if (!defined('IN_CLOOTA')) {
         });
     }
 
-    
+
     $('.applyRefund_sure').click(function(){
         var orderCode = "<?= $orderCode ?>";
         $.ajax({
