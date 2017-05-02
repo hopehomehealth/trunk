@@ -349,13 +349,13 @@ if (!defined('IN_CLOOTA')) {
             async: false,
             success: function (data) {
                 alert(data);
-                if('false' == 'false'){
+                if(!data){
                     $('.nengtuifou').show();
                     $('.applyRefund').hide();
                     $("#mengban").hide();
                 } else{
-                    $('.refundInfo').show();
                     $('.applyRefund').hide();
+                    $('.refundInfo').show();
                 }
             }
         });

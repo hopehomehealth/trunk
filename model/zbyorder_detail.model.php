@@ -17,13 +17,12 @@ $failReason = $refund_product_data['failReason'];
 //var_dump($refund_product_data);
 //ÍË¿îÉêÇë
 if(req('flag') == 'rf'){
-    $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
+    $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode, 'token' => $token);
     $require_refund = $db->api_post($host."/travel/interface/zby/v3.2/refundZby_v3.2",$post2);
     $require_refund = json_decode($require_refund, true);
     $require_refund = array_iconv($require_refund);
     $require_refund_data = $require_refund['data'];
-    $refund_message = $require_refund_data['message'];
-    var_dump($require_refund_data);
+    $refund_message = $require_refund_data['refundCustomerInfo'];
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
     <input type="hidden" name="message" id="message" value="<?=$refund_message;?>">
