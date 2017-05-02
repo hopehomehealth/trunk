@@ -22,7 +22,7 @@ textarea {outline: none;}
 ;}
 .topLeft{float: left;width: auto;height:78px;overflow: hidden;}
 /* .topLeft .logo{width: 131px;height: 45px;float: left;margin-top:18px;}
-.topLeft .logo_text{width:209px;height: 45px;float: left;margin-top:18px;} */
+.topLeft .logo_text{width:209px;height: 45px;float: left;margin-top:18px;}  */
 .topLeft .logo{width: 131px;height: 45px;float: left;margin-top:16px;}
 .topLeft .logo_text{width:209px;height: 45px;float: left;margin-top:18px;}
 .topRight{float: right;width: auto;height:78px;color: #807e7f;font-size:16px;/*margin-top:10px;padding-left:54px; background: url("/public/images/v3.1image/dianhua.png") no-repeat left 25px; */}
