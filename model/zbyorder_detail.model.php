@@ -23,18 +23,18 @@ if(req('flag') == 'rf'){
     $require_refund_data = $require_refund['data'];
     $refund_message = $require_refund_data['message'];
 //    var_dump($require_refund_data);
-}
+
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
     <input type="hidden" name="message" id="payPrice" value="<?=$refund_message;?>">
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName;?>">
 </form>
 <?
-if (notnull($require_refund_data)){
-    $js = "<script>document.getElementById('refundForm').submit();</script>";
-    echo $js;
+    if (notnull($require_refund_data)){
+        $js = "<script>document.getElementById('refundForm').submit();</script>";
+        echo $js;
+    }
 }
-
 //确认会团
 if(req('flag') == 'cf'){
     $post3 = array('orderCode' => $orderCode, 'token' => $token);
