@@ -326,6 +326,7 @@ if (!defined('IN_CLOOTA')) {
         $("#mengban").hide();
         $(".applyRefund").hide();
     });
+
     //ÉêÇëÍË¿î°´Å¥µ¯¿ò
     for(var i=0;i<$('.applyRefundBtn').length;i++){
         $('.applyRefundBtn').eq(i).click(function(){

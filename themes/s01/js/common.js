@@ -55,6 +55,7 @@ $('.unfold').click(function(){
 });
 
 
+
 $('.searchMain1_r').click(function(){
 	//alert(1);
 	if($(".searchMain1_l span").html()!='' && $('.searchMain1_c input').val()!=''){
