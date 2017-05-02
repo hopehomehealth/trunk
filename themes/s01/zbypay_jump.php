@@ -4,7 +4,7 @@ $totalprice = req('payPrice');
 $orderno= req('orderno');
 $topayinfoid = req('topayinfoid');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
-$successpage = $g_self_domain . 'traveld.bus365.cn/zhoubianyou/zbypay_success-' . $orderno . '.html';
+$successpage = $g_self_domain . '/zhoubianyou/zbypay_success-' . $orderno . '.html';
 $post = array('totalprice' => $totalprice, 'orderno' => $orderno, 'topayinfoid' => $topayinfoid, 'token' => $token, 'successpage' => $successpage);
 $url = $host . '/travel/interface/pay/createpayparam';
 $pay_parameter = juhecurl($url, $post, 1);
