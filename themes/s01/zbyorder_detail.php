@@ -351,7 +351,7 @@ if (!defined('IN_CLOOTA')) {
                     $('.nengtuifou').show();
                     $('.applyRefund').hide();
                     $("#mengban").hide();
-                } else{
+                } else if(data == 'true'){
                     $('.refundInfo').show();
                     $('.applyRefund').hide();
                 }
