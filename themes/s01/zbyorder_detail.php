@@ -190,18 +190,18 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo_table">
                     <div class="orderInfo_table_title">
                         <ul>
-                            <li class="orderInfo_table_tr1">产品名</li>
-                            <li class="orderInfo_table_tr2">套餐名称</li>
-                            <li class="orderInfo_table_tr2">客服说明</li>
+                            <li class="orderInfo_table_tr1">订单号</li>
+                            <li class="orderInfo_table_tr2">产品名</li>
+                            <li class="orderInfo_table_tr3">套餐名称</li>
                         </ul>
                     </div>
                     <div class="orderInfo_table_cont">
                         <ul>
-                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['goodsName']; ?></li>
+                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['orderCode']; ?></li>
                             <li class="orderInfo_table_tr2"
-                                style="color: #ff6600;"><? echo $refund_product_data['packageName'] ?></li>
-                            <li class="orderInfo_table_tr2"
-                                style="color: #ff6600;"><? echo $refund_product_data['refundCustomerInfo'] ?></li>
+                                style="color: #000;"><? echo $refund_product_data['goodsName'] ?></li>
+                            <li class="orderInfo_table_tr3"
+                                style="color: #000;"><? echo $refund_product_data['packageName'] ?></li>
                         </ul>
                     </div>
                 </div>
