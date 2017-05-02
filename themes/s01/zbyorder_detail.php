@@ -175,7 +175,7 @@ if (!defined('IN_CLOOTA')) {
         <span class="refundInfo_close"></span>
     </div>
     <div class="refundInfoCont">
-        <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html?flag=rf">
+        <form  method="post"  id="rfCommitForm" action="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html?flag=rf">
             <input type="hidden" name="orderCode" value="<?echo $orderCode;?>">
             <div class="refundInfoCont1">
                 <span>退款原因：</span>
@@ -411,8 +411,7 @@ if (!defined('IN_CLOOTA')) {
     });
     //退款请求接口
     function refund_commit(){
-        var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=rf";
-        window.location.href = url;
+        document.getElementById("rfCommitForm").submit();
     }
     //确认会团请求接口
     function confirm_return(){
