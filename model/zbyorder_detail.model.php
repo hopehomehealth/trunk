@@ -12,8 +12,8 @@ $refund_product_data = $refund_product['data'];
 $refundReasonList = $refund_product_data['refundReasonList'];
 $isChange = $refund_product_data['isChange'];
 $failReason = $refund_product_data['failReason'];
-echo "<pre>";
-var_dump($refund_product_data);
+//echo "<pre>";
+//var_dump($refund_product_data);
 //ÍË¿îÉêÇë
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
