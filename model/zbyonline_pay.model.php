@@ -6,6 +6,7 @@ $orderCode = req('orderCode');
 $payTime = req('payTime');
 $lvGoodsName = req('lvGoodsName');
 
+
 function get_pay_way()
 {
     global $host;
