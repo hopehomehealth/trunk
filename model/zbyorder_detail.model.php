@@ -51,7 +51,7 @@ $order_detail = json_decode($order_detail, true);
 $order_detail = array_iconv($order_detail);
 $error_message = $order_detail['msg'];
 if ($order_detail['status'] != '0000') {
-    exit('$error_message');
+    exit($error_message);
 }
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
