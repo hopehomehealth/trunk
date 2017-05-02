@@ -13,6 +13,9 @@ $refund_product_data = $refund_product['data'];
 $refundReasonList = $refund_product_data['refundReasonList'];
 $isChange = $refund_product_data['isChange'];
 $failReason = $refund_product_data['failReason'];
+if ($refund_product['status'] != '0000') {
+    exit($refund_product['msg']);
+}
 //echo "<pre>";
 //var_dump($refund_product_data);
 //退款申请
@@ -23,6 +26,9 @@ if(req('flag') == 'rf'){
     $require_refund = array_iconv($require_refund);
     $require_refund_data = $require_refund['data'];
     $refund_message = $require_refund_data['refundCustomerInfo'];
+    if ($require_refund['status'] != '0000') {
+        exit($require_refund['msg']);
+    }
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
     <input type="hidden" name="message" id="message" value="<?=$refund_message;?>">
@@ -41,6 +47,9 @@ if(req('flag') == 'cf'){
     $confirm_return = json_decode($confirm_return, true);
     $confirm_return = array_iconv($confirm_return);
     $confirm_return_data = $confirm_return['data'];
+    if ($confirm_return['status'] != '0000') {
+        exit($confirm_return['msg']);
+    }
 }
 
 //订单详情展示
@@ -48,12 +57,11 @@ $post4 = array('orderCode' => $orderCode, 'token' => $token);
 $order_detail = juhecurl($host . "/travel/interface/zby/v3.2/getZbyOrderDtail_v3.2", $post4, 1);
 $order_detail = json_decode($order_detail, true);
 $order_detail = array_iconv($order_detail);
-$error_message = $order_detail['msg'];
-if ($order_detail['status'] != '0000') {
-    exit($error_message);
-}
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
+if ($order_detail['status'] != '0000') {
+    exit($order_detail['msg']);
+}
 //取消订单
 if($_GET['flag'] == 'cn'){
     $post5 = array('orderCode' => $orderCode, 'token' => $token);
@@ -61,6 +69,9 @@ if($_GET['flag'] == 'cn'){
     $cancle_order = json_decode($cancle_order, true);
     $cancle_order = array_iconv($cancle_order);
     $cancle_order_data = $cancle_order['data'];
+    if ($cancle_order['status'] != '0000') {
+        exit($cancle_order['msg']);
+    }
 }
 
 
