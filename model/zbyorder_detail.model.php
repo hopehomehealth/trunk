@@ -17,6 +17,7 @@ $failReason = $refund_product_data['failReason'];
 //ÍË¿îÉêÇë
 if(req('flag') == 'rf'){
     $post2 = array('orderCode' => $orderCode, 'refundReasonCode' => $refundReasonCode);
+    var_dump($post2);
     $require_refund = juhecurl($host."/travel/interface/zby/refundZby",$post2, 1);
     $require_refund = json_decode($require_refund, true);
     $require_refund = array_iconv($require_refund);
@@ -26,7 +27,7 @@ if(req('flag') == 'rf'){
 
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
-    <input type="hidden" name="message" id="payPrice" value="<?=$refund_message;?>">
+    <input type="hidden" name="message" id="message" value="<?=$refund_message;?>">
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName;?>">
 </form>
 <?
