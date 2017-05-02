@@ -1,7 +1,7 @@
 <?
 include '../config.php';
 $orderCode =$_POST['orderCode'];
-$flag = req('flag');
+$flag = $_POST['flag'];
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 //退款产品信息检验
 if(!empty($orderCode) && $flag == 'chk') {
