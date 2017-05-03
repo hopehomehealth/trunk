@@ -54,14 +54,15 @@ function get_product_list($keyWord)
         if (empty($post['pageNo'])){
             $post['pageNo'] = 1;
         }
-//        $product_list = post_curl($host . "/travel/interface/zby/getZbyList", $post);
         $product_list = $db->api_post($host . "/travel/interface/zby/v3.2/getZbyList_v3.2", $post);
 //        $product_list = post_curl("http://192.168.0.132:8080/travel/interface/zby/getZbyList", $post);
         $product_list = json_decode($product_list, true);
         $product_list = array_iconv($product_list,'utf-8','gbk');
+        if ($product_list['status'] != '0000') {
+            exit($product_list['msg']);
+        }
 
 
-//        var_dump($product_list);
     }else {
         $post['homePage'] = '0';
 //        $post['distCity'] = '';
@@ -69,12 +70,11 @@ function get_product_list($keyWord)
         $product_list = $db->api_post($host . "/travel/interface/zby/getHotZbyGoodsList", $post);
         $product_list = json_decode($product_list, true);
         $product_list = array_iconv($product_list,'utf-8','gbk');
-//        var_dump($product_list);
+        if ($product_list['status'] != '0000') {
+            exit($product_list['msg']);
+        }
     }
 
-    //    if ($comment_detail['status'] != '0000'){
-//        exit($comment_detail['msg']);
-//    }
     return $product_list;
 
 }
@@ -92,7 +92,6 @@ if (!empty($keyWord) || $orderby == 'true'){
     $zbyHotGoodsList = $product_list_data['zbyHotGoodsList'];
     $total = $product_list_data['total'];
 }
-//var_dump($product_list_data);
 
 
 $data['pageNo'] = 1;
