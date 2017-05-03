@@ -91,32 +91,25 @@ if (!defined('IN_CLOOTA')) {
                         <tbody>
 
                         <?if($order_detail_data['isPackage'] == 'false'){ ?>
-                            <tr>
-                                <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                                <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?></td>
+                            <tr class="morewords">
+                                <td class="productName"  style="WORD-WRAP: break-word" width="500"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                                <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?>&nbsp;&nbsp;&nbsp;&nbsp;儿童×<? echo $order_detail_data['kidNum']; ?></td>
                                 <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                                <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
-                                <td class="productXiaoji"><? echo $order_detail_data['adultTotalFee']; ?></td>
-                            </tr>
-                            <tr>
-                                <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                                <td class="productOther">儿童×<? echo $order_detail_data['kidNum']; ?></td>
-                                <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                                <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
-                                <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
+                                <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
+                                <td class="productXiaoji">&yen;<? echo $order_detail_data['adultTotalFee'] + $order_detail_data['kidTotalFee']; ?></td>
                             </tr>
                         <? }else if($order_detail_data['isPackage'] == 'true') { ?>
-                            <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                            <td class="productName" style="WORD-WRAP: break-word" width="500"><b><?echo $order_detail_data['goodsName'];?></b></td>
                             <td class="productOther"><? echo $order_detail_data['num']; ?></td>
                             <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                            <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
-                            <td class="productXiaoji"><? echo $order_detail_data['num'] * $order_detail_data['adultPrice']; ?></td>
+                            <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
+                            <td class="productXiaoji">&yen;<? echo $order_detail_data['num'] * $order_detail_data['adultPrice']; ?></td>
                         <? } ?>
 
                         </tbody>
                     </table>
 
-                    <p><span>订单总金额：￥<b><? echo $order_detail_data['payPrice']; ?></b></span></p>
+                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['payPrice']; ?></b></span></p>
                 </div>
 
 
@@ -431,7 +424,7 @@ if (!defined('IN_CLOOTA')) {
         window.location.href = url;
     }
     //去支付
-    function order_again(){
+    function pay_online(){
         $('onlineForm').submit();
     }
 </script>
