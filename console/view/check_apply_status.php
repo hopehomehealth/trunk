@@ -46,13 +46,13 @@ if (!defined('IN_CLOOTA')) {
         </tr>
 
         <tr>
-            <td style="text-align:right"><strong>退款金额：</strong></td>
-            <td><?= $query_row['refund_fee'] ?></td>
+            <td style="text-align:right"><strong>订单金额：</strong></td>
+            <td><?= $query_row['order_fee'] ?></td>
         </tr>
-        <tr>
-            <td style="text-align:right"><strong>扣款金额：</strong></td>
-            <td><?= $query_row['deduct_fee'] ?></td>
-        </tr>
+<!--        <tr>-->
+<!--            <td style="text-align:right"><strong>扣款金额：</strong></td>-->
+<!--            <td>--><?//= $query_row['deduct_fee'] ?><!--</td>-->
+<!--        </tr>-->
         <tr>
             <td style="text-align:right"><strong>驳回理由：</strong></td>
             <td><textarea  placeholder="请填写驳回理由..." style="resize:none;width:300px;height: 100px;margin: 0 auto;;border:solid 1px #ddd;padding:5px 10px;font-size: 12px;"  name="reason"></textarea>

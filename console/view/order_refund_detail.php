@@ -60,7 +60,7 @@ if (!defined('IN_CLOOTA')) {
     <tr>
         <td style="text-align:right"><strong>¶©µ¥½ð¶î£º</strong></td>
         <td>
-            &yen;<?= $details['order_fee'] ?>
+            &yen;<?= $details['pay_price'] ?>
         </td>
     </tr>
 

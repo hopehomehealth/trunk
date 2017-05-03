@@ -63,11 +63,11 @@ if (!defined('IN_CLOOTA')) {
                     <td style="text-align:center"><strong>数据来源</strong></td>
                     <td style="text-align:center"><strong>退款原因</strong></td>
                     <td style="text-align:center"><strong>订单金额</strong></td>
-                    <td style="text-align:center"><strong>扣款金额</strong></td>
-                    <td style="text-align:center"><strong>退款金额</strong></td>
+<!--                    <td style="text-align:center"><strong>扣款金额</strong></td>-->
+<!--                    <td style="text-align:center"><strong>退款金额</strong></td>-->
                     <td style="text-align:center"><strong>退款状态</strong></td>
                     <td style="text-align:center"><strong>第三方退款金额</strong></td>
-                    <td style="text-align:center"><strong>第三方手续费</strong></td>
+<!--                    <td style="text-align:center"><strong>第三方手续费</strong></td>-->
                     <td style="text-align:center"><strong>第三方退款状态</strong></td>
                     <td style="text-align:center"><strong>详情</strong></td>
                     <td style="text-align:center"><strong>操作</strong></td>
@@ -105,13 +105,13 @@ if (!defined('IN_CLOOTA')) {
                                     echo "其他";
                                 } ?></td>
                             <td style="text-align:center"><?= $val['order_fee'] ?>元</td>
-                            <td style="text-align:center"><?= $val['deduct_fee'] ?>元</td>
-                            <td style="text-align:center"><?= $val['refund_fee'] ?>元</td>
+<!--                            <td style="text-align:center">--><?//= $val['deduct_fee'] ?><!--元</td>-->
+<!--                            <td style="text-align:center">--><?//= $val['refund_fee'] ?><!--元</td>-->
                             <td style="text-align:center">
                                 <? if ($val['flag'] == '0') { ?>申请退款<? } else if ($val['flag'] == '1') { ?>退款中<? } else if ($val['flag'] == '2') { ?>已退款<? } else if ($val['flag'] == '3') { ?>申请驳回<? } else if ($val['flag'] == '4') { ?>退款失败<? } ?>
                             </td>
                             <td style="text-align:center"><?= $val['thrid_refund_amount'] ?></td>
-                            <td style="text-align:center"><?= $val['third_refund_charge'] ?></td>
+<!--                            <td style="text-align:center">--><?//= $val['third_refund_charge'] ?><!--</td>-->
                             <td style="text-align:center"><? if ($val['third_refund_status'] == '1') { ?>审核中<? } else if ($val['third_refund_status'] == '2') { ?>已退款<? } else if ($val['third_refund_status'] == '3') { ?>申请驳回<? } ?></td>
                             <td style="text-align:center"><a
                                     href="<?= url('order_refund_detail.php') ?>&order_code=<?= $val['order_code'] ?>"
