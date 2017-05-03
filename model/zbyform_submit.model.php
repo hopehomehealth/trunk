@@ -139,7 +139,6 @@ if($flag == 'check'){
     $post['emergencyName'] = gbk_to_utf8(req('emergencyName'));
     $post['emergencyMobile'] = req('emergencyMobile');
     //游玩人数组处理
-    echo req('name_0');echo $taocan['travellerName'];
     for($i=0;$i<$num;$i++){
         $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
         $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
