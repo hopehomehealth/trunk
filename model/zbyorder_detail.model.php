@@ -1,5 +1,5 @@
 <?
-//$db->check_cookie($loginUrl, $host);
+$db->check_cookie($loginUrl, $host);
 $orderCode = req('orderCode');
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $refundReasonCode = req('refundReasonCode');
