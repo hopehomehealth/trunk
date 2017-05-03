@@ -47,6 +47,7 @@ if (!defined('IN_CLOOTA')) {
                         </thead>
                         <tbody>
                         <?
+                        if(notnull($order_detail_data['playPeopleList'])){
                         foreach ($order_detail_data['playPeopleList'] as $key => $value) {
                             ?>
 
@@ -55,7 +56,7 @@ if (!defined('IN_CLOOTA')) {
                                 <td><? echo $value['userPhone']; ?></td>
                                 <td><? echo $value['userIdCard']; ?></td>
                             </tr>
-                        <? } ?>
+                        <? }}?>
                         </tbody>
                     </table>
                 </div>
@@ -93,7 +94,7 @@ if (!defined('IN_CLOOTA')) {
                         <?if($order_detail_data['isPackage'] == 'false'){ ?>
                             <tr class="morewords">
                                 <td class="productName"  style="WORD-WRAP: break-word" width="500"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                                <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?>&nbsp;&nbsp;&nbsp;&nbsp;儿童×<? echo $order_detail_data['kidNum']; ?></td>
+                                <td class="productOther"><? if (!empty($order_detail_data['kidNum'])) echo '成人×'.$order_detail_data['adultNum'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . '儿童×' . $order_detail_data['kidNum'] ; else echo '成人×'.$order_detail_data['adultNum'];?></td>
                                 <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
                                 <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
                                 <td class="productXiaoji">&yen;<? echo $order_detail_data['adultTotalFee'] + $order_detail_data['kidTotalFee']; ?></td>
@@ -224,7 +225,10 @@ if (!defined('IN_CLOOTA')) {
     </div>
 </div>
 <!-- 取消订单成功或失败弹窗 -->
-<?if(!empty($cancle_order)){ ?>
+<?if(!empty($cancle_order_data)){
+    $js1 = "<script>$('#mengban').show();</script>";
+    echo $js1;
+    ?>
     <div class="cancelBox1">
         <div class="cancelBox1_title">
             <div class="cancelBox1_title_left">bus365提示您</div>
@@ -266,7 +270,10 @@ if (!defined('IN_CLOOTA')) {
 </div>
 
 <!-- 确认会团成功或失败弹窗 -->
-<?if(!empty($confirm_return_data)){ ?>
+<?if(!empty($confirm_return_data)){
+    $js2 = "<script>$('#mengban').show();</script>";
+    echo $js2;
+    ?>
     <div class="querenhuituan1">
         <div class="querenhuituan1_title">
             <div class="querenhuituan1_title_left">bus365提示您</div>
