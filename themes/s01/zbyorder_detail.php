@@ -86,6 +86,9 @@ if (!defined('IN_CLOOTA')) {
                             <? } ?>
                             <th>游玩日期</th>
                             <th>现售价</th>
+                            <?if($order_detail_data['isPackage'] == 'false'){ ?>
+                            <th>房差</th>
+                            <? } ?>
                             <th>小计</th>
                         </tr>
                         </thead>
@@ -97,7 +100,8 @@ if (!defined('IN_CLOOTA')) {
                                 <td class="productOther"><? if (!empty($order_detail_data['kidNum'])) echo '成人×'.$order_detail_data['adultNum'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . '儿童×' . $order_detail_data['kidNum'] ; else echo '成人×'.$order_detail_data['adultNum'];?></td>
                                 <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
                                 <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
-                                <td class="productXiaoji">&yen;<? echo $order_detail_data['adultTotalFee'] + $order_detail_data['kidTotalFee']; ?></td>
+                                <td class="productPrice2">&yen;<? echo $order_detail_data['diffPrice']; ?></td>
+                                <td class="productXiaoji">&yen;<? echo $order_detail_data['adultTotalFee'] + $order_detail_data['kidTotalFee'] + $order_detail_data['diffPrice']; ?></td>
                             </tr>
                         <? }else if($order_detail_data['isPackage'] == 'true') { ?>
                             <td class="productName" style="WORD-WRAP: break-word" width="500"><b><?echo $order_detail_data['goodsName'];?></b></td>
