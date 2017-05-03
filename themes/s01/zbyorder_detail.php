@@ -175,7 +175,7 @@ if (!defined('IN_CLOOTA')) {
         <span class="refundInfo_close"></span>
     </div>
     <div class="refundInfoCont">
-        <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html?flag=rf">
+        <form  method="post"  id="rfCommitForm" action="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html?flag=rf">
             <input type="hidden" name="orderCode" value="<?echo $orderCode;?>">
             <div class="refundInfoCont1">
                 <span>退款原因：</span>
@@ -190,18 +190,18 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo_table">
                     <div class="orderInfo_table_title">
                         <ul>
-                            <li class="orderInfo_table_tr1">产品名</li>
-                            <li class="orderInfo_table_tr2">套餐名称</li>
-                            <li class="orderInfo_table_tr2">客服说明</li>
+                            <li class="orderInfo_table_tr1">订单号</li>
+                            <li class="orderInfo_table_tr2">产品名</li>
+                            <li class="orderInfo_table_tr3">套餐名称</li>
                         </ul>
                     </div>
                     <div class="orderInfo_table_cont">
                         <ul>
-                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['goodsName']; ?></li>
+                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['orderCode']; ?></li>
                             <li class="orderInfo_table_tr2"
-                                style="color: #ff6600;"><? echo $refund_product_data['packageName'] ?></li>
-                            <li class="orderInfo_table_tr2"
-                                style="color: #ff6600;"><? echo $refund_product_data['refundCustomerInfo'] ?></li>
+                                style="color: #000;"><? echo $refund_product_data['goodsName'] ?></li>
+                            <li class="orderInfo_table_tr3"
+                                style="color: #000;"><? echo $refund_product_data['packageName'] ?></li>
                         </ul>
                     </div>
                 </div>
@@ -326,6 +326,7 @@ if (!defined('IN_CLOOTA')) {
         $("#mengban").hide();
         $(".applyRefund").hide();
     });
+
     //申请退款按钮弹框
     for(var i=0;i<$('.applyRefundBtn').length;i++){
         $('.applyRefundBtn').eq(i).click(function(){
@@ -334,6 +335,7 @@ if (!defined('IN_CLOOTA')) {
             $('.applyRefund').show();
         });
     }
+
 
     $('.applyRefund_sure').click(function(){
         var orderCode = "<?= $orderCode ?>";
@@ -347,13 +349,13 @@ if (!defined('IN_CLOOTA')) {
             async: false,
             success: function (data) {
 //                alert(data);
-                if(data = 'false'){
+                if(!data){
                     $('.nengtuifou').show();
                     $('.applyRefund').hide();
                     $("#mengban").hide();
-                } else {
-                    $('.refundInfo').show();
+                } else{
                     $('.applyRefund').hide();
+                    $('.refundInfo').show();
                 }
             }
         });
@@ -411,8 +413,7 @@ if (!defined('IN_CLOOTA')) {
     });
     //退款请求接口
     function refund_commit(){
-        var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=rf";
-        window.location.href = url;
+        document.getElementById("rfCommitForm").submit();
     }
     //确认会团请求接口
     function confirm_return(){

@@ -55,18 +55,19 @@ $('.unfold').click(function(){
 });
 
 
+
 $('.searchMain1_r').click(function(){
 	//alert(1);
 	if($(".searchMain1_l span").html()!='' && $('.searchMain1_c input').val()!=''){
 		//alert(2);
 		if($(".searchMain1_l span").html()=='景点门票'){
 			$('.search_form').remove();
-			$('body').append('<form  action="http://travel.bus365.com/menpiao/" method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="'+$(".searchMain1_l span").html()+'"><input type="hidden" name="keyWord" class="search_cont2" value="'+$('.searchMain1_c input').val()+'"></form>');
+			$('body').append('<form  action="http://travelt.bus365.com/menpiao/" method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="'+$(".searchMain1_l span").html()+'"><input type="hidden" name="keyWord" class="search_cont2" value="'+$('.searchMain1_c input').val()+'"></form>');
 			//$('.search_form').attr('action','');
 			$('.search_form').submit();
 		}else if($(".searchMain1_l span").html()=='周边游'){
 			$('.search_form').remove();
-			$('body').append('<form  action="http://travel.bus365.com/zhoubian/  " method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="'+$(".searchMain1_l span").html()+'"><input type="hidden" name="keyWord" class="search_cont2" value="'+$('.searchMain1_c input').val()+'"></form>');
+			$('body').append('<form  action="http://travelt.bus365.com/zhoubian/  " method="" class="search_form"><input type="hidden" name="keyWord" class="search_cont1" value="'+$(".searchMain1_l span").html()+'"><input type="hidden" name="keyWord" class="search_cont2" value="'+$('.searchMain1_c input').val()+'"></form>');
 			//$('.search_form').attr('action','http://traveld.bus365.cn/zhoubian/');
 			$('.search_form').submit();
 		}
