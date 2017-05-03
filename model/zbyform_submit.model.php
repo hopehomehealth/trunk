@@ -1,5 +1,5 @@
 <?
-if(req('flag') == 1){
+/*if(req('flag') == 1){
     function keyED($txt,$encrypt_key){       
     $encrypt_key =    md5($encrypt_key);
     $ctr=0;       
@@ -74,7 +74,7 @@ if(req('flag') == 1){
 
 
     //header("location: http://$wangzhi");
-}
+}*/
 
 //$db->check_cookie($loginUrl, $host);
 //Ωÿ»°
