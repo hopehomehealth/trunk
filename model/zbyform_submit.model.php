@@ -59,7 +59,7 @@
     }
  
     $key_url_md_5 = 'mdaima.com-123-scc'; 
-    //ÖØ¶¨Ïò¼ÓÃÜ
+    //é‡å®šå‘åŠ å¯†
     $canshu = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $canshu = str_replace('?','',strstr($canshu,'?'));
     $canshu = encrypt_url($_SERVER['QUERY_STRING']);
@@ -68,7 +68,7 @@
     echo $wangzhi;die;
     header("location: $wangzhi");
     
-    //½âÃÜ
+    //è§£å¯†
     $url_info = geturl($_SERVER['QUERY_STRING'],$key_url_md_5);
 
 
@@ -76,8 +76,8 @@
     //header("location: http://$wangzhi");
 }*/
 
-$db->check_cookie($loginUrl, $host);
-//½ØÈ¡
+//$db->check_cookie($loginUrl, $host);
+//æˆªå–
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
         return mb_substr($data, 0, $num,'gbk').'...';
@@ -88,7 +88,7 @@ function jiequ($num,$data){
 }
 
 $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-//»ñÈ¡Ì×²ÍĞÅÏ¢
+//è·å–å¥—é¤ä¿¡æ¯
 $tc['lvProductId'] = req('lvProductId');
 $tc['packageId'] = req('packageId');
 $tc['departDate'] = req('departDate');
@@ -96,32 +96,32 @@ $tc['departDate'] = req('departDate');
 $api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?lvProductId='.$tc['lvProductId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
 $tcs = array_iconv(json_decode(juhecurl("$api_url", false, 0),true),'utf-8','gbk');
-//ÉèÖÃ±äÁ¿
+//è®¾ç½®å˜é‡
 $taocan = $tcs['data'][0];
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
-//ÅĞ¶Ï°´ÈË°²·İ
+//åˆ¤æ–­æŒ‰äººå®‰ä»½
 $is_package = $taocan['isPackage'];
 //var_dump($tcs);echo '<br>'; 
-//¶©µ¥½Ó¿Ú²ÎÊı
+//è®¢å•æ¥å£å‚æ•°
 $post['token'] = $token;//"{\"token1\":\"34d996bc-bc3f-4ed5-8020-868a68398352%2315122991536%23%25E5%2585%259A%25E5%25A6%25B9%25E5%25AD%2590%2376061060000000341\",\"token2\":\"2C8EBC684DBE4F930096E68FE24F8550F53F78A0E79634E0F6668F99659D83BB449A51AF37EADCA8D775097E26A6A13958D3B455DF850CFE35567C783187C0EE7A4D04972B0B38E271997D96941AD1A8\"}";
 $post['goodsId'] = $taocan['goodsId'];//'8017691';//
 $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
-$post['payPrice'] = str_replace("£¤","",req('payPrice')) ;//'150';//
+$post['payPrice'] = str_replace("ï¿¥","",req('payPrice')) ;//'150';//
 $post['adultNum'] = $_GET['adultNum'];//'1';//
 $post['kidNum'] = $_GET['childNum'];//'1';//
-if($taocan['isPackage'] == 'true'){//°´·İÂô
+if($taocan['isPackage'] == 'true'){//æŒ‰ä»½å–
     $post['packageNum'] = req('packageNum');//'3';//
 
-}else{//°´ÈËÂô
+}else{//æŒ‰äººå–
     
     $post['roomCount'] = req('roomCount');//'0';//
 
 }
 
 
-//ÓÎÍæÈËÊıÁ¿ÅĞ¶Ï  
+//æ¸¸ç©äººæ•°é‡åˆ¤æ–­  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
 }elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
@@ -130,7 +130,7 @@ if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 0;
 }
 
-//Éú³É¶©µ¥
+//ç”Ÿæˆè®¢å•
 $flag = req('flag');
 if($flag == 'check'){
     $post['bookerName'] = gbk_to_utf8(req('bookerName'));
@@ -138,7 +138,7 @@ if($flag == 'check'){
     $post['bookerEmail'] = req('bookerEmail');
     $post['emergencyName'] = gbk_to_utf8(req('emergencyName'));
     $post['emergencyMobile'] = req('emergencyMobile');
-    //ÓÎÍæÈËÊı×é´¦Àí
+    //æ¸¸ç©äººæ•°ç»„å¤„ç†
     for($i=0;$i<$num;$i++){
         $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
         $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
@@ -150,12 +150,12 @@ if($flag == 'check'){
         $travellerList[$i]['gender'] = req('gender_'.$i);
         $travellerList[$i]['birthday'] = req('birthday_'.$i);echo req('mobile_'.$i);
         //var_dump($travellerList[$i]);
-        //È¥³ı¿ÕÖµ
+        //å»é™¤ç©ºå€¼
         
     }
     $post['travellerList'] = json_encode($travellerList);
 
-     //²âÊÔ ÏÈ´«¿Õ
+     //æµ‹è¯• å…ˆä¼ ç©º
      //var_dump($post);
      $dingdan = array_iconv(json_decode($db->api_post("192.168.3.189:8080/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
@@ -172,7 +172,7 @@ if($flag == 'check'){
 
 
 
-/*//Ğ£Ñé¶©µ¥
+/*//æ ¡éªŒè®¢å•
 
 
 if($flag == 'check'){
