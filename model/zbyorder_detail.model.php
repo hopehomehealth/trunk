@@ -34,7 +34,7 @@ if(req('flag') == 'rf'){
 ?>
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyrefund-<?=$orderCode;?>.html" method="post" id="refundForm">
     <input type="hidden" name="message" id="message" value="<?=$refund_message;?>">
-    <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName;?>">
+    <input type="hidden" name="goodsName" id="goodsName" value="<?=$require_refund_data['goodsName'];?>">
 </form>
 <?
     if (notnull($require_refund_data)){
