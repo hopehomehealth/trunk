@@ -1,16 +1,92 @@
 <?
-/*if(req('flag') == 1){
-    $canshu = $db->base64url_encode($_SERVER['QUERY_STRING']);
-    $dizhi = $_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
-    $wangzhi = $dizhi.$canshu;
+if(req('flag') == 1){
+    function keyED($txt,$encrypt_key){       
+    $encrypt_key =    md5($encrypt_key);
+    $ctr=0;       
+    $tmp = "";       
+    for($i=0;$i<strlen($txt);$i++)       
+    {           
+        if ($ctr==strlen($encrypt_key))
+        $ctr=0;           
+        $tmp.= substr($txt,$i,1) ^ substr($encrypt_key,$ctr,1);
+        $ctr++;       
+    }       
+    return $tmp;   
+    }    
+    function encrypt($txt,$key)   {
+        $encrypt_key = md5(mt_rand(0,100));
+        $ctr=0;       
+        $tmp = "";      
+         for ($i=0;$i<strlen($txt);$i++)       
+         {
+            if ($ctr==strlen($encrypt_key))
+                $ctr=0;           
+            $tmp.=substr($encrypt_key,$ctr,1) . (substr($txt,$i,1) ^ substr($encrypt_key,$ctr,1));
+            $ctr++;       
+         }       
+         return keyED($tmp,$key);
+    } 
+        
+    function decrypt($txt,$key){       
+        $txt = keyED($txt,$key);       
+        $tmp = "";       
+        for($i=0;$i<strlen($txt);$i++)       
+        {           
+            $md5 = substr($txt,$i,1);
+            $i++;           
+            $tmp.= (substr($txt,$i,1) ^ $md5);       
+        }       
+        return $tmp;
+    }
+    function encrypt_url($url,$key){
+        return rawurlencode(base64_encode(encrypt($url,$key)));
+    }
+    function decrypt_url($url,$key){
+        return decrypt(base64_decode(rawurldecode($url)),$key);
+    }
+    function geturl($str,$key){
+        $str = decrypt_url($str,$key);
+        $url_array = explode('&',$str);
+        if (is_array($url_array))
+        {
+            foreach ($url_array as $var)
+            {
+                $var_array = explode("=",$var);
+                $vars[$var_array[0]]=$var_array[1];
+            }
+        }
+        return $vars;
+    }
+ 
+    $key_url_md_5 = 'mdaima.com-123-scc'; 
+    //重定向加密
+    $canshu = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $canshu = str_replace('?','',strstr($canshu,'?'));
+    $canshu = encrypt_url($_SERVER['QUERY_STRING']);
+    $dizhi = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
+    $wangzhi = $dizhi.''.$canshu;
+    echo $wangzhi;die;
+    header("location: $wangzhi");
+    
+    //解密
+    $url_info = geturl($_SERVER['QUERY_STRING'],$key_url_md_5);
 
 
 
-
-    header("location: http://$wangzhi");
+    //header("location: http://$wangzhi");
 }
-$canshu = */
+
 //$db->check_cookie($loginUrl, $host);
+//截取
+function jiequ($num,$data){
+    if(mb_strlen($data,'gbk')>$num){
+        return mb_substr($data, 0, $num,'gbk').'...';
+    }else{
+        return $data;
+    }
+
+}
+
 $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //获取套餐信息
 $tc['lvProductId'] = req('lvProductId');
