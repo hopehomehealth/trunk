@@ -66,7 +66,7 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo1">
                     <ul>
                         <li>订单号：<? echo $order_detail_data['orderCode']; ?></li>
-                        <li>订单状态：<? echo $order_detail_data['orderStatusName']; ?></li>
+                        <li>订单状态：<? echo $order_detail_data['orderStatusName']; if($order_detail_data['orderStatus'] == '2') echo '(审核中)';?></li>
                         <li>下单时间：<? echo $order_detail_data['orderDate']; ?></li>
                         <li>支付方式：<? echo $order_detail_data['paymentType']; ?></li>
                     </ul>
