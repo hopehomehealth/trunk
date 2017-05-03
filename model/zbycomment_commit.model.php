@@ -14,17 +14,14 @@ if($flag == 'cm'){
     $ticket_comment = json_decode($ticket_comment, true);
 
     $ticket_comment = array_iconv($ticket_comment);
-    $msg = $ticket_comment['msg'];
 //    var_dump($ticket_comment);
     if ($ticket_comment['status'] != '0000') {
-        $js = "<script>alert('$msg');history.go(-1);</script>";
-        echo $js;
-        exit();
+        exit($ticket_comment['msg']);
     }
     $ticket_comment_data = $ticket_comment['data'];
-
+    var_dump($ticket_comment_data);die;
     $message = urlencode($ticket_comment_data['message']);
-    $js = "<script>window.location.href='/zhoubianyou/zbycomment_success-".$orderCode.".html?message=".$message."' </script>";
+    $js = "<script>window.location.href='/zhoubianyou/zbycomment_success-".$orderCode.".html?message=".$message."';</script>";
     echo $js;
 
 }
