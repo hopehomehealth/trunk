@@ -744,27 +744,27 @@
                                 }
                             });
 
-                            $('.product_name1').eq(i).hover(function () {
-                                $(this).css({
-                                    "color": "#fa9520"
-                                });
-                                var offsetLeft = $(this).offset().left;
-                                var offsetTop = $(this).offset().top;
-                                var elementHeight = 30;
-                                var left = offsetLeft;
-                                var top = offsetTop + elementHeight;
-                                $('.product_name_tips').eq($(this).attr('index')).show();
-                                $('.product_name_tips').eq($(this).attr('index')).css({
-                                    "position": "absolute",
-                                    "left": left,
-                                    "top": top
-                                });
-                            }, function () {
-                                $(this).css({
-                                    "color": ""
-                                });
-                                $('.product_name_tips').eq($(this).attr('index')).hide();
-                            });
+//                            $('.product_name1').eq(i).hover(function () {
+//                                $(this).css({
+//                                    "color": "#fa9520"
+//                                });
+//                                var offsetLeft = $(this).offset().left;
+//                                var offsetTop = $(this).offset().top;
+//                                var elementHeight = 30;
+//                                var left = offsetLeft;
+//                                var top = offsetTop + elementHeight;
+//                                $('.product_name_tips').eq($(this).attr('index')).show();
+//                                $('.product_name_tips').eq($(this).attr('index')).css({
+//                                    "position": "absolute",
+//                                    "left": left,
+//                                    "top": top
+//                                });
+//                            }, function () {
+//                                $(this).css({
+//                                    "color": ""
+//                                });
+//                                $('.product_name_tips').eq($(this).attr('index')).hide();
+//                            });
                         }
                         //退改规则hover
                         for (var i = 0; i < $('.change_rule').length; i++) {
@@ -795,31 +795,31 @@
                         }
                         ;
                         //包含门票hover
-                        for (var i = 0; i < $('.ticket_contain1').length; i++) {
-                            $('.ticket_contain1').eq(i).attr("index", i);
-                            $('.ticket_contain1').eq(i).hover(function () {
-                                $(this).css({
-                                    "color": "#fa9520"
-                                });
-                                var offsetLeft = $(this).offset().left;
-                                var offsetTop = $(this).offset().top;
-                                var elementHeight = 54;
-                                var left = offsetLeft;
-                                var top = offsetTop + elementHeight;
-                                $('.ticket_contain_tips').eq($(this).attr('index')).show();
-                                $('.ticket_contain_tips').eq($(this).attr('index')).css({
-                                    "position": "absolute",
-                                    "left": (left + 70),
-                                    "top": top
-                                });
-                            }, function () {
-                                $(this).css({
-                                    "color": ""
-                                });
-                                $('.ticket_contain_tips').eq($(this).attr('index')).hide();
-                            });
-                        }
-                        ;
+//                        for (var i = 0; i < $('.ticket_contain1').length; i++) {
+//                            $('.ticket_contain1').eq(i).attr("index", i);
+//                            $('.ticket_contain1').eq(i).hover(function () {
+//                                $(this).css({
+//                                    "color": "#fa9520"
+//                                });
+//                                var offsetLeft = $(this).offset().left;
+//                                var offsetTop = $(this).offset().top;
+//                                var elementHeight = 54;
+//                                var left = offsetLeft;
+//                                var top = offsetTop + elementHeight;
+//                                $('.ticket_contain_tips').eq($(this).attr('index')).show();
+//                                $('.ticket_contain_tips').eq($(this).attr('index')).css({
+//                                    "position": "absolute",
+//                                    "left": (left + 70),
+//                                    "top": top
+//                                });
+//                            }, function () {
+//                                $(this).css({
+//                                    "color": ""
+//                                });
+//                                $('.ticket_contain_tips').eq($(this).attr('index')).hide();
+//                            });
+//                        }
+//                        ;
                         //套餐选择按钮
                         for (var i = 0; i < $('.product_select1').length; i++) {
                             $('.product_select1').eq(i).click(function () {
