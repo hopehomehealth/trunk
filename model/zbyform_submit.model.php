@@ -109,8 +109,17 @@ $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
 $post['payPrice'] = str_replace("￥","",req('payPrice')) ;//'150';//
-$post['adultNum'] = req('adultNum');//'1';//
-$post['kidNum'] = req('childNum');//'1';//
+$post['adultNum'] = $_GET['adultNum'];//'1';//
+$post['kidNum'] = $_GET['childNum'];//'1';//
+if($taocan['isPackage'] == 'true'){//按份卖
+    $post['packageNum'] = req('packageNum');//'3';//
+
+}else{//按人卖
+    
+    $post['roomCount'] = req('roomCount');//'0';//
+
+}
+
 
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
@@ -130,7 +139,7 @@ if($flag == 'check'){
     $post['emergencyName'] = gbk_to_utf8(req('emergencyName'));
     $post['emergencyMobile'] = req('emergencyMobile');
     //游玩人数组处理
-    
+    echo req('name_0');echo $taocan['travellerName'];
     for($i=0;$i<$num;$i++){
         $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
         $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
@@ -140,27 +149,16 @@ if($flag == 'check'){
         $travellerList[$i]['credentials'] = req('credentials_'.$i);
         $travellerList[$i]['credentialsType'] = 'ID_CARD';
         $travellerList[$i]['gender'] = req('gender_'.$i);
-        $travellerList[$i]['birthday'] = req('birthday_'.$i);
+        $travellerList[$i]['birthday'] = req('birthday_'.$i);echo req('mobile_'.$i);
         //var_dump($travellerList[$i]);
         //去除空值
-        //$travellerList[$i] = array_filter($travellerList[$i]);
+        
     }
-    //var_dump($post['bookerEmail']);echo '<br>';
-    //var_dump($_POST['bookerEmail']);
+    $post['travellerList'] = json_encode($travellerList);
 
-     //$post = array_filter($post); 
-if($taocan['isPackage'] == 'true'){//按份卖
-    $post['packageNum'] = req('packageNum');//'3';//
-}else{//按人卖
-    
-    $post['roomCount'] = req('roomCount');//'0';//
-
-}
-    $post['adultNum'] = req('adultNum');//'1';//
-    $post['kidNum'] = req('childNum');//'1';//
      //测试 先传空
      //var_dump($post);
-     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
+     $dingdan = array_iconv(json_decode($db->api_post("192.168.3.189:8080/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
      $payTime = $dingdan['data']['payTime'];
