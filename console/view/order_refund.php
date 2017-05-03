@@ -125,7 +125,7 @@ if (!defined('IN_CLOOTA')) {
                                                 class="btn btn-info btn-small" style="cursor:pointer">ÍË¿î</span>
                                         <? } ?>
                                     <? } else { ?>
-                                        <? if ($val['third_refund_status'] == '2' && $val['flag'] != '2') { ?>
+                                        <? if ($val['third_refund_status'] == '2' && $val['flag'] !== '2') { ?>
                                             <span
                                                 onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
                                                 class="btn btn-info btn-small" style="cursor:pointer">ÍË¿î</span>
