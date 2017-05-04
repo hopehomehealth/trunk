@@ -12,7 +12,7 @@
 <!--  nav导航  end -->
 <div id="myOrder_mainBox">
     <div id="myOrder_main">
-        <div class="currentPos">当前位置：<a href="">中国公路客票网</a> &gt; <a href="<?=$g_bus365_domain?>/index/order/orders/">我的订单</a> &gt; 待点评</div>
+        <div class="currentPos">当前位置：<a href="">中国公路客票网</a> &gt; <a href="<?=$g_bus365_domain?>/index/order/orders/">我的订单</a> &gt; 点评详情</div>
 
         <div class="myOrder_mainContent">
             <div class="myOrder_mainLeft">
