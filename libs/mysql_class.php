@@ -213,7 +213,7 @@ class dbmysql {
 		if(empty($_COOKIE['5fe845d7c136951446ff6a80b8144467'])){
 			header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"'); 
 			$encrypted = $this->encrypt($back_url);
-			setcookie( MD5("backurl"),  $encrypted,  time() + 3600,  "/",'bus365.com');
+			setcookie( MD5("backurl"),  $encrypted,  time() + 3600,  "/",'bus365.cn');
 			Header("Location: $loginUrl");
 		}
 		$token = json_decode(json_decode($_COOKIE['5fe845d7c136951446ff6a80b8144467']),true);
@@ -222,7 +222,7 @@ class dbmysql {
 		if(strpos($login, '#') === false){
 			header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
 			$encrypted = $this->encrypt($back_url);
-			setcookie( MD5("backurl"),  $encrypted,  time() + 3600,  "/",'bus365.com');
+			setcookie( MD5("backurl"),  $encrypted,  time() + 3600,  "/",'bus365.cn');
 			Header("Location: $loginUrl");
 		}
 
