@@ -720,7 +720,7 @@
                 $('#v_calendar1').hide();
                 departDate = $('#startDate').val();
                 var goodsId = <?= $goodsId ?>;
-                var productId = <?= $productId ?>; 
+                var productId = <?= $productId ?>;
                 $.ajax({
                     type: "POST",
                     url: "/model/get_meal.model.php",
@@ -942,15 +942,13 @@
                     $('.fangchajia').html(data);
                     $('.fangchajia').show();
                     diffPriceNum = $('#diffPrice').val();
-//                    var zongjia = "&yen;";
                     var zongjia = adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
                     $("#orderPrice").html(zongjia);
                 }
             });
         }else{
             var fenshu = $('#fenshu').val();
-//          var zongjia = "&yen;";
-            var zongjia = (adultPrice*adultNum + kidPrice*kidNum)*fenshu;
+            var zongjia = adultPrice*fenshu;
             $("#orderPrice").html(zongjia);
         }
     };
