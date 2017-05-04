@@ -80,7 +80,8 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                 <ul>
                                     <li class="product">
                                         <span class="ticketType1"><?= $db->to_gbk($type['ticketTypeName']) ?></span>
-                                        --<a title="<?=$db->to_gbk($values['limitTime'])?>"><?= $db->to_gbk(jiequ(45, $values['lvGoodsName'] . "--" . $values['limitTime']))?></a>
+                                        --<?= $db->to_gbk($values['lvGoodsName']) ?>
+                                        （<?= $db->to_gbk($values['limitTime']) ?>）
                                         <span class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                     </li>
                                     <li class="reserveTime"><?= $db->to_gbk($values['bookTime']) ?></li>
@@ -88,7 +89,7 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                     <li class="ourPrice">&yen; <?= $values['minPrice'] ?><span>起</span></li>
                                     <li class="payType">在线支付</li>
                                     <li class="reserve"><a
-                                            href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $values['isEmail'] ?>-<?= $ticketType ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $values['lvGoodsId'] ?>.html">预定</a> 
+                                            href="<?= $g_self_domain ?>/menpiao/ticket_order-<?= urlencode($db->to_gbk($obj['scenicInfo']['goodsName'])) ?>-<?= urlencode($db->to_gbk($ticketTypeName)) ?>-<?= $values['isEmail'] ?>-<?= $ticketType ?>-<?= $obj['scenicInfo']['goodsId'] ?>-<?= $obj['scenicInfo']['lvProductId'] ?>-<?= $values['lvGoodsId'] ?>.html">预定</a>
                                     </li>
                                 </ul>
                                 <div class="spotTicket_infoHide">
@@ -191,7 +192,7 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                                 <dd>
                                     <?= $db->to_gbk($item['scenicSpotInfo']) ?>
                                 </dd>
-                                <?foreach ($item['imgUrl'] as $k => $val){?>
+                                <?foreach ($item['imgUrlList'] as $k => $val){?>
                                     <image src="<?= $db->to_gbk($val) ?>" style="width: 720px;height: 480px;"></image>
                                 <?}?>
                             </dl>

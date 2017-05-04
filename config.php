@@ -27,7 +27,6 @@ $db->dbconn($db_host, $db_user, $db_pwd, $db_name);
 /// 读取配置文件
 $cfg_cache_file = $g_site_root.'/cache/cfg/'.$_SERVER['HTTP_HOST'].'.php';
 
-
 // 预读配置文件缓存
 if(file_exists($cfg_cache_file)==true){
 	include($cfg_cache_file);

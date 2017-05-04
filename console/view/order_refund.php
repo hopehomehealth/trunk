@@ -60,13 +60,14 @@ if (!defined('IN_CLOOTA')) {
                     <td style="text-align:center"><strong>订单编号</strong></td>
                     <td style="text-align:center"><strong>第三方订单编号</strong></td>
                     <td style="text-align:center"><strong>申请时间</strong></td>
+                    <td style="text-align:center"><strong>数据来源</strong></td>
                     <td style="text-align:center"><strong>退款原因</strong></td>
                     <td style="text-align:center"><strong>订单金额</strong></td>
-                    <td style="text-align:center"><strong>扣款金额</strong></td>
-                    <td style="text-align:center"><strong>退款金额</strong></td>
+<!--                    <td style="text-align:center"><strong>扣款金额</strong></td>-->
+<!--                    <td style="text-align:center"><strong>退款金额</strong></td>-->
                     <td style="text-align:center"><strong>退款状态</strong></td>
                     <td style="text-align:center"><strong>第三方退款金额</strong></td>
-                    <td style="text-align:center"><strong>第三方手续费</strong></td>
+<!--                    <td style="text-align:center"><strong>第三方手续费</strong></td>-->
                     <td style="text-align:center"><strong>第三方退款状态</strong></td>
                     <td style="text-align:center"><strong>详情</strong></td>
                     <td style="text-align:center"><strong>操作</strong></td>
@@ -86,7 +87,8 @@ if (!defined('IN_CLOOTA')) {
                             <td style="text-align:center"><? if ($val['goods_type'] == '1') { ?>周边游<? } else if ($val['goods_type'] == '4') { ?>门票<? } ?></td>
                             <td style="text-align:center"><?= $val['order_code'] ?></td>
                             <td style="text-align:center"><?= $val['lv_order_id'] ?></td>
-                            <td style="text-align:center" style="text-align:center"><?= $val['create_time'] ?></td>
+                            <td style="text-align:center"><?= $val['create_time'] ?></td>
+                            <td style="text-align:center"><? if ($val['data_sources'] == '1') { ?>bus365<? } else if ($val['data_sources'] == '2') { ?>驴妈妈<? } ?></td>
                             <td style="text-align:center"><? if ($val['reason'] == '') {
                                     echo $val['other_reason'];
                                 } else if ($val['reason'] == '1') {
@@ -103,23 +105,31 @@ if (!defined('IN_CLOOTA')) {
                                     echo "其他";
                                 } ?></td>
                             <td style="text-align:center"><?= $val['order_fee'] ?>元</td>
-                            <td style="text-align:center"><?= $val['deduct_fee'] ?>元</td>
-                            <td style="text-align:center"><?= $val['refund_fee'] ?>元</td>
+<!--                            <td style="text-align:center">--><?//= $val['deduct_fee'] ?><!--元</td>-->
+<!--                            <td style="text-align:center">--><?//= $val['refund_fee'] ?><!--元</td>-->
                             <td style="text-align:center">
                                 <? if ($val['flag'] == '0') { ?>申请退款<? } else if ($val['flag'] == '1') { ?>退款中<? } else if ($val['flag'] == '2') { ?>已退款<? } else if ($val['flag'] == '3') { ?>申请驳回<? } else if ($val['flag'] == '4') { ?>退款失败<? } ?>
                             </td>
                             <td style="text-align:center"><?= $val['thrid_refund_amount'] ?></td>
-                            <td style="text-align:center"><?= $val['third_refund_charge'] ?></td>
+<!--                            <td style="text-align:center">--><?//= $val['third_refund_charge'] ?><!--</td>-->
                             <td style="text-align:center"><? if ($val['third_refund_status'] == '1') { ?>审核中<? } else if ($val['third_refund_status'] == '2') { ?>已退款<? } else if ($val['third_refund_status'] == '3') { ?>申请驳回<? } ?></td>
                             <td style="text-align:center"><a
                                     href="<?= url('order_refund_detail.php') ?>&order_code=<?= $val['order_code'] ?>"
                                     target="_top" class="btn btn-small btn-info">详情</a></td>
                             <td style="text-align:center">
                                 <? if ($val['goods_type'] == '4') { ?>
-                                    <? if ($val['third_refund_status'] == '2' && $val['flag'] != '2') { ?>
-                                        <span
-                                            onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
-                                            class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                                    <? if ($val['data_sources'] == '1') { ?>
+                                        <? if ($val['flag'] !== '2') { ?>
+                                            <span
+                                                onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                                class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                                        <? } ?>
+                                    <? } else { ?>
+                                        <? if ($val['third_refund_status'] == '2' && $val['flag'] !== '2') { ?>
+                                            <span
+                                                onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                                class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                                        <? } ?>
                                     <? } ?>
                                 <? } else if ($val['goods_type'] == '1') { ?>
                                     <? if ($val['flag'] == '0') { ?>

@@ -138,30 +138,7 @@ $(document).ready(function () {
     $('.baiduMap').click(function(){
         $(document).scrollTop($('.spotListDetail_main3Left3').offset().top-42)
     });
-    // $(document).scroll(function () {
-    //     console.log(1);
-    //     if($(document).scrollTop()==($('.spotListDetail_main3Left1').offset().top-42)){
-    //         console.log(1);
-    //         $('.spotListDetail_main3Left1').addClass('main3TabSelected').siblings().removeClass('main3TabSelected');
-    //     }
-    // });
-    //IE之外的绑定事件方法 
-	// if(document.addEventListener && !document.attachEvent){ 
-	// 	document.addEventListener('mousewheel',getData); 
-	// //FF绑定滚动事件 
-	// 	document.addEventListener('DOMMouseScroll',getData); 
-	// }//IE 
-	// else if(document.attachEvent && !document.addEventListener){ 
-	// 	document.attachEvent('onmousewheel',getData); 
-	// }else{ 
-	// 	window.onmousewheel = getData; 
-	// }
-	// function getData(){
-	// 	if($(document).scrollTop()-($('.spotListDetail_main3Left1').offset().top-42)>0){
-	// 		console.log(2);
- //            $('.spotListDetail_main3Left1').addClass('main3TabSelected').siblings().removeClass('main3TabSelected');
- //        }
-	// }
+
 
 	//景点门票的提示信息展开收起
 	var spotListDetail_main2_table1Right = $('.spotListDetail_main2_table ul');
@@ -191,12 +168,8 @@ $(document).ready(function () {
 	}
 
 	var top1 = $('.spotListDetail_main3Tab').offset().top;
-	var top2 = $('.spotListDetail_main3Left2').offset().top;
-	var top3 = $('.spotListDetail_main3Left3').offset().top;
     $(document).scroll(function(event) {
         var value1 = $(document).scrollTop()-top1;
-        var value2 = $(document).scrollTop()-top2;
-        var value3 = $(document).scrollTop()-top3;
         if(value1 > 0 || value1 == 0){
             $('.spotListDetail_main3Tab').css({
                 "position":"fixed",
@@ -208,16 +181,6 @@ $(document).ready(function () {
             $('.spotListDetail_main3Tab').css({
                 "position":""
             });
-        }
-        //console.log(value1+'-----'+value2+'-----'+value3);
-        if(value1>0&&value1<$('.spotListDetail_main3Left1').height()-92){
-        	$('.spotListDetail_main3Tab ul li').eq(0).addClass('main3TabSelected').siblings().removeClass('main3TabSelected');
-        }
-        if(value2>0&&value2<$('.spotListDetail_main3Left2').height()-92){
-        	$('.spotListDetail_main3Tab ul li').eq(1).addClass('main3TabSelected').siblings().removeClass('main3TabSelected');
-        }
-        if(value3>0&&value3<$('.spotListDetail_main3Left3').height()){
-        	$('.spotListDetail_main3Tab ul li').eq(2).addClass('main3TabSelected').siblings().removeClass('main3TabSelected');
         }
     });
 

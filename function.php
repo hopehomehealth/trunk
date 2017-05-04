@@ -143,8 +143,8 @@ function post_curl($uri, $data) {
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-//    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1); // 连接超时（秒）
-//    curl_setopt($ch, CURLOPT_TIMEOUT, 60); // 执行超时（秒）
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1); // 连接超时（秒）
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5); // 执行超时（秒）
     //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', "Expect:"));
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     $res = curl_exec($ch);
