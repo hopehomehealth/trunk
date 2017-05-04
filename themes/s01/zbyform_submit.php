@@ -16,11 +16,7 @@ if(!defined('IN_CLOOTA')) {
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
 <title>周边游订单</title>
 </head>
-<?include('static.php');?>
-<?include 'head.php';?>
-
-<body>
-<?if (notnull($orderCode)){ ?>
+<body><?if (notnull($orderCode)){ ?>
     <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
         <input type="hidden" name="payPrice" value="<?=$payPrice?>">
         <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName?>">
@@ -34,6 +30,11 @@ if(!defined('IN_CLOOTA')) {
     
 <?  $js = "<script>document.getElementById('onlineForm').submit();</script>";
     echo $js;}?>
+<?include('static.php');?>
+<?include 'head.php';?>
+
+
+
 <div id="zbyOrder_mainBox">
     <div id="zbyOrder_main">
         <div class="zbyOrder_main_title">
@@ -42,9 +43,9 @@ if(!defined('IN_CLOOTA')) {
         <form name="write_form" id="write_form" method="post" action="http://<?=$getUrl?>&flag=check">
         <? if($is_package == 'false'){ ?>
             <div class="zbyOrder_main1">
-
-                <div class="zbyOrder_main1_title">
-                    <?=$taocan['goodsName']?>
+            <br>游玩时间：<?=$tc['departDate']?>
+                <div class="zbyOrder_main1_title" title='<?=$taocan['goodsName']?>'>
+                    <?=jiequ(52,$taocan['goodsName'])?>
                 </div>
                 <div class="zbyOrder_main1Cont">
                     <div class="zbyOrder_main1ContLeft">周边游</div>
@@ -60,28 +61,39 @@ if(!defined('IN_CLOOTA')) {
                             <tbody>
                             <tr>
                                 <td>成人</td>
-                                <td>
+                                <td id="adultPrice">
                                     <?=$taocan['adultPrice']?>
                                 </td>
                                 <td>
-									<?=$post['adultNum']?>
+                                    <span class="caculate" onselectstart="return false">
+                                        <span class="subtract">-</span>
+                                        <span class="counts"><?=$post['adultNum']?></span>
+                                        <input type="hidden" name="adultNum" class="Num" id="adultNum">
+                                        <span class="add">+</span>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>儿童</td>
-                                <td>
+                                <td id="kidPrice">
                                     <?=$taocan['kidPrice']?>
                                 </td>
                                 <td>
-									<?=$post['kidNum']?>
+                                    <span class="caculate" onselectstart="return false">
+                                        <span class="subtract">-</span>
+                                        <span class="counts"><?=$post['kidNum']?></span>
+                                        <input type="hidden" name="kidNum" class="Num" id="kidNum">
+                                        <span class="add">+</span>
+                                    </span>
                                 </td>
                             </tr>
                             </tbody>
                             <thead>
                             <tr>
-                                <td>房差：<?=$post['roomCount']?></td>
-                                <td>游玩时间：<?=$tc['departDate']?></td>
-                                <td>总价：￥<?=$post['payPrice']?></td>
+                                <td>房差
+                                </td>
+                                <td>100</td>
+                                <td><?=$post['roomCount']?></td>
                             </tr>
                             </thead>
                         </table>
@@ -90,9 +102,9 @@ if(!defined('IN_CLOOTA')) {
                 </div>
             </div>
             <?}else{?>
-            <div class="zbyOrder_main1">
-                <div class="zbyOrder_main1_title">
-                    <?=$taocan['goodsName']?>
+            <div class="zbyOrder_main11">
+                <div class="zbyOrder_main1_title" title='<?=$taocan['goodsName']?>'>
+                    <?=jiequ(52,$taocan['goodsName'])?>
                 </div>
                 <div class="zbyOrder_main1Cont">
                     <div class="zbyOrder_main1ContLeft">周边游</div>
@@ -101,7 +113,6 @@ if(!defined('IN_CLOOTA')) {
                             <thead>
                             <tr>
                                 <td>产品信息</td>
-                                <td>退改信息</td>
                                 <td>出游日期</td>
                                 <td>份数</td>
                             </tr>
@@ -109,9 +120,6 @@ if(!defined('IN_CLOOTA')) {
                             <tbody>
                             <tr>
                                 <td  onclick="changeTR()" style="cursor:pointer;" onselectstart="return false"><?=$taocan['packageName']?>&nbsp;&nbsp;<span id="change" class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-                                <td>
-                                    不可退改
-                                </td>
                                 <td><?=$tc['departDate']?>
                                 <td>
                                     <?=$post['packageNum']?>
@@ -182,7 +190,7 @@ if(!defined('IN_CLOOTA')) {
                 <?if($num > 0){ ?>
                 <? for($i=0;$i<$num;$i++){ ?>
                 <div class="zbyOrder_main2_youwan">
-                    <div class="zbyOrder_main2_youwanLeft">游玩人<?=$i?></div>
+                    <div class="zbyOrder_main2_youwanLeft">游玩人<?=$i+1?></div>
                     <div class="zbyOrder_main2_youwanRight">
                         <ul>
                             <?if($taocan['travellerName']=='TRAV_NUM_ALL'){?>
@@ -263,7 +271,7 @@ if(!defined('IN_CLOOTA')) {
                             });
                             </script>
                             <?}?>
-                            <?if($taocan['travellerMmail']=='TRAV_NUM_ALL'){?>
+                            <?if($taocan['travellerEmail']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
                                 <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="">
@@ -365,13 +373,13 @@ if(!defined('IN_CLOOTA')) {
                                         <option value="child">儿童</option>
                                     </select>
                                     <?}?>
-                                <?if($taocan['travellerGender']=='TRAV_NUM_ALL'){?>    
+                                <?if($taocan['travellerGender']=='TRAV_NUM_ALL' || $taocan['travellerCredentials']=='TRAV_NUM_ALL'){?>    
                                     <label><b>＊</b>性别：</label>
                                     <select name="gender_<?=$i?>">
                                         <option value="male">男</option>
                                         <option value="chifemaleld">女</option>
                                     </select>
-                                <?}elseif($taocan['travellerGender']=='TRAV_NUM_ONE' && $i=='0'){?>
+                                <?}elseif(($taocan['travellerGender']=='TRAV_NUM_ONE' && $i=='0')||$taocan['travellerCredentials']=='TRAV_NUM_ONE'){?>
                                     <label><b>＊</b>性别：</label>
                                     <select name="gender_<?=$i?>">
                                         <option value="male">男</option>
@@ -429,7 +437,7 @@ if(!defined('IN_CLOOTA')) {
                             });
                             </script>
                             <?}?>
-                            <?if($taocan['travellerBirthday']=='TRAV_NUM_ALL'){?>
+                            <?if($taocan['travellerBirthday']=='TRAV_NUM_ALL' || $taocan['travellerCredentials']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
                                 <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_birthday_<?=$i?>"></span>
@@ -441,7 +449,7 @@ if(!defined('IN_CLOOTA')) {
                                 }
                             });
                             </script>
-                            <?}elseif($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0'){?>
+                            <?}elseif(($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0')||$taocan['travellerCredentials']=='TRAV_NUM_ONE'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
                                 <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_idTips_<?=$i?>"></span>
@@ -509,6 +517,38 @@ if(!defined('IN_CLOOTA')) {
 </body>
 <script type="text/javascript" src="/themes/s01/js/jquery.js"></script>
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var adds = $('.add');
+    for (var i = 0; i < adds.length; i++) {
+        adds[i].index = i;
+        adds[i].onclick = function(){
+            var count1 = $('.counts').eq(this.index).html();
+            count1++;
+            $('.counts').eq(this.index).html(count1);
+            $('.Num').eq(this.index).val(count1);
+            $()
+
+        };
+    }
+    var subtracts = $('.subtract');
+    for (var i = 0; i < subtracts.length; i++) {
+        subtracts[i].index = i;
+        subtracts[i].onclick = function(){
+            var count1 = $('.counts').eq(this.index).html();
+            if(count1!=0){
+                count1--;
+                $('.counts').eq(this.index).html(count1);
+                $('.Num').eq(this.index).val(count1);
+            }
+        };
+    }
+
+
+});
+
+</script>
 <script type="text/javascript">
 
 
