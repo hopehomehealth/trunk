@@ -146,7 +146,7 @@
         </div>
         <!-- right info -->
         <div class="detail-info">
-            <div class="detail-title"> 
+            <div class="detail-title">
                 <a href="/product/detail-<?= $goodsId ?>-<?= $productId ?>.html"
                    title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($db->jiequ(22,$data['goodsName'])) ?></a>
 <!--                --><?// if ($c_goods['is_sale'] == '0') { ?>
