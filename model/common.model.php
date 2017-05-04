@@ -541,7 +541,7 @@ function get_guess_list($limit){
 GROUP BY t.`goods_id` ) b, t_goods_sku sku WHERE a.`goods_id` = b.`goods_id` AND a.lv_product_id = sku.goods_id AND a.`is_sale` = 1 AND a.goods_type = 1 -- ORDER BY b.`browse_id` DESC
 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tb.`addtime` AS browse_time, tb.`browse_id` AS browse_id, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id LEFT JOIN t_goods_browse tb ON tb.goods_id = tg.goods_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tb.`site_id` = '$g_siteid' -- AND (tb.`session_id` = 'va774fkr72pftmclfn135c0dm5'OR tb.`user_id` = '-1')
 -- ORDER BY tb.`browse_id` DESC
-) AS aaa ORDER BY browse_id DESC limit 0,$limit;";
+) AS aaa ORDER BY browse_id DESC limit 0,$limit;"; 
 
     $rs = $db->get_all($sql);
 
