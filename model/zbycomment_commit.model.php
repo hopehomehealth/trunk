@@ -19,7 +19,7 @@ if($flag == 'cm'){
         exit($ticket_comment['msg']);
     }
     $ticket_comment_data = $ticket_comment['data'];
-    var_dump($ticket_comment_data);die;
+//    var_dump($ticket_comment_data);die;
     $message = urlencode($ticket_comment_data['message']);
     $js = "<script>window.location.href='/zhoubianyou/zbycomment_success-".$orderCode.".html?message=".$message."';</script>";
     echo $js;
