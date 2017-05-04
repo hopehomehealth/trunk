@@ -35,6 +35,7 @@ if (!defined('IN_CLOOTA')) {
                                 echo $linkerMobile; ?></span></li>
                     </ul>
                 </div>
+                <? if(notnull($order_detail_data['playPeopleList'])){ ?>
                 <div class="visitorInfo_title">出游人信息</div>
                 <div class="visitorInfo2">
                     <table>
@@ -47,7 +48,6 @@ if (!defined('IN_CLOOTA')) {
                         </thead>
                         <tbody>
                         <?
-                        if(notnull($order_detail_data['playPeopleList'])){
                         foreach ($order_detail_data['playPeopleList'] as $key => $value) {
                             ?>
 
@@ -56,10 +56,11 @@ if (!defined('IN_CLOOTA')) {
                                 <td><? echo $value['userPhone']; ?></td>
                                 <td><? echo $value['userIdCard']; ?></td>
                             </tr>
-                        <? }}?>
+                        <? }?>
                         </tbody>
                     </table>
                 </div>
+                <? } ?>
             </div>
             <div class="orderInfo">
                 <div class="orderInfo_title">订单信息</div>
@@ -354,6 +355,7 @@ if (!defined('IN_CLOOTA')) {
             success: function (data) {
                 data = $.trim(data);
 //                alert(data.length);
+//                alert(data);
                 if(data == 'false'){
                     $('.nengtuifou').show();
                     $('.applyRefund').hide();
