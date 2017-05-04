@@ -52,7 +52,7 @@ foreach ($datas['list'] as $key => $val) {
     $roomMax = to_gbk($val['roomMax']);//最大房间数
     //判断按人还是按份，计算价格
     if ($isPackage == 'true') {
-        $price = $adultPrice * $adultNum + $kidPrice * $kidNum;
+        $price = $adultPrice;
     } else {
         $price = $adultPrice;
         $diffPrice = to_gbk($val['skuList']['0']['diffPrice']);
