@@ -363,7 +363,7 @@
                                 $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                 $goods_image = $val['goods_image'];
                             } else {
-                                $href = "/product/detail-" . $val['goods_id'] . ".html";
+                                $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                 $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
                             }
@@ -382,6 +382,7 @@
                     ?>
                 </ul>
             </div>
+
             <!-- 详细内容 -->
             <div class="wrap detail-content">
                 <div id="special" class="toscroll">
@@ -628,42 +629,44 @@
 <!--            </div>-->
             <!-- 点评内容 end -->
 
-            <!-- 底部猜你喜欢 -->
-            <div class="wrap detail-like mt20">
-                <div class="detail-h3">猜你喜欢</div>
-                <div class="like-list">
-                    <ul>
-                        <?
-                        $guess_list = get_guess_list(6);
-                        if (notnull($guess_list)) {
-                            foreach ($guess_list as $val) {
-                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
-                                ?>
-                                <li>
-                                    <div class="imgbox"><a id="like-img"
-                                                           href="/product/detail-<?= $val['goods_id'] ?>.html"
-                                                           target="_blank"><img alt="" src="<?= $goods_image ?>"
-                                                                                alt="<?= $val['goods_name'] ?>"></a>
-                                    </div>
-                                    <div class="tname"><a id="like-title"
-                                                          href="/product/detail-<?= $val['goods_id'] ?>.html"
-                                                          target="_blank"><?= show_substr($val['goods_name'], 60) ?></a>
-                                    </div>
-                                    <div class="cYellow">&yen; <span class="font20"><?= $val['min_price'] ?></span>
-                                        <span class="cYellow">起/人</span></div>
-                                </li>
-                                <?
+                <!-- 底部热门推荐 -->
+                <div class="wrap detail-like mt20">
+                    <div class="detail-h3">热门推荐</div>
+                    <div class="like-list">
+                        <ul>
+                            <?
+                            if (notnull($tuijian_data)) {
+                                $zbyHotGoodsList = $tuijian_data['zbyHotGoodsList'];
+                                foreach ($zbyHotGoodsList as $val) {
+//                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
+
+                                    ?>
+                                    <li>
+                                        <div class="imgbox"><a id="like-img"
+                                                               href="/product/detail-<?= $val['goodsId'] ?>-<?= $val['productId']?>.html"
+                                                               target="_blank"><img alt="" src="<?= $val['goodsImage'] ?>"
+                                                                                    alt="<?= $val['goodsName'] ?>"></a>
+                                        </div>
+                                        <div class="tname"><a id="like-title"
+                                                              href="/product/detail-<?= $val['goodsId'] ?>-<?= $val['productId'] ?>.html"
+                                                              target="_blank"><?= show_substr($val['goods_name'], 60) ?></a>
+                                        </div>
+                                        <div class="cYellow">&yen; <span class="font20"><?= $val['minPrice'] ?></span>
+                                            <span class="cYellow">起/人</span></div>
+                                    </li>
+                                    <?
+                                }
                             }
-                        }
-                        ?>
-                    </ul>
-                    <!-- <a href="" class="more">更多&gt;&gt;</a>-->
+                            ?>
+                        </ul>
+                        <!-- <a href="" class="more">更多&gt;&gt;</a>-->
+                    </div>
+
+                    <!--<a href="" class="more">更多&gt;&gt;</a>-->
                 </div>
 
-                <!--<a href="" class="more">更多&gt;&gt;</a>-->
             </div>
-        </div>
     </div>
 
 
@@ -701,6 +704,7 @@
             });
         });
     });
+
 
     function change_calendar(yyyy, mm) {
         var v_url = "";
