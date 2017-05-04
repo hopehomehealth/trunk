@@ -75,7 +75,7 @@
 
     //header("location: http://$wangzhi");
 }*/
-
+ 
 $db->check_cookie($loginUrl, $host);
 //截取
 function jiequ($num,$data){
