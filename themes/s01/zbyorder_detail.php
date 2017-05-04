@@ -437,7 +437,7 @@ if (!defined('IN_CLOOTA')) {
     }
     //È¥Ö§¸¶
     function pay_online(){
-        $('onlineForm').submit();
+        $('#onlineForm').submit();
     }
 </script>
 </html>
