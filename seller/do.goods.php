@@ -189,8 +189,8 @@ if($cmd == 'goods_add'){
 
 	//Ì×²ÍÌí¼Ó
 
-	$sql = "INSERT INTO `t_zby_package` (`package_status`,`goods_id`, `package_id`, `package_name`, `package_status`, `is_package`, `adult_num`, `child_num`, `room_max`, `min`, `max`, `booker_name`, `booker_mobile`, `booker_email`, `traveller_name`, `traveller_en_name`, `traveller_mobile`, `traveller_email`, `traveller_person_type`, `traveller_credentials`, `traveller_credentials_type`, `traveller_gender`, `traveller_birthday`, `emergency`) 
-	VALUES ('true','$goods_id', '$package_id', '$goods_name', '$package_status', '$is_package', '$adult_num', '$child_num', '$room_max', '$min', '$max', '$booker_name', '$booker_mobile', '$booker_email', '$traveller_name','$traveller_en_name', '$traveller_mobile', '$traveller_email', '$traveller_person_type', '$traveller_credentials', '$traveller_credentials_type', '$traveller_gender', '$traveller_birthday', '$emergency')";
+	$sql = "INSERT INTO `t_zby_package` (`goods_id`, `package_id`, `package_name`, `package_status`, `is_package`, `adult_num`, `child_num`, `room_max`, `min`, `max`, `booker_name`, `booker_mobile`, `booker_email`, `traveller_name`, `traveller_en_name`, `traveller_mobile`, `traveller_email`, `traveller_person_type`, `traveller_credentials`, `traveller_credentials_type`, `traveller_gender`, `traveller_birthday`, `emergency`) 
+	VALUES ('$goods_id', '$package_id', '$goods_name', '$package_status', '$is_package', '$adult_num', '$child_num', '$room_max', '$min', '$max', '$booker_name', '$booker_mobile', '$booker_email', '$traveller_name','$traveller_en_name', '$traveller_mobile', '$traveller_email', '$traveller_person_type', '$traveller_credentials', '$traveller_credentials_type', '$traveller_gender', '$traveller_birthday', '$emergency')";
 	$db->query($sql);
 
 	
@@ -211,10 +211,11 @@ if($cmd == 'goods_add'){
 				$last_sku_id = $db->get_value($sql);
 				if($last_sku_id!=''){
 					
-					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `lv_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
+					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
 					$db->query($sql); 
 				} else { 
-					$sql = "INSERT INTO `t_goods_sku` (`lv_stock`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`) VALUES ('$sum_stock',$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id')";
+
+					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`,`lv_stock`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id','$sum_stock')";
 					$db->query($sql);
 				}
 			}
