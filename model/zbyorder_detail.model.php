@@ -12,11 +12,13 @@ $refund_product = array_iconv($refund_product);
 if ($refund_product['status'] != '0000') {
     exit($refund_product['msg']);
 }
+//echo $orderCode;
+
 $refund_product_data = $refund_product['data'];
 $refundReasonList = $refund_product_data['refundReasonList'];
 $isChange = $refund_product_data['isChange'];
 $failReason = $refund_product_data['failReason'];
-
+//echo $refund_product_data['failReason'];
 //echo "<pre>";
 //var_dump($refund_product_data);
 //ÕÀøÓ…Í«Î

@@ -352,8 +352,9 @@ if (!defined('IN_CLOOTA')) {
             },
             async: false,
             success: function (data) {
-//                alert(data);
-                if(!!data){
+                data = $.trim(data);
+//                alert(data.length);
+                if(data == 'false'){
                     $('.nengtuifou').show();
                     $('.applyRefund').hide();
                     $("#mengban").show();
