@@ -798,32 +798,6 @@
                             });
                         }
                         ;
-                        //包含门票hover
-//                        for (var i = 0; i < $('.ticket_contain1').length; i++) {
-//                            $('.ticket_contain1').eq(i).attr("index", i);
-//                            $('.ticket_contain1').eq(i).hover(function () {
-//                                $(this).css({
-//                                    "color": "#fa9520"
-//                                });
-//                                var offsetLeft = $(this).offset().left;
-//                                var offsetTop = $(this).offset().top;
-//                                var elementHeight = 54;
-//                                var left = offsetLeft;
-//                                var top = offsetTop + elementHeight;
-//                                $('.ticket_contain_tips').eq($(this).attr('index')).show();
-//                                $('.ticket_contain_tips').eq($(this).attr('index')).css({
-//                                    "position": "absolute",
-//                                    "left": (left + 70),
-//                                    "top": top
-//                                });
-//                            }, function () {
-//                                $(this).css({
-//                                    "color": ""
-//                                });
-//                                $('.ticket_contain_tips').eq($(this).attr('index')).hide();
-//                            });
-//                        }
-//                        ;
                         //套餐选择按钮
                         for (var i = 0; i < $('.product_select1').length; i++) {
                             $('.product_select1').eq(i).click(function () {
@@ -952,15 +926,13 @@
             $("#orderPrice").html(zongjia);
         }
     };
-</script>
-<script type="text/javascript">
+
     function order_window() {
         var biaoji1 = '';
         var biaoji2 = '';
         var goodsId = "<?=$goodsId?>";
         var lvProductId = "<?=$productId?>";
         var fenshu = $('#fenshu').val();
-        var roomPrice = $('.roomPrice').val();
         var zongjia = $("#orderPrice").html();
         if ($('#startDate').val() == '') {
             alert('亲，您没有选择出发日期！');
@@ -971,15 +943,6 @@
         if( zongjia != '0'){
             biaoji2 = '1';
         }
-
-//        if ( fenshu == '0') {
-//            alert('亲，您没有选择份数！');
-//            return false;
-//        }
-//        if (adultNum == '0') {
-//            alert('亲，您没有选择人数！');
-//            return false;
-//        }
         var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-1.html";
         $('#chufa').attr('action',url);
         $('#goodsId').val(goodsId);
@@ -992,60 +955,12 @@
         $('#roomCount').val(diffPriceNum);
         $('#payPrice').val(zongjia);
         $('#packageNum').val(fenshu);
-        $('#roomPrice').val(roomPrice);
+        $('#roomPrice').val(diffPrice);
         if(biaoji1 == '1' && biaoji2 == '1'){
             $('#chufa').submit();
         } else {
             alert('亲，套餐价不能为0！');
         }
-
-
-
-//        if(isPackage == false){
-//            $.ajax({
-//                type: "POST",
-//                url: "/model/zbyform_submit.model.php",
-//                data: {
-//                    "goodsId": goodsId,
-//                    "isPackage": isPackage,
-//                    "packageId": packageId,
-//                    "departDate": departDate,
-//                    "adultNum": adultNum,
-//                    "childNum": kidNum,
-//                    "roomCount": diffPriceNum,
-//                    "payPrice": zongjia
-//                },
-//                async: false,
-//                success: function (data) {console.log(data);
-////                    window.location.href = "<?////= $g_self_domain ?>////" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
-//        },
-//                error: function() {
-//                    alert(error);
-//                }
-//            });
-//        } else {
-//            $.ajax({
-//                type: "POST",
-//                url: "/model/zbyform_submit.model.php",
-//                data: {
-//                    "goodsId": goodsId,
-//                    "isPackage": isPackage,
-//                    "packageId": packageId,
-//                    "departDate": departDate,
-//                    "adultNum": adultNum,
-//                    "kidNum": kidNum,
-//                    "packageNum": fenshu,
-//                    "payPrice": zongjia
-//                },
-//                async: false,
-//                success: function (data) {console.log(data);
-//                    window.location.href = "<?//= $g_self_domain ?>//" + "/zhoubianyou/zbyform_submit-" + packageId + ".html";
-//                },
-//                error: function() {
-//                    alert(error);
-//                }
-//            });
-//        };
     };
 </script>
 <script>
@@ -1068,13 +983,9 @@
                 comment.init(data);
             });
         });
-
         //左侧轮播
         yoslide.slide();
-
     });
-
-
 </script>
 <div class="clear"></div>
 <? include('foot.php'); ?>
