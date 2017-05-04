@@ -92,7 +92,7 @@ if(!defined('IN_CLOOTA')) {
                             <tr>
                                 <td>房差
                                 </td>
-                                <td>100</td>
+                                <td><?$_GET['roomPrice']?></td>
                                 <td><?=$post['roomCount']?></td>
                             </tr>
                             </thead>
@@ -400,7 +400,7 @@ if(!defined('IN_CLOOTA')) {
                             <script type="text/javascript">
                             $('#youwan_userIdcard_<?=$i?>').blur(function(){
                                 if($('#youwan_userIdcard_<?=$i?>').val()==''){
-                                    $('.an_idTipsyouw_<?=$i?>').show().html('游玩人证件号不能为空').css('color','red');
+                                    $('.youwan_idTips_<?=$i?>').show().html('游玩人证件号不能为空').css('color','red');
                                 }else if(reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
                                     $('.youwan_idTips_<?=$i?>').show();
                                     $('.youwan_idTips_<?=$i?>').html('');
@@ -424,7 +424,7 @@ if(!defined('IN_CLOOTA')) {
                             <script type="text/javascript">
                             $('#youwan_userIdcard_<?=$i?>').blur(function(){
                                 if($('#youwan_userIdcard_<?=$i?>').val()==''){
-                                    $('.an_idTipsyouw_<?=$i?>').show().html('游玩人证件号不能为空').css('color','red');
+                                    $('.youwan_idTips_<?=$i?>').show().html('游玩人证件号不能为空').css('color','red');
                                 }else if(reg3.test($('#youwan_userIdcard_<?=$i?>').val())){
                                     $('.youwan_idTips_<?=$i?>').show();
                                     $('.youwan_idTips_<?=$i?>').html('');
