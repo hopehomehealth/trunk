@@ -650,7 +650,7 @@
                                         </div>
                                         <div class="tname"><a id="like-title"
                                                               href="/product/detail-<?= $val['goodsId'] ?>-<?= $val['productId'] ?>.html"
-                                                              target="_blank"><?= show_substr($val['goods_name'], 60) ?></a>
+                                                              target="_blank" title="<?= $val['goodsName']; ?>"><?= show_substr($val['goodsName'], 50) ?></a>
                                         </div>
                                         <div class="cYellow">&yen; <span class="font20"><?= $val['minPrice'] ?></span>
                                             <span class="cYellow">Æğ/ÈË</span></div>
