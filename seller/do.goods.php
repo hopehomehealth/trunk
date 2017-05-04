@@ -67,6 +67,7 @@ if($cmd == 'goods_add'){
 	$traveller_gender			= req('traveller_gender');//性别是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
 	$traveller_birthday			= req('traveller_birthday');//生日是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
 	$emergency					= req('emergency');//是否需要紧急联系人  true：需要；false：不需要	
+	$ahead_time					= req('ahead_time');//提前预订时间
 	if(notnull($goods_name) == false){ 
 		senderror('请填写产品名称');
 	} 
@@ -183,8 +184,8 @@ if($cmd == 'goods_add'){
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
 	$goods_cat_key = $db->get_value($sql);
  
-	$sql = "INSERT INTO `t_goods_thread` (`lv_product_id`,`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`) 
-	VALUES ('$goods_id','$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '1', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft')"; 
+	$sql = "INSERT INTO `t_goods_thread` (`lv_product_id`,`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`,`data_sources`) 
+	VALUES ('$goods_id','$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '1', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft','1')"; 
 	$db->query($sql);
 
 	//套餐添加
@@ -215,7 +216,7 @@ if($cmd == 'goods_add'){
 					$db->query($sql); 
 				} else { 
 
-					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`,`lv_stock`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id','$sum_stock')"; 
+					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`,`lv_stock`,`ahead_day`,`ahead_time`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id','$sum_stock','$before_days','$ahead_time')"; 
 					$db->query($sql);
 				}
 			}
@@ -316,7 +317,7 @@ if($cmd == 'goods_update'){
 	$traveller_gender			= req('traveller_gender');//性别是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
 	$traveller_birthday			= req('traveller_birthday');//生日是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
 	$emergency					= req('emergency');//是否需要紧急联系人  true：需要；false：不需要
- 
+ 	$ahead_time					= req('ahead_time');//提前预订时间
 	if(notnull($goods_name) == false){ 
 		senderror('请填写产品名称');
 	} 
@@ -468,7 +469,7 @@ if($cmd == 'goods_update'){
 					$db->query($sql); 
 				} else { 
 
-					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price')";
+					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`,`ahead_day`/*,`ahead_time`*/) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$before_days'/*,'$ahead_time'*/)";
 					$db->query($sql);
 				}
 			}
