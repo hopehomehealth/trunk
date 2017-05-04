@@ -76,7 +76,7 @@
     //header("location: http://$wangzhi");
 }*/
 
-//$db->check_cookie($loginUrl, $host);
+$db->check_cookie($loginUrl, $host);
 //截取
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
@@ -141,14 +141,14 @@ if($flag == 'check'){
     //游玩人数组处理
     for($i=0;$i<$num;$i++){
         $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
-        $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
+        $travellerList[$i]['ename'] = gbk_to_utf8(req('eName_'.$i));
         $travellerList[$i]['personType'] = gbk_to_utf8(req('personType_'.$i));
         $travellerList[$i]['mobile'] = req('mobile_'.$i);
         $travellerList[$i]['email'] = req('email_'.$i);
         $travellerList[$i]['credentials'] = req('credentials_'.$i);
         $travellerList[$i]['credentialsType'] = 'ID_CARD';
         $travellerList[$i]['gender'] = req('gender_'.$i);
-        $travellerList[$i]['birthday'] = req('birthday_'.$i);echo req('mobile_'.$i);
+        $travellerList[$i]['birthday'] = req('birthday_'.$i);
         //var_dump($travellerList[$i]);
         //去除空值
         
@@ -157,7 +157,7 @@ if($flag == 'check'){
 
      //测试 先传空
      //var_dump($post);
-     $dingdan = array_iconv(json_decode($db->api_post("192.168.3.189:8080/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
+     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
      $payTime = $dingdan['data']['payTime'];
@@ -168,7 +168,9 @@ if($flag == 'check'){
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
     
 }
+//请求/travel/interface/zby/v3.2/getNumberSelection_v3.2获取roomMax
 
+//ajax请求/travel/interface/zby/v3.2/getDiffRoomNum_v3.2获取房差数量集合
 
 
 
