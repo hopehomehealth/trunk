@@ -68,7 +68,7 @@ if ($order_detail['status'] != '0000') {
 }
 $order_detail_data = $order_detail['data'];
 $orderStatus = $order_detail_data['orderStatus'];
-$dataSource = $order_detail_data['dataSource'];
+$dataSources = $order_detail_data['dataSources'];
 
 //È¡Ïû¶©µ¥
 if($_GET['flag'] == 'cn'){
@@ -92,7 +92,7 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
     $st = 1;
 }elseif($orderStatus == 4){
     $st = 2;
-}elseif($orderStatus == 3 && $dataSource == '1') {
+}elseif($orderStatus == 3 && $dataSources == '1') {
     $st = 3;
 }elseif($orderStatus == 1){
     $st = 4;
