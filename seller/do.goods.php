@@ -183,14 +183,14 @@ if($cmd == 'goods_add'){
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
 	$goods_cat_key = $db->get_value($sql);
  
-	$sql = "INSERT INTO `t_goods_thread` (`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`) 
-	VALUES ('$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '$goods_zone', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft')"; 
+	$sql = "INSERT INTO `t_goods_thread` (`lv_product_id`,`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`) 
+	VALUES ('$goods_id','$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '1', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft')"; 
 	$db->query($sql);
 
 	//Ì×²ÍÌí¼Ó
 
-	$sql = "INSERT INTO `t_zby_package` (`goods_id`, `package_id`, `package_name`, `package_status`, `is_package`, `adult_num`, `child_num`, `room_max`, `min`, `max`, `booker_name`, `booker_mobile`, `booker_email`, `traveller_name`, `traveller_en_name`, `traveller_mobile`, `traveller_email`, `traveller_person_type`, `traveller_credentials`, `traveller_credentials_type`, `traveller_gender`, `traveller_birthday`, `emergency`) 
-	VALUES ('$goods_id', '$package_id', '$goods_name', '$package_status', '$is_package', '$adult_num', '$child_num', '$room_max', '$min', '$max', '$booker_name', '$booker_mobile', '$booker_email', '$traveller_name','$traveller_en_name', '$traveller_mobile', '$traveller_email', '$traveller_person_type', '$traveller_credentials', '$traveller_credentials_type', '$traveller_gender', '$traveller_birthday', '$emergency')";
+	$sql = "INSERT INTO `t_zby_package` (`package_status`,`goods_id`, `package_id`, `package_name`, `package_status`, `is_package`, `adult_num`, `child_num`, `room_max`, `min`, `max`, `booker_name`, `booker_mobile`, `booker_email`, `traveller_name`, `traveller_en_name`, `traveller_mobile`, `traveller_email`, `traveller_person_type`, `traveller_credentials`, `traveller_credentials_type`, `traveller_gender`, `traveller_birthday`, `emergency`) 
+	VALUES ('true','$goods_id', '$package_id', '$goods_name', '$package_status', '$is_package', '$adult_num', '$child_num', '$room_max', '$min', '$max', '$booker_name', '$booker_mobile', '$booker_email', '$traveller_name','$traveller_en_name', '$traveller_mobile', '$traveller_email', '$traveller_person_type', '$traveller_credentials', '$traveller_credentials_type', '$traveller_gender', '$traveller_birthday', '$emergency')";
 	$db->query($sql);
 
 	
@@ -211,11 +211,10 @@ if($cmd == 'goods_add'){
 				$last_sku_id = $db->get_value($sql);
 				if($last_sku_id!=''){
 					
-					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
+					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `lv_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
 					$db->query($sql); 
 				} else { 
-
-					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price')";
+					$sql = "INSERT INTO `t_goods_sku` (`lv_stock`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`) VALUES ('$sum_stock',$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id')";
 					$db->query($sql);
 				}
 			}
