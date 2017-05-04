@@ -410,4 +410,12 @@ class dbmysql {
     function to_utf8($str){
         return mb_convert_encoding($str, 'utf-8', 'gbk');
     }
+    function jiequ($num,$data){
+        if(mb_strlen($data,'utf-8')>$num){
+            return mb_substr($data, 0, $num,'utf-8').'...';
+        }else{
+            return $data;
+        }
+
+    }
 }

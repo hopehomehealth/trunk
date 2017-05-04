@@ -11,6 +11,7 @@ $url = $host. "/travel/interface/zby/v3.2/getZbyPackageByGoodsId_v3.2";
 $data = $db->api_post($url, $post);
 $arr = json_decode($data, true);
 $datas = $arr['data'];
+//echo var_dump($data);
 
 echo "<ul class=\"byPart_title\">
     <li class=\"product_name\">套餐名称</li>
@@ -24,14 +25,21 @@ echo "<ul class=\"byPart_title\">
 foreach ($datas['list'] as $key => $val) {
     $packageId = to_gbk($val['packageId']);//套餐ID
     $packageName = to_gbk($val['packageName']);//套餐名
-//    if($val['hotelList'] !== ''){
-//        $hotelName = to_gbk($val['hotelList']['0']['hotelName']);//酒店名
-//    } else {
-//        $hotelName = '当前套餐下无酒店';
-//    }
-//    $hotelInfo = to_gbk($val['hotelList']['0']['hotelInfo']);//酒店简介
-    $ticketName = to_gbk($val['ticketList']['0']['ticketName']);//门票名
-    $ticketInfo = to_gbk($val['ticketList']['0']['ticketInfo']);//门票简介
+    $packageNames = to_gbk($db->jiequ(9,$val['packageName']));
+    if( !is_null($val['hotelList']) ){
+        $hotelName = to_gbk($val['hotelList']['0']['hotelName']);//酒店名
+        $hotelNames = $db->jiequ(10,$hotelName);
+        $hotelInfo = to_gbk($val['hotelList']['0']['hotelInfo']);//酒店简介
+    } else {
+        $hotelNames = '当前套餐无酒店';
+    }
+    if( !is_null($val['hotelList']) ) {
+        $ticketName = to_gbk($val['ticketList']['0']['ticketName']);//门票名
+        $ticketNames = $db->jiequ(10, $ticketName);
+        $ticketInfo = to_gbk($val['ticketList']['0']['ticketInfo']);//门票简介
+    } else {
+        $ticketNames = '当前套餐无门票';
+    }
     $lvStock = to_gbk($val['skuList']['0']['lvStock']);//库存
     $changeRuler = to_gbk($val['skuList']['0']['changeRuler']);//退改规则
     $adultPrice = to_gbk($val['skuList']['0']['adultPrice']);
@@ -57,9 +65,9 @@ foreach ($datas['list'] as $key => $val) {
     }
     echo "<div class=\"byPart_cont\">
         <ul>
-            <li class=\"product_name1\">$packageId<br>$packageName</li>
-            <li class=\"hotel_contain1\">$packageName<br>$hotelName</li>
-            <li class=\"ticket_contain1\">$ticketName<br></li>
+            <li class=\"product_name1\"><a title='$packageName'>$packageNames</a></li>
+            <li class=\"hotel_contain1\"><a title='$hotelInfo'>$hotelNames</a></li>
+            <li class=\"ticket_contain1\"><a title='$ticketInfo'>$ticketNames</a></li>
             <li class=\"product_mounts1\">$lvStock</li>";
             if($isPackage == 'false'){
                 echo "<li class=\"product_price1\">成人：<b>&yen;$adultPrice</b><br>儿童：<b>&yen;$kidPrice</b></li>";
@@ -99,7 +107,7 @@ foreach ($datas['list'] as $key => $val) {
         echo "<div class=\"fangchajia\">
                 </div>";
     }
-    echo " 
+    echo "
  </div>
     </div>";
 }

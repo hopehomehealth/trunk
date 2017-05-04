@@ -51,29 +51,29 @@
 
         <li class="item current"><?= $c_goods['goods_name'] ?></li>
 
-        <?
-        /// 编辑的快捷方式
-        $is_edit = false;
-        if ($_COOKIE['CLOOTA_B2B2C_ADMIN_UUID'] != '') {
-            $is_edit = true;
-            $edit_dir = 'console';
-        }
-        if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] != '') {
-            if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] == $c_goods['shop_id']) {
-                $is_edit = true;
-                $edit_dir = 'seller';
-            }
-        }
-        ?>
-        <? if ($is_edit == true) { ?>
-            <a href="/<?= $edit_dir ?>/?cmd=<?= base64_encode('goods_add.php') ?>&cat_id=<?= $c_goods['cat_id'] ?>"
-               target="_blank" style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;">
-                新增 </a>
-            <a href="/<?= $edit_dir ?>/?cmd=<?= base64_encode('goods_edit.php') ?>&goods_id=<?= $c_goods['goods_id'] ?>"
-               target="_blank"
-               style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;margin-right:5px;">
-                编辑 </a>
-        <? } ?>
+<!--        --><?//
+//        /// 编辑的快捷方式
+//        $is_edit = false;
+//        if ($_COOKIE['CLOOTA_B2B2C_ADMIN_UUID'] != '') {
+//            $is_edit = true;
+//            $edit_dir = 'console';
+//        }
+//        if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] != '') {
+//            if ($_COOKIE['CLOOTA_B2B2C_SHOP_UUID'] == $c_goods['shop_id']) {
+//                $is_edit = true;
+//                $edit_dir = 'seller';
+//            }
+//        }
+//        ?>
+<!--        --><?// if ($is_edit == true) { ?>
+<!--            <a href="/--><?//= $edit_dir ?><!--/?cmd=--><?//= base64_encode('goods_add.php') ?><!--&cat_id=--><?//= $c_goods['cat_id'] ?><!--"-->
+<!--               target="_blank" style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;">-->
+<!--                新增 </a>-->
+<!--            <a href="/--><?//= $edit_dir ?><!--/?cmd=--><?//= base64_encode('goods_edit.php') ?><!--&goods_id=--><?//= $c_goods['goods_id'] ?><!--"-->
+<!--               target="_blank"-->
+<!--               style="color:#ffffff;font-size:12px;float:right;background-color:#ff3300;padding:5px;margin-right:5px;">-->
+<!--                编辑 </a>-->
+<!--        --><?// } ?>
 
     </ul>
     <!-- 主体内容区 -->
@@ -148,7 +148,7 @@
         <div class="detail-info">
             <div class="detail-title">
                 <a href="/product/detail-<?= $goodsId ?>-<?= $productId ?>.html"
-                   title="<?= $c_goods['goods_name'] ?>"><?= $c_goods['goods_name'] ?></a>
+                   title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($db->jiequ(22,$data['goodsName'])) ?></a>
 <!--                --><?// if ($c_goods['is_sale'] == '0') { ?>
 <!--                    <i style="color:red">【已下架】</i>-->
 <!--                --><?// } ?>
@@ -161,11 +161,11 @@
 //                    }
 //                }
 //                ?>
-
+<!---->
 <!--                --><?// if ($c_goods['is_sale'] == '1') { ?>
 <!--                    --><?// if ($c_goods['is_hot'] == '1') { ?><!--<i class="tag-btn">热卖</i>--><?// } ?>
 <!--                --><?// } ?>
-                <i class="tag-btn"><?= $g_product_type[$c_goods_type] ?></i>
+                <i class="tag-btn"><?= $db->to_gbk($data['typeNames']) ?></i>
             </div>
             <div class="d-con">
 <!--                <div class="d_row gray-c">原 价：-->
@@ -193,7 +193,7 @@
 <!--                    --><?// } ?>
 
 <!--                    --><?// if ($c_goods['dist_prov'] != '') { ?>
-                        目的地： <span class="gray-b"> <?= $db->to_gbk($data['distCity']) ?> </span><br/>
+                        目的地： <span class="gray-b"><a title="<?= $db->to_gbk($data['distCity'])?>"><?= $db->jiequ(25,$db->to_gbk($data['distCity'])) ?></a>  </span><br/>
 <!--                    --><?// } ?>
 
 
@@ -226,25 +226,25 @@
                 ?>
             </div>
         </div>
-        <div class="bdsharebuttonbox" style="margin-top:10px"><a href="#" class="bds_more" data-cmd="more"></a><a
-                href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina"
-                                                                                   data-cmd="tsina" title="分享到新浪微博"></a><a
-                href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq"
-                                                                                   data-cmd="tqq" title="分享到腾讯微博"></a><a
-                href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
-        <script>window._bd_share_config = {
-                "common": {
-                    "bdSnsKey": {},
-                    "bdText": "",
-                    "bdMini": "2",
-                    "bdMiniList": false,
-                    "bdPic": "",
-                    "bdStyle": "1",
-                    "bdSize": "24"
-                }, "share": {}
-            };
-            with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
-        <div class="clear"></div>
+<!--        <div class="bdsharebuttonbox" style="margin-top:10px"><a href="#" class="bds_more" data-cmd="more"></a><a-->
+<!--                href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina"-->
+<!--                                                                                   data-cmd="tsina" title="分享到新浪微博"></a><a-->
+<!--                href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq"-->
+<!--                                                                                   data-cmd="tqq" title="分享到腾讯微博"></a><a-->
+<!--                href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>-->
+<!--        <script>window._bd_share_config = {-->
+<!--                "common": {-->
+<!--                    "bdSnsKey": {},-->
+<!--                    "bdText": "",-->
+<!--                    "bdMini": "2",-->
+<!--                    "bdMiniList": false,-->
+<!--                    "bdPic": "",-->
+<!--                    "bdStyle": "1",-->
+<!--                    "bdSize": "24"-->
+<!--                }, "share": {}-->
+<!--            };-->
+<!--            with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>-->
+<!--        <div class="clear"></div>-->
     </div>
     <!-- search -->
     <div class="detail-search toscroll" id="searchzone"
@@ -382,6 +382,7 @@
                     ?>
                 </ul>
             </div>
+
             <!-- 详细内容 -->
             <div class="wrap detail-content">
                 <div id="special" class="toscroll">
@@ -628,42 +629,44 @@
 <!--            </div>-->
             <!-- 点评内容 end -->
 
-            <!-- 底部猜你喜欢 -->
-            <div class="wrap detail-like mt20">
-                <div class="detail-h3">猜你喜欢</div>
-                <div class="like-list">
-                    <ul>
-                        <?
-                        $guess_list = get_guess_list(6);
-                        if (notnull($guess_list)) {
-                            foreach ($guess_list as $val) {
-                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
-                                ?>
-                                <li>
-                                    <div class="imgbox"><a id="like-img"
-                                                           href="/product/detail-<?= $val['goods_id'] ?>.html"
-                                                           target="_blank"><img alt="" src="<?= $goods_image ?>"
-                                                                                alt="<?= $val['goods_name'] ?>"></a>
-                                    </div>
-                                    <div class="tname"><a id="like-title"
-                                                          href="/product/detail-<?= $val['goods_id'] ?>.html"
-                                                          target="_blank"><?= show_substr($val['goods_name'], 60) ?></a>
-                                    </div>
-                                    <div class="cYellow">&yen; <span class="font20"><?= $val['min_price'] ?></span>
-                                        <span class="cYellow">起/人</span></div>
-                                </li>
-                                <?
+                <!-- 底部热门推荐 -->
+                <div class="wrap detail-like mt20">
+                    <div class="detail-h3">热门推荐</div>
+                    <div class="like-list">
+                        <ul>
+                            <?
+                            if (notnull($tuijian_data)) {
+                                $zbyHotGoodsList = $tuijian_data['zbyHotGoodsList'];
+                                foreach ($zbyHotGoodsList as $val) {
+//                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
+
+                                    ?>
+                                    <li>
+                                        <div class="imgbox"><a id="like-img"
+                                                               href="/product/detail-<?= $val['goodsId'] ?>-<?= $val['productId']?>.html"
+                                                               target="_blank"><img alt="" src="<?= $val['goodsImage'] ?>"
+                                                                                    alt="<?= $val['goodsName'] ?>"></a>
+                                        </div>
+                                        <div class="tname"><a id="like-title"
+                                                              href="/product/detail-<?= $val['goodsId'] ?>-<?= $val['productId'] ?>.html"
+                                                              target="_blank"><?= show_substr($val['goods_name'], 60) ?></a>
+                                        </div>
+                                        <div class="cYellow">&yen; <span class="font20"><?= $val['minPrice'] ?></span>
+                                            <span class="cYellow">起/人</span></div>
+                                    </li>
+                                    <?
+                                }
                             }
-                        }
-                        ?>
-                    </ul>
-                    <!-- <a href="" class="more">更多&gt;&gt;</a>-->
+                            ?>
+                        </ul>
+                        <!-- <a href="" class="more">更多&gt;&gt;</a>-->
+                    </div>
+
+                    <!--<a href="" class="more">更多&gt;&gt;</a>-->
                 </div>
 
-                <!--<a href="" class="more">更多&gt;&gt;</a>-->
             </div>
-        </div>
     </div>
 
 
@@ -702,6 +705,7 @@
         });
     });
 
+
     function change_calendar(yyyy, mm) {
         var v_url = "";
         v_url = "/member/ajax.calendarss.php?rnd=" + Math.random();
@@ -727,45 +731,45 @@
                         $('.detail_byPart').html(data);
                         $('.detail_byPart').show();
                         //点击套餐吗，名称展开具体信息
-                        for (var i = 0; i < $('.product_name1').length; i++) {
-                            $('.product_name1').eq(i).attr("hide_flag", "1");
-                            $('.product_name1').eq(i).attr("index", i);
-
-                            $('.product_name1').eq(i).click(function () {
-                                //console.log($(this).attr("index"));
-                                if ($(this).attr("hide_flag") == '1') {
-                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao1.jpg)");
-                                    $('.hide_content').eq($(this).attr("index")).show();
-                                    $(this).attr("hide_flag", "0");
-                                } else {
-                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao2.jpg)");
-                                    $('.hide_content').eq($(this).attr("index")).hide();
-                                    $(this).attr("hide_flag", "1");
-                                }
-                            });
-
-                            $('.product_name1').eq(i).hover(function () {
-                                $(this).css({
-                                    "color": "#fa9520"
-                                });
-                                var offsetLeft = $(this).offset().left;
-                                var offsetTop = $(this).offset().top;
-                                var elementHeight = 30;
-                                var left = offsetLeft;
-                                var top = offsetTop + elementHeight;
-                                $('.product_name_tips').eq($(this).attr('index')).show();
-                                $('.product_name_tips').eq($(this).attr('index')).css({
-                                    "position": "absolute",
-                                    "left": left,
-                                    "top": top
-                                });
-                            }, function () {
-                                $(this).css({
-                                    "color": ""
-                                });
-                                $('.product_name_tips').eq($(this).attr('index')).hide();
-                            });
-                        }
+//                        for (var i = 0; i < $('.product_name1').length; i++) {
+//                            $('.product_name1').eq(i).attr("hide_flag", "1");
+//                            $('.product_name1').eq(i).attr("index", i);
+//
+//                            $('.product_name1').eq(i).click(function () {
+//                                //console.log($(this).attr("index"));
+//                                if ($(this).attr("hide_flag") == '1') {
+//                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao1.jpg)");
+//                                    $('.hide_content').eq($(this).attr("index")).show();
+//                                    $(this).attr("hide_flag", "0");
+//                                } else {
+//                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao2.jpg)");
+//                                    $('.hide_content').eq($(this).attr("index")).hide();
+//                                    $(this).attr("hide_flag", "1");
+//                                }
+//                            });
+//
+////                            $('.product_name1').eq(i).hover(function () {
+////                                $(this).css({
+////                                    "color": "#fa9520"
+////                                });
+////                                var offsetLeft = $(this).offset().left;
+////                                var offsetTop = $(this).offset().top;
+////                                var elementHeight = 30;
+////                                var left = offsetLeft;
+////                                var top = offsetTop + elementHeight;
+////                                $('.product_name_tips').eq($(this).attr('index')).show();
+////                                $('.product_name_tips').eq($(this).attr('index')).css({
+////                                    "position": "absolute",
+////                                    "left": left,
+////                                    "top": top
+////                                });
+////                            }, function () {
+////                                $(this).css({
+////                                    "color": ""
+////                                });
+////                                $('.product_name_tips').eq($(this).attr('index')).hide();
+////                            });
+//                        }
                         //退改规则hover
                         for (var i = 0; i < $('.change_rule').length; i++) {
                             $('.change_rule').eq(i).attr("index", i);
@@ -795,31 +799,31 @@
                         }
                         ;
                         //包含门票hover
-                        for (var i = 0; i < $('.ticket_contain1').length; i++) {
-                            $('.ticket_contain1').eq(i).attr("index", i);
-                            $('.ticket_contain1').eq(i).hover(function () {
-                                $(this).css({
-                                    "color": "#fa9520"
-                                });
-                                var offsetLeft = $(this).offset().left;
-                                var offsetTop = $(this).offset().top;
-                                var elementHeight = 54;
-                                var left = offsetLeft;
-                                var top = offsetTop + elementHeight;
-                                $('.ticket_contain_tips').eq($(this).attr('index')).show();
-                                $('.ticket_contain_tips').eq($(this).attr('index')).css({
-                                    "position": "absolute",
-                                    "left": (left + 70),
-                                    "top": top
-                                });
-                            }, function () {
-                                $(this).css({
-                                    "color": ""
-                                });
-                                $('.ticket_contain_tips').eq($(this).attr('index')).hide();
-                            });
-                        }
-                        ;
+//                        for (var i = 0; i < $('.ticket_contain1').length; i++) {
+//                            $('.ticket_contain1').eq(i).attr("index", i);
+//                            $('.ticket_contain1').eq(i).hover(function () {
+//                                $(this).css({
+//                                    "color": "#fa9520"
+//                                });
+//                                var offsetLeft = $(this).offset().left;
+//                                var offsetTop = $(this).offset().top;
+//                                var elementHeight = 54;
+//                                var left = offsetLeft;
+//                                var top = offsetTop + elementHeight;
+//                                $('.ticket_contain_tips').eq($(this).attr('index')).show();
+//                                $('.ticket_contain_tips').eq($(this).attr('index')).css({
+//                                    "position": "absolute",
+//                                    "left": (left + 70),
+//                                    "top": top
+//                                });
+//                            }, function () {
+//                                $(this).css({
+//                                    "color": ""
+//                                });
+//                                $('.ticket_contain_tips').eq($(this).attr('index')).hide();
+//                            });
+//                        }
+//                        ;
                         //套餐选择按钮
                         for (var i = 0; i < $('.product_select1').length; i++) {
                             $('.product_select1').eq(i).click(function () {
