@@ -47,6 +47,7 @@ if (!defined('IN_CLOOTA')) {
                         </thead>
                         <tbody>
                         <?
+                        if(notnull($order_detail_data['playPeopleList'])){
                         foreach ($order_detail_data['playPeopleList'] as $key => $value) {
                             ?>
 
@@ -55,7 +56,7 @@ if (!defined('IN_CLOOTA')) {
                                 <td><? echo $value['userPhone']; ?></td>
                                 <td><? echo $value['userIdCard']; ?></td>
                             </tr>
-                        <? } ?>
+                        <? }}?>
                         </tbody>
                     </table>
                 </div>
@@ -65,7 +66,7 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo1">
                     <ul>
                         <li>订单号：<? echo $order_detail_data['orderCode']; ?></li>
-                        <li>订单状态：<? echo $order_detail_data['orderStatusName']; ?></li>
+                        <li>订单状态：<? echo $order_detail_data['orderStatusName']; if($order_detail_data['orderStatus'] == '2') echo '(审核中)';?></li>
                         <li>下单时间：<? echo $order_detail_data['orderDate']; ?></li>
                         <li>支付方式：<? echo $order_detail_data['paymentType']; ?></li>
                     </ul>
@@ -85,38 +86,35 @@ if (!defined('IN_CLOOTA')) {
                             <? } ?>
                             <th>游玩日期</th>
                             <th>现售价</th>
+                            <?if($order_detail_data['isPackage'] == 'false'){ ?>
+                            <th>房差</th>
+                            <? } ?>
                             <th>小计</th>
                         </tr>
                         </thead>
                         <tbody>
 
                         <?if($order_detail_data['isPackage'] == 'false'){ ?>
-                            <tr>
-                                <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                                <td class="productOther">成人×<? echo $order_detail_data['adultNum']; ?></td>
+                            <tr class="morewords">
+                                <td class="productName"  style="WORD-WRAP: break-word" width="500"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                                <td class="productOther"><? if (!empty($order_detail_data['kidNum'])) echo '成人×'.$order_detail_data['adultNum'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . '儿童×' . $order_detail_data['kidNum'] ; else echo '成人×'.$order_detail_data['adultNum'];?></td>
                                 <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                                <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
-                                <td class="productXiaoji"><? echo $order_detail_data['adultTotalFee']; ?></td>
-                            </tr>
-                            <tr>
-                                <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
-                                <td class="productOther">儿童×<? echo $order_detail_data['kidNum']; ?></td>
-                                <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                                <td class="productPrice2"><? echo $order_detail_data['kidPrice']; ?></td>
-                                <td class="productXiaoji"><? echo $order_detail_data['kidTotalFee']; ?></td>
+                                <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
+                                <td class="productPrice2">&yen;<? echo $order_detail_data['diffPrice']; ?></td>
+                                <td class="productXiaoji">&yen;<? echo $order_detail_data['adultTotalFee'] + $order_detail_data['kidTotalFee'] + $order_detail_data['diffPrice']; ?></td>
                             </tr>
                         <? }else if($order_detail_data['isPackage'] == 'true') { ?>
-                            <td class="productName"><b><? echo $order_detail_data['goodsName']; ?></b></td>
+                            <td class="productName" style="WORD-WRAP: break-word" width="500"><b><?echo $order_detail_data['goodsName'];?></b></td>
                             <td class="productOther"><? echo $order_detail_data['num']; ?></td>
                             <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                            <td class="productPrice2"><? echo $order_detail_data['adultPrice']; ?></td>
-                            <td class="productXiaoji"><? echo $order_detail_data['num'] * $order_detail_data['adultPrice']; ?></td>
+                            <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
+                            <td class="productXiaoji">&yen;<? echo $order_detail_data['num'] * $order_detail_data['adultPrice']; ?></td>
                         <? } ?>
 
                         </tbody>
                     </table>
 
-                    <p><span>订单总金额：￥<b><? echo $order_detail_data['payPrice']; ?></b></span></p>
+                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['payPrice']; ?></b></span></p>
                 </div>
 
 
@@ -152,7 +150,7 @@ if (!defined('IN_CLOOTA')) {
                     <!-- 待支付按钮 -->
                     <a class="orderBtn_noPay">
                         <button style="margin-left:360px;" class="zby_cancel">取消订单</button>
-                        <button>去支付</button>
+                        <button onclick="pay_online()">去支付</button>
                 </div>
                 <? } ?>
             </div>
@@ -175,7 +173,7 @@ if (!defined('IN_CLOOTA')) {
         <span class="refundInfo_close"></span>
     </div>
     <div class="refundInfoCont">
-        <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html?flag=rf">
+        <form  method="post"  id="rfCommitForm" action="<?echo $g_self_domain;?>/zhoubianyou/zbyorder_detail-<?echo $orderCode;?>.html?flag=rf">
             <input type="hidden" name="orderCode" value="<?echo $orderCode;?>">
             <div class="refundInfoCont1">
                 <span>退款原因：</span>
@@ -190,18 +188,18 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo_table">
                     <div class="orderInfo_table_title">
                         <ul>
-                            <li class="orderInfo_table_tr1">产品名</li>
-                            <li class="orderInfo_table_tr2">套餐名称</li>
-                            <li class="orderInfo_table_tr2">客服说明</li>
+                            <li class="orderInfo_table_tr1">订单号</li>
+                            <li class="orderInfo_table_tr2">产品名</li>
+                            <li class="orderInfo_table_tr3">套餐名称</li>
                         </ul>
                     </div>
                     <div class="orderInfo_table_cont">
                         <ul>
-                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['goodsName']; ?></li>
+                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['orderCode']; ?></li>
                             <li class="orderInfo_table_tr2"
-                                style="color: #ff6600;"><? echo $refund_product_data['packageName'] ?></li>
-                            <li class="orderInfo_table_tr2"
-                                style="color: #ff6600;"><? echo $refund_product_data['refundCustomerInfo'] ?></li>
+                                style="color: #000;"><? echo $refund_product_data['goodsName'] ?></li>
+                            <li class="orderInfo_table_tr3"
+                                style="color: #000;"><? echo $refund_product_data['packageName'] ?></li>
                         </ul>
                     </div>
                 </div>
@@ -231,7 +229,10 @@ if (!defined('IN_CLOOTA')) {
     </div>
 </div>
 <!-- 取消订单成功或失败弹窗 -->
-<?if(!empty($cancle_order)){ ?>
+<?if(!empty($cancle_order_data)){
+    $js1 = "<script>$('#mengban').show();</script>";
+    echo $js1;
+    ?>
     <div class="cancelBox1">
         <div class="cancelBox1_title">
             <div class="cancelBox1_title_left">bus365提示您</div>
@@ -273,7 +274,10 @@ if (!defined('IN_CLOOTA')) {
 </div>
 
 <!-- 确认会团成功或失败弹窗 -->
-<?if(!empty($confirm_return_data)){ ?>
+<?if(!empty($confirm_return_data)){
+    $js2 = "<script>$('#mengban').show();</script>";
+    echo $js2;
+    ?>
     <div class="querenhuituan1">
         <div class="querenhuituan1_title">
             <div class="querenhuituan1_title_left">bus365提示您</div>
@@ -297,7 +301,14 @@ if (!defined('IN_CLOOTA')) {
         <div class="nengtuifou_cont_tips">&nbsp;&nbsp;<?echo $failReason;?></div>
     </div>
 </div>
-
+<!--去支付表单-->
+<form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
+    <input type="hidden" name="payPrice" value="<?=$order_detail_data['payPrice']?>">
+    <input type="hidden" name="goodsName" id="goodsName" value="<?=$order_detail_data['goodsName']?>">
+    <input type="hidden" name="payTime"  value="<?=$order_detail_data['leftPayTime']?>">
+    <input type="hidden" name="lvGoodsName"  value="<?=$order_detail_data['lvGoodsName']?>">
+    <input type="hidden" name="orderCode"  value="<?=$order_detail_data['orderCode']?>">
+</form>
 <!--  foot  start -->
 <? include 'foot.php'; ?>
 <!--  foot  end -->
@@ -319,6 +330,7 @@ if (!defined('IN_CLOOTA')) {
         $("#mengban").hide();
         $(".applyRefund").hide();
     });
+
     //申请退款按钮弹框
     for(var i=0;i<$('.applyRefundBtn').length;i++){
         $('.applyRefundBtn').eq(i).click(function(){
@@ -327,6 +339,7 @@ if (!defined('IN_CLOOTA')) {
             $('.applyRefund').show();
         });
     }
+
 
     $('.applyRefund_sure').click(function(){
         var orderCode = "<?= $orderCode ?>";
@@ -339,14 +352,15 @@ if (!defined('IN_CLOOTA')) {
             },
             async: false,
             success: function (data) {
-//                alert(data);
-                if(data = 'false'){
+                data = $.trim(data);
+//                alert(data.length);
+                if(data == 'false'){
                     $('.nengtuifou').show();
                     $('.applyRefund').hide();
-                    $("#mengban").hide();
-                } else {
-                    $('.refundInfo').show();
+                    $("#mengban").show();
+                } else{
                     $('.applyRefund').hide();
+                    $('.refundInfo').show();
                 }
             }
         });
@@ -404,22 +418,26 @@ if (!defined('IN_CLOOTA')) {
     });
     //退款请求接口
     function refund_commit(){
-        var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=rf";
-        window.location.href = url;
+        document.getElementById("rfCommitForm").submit();
     }
     //确认会团请求接口
     function confirm_return(){
         var url = "/zhoubianyou/zbyorder_detail-<?=$orderCode;?>.html?flag=cf";
         window.location.href = url;
     }
-
+   //去评价
     function comment_commit(){
         var url = "/zhoubianyou/zbycomment_commit-<?=$orderCode;?>.html";
         window.location.href = url;
     }
+    //再次预订
     function order_again(){
-        var url = "<?=$g_self_domain;?>/product/detail-<?=$order_detail_data['goodsId']?>.html";
+        var url = "<?=$g_self_domain;?>/product/detail-<?=$order_detail_data['goodsId']?>-<?=$order_detail_data['productId']?>.html";
         window.location.href = url;
+    }
+    //去支付
+    function pay_online(){
+        $('#onlineForm').submit();
     }
 </script>
 </html>

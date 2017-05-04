@@ -1,42 +1,127 @@
 <?
 /*if(req('flag') == 1){
-    $canshu = $db->base64url_encode($_SERVER['QUERY_STRING']);
-    $dizhi = $_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
-    $wangzhi = $dizhi.$canshu;
+    function keyED($txt,$encrypt_key){       
+    $encrypt_key =    md5($encrypt_key);
+    $ctr=0;       
+    $tmp = "";       
+    for($i=0;$i<strlen($txt);$i++)       
+    {           
+        if ($ctr==strlen($encrypt_key))
+        $ctr=0;           
+        $tmp.= substr($txt,$i,1) ^ substr($encrypt_key,$ctr,1);
+        $ctr++;       
+    }       
+    return $tmp;   
+    }    
+    function encrypt($txt,$key)   {
+        $encrypt_key = md5(mt_rand(0,100));
+        $ctr=0;       
+        $tmp = "";      
+         for ($i=0;$i<strlen($txt);$i++)       
+         {
+            if ($ctr==strlen($encrypt_key))
+                $ctr=0;           
+            $tmp.=substr($encrypt_key,$ctr,1) . (substr($txt,$i,1) ^ substr($encrypt_key,$ctr,1));
+            $ctr++;       
+         }       
+         return keyED($tmp,$key);
+    } 
+        
+    function decrypt($txt,$key){       
+        $txt = keyED($txt,$key);       
+        $tmp = "";       
+        for($i=0;$i<strlen($txt);$i++)       
+        {           
+            $md5 = substr($txt,$i,1);
+            $i++;           
+            $tmp.= (substr($txt,$i,1) ^ $md5);       
+        }       
+        return $tmp;
+    }
+    function encrypt_url($url,$key){
+        return rawurlencode(base64_encode(encrypt($url,$key)));
+    }
+    function decrypt_url($url,$key){
+        return decrypt(base64_decode(rawurldecode($url)),$key);
+    }
+    function geturl($str,$key){
+        $str = decrypt_url($str,$key);
+        $url_array = explode('&',$str);
+        if (is_array($url_array))
+        {
+            foreach ($url_array as $var)
+            {
+                $var_array = explode("=",$var);
+                $vars[$var_array[0]]=$var_array[1];
+            }
+        }
+        return $vars;
+    }
+ 
+    $key_url_md_5 = 'mdaima.com-123-scc'; 
+    //é‡å®šå‘åŠ å¯†
+    $canshu = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $canshu = str_replace('?','',strstr($canshu,'?'));
+    $canshu = encrypt_url($_SERVER['QUERY_STRING']);
+    $dizhi = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
+    $wangzhi = $dizhi.''.$canshu;
+    echo $wangzhi;die;
+    header("location: $wangzhi");
+    
+    //è§£å¯†
+    $url_info = geturl($_SERVER['QUERY_STRING'],$key_url_md_5);
 
 
 
+    //header("location: http://$wangzhi");
+}*/
+ 
+$db->check_cookie($loginUrl, $host);
+//æˆªå–
+function jiequ($num,$data){
+    if(mb_strlen($data,'gbk')>$num){
+        return mb_substr($data, 0, $num,'gbk').'...';
+    }else{
+        return $data;
+    }
 
-    header("location: http://$wangzhi");
 }
-$canshu = */
-//$db->check_cookie($loginUrl, $host);
+
 $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-//»ñÈ¡Ì×²ÍĞÅÏ¢
+//è·å–å¥—é¤ä¿¡æ¯
 $tc['lvProductId'] = req('lvProductId');
 $tc['packageId'] = req('packageId');
 $tc['departDate'] = req('departDate');
-//var_dump($tc);
+
 $api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?lvProductId='.$tc['lvProductId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
 $tcs = array_iconv(json_decode(juhecurl("$api_url", false, 0),true),'utf-8','gbk');
-//ÉèÖÃ±äÁ¿
+//è®¾ç½®å˜é‡
 $taocan = $tcs['data'][0];
 $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
-//ÅĞ¶Ï°´ÈË°²·İ
+//åˆ¤æ–­æŒ‰äººå®‰ä»½
 $is_package = $taocan['isPackage'];
 //var_dump($tcs);echo '<br>'; 
-//¶©µ¥½Ó¿Ú²ÎÊı
+//è®¢å•æ¥å£å‚æ•°
 $post['token'] = $token;//"{\"token1\":\"34d996bc-bc3f-4ed5-8020-868a68398352%2315122991536%23%25E5%2585%259A%25E5%25A6%25B9%25E5%25AD%2590%2376061060000000341\",\"token2\":\"2C8EBC684DBE4F930096E68FE24F8550F53F78A0E79634E0F6668F99659D83BB449A51AF37EADCA8D775097E26A6A13958D3B455DF850CFE35567C783187C0EE7A4D04972B0B38E271997D96941AD1A8\"}";
 $post['goodsId'] = $taocan['goodsId'];//'8017691';//
 $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
-$post['payPrice'] = str_replace("£¤","",req('payPrice')) ;//'150';//
-$post['adultNum'] = req('adultNum');//'1';//
-$post['kidNum'] = req('childNum');//'1';//
+$post['payPrice'] = str_replace("ï¿¥","",req('payPrice')) ;//'150';//
+$post['adultNum'] = $_GET['adultNum'];//'1';//
+$post['kidNum'] = $_GET['childNum'];//'1';//
+if($taocan['isPackage'] == 'true'){//æŒ‰ä»½å–
+    $post['packageNum'] = req('packageNum');//'3';//
 
-//ÓÎÍæÈËÊıÁ¿ÅĞ¶Ï  
+}else{//æŒ‰äººå–
+    
+    $post['roomCount'] = req('roomCount');//'0';//
+
+}
+
+
+//æ¸¸ç©äººæ•°é‡åˆ¤æ–­  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
 }elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
@@ -45,7 +130,7 @@ if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 0;
 }
 
-//Éú³É¶©µ¥
+//ç”Ÿæˆè®¢å•
 $flag = req('flag');
 if($flag == 'check'){
     $post['bookerName'] = gbk_to_utf8(req('bookerName'));
@@ -53,11 +138,10 @@ if($flag == 'check'){
     $post['bookerEmail'] = req('bookerEmail');
     $post['emergencyName'] = gbk_to_utf8(req('emergencyName'));
     $post['emergencyMobile'] = req('emergencyMobile');
-    //ÓÎÍæÈËÊı×é´¦Àí
-    
+    //æ¸¸ç©äººæ•°ç»„å¤„ç†
     for($i=0;$i<$num;$i++){
         $travellerList[$i]['name'] = gbk_to_utf8(req('name_'.$i));
-        $travellerList[$i]['eName'] = gbk_to_utf8(req('eName_'.$i));
+        $travellerList[$i]['ename'] = gbk_to_utf8(req('eName_'.$i));
         $travellerList[$i]['personType'] = gbk_to_utf8(req('personType_'.$i));
         $travellerList[$i]['mobile'] = req('mobile_'.$i);
         $travellerList[$i]['email'] = req('email_'.$i);
@@ -65,24 +149,15 @@ if($flag == 'check'){
         $travellerList[$i]['credentialsType'] = 'ID_CARD';
         $travellerList[$i]['gender'] = req('gender_'.$i);
         $travellerList[$i]['birthday'] = req('birthday_'.$i);
-        //È¥³ı¿ÕÖµ
-        $travellerList[$i] = array_filter($travellerList[$i]);
+        //var_dump($travellerList[$i]);
+        //å»é™¤ç©ºå€¼
+        
     }
     $post['travellerList'] = json_encode($travellerList);
 
-     $post = array_filter($post);
-if($taocan['isPackage'] == 'true'){//°´·İÂô
-    $post['packageNum'] = req('packageNum');//'3';//
-}else{//°´ÈËÂô
-    
-    $post['roomCount'] = req('roomCount');//'0';//
-
-}
-    $post['adultNum'] = req('adultNum');//'1';//
-    $post['kidNum'] = req('childNum');//'1';//
-     //²âÊÔ ÏÈ´«¿Õ
-     $post['travellerList'] = '';
-     $dingdan = array_iconv(json_decode($db->api_post("192.168.3.177:8080/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
+     //æµ‹è¯• å…ˆä¼ ç©º
+     //var_dump($post);
+     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      $goodsName = $dingdan['data']['goodsName'];
      $payTime = $dingdan['data']['payTime'];
@@ -91,13 +166,15 @@ if($taocan['isPackage'] == 'true'){//°´·İÂô
      $peopleNum = $dingdan['data']['peopleNum'];
      $unitPrice = $dingdan['data']['unitPrice'];
      $lvGoodsName = $dingdan['data']['lvGoodsName'];
-     //var_dump($post);die;
+    
 }
+//è¯·æ±‚/travel/interface/zby/v3.2/getNumberSelection_v3.2è·å–roomMax
+
+//ajaxè¯·æ±‚/travel/interface/zby/v3.2/getDiffRoomNum_v3.2è·å–æˆ¿å·®æ•°é‡é›†åˆ
 
 
 
-
-/*//Ğ£Ñé¶©µ¥
+/*//æ ¡éªŒè®¢å•
 
 
 if($flag == 'check'){

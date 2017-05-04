@@ -30,11 +30,10 @@ if(!defined('IN_CLOOTA')) {
 
             <div class="zby_orderSuccess_main1">
                 <div class="zby_orderSuccess_main1_cont">
-                    <span>恭喜您，订单预定成功！我们将尽快给您发送确认短信。</span>
-                    <p>入园方式：请您凭北京旅游网NEW发送的数字码短信，至景区售票处换区门票入园。</p>
+                    <span>该订单正在审核中，请耐心等待。</span>
                     <p>订单确认号：<a><?echo $pay_success_data['orderCode'];?></a></p>
-                    <p>票型名称：<?echo $pay_success_data['goodsName'];?></p>
-                    <p>入园日期：<?echo $pay_success_data['playDate'];?></p>
+                    <p>产品名称：<?echo $pay_success_data['goodsName'];?></p>
+                    <p>游玩日期：<?echo $pay_success_data['playDate'];?></p>
                     <input value="查看订单详情" type="submit" >
                     <!--                <a href="/member/?cmd=--><?//=base64_encode('pay_detail.php')?><!--"><button>查看订单详情</button></a>-->
                 </div>

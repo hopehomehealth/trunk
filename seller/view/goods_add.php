@@ -398,6 +398,11 @@ $(document).ready(function(){
 					天预订 </td>
 			</tr>
 			<tr>
+				  <td align="right">游客需在：</td>
+				  <td><input type="time" name="ahead_time" value="23:59"/>
+					之前预订 </td>
+			</tr>
+			<tr>
 			  <td align="right" height="70"><font color="red">*</font> 自定义分类：</td>
 			  <td>
 				<select name="shop_cat_id" id="shop_cat_id" class="span4"> 
