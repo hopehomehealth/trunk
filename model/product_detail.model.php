@@ -166,6 +166,17 @@ $data = $arr['data'];
 
 $scheduling = $data['scheduling'];
 
+//ÈÈÃÅÍÆ¼ö
+$pageSize = '6';
+$homePage = '1';
+$url = $host . "/travel/interface/zby/getHotZbyGoodsList";
+$post1 = array('pageSize' => $pageSize, 'homePage' => $homePage);
+$tuijian = $db->api_post($url, $post1);
+$tuijian = json_decode($tuijian, true);
+
+$tuijian = array_iconv($tuijian);
+$tuijian_data = $tuijian['data'];
+
 
 function seo(){
     global $g_sitename, $c_goods;
