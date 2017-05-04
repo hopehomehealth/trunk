@@ -148,7 +148,7 @@
         <div class="detail-info">
             <div class="detail-title">
                 <a href="/product/detail-<?= $goodsId ?>-<?= $productId ?>.html"
-                   title="<?= $c_goods['goods_name'] ?>"><?= $c_goods['goods_name'] ?></a>
+                   title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($db->jiequ(22,$data['goodsName'])) ?></a>
 <!--                --><?// if ($c_goods['is_sale'] == '0') { ?>
 <!--                    <i style="color:red">【已下架】</i>-->
 <!--                --><?// } ?>
@@ -161,7 +161,7 @@
 //                    }
 //                }
 //                ?>
-
+<!---->
 <!--                --><?// if ($c_goods['is_sale'] == '1') { ?>
 <!--                    --><?// if ($c_goods['is_hot'] == '1') { ?><!--<i class="tag-btn">热卖</i>--><?// } ?>
 <!--                --><?// } ?>
@@ -193,7 +193,7 @@
 <!--                    --><?// } ?>
 
 <!--                    --><?// if ($c_goods['dist_prov'] != '') { ?>
-                        目的地： <span class="gray-b"> <?= $db->to_gbk($data['distCity']) ?> </span><br/>
+                        目的地： <span class="gray-b"><a title="<?= $db->to_gbk($data['distCity'])?>"><?= $db->jiequ(25,$db->to_gbk($data['distCity'])) ?></a>  </span><br/>
 <!--                    --><?// } ?>
 
 
@@ -226,25 +226,25 @@
                 ?>
             </div>
         </div>
-        <div class="bdsharebuttonbox" style="margin-top:10px"><a href="#" class="bds_more" data-cmd="more"></a><a
-                href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina"
-                                                                                   data-cmd="tsina" title="分享到新浪微博"></a><a
-                href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq"
-                                                                                   data-cmd="tqq" title="分享到腾讯微博"></a><a
-                href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
-        <script>window._bd_share_config = {
-                "common": {
-                    "bdSnsKey": {},
-                    "bdText": "",
-                    "bdMini": "2",
-                    "bdMiniList": false,
-                    "bdPic": "",
-                    "bdStyle": "1",
-                    "bdSize": "24"
-                }, "share": {}
-            };
-            with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
-        <div class="clear"></div>
+<!--        <div class="bdsharebuttonbox" style="margin-top:10px"><a href="#" class="bds_more" data-cmd="more"></a><a-->
+<!--                href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina"-->
+<!--                                                                                   data-cmd="tsina" title="分享到新浪微博"></a><a-->
+<!--                href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq"-->
+<!--                                                                                   data-cmd="tqq" title="分享到腾讯微博"></a><a-->
+<!--                href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>-->
+<!--        <script>window._bd_share_config = {-->
+<!--                "common": {-->
+<!--                    "bdSnsKey": {},-->
+<!--                    "bdText": "",-->
+<!--                    "bdMini": "2",-->
+<!--                    "bdMiniList": false,-->
+<!--                    "bdPic": "",-->
+<!--                    "bdStyle": "1",-->
+<!--                    "bdSize": "24"-->
+<!--                }, "share": {}-->
+<!--            };-->
+<!--            with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>-->
+<!--        <div class="clear"></div>-->
     </div>
     <!-- search -->
     <div class="detail-search toscroll" id="searchzone"
@@ -727,45 +727,45 @@
                         $('.detail_byPart').html(data);
                         $('.detail_byPart').show();
                         //点击套餐吗，名称展开具体信息
-                        for (var i = 0; i < $('.product_name1').length; i++) {
-                            $('.product_name1').eq(i).attr("hide_flag", "1");
-                            $('.product_name1').eq(i).attr("index", i);
-
-                            $('.product_name1').eq(i).click(function () {
-                                //console.log($(this).attr("index"));
-                                if ($(this).attr("hide_flag") == '1') {
-                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao1.jpg)");
-                                    $('.hide_content').eq($(this).attr("index")).show();
-                                    $(this).attr("hide_flag", "0");
-                                } else {
-                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao2.jpg)");
-                                    $('.hide_content').eq($(this).attr("index")).hide();
-                                    $(this).attr("hide_flag", "1");
-                                }
-                            });
-
-//                            $('.product_name1').eq(i).hover(function () {
-//                                $(this).css({
-//                                    "color": "#fa9520"
-//                                });
-//                                var offsetLeft = $(this).offset().left;
-//                                var offsetTop = $(this).offset().top;
-//                                var elementHeight = 30;
-//                                var left = offsetLeft;
-//                                var top = offsetTop + elementHeight;
-//                                $('.product_name_tips').eq($(this).attr('index')).show();
-//                                $('.product_name_tips').eq($(this).attr('index')).css({
-//                                    "position": "absolute",
-//                                    "left": left,
-//                                    "top": top
-//                                });
-//                            }, function () {
-//                                $(this).css({
-//                                    "color": ""
-//                                });
-//                                $('.product_name_tips').eq($(this).attr('index')).hide();
+//                        for (var i = 0; i < $('.product_name1').length; i++) {
+//                            $('.product_name1').eq(i).attr("hide_flag", "1");
+//                            $('.product_name1').eq(i).attr("index", i);
+//
+//                            $('.product_name1').eq(i).click(function () {
+//                                //console.log($(this).attr("index"));
+//                                if ($(this).attr("hide_flag") == '1') {
+//                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao1.jpg)");
+//                                    $('.hide_content').eq($(this).attr("index")).show();
+//                                    $(this).attr("hide_flag", "0");
+//                                } else {
+//                                    $(this).css("backgroundImage", "url(/themes/s01/images/sanjiao2.jpg)");
+//                                    $('.hide_content').eq($(this).attr("index")).hide();
+//                                    $(this).attr("hide_flag", "1");
+//                                }
 //                            });
-                        }
+//
+////                            $('.product_name1').eq(i).hover(function () {
+////                                $(this).css({
+////                                    "color": "#fa9520"
+////                                });
+////                                var offsetLeft = $(this).offset().left;
+////                                var offsetTop = $(this).offset().top;
+////                                var elementHeight = 30;
+////                                var left = offsetLeft;
+////                                var top = offsetTop + elementHeight;
+////                                $('.product_name_tips').eq($(this).attr('index')).show();
+////                                $('.product_name_tips').eq($(this).attr('index')).css({
+////                                    "position": "absolute",
+////                                    "left": left,
+////                                    "top": top
+////                                });
+////                            }, function () {
+////                                $(this).css({
+////                                    "color": ""
+////                                });
+////                                $('.product_name_tips').eq($(this).attr('index')).hide();
+////                            });
+//                        }
                         //退改规则hover
                         for (var i = 0; i < $('.change_rule').length; i++) {
                             $('.change_rule').eq(i).attr("index", i);
