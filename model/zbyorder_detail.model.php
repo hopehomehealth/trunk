@@ -50,9 +50,10 @@ if(req('flag') == 'cf'){
     $confirm_return = juhecurl($host."/travel/interface/zby/confirmBackGroup",$post3, 1);
     $confirm_return = json_decode($confirm_return, true);
     $confirm_return = array_iconv($confirm_return);
-    if ($confirm_return['status'] != '0000') {
-        exit($confirm_return['msg']);
-    }
+//    var_dump($confirm_return);
+//    if ($confirm_return['status'] != '0000') {
+//        exit($confirm_return['msg']);
+//    }
     $confirm_return_data = $confirm_return['data'];
 
 }
@@ -95,5 +96,5 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 }elseif($orderStatus == 1){
     $st = 4;
 }
-//$st = 1;
+//$st = 4;
 ?>
