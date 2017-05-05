@@ -170,6 +170,7 @@ if($flag == 'check'){
 }
 //请求/travel/interface/zby/v3.2/getNumberSelection_v3.2获取roomMax
 
+//$xuangou = json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$xuan),true);
 //ajax请求/travel/interface/zby/v3.2/getDiffRoomNum_v3.2获取房差数量集合
 
 
