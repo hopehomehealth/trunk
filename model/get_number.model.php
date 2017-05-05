@@ -19,7 +19,10 @@ $kidNum = $_POST['kidNum'];
 if($kidNum == ''){
     $kidNum = '0';
 }
-$childPriceInfo = $_POST['childPriceInfo'];
+if (!isset($_SESSION)){
+    session_start();    
+}
+$childPriceInfo = $_SESSION['childPriceInfo'];
 
 $url = $host . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
 $data = $db->api_post($url, $post);
