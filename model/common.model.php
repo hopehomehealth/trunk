@@ -445,6 +445,7 @@ UNION
 		tf.site_id = '$g_siteid' AND tf.`floor_id` = '$floor_id' AND tg.`site_id` = '$g_siteid' AND tg.goods_id IS NOT NULL
 ) m WHERE m.price <> 0 ORDER BY m.`order_id` ASC $ler";
 
+//	var_dump($sql);
 	return $db->get_all($sql);
 }
 
