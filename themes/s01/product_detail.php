@@ -639,17 +639,18 @@
                             if (notnull($tuijian_data)) {
                                 $zbyHotGoodsList = $tuijian_data['zbyHotGoodsList'];
                                 foreach ($zbyHotGoodsList as $val) {
+                                    if ($val['aLiData'] != '·ÉÖí×ÔÓª') $href = "/product/detail-".$val['goodsId']."-".$val['productId'].".html";else $href = $val['pcALiDetailLink'];
 //                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
                                     ?>
                                     <li>
                                         <div class="imgbox"><a id="like-img"
-                                                               href="/product/detail-<?= $val['goodsId'] ?>-<?= $val['productId']?>.html"
+                                                               href="<?= $href;?>"
                                                                target="_blank"><img alt="" src="<?= $val['goodsImage'] ?>"
                                                                                     alt="<?= $val['goodsName'] ?>"></a>
                                         </div>
                                         <div class="tname"><a id="like-title"
-                                                              href="/product/detail-<?= $val['goodsId'] ?>-<?= $val['productId'] ?>.html"
+                                                              href="<?= $href;?>"
                                                               target="_blank" title="<?= $val['goodsName']; ?>"><?= show_substr($val['goodsName'], 50) ?></a>
                                         </div>
                                         <div class="cYellow">&yen; <span class="font20"><?= $val['minPrice'] ?></span>
