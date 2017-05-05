@@ -92,7 +92,7 @@ if(!defined('IN_CLOOTA')) {
                             <tr>
                                 <td>房差
                                 </td>
-                                <td><?$_GET['roomPrice']?></td>
+                                <td><?=   $_GET['roomPrice']?></td>
                                 <td><?=$post['roomCount']?></td>
                             </tr>
                             </thead>
@@ -498,10 +498,10 @@ if(!defined('IN_CLOOTA')) {
 
                 </div>
                 <div class="zbyOrder_main32">
-                    <label>我已同意以下条款</label>
+                    <label><a href="<?=$g_self_domain?>/zhoubian/xy.html" target="_blank">我已同意以下条款</a></label>
                     <input type="checkbox" name="我已同意以下条款">
-                    <label>同意团队境内旅游合同</label>
-                    <input type="checkbox" name="同意团队境内旅游合同">
+                    <!-- <label>同意团队境内旅游合同</label>
+                    <input type="checkbox" name="同意团队境内旅游合同"> -->
                 </div>
                 <div class="zbyOrder_main33">
                     温馨提示：请您仔细阅读预订须知及旅游合同条款，订单提交后，视为您同意以下各项条款内容
@@ -612,7 +612,7 @@ $('#mobile').blur(function(){
 
 
 function check_form(){
-    if($('.zbyOrder_main32 input').eq(0).attr('checked')&&$('.zbyOrder_main32 input').eq(1).attr('checked')){
+    if($('.zbyOrder_main32 input').eq(0).attr('checked')){
     // alert(buyerName_flag+'----'+buyerPhone_flag+'----'+youwanName_flag+'----'+youwanPhone_flag+'----'+youwanIdNum_flag);
         document.getElementById("write_form").submit();
     }
