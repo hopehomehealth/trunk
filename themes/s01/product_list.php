@@ -402,10 +402,10 @@
                     <li><a id="list-f-312-1" <? if (req('hot') == 'yes'){ ?>class="select"<? } ?>
                            href="javascript:filter('hot', '<? if (req('hot') == 'yes') { ?><? } else { ?>yes<? } ?>')">推荐</a>
                     </li>
-                    <li><a id="list-f-312-2" <? if (req('col') == 'sale'){ ?>class="select"<? } ?> title="点击按销量从高到低排序"
-                           href="/zhoubian/?<?= $page_args ?>&ord=true&col=sale&sc=<?= $order_type ?>">销量<i
-                                class="icon <? if (req('sc') == 'desc') { ?>sort-up<? } else { ?>sort-down<? } ?>">
-                                &nbsp;</i></a></li>
+<!--                    <li><a id="list-f-312-2" --><?// if (req('col') == 'sale'){ ?><!--class="select"--><?// } ?><!-- title="点击按销量从高到低排序"-->
+<!--                           href="/zhoubian/?--><?//= $page_args ?><!--&ord=true&col=sale&sc=--><?//= $order_type ?><!--">销量<i-->
+<!--                                class="icon --><?// if (req('sc') == 'desc') { ?><!--sort-up--><?// } else { ?><!--sort-down--><?// } ?><!--">-->
+<!--                                &nbsp;</i></a></li>-->
                     <li><a id="list-f-312-4" <? if (req('col') == 'price'){ ?>class="select"<? } ?> title="点击按价格从低到高排序"
                            href="/zhoubian/?<?= $page_args ?>&ord=true&col=price&sc=<?= $order_type ?>">价格<i
                                 class="icon <? if (req('sc') == 'desc') { ?>sort-up<? } else { ?>sort-down<? } ?>">
@@ -419,6 +419,8 @@
         if (notnull($zbyHotGoodsList)) {
 //            var_dump($zbyHotGoodsList);
             foreach ($zbyHotGoodsList as $val) {
+//                echo "<pre>";
+//                var_dump($val);
                 $goodsImage = $val['goodsImage'];
                 $sku_list = get_sku_list($val['goodsId'], 5);
                 $goods_url = $val['pcALiDetailLink'];
@@ -433,7 +435,7 @@
                             echo $ziyingurl;
                         } else {
                             echo $goods_url;
-                        } ?>"> <img alt="<?= $val['goodsName'] ?>" src="<?= $goodsImage ?>"
+                        } ?>" target="_blank"> <img alt="<?= $val['goodsName'] ?>" src="<?= $goodsImage ?>"
                                     onerror="javascript:this.src='/themes/s01/images/lv_list_default.png' "> </a>
                         <dl class="text">
                             <dt style="width:550px"><a href="<? if ($val['aLiData'] != '飞猪自营') {
@@ -456,7 +458,7 @@
                             ?>
                             <dd>
                                 <?
-                                if (notnull($val['itemInfo'])) {
+                                if (notnull($val['itemInfo']) && $val['aLiData'] == '飞猪自营') {
                                     foreach ($val['itemInfo'] as $key => $value) { ?>
                                         <?= $value['text'] ?>:<span class="mr30"
                                                                     title="<? if (mb_strlen($value['desc'], 'gbk') > 27) echo $value['desc']; ?>"><? if (mb_strlen($value['desc'], 'gbk') > 27 && $valnum > 23) echo jiequ(22, $value['desc']); else echo $value['desc']; ?></span>
@@ -470,7 +472,7 @@
 
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 32px;">
+                            <dd style="padding-top: 10px;line-height: 13px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     出发城市：<span class="mr30"><?= $val['srcCity'] ?></span>
@@ -478,25 +480,44 @@
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 32px;">
+                            <dd style="padding-top: 10px;line-height: 13px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
-                                    到达城市：<span class="mr30"><?= jiequ(22, $val['disCity']) ?></span> 
+                                    到达城市：<span class="mr30"><?= jiequ(28, $val['disCity']) ?></span>
                                     <?
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 32px;">
+                            <dd style="padding-top: 10px;line-height: 13px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     行程天数：<?= $val['lineDays'] ?>天<?= $val['lineNights'] ?>晚
                                 <?
                                 } ?>
                             </dd>
-
+                            <!--出行日期-->
                             <?
-                            //出行日期
+                            if($val['aLiData'] != '飞猪自营' && notnull($val['skuList'])){
+                                ?>
+                                <dd style="padding-top: 10px;line-height: 13px;"><span class="ff-toh">出行日期：
+                                        <?foreach ($val['skuList'] as $cval){
+                                            ?>
+                                            <?=$cval?>
+                                            <?
+                                        }
+                                        ?>
+                                </dd>
+                                <?
+                            }
                             ?>
+                            <!--往返交通-->
+                            <dd style="padding-top: 10px;line-height: 15px;">
+                                <? if ($val['aLiData'] != '飞猪自营' && notnull($val['goTraffic']) && notnull($val['backTraffic'])) {
+                                    ?>
+                                    往返交通：<?= $val['goTraffic']?>(出发)，<?= $val['backTraffic']?>(返回)
+                                    <?
+                                } ?>
+                            </dd>
 
                             <?/*}else{*/
                             ?><!--
@@ -514,6 +535,7 @@
                                 echo $ziyingurl;
                             } ?>" target="_blank" class="btn  btn-sm">查看详情</a>
                             <div class="count"> </a></div>
+                            <?if($val['aLiData'] == '飞猪自营'){ ?><p style="text-align: center;color: #1fcc9e;line-height: 28px;">*本数据由飞猪提供</p><? } ?>
                         </div>
                     </div>
                 </div>

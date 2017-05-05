@@ -11,6 +11,7 @@ $url = $host. "/travel/interface/zby/v3.2/getZbyPackageByGoodsId_v3.2";
 $data = $db->api_post($url, $post);
 $arr = json_decode($data, true);
 $datas = $arr['data'];
+//echo "<pre>";
 //echo var_dump($data);
 
 echo "<ul class=\"byPart_title\">

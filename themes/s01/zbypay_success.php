@@ -31,9 +31,9 @@ if(!defined('IN_CLOOTA')) {
             <div class="zby_orderSuccess_main1">
                 <div class="zby_orderSuccess_main1_cont">
                     <span>该订单正在审核中，请耐心等待。</span>
-                    <p>订单确认号：<a><?echo $pay_success_data['orderCode'];?></a></p>
-                    <p>产品名称：<?echo $pay_success_data['goodsName'];?></p>
-                    <p>游玩日期：<?echo $pay_success_data['playDate'];?></p>
+                    <p><b>订单确认号：</b><a><?echo $pay_success_data['orderCode'];?></a></p>
+                    <p><b>产品名称：</b><?echo $pay_success_data['goodsName'];?></p>
+                    <p><b>游玩日期：</b><?echo $pay_success_data['playDate'];?></p>
                     <input value="查看订单详情" type="submit" >
                     <!--                <a href="/member/?cmd=--><?//=base64_encode('pay_detail.php')?><!--"><button>查看订单详情</button></a>-->
                 </div>

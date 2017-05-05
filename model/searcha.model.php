@@ -20,7 +20,7 @@ if(!empty($s_liebiao)){
 //            echo $kongNum."<hr>";
             $goodsName = str_replace(' ','&nbsp;',$value['goodsName']);
             $jiequ = jiequ($value['goodsName'],54,$kongNum);
-            echo '<li title='.utf8_to_gbk($goodsName).'>'.utf8_to_gbk($jiequ).'</li>';
+            echo '<li title='.($goodsName).'>'.($jiequ).'</li>';
 //            echo '<li title='.$goodsName.'>'.$jiequ.'</li>';
         }
     }

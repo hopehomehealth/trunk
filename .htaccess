@@ -57,6 +57,10 @@ RewriteRule ^menpiao/ticket_refund-([0-9]+).html$     index\.php?cmd=ticket_refu
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^menpiao/xy.html$    index\.php?cmd=xieyi [L]
 
+#周边游协议
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubian/xy.html$    index\.php?cmd=zbxieyi [L]
+
 # 产品类型
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^(gentuan|ziyouxing|qianzheng|menpiao|jiudian|youlun)/$    index\.php?cmd=product_index&goods_type_key=$1&%1 [L]
