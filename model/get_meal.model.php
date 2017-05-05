@@ -1,13 +1,15 @@
 <?
 include('../config.php');
 header("Content-type:text/html;charset=gbk");
-function to_gbk($str){
+function to_gbk($str)
+{
     return mb_convert_encoding($str, 'gbk', 'utf-8');
 }
+
 $post = array();
 $post['lvProductId'] = $_POST['productId'];
 $post['departDate'] = $_POST['departDate'];
-$url = $host. "/travel/interface/zby/v3.2/getZbyPackageByGoodsId_v3.2";
+$url = $host . "/travel/interface/zby/v3.2/getZbyPackageByGoodsId_v3.2";
 $data = $db->api_post($url, $post);
 $arr = json_decode($data, true);
 $datas = $arr['data'];
@@ -26,18 +28,14 @@ echo "<ul class=\"byPart_title\">
 foreach ($datas['list'] as $key => $val) {
     $packageId = to_gbk($val['packageId']);//套餐ID
     $packageName = to_gbk($val['packageName']);//套餐名
-    $packageNames = to_gbk($db->jiequ(9,$val['packageName']));
-    if( !is_null($val['hotelList']) ){
-        $hotelName = to_gbk($val['hotelList']['0']['hotelName']);//酒店名
-        $hotelNames = $db->jiequ(10,$hotelName);
-        $hotelInfo = to_gbk($val['hotelList']['0']['hotelInfo']);//酒店简介
+    $packageNames = to_gbk($db->jiequ(9, $val['packageName']));
+    if (!is_null($val['hotelList'])) {
+        $hotelName = $val['hotelList'];//酒店名
     } else {
         $hotelNames = '当前套餐无酒店';
     }
-    if( !is_null($val['hotelList']) ) {
-        $ticketName = to_gbk($val['ticketList']['0']['ticketName']);//门票名
-        $ticketNames = $db->jiequ(10, $ticketName);
-        $ticketInfo = to_gbk($val['ticketList']['0']['ticketInfo']);//门票简介
+    if (!is_null($val['hotelList'])) {
+        $ticketName = $val['ticketList'];//门票名
     } else {
         $ticketNames = '当前套餐无门票';
     }
@@ -67,15 +65,27 @@ foreach ($datas['list'] as $key => $val) {
     echo "<div class=\"byPart_cont\">
         <ul>
             <li class=\"product_name1\"><a title='$packageName'>$packageNames</a></li>
-            <li class=\"hotel_contain1\"><a title='$hotelInfo'>$hotelNames</a></li>
-            <li class=\"ticket_contain1\"><a title='$ticketInfo'>$ticketNames</a></li>
+            <li class=\"hotel_contain1\"><dl>";
+    foreach ($hotelName as $k => $v) {
+        $hotelInfo = to_gbk($v['hotelInfo']);
+        $hotelName = to_gbk($db->jiequ(10, $v['hotelName']));
+        echo "<dd><a title='$hotelInfo'>$hotelName</dd>";
+    }
+    echo "</dl></li>
+            <li class=\"ticket_contain1\"><dl>";
+    foreach ($ticketName as $ke => $va) {
+        $ticketInfo = to_gbk($va['ticketInfo']);//门票简介
+        $ticketName = to_gbk($db->jiequ(10, $va['ticketName']));
+        echo "<dd><a title='$ticketInfo'>$ticketName</a></dd>";
+    }
+    echo "</dl></li>
             <li class=\"product_mounts1\">$lvStock</li>";
-            if($isPackage == 'false'){
-                echo "<li class=\"product_price1\">成人：<b>&yen;$adultPrice</b><br>儿童：<b>&yen;$kidPrice</b></li>";
-            }else{
-                echo "<li class=\"product_price1\"><b>&yen;$price</b>/份</li>";
-            }
-            echo "<li class=\"product_select1\">
+    if ($isPackage == 'false') {
+        echo "<li class=\"product_price1\">成人：<b>&yen;$adultPrice</b><br>儿童：<b>&yen;$kidPrice</b></li>";
+    } else {
+        echo "<li class=\"product_price1\"><b>&yen;$price</b>/份</li>";
+    }
+    echo "<li class=\"product_select1\">
                 <span></span>
                 <input type='hidden' name='packageId' value='$packageId'>
                 <input type='hidden' name='isPackage' value='$isPackage'>
