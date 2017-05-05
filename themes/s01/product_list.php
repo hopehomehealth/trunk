@@ -419,6 +419,7 @@
         if (notnull($zbyHotGoodsList)) {
 //            var_dump($zbyHotGoodsList);
             foreach ($zbyHotGoodsList as $val) {
+//                echo "<pre>";
 //                var_dump($val);
                 $goodsImage = $val['goodsImage'];
                 $sku_list = get_sku_list($val['goodsId'], 5);
@@ -471,7 +472,7 @@
 
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 23px;">
+                            <dd style="padding-top: 10px;line-height: 15px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     出发城市：<span class="mr30"><?= $val['srcCity'] ?></span>
@@ -479,7 +480,7 @@
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 23px;">
+                            <dd style="padding-top: 10px;line-height: 15px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     到达城市：<span class="mr30"><?= jiequ(28, $val['disCity']) ?></span>
@@ -487,7 +488,7 @@
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 23px;">
+                            <dd style="padding-top: 10px;line-height: 15px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     行程天数：<?= $val['lineDays'] ?>天<?= $val['lineNights'] ?>晚
@@ -498,7 +499,7 @@
                             <?
                             if($val['aLiData'] != '飞猪自营' && notnull($val['skuList'])){
                                 ?>
-                                <dd style="padding-top: 10px;line-height: 23px;"><span class="ff-toh">出行日期：
+                                <dd style="padding-top: 10px;line-height: 15px;"><span class="ff-toh">出行日期：
                                         <?foreach ($val['skuList'] as $cval){
                                             ?>
                                             <?=$cval?>
@@ -509,6 +510,14 @@
                                 <?
                             }
                             ?>
+                            <!--往返交通-->
+                            <dd style="padding-top: 10px;line-height: 15px;">
+                                <? if ($val['aLiData'] != '飞猪自营' && notnull($val['goTraffic']) && notnull($val['backTraffic'])) {
+                                    ?>
+                                    往返交通：<?= $val['goTraffic']?>(出发)，<?= $val['backTraffic']?>(返回)
+                                    <?
+                                } ?>
+                            </dd>
 
                             <?/*}else{*/
                             ?><!--
@@ -526,6 +535,7 @@
                                 echo $ziyingurl;
                             } ?>" target="_blank" class="btn  btn-sm">查看详情</a>
                             <div class="count"> </a></div>
+                            <?if($val['aLiData'] == '飞猪自营'){ ?><p style="text-align: center;color: #1fcc9e;line-height: 28px;">*本数据由飞猪提供</p><? } ?>
                         </div>
                     </div>
                 </div>
