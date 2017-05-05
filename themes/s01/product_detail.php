@@ -639,24 +639,29 @@
                             if (notnull($tuijian_data)) {
                                 $zbyHotGoodsList = $tuijian_data['zbyHotGoodsList'];
                                 foreach ($zbyHotGoodsList as $val) {
-                                    if ($val['aLiData'] != '飞猪自营') $href = "/product/detail-".$val['goodsId']."-".$val['productId'].".html";else $href = $val['pcALiDetailLink'];
+//                                    if($val['aLiData'] == '') {
+                                        if ($val['aLiData'] != '飞猪自营') $href = "/product/detail-" . $val['goodsId'] . "-" . $val['productId'] . ".html"; else $href = $val['pcALiDetailLink'];
 //                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
-                                    ?>
-                                    <li>
-                                        <div class="imgbox"><a id="like-img"
-                                                               href="<?= $href;?>"
-                                                               target="_blank"><img alt="" src="<?= $val['goodsImage'] ?>"
-                                                                                    alt="<?= $val['goodsName'] ?>"></a>
-                                        </div>
-                                        <div class="tname"><a id="like-title"
-                                                              href="<?= $href;?>"
-                                                              target="_blank" title="<?= $val['goodsName']; ?>"><?= show_substr($val['goodsName'], 50) ?></a>
-                                        </div>
-                                        <div class="cYellow">&yen; <span class="font20"><?= $val['minPrice'] ?></span>
-                                            <span class="cYellow">起/人</span></div>
-                                    </li>
-                                    <?
+                                        ?>
+                                        <li>
+                                            <div class="imgbox"><a id="like-img"
+                                                                   href="<?= $href; ?>"
+                                                                   target="_blank"><img alt=""
+                                                                                        src="<?= $val['goodsImage'] ?>"
+                                                                                        alt="<?= $val['goodsName'] ?>"></a>
+                                            </div>
+                                            <div class="tname"><a id="like-title"
+                                                                  href="<?= $href; ?>"
+                                                                  target="_blank"
+                                                                  title="<?= $val['goodsName']; ?>"><?= show_substr($val['goodsName'], 50) ?></a>
+                                            </div>
+                                            <div class="cYellow">&yen; <span
+                                                        class="font20"><?= $val['minPrice'] ?></span>
+                                                <span class="cYellow">起/人</span></div>
+                                        </li>
+                                        <?
+//                                    }
                                 }
                             }
                             ?>
