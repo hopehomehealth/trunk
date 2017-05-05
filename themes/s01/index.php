@@ -427,7 +427,9 @@
                                 $c = 1;
                                 foreach ($floor_child as $key => $cval) {
                                     $floor_id = $cval['floor_id'];
+//                                    var_dump($floor_id);
                                     $floor_goods = floor_goods_list($floor_id, 6); //楼层下的产品列表，限制6条
+//                                    var_dump($floor_goods);
                                     ?>
                                     <div class="tab-content mid<?= $cval['floor_id'] ?>-type1 <? if ($c == 1) {
                                         ?>selected<?
