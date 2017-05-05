@@ -419,6 +419,7 @@
         if (notnull($zbyHotGoodsList)) {
 //            var_dump($zbyHotGoodsList);
             foreach ($zbyHotGoodsList as $val) {
+                var_dump($val);
                 $goodsImage = $val['goodsImage'];
                 $sku_list = get_sku_list($val['goodsId'], 5);
                 $goods_url = $val['pcALiDetailLink'];
@@ -470,7 +471,7 @@
 
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 32px;">
+                            <dd style="padding-top: 10px;line-height: 24px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     出发城市：<span class="mr30"><?= $val['srcCity'] ?></span>
@@ -478,7 +479,7 @@
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 32px;">
+                            <dd style="padding-top: 10px;line-height: 24px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     到达城市：<span class="mr30"><?= jiequ(22, $val['disCity']) ?></span> 
@@ -486,7 +487,7 @@
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 32px;">
+                            <dd style="padding-top: 10px;line-height: 24px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     行程天数：<?= $val['lineDays'] ?>天<?= $val['lineNights'] ?>晚
@@ -495,7 +496,18 @@
                             </dd>
 
                             <?
-                            //出行日期
+                            if($val['aLiData'] != '飞猪自营'){
+                                ?>
+                                <dd style="padding-top: 10px;line-height: 24px;"><span class="ff-toh">出行日期：
+                                        <?foreach ($val['skuList'] as $cval){
+                                            ?>
+                                            <?=$cval."&nbsp;"?>
+                                            <?
+                                        }
+                                        ?>
+                                </dd>
+                                <?
+                            }
                             ?>
 
                             <?/*}else{*/

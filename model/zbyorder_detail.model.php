@@ -66,7 +66,10 @@ $order_detail = array_iconv($order_detail);
 if ($order_detail['status'] != '0000') {
     exit($order_detail['msg']);
 }
+
 $order_detail_data = $order_detail['data'];
+//echo "<pre>";
+//var_dump($order_detail_data);
 $orderStatus = $order_detail_data['orderStatus'];
 $dataSources = $order_detail_data['dataSources'];
 
@@ -86,7 +89,7 @@ if($_GET['flag'] == 'cn'){
 
 //°´Å¥¶ÔÓ¦×´Ì¬ÅĞ¶Ï
 $st = 1;
-if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8){
+if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8 || $orderStatus == 9){
     $st = 0;
 }elseif($orderStatus == 2){
     $st = 1;
