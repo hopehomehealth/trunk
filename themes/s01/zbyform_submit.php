@@ -7,6 +7,7 @@ if(!defined('IN_CLOOTA')) {
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="gbk">
 <link rel="stylesheet" type="text/css" href="/themes/s01/images/tianxie.css">
 <script type="text/javascript" src="/themes/s01/js/menpiaoliebiao.js"></script>
 <link rel="stylesheet" type="text/css" href="/themes/s01/images/common.css">
