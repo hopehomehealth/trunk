@@ -19,7 +19,7 @@ foreach($s_liebiao as $key=>$value){
 	if($key<7){
 		$goodsName = str_replace(' ','　',$value['goodsName']) ;
 		$jiequ = jiequ($value['goodsName']);
-		echo '<li title='.utf8_to_gbk($goodsName).'>'.utf8_to_gbk($jiequ).'</li>';
+		echo '<li title='.($goodsName).'>'.($jiequ).'</li>';
 	}
 	
 } 
