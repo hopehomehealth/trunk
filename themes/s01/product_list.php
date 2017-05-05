@@ -402,10 +402,10 @@
                     <li><a id="list-f-312-1" <? if (req('hot') == 'yes'){ ?>class="select"<? } ?>
                            href="javascript:filter('hot', '<? if (req('hot') == 'yes') { ?><? } else { ?>yes<? } ?>')">推荐</a>
                     </li>
-                    <li><a id="list-f-312-2" <? if (req('col') == 'sale'){ ?>class="select"<? } ?> title="点击按销量从高到低排序"
-                           href="/zhoubian/?<?= $page_args ?>&ord=true&col=sale&sc=<?= $order_type ?>">销量<i
-                                class="icon <? if (req('sc') == 'desc') { ?>sort-up<? } else { ?>sort-down<? } ?>">
-                                &nbsp;</i></a></li>
+<!--                    <li><a id="list-f-312-2" --><?// if (req('col') == 'sale'){ ?><!--class="select"--><?// } ?><!-- title="点击按销量从高到低排序"-->
+<!--                           href="/zhoubian/?--><?//= $page_args ?><!--&ord=true&col=sale&sc=--><?//= $order_type ?><!--">销量<i-->
+<!--                                class="icon --><?// if (req('sc') == 'desc') { ?><!--sort-up--><?// } else { ?><!--sort-down--><?// } ?><!--">-->
+<!--                                &nbsp;</i></a></li>-->
                     <li><a id="list-f-312-4" <? if (req('col') == 'price'){ ?>class="select"<? } ?> title="点击按价格从低到高排序"
                            href="/zhoubian/?<?= $page_args ?>&ord=true&col=price&sc=<?= $order_type ?>">价格<i
                                 class="icon <? if (req('sc') == 'desc') { ?>sort-up<? } else { ?>sort-down<? } ?>">
@@ -435,7 +435,7 @@
                             echo $ziyingurl;
                         } else {
                             echo $goods_url;
-                        } ?>"> <img alt="<?= $val['goodsName'] ?>" src="<?= $goodsImage ?>"
+                        } ?>" target="_blank"> <img alt="<?= $val['goodsName'] ?>" src="<?= $goodsImage ?>"
                                     onerror="javascript:this.src='/themes/s01/images/lv_list_default.png' "> </a>
                         <dl class="text">
                             <dt style="width:550px"><a href="<? if ($val['aLiData'] != '飞猪自营') {
@@ -472,7 +472,7 @@
 
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 15px;">
+                            <dd style="padding-top: 10px;line-height: 13px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     出发城市：<span class="mr30"><?= $val['srcCity'] ?></span>
@@ -480,7 +480,7 @@
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 15px;">
+                            <dd style="padding-top: 10px;line-height: 13px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     到达城市：<span class="mr30"><?= jiequ(28, $val['disCity']) ?></span>
@@ -488,7 +488,7 @@
                                 } ?>
                             </dd>
 
-                            <dd style="padding-top: 10px;line-height: 15px;">
+                            <dd style="padding-top: 10px;line-height: 13px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
                                     行程天数：<?= $val['lineDays'] ?>天<?= $val['lineNights'] ?>晚
@@ -499,7 +499,7 @@
                             <?
                             if($val['aLiData'] != '飞猪自营' && notnull($val['skuList'])){
                                 ?>
-                                <dd style="padding-top: 10px;line-height: 15px;"><span class="ff-toh">出行日期：
+                                <dd style="padding-top: 10px;line-height: 13px;"><span class="ff-toh">出行日期：
                                         <?foreach ($val['skuList'] as $cval){
                                             ?>
                                             <?=$cval?>
