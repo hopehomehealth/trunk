@@ -25,7 +25,7 @@ if (!defined('IN_CLOOTA')) {
     <table width="100%" class="table">
         <thead>
         <tr>
-            <td width="100" style="text-align:right"><strong>姓 名：</strong></td>
+            <td width="120" style="text-align:right"><strong>姓 名：</strong></td>
             <td><?= $user_name ?></td>
         </tr>
         </thead>
@@ -46,21 +46,25 @@ if (!defined('IN_CLOOTA')) {
         </tr>
 
         <tr>
-            <td style="text-align:right"><strong>退款金额：</strong></td>
-            <td><?= $query_row['refund_fee'] ?></td>
+            <td style="text-align:right"><strong>订单金额：</strong></td>
+            <td><?= $query_row['order_fee'] ?></td>
+        </tr>
+        <tr>
+            <td style="text-align:right"><strong>第三方退款金额：</strong></td>
+            <td><?= $query_row['thrid_refund_amount'] ?></td>
         </tr>
         <tr>
             <td style="text-align:right"><strong>扣款金额：</strong></td>
-            <td><?= $query_row['deduct_fee'] ?></td>
+            <td><input type="text" name="cutpay" id="cutpay" class="span1"/>元</td>
         </tr>
         <tr>
             <td style="text-align:right"><strong>应退金额：</strong></td>
-            <td><input type="text" name="refundmoney" id="refund" class="span4"/>元</td>
+            <td><input type="text" name="refundmoney" id="refund" class="span1"/>元</td>
             <input type="hidden" name="orderno" value="<?= $arr['orderno'] ?>">
             <input type="hidden" name="payno" value="<?= $arr['payno'] ?>">
             <input type="hidden" name="gatewayid" value="<?= $arr['gatewayid'] ?>">
             <input type="hidden" name="totalPrice" value="<?= $arr['totalPrice'] ?>">
-            <input type="hidden" name="refund_fee" value="<?= $query_row['refund_fee'] ?>">
+            <input type="hidden" name="refund_fee" value="<?= $query_row['order_fee'] ?>">
         </tr>
         <tr>
             <td></td>

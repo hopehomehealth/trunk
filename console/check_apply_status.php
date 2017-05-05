@@ -4,6 +4,10 @@ $arr['orderno'] = $_POST['orderno'];//订单号
 $arr['security'] = md5("098f6bcd4621d373cade4e832627b4f6");//签名
 $url = $host . "/travel/interface/applyReject";//接口地址
 $fail_reason = htmlspecialchars(addslashes($_POST['reason']));// 获取管理员输入的驳回理由
+if($fail_reason == ''){
+    echo "<script>alert('理由不能为空！');history.go(-1)</script>";
+    exit();
+}
 $order_code = $arr['orderno'];
 // curl传参
 $rst = $db->api_post($url, $arr);

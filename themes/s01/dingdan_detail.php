@@ -56,7 +56,7 @@
                 <div class="orderInfo1">
                     <ul>
                         <li>订单号：<?echo $orderInfoExceptTicket['orderCode'];?></li>
-                        <li>订单状态：<?echo $orderInfoExceptTicket['orderStatusName'];?>
+                        <li>订单状态：<?echo $orderInfoExceptTicket['orderStatusName'];?>&nbsp;&nbsp;&nbsp;&nbsp;
                             <?if ($orderInfoExceptTicket['orderStatus'] == '8'){echo $orderInfoExceptTicket['refundFailReason'];}?>
                         </li>
                         <li>下单时间：<?echo $orderInfoExceptTicket['createTime'];?></li>
@@ -221,9 +221,9 @@
     <!--        17:50:50-->
     <!--        北京-邢广凯 2017/3/22 17:50:50-->
     <!-- 退款成功弹窗 -->
-    <div class="tuikuanSuccessBox" style="width: 400px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;">
-        <p style="width: 400px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?if ($require_refund['status'] != '0000'){echo $require_refund_data['failReason'];}else {echo $require_refund_data['refundCustomerInfo'];}?></p>
-        <a href="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?rstatus=<?echo $require_refund['status'];?>"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 300px;border:none;border-radius: 2px;">确定</button></a>
+    <div class="tuikuanSuccessBox" style="width: 500px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -200px;margin-top: -75px;border:solid 2px #ddd;background-color: white;">
+        <p style="width: 500px;padding-top:50px;text-align: center;font-size: 20px;color: #333;"><?if ($require_refund['status'] != '0000'){echo $require_refund_data['failReason'];}else {echo $require_refund_data['refundCustomerInfo'];}?></p>
+        <a href="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?rstatus=<?echo $require_refund['status'];?>"><button style="display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;color: white;font-size: 18px;background-color: #f60;margin:30px 20px 0 390px;border:none;border-radius: 2px;">确定</button></a>
     </div>
 
 <?}?>
@@ -239,62 +239,72 @@
 <!---->
 <?//}?>
 <!-- 退款说明信息 -->
-<!--    <form class="refundInfoCont">-->
+
 <div class="refundInfo hide">
     <div class="refundInfo_top">
-        <h3>退款申请</h3>
+        <h3 style="font-weight:bold;">退款申请</h3>
         <span class="refundInfo_close"></span>
     </div>
-    <!--            --><?//echo $nowUrl;echo $flagr;?>
-    <!--            <form  method="post"  id="refundForm" action="--><?//=$nowUrl?><!----><?//=$flagr?><!--">-->
-    <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?flag=rf">
-        <input type="hidden" name="orderCode" value="<?echo $orderCode;?>">
-        <div class="refundInfoCont1">
-            <span>退款原因：</span>
-            <select name="refundReasonCode">
-                <? foreach ($refund_reason_data as $key => $value) { ?>
-                    <option  value="<? echo $value['code']; ?>"><? echo $value['name']; ?></option>
-                <? } ?>
-            </select>
-        </div>
-        <div class="refundInfoCont2">
-            <h4>退款明细</h4>
-            <div class="orderInfo_table">
-                <div class="orderInfo_table_title">
-                    <ul>
-                        <li class="orderInfo_table_tr1">订单名称</li>
-                        <li class="orderInfo_table_tr2">订单金额</li>
-                        <li class="orderInfo_table_tr3">扣款金额</li>
-                        <li class="orderInfo_table_tr4">退款金额</li>
-                    </ul>
-                </div>
-                <div class="orderInfo_table_cont">
-                    <ul>
-                        <li class="orderInfo_table_tr1"><? echo $refund_product_data['productName']; ?></li>
-                        <li class="orderInfo_table_tr2"
-                            style="color: #ff6600;">&yen;<? echo $refund_product_data['totalFee'] ?></li>
-                        <li class="orderInfo_table_tr3">
-                            <p style="color: #ff6600;">&yen;<? echo $refund_product_data['deductFee']; ?></p>
-                            <p>&yen;<? echo $refund_product_data['deductFee']; ?>
-                                | <? echo $refund_product_data['goodsName']; ?></p>
-                            <p style="color: #bababa;">
-                                扣款说明：<? echo $refund_product_data['refundExplain']; ?></p>
-                        </li>
-                        <li class="orderInfo_table_tr4"
-                            style="color: #ff6600;">&yen;<? echo $refund_product_data['refundFee']; ?>  </li>
-                    </ul>
+    <div class="refundInfoCont">
+        <form  method="post"  id="refundForm" action="<?echo $g_self_domain;?>/menpiao/dingdan_detail-<?echo $orderCode;?>.html?flag=rf">
+            <input type="hidden" name="orderCode" value="<?echo $orderCode;?>">
+            <div class="refundInfoCont1">
+                <span>退款原因：</span>
+                <select name="refundReasonCode">
+                    <? foreach ($refund_reason_data as $key => $value) { ?>
+                        <option  value="<? echo $value['code']; ?>"><? echo $value['name']; ?></option>
+                    <? } ?>
+                </select>
+            </div>
+            <div class="refundInfoCont2">
+                <h4 style="font-weight:bold;font-size:14px;">退款明细</h4>
+                <div class="orderInfo_table">
+                    <div class="orderInfo_table_title">
+                        <ul>
+                            <li class="orderInfo_table_tr1">订单名称</li>
+                            <li class="orderInfo_table_tr2">订单金额</li>
+                            <?if($refund_product_data['deductFee'] == null && $refund_product_data['refundFee'] == null){ ?>
+                                <li class="orderInfo_table_tr2">退款说明</li>
+                            <? }else { ?>
+                                <li class="orderInfo_table_tr3">扣款金额</li>
+                                <li class="orderInfo_table_tr4">退款金额</li>
+                            <? } ?>
+                        </ul>
+                    </div>
+                    <div class="orderInfo_table_cont">
+                        <ul>
+                            <li class="orderInfo_table_tr1"><? echo $refund_product_data['productName']; ?></li>
+                            <li class="orderInfo_table_tr2"
+                                style="color: #ff6600;">&yen;<? echo $refund_product_data['totalFee'] ?></li>
+                            <?if($refund_product_data['deductFee'] == null && $refund_product_data['refundFee'] == null) { ?>
+                                <li class="orderInfo_table_tr2"
+                                    style="color: #ff6600;">具体的退款规则会有工作人员与您说明</li>
+                            <? } else { ?>
+                                <li class="orderInfo_table_tr3">
+                                    <p style="color: #ff6600;">&yen;<? echo $refund_product_data['deductFee']; ?></p>
+                                    <p>&yen;<? echo $refund_product_data['deductFee']; ?>
+                                        | <? echo $refund_product_data['goodsName']; ?></p>
+                                    <p style="color: #bababa;">
+                                        扣款说明：<? echo $refund_product_data['refundExplain']; ?></p>
+                                </li>
+                                <li class="orderInfo_table_tr4"
+                                    style="color: #ff6600;">&yen;<? echo $refund_product_data['refundFee']; ?>  </li>
+                            <? } ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </form>
+        <div class="refundInfoCont3">
+            <button class="tijiao" onclick="refund_commit()">提交</button>
+            <!--                    <a href="--><?//=$nowUrl?><!----><?//=$flagr?><!--"><button class="tijiao">提交</button></a>-->
+            <button class="quxiao">取消</button>
         </div>
-    </form>
-    <div class="refundInfoCont3">
-        <button class="tijiao" onclick="refund_commit()">提交</button>
-        <!--                    <a href="--><?//=$nowUrl?><!----><?//=$flagr?><!--"><button class="tijiao">提交</button></a>-->
-        <button class="quxiao">取消</button>
     </div>
 </div>
-</div>
-<!--    </form>-->
+
+
+
 <!--  foot  start -->
 <?include('foot.php');?>
 <!--  foot  end -->

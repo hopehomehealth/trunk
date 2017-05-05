@@ -1,6 +1,6 @@
 <?
 $db->check_cookie($loginUrl, $host);
-$goodsName = req('goodsName');
+$goodsName = urldecode(req('goodsName'));
 $payPrice = req('payPrice');
 $orderCode = req('orderCode');
 $payTime = req('payTime');

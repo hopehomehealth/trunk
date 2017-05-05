@@ -456,7 +456,7 @@
                             ?>
                             <dd>
                                 <?
-                                if (notnull($val['itemInfo'])) {
+                                if (notnull($val['itemInfo']) && $val['aLiData'] == '·ÉÖí×ÔÓª') {
                                     foreach ($val['itemInfo'] as $key => $value) { ?>
                                         <?= $value['text'] ?>:<span class="mr30"
                                                                     title="<? if (mb_strlen($value['desc'], 'gbk') > 27) echo $value['desc']; ?>"><? if (mb_strlen($value['desc'], 'gbk') > 27 && $valnum > 23) echo jiequ(22, $value['desc']); else echo $value['desc']; ?></span>

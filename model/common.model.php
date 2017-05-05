@@ -381,6 +381,7 @@ AND sku.lv_product_status = 'true'
 AND sku.departdate >= CURDATE()
 AND td.`site_id` = '$g_siteid'
 AND td.goods_id IS NOT NULL
+AND img.filetype = '2'
 GROUP BY
 	td.goods_id 
 UNION
