@@ -43,7 +43,6 @@ if($taocan['isPackage'] == 'true'){//按份卖
 }else{//按人卖
     
     $post['roomCount'] = req('roomCount');//'0';//
-
 }
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
