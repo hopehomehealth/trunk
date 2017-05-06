@@ -41,7 +41,7 @@ if(!defined('IN_CLOOTA')) {
         <div class="zbyOrder_main_title">
             <img src="/themes/s01/images/zby_fillInOrder.jpg">
         </div>
-        <form name="write_form" id="write_form" method="post" action="http://<?=$getUrl?>&flag=check">
+        <form name="write_form" id="write_form" method="post" action="<?=$g_self_domain?>/zhoubianyou/zbyform_submit-1.html?departDate=<?=$tc['departDate']?>&lvProductId=<?=$tc['lvProductId']?>&packageId=<?=$tc['packageId']?>&flag=check">
         <? if($is_package == 'false'){ ?>
             <div class="zbyOrder_main1">
             <br>游玩时间：<?=$tc['departDate']?>
@@ -65,13 +65,15 @@ if(!defined('IN_CLOOTA')) {
                                 <td id="adultPrice">
                                     <?=$taocan['adultPrice']?>
                                 </td>
-                                <td>
+                                <td><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
                                     <span class="caculate" onselectstart="return false">
                                         <span class="subtract">-</span>
-                                        <span class="counts"><?=$post['adultNum']?></span>
-                                        <input type="hidden" name="adultNum" class="Num" id="adultNum">
+                                        <span class="counts" id='adultNum'><?=$post['adultNum']?></span>
                                         <span class="add">+</span>
                                     </span>
+                                    <?}else{?>
+                                    <span id='adultNum'><?=$post['adultNum']?></span>
+                                    <?}?>
                                 </td>
                             </tr>
                             <tr>
@@ -79,22 +81,37 @@ if(!defined('IN_CLOOTA')) {
                                 <td id="kidPrice">
                                     <?=$taocan['kidPrice']?>
                                 </td>
-                                <td>
+                                <td><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
                                     <span class="caculate" onselectstart="return false">
                                         <span class="subtract">-</span>
-                                        <span class="counts"><?=$post['kidNum']?></span>
-                                        <input type="hidden" name="kidNum" class="Num" id="kidNum">
+                                        <span class="counts" id='kidNum'><?=$post['kidNum']?></span>
                                         <span class="add">+</span>
                                     </span>
+                                    <?}else{?>
+                                    <span id='kidNum'><?=$post['kidNum']?></span>
+                                    <?}?>
                                 </td>
                             </tr>
                             </tbody>
                             <thead>
                             <tr>
-                                <td>房差
+                                <td title='因旅游过程中的住宿安排是两个床位的标准间，团费中是根据1名成人占1张床计算的。如出游人数（成人）为单数时，需要补足另外一个人床位的费用。如在实际旅游过程中能够安排3人间或同性拼房，所付房差费用回团后将根据实际发生情况减免退回。'>房差
                                 </td>
-                                <td><?=   $_GET['roomPrice']?></td>
-                                <td><?=$post['roomCount']?></td>
+                                <td id="diffPrice"><?=$diffPrice?></td>
+                                <td class="fangcha"><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+                                <select id='diffPriceNum' onchange='get_price()'>
+                                <?foreach ($fangcha as $val) {?>
+                                <?if($val==$post['roomCount']){?>
+                                <option value='<?=$val?>' selected="selected"><?=$val?></option>
+                                <?}else{?>
+                                <option value='<?=$val?>'><?=$val?></option>
+                                <?}?>
+                                <?}?>
+                                </select>
+                                <?}else{?>
+                                <?=$post['roomCount']?>
+                                <?}?>
+                                </td>
                             </tr>
                             </thead>
                         </table>
@@ -102,7 +119,106 @@ if(!defined('IN_CLOOTA')) {
                     </div>
                 </div>
             </div>
+            <script type="text/javascript">
+
+            $(document).ready(function(){
+                                var adds = $('.add');
+                for (var i = 0; i < adds.length; i++) {
+                    adds[i].index = i;
+                    adds[i].onclick = function(){
+                        var count1 = $('.counts').eq(this.index).html();
+                        count1++;
+                        $('.counts').eq(this.index).html(count1);
+                        $('.Num').eq(this.index).val(count1);
+                        var adultNum = $('#adultNum').html();//成人数
+                        var adultPrice = $('#adultPrice').html();//成人价
+                        var roomMax = <?=$roomMax?>;//房间的最大允许入住数量
+                        var goodsType = <?=$_GET['goodsType']?>;//当前产品的业务类型(自由行、跟团游)
+                        var isPackage = <?=$is_package?>;
+                        var diffPrice = <?=$taocan['diffPrice']?>;//房差价
+                        var kidNum = $('#kidNum').html();//儿童数
+                        var kidPrice = $('#kidPrice').html();//儿童价
+                         $.ajax({
+                            type: "POST",
+                            url: "<?=$g_self_domain?>/fangcha/",
+                            data: {
+                                "adultNum": adultNum,
+                                "roomMax": roomMax,
+                                "goodsType": goodsType,
+                                "isPackage": isPackage,
+                                "diffPrice": diffPrice
+                            },
+                            async: false, 
+                            success: function (data) {
+                                 $('.fangcha').html("");
+                                $('.fangcha').html(data);
+                                //$('.fangcha').show();
+                                var diffPriceNum = $('#diffPriceNum').val();
+                                var zongjia = adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
+                                $("#orderPrice").html(zongjia);
+                            }
+                        });
+                    }
+                }
+                var subtracts = $('.subtract');
+                for (var i = 0; i < subtracts.length; i++) {
+                    subtracts[i].index = i;
+                    subtracts[i].onclick = function(){
+                        var count1 = $('.counts').eq(this.index).html();
+                        if(count1!=0){
+                            count1--;
+                            $('.counts').eq(this.index).html(count1);
+                            $('.Num').eq(this.index).val(count1);
+                        var adultNum = $('#adultNum').html();//成人数
+                        var adultPrice = $('#adultPrice').html();//成人价
+                        var roomMax = <?=$roomMax?>;//房间的最大允许入住数量
+                        var goodsType = <?=$_GET['goodsType']?>;//当前产品的业务类型(自由行、跟团游)
+                        var isPackage = <?=$is_package?>;
+                        var diffPrice = <?=$taocan['diffPrice']?>;//房差价
+                        var kidNum = $('#kidNum').html();//儿童数
+                        var kidPrice = $('#kidPrice').html();//儿童价
+                         $.ajax({
+                            type: "POST",
+                            url: "<?=$g_self_domain?>/fangcha/",
+                            data: {
+                                "adultNum": adultNum,
+                                "roomMax": roomMax,
+                                "goodsType": goodsType,
+                                "isPackage": isPackage,
+                                "diffPrice": diffPrice
+                            },
+                            async: true,
+                            success: function (data) {
+                                 $('.fangcha').html("");
+                                $('.fangcha').html(data);
+                                $('.fangcha').show();
+                                var diffPriceNum = $('#diffPriceNum').val();
+                                
+                                var zongjia = adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
+                                $("#orderPrice").html(zongjia);
+                            }
+                        });
+                        }
+                    };
+                }
+
+
+            });
+               
+            function get_price() {
+
+                var adultPrice = $('#adultPrice').html();//成人价
+                var diffPrice = <?=$taocan['diffPrice']?>;//房差价
+                var kidNum = $('#kidNum').html();//儿童数
+                var kidPrice = $('#kidPrice').html();//儿童价
+                var diffPriceNum = $('#diffPriceNum').val();
+                var adultNum = $('#adultNum').html();//成人数
+                zongjia = adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
+                $("#orderPrice").html(zongjia);
+            }
+           </script>
             <?}else{?>
+
             <div class="zbyOrder_main11">
                 <div class="zbyOrder_main1_title" title='<?=$taocan['goodsName']?>'>
                     <?=jiequ(52,$taocan['goodsName'])?>
@@ -123,7 +239,16 @@ if(!defined('IN_CLOOTA')) {
                                 <td  onclick="changeTR()" style="cursor:pointer;" onselectstart="return false"><?=$taocan['packageName']?>&nbsp;&nbsp;<span id="change" class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
                                 <td><?=$tc['departDate']?>
                                 <td>
-                                    <?=$post['packageNum']?>
+                                <?//if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+                                <span class="caculate" onselectstart="return false">
+                                    <span class="subtract">-</span>
+                                    <span class="counts" id='packageNum'><?=$packageNum?></span>
+                                    <span class="add">+</span>
+                                </span>
+                                <?//}else{?>
+                                <!-- <span id='packageNum'><?=$packageNum?></span> -->
+                                <?//}?>
+                                    
                                 </td>
                             </tr>
                             </tbody>
@@ -138,6 +263,43 @@ if(!defined('IN_CLOOTA')) {
                 </div>
             </div>
             <script type="text/javascript">
+            $(document).ready(function(){
+
+                var adds = $('.add');
+                for (var i = 0; i < adds.length; i++) {
+                    adds[i].index = i;
+                    adds[i].onclick = function(){
+                        var count1 = $('.counts').eq(this.index).html();
+                        count1++;
+                        $('.counts').eq(this.index).html(count1);
+                        $('.Num').eq(this.index).val(count1);
+                        var packageNum = $('#packageNum').html();
+                        var onePrice = <?=$onePrice?>;
+                        var zongjia = packageNum*onePrice;
+                        $("#orderPrice").html(zongjia);
+                    };
+                }
+                var subtracts = $('.subtract');
+                for (var i = 0; i < subtracts.length; i++) {
+                    subtracts[i].index = i;
+                    subtracts[i].onclick = function(){
+                        var count1 = $('.counts').eq(this.index).html();
+                        if(count1!=0){
+                            count1--;
+                            $('.counts').eq(this.index).html(count1);
+                            $('.Num').eq(this.index).val(count1);
+                            var packageNum = $('#packageNum').html();
+                            var onePrice = <?=$onePrice?>;
+                            var zongjia = packageNum*onePrice;
+                            $("#orderPrice").html(zongjia);
+                        }
+                    };
+                }
+
+
+            });
+
+            
                 function changeTR()  
                 {  
                     var tr1 = document.getElementById("sample");  
@@ -489,12 +651,17 @@ if(!defined('IN_CLOOTA')) {
                 </div>
                 <?}?>
             </div>
-        
+        <input type="hidden" id="payPricei" name="payPrice" value="">
+        <input type="hidden" id="adultNumi" name="adultNum" value="">
+        <input type="hidden" id="childNumi" name="childNum" value="">
+        <input type="hidden" id="roomCounti" name="roomCount" value="">
+        <input type="hidden" id="packageNumi" name="packageNum" value="">
+
         </form>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
-                    <div class="zbyOrder_main31_left">应付总价：￥<?=$post['payPrice']?></div>
-
+                    <div class="zbyOrder_main31_left">应付总价：￥<span id="orderPrice"><?=$post['payPrice']?></span></div>
+                    
                     <button class="zbyOrder_main31_right" onclick = "check_form()">同意以下条款，去付款</button>
 
                 </div>
@@ -518,38 +685,6 @@ if(!defined('IN_CLOOTA')) {
 </body>
 <script type="text/javascript" src="/themes/s01/js/jquery.js"></script>
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-    var adds = $('.add');
-    for (var i = 0; i < adds.length; i++) {
-        adds[i].index = i;
-        adds[i].onclick = function(){
-            var count1 = $('.counts').eq(this.index).html();
-            count1++;
-            $('.counts').eq(this.index).html(count1);
-            $('.Num').eq(this.index).val(count1);
-            $()
-
-        };
-    }
-    var subtracts = $('.subtract');
-    for (var i = 0; i < subtracts.length; i++) {
-        subtracts[i].index = i;
-        subtracts[i].onclick = function(){
-            var count1 = $('.counts').eq(this.index).html();
-            if(count1!=0){
-                count1--;
-                $('.counts').eq(this.index).html(count1);
-                $('.Num').eq(this.index).val(count1);
-            }
-        };
-    }
-
-
-});
-
-</script>
 <script type="text/javascript">
 
 
@@ -614,12 +749,21 @@ $('#mobile').blur(function(){
 
 function check_form(){
     if($('.zbyOrder_main32 input').eq(0).attr('checked')){
-    // alert(buyerName_flag+'----'+buyerPhone_flag+'----'+youwanName_flag+'----'+youwanPhone_flag+'----'+youwanIdNum_flag);
+        var kidNum = $('#kidNum').html();//儿童数
+        var diffPriceNum = $('#diffPriceNum').val();
+        var adultNum = $('#adultNum').html();//成人数
+        var zongjia = $('#orderPrice').html();
+        var packageNum = $('#packageNum').html();
+        $('#payPricei').val(zongjia);
+        $('#adultNumi').val(adultNum);
+        $('#childNumi').val(kidNum);
+        $('#roomCounti').val(diffPriceNum);
+        $('#packageNumi').val(packageNum);//alert(456);
         document.getElementById("write_form").submit();
     }
 
 }
-
+//动态创建
 
 </script>
 <?
