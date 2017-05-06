@@ -246,7 +246,7 @@ if(!defined('IN_CLOOTA')) {
                                     <span class="add">+</span>
                                 </span>
                                 <?}else{?>
-                                <span id='packageNum'><?=$packageNum?></span>
+                                <span id='packageNum'><?=$packageNum?></span> 
                                 <?}?>
                                     
                                 </td>
