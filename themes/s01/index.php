@@ -507,6 +507,289 @@
                                                     }
                                                 }
                                             ?>
+                                            <!--//写死的周边游产品图片以及链接-->
+                                            <!--写死的周边游产品图片以及链接-->
+                                            <? if ($cval['floor_id'] == '5') { ?>
+                                                <!--1-->
+                                                <li><a href="https://items.fliggy.com/item.htm?spm=181.7621407.a1z9b.428.6tKjpB&id=528929624315&scm=20140635.1_1_6.0.0b83e08a14906890478406199e&t_trace_id=0b83e08a14906890478406199e
+" target="_blank" title="八达岭长城">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/badalingchangcheng.png"
+                                                                    alt="八达岭长城"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">八达岭长城</div>
+                                                            <div class="gray-a">北京一日游 八达岭长城一日游 纯玩旅游团</div>
+                                                            <div class="yellow-a">￥<span class="snum">69</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--2-->
+                                                <li>
+                                                    <a href="https://items.fliggy.com/item.htm?spm=181.7621407.a1z9b.431.6tKjpB&id=44649618108&scm=20140635.1_1_7.0.0b83e08a14906890478406199e&t_trace_id=0b83e08a14906890478406199e"
+                                                       target="_blank" title="颐和园">
+                                                        <div class="imgbox"><img src="/themes/s01/images/yiheyuan.png"
+                                                                                 alt="颐和园"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">颐和园</div>
+                                                            <div class="gray-a">北京一日游八达岭长城一日游颐和园 送升旗</div>
+                                                            <div class="yellow-a">￥<span class="snum">159</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--3-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.463.6tKjpB&id=531026050731&scm=20140635.1_1_13.0.0b83e08a14906890478406199e&t_trace_id=0b83e08a14906890478406199e
+" target="_blank" title="慕田峪长城">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/mutianyuchangcheng.png"
+                                                                    alt="慕田峪长城"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">慕田峪长城</div>
+                                                            <div class="gray-a">北京慕田峪长城一日游纯玩无购物跟团游</div>
+                                                            <div class="yellow-a">￥<span class="snum">159</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--4-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.463.6tKjpB&id=531026050731&scm=20140635.1_1_13.0.0b83e08a14906890478406199e&t_trace_id=0b83e08a14906890478406199e
+" target="_blank" title="古北水镇">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/gubeishuizhen.png" alt="古北水镇">
+                                                        </div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">古北水镇</div>
+                                                            <div class="gray-a">【古北水镇一日游】长城温泉深度旅游北京1日旅游</div>
+                                                            <div class="yellow-a">￥<span class="snum">318</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--5-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.703.6tKjpB&id=526504368607&scm=20140635.1_1_21.0.0b83de2d14906895967614517e&t_trace_id=0b83de2d14906895967614517e
+" target="_blank" title="北京杜莎">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/beijingdusha.png" alt="北京杜莎">
+                                                        </div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">北京杜莎</div>
+                                                            <div class="gray-a">北京一日游专线 故宫+杜莎夫人蜡像馆+天安门+前门+王府井+纯玩</div>
+                                                            <div class="yellow-a">￥<span class="snum">99</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--6-->
+
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.778.6tKjpB&id=45414606647&scm=20140635.1_1_36.0.0b83de2d14906895967614517e&t_trace_id=0b83de2d14906895967614517e"
+                                                       target="_blank" title="故宫">
+                                                        <div class="imgbox"><img src="/themes/s01/images/gugong1.png"
+                                                                                 alt="故宫"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">故宫</div>
+                                                            <div class="gray-a">
+                                                                北京旅游北京二日游纯玩跟团游 北京2天旅游团长城故宫
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">499</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <?
+                                            } elseif ($cval['floor_id'] == '14') { ?>
+                                                <!--7-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.3.T51dTF&id=45110960475&scm=20140635.1_1_1.0.0bfb814814906904437531817e&t_trace_id=0bfb814814906904437531817e"
+                                                       target="_blank" title="黄鹤楼">
+                                                        <div class="imgbox"><img src="/themes/s01/images/huanghelou.png"
+                                                                                 alt="黄鹤楼"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">黄鹤楼</div>
+                                                            <div class="gray-a">
+                                                                武汉一日游纯玩市区跟团含汉秀剧场黄鹤楼门票东湖
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">138</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--8-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.18.T51dTF&id=545785619630&scm=20140635.1_1_4.0.0bfb814814906904437531817e&t_trace_id=0bfb814814906904437531817e"
+                                                       target="_blank" title="木兰云雾山">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/mulanyunwushan.png" alt="木兰云雾山">
+                                                        </div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">木兰云雾山</div>
+                                                            <div class="gray-a">
+                                                                木兰云雾山休闲郊游一日游 可定云雾山门票 木兰云雾山门票赏花
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">60</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--9-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.38.T51dTF&id=528630775345&scm=20140635.1_1_8.0.0bfb814814906904437531817e&t_trace_id=0bfb814814906904437531817e"
+                                                       target="_blank" title="清凉寨">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/qingliangzhai.png" alt="清凉寨">
+                                                        </div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">清凉寨</div>
+                                                            <div class="gray-a">
+                                                                【黄陂一日游8选1】木兰天池草原锦里沟清凉寨云雾山一日游
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">50</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--10-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.3.vgPEi6&id=44274589956&scm=20140635.1_1_1.0.0b83e04514906911042287688e&t_trace_id=0b83e04514906911042287688e"
+                                                       target="_blank" title="葛洲坝">
+                                                        <div class="imgbox"><img src="/themes/s01/images/gezhouba.png"
+                                                                                 alt="葛洲坝"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">葛洲坝</div>
+                                                            <div class="gray-a">
+                                                                宜昌旅游 两坝一峡一日游交运豪华游轮船票过葛洲坝船闸
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">78</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--11-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.13.vgPEi6&id=37110334661&scm=20140635.1_1_3.0.0b83e04514906911042287688e&t_trace_id=0b83e04514906911042287688e"
+                                                       target="_blank" title="清江画廊1">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/qingjianghualang1.png"
+                                                                    alt="清江画廊1"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">清江画廊1</div>
+                                                            <div class="gray-a">
+                                                                宜昌旅游 交运景区直通车清江画廊跟团一日游含门票船票往返车费
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">50</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--12-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.233.vgPEi6&id=543053186112&scm=20140635.1_1_7.0.0b83e04514906912787433603e&t_trace_id=0b83e04514906912787433603e
+" target="_blank" title="清江画廊">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/qingjianghualang.png"
+                                                                    alt="清江画廊"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">清江画廊</div>
+                                                            <div class="gray-a">
+                                                                长阳清江国际丽景酒店+宜昌清江画廊成人票（A线，含船票）
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">373</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <?
+                                            } elseif ($cval['floor_id'] == '4') { ?>
+                                                <!--13-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.33.43DsrB&id=532044128001&scm=20140635.1_1_7.0.0b802c5c14906914954677263e&t_trace_id=0b802c5c14906914954677263e"
+                                                       target="_blank" title="伪满皇宫博物馆">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/weimanhuanggongbowuguan.png"
+                                                                    alt="伪满皇宫博物馆"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">伪满皇宫博物馆</div>
+                                                            <div class="gray-a">
+                                                                吉林长春周边游伪满皇宫博物馆旧址一1日游纯玩跟团游送东北特产
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">220</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--14-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.8.4NjVZK&id=536294058384&scm=20140635.1_1_2.0.0b802c5c14906918695035085e&t_trace_id=0b802c5c14906918695035085e"
+                                                       target="_blank" title="望天鹅景区">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/wangtianejingqu.png"
+                                                                    alt="望天鹅景区"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">望天鹅景区</div>
+                                                            <div class="gray-a">
+                                                                吉林长白山十五道沟望天鹅景区松江河万达早去晚回汽车往返一日游
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">249</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--15-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.13.4NjVZK&id=544567873671&scm=20140635.1_1_3.0.0b802c5c14906918695035085e&t_trace_id=0b802c5c14906918695035085e"
+                                                       target="_blank" title="长白山天池">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/changbaishantianchi.png"
+                                                                    alt="长白山天池"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">长白山天池</div>
+                                                            <div class="gray-a">
+                                                                长白山北坡一日跟团游 优秀导游讲解 全程无购物
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">379</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--16-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.18.4NjVZK&id=541652740680&scm=20140635.1_1_4.0.0b802c5c14906918695035085e&t_trace_id=0b802c5c14906918695035085e"
+                                                       target="_blank" title="长白山瀑布">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/changbaishanpubu.png"
+                                                                    alt="长白山瀑布"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">长白山瀑布</div>
+                                                            <div class="gray-a">
+                                                                吉林长白山北坡景区一日游 长白山瀑布绿渊潭长白山天池
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">220</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--17-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.28.4NjVZK&id=525257146306&scm=20140635.1_1_6.0.0b802c5c14906918695035085e&t_trace_id=0b802c5c14906918695035085e"
+                                                       target="_blank" title="长白山老里克湖">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/changbaishanlaolikehu.png"
+                                                                    alt="长白山老里克湖"></div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">长白山老里克湖</div>
+                                                            <div class="gray-a">
+                                                                长白山老里克湖门票、1日跟团游
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">65</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--18-->
+                                                <li><a href="https://items.fliggy.com/item.htm?
+spm=181.7621407.a1z9b.63.4NjVZK&id=37222329442&scm=20140635.1_1_13.0.0b802c5c14906918695035085e&t_trace_id=0b802c5c14906918695035085e"
+                                                       target="_blank" title="北方巴厘岛">
+                                                        <div class="imgbox"><img
+                                                                    src="/themes/s01/images/beifangbalidao.png" alt="北方巴厘岛">
+                                                        </div>
+                                                        <div class="li-txt">
+                                                            <div class="gray-b">北方巴厘岛</div>
+                                                            <div class="gray-a">
+                                                                吉林长春—北方巴厘岛一日游-亲子游-夏日旅游 清凉夏季 温泉
+                                                            </div>
+                                                            <div class="yellow-a">￥<span class="snum">136</span>起</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <?
+                                            } ?>
 
 
                                         </ul>
@@ -516,7 +799,7 @@
                                     $c++;
                                 }
 
-                                //写死的周边游产品图片以及链接
+
 
                             }
                             ?>
