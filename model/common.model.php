@@ -357,7 +357,7 @@ function floor_goods_list($floor_id, $limit=''){
 	}
 
 	// 已加入产品
-//	$sql = "SELECT b.* FROM `t_goods_floor_goods` a, `t_goods_thread` b WHERE a.`site_id`='$g_siteid' AND a.`goods_id`=b.`goods_id` AND a.`floor_id`='$floor_id' ORDER BY a.`goods_id` ASC $ler ";
+
 
 //    $sql = "SELECT m.* FROM (SELECT
 //    a.order_id AS order_id,
@@ -390,42 +390,42 @@ function floor_goods_list($floor_id, $limit=''){
 //		tg.goods_name AS goods_name,
 //		tg.goods_id AS goods_id,
 //		tg.goods_type AS goods_type,
-//		'' AS lv_scenic_id,
+//		tg.lv_product_id AS lv_scenic_id,
 //		tg.min_price AS price,
 //		tg.goods_image AS image
 //
 //	FROM
 //		t_goods_floor_goods tf
 //	LEFT JOIN t_goods_thread tg ON tg.goods_id = tf.goods_id
+//	LEFT JOIN t_goods_sku sku1 ON sku1.goods_id = tg.lv_product_id
+//    LEFT JOIN t_goods_image img1 ON img1.lv_product_id = tg.lv_product_id
 //	WHERE
 //		tf.site_id = '$g_siteid' AND tf.`floor_id` = '$floor_id' AND tg.`site_id` = '$g_siteid' AND tg.goods_id IS NOT NULL
 //) m WHERE m.price <> 0 ORDER BY m.`order_id` ASC $ler";
 
-    $sql = "SELECT m.* FROM (SELECT
+    $sql = "SELECT m.* FROM (
+SELECT
     a.order_id AS order_id,
 	td.goods_name AS goods_name,
 	td.lv_product_id AS goods_id,
 	td.goods_type AS goods_type,
 	td.lv_scenic_id AS lv_scenic_id,
-	MIN(sku.lv_b2b_price) AS price,
-	img.lv_img_url AS image
+	td.min_price AS price,
+	td.goods_image AS image
 	
 FROM
 	`t_goods_floor_goods` a
 LEFT JOIN `t_goods_thread` td ON a.`goods_id` = td.`goods_id`
-LEFT JOIN t_goods_sku sku ON sku.goods_id = td.lv_product_id
-LEFT JOIN t_goods_image img ON img.lv_product_id = td.lv_product_id
 WHERE
 	a.`site_id` = '$g_siteid'
 AND a.`floor_id` = '$floor_id'
-AND sku.lv_good_status = 'true'
-AND sku.lv_product_status = 'true'
-AND sku.departdate >= CURDATE()
 AND td.`site_id` = '$g_siteid'
 AND td.goods_id IS NOT NULL
-AND img.filetype = '2'
+AND td.serach_flag = 1 
+AND td.goods_type = 4
 GROUP BY
-	td.goods_id 
+	td.goods_id
+ 
 UNION
 	SELECT
 	    tf.order_id AS order_id,
@@ -435,17 +435,14 @@ UNION
 		tg.lv_product_id AS lv_scenic_id,
 		tg.min_price AS price,
 		tg.goods_image AS image
-		
 	FROM
 		t_goods_floor_goods tf
 	LEFT JOIN t_goods_thread tg ON tg.goods_id = tf.goods_id
-	LEFT JOIN t_goods_sku sku1 ON sku1.goods_id = tg.lv_product_id
-    LEFT JOIN t_goods_image img1 ON img1.lv_product_id = tg.lv_product_id
 	WHERE
 		tf.site_id = '$g_siteid' AND tf.`floor_id` = '$floor_id' AND tg.`site_id` = '$g_siteid' AND tg.goods_id IS NOT NULL
-) m WHERE m.price <> 0 ORDER BY m.`order_id` ASC $ler";
-
-//	var_dump($sql);
+		AND tg.goods_zone = 1 AND tg.serach_flag = 1
+) m WHERE m.price <> 0 ORDER BY m.`order_id` ASC $ler;";
+//	echo $sql;
 	return $db->get_all($sql);
 }
 
