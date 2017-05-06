@@ -243,7 +243,7 @@ if($g_config['site_notice']!='' && $is_index==true){
 <script src="/ajax/jquery-1.7.2.js"></script>
 <script src="/themes/s01/images/common.js" charset="gbk"></script>
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
-<script language="javascript">
+<!-- <script language="javascript">
     var cityObj = {"HOT":{"index":[],"\u534e\u4e1c":[{"key":"SHA","val":"…œ∫£","PY":"SHANGHAI","JP":"SH"}],"\u534e\u5317":[{"key":"PEK","val":"\u5317\u4eac","PY":"BEIJING","JP":"BJ"},{"key":"TSN","val":"\u5929\u6d25","PY":"TIANJIN","JP":"TJ"}],"\u534e\u5357":[{"key":"CAN","val":"\u5e7f\u5dde","PY":"GUANGZHOU","JP":"GZ"},{"key":"SZX","val":"\u6df1\u5733","PY":"SHENZHEN","JP":"SZ"}],"\u897f\u5357":[{"key":"CKG","val":"\u91cd\u5e86","PY":"CHONGQING","JP":"CQ"}]},"A":{"B":[{"key":"PEK","val":"\u5317\u4eac","PY":"BEIJING","JP":"BJ"}],"C":[{"key":"CKG","val":"\u91cd\u5e86","PY":"CHONGQING","JP":"CQ"}],"G":[{"key":"CAN","val":"\u5e7f\u5dde","PY":"GUANGZHOU","JP":"GZ"}]},"N":{"S":[{"key":"SHA","val":"\u4e0a\u6d77","PY":"SHANGHAI","JP":"SH"},{"key":"SZX","val":"\u6df1\u5733","PY":"SHENZHEN","JP":"SZ"}],"T":[{"key":"TSN","val":"\u5929\u6d25","PY":"TIANJIN","JP":"TJ"}]}};
     var now_city="SZX"; 
 
@@ -251,4 +251,4 @@ if($g_config['site_notice']!='' && $is_index==true){
         header.init();
         rightSide.init();
     });
-</script>
+</script> -->
