@@ -44,8 +44,9 @@ if(!defined('IN_CLOOTA')) {
 				<td><strong>支付方式</strong></td> 
 				<td><strong>状态</strong></td> 
 				<td width="50"><strong>详情</strong></td>
+                <td width="50"><strong>操作</strong></td>
 			</tr>  
-		<?  
+		<?
 		foreach ($query_rows as $val){   
 			// 订单状态
 			$state = $val['state'];
@@ -125,7 +126,32 @@ if(!defined('IN_CLOOTA')) {
 
 				<td>
 					<a href="<?=url('order_detail.php')?>&order_code=<?=$val['order_code']?>" target="_top" class="btn btn-small btn-info">详情</a> 
-				</td> 
+				</td>
+                <? if ($val['goods_type'] == '4') { ?>
+                    <? if ($val['data_sources'] == '1') { ?>
+                        <? if ($val['flag'] !== '2') { ?>
+                            <span
+                                    onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                    class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                        <? } ?>
+                    <? } else { ?>
+                        <? if ($val['third_refund_status'] == '2' && $val['flag'] !== '2') { ?>
+                            <span
+                                    onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                    class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                        <? } ?>
+                    <? } ?>
+                <? } else if ($val['goods_type'] == '1') { ?>
+                    <? if ($val['state'] == '9') { ?>
+                        <span
+                                onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                class="btn btn-info btn-small" style="cursor:pointer">退款</span>
+                        <span
+                                onclick="dialog_edit('./?cmd=<?= base64_encode('check_apply_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
+                                class="btn btn-info btn-small" style="cursor:pointer">驳回</span>
+                    <? } ?>
+                <? } ?>
+                </td>
 			</tr> 
 			<?}?>
 		</table>  
