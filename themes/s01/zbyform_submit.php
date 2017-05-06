@@ -239,15 +239,15 @@ if(!defined('IN_CLOOTA')) {
                                 <td  onclick="changeTR()" style="cursor:pointer;" onselectstart="return false"><?=$taocan['packageName']?>&nbsp;&nbsp;<span id="change" class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
                                 <td><?=$tc['departDate']?>
                                 <td>
-                                <?//if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+                                <?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
                                 <span class="caculate" onselectstart="return false">
                                     <span class="subtract">-</span>
                                     <span class="counts" id='packageNum'><?=$packageNum?></span>
                                     <span class="add">+</span>
                                 </span>
-                                <?//}else{?>
-                                <!-- <span id='packageNum'><?=$packageNum?></span> -->
-                                <?//}?>
+                                <?}else{?>
+                                <span id='packageNum'><?=$packageNum?></span>
+                                <?}?>
                                     
                                 </td>
                             </tr>
