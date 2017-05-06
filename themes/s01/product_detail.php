@@ -771,8 +771,8 @@
             adultNum = $('#adult_num').val();
             kidNum = $('#kid_num').val();
             diffPriceNum = $('#diffPrice').val();
-            var zongjia = "&yen;";
-            zongjia += adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
+            //var zongjia = "&yen;";
+            zongjia = adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
             $("#orderPrice").html(zongjia);
         }
     }
