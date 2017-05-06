@@ -24,6 +24,7 @@ if(!defined('IN_CLOOTA')) {
 				<option value="3" <?if(req('state')=='3'){?>selected<?}?>>待完成</option>
 				<option value="4" <?if(req('state')=='4'){?>selected<?}?>>已完成</option>
 				<option value="5" <?if(req('state')=='5'){?>selected<?}?>>已取消</option>
+				<option value="9" <?if(req('state')=='9'){?>selected<?}?>>审核未通过</option>
 			</select>
 
 			<input type="image" src="static/image/find.gif" class="input_img"/>  
