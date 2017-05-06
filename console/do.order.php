@@ -87,7 +87,26 @@ if($cmd == 'order_confirm'){
 
 	$url = "./?cmd=".base64_encode("order_detail.php").'&order_code='.$order_code;
 	gourl($url);
-} 
+}
+
+//审核未通过
+if($cmd == 'order_status'){
+    $order_code = req('order_code');
+    $order_status = req('order_status');
+    //调接口(确认)
+    $md5Str = $order_code."#".$order_status;
+    $md5Str = md5($md5Str);//签名
+    $url = $host . "/travel/interface/zbyV3.2/updateOrderAndUnifiedV3_2";//接口地址
+    $post = array('orderCode' => $order_code, 'orderStatus' => $order_status, 'md5Str' => $md5Str);
+    $confirm = $db->api_post($url, $post);
+    if($confirm['status'] == '0000') {
+        echo "<script>alert('成功');</script>";
+//        exit;
+    }
+
+    $url = "./?cmd=".base64_encode("order_detail.php").'&order_code='.$order_code;
+    gourl($url);
+}
 
 /// 完成订单
 if($cmd == 'order_success'){
