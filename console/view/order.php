@@ -92,6 +92,8 @@ if(!defined('IN_CLOOTA')) {
 				<td>
                     <?if ($type == '4'){?>
                         <a href="<?=$g_self_domain?>/menpiao/ticket_detail-<?=$lv_product_id?>-<?=$val['lv_scenic_id']?>.html" target="_blank"><?=$val['goods_name']?><br/><?=$val['goods_code']?></a>
+                    <?}else if($type == '1'){ ?>
+                        <a href="<?=$g_self_domain?>/product/detail-<?=$val['goods_id']?>-<?=$val['lv_product_id']?>.html" target="_blank"><?=$val['goods_name']?><br/><?=$val['goods_code']?></a>
                     <?}else{?>
 					<a href="preview.php?ac=goods&goods_id=<?=$val['goods_id']?>" target="_blank"><?=$val['goods_name']?><br/><?=$val['goods_code']?></a>
                     <?}?>
