@@ -43,6 +43,9 @@ RewriteRule ^(search)/$    index\.php?cmd=search%1 [L]
 #周边游候选ajax
 RewriteRule ^(searcha)/$    index\.php?cmd=searcha%1 [L]
 
+#周边游订单ajax
+RewriteRule ^(fangcha)/$    index\.php?cmd=fangcha%1 [L]
+
 #门票主题筛选
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^(menpiao/zhuti)/$    index\.php?cmd=product_ticket&action=filter&%1 [L]
