@@ -56,22 +56,34 @@ if($cmd == 'order_payed'){
 /// 订单确认
 if($cmd == 'order_confirm'){
 	$order_code		= req('order_code');  
-	$ymd			= date('Y-m-d H:i:s');
+//	$ymd			= date('Y-m-d H:i:s');
+//
+//	// 确认收款
+//	$sql = "UPDATE `t_user_order` SET `state`='3' WHERE `site_id`='$g_siteid' AND `order_code`='$order_code'";
+//	$db->query($sql);
+//
+//	// 更新库存和订购量 (付款后减库存)
+//	$sql = "SELECT * FROM `t_user_order` WHERE `site_id`='$g_siteid' AND `order_code`='$order_code' LIMIT 0,1";
+//	$this_order = $db->get_one($sql);
+//
+//	$sku_id    = $this_order['sku_id'];
+//	$adult_num = $this_order['adult_num'];
+//	$kid_num   = $this_order['kid_num'];
+//	$order_status   = '3';
+//
+//	$sql = "UPDATE `t_goods_sku` SET adult_sale_number=adult_sale_number+$adult_num , kid_sale_number=kid_sale_number+$kid_num , adult_stock=adult_stock-$adult_num , kid_stock=kid_stock-$kid_num WHERE `site_id`='$g_siteid' AND `sku_id`='".$sku_id."'";
+//	$db->query($sql);
 
-	// 确认收款
-	$sql = "UPDATE `t_user_order` SET `state`='3' WHERE `site_id`='$g_siteid' AND `order_code`='$order_code'";
-	$db->query($sql);
-
-	// 更新库存和订购量 (付款后减库存)
-	$sql = "SELECT * FROM `t_user_order` WHERE `site_id`='$g_siteid' AND `order_code`='$order_code' LIMIT 0,1";
-	$this_order = $db->get_one($sql); 
-		
-	$sku_id    = $this_order['sku_id'];
-	$adult_num = $this_order['adult_num'];
-	$kid_num   = $this_order['kid_num'];
-
-	$sql = "UPDATE `t_goods_sku` SET adult_sale_number=adult_sale_number+$adult_num , kid_sale_number=kid_sale_number+$kid_num , adult_stock=adult_stock-$adult_num , kid_stock=kid_stock-$kid_num WHERE `site_id`='$g_siteid' AND `sku_id`='".$sku_id."'";
-	$db->query($sql);
+	//调接口(确认)
+    $md5Str = $order_code."#".$order_status;
+    $md5Str = md5($md5Str);//签名
+    $url = $host . "/travel/interface/zbyV3.2/updateOrderAndUnifiedV3_2";//接口地址
+    $post = array('orderCode' => $order_code, 'orderStatus' => $order_status, 'md5Str' => $md5Str);
+    $confirm = $db->api_post($url, $post);
+    if($confirm['status'] == '0000') {
+        echo "<script>alert('成功');</script>";
+//        exit;
+    }
 
 	$url = "./?cmd=".base64_encode("order_detail.php").'&order_code='.$order_code;
 	gourl($url);
