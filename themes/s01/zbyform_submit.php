@@ -109,7 +109,7 @@ if(!defined('IN_CLOOTA')) {
                                 <?}?>
                                 </select>
                                 <?}else{?>
-                                <?=$post['roomCount']?>
+                                <span id="diffPriceNum"><?=$post['roomCount']?></span>
                                 <?}?>
                                 </td>
                             </tr>
@@ -750,15 +750,21 @@ $('#mobile').blur(function(){
 function check_form(){
     if($('.zbyOrder_main32 input').eq(0).attr('checked')){
         var kidNum = $('#kidNum').html();//儿童数
-        var diffPriceNum = $('#diffPriceNum').val();
+        
         var adultNum = $('#adultNum').html();//成人数
         var zongjia = $('#orderPrice').html();
         var packageNum = $('#packageNum').html();
         $('#payPricei').val(zongjia);
         $('#adultNumi').val(adultNum);
         $('#childNumi').val(kidNum);
+        <?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+        var diffPriceNum = $('#diffPriceNum').val();
         $('#roomCounti').val(diffPriceNum);
-        $('#packageNumi').val(packageNum);//alert(456);
+        <?}else{?>
+        var diffPriceNum = $('#diffPriceNum').html();
+        $('#roomCounti').val(diffPriceNum);
+        <?}?>
+        $('#packageNumi').val(packageNum);
         document.getElementById("write_form").submit();
     }
 
