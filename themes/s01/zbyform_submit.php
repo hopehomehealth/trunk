@@ -765,7 +765,14 @@ function check_form(){
         $('#roomCounti').val(diffPriceNum);
         <?}?>
         $('#packageNumi').val(packageNum);
-        document.getElementById("write_form").submit();
+        if(kidNum==0 && adultNum==0){
+            alert('游玩人数不能为0');
+        }else{
+           document.getElementById("write_form").submit(); 
+        }
+        
+    }else{
+        alert('请先阅读旅游条款');
     }
 
 }
