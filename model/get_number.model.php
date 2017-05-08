@@ -70,10 +70,13 @@ echo "</select>
     }
     echo "</select>
 <iframe id=\"frm\" name=\"frm\" src=\"\" frameborder=\"0\" scrolling=\"no\" width=\"0\" height=\"0\"></iframe>
-<a href=\"javascript:void(0);\" class=\"form-tips rel\">
+";
+    if(!empty($childPriceInfo)){
+        echo "<a href=\"javascript:void(0);\" class=\"form-tips rel\">
     ¶ùÍ¯¼ÛËµÃ÷<span class=\"box-tips child_tips\" style=\"display:none\"><i class=\"icon\"></i>$childPriceInfo</span>
-</a>
-</span>";
+</a>";
+    }
+    echo "</span>";
 }
 
 ?>
