@@ -41,7 +41,7 @@ if(!defined('IN_CLOOTA')) {
         <div class="zbyOrder_main_title">
             <img src="/themes/s01/images/zby_fillInOrder.jpg">
         </div>
-        <form name="write_form" id="write_form" method="post" action="<?=$g_self_domain?>/zhoubianyou/zbyform_submit-1.html?departDate=<?=$tc['departDate']?>&lvProductId=<?=$tc['lvProductId']?>&packageId=<?=$tc['packageId']?>&adultNum=<?=$_GET['adultNum']?>&childNum=<?=$_GET['childNum']?>&roomCount=<?=$_GET['roomCount']?>&payPrice=<?=$_GET['payPrice']?>&packageNum=<?=$_GET['packageNum']?>&goodsType=<?=$_GET['goodsType']?>&flag=check">
+        <form name="write_form" id="write_form" method="post" action="<?=$g_self_domain?>/zhoubianyou/zbyform_submit-1.html?departDate=<?=$tc['departDate']?>&lvProductId=<?=$tc['lvProductId']?>&packageId=<?=$tc['packageId']?>&adultNum=<?=$_GET['adultNum']?>&childNum=<?=$_GET['childNum']?>&roomCount=<?=$_GET['roomCount']?>&payPrice=<?=$_GET['payPrice']?>&packageNum=<?=$_GET['packageNum']?>&goodsType=<?=$_GET['goodsType']?>&roomPrice=<?=$roomPrice?>&flag=check">
         <? if($is_package == 'false'){ ?>
             <div class="zbyOrder_main1">
             <br>游玩时间：<?=$tc['departDate']?>
@@ -766,12 +766,15 @@ function check_form(){
         $('#roomCounti').val(diffPriceNum);
         <?}?>
         $('#packageNumi').val(packageNum);
+        <?if ($is_package == 'false'){?>
         if(kidNum==0 && adultNum==0){
             alert('游玩人数不能为0');
         }else{
            document.getElementById("write_form").submit(); 
         }
-        
+        <?}else{?>
+            document.getElementById("write_form").submit(); 
+        <?}?>
     }else{
         alert('请先阅读旅游条款');
     }
