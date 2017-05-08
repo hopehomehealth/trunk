@@ -40,23 +40,40 @@ $post['adultNum'] = req('adultNum');//'1';//
 $post['kidNum'] = req('childNum');//'1';//
 if($taocan['isPackage'] == 'true'){//按份卖
     $post['packageNum'] = req('packageNum');//'3';//
+    $packageNum =req('packageNum');
 }else{//按人卖
     
     $post['roomCount'] = req('roomCount');//'0';//
+    $roomCount = req('roomCount');
 }
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
 }elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
-    $num = $post['adultNum']+$post['kidNum'];
+    $num = $taocan['adultNum']+$taocan['childNum'];
 }else{
     $num = 0;
 }
-
+$payPrice1 = req('payPrice');
+$adultNum = req('adultNum');
+$kidNum = req('childNum');
 //生成订单
 $flag = req('flag');
 if($flag == 'check'){
-    
+    if($taocan['isPackage'] == 'true'){//按份卖
+        $post['packageNum'] = $_POST['packageNum'];//'3';//
+    }else{//按人卖
+        
+        $post['roomCount'] = $POST['roomCount'];//'0';//
+    }
+    $post['payPrice'] = $_POST['payPrice'];//'150';//
+    $payPrice1 = req('payPrice');
+    $post['adultNum'] = $_POST['adultNum'];//'1';//
+    $adultNum = $_POST['adultNum'];
+    $post['kidNum'] = $_POST['childNum'];//'1';//
+    $kidNum = $_POST['childNum'];
+    $packageNum =req('packageNum');
+    $post['roomCount'] = req('roomCount');
     $post['bookerName'] = gbk_to_utf8(req('bookerName'));
     $post['bookerMobile'] = req('bookerMobile');
     $post['bookerEmail'] = req('bookerEmail');
@@ -83,17 +100,20 @@ if($flag == 'check'){
      //var_dump($post);die;
      $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
-     $goodsName = $dingdan['data']['goodsName'];
-     $payTime = $dingdan['data']['payTime'];
-     $departdate = $dingdan['data']['departdate'];
-     $payPrice = $dingdan['data']['payPrice'];
-     $peopleNum = $dingdan['data']['peopleNum'];
-     $unitPrice = $dingdan['data']['unitPrice'];
-     $lvGoodsName = $dingdan['data']['lvGoodsName'];
+     if(!empty($orderCode)){
+        $goodsName = $dingdan['data']['goodsName'];
+         $payTime = $dingdan['data']['payTime'];
+         $departdate = $dingdan['data']['departdate'];
+         $payPrice = $dingdan['data']['payPrice'];
+         $peopleNum = $dingdan['data']['peopleNum'];
+         $unitPrice = $dingdan['data']['unitPrice'];
+         $lvGoodsName = $dingdan['data']['lvGoodsName'];
+     }
+     
 
     
 }
-if($flag != 'check' && $taocan['isPackage'] == 'false'){
+if($taocan['isPackage'] == 'false'){
 //请求/travel/interface/zby/v3.2/getNumberSelection_v3.2获取roomMax
 $xuan['goodsId'] = $taocan['goodsId'];
 $xuan['packageId'] = $tc['packageId'];
@@ -112,11 +132,11 @@ $roomMax = $taocan['roomMax'];
 //ajax请求/travel/interface/zby/v3.2/getDiffRoomNum_v3.2获取房差数量集合
 
 
-$fang['adultNum'] = $_GET['adultNum'];
+$fang['adultNum'] = req('adultNum');
 $fang['roomMax'] = $roomMax;
-$fang['goodsType'] = $_GET['goodsType'];
+$fang['goodsType'] = req('goodsType');
 $fang['isPackage'] = $is_package;
-$diffPrice = $_GET['roomPrice'];
+$diffPrice = req('roomPrice');
 $url = $host . "/travel/interface/zby/v3.2/getDiffRoomNum_v3.2";
 $data = $db->api_post($url, $fang);
 $arr = json_decode($data, true);
