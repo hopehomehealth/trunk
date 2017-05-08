@@ -825,7 +825,7 @@ $(document).ready(function(){
 				</table></td>
 			</tr>
 			<?}?>
-		</table>
+		</table> 
 	</div>
 	<div class="tab-pane" id="tabs-6">
 
