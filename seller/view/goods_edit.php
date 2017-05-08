@@ -839,7 +839,7 @@ $(document).ready(function(){
 			  <td><input type="number" class="span1 text-center" name="max" value="<?=$package['max']?>"/></td>
 			</tr>
 			<tr>
-			  <td width="100" align="right"><font color="red">*</font> 最大订购数量：</td>
+			  <td width="100" align="right"><font color="red">*</font> 最小订购数量：</td>
 			  <td><input type="number" class="span1 text-center" name="min" value="<?=$package['min']?>"/></td>
 			</tr>
 			<tr>
