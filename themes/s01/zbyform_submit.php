@@ -669,7 +669,7 @@ if(!defined('IN_CLOOTA')) {
 
                 </div>
                 <div class="zbyOrder_main32">
-                    <label><a href="<?=$g_self_domain?>/zhoubian/xy.html" target="_blank">我已同意条款</a></label>
+                    <label><a href="<?=$g_self_domain?>/zhoubian/xy.html" target="_blank"><u>我已同意条款</u></a></label>
                     <input type="checkbox" name="我已同意以下条款" id="tiaokuan">
                 </div>
                 <div class="zbyOrder_main33">
@@ -797,6 +797,7 @@ function check_form(){
 if($dingdan['status'] == '1000'){
         $dingdan['msg'] = '\''.$dingdan['msg'].'\'';
         echo '<script>alert('.$dingdan['msg'].')</script>';
+        echo '<script>window.history.back();</script>';
      }
 ?>
 </html>
