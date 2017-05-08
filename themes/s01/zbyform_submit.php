@@ -41,7 +41,7 @@ if(!defined('IN_CLOOTA')) {
         <div class="zbyOrder_main_title">
             <img src="/themes/s01/images/zby_fillInOrder.jpg">
         </div>
-        <form name="write_form" id="write_form" method="post" action="<?=$g_self_domain?>/zhoubianyou/zbyform_submit-1.html?departDate=<?=$tc['departDate']?>&lvProductId=<?=$tc['lvProductId']?>&packageId=<?=$tc['packageId']?>&flag=check">
+        <form name="write_form" id="write_form" method="post" action="<?=$g_self_domain?>/zhoubianyou/zbyform_submit-1.html?departDate=<?=$tc['departDate']?>&lvProductId=<?=$tc['lvProductId']?>&packageId=<?=$tc['packageId']?>&adultNum=<?=$_GET['adultNum']?>&childNum=<?=$_GET['childNum']?>&roomCount=<?=$_GET['roomCount']?>&payPrice=<?=$_GET['payPrice']?>&packageNum=<?=$_GET['packageNum']?>&goodsType=<?=$_GET['goodsType']?>&flag=check">
         <? if($is_package == 'false'){ ?>
             <div class="zbyOrder_main1">
             <br>游玩时间：<?=$tc['departDate']?>
@@ -68,11 +68,11 @@ if(!defined('IN_CLOOTA')) {
                                 <td><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
                                     <span class="caculate" onselectstart="return false">
                                         <span class="subtract">-</span>
-                                        <span class="counts" id='adultNum'><?=$post['adultNum']?></span>
+                                        <span class="counts" id='adultNum'><?=$adultNum?></span>
                                         <span class="add">+</span>
                                     </span>
                                     <?}else{?>
-                                    <span id='adultNum'><?=$post['adultNum']?></span>
+                                    <span id='adultNum'><?=$adultNum?></span>
                                     <?}?>
                                 </td>
                             </tr>
@@ -84,11 +84,11 @@ if(!defined('IN_CLOOTA')) {
                                 <td><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
                                     <span class="caculate" onselectstart="return false">
                                         <span class="subtract">-</span>
-                                        <span class="counts" id='kidNum'><?=$post['kidNum']?></span>
+                                        <span class="counts" id='kidNum'><?=$kidNum?></span>
                                         <span class="add">+</span>
                                     </span>
                                     <?}else{?>
-                                    <span id='kidNum'><?=$post['kidNum']?></span>
+                                    <span id='kidNum'><?=$kidNum?></span>
                                     <?}?>
                                 </td>
                             </tr>
@@ -101,7 +101,7 @@ if(!defined('IN_CLOOTA')) {
                                 <td class="fangcha"><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
                                 <select id='diffPriceNum' onchange='get_price()'>
                                 <?foreach ($fangcha as $val) {?>
-                                <?if($val==$post['roomCount']){?>
+                                <?if($val==$roomCount){?>
                                 <option value='<?=$val?>' selected="selected"><?=$val?></option>
                                 <?}else{?>
                                 <option value='<?=$val?>'><?=$val?></option>
@@ -109,7 +109,7 @@ if(!defined('IN_CLOOTA')) {
                                 <?}?>
                                 </select>
                                 <?}else{?>
-                                <span id="diffPriceNum"><?=$post['roomCount']?></span>
+                                <span id="diffPriceNum"><?=$roomCount?></span>
                                 <?}?>
                                 </td>
                             </tr>
@@ -661,7 +661,7 @@ if(!defined('IN_CLOOTA')) {
         </form>
             <div class="zbyOrder_main3">
                 <div class="zbyOrder_main31">
-                    <div class="zbyOrder_main31_left">应付总价：￥<span id="orderPrice"><?=$post['payPrice']?></span></div>
+                    <div class="zbyOrder_main31_left">应付总价：￥<span id="orderPrice"><?=$payPrice1?></span></div>
                     
                     <button class="zbyOrder_main31_right" onclick = "check_form()">同意以下条款，去付款</button>
 
