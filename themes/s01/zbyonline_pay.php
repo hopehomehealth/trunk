@@ -156,10 +156,9 @@ if(!defined('IN_CLOOTA')) {
             }
             if ($("#wxqrcode").attr("checked")) {
                 var val = $("#wxqrcode").val();
-
                 $.ajax({
                     type: 'post',
-                    url: "<?= $g_self_domain?>/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
+                    url: "/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
                     data: {
                         "val" : val,
                         "payPrice" : payPrice
