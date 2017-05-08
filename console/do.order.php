@@ -102,7 +102,7 @@ if($cmd == 'order_st'){
     //调接口(确认)
 
 //    echo $md5Str;
-    $url = $host . "/travel/interface/zbyV3.2/updateOrderAndUnifiedV3_2";//接口地址
+    $url = $host . "/travel/interface/zby/v3.2/returnZbystatus_v3.2";//接口地址
     $post = array('orderCode' => $order_code, 'orderStatus' => $order_status, 'md5Str' => $md5Str, 'token' => $token);
     $confirm = $db->api_post($url, $post);
     if($confirm['status'] == '0000' && $order_status == '3') {
