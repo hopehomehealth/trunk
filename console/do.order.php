@@ -110,7 +110,7 @@ if($cmd == 'order_st'){
     }else if($confirm['status'] == '0000' && $order_status == '4') {
         echo "<script>alert('确认会团成功');</script>";
     }else if($confirm['status'] == '0000' && $order_status == '9') {
-        echo "<script>alert('审核未通过确认成功，稍后退款会达到您的账户上。');</script>";
+        echo "<script>alert('审核未通过确认成功，稍后退款会打到您的账户上。');</script>";
     }
     $url = "./?cmd=".base64_encode("order_detail.php").'&order_code='.$order_code;
     gourl($url);
