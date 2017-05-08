@@ -486,8 +486,12 @@
                                                         $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
                                                         $goods_url = get_goods_url($val['cat_key'], $val['goods_id']);
+                                                    if($val['goods_type'] == '4'){
+                                                        $href = $g_self_domain . "/menpiao/ticket_detail-" . $val['goods_id'] ."-". $val['lv_scenic_id'] . ".html";}else if($val['goods_type'] == '1'){
+                                                        $href = $g_self_domain . "/product/detail-" . $val['goods_id'] ."-". $val['lv_scenic_id'] . ".html";
+                                                    }
                                                         ?>
-                                                        <li><a href="<?= $g_self_domain . "/menpiao/ticket_detail-" . $val['goods_id'] ."-". $val['lv_scenic_id'] . ".html" ?>" target="_blank"
+                                                        <li><a href="<?= $href ?>" target="_blank"
                                                                title="<?= $val['goods_name'] ?>">
                                                                 <div class="imgbox"><img src="<?= $val['image'] ?>"
                                                                                          alt="<?= $val['goods_name'] ?>">
