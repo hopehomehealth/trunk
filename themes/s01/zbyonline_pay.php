@@ -139,6 +139,7 @@ if(!defined('IN_CLOOTA')) {
         $('.onlinePay_payNow').click(function () {
             clearInterval(timer);
             if ($("#alipayweb").attr("checked")) {
+//                alert('213123');
                 var val = $("#alipayweb").val();
                 $('.nowPay').show();
                 $('#weChatPay').hide();
@@ -155,9 +156,10 @@ if(!defined('IN_CLOOTA')) {
             }
             if ($("#wxqrcode").attr("checked")) {
                 var val = $("#wxqrcode").val();
+
                 $.ajax({
                     type: 'post',
-                    url: "zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
+                    url: "/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
                     data: {
                         "val" : val,
                         "payPrice" : payPrice
