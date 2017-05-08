@@ -499,10 +499,10 @@
                             <?
                             if($val['aLiData'] != '飞猪自营' && notnull($val['skuList'])){
                                 ?>
-                                <dd style="padding-top: 10px;line-height: 13px;"><span class="ff-toh">出行日期：
+                                <dd style="padding-top: 10px;line-height: 13px;"><span class="ff-toh">出行日期:
                                         <?foreach ($val['skuList'] as $cval){
                                             ?>
-                                            <?=$cval?>
+                                            <?= $cval?>
                                             <?
                                         }
                                         ?>
