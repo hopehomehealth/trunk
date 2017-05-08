@@ -186,13 +186,14 @@ if (!defined('IN_CLOOTA')) {
             if ($state == 2) {
                 ?>
                 <form target="frm" method="post"
-                      action="do.php?cmd=order_confirm&order_code=<?= $detail['order_code'] ?>"
+                      action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=3"
                       style="float:left;margin-right:10px">
                     <input type="submit" value="订单确认" class="btn btn-info" onclick="return confirm('订单已经确认吗？')">
                 </form>
+
                 <!--审核未通过-->
                 <form target="frm" method="post"
-                      action="do.php?cmd=order_status&order_code=<?= $detail['order_code']?>&order_status=9"
+                      action="do.php?cmd=order_st&order_code=<?= $detail['order_code']?>&order_status=9"
                       style="float:left;margin-right:10px">
                     <input type="submit" value="审核未通过" class="btn btn-info" onclick="return confirm('订单确定未审核通过吗？')">
                 </form>
@@ -206,7 +207,7 @@ if (!defined('IN_CLOOTA')) {
                 <? if (date('Ymd') >= date('Ymd', strtotime($detail['departdate']))) {
                     ?>
                     <form target="frm" method="post"
-                          action="do.php?cmd=order_status&order_code=<?= $detail['order_code'] ?>&order_status=4"
+                          action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=4"
                           style="float:left;margin-right:10px">
                         <input type="submit" value="完成交易" class="btn" onclick="return confirm('确认完成交易吗？请确认是否已回团！！！')">
                     </form>
@@ -263,4 +264,4 @@ if (!defined('IN_CLOOTA')) {
             </td>
         </tr>
     <? } ?>
-</table>   
+</table>
