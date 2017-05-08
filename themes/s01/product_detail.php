@@ -288,24 +288,29 @@
                     if (notnull($guess_list)) {
                         foreach ($guess_list as $val) {
                             //                var_dump($val['goods_type']);
-                            if ($val['goods_type'] == '4') {
-                                $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                                $goods_image = $val['goods_image'];
-                            } else {
-                                $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
+                            if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
+                                if ($val['goods_type'] == '4') {
+                                    $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                                    $goods_image = $val['goods_image'];
+                                } else {
+                                    $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                                    $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
+                                }
+                                ?>
+                                <li><a id="pro-like-img" target="_blank" href="<? echo $href; ?>"><img
+                                                src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>"
+                                                class="imgbox"></a>
+                                    <div class="tname"><a id="pro-like-title" target="_blank"
+                                                          href="<? echo $href; ?>"
+                                                          title="<?= $val['goods_name']; ?>"><?= $db -> jiequ(22, $val['goods_name']) ?></a>
+                                    </div>
+                                    <div class="yellow-a"><sub>&yen;</sub> <span
+                                                class="font14"><?= $val['min_price'] ?></span> 起/人
+                                    </div>
+                                </li>
+                                <?
                             }
-                            ?>
-                            <li><a id="pro-like-img" target="_blank" href="<? echo $href; ?>"><img
-                                        src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>" class="imgbox"></a>
-                                <div class="tname"><a id="pro-like-title" target="_blank"
-                                                      href="<? echo $href; ?>" title="<?= $val['goods_name'];?>"><?= $db->jiequ(13, $val['goods_name']) ?></a></div>
-                                <div class="yellow-a"><sub>&yen;</sub> <span
-                                        class="font14"><?= $val['min_price'] ?></span> 起/人
-                                </div>
-                            </li>
-                            <?
                         }
                     }
                     ?>
