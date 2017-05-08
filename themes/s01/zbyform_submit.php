@@ -127,7 +127,9 @@ if(!defined('IN_CLOOTA')) {
                     adds[i].index = i;
                     adds[i].onclick = function(){
                         var count1 = $('.counts').eq(this.index).html();
-                        count1++;
+                        if(count1<<?=$taocan['max']?>){
+                            count1++;
+                        }
                         $('.counts').eq(this.index).html(count1);
                         $('.Num').eq(this.index).val(count1);
                         var adultNum = $('#adultNum').html();//≥…»À ˝
@@ -152,7 +154,6 @@ if(!defined('IN_CLOOTA')) {
                             success: function (data) {
                                  $('.fangcha').html("");
                                 $('.fangcha').html(data);
-                                //$('.fangcha').show();
                                 var diffPriceNum = $('#diffPriceNum').val();
                                 var zongjia = adultPrice*adultNum + kidPrice*kidNum +diffPrice*diffPriceNum ;
                                 $("#orderPrice").html(zongjia);
