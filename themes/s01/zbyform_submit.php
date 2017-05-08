@@ -127,20 +127,23 @@ if(!defined('IN_CLOOTA')) {
                     adds[i].index = i;
                     adds[i].onclick = function(){
                         var count1 = $('.counts').eq(this.index).html();
-                        if(count1<<?=$taocan['max']?>){
+                        var adultNum = $('#adultNum').html();//成人数
+                        var kidNum = $('#kidNum').html();//儿童数
+                        var zongshu = Number(adultNum) + Number(kidNum);
+                        if(zongshu<<?=$taocan['max']?>){
                             count1++;
                         }else{
-                            alert('超过最大订购数量');
+                            alert('亲,您已超过最大订购数量:<?=$taocan['max']?>');
                         }
                         $('.counts').eq(this.index).html(count1);
                         $('.Num').eq(this.index).val(count1);
-                        var adultNum = $('#adultNum').html();//成人数
+                        
                         var adultPrice = $('#adultPrice').html();//成人价
                         var roomMax = <?=$roomMax?>;//房间的最大允许入住数量
                         var goodsType = <?=$_GET['goodsType']?>;//当前产品的业务类型(自由行、跟团游)
                         var isPackage = <?=$is_package?>;
                         var diffPrice = <?=$taocan['diffPrice']?>;//房差价
-                        var kidNum = $('#kidNum').html();//儿童数
+                        
                         var kidPrice = $('#kidPrice').html();//儿童价
                          $.ajax({
                             type: "POST",
@@ -273,10 +276,19 @@ if(!defined('IN_CLOOTA')) {
                     adds[i].index = i;
                     adds[i].onclick = function(){
                         var count1 = $('.counts').eq(this.index).html();
-                        count1++;
+                        var packageNum = $('#packageNum').html();
+                        if(packageNum==''){
+                            packageNum = $('#packageNum').val();
+                        }
+                        var adultNum = Number(packageNum)*<?=$taocan['adultNum']?>;
+                        if(adultNum><?=$taocan['max']?>){
+                            alert('亲,您已超过最大订购数量:'+ packageNum);
+                        }else{
+                           count1++; 
+                        }
+                        
                         $('.counts').eq(this.index).html(count1);
                         $('.Num').eq(this.index).val(count1);
-                        var packageNum = $('#packageNum').html();
                         var onePrice = <?=$onePrice?>;
                         var zongjia = packageNum*onePrice;
                         $("#orderPrice").html(zongjia);
@@ -795,9 +807,14 @@ function check_form(){
 </script>
 <?
 if($dingdan['status'] == '1000'){
+    if(empty($dingdan['msg'])){
+        $dingdan['msg'] = '操作有误';
+    }else{
         $dingdan['msg'] = '\''.$dingdan['msg'].'\'';
-        echo '<script>alert('.$dingdan['msg'].')</script>';
-        echo '<script>window.history.back();</script>';
-     }
+       
+    }
+    echo '<script>alert('.$dingdan['msg'].')</script>';
+    echo '<script>window.history.back();</script>';    
+}
 ?>
 </html>
