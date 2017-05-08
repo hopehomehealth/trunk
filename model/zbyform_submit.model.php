@@ -50,8 +50,10 @@ if($taocan['isPackage'] == 'true'){//按份卖
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
-}elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL'){
-    $num = $taocan['adultNum']+$taocan['childNum'];
+}elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL' && $is_package=='false'){
+    $num = (req('adultNum')+req('childNum'));
+}elseif($taocan['travellerName'] == 'TRAV_NUM_ALL' && $is_package=='true'){
+    $num = ($taocan['adultNum']+$taocan['childNum'])*$packageNum;
 }else{
     $num = 0;
 }
