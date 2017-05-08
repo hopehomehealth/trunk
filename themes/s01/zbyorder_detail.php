@@ -307,11 +307,11 @@ if (!defined('IN_CLOOTA')) {
     <input type="hidden" name="payPrice" value="<?=$order_detail_data['payPrice']?>">
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$order_detail_data['goodsName']?>">
     <input type="hidden" name="payTime"  value="<?=$order_detail_data['leftPayTime']?>">
-    <input type="hidden" name="lvGoodsName"  value="<?=$order_detail_data['lvGoodsName']?>">
+    <input type="hidden" name="lvGoodsName"  value="<?=$order_detail_data['lvgoodsName']?>">
     <input type="hidden" name="orderCode"  value="<?=$order_detail_data['orderCode']?>">
 </form>
 <!--  foot  start -->
-<? include 'foot.php'; ?>
+<? include 'foot.php';?>
 <!--  foot  end -->
 </body>
 <script type="text/javascript" src="/thmes/s01/js/jquery.js"></script>
