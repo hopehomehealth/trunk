@@ -21,6 +21,15 @@ $tuijian = json_decode($tuijian, true);
 $tuijian = array_iconv($tuijian);
 $tuijian_data = $tuijian['data'];
 
+function jiequ($data,$num=54){
+    if(mb_strwidth($data,'gbk')>=$num){
+        return mb_strimwidth($data, 0, $num-1,'...','gbk');
+    }else{
+        return $data;
+    }
+
+}
+
 function seo(){
     global $g_sitename, $c_goods;
     ?>
