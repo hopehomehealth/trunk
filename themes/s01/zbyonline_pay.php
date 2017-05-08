@@ -159,7 +159,7 @@ if(!defined('IN_CLOOTA')) {
 
                 $.ajax({
                     type: 'post',
-                    url: "/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
+                    url: "<?= $g_self_domain?>/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
                     data: {
                         "val" : val,
                         "payPrice" : payPrice
