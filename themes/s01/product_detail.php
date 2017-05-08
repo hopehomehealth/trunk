@@ -287,14 +287,12 @@
                     $guess_list = get_guess_list(6);
                     if (notnull($guess_list)) {
                         foreach ($guess_list as $val) {
-                            //                var_dump($val['goods_type']);
                             $goods_image = $val['goods_image'];
                             if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
                                 if ($val['goods_type'] == '4') {
                                     $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                 } else if($val['goods_type'] == '1'){
                                     $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-//                                    $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
                                 }
                                 ?>
                                 <li><a id="pro-like-img" target="_blank" href="<? echo $href; ?>"><img
@@ -388,7 +386,6 @@
 
                                         <ul class="detail-column">
                                             <? foreach ($v['image'] as $img) {
-//                                                $img = $all_images[$key][$g];
                                                 if ($img != '') {
                                                     ?>
                                                     <li><a class="showBig" rel="group1" href="#"> <img src="<?= $img ?>"
@@ -495,9 +492,7 @@
                             if (notnull($tuijian_data)) {
                                 $zbyHotGoodsList = $tuijian_data['zbyHotGoodsList'];
                                 foreach ($zbyHotGoodsList as $val) {
-//                                    if($val['aLiData'] == '') {
                                     if ($val['aLiData'] != '飞猪自营') $href = "/product/detail-" . $val['goodsId'] . "-" . $val['productId'] . ".html"; else $href = $val['pcALiDetailLink'];
-//                                $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
                                     ?>
                                     <li>
@@ -517,7 +512,6 @@
                                             <span class="cYellow">起/人</span></div>
                                     </li>
                                     <?
-//                                    }
                                 }
                             }
                             ?>

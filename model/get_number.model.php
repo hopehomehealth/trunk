@@ -53,7 +53,7 @@ if($post['isPackage'] == 'true'){
     echo "<span class='renshu'>
             <label for=\"\">³ÉÈË</label>
             <select name=\"adult_num\" id=\"adult_num\" style=\"width:60px\" onChange=\"count_price()\">
-            <option value=\"0\">0</option>";
+            ";
                  for ($i = $adultmin; $i <= $adultmax; $i++) {
     echo "<option value=\"$i\">$i</option>";
  }
@@ -64,7 +64,7 @@ echo "</select>
 </div>
 <label for=\"\">¶ùÍ¯</label>
 <select name=\"kid_num\" id=\"kid_num\" style=\"width:60px\" onChange=\"count_price()\">
-    <option value=\"0\">0</option>";
+    ";
     for ($i = $adultmin; $i <= $adultmax; $i++) {
        echo "<option value=\"$i\">$i</option>";
     }
