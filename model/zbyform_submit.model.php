@@ -9,7 +9,7 @@ function jiequ($num,$data){
         return $data;
     }
 
-}
+} 
 
 //$getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //获取套餐信息
