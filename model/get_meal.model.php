@@ -29,16 +29,6 @@ foreach ($datas['list'] as $key => $val) {
     $packageId = to_gbk($val['packageId']);//套餐ID
     $packageName = to_gbk($val['packageName']);//套餐名
     $packageNames = to_gbk($db->jiequ(9, $val['packageName']));
-    if (!is_null($val['hotelList'])) {
-        $hotelName = $val['hotelList'];//酒店名
-    } else {
-        $hotelNames = '当前套餐无酒店';
-    }
-    if (!is_null($val['hotelList'])) {
-        $ticketName = $val['ticketList'];//门票名
-    } else {
-        $ticketNames = '当前套餐无门票';
-    }
     $lvStock = to_gbk($val['skuList']['0']['lvStock']);//库存
     $changeRuler = to_gbk($val['skuList']['0']['changeRuler']);//退改规则
     $adultPrice = to_gbk($val['skuList']['0']['adultPrice']);
@@ -66,17 +56,29 @@ foreach ($datas['list'] as $key => $val) {
         <ul>
             <li class=\"product_name1\"><a title='$packageName'>$packageNames</a></li>
             <li class=\"hotel_contain1\"><dl>";
-    foreach ($hotelName as $k => $v) {
-        $hotelInfo = to_gbk($v['hotelInfo']);
-        $hotelName = to_gbk($db->jiequ(10, $v['hotelName']));
-        echo "<dd><a title='$hotelInfo'>$hotelName</dd>";
+    if (!is_null($val['hotelList'])) {
+        $hotelName = $val['hotelList'];//酒店名
+        foreach ($hotelName as $k => $v) {
+            $hotelInfo = to_gbk($v['hotelInfo']);
+            $hotelName = to_gbk($db->jiequ(10, $v['hotelName']));
+            echo "<dd><a title='$hotelInfo'>$hotelName</dd>";
+        }
+    } else {
+        $hotelName = '当前套餐无酒店';
+        echo "<dd><a title=''>$hotelName</dd>";
     }
     echo "</dl></li>
             <li class=\"ticket_contain1\"><dl>";
-    foreach ($ticketName as $ke => $va) {
-        $ticketInfo = to_gbk($va['ticketInfo']);//门票简介
-        $ticketName = to_gbk($db->jiequ(10, $va['ticketName']));
-        echo "<dd><a title='$ticketInfo'>$ticketName</a></dd>";
+    if (!is_null($val['hotelList'])) {
+        $ticketName = $val['ticketList'];//门票名
+        foreach ($ticketName as $ke => $va) {
+            $ticketInfo = to_gbk($va['ticketInfo']);//门票简介
+            $ticketName = to_gbk($db->jiequ(10, $va['ticketName']));
+            echo "<dd><a title='$ticketInfo'>$ticketName</a></dd>";
+        }
+    } else {
+        $ticketName = '当前套餐无门票';
+        echo "<dd><a title=''>$ticketName</a></dd>";
     }
     echo "</dl></li>
             <li class=\"product_mounts1\">$lvStock</li>";
