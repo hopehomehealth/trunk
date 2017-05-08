@@ -61,11 +61,11 @@ foreach ($datas['list'] as $key => $val) {
         foreach ($hotelName as $k => $v) {
             $hotelInfo = to_gbk($v['hotelInfo']);
             $hotelName = to_gbk($db->jiequ(10, $v['hotelName']));
-            echo "<dd><a title='$hotelInfo'>$hotelName</dd>";
+            echo "<dd><a title='$hotelInfo'>$hotelName</a></dd>";
         }
     } else {
         $hotelName = 'µ±Ç°Ì×²ÍÎÞ¾Æµê';
-        echo "<dd><a title=''>$hotelName</dd>";
+        echo "<dd><a title=''>$hotelName</a></dd>";
     }
     echo "</dl></li>
             <li class=\"ticket_contain1\"><dl>";
