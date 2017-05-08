@@ -1,6 +1,6 @@
 <?
 
-$db->check_cookie($loginUrl, $host);
+//$db->check_cookie($loginUrl, $host);
 //截取
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
@@ -28,6 +28,7 @@ $is_package = $taocan['isPackage'];
 $diffPrice = $taocan['diffPrice'];
 $packageNum = req('packageNum');
 $onePrice = $taocan['adultNum']*$taocan['adultPrice'];
+$roomPrice = req('roomPrice');
 //var_dump($tcs);echo '<br>'; 
 //订单接口参数
 $post['token'] = $token;
@@ -67,12 +68,12 @@ if($flag == 'check'){
         $post['roomCount'] = $POST['roomCount'];//'0';//
     }
     $post['payPrice'] = $_POST['payPrice'];//'150';//
-    $payPrice1 = req('payPrice');
+    $payPrice1 = $_POST['payPrice'];
     $post['adultNum'] = $_POST['adultNum'];//'1';//
     $adultNum = $_POST['adultNum'];
     $post['kidNum'] = $_POST['childNum'];//'1';//
     $kidNum = $_POST['childNum'];
-    $packageNum =req('packageNum');
+    $packageNum = $_POST['packageNum'];
     $post['roomCount'] = req('roomCount');
     $post['bookerName'] = gbk_to_utf8(req('bookerName'));
     $post['bookerMobile'] = req('bookerMobile');
