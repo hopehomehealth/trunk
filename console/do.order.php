@@ -98,7 +98,7 @@ if($cmd == 'order_st'){
     $order_status = req('order_status');
     $md5Str = $order_code."#".$order_status;
     $md5Str = md5($md5Str);//签名
-        echo "<script>alert($token);</script>";
+//        echo "<script>alert($token);</script>";
     //调接口(确认)
 
 //    echo $md5Str;
