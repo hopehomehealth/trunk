@@ -129,6 +129,8 @@ if(!defined('IN_CLOOTA')) {
                         var count1 = $('.counts').eq(this.index).html();
                         if(count1<<?=$taocan['max']?>){
                             count1++;
+                        }else{
+                            alert('超过最大订购数量');
                         }
                         $('.counts').eq(this.index).html(count1);
                         $('.Num').eq(this.index).val(count1);
@@ -285,7 +287,7 @@ if(!defined('IN_CLOOTA')) {
                     subtracts[i].index = i;
                     subtracts[i].onclick = function(){
                         var count1 = $('.counts').eq(this.index).html();
-                        if(count1!=0){
+                        if(count1!=1){
                             count1--;
                             $('.counts').eq(this.index).html(count1);
                             $('.Num').eq(this.index).val(count1);
@@ -663,14 +665,12 @@ if(!defined('IN_CLOOTA')) {
                 <div class="zbyOrder_main31">
                     <div class="zbyOrder_main31_left">应付总价：￥<span id="orderPrice"><?=$payPrice1?></span></div>
                     
-                    <button class="zbyOrder_main31_right" onclick = "check_form()">同意以下条款，去付款</button>
+                    <button class="zbyOrder_main31_right" onclick = "check_form()">去付款</button>
 
                 </div>
                 <div class="zbyOrder_main32">
-                    <label><a href="<?=$g_self_domain?>/zhoubian/xy.html" target="_blank">我已同意以下条款</a></label>
-                    <input type="checkbox" name="我已同意以下条款">
-                    <!-- <label>同意团队境内旅游合同</label>
-                    <input type="checkbox" name="同意团队境内旅游合同"> -->
+                    <label><a href="<?=$g_self_domain?>/zhoubian/xy.html" target="_blank">我已同意条款</a></label>
+                    <input type="checkbox" name="我已同意以下条款" id="tiaokuan">
                 </div>
                 <div class="zbyOrder_main33">
                     温馨提示：请您仔细阅读预订须知及旅游合同条款，订单提交后，视为您同意以下各项条款内容
@@ -749,10 +749,15 @@ $('#mobile').blur(function(){
 
 
 function check_form(){
-    if($('.zbyOrder_main32 input').eq(0).attr('checked')){
+    if($('#tiaokuan').attr('checked')){
         var kidNum = $('#kidNum').html();//儿童数
-        
+        if(kidNum==''){
+            kidNum = $('#kidNum').val();//儿童数
+        }
         var adultNum = $('#adultNum').html();//成人数
+        if(adultNum==''){
+            adultNum = $('#adultNum').val();//成人数
+        }
         var zongjia = $('#orderPrice').html();
         var packageNum = $('#packageNum').html();
         $('#payPricei').val(zongjia);
@@ -767,6 +772,11 @@ function check_form(){
         <?}?>
         $('#packageNumi').val(packageNum);
         <?if ($is_package == 'false'){?>
+        var zongshu = Number(adultNum) + Number(kidNum);
+        if(zongshu><?=$taocan['max']?>){
+            alert('游玩人总数超过最大订购量:<?=$taocan['max']?>');
+            return false;
+        }
         if(kidNum==0 && adultNum==0){
             alert('游玩人数不能为0');
         }else{
