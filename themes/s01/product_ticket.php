@@ -469,13 +469,12 @@ $('.searchMain1_c input').on('keydown',function(event) {
 						$n = 1;
 						foreach ($guess_list as $val){
                             if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
-                                $goods_image = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
-                                //                var_dump($val['goods_type']);
+//                                $goods_image = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
+                                $goods_image = $val['goods_image'];
                                 if ($val['goods_type'] == '4') {
                                     $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                 } else if ($val['goods_type'] == '1') {
                                     $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-
                                 }
                                 ?>
                                 <dl>

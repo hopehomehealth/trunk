@@ -597,8 +597,8 @@
                     $n = 1;
                     foreach ($guess_list as $val) {
                         if(notnull($val['goods_id'])) {
-                            $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
-//                var_dump($val['goods_type']);
+                            $goods_image = $val['goods_image'];
+//                            $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
                             if ($val['goods_type'] == '4') {
                                 $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                             } else {

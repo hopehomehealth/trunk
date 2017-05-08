@@ -51,78 +51,7 @@ if(!defined('IN_CLOOTA')) {
                                     <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
                                 </p>
                             </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
-                                <p>
-                                    <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
-                                </p>
-                            </a></li>
+
                     </ul>
                 </div>
             </div>

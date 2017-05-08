@@ -261,13 +261,14 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                             if (notnull($guess_list)) {
                                 foreach ($guess_list as $val) {
                                     //                var_dump($val['goods_type']);
+                                    $goods_image = $val['goods_image'];
                                     if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
                                         if ($val['goods_type'] == '4') {
                                             $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                                            $goods_image = $val['goods_image'];
+
                                         } else if ($val['goods_type'] == '1') {
                                             $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                                            $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
+//                                            $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
                                         }
 
