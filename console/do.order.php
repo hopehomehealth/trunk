@@ -92,23 +92,21 @@ if($cmd == 'order_confirm'){
 
 //审核未通过
 if($cmd == 'order_st'){
-//    var_dump($_SESSION);die;
-
     $order_code = req('order_code');
     $order_status = req('order_status');
     $md5Str = $order_code."#".$order_status;
     $md5Str = md5($md5Str);//签名
-//        echo "<script>alert($token);</script>";
     //调接口(确认)
-
+//    echo "<script>alert($order_status);</script>";
 //    echo $md5Str;
     $url = $host . "/travel/interface/zby/v3.2/returnZbystatus_v3.2";//接口地址
     $post = array('orderCode' => $order_code, 'orderStatus' => $order_status, 'md5Str' => $md5Str, 'token' => $token);
     $confirm = $db->api_post($url, $post);
+    $confirm = json_decode($confirm, true);
     if($confirm['status'] == '0000' && $order_status == '3') {
-        echo "<script>alert('确认成功');</script>";
+        echo "<script>alert('确认成功！');</script>";
     }else if($confirm['status'] == '0000' && $order_status == '4') {
-        echo "<script>alert('确认会团成功');</script>";
+        echo "<script>alert('确认回团成功！');</script>";
     }else if($confirm['status'] == '0000' && $order_status == '9') {
         echo "<script>alert('审核未通过确认成功，稍后退款会打到您的账户上。');</script>";
     }
