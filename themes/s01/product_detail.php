@@ -292,7 +292,7 @@
                                 if ($val['goods_type'] == '4') {
                                     $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                     $goods_image = $val['goods_image'];
-                                } else {
+                                } else if($val['goods_type'] == '1'){
                                     $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                     $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 

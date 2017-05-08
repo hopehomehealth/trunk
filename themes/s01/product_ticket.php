@@ -467,30 +467,35 @@ $('.searchMain1_c input').on('keydown',function(event) {
 					$guess_list = get_guess_list(3);
 					if(notnull($guess_list)){
 						$n = 1;
-						foreach ($guess_list as $val){  
-							$goods_image = $g_domain."upfiles/$g_siteid/".$val['goods_image'];
-                            //                var_dump($val['goods_type']);
-                            if ($val['goods_type'] == '4'){
-                                $href = "/menpiao/ticket_detail-".$val['goods_id']."-".$val['lv_scenic_id'].".html";
-                            }else {
-                                $href = "/product/detail-".$val['goods_id'].".html";
+						foreach ($guess_list as $val){
+                            if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
+                                $goods_image = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
+                                //                var_dump($val['goods_type']);
+                                if ($val['goods_type'] == '4') {
+                                    $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                                } else if ($val['goods_type'] == '1') {
+                                    $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
 
+                                }
+                                ?>
+                                <dl>
+
+                                    <dt><?= $n ?></dt>
+                                    <dd>
+                                        <div class="youLikeTitle"><a href="<? echo $href; ?>" target="_blank"
+                                                                     title="<?= $val['goods_name'] ?>">
+                                                <?= $val['goods_name'] ?> </a></div>
+                                        <div class="youLikeOther">
+                                            <div class="youLikePrice">&yen;<?= $val['min_price'] ?>起</div>
+                                            <div class="youLikeTime"><?= date('m/d H:i', strtotime($val['browse_time'])) ?>
+                                                浏览过
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <?
+                                $n++;
                             }
-					?> 
-						<dl>
-					
-						<dt><?=$n?></dt>
-						<dd>
-							<div class="youLikeTitle"><a href="<?echo $href;?>" target="_blank" title="<?=$val['goods_name']?>">
-					<?=$val['goods_name']?> </a></div>
-							<div class="youLikeOther">
-								<div class="youLikePrice">&yen;<?=$val['min_price']?>起</div>
-								<div class="youLikeTime"><?=date('m/d H:i', strtotime($val['browse_time']))?>浏览过</div>
-							</div>
-						</dd>
-						</dl>
-					<?
-					$n++;
 					}
 				}
 				?> 

@@ -191,6 +191,16 @@ function array_iconv($str, $in_charset="utf-8", $out_charset="gbk")
     }
 }
 
+
+function zwjiequ($data,$num=54){
+    if(mb_strwidth($data,'gbk')>=$num){
+        return mb_strimwidth($data, 0, $num-1,'...','gbk');
+    }else{
+        return $data;
+    }
+
+}
+
 /// º”‘ÿDIY
 include($g_root."portlet/function.diy.php");
 

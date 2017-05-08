@@ -261,30 +261,33 @@ function randomFloat($min = 0, $max = 1) { return $min + mt_rand() / mt_getrandm
                             if (notnull($guess_list)) {
                                 foreach ($guess_list as $val) {
                                     //                var_dump($val['goods_type']);
-                                    if ($val['goods_type'] == '4') {
-                                        $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                                        $goods_image = $val['goods_image'];
-                                    } else {
-                                        $href = "/product/detail-" . $val['goods_id'] . ".html";
-                                        $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
+                                    if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
+                                        if ($val['goods_type'] == '4') {
+                                            $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                                            $goods_image = $val['goods_image'];
+                                        } else if ($val['goods_type'] == '1') {
+                                            $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                                            $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
+                                        }
+
+                                        ?>
+                                        <li>
+                                            <div class="imgbox"><a id="like-img" target="_blank"
+                                                                   href="<? echo $href; ?>"><img
+                                                            src="<?= $goods_image ?>"
+                                                            alt="<?= zwjiequ($val['goods_name'],100) ?>"></a>
+                                            </div>
+                                            <div class="tname"><a id="like-title" target="_blank"
+                                                                  href="<? echo $href; ?>" title="<?= $val['goods_name']?>"><?= zwjiequ($val['goods_name'],45) ?></a>
+                                            </div>
+                                            <div class="cYellow">&yen; <span
+                                                        class="font20"><?= $val['min_price'] ?></span> <span
+                                                        class="cYellow">起/人</span>
+                                            </div>
+                                        </li>
+                                        <?
                                     }
-
-                                    ?>
-                                    <li>
-                                        <div class="imgbox"><a id="like-img" target="_blank"
-                                                               href="<? echo $href; ?>"><img
-                                                    src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>"></a>
-                                        </div>
-                                        <div class="tname"><a id="like-title" target="_blank"
-                                                              href="<? echo $href; ?>"><?= $val['goods_name'] ?></a>
-                                        </div>
-                                        <div class="cYellow">&yen; <span
-                                                class="font20"><?= $val['min_price'] ?></span> <span
-                                                class="cYellow">起/人</span>
-                                        </div>
-                                    </li>
-                                    <?
                                 }
                             }
                             ?>
