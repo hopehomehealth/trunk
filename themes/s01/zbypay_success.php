@@ -43,6 +43,21 @@ if(!defined('IN_CLOOTA')) {
 
                 <div class="zby_orderSuccess_main2_cont">
                     <ul>
+                        <?
+                        $guess_list = get_guess_list(10);
+                        //                var_dump($guess_list);
+                        if (notnull($guess_list)) {
+                        $n = 1;
+                        foreach ($guess_list as $val) {
+                        if(notnull($val['goods_id'])) {
+                        $goods_image = $val['goods_image'];
+                        //                            $goodsImage = $g_domain . "upfiles/$g_siteid/" . $val['goods_image'];
+                        if ($val['goods_type'] == '4') {
+                            $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                        } else {
+                            $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                        }
+                        ?>
                         <li><a href="">
                                 <img src="/themes/s01/images/zby_cnxh.jpg">
                                 <p>丽江+大理+洱海双飞6日自由行</p>
@@ -51,7 +66,11 @@ if(!defined('IN_CLOOTA')) {
                                     <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
                                 </p>
                             </a></li>
-
+                            <?
+                        }
+                        }
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>
