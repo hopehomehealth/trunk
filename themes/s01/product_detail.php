@@ -300,7 +300,7 @@
                             <li><a id="pro-like-img" target="_blank" href="<? echo $href; ?>"><img
                                         src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>" class="imgbox"></a>
                                 <div class="tname"><a id="pro-like-title" target="_blank"
-                                                      href="<? echo $href; ?>"><?= $val['goods_name'] ?></a></div>
+                                                      href="<? echo $href; ?>" title="<?= $val['goods_name'];?>"><?= $db->jiequ(13, $val['goods_name']) ?></a></div>
                                 <div class="yellow-a"><sub>&yen;</sub> <span
                                         class="font14"><?= $val['min_price'] ?></span> Æð/ÈË
                                 </div>
