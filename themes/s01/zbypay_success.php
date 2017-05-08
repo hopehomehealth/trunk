@@ -44,10 +44,9 @@ if(!defined('IN_CLOOTA')) {
                 <div class="zby_orderSuccess_main2_cont">
                     <ul>
                         <?
-                        $guess_list = get_guess_list(10);
+                        $guess_list = get_guess_list(8);
                         //                var_dump($guess_list);
                         if (notnull($guess_list)) {
-                        $n = 1;
                         foreach ($guess_list as $val) {
                         if(notnull($val['goods_id'])) {
                         $goods_image = $val['goods_image'];
@@ -59,11 +58,11 @@ if(!defined('IN_CLOOTA')) {
                         }
                         ?>
                         <li><a href="">
-                                <img src="/themes/s01/images/zby_cnxh.jpg">
-                                <p>丽江+大理+洱海双飞6日自由行</p>
+                                <a href="<?= $href?>" target="_blank"><img src="<?= $val['goods_image']?>"></a>
+                                <p><a href="<?= $href?>" target="_blank"><?= zwjiequ($val['goods_name'],30)?></a></p>
                                 <p>
                                     <span class="cnxh_infoLeft">好评率：<b>100%</b></span>
-                                    <span class="cnxh_infoRight"><b>&yen;666</b>起/人</span>
+                                    <span class="cnxh_infoRight"><b>&yen;<?= $val['min_price']?></b>起/人</span>
                                 </p>
                             </a></li>
                             <?
