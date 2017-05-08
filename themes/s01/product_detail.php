@@ -303,7 +303,7 @@
                                                 class="imgbox"></a>
                                     <div class="tname"><a id="pro-like-title" target="_blank"
                                                           href="<? echo $href; ?>"
-                                                          title="<?= $val['goods_name']; ?>"><?= $db -> jiequ(22, $val['goods_name']) ?></a>
+                                                          title="<?= $val['goods_name']; ?>"><?= jiequ($val['goods_name'],46); ?></a>
                                     </div>
                                     <div class="yellow-a"><sub>&yen;</sub> <span
                                                 class="font14"><?= $val['min_price'] ?></span> Æð/ÈË
