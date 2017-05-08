@@ -160,7 +160,7 @@
                 <div class="d_row gray-c">
                     出发地：<span class="gray-b"><?= $db->to_gbk($data['departureCity']) ?> </span><br/>
                     目的地： <span class="gray-b"><a
-                            title="<?= $db->to_gbk($data['distCity']) ?>"><?= $db->jiequ(25, $db->to_gbk($data['distCity'])) ?></a>  </span><br/>
+                            title="<?= $db->to_gbk($data['distCity']) ?>"><?= $db->to_gbk($db->jiequ(30, $data['distCity'])) ?></a>  </span><br/>
                     服务商： <span class="gray-b"><?= $db->to_gbk($data['shopName']) ?> </span><br/>
                     好评率： <span class="gray-b"><?= $db->to_gbk($data['favorableRate']) ?> </span>
                 </div>
