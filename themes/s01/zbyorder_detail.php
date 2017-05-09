@@ -248,7 +248,7 @@ if (!defined('IN_CLOOTA')) {
 <!-- 申请退款点击后弹窗 -->
 <div class="applyRefund hide">
     <div class="applyRefund_title">
-        <div class="applyRefund_title_left">已支付订单</div>
+        <div class="applyRefund_title_left"></div>
         <span class="applyRefund_title_right"></span>
     </div>
 
@@ -262,7 +262,7 @@ if (!defined('IN_CLOOTA')) {
 <!-- 确认会团点击后弹窗 -->
 <div class="querenhuituan hide">
     <div class="querenhuituan_title">
-        <div class="querenhuituan_title_left">已支付订单</div>
+        <div class="querenhuituan_title_left"></div>
         <span class="querenhuituan_title_right"></span>
     </div>
 
