@@ -114,7 +114,7 @@ foreach ($datas['list'] as $key => $val) {
             $changeRuler<i></i>
         </div>
        <div class=\"fcj_box\">
-                 <div class=\"change_rule\">退改规则</div>
+                 <div class=\"change_rule\"><a title=''></a>退改规则</div>
 ";
     if ($isPackage == 'false') {
         echo "<div class=\"fangchajia\">

@@ -10,7 +10,7 @@ $arr = json_decode($rst, true);
 $data = $arr['data'];
 $scheduling = $data['scheduling'];
 $_SESSION['childPriceInfo'] = $db->to_gbk($data['childPriceInfo']);
-
+$c_goods_type = $data['goodsType'];
 //»»√≈Õ∆ºˆ
 $pageSize = '6';
 $homePage = '1';

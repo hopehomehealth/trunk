@@ -49,7 +49,7 @@
         }
         ?>
 
-        <li class="item current"><?= $c_goods['goods_name'] ?></li>
+        <li class="item current"><?= $db->to_gbk($data['goodsName']) ?></li>
 
         <!--        --><? //
         //        /// 编辑的快捷方式
@@ -170,7 +170,7 @@
                             return $min + mt_rand() / mt_getrandmax() * ($max - $min);
                         }
                         $randvalue = randomFloat(0.9,1) * 100;
-                        $randvalue = sprintf("%0.1f", $randvalue).'%';
+                        $randvalue = sprintf("%0.2f", $randvalue).'%';
                         if($data['favorableRate'] == '0.0%' || $data['favorableRate'] == '0%') {
                             echo $randvalue;
                         }else{
@@ -663,7 +663,6 @@
                         }
                         ;
                         meal_button();
-                        count_price();
                     }
                 });
             }
