@@ -30,7 +30,7 @@ if(!defined('IN_CLOOTA')) {
 
             <div class="zby_orderSuccess_main1">
                 <div class="zby_orderSuccess_main1_cont">
-                    <span>该订单正在审核中，请耐心等待。</span>
+                    <span>恭喜您，订单支付成功！我们将尽快给您发送确认短信。</span>
                     <p><b>订单确认号：</b><a><?echo $pay_success_data['orderCode'];?></a></p>
                     <p><b>产品名称：</b><?echo $pay_success_data['goodsName'];?></p>
                     <p><b>游玩日期：</b><?echo $pay_success_data['playDate'];?></p>
