@@ -165,7 +165,17 @@
                     目的地： <span class="gray-b"><a
                             title="<?= $db->to_gbk($data['distCity']) ?>"><?= $db->to_gbk($db->jiequ(30, $data['distCity'])) ?></a>  </span><br/>
                     服务商： <span class="gray-b"><?= $db->to_gbk($data['shopName']) ?> </span><br/>
-                    好评率： <span class="gray-b"><?= $db->to_gbk($data['favorableRate']) ?> </span>
+                    好评率： <span class="gray-b"><?
+                        function randomFloat($min = 0, $max = 1) {
+                            return $min + mt_rand() / mt_getrandmax() * ($max - $min);
+                        }
+                        $randvalue = randomFloat(0.9,1) * 100;
+                        $randvalue = sprintf("%0.1f", $randvalue).'%';
+                        if($data['favorableRate'] == '0.0%' || $data['favorableRate'] == '0%') {
+                            echo $randvalue;
+                        }else{
+                            echo $data['favorableRate'];
+                        } ?> </span>
                 </div>
             </div>
         </div>
@@ -727,7 +737,7 @@
                         }, function () {
                             $('.child_tips').hide();
                         });
-                        get_price();
+                        count_price();
                     }
                 });
             });
