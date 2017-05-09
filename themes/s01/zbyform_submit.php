@@ -624,6 +624,8 @@ if(!defined('IN_CLOOTA')) {
                             $('#youwan_birthday_<?=$i?>').blur(function(){
                                 if($('#youwan_birthday_<?=$i?>').val()==''){
                                     $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
+                                }else{
+                                   $('.youwan_birthday_<?=$i?>').hide();
                                 }
                             });
                             </script>
@@ -636,6 +638,8 @@ if(!defined('IN_CLOOTA')) {
                             $('#youwan_birthday_<?=$i?>').blur(function(){
                                 if($('#youwan_birthday_<?=$i?>').val()==''){
                                     $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
+                                }else{
+                                   $('.youwan_birthday_<?=$i?>').hide();
                                 }
                             });
                             </script>
@@ -693,7 +697,7 @@ if(!defined('IN_CLOOTA')) {
 <!-- </form> -->
 <!-- main end -->
 
-	<!--  foot  start -->
+    <!--  foot  start -->
     <?include 'foot.php';?>
 </body>
 <script type="text/javascript" src="/themes/s01/js/jquery.js"></script>
