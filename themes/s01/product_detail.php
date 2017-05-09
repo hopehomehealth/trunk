@@ -154,7 +154,7 @@
                 <i class="tag-btn"><?= $db->to_gbk($data['typeNames']) ?></i>
             </div>
             <div class="d_row gray-c">
-                <span class="yellow-a">°æ±‡∫≈£∫<?=$data['goodsCode']?>°ø</span>
+                <span class="yellow-a">°æ±‡∫≈£∫<?=$data['goodsId']?>°ø</span>
             </div>
             <div class="d-con">
                 <div class="d_row gray-c d_price">”≈ª›º€£∫
@@ -663,6 +663,7 @@
                         }
                         ;
                         meal_button();
+                        count_price();
                     }
                 });
             }

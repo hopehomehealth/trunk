@@ -64,7 +64,7 @@ if (!defined('IN_CLOOTA')) {
                     <td style="text-align:center"><strong>退款原因</strong></td>
                     <td style="text-align:center"><strong>订单金额</strong></td>
 <!--                    <td style="text-align:center"><strong>扣款金额</strong></td>-->
-<!--                    <td style="text-align:center"><strong>退款金额</strong></td>-->
+                    <td style="text-align:center"><strong>退款金额</strong></td>
                     <td style="text-align:center"><strong>退款状态</strong></td>
                     <td style="text-align:center"><strong>第三方退款金额</strong></td>
 <!--                    <td style="text-align:center"><strong>第三方手续费</strong></td>-->
@@ -106,7 +106,7 @@ if (!defined('IN_CLOOTA')) {
                                 } ?></td>
                             <td style="text-align:center"><?= $val['order_fee'] ?>元</td>
 <!--                            <td style="text-align:center">--><?//= $val['deduct_fee'] ?><!--元</td>-->
-<!--                            <td style="text-align:center">--><?//= $val['refund_fee'] ?><!--元</td>-->
+                            <td style="text-align:center"><?= $val['refund_fee'] ?>元</td>
                             <td style="text-align:center">
                                 <? if ($val['flag'] == '0') { ?>申请退款<? } else if ($val['flag'] == '1') { ?>退款中<? } else if ($val['flag'] == '2') { ?>已退款<? } else if ($val['flag'] == '3') { ?>申请驳回<? } else if ($val['flag'] == '4') { ?>退款失败<? } ?>
                             </td>

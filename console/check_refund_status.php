@@ -9,12 +9,16 @@ $arr['refundmoney'] = $_POST['refundmoney'];//应退金额
 $arr['gatewayid'] = $_POST['gatewayid'];//网关ID
 $arr['totalPrice'] = $_POST['totalPrice'];//总金额
 $arr['refund_fee'] = $_POST['refund_fee'];//退款金额
-if($arr['refundmoney'] == ''){
+if($arr['refundmoney'] == '' || $arr['refundmoney'] == '0'){
     echo "<script>alert('应退金额不能为空！');history.go(-1);</script>";
     exit();
 }
 if($arr['refundmoney'] > $arr['refund_fee']){
     echo "<script>alert('应退金额不能大于订单金额！');history.go(-1);</script>";
+    exit();
+}
+if($arr['refundmoney'] + $cutpay > $arr['refund_fee']){
+    echo "<script>alert('应退金额和扣款金额的总和不能大于订单金额！');history.go(-1);</script>";
     exit();
 }
 if($cutpay == ''){
