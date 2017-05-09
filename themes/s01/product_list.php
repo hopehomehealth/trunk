@@ -459,15 +459,21 @@
 
                                 <?
                                 if (notnull($val['itemInfo']) && $val['aLiData'] == '飞猪自营') {
-                                    foreach ($val['itemInfo'] as $key => $value) { ?>
-                            <dd style="background: url(/themes/s01/images/dingwei.png) no-repeat 37px 10px;padding-top: 10px;line-height: 15px;"><?= $value['text'] ?>: <span class="mr30"
-                                                                    title="<? echo $value['desc']; ?>"><?  echo zwjiequ( $value['desc'],54);?></span>
-                                        <br>
-                                        <!--                                        --><?//=$value['text']
-                                        ?><!--:<span class="mr30">--><?//=$value['desc']
-                                        ?><!--</span><br>--></dd>
-                                    <?
-
+                                    foreach ($val['itemInfo'] as $key => $value) {
+                                        if($value['text'] != '出发班期') {
+                                             if($value['text'] == '交通信息') $tupian =  '/themes/s01/images/jiaotong.png';
+                                             else if($value['text'] == '服务效率') $tupian = '/themes/s01/images/xiaolv.png';
+                                             else if($value['text'] == '产品亮点') $tupian = '/themes/s01/images/liangdian.png';
+                                             else if($value['text'] == '住宿详情') $tupian = '/themes/s01/images/xiangqing.jpg';
+                                             ?>
+                                            <dd style="background: url(<?= $tupian;?>) no-repeat 37px 10px;padding-top: 10px;line-height: 15px;"><?= $value['text'] ?>：<span class="mr30"
+                                                        title="<? echo $value['desc']; ?>"><? echo zwjiequ(trim($value['desc']), 54); ?></span>
+                                                <br>
+                                                <!--                                        --><?//=$value['text']
+                                                ?><!--:<span class="mr30">--><?//=$value['desc']
+                                                ?><!--</span><br>--></dd>
+                                            <?
+                                        }
                                     }
                                 } ?>
 
