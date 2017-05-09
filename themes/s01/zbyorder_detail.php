@@ -115,7 +115,7 @@ if (!defined('IN_CLOOTA')) {
                         </tbody>
                     </table>
 
-                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['payPrice']; ?></b></span></p>
+                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['totalPrice']; ?></b></span></p>
                 </div>
 
 
@@ -248,7 +248,7 @@ if (!defined('IN_CLOOTA')) {
 <!-- 申请退款点击后弹窗 -->
 <div class="applyRefund hide">
     <div class="applyRefund_title">
-        <div class="applyRefund_title_left">已支付订单</div>
+        <div class="applyRefund_title_left"></div>
         <span class="applyRefund_title_right"></span>
     </div>
 
@@ -262,12 +262,12 @@ if (!defined('IN_CLOOTA')) {
 <!-- 确认会团点击后弹窗 -->
 <div class="querenhuituan hide">
     <div class="querenhuituan_title">
-        <div class="querenhuituan_title_left">已支付订单</div>
+        <div class="querenhuituan_title_left"></div>
         <span class="querenhuituan_title_right"></span>
     </div>
 
     <div class="querenhuituan_cont">
-        <div class="querenhuituan_cont_tips">&nbsp;&nbsp;是否确认会团?</div>
+        <div class="querenhuituan_cont_tips">&nbsp;&nbsp;是否确认回团?</div>
         <button class="querenhuituan_sure" onclick="confirm_return()">确认</button>
         <!--			<a href="--><?//=$nowUrl?><!----><?//=$flagch?><!--"><button class="applyRefund_sure">确认</button></a>-->
         <button class="querenhuituan_cancel">取消</button>

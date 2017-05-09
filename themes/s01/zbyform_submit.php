@@ -128,17 +128,19 @@ if(!defined('IN_CLOOTA')) {
                     adds[i].index = i;
                     adds[i].onclick = function(){
                         var count1 = $('.counts').eq(this.index).html();
-                        var adultNum = $('#adultNum').html();//成人数
-                        var kidNum = $('#kidNum').html();//儿童数
+                        var adultNum = $('#adultNum').html();
+                        var kidNum = $('#kidNum').html();
                         var zongshu = Number(adultNum) + Number(kidNum);
                         if(zongshu<<?=$taocan['max']?>){
                             count1++;
                         }else{
                             alert('亲,您已超过最大订购数量:<?=$taocan['max']?>');
                         }
+                        
                         $('.counts').eq(this.index).html(count1);
                         $('.Num').eq(this.index).val(count1);
-                        
+                        adultNum = $('#adultNum').html();
+                        kidNum = $('#kidNum').html();
                         var adultPrice = $('#adultPrice').html();//成人价
                         var roomMax = <?=$roomMax?>;//房间的最大允许入住数量
                         var goodsType = <?=$_GET['goodsType']?>;//当前产品的业务类型(自由行、跟团游)
@@ -332,7 +334,7 @@ if(!defined('IN_CLOOTA')) {
                             <li>
                                 <label><b>＊</b>手机号码：</label>
                                 <input type="text" name="bookerMobile" id="mobile" value="">
-                                <span>此手机为接受短信所用，作为订购于取票凭证，请准确填写。</span>
+                                <span>此手机用于接收订购与取票凭证的短信，请准确填写。</span>
                                 <span class="buyer_phoneTips">购买人手机号不能为空！</span>
                             </li>
                             <?}?>
