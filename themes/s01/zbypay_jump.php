@@ -9,7 +9,7 @@ $post = array('totalprice' => $totalprice, 'orderno' => $orderno, 'topayinfoid' 
 $url = $host . '/travel/interface/pay/createpayparam';
 $pay_parameter = juhecurl($url, $post, 1);
 $pay_parameter = json_decode($pay_parameter, true);
-$errormsg = $db->to_utf8("支付失败!");
+$errormsg = $pay_parameter['msg'];
 
 // 判断返回参数
 if ($pay_parameter['status'] != '0000') {
