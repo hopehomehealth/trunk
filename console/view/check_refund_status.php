@@ -49,10 +49,12 @@ if (!defined('IN_CLOOTA')) {
             <td style="text-align:right"><strong>订单金额：</strong></td>
             <td><?= $query_row['order_fee'] ?></td>
         </tr>
+        <?if(!is_null($query_row['thrid_refund_amount'])){?>
         <tr>
             <td style="text-align:right"><strong>第三方退款金额：</strong></td>
             <td><?= $query_row['thrid_refund_amount'] ?></td>
         </tr>
+        <?}?>
         <tr>
             <td style="text-align:right"><strong>扣款金额：</strong></td>
             <td><input type="text" name="cutpay" id="cutpay" class="span1"/>元</td>

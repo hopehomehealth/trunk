@@ -23,5 +23,3 @@ $info = $db->get_one($sql);
 $user_name = $query_rows['linker'];
 $user_phone = $query_rows['mobile'];
 $user_credentials = $info['user_credentials'];
-
-
