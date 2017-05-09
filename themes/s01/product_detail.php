@@ -150,11 +150,11 @@
         <div class="detail-info">
             <div class="detail-title">
                 <a href="/product/detail-<?= $goodsId ?>-<?= $productId ?>.html"
-                   title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($db->jiequ(22, $data['goodsName'])) ?></a>
+                   title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($data['goodsName'])?></a>
                 <i class="tag-btn"><?= $db->to_gbk($data['typeNames']) ?></i>
             </div>
             <div class="d-con">
-                <div class="d_row gray-c d_price">优惠价
+                <div class="d_row gray-c d_price">优惠价：
                     <span class="yellow-a"><i>&yen;</i> <em><?= $data['minPrice'] ?></em><sub> 起</sub></span>
                 </div>
                 <div class="d_row gray-c">
@@ -724,6 +724,7 @@
                         }, function () {
                             $('.child_tips').hide();
                         });
+                        get_price();
                     }
                 });
             });
@@ -769,8 +770,11 @@
             adultNum = $('#adult_num').val();
             kidNum = $('#kid_num').val();
             diffPriceNum = $('#diffPrice').val();
-            //var zongjia = "&yen;";
-            zongjia = adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
+            alert(adultNum);
+            alert(kidNum);
+            alert(diffPriceNum);
+
+            var zongjia = adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
             $("#orderPrice").html(zongjia);
         }
     }
