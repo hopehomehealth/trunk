@@ -235,7 +235,7 @@
 
 
             <div class="form-btn">
-			<span>Ì×²Í¼Û£º
+			<span style="width: 140px;display: inline-block;">Ì×²Í¼Û£º
 			<span id="orderPriceYes" style=""> <sub class="yellow-b">&yen;</sub><span
                     class="form-price yellow-b" id="orderPrice">0</span></span> </span>
                 <span id="order_span">
@@ -726,7 +726,7 @@
                             $('.qijia1_tips').show();
                             $('.qijia1_tips').css({
                                 "position": "absolute",
-                                "left": 450
+                                "left": 480
                             });
                         }, function () {
                             $('.qijia1_tips').hide();

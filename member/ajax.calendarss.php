@@ -23,9 +23,9 @@ $curr_ym_html = date('Y年m月', strtotime($yyyy.'-'.$mm.'-01'));
 
 ?> 
 <div style="text-align:center;padding:5px 0px 5px 0px;background-color: #1fcc9e;">
-	<span><a href="javascript:change_calendar(<?=date("'Y','m'", strtotime('-1 month '.$yyyy.'-'.$mm.'-01'))?>)"><img src="/themes/s01/images/vcalendar_prev.png" alt="前一月" style="    margin-top: 3px"></a></span>
-	<span style="font-size:18px;padding-top:10px;color: #fff;"> &nbsp; <?=$curr_ym_html?> &nbsp; </span>
-	<span><a href="javascript:change_calendar(<?=date("'Y','m'", strtotime('+1 month '.$yyyy.'-'.$mm.'-01'))?>)"><img src="/themes/s01/images/vcalendar_next.png" alt="后一月" style="    margin-top: 3px"></a></span>
+	<span><a href="javascript:change_calendar(<?=date("'Y','m'", strtotime('-1 month '.$yyyy.'-'.$mm.'-01'))?>)"><img src="/themes/s01/images/vcalendar_prev.png" alt="前一月" style="    margin-top: 6px"></a></span>
+	<span style="font-size:18px;padding-top:10px;color: #fff;line-height: 26px;"> &nbsp; <?=$curr_ym_html?> &nbsp; </span>
+	<span><a href="javascript:change_calendar(<?=date("'Y','m'", strtotime('+1 month '.$yyyy.'-'.$mm.'-01'))?>)"><img src="/themes/s01/images/vcalendar_next.png" alt="后一月" style="    margin-top: 6px"></a></span>
 </div>  
 
 <ul class="date_ul">

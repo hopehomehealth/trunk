@@ -2555,20 +2555,23 @@ a:hover .ico-shopping {
     top: -15px;
 }
 .qijia1{
-	background:url(/themes/s01/images/qijia.png) no-repeat left center;
+	background:url(/themes/s01/images/qijia.png) no-repeat 5px center;
 	padding-left: 25px;
 	margin-left: 10px;
 	display: inline-block;
 }
 .qijia1_tips{
 	width: 220px;
-	background-color:#fcfcfc;
 	display: none;
 	overflow: hidden;
 	padding:10px;
 	position: relative;
-	border:solid 1px #ededed;
 	box-shadow: 0 2px 0 #e3e3e3;
+    background-color: #fff;
+    border: solid 1px #cdd5e2;
+    color: #333;
+    line-height: 1.5;
+    font-size: 12px;
 }
 .qijia1_tips i{
 	width: 25px;
@@ -2624,7 +2627,7 @@ a:hover .ico-shopping {
 .product_price{width:150px;}
 .product_price b{color: #f55b32;}
 .product_select{width:120px;}
-.product_name1{width:160px;background-image:url('/themes/s01/images/sanjiao2.jpg');background-repeat: no-repeat; background-position:right center;cursor: pointer;}
+.product_name1{width:160px;background-repeat: no-repeat; background-position:right center;cursor: pointer;}
 .hotel_contain1{width:320px;}
 .ticket_contain1{width:220px;}
 .fangcha1{width: 100px;}
@@ -2661,8 +2664,8 @@ a:hover .ico-shopping {
 	font-size: 16px;
 	color: #333;
 	text-align: center;
-    height: 30px;
-	line-height: 15px;
+    height: 36px;
+	line-height: 20px;
     min-height: 15px;
 }
 .hide_content{
@@ -2865,9 +2868,12 @@ a:hover .ico-shopping {
 
 .detail-form .form-tips {
 	text-decoration: underline;
-	color: #f60;
+	color: #666;
 	font-size: 12px;
 	margin-left: 12px
+}
+.detail-form a.form-tips:hover{
+    color: #f60;
 }
 
 .detail-form .form-tips .box-tips {
@@ -2878,7 +2884,7 @@ a:hover .ico-shopping {
 .detail-form .form-price {
 	font-size: 22px;
 	padding-left: 5px;
-	padding-right: 20px;
+	/*padding-right: 20px;*/
 	font-family: tahoma,simsun,sans-serif;
 	vertical-align: -3px
 }

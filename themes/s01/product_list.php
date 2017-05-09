@@ -342,14 +342,14 @@
 
 
     <!-- Ö÷Ìå -->
-    <div class="main fl">
+    <div class="main fl" style="position: relative">
 
 
         <!--·ÖÒ³-->
 
         <? if (!empty($keyWord) || $orderby == 'true') { ?>
-            <div class="spotList_main2_title">
-                <div class="spotList_main2_title_right">
+            <div class="spotList_main2_title" style="width:auto;position: absolute;right: 0;top: 0;z-index: 99;">
+                <div class="spotList_main2_title_right" style="width: auto;min-width: 140px;">
                     <div class="yema">Ò³Âë£º<b><? echo $pageNo; ?></b>/<?= $totalPage ?></div>
                     <a href="<?= $nowUrl ?>&pageNo=<?= $prePage; ?>"><? if ($pageNo > 1){ ?><span
                             class="leftBtn_hover"><? }else{ ?><span class="leftBtn"><? } ?></span></a>

@@ -50,7 +50,7 @@ if($post['isPackage'] == 'true'){
             </div>
             </span>";
 } else {
-    echo "<span class='renshu'>
+    echo "<span class='renshu' style=\" padding-left: 25px;\">
             <label for=\"\">成人</label>
             <select name=\"adult_num\" id=\"adult_num\" style=\"width:60px\" onChange=\"count_price()\">
             ";
@@ -58,11 +58,11 @@ if($post['isPackage'] == 'true'){
     echo "<option value=\"$i\">$i</option>";
  }
 echo "</select>
-<a href=\"javascript:void(0);\" class=\"qijia1\" style=\"\">起价说明</a>
+<a href=\"javascript:void(0);\" class=\"qijia1\" style=\"text-decoration: underline;font-size: 12px;\">起价说明</a>
 <div class=\"qijia1_tips\">
     本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变.
 </div>
-<label for=\"\">儿童</label>
+<label for=\"\" style=\" padding-left: 25px;\">儿童</label>
 <select name=\"kid_num\" id=\"kid_num\" style=\"width:60px\" onChange=\"count_price()\">
     <option value='0'>0</option>";
     for ($i = $adultmin; $i <= $adultmax; $i++) {
