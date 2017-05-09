@@ -103,7 +103,7 @@ textarea {outline: none;}
 
 .spotList_ad1{width: 290px;height: 233px;margin:20px 0;}
 
-.spotList_main_right1{width: 260px;height: 240px;background-color: white;padding:15px;}
+.spotList_main_right1{width: 260px;height: 440px;background-color: white;padding:15px;}
 .spotList_main_right1 h3{font-size: 16px;line-height: 24px;}
 .spotList_main_right1 dl{overflow:hidden;width: 260px;border-bottom:dotted 1px #eaeaea;padding-bottom: 10px;}
 .spotList_main_right1 dl dt{float: left;width:20px;height: 20px;border-radius: 5px;margin-top:8px;margin-right:5px;background-color: #66b5f8;color: white;line-height: 20px;text-align: center;}
