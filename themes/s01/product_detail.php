@@ -153,6 +153,9 @@
                    title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($data['goodsName'])?></a>
                 <i class="tag-btn"><?= $db->to_gbk($data['typeNames']) ?></i>
             </div>
+            <div class="d_row gray-c">
+                <span class="yellow-a">¡¾±àºÅ£º<?=$data['goodsCode']?>¡¿</span>
+            </div>
             <div class="d-con">
                 <div class="d_row gray-c d_price">ÓÅ»Ý¼Û£º
                     <span class="yellow-a"><i>&yen;</i> <em><?= $data['minPrice'] ?></em><sub> Æð</sub></span>
@@ -770,10 +773,6 @@
             adultNum = $('#adult_num').val();
             kidNum = $('#kid_num').val();
             diffPriceNum = $('#diffPrice').val();
-            alert(adultNum);
-            alert(kidNum);
-            alert(diffPriceNum);
-
             var zongjia = adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
             $("#orderPrice").html(zongjia);
         }
