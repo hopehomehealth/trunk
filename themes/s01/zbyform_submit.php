@@ -210,7 +210,7 @@ if(!defined('IN_CLOOTA')) {
 
 
             });
-               
+            
             function get_price() {
 
                 var adultPrice = $('#adultPrice').html();//成人价
@@ -242,7 +242,7 @@ if(!defined('IN_CLOOTA')) {
                             </thead>
                             <tbody>
                             <tr>
-                                <td  onclick="changeTR()" style="cursor:pointer;" onselectstart="return false"><?=$taocan['packageName']?>&nbsp;&nbsp;<span id="change" class="subtriangle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                <td style="cursor:pointer;" onselectstart="return false"><?=$taocan['packageName']?>&nbsp;&nbsp;</td>
                                 <td><?=$tc['departDate']?>
                                 <td>
                                 <?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
@@ -258,13 +258,9 @@ if(!defined('IN_CLOOTA')) {
                                 </td>
                             </tr>
                             </tbody>
-                            <!-- <tr id="sample"  style="display:none"  >  
-                                  <td align="left">  
-                                      描述:..... 
-                                  </td>  
-                              </tr> -->  
+                            
                         </table>
-                        <div class="spotTicket_infoHide" id="sample"  style="display:none;width:1402px;">描述:..... </div>
+                        
                     </div>
                 </div>
             </div>
@@ -314,22 +310,7 @@ if(!defined('IN_CLOOTA')) {
 
             });
 
-            
-                function changeTR()  
-                {  
-                    var tr1 = document.getElementById("sample");  
-                  
-                    if (tr1.style.display == 'none')  
-                    {  
-                        tr1.style.display = 'block';
-                        document.getElementById("change").className = "subtriangle uptriangle";  
-                    }  
-                    else  
-                    {  
-                        tr1.style.display = 'none';
-                        document.getElementById("change").className = "subtriangle";  
-                    }  
-                }  
+             
             </script>
             <? } ?>
             <div class="zbyOrder_main2">
@@ -686,7 +667,7 @@ if(!defined('IN_CLOOTA')) {
                 </div>
                 <div class="zbyOrder_main32">
                     <label><a href="<?=$g_self_domain?>/zhoubian/xy.html" target="_blank"><u>我已同意条款</u></a></label>
-                    <input type="checkbox" name="我已同意以下条款" id="tiaokuan">
+                    <input type="checkbox" name="我已同意以下条款" id="tiaokuan" onclick="hasChecked(this)">
                 </div>
                 <div class="zbyOrder_main33">
                     温馨提示：请您仔细阅读预订须知及旅游合同条款，订单提交后，视为您同意以下各项条款内容
@@ -700,10 +681,20 @@ if(!defined('IN_CLOOTA')) {
     <!--  foot  start -->
     <?include 'foot.php';?>
 </body>
-<script type="text/javascript" src="/themes/s01/js/jquery.js"></script>
-<script type="text/javascript" src="/themes/s01/js/common.js"></script>
-<script type="text/javascript">
 
+<script type="text/javascript">
+function hasChecked(obj){
+                if($(obj).attr("hasCheck") == "0"){
+                    $(obj).attr("hasCheck","1");
+                    
+                }else if($(obj).attr("hasCheck") == "1"){
+                    $(obj).attr("hasCheck","0");
+                    
+                }else{
+                    
+                    $(obj).attr("hasCheck","1");
+                }
+            }   
 
 //表单合发性验证
 var reg1 = /^([\u4e00-\u9fa5]){2,6}$/;//匹配中文
@@ -765,7 +756,8 @@ $('#mobile').blur(function(){
 
 
 function check_form(){
-    if($('#tiaokuan').attr('checked')){
+
+    if($('#tiaokuan').attr('hasCheck')=='1'){
         var kidNum = $('#kidNum').html();//儿童数
         if(kidNum==''){
             kidNum = $('#kidNum').val();//儿童数
