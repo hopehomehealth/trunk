@@ -1483,7 +1483,8 @@ div.box-warning i {
 
 .btn.btn-sm,a.btn.btn-sm {
 	padding: 9px 19px;
-	font-size: 12px
+	font-size: 12px;
+	margin-top: 55px;
 }
 
 .btn.btn-lg,a.btn.btn-lg {

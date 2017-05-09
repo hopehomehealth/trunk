@@ -2570,7 +2570,8 @@ a:hover .ico-shopping {
 }
 
 .lv-list .info dt a {
-	line-height: 26px
+	line-height: 26px;
+	font-size: 15px;
 }
 
 .lv-list .ui-tag {
@@ -2636,7 +2637,14 @@ a:hover .ico-shopping {
 
 .lv-list .text dd {
 	font-family: "ËÎÌו";
-	line-height: 22px
+	line-height: 22px;
+	color: #b7b7b7;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 55px;
+}
+.lv-list .text dd span{
+	color: #777;
 }
 
 .lv-list .text td {
@@ -2730,7 +2738,8 @@ a:hover .ico-shopping {
 
 .lv-lineright .price {
 	line-height: 26px;
-	margin-bottom: 3px
+	margin-bottom: 3px;
+	margin-top: 15px;
 }
 
 .lv-lineright .price .num {
