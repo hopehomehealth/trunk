@@ -12,26 +12,26 @@
 <div class="container">
     <ul class="breadcrumbs">
         <li class="item"><a href="<?= $g_domain ?>">首页</a><span>&gt</span></li>
-        <?
-        if ($c_goods_type == '1') {
-            ?>
-            <li class="item"><a href="/gentuan/all/">跟团游</a><span>&gt</span></li>
-        <? } ?>
-        <?
-        if ($c_goods_type == '2') {
-            ?>
-            <li class="item"><a href="/ziyouxing/all/">自由行</a><span>&gt</span></li>
-        <? } ?>
-        <?
-        if ($c_goods_type == '3') {
-            ?>
-            <li class="item"><a href="/qianzheng/">签证</a><span>&gt</span></li>
-        <? } ?>
-        <?
-        if ($c_goods_type == '6') {
-            ?>
-            <li class="item"><a href="/youlun/">邮轮</a><span>&gt</span></li>
-        <? } ?>
+<!--        --><?//
+//        if ($c_goods_type == '1') {
+//            ?>
+            <li class="item"><a href="/zhoubian/"><?=$db->to_gbk($data['typeNames'])?></a><span>&gt</span></li>
+<!--        --><?// } ?>
+<!--        --><?//
+//        if ($c_goods_type == '2') {
+//            ?>
+<!--            <li class="item"><a href="/ziyouxing/all/">自由行</a><span>&gt</span></li>-->
+<!--        --><?// } ?>
+<!--        --><?//
+//        if ($c_goods_type == '3') {
+//            ?>
+<!--            <li class="item"><a href="/qianzheng/">签证</a><span>&gt</span></li>-->
+<!--        --><?// } ?>
+<!--        --><?//
+//        if ($c_goods_type == '6') {
+//            ?>
+<!--            <li class="item"><a href="/youlun/">邮轮</a><span>&gt</span></li>-->
+<!--        --><?// } ?>
         <?
         if ($c_goods_type == '1' || $c_goods_type == '2') {
             if (notnull($this_parent_catalog)) {
