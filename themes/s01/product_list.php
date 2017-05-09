@@ -542,7 +542,7 @@
                                 echo $ziyingurl;
                             } ?>" target="_blank" class="btn  btn-sm">查看详情</a>
                             <div class="count"> </a></div>
-                            <?if($val['aLiData'] == '飞猪自营'){ ?><p style="text-align: center;color: #999;line-height: 28px;font-size: 12px;font-weight: bold;">*本数据由飞猪提供</p><? } ?>
+                            <?if($val['aLiData'] == '飞猪自营'){ ?><p style="text-align: center;color: #999;line-height: 28px;font-size: 12px;font-weight: bold;">本服务由飞猪提供</p><? } ?>
                         </div>
                     </div>
                 </div>
