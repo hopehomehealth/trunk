@@ -334,7 +334,7 @@ if(!defined('IN_CLOOTA')) {
                             <li>
                                 <label><b>＊</b>手机号码：</label>
                                 <input type="text" name="bookerMobile" id="mobile" value="">
-                                <span>此手机为接受短信所用，作为订购于取票凭证，请准确填写。</span>
+                                <span>此手机用于接收订购与取票凭证的短信，请准确填写。</span>
                                 <span class="buyer_phoneTips">购买人手机号不能为空！</span>
                             </li>
                             <?}?>
