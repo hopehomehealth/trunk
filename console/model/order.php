@@ -22,7 +22,10 @@ if(req('kw')!=''){
 }
 if(req('state')!=''){
 	$qer .= " AND a.`state`='".req('state')."'";
-} 
+}
+if(req('verifyFlag')!=''){
+    $qer .= " AND a.`verify_flag`='".req('verifyFlag')."'";
+}
 
 $sql = "SELECT a.*,c.lv_scenic_id FROM t_user_order a, t_shop b, t_goods_thread c WHERE a.shop_id=b.shop_id AND a.lv_product_id=c.lv_product_id AND a.`site_id`='$g_siteid' $qer ORDER BY a.`order_id` DESC ";
 
