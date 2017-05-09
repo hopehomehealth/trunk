@@ -3,7 +3,7 @@
 #applyRefund_mainBox{width: 100%;overflow: hidden;background-color: #f5f5f5;}
 #applyRefund_main{width: 1190px;overflow: hidden;margin:0 auto;}
 .applyRefund_main_cont{width: 1190px;overflow: hidden;background-color: white;margin-top:20px;margin-bottom: 75px;}
-.applyRefund_main_cont p{width: 1190px;height:165px;line-height: 165px;color: #1fcc9e;font-size:21px;font-weight: bold;text-align: center;border-bottom: solid 1px #ddd;}
+.applyRefund_main_cont p{width: 1190px;height:165px;line-height: 165px;color: #1fcc9e;font-size:21px;font-weight: bold;text-align: center;border-bottom: solid 1px #ddd;background: url("../images/success_logo1.jpg") no-repeat left top;}
 .applyRefund_main_info{width: 1160px;padding:0 15px;overflow: hidden;}
 .applyRefund_main_info_title{width: 1160px;font-size: 18px;color: #333;padding:15px 0 10px 0;}
 .applyRefund_main_info ul{width: 1160px;padding-bottom: 20px;}

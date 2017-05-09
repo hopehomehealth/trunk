@@ -115,7 +115,7 @@ if (!defined('IN_CLOOTA')) {
                         </tbody>
                     </table>
 
-                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['payPrice']; ?></b></span></p>
+                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['totalPrice']; ?></b></span></p>
                 </div>
 
 
