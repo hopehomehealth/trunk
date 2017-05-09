@@ -83,7 +83,7 @@ foreach ($datas['list'] as $key => $val) {
     echo "</dl></li>
             <li class=\"product_mounts1\">$lvStock</li>";
     if ($isPackage == 'false') {
-        echo "<li class=\"product_price1\">成人：<b>&yen;$adultPrice</b><br>儿童：<b>&yen;$kidPrice</b></li>";
+        echo "<li class=\"product_price1\" style='text-align: left;width: 110px;padding-left: 40px;'>成人：<b>&yen;$adultPrice</b><br>儿童：<b>&yen;$kidPrice</b></li>";
     } else {
         echo "<li class=\"product_price1\"><b>&yen;$price</b>/份</li>";
     }
