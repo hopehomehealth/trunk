@@ -267,7 +267,7 @@ if (!defined('IN_CLOOTA')) {
     </div>
 
     <div class="querenhuituan_cont">
-        <div class="querenhuituan_cont_tips">&nbsp;&nbsp;是否确认会团?</div>
+        <div class="querenhuituan_cont_tips">&nbsp;&nbsp;是否确认回团?</div>
         <button class="querenhuituan_sure" onclick="confirm_return()">确认</button>
         <!--			<a href="--><?//=$nowUrl?><!----><?//=$flagch?><!--"><button class="applyRefund_sure">确认</button></a>-->
         <button class="querenhuituan_cancel">取消</button>
