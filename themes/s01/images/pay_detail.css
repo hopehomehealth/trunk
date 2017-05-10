@@ -98,7 +98,7 @@
 .applyRefund_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
 
 /*确认会团*/
-.querenhuituan{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.querenhuituan{background-color: white;position: fixed;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
 .querenhuituan_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
 .querenhuituan_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
 .querenhuituan_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
@@ -109,7 +109,7 @@
 .querenhuituan_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
 
 
-.querenhuituan1{background-color: white;position: ;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.querenhuituan1{background-color: white;position: fixed;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
 .querenhuituan1_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
 .querenhuituan1_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
 .querenhuituan1_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
@@ -118,7 +118,7 @@
 .querenhuituan1_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}
 
 /*是否能退款*/
-.nengtuifou{background-color: white;position: absolute;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
+.nengtuifou{background-color: white;position: fixed;left: 50%;top:50%;margin-left:-282px;margin-top:-100px;width: 544px;height: 200px;border:solid 5px rgba(0,0,0,0.3);border-radius: 10px;z-index: 19999;}
 .nengtuifou_title{width:544px;height:45px;background-color: #f9f9f9;line-height: 45px;}
 .nengtuifou_title_left{float: left;color: #333;font-size: 16px;padding-left: 20px;}
 .nengtuifou_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}

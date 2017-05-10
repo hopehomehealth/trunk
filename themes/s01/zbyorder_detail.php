@@ -112,7 +112,7 @@ if (!defined('IN_CLOOTA')) {
                             <td class="productXiaoji">&yen;<? echo $order_detail_data['num'] * $order_detail_data['unitPrice']; ?></td>
                         <? } ?>
 
-                        
+
                         </tbody>
                     </table>
 <!--                    --><?//if($order_detail_data['isPackage'] == 'false'){ ?>
