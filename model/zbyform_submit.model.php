@@ -1,6 +1,20 @@
 <?
 
-$db->check_cookie($loginUrl, $host);
+if($_GET['flage']==1){
+    $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $url_canshu = str_replace('?', '',substr($getUrl,stripos($getUrl, '?')));
+    $url_canshu = 'http://traveld.bus365.cn/zhoubianyou/zbyform_submit-2.html?'.$db->encrypt($url_canshu);
+    header("location: $url_canshu");
+}
+if($_GET['flage']==2){
+    $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $url_canshu = str_replace('?', '',substr($getUrl,stripos($getUrl, '?'))) ;
+    $url_canshu = $db->decrypt($url_canshu);
+    parse_str($url_canshu);
+    $url_form = str_replace('?', '',substr($getUrl,stripos($getUrl, '?')));
+
+}
+//$db->check_cookie($loginUrl, $host);
 //截取
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
@@ -11,11 +25,11 @@ function jiequ($num,$data){
 
 } 
 
-//$getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+//
 //获取套餐信息
-$tc['lvProductId'] = req('lvProductId');
-$tc['packageId'] = req('packageId');
-$tc['departDate'] = req('departDate');
+$tc['lvProductId'] = $lvProductId;
+$tc['packageId'] = $packageId;
+$tc['departDate'] = $departDate;
 
 $api_url = $host.'/travel/interface/zby/v3.2/getZbyPackageList_v3.2?lvProductId='.$tc['lvProductId'].'&packageId='.$tc['packageId'].'&departDate='.$tc['departDate'];
 
@@ -26,9 +40,9 @@ $token = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'], 1, -1);
 //判断按人安份
 $is_package = $taocan['isPackage'];
 $diffPrice = $taocan['diffPrice'];
-$packageNum = req('packageNum');
+//$packageNum = req('packageNum');
 $onePrice = $taocan['adultNum']*$taocan['adultPrice'];
-$roomPrice = req('roomPrice');
+//$roomPrice = req('roomPrice');
 //var_dump($tcs);echo '<br>'; 
 //订单接口参数
 $post['token'] = $token;
@@ -36,33 +50,34 @@ $post['goodsId'] = $taocan['goodsId'];//'8017691';//
 $post['lvProductId'] = $taocan['lvProductId'];//'9999999';//
 $post['packageId'] = $tc['packageId'];//'6666666';//
 $post['departdate'] = $tc['departDate'];//'2017-05-31';
-$post['payPrice'] = req('payPrice');//'150';//
+/*$post['payPrice'] = req('payPrice');//'150';//
 $post['adultNum'] = req('adultNum');//'1';//
-$post['kidNum'] = req('childNum');//'1';//
+$post['kidNum'] = req('childNum');//'1';//*/
 if($taocan['isPackage'] == 'true'){//按份卖
-    $post['packageNum'] = req('packageNum');//'3';//
-    $packageNum =req('packageNum');
+    $post['packageNum'] = $packageNum;//'3';//
+    //$packageNum =req('packageNum');
 }else{//按人卖
     
-    $post['roomCount'] = req('roomCount');//'0';//
-    $roomCount = req('roomCount');
+    $post['roomCount'] = $roomCount;//'0';//
+    //$roomCount = req('roomCount');
 }
 //游玩人数量判断  
 if($taocan['travellerName']=='TRAV_NUM_ONE'){
     $num = 1;
 }elseif ($taocan['travellerName'] == 'TRAV_NUM_ALL' && $is_package=='false'){
-    $num = (req('adultNum')+req('childNum'));
+    $num = ($adultNum+$childNum);
 }elseif($taocan['travellerName'] == 'TRAV_NUM_ALL' && $is_package=='true'){
     $num = ($taocan['adultNum']+$taocan['childNum'])*$packageNum;
 }else{
     $num = 0;
 }
-$payPrice1 = req('payPrice');
-$adultNum = req('adultNum');
-$kidNum = req('childNum');
+$payPrice1 = $payPrice;
+//$adultNum = $adultNum;
+$kidNum = $childNum;
 //生成订单
 $flag = req('flag');
 if($flag == 'check'){
+
     if($taocan['isPackage'] == 'true'){//按份卖
         $post['packageNum'] = $_POST['packageNum'];//'3';//
     }else{//按人卖
@@ -135,14 +150,20 @@ $roomMax = $taocan['roomMax'];
 //ajax请求/travel/interface/zby/v3.2/getDiffRoomNum_v3.2获取房差数量集合
 
 
-$fang['adultNum'] = req('adultNum');
+$fang['adultNum'] = $adultNum;
 $fang['roomMax'] = $roomMax;
-$fang['goodsType'] = req('goodsType');
+$fang['goodsType'] = $goodsType;
 $fang['isPackage'] = $is_package;
-$diffPrice = req('roomPrice');
+$diffPrice = $roomPrice;
 $url = $host . "/travel/interface/zby/v3.2/getDiffRoomNum_v3.2";
 $data = $db->api_post($url, $fang);
 $arr = json_decode($data, true);
 $fangcha = $arr['data'];
+}
+if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){
+    $jiahao = 1;
+}
+if($_GET['check']=='check'){
+    $jiahao = '';
 }
 ?>
