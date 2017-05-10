@@ -100,7 +100,7 @@ if (!defined('IN_CLOOTA')) {
                                 <td class="productName"  style="WORD-WRAP: break-word" width="500"><b><? echo $order_detail_data['goodsName']; ?></b></td>
                                 <td class="productOther"><? if (!empty($order_detail_data['kidNum'])) echo '成人×'.$order_detail_data['adultNum'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . '儿童×' . $order_detail_data['kidNum'] ; else echo '成人×'.$order_detail_data['adultNum'];?></td>
                                 <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                                <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
+                                <td class="productPrice2"><? if (!empty($order_detail_data['kidNum'])) echo '成人&yen;'.$order_detail_data['adultPrice'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . '儿童&yen;' . $order_detail_data['kidPrice'] ; else echo '成人&yen;'.$order_detail_data['adultPrice'];?></td>
                                 <td class="productPrice2">&yen;<? echo $order_detail_data['diffPrice']; ?></td>
                                 <td class="productXiaoji">&yen;<? echo $order_detail_data['adultTotalFee'] + $order_detail_data['kidTotalFee'] + $order_detail_data['diffPrice']; ?></td>
                             </tr>
@@ -310,7 +310,7 @@ if (!defined('IN_CLOOTA')) {
     <input type="hidden" name="payPrice" value="<?=$order_detail_data['payPrice']?>">
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$order_detail_data['goodsName']?>">
     <input type="hidden" name="payTime"  value="<?=$order_detail_data['leftPayTime']?>">
-    <input type="hidden" name="lvGoodsName"  value="<?=$order_detail_data['lvgoodsName']?>">
+    <input type="hidden" name="lvGoodsName"  value="<?=$order_detail_data['lvGoodsName']?>">
     <input type="hidden" name="orderCode"  value="<?=$order_detail_data['orderCode']?>">
 </form>
 <!--  foot  start -->
