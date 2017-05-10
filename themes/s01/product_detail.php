@@ -235,7 +235,7 @@
 
 
             <div class="form-btn">
-			<span style="width: 140px;display: inline-block;">Ì×²Í¼Û£º
+			<span style="width: 160px;display: inline-block;">Ì×²Í¼Û£º
 			<span id="orderPriceYes" style=""> <sub class="yellow-b">&yen;</sub><span
                     class="form-price yellow-b" id="orderPrice">0</span></span> </span>
                 <span id="order_span">

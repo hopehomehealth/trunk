@@ -23,14 +23,20 @@ if (!isset($_SESSION)){
     session_start();    
 }
 $childPriceInfo = $_SESSION['childPriceInfo'];
-
+//获取成人允许选购量
 $url = $host . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
 $data = $db->api_post($url, $post);
 $arr = json_decode($data, true);
 $datass = $arr['data'];
 $adultmin = $datass['0'];
 $adultmax = $datass['1'];
-
+//获取儿童允许选购量
+$url = $host . "/travel/interface/zby/v3.2/getNumberSelectionChild";
+$data = $db->api_post($url, $post);
+$arr = json_decode($data, true);
+$arrs = $arr['data'];
+$childmin = $arrs['0'];
+$childmax = $arrs['1'];
 
 if($post['isPackage'] == 'true'){
     echo "<span class='fenshu'>
@@ -64,8 +70,8 @@ echo "</select>
 </div>
 <label for=\"\" style=\" padding-left: 25px;\">儿童</label>
 <select name=\"kid_num\" id=\"kid_num\" style=\"width:60px\" onChange=\"count_price()\">
-    <option value='0'>0</option>";
-    for ($i = $adultmin; $i <= $adultmax; $i++) {
+    ";
+    for ($i = $childmin; $i <= $childmax; $i++) {
        echo "<option value=\"$i\">$i</option>";
     }
     echo "</select>
