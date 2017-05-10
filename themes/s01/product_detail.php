@@ -12,26 +12,26 @@
 <div class="container">
     <ul class="breadcrumbs">
         <li class="item"><a href="<?= $g_domain ?>">首页</a><span>&gt</span></li>
-<!--        --><?//
-//        if ($c_goods_type == '1') {
-//            ?>
-            <li class="item"><a href="/zhoubian/"><?=$db->to_gbk($data['typeNames'])?></a><span>&gt</span></li>
-<!--        --><?// } ?>
-<!--        --><?//
-//        if ($c_goods_type == '2') {
-//            ?>
-<!--            <li class="item"><a href="/ziyouxing/all/">自由行</a><span>&gt</span></li>-->
-<!--        --><?// } ?>
-<!--        --><?//
-//        if ($c_goods_type == '3') {
-//            ?>
-<!--            <li class="item"><a href="/qianzheng/">签证</a><span>&gt</span></li>-->
-<!--        --><?// } ?>
-<!--        --><?//
-//        if ($c_goods_type == '6') {
-//            ?>
-<!--            <li class="item"><a href="/youlun/">邮轮</a><span>&gt</span></li>-->
-<!--        --><?// } ?>
+        <!--        --><? //
+        //        if ($c_goods_type == '1') {
+        //            ?>
+        <li class="item"><a href="/zhoubian/"><?= $db->to_gbk($data['typeNames']) ?></a><span>&gt</span></li>
+        <!--        --><? // } ?>
+        <!--        --><? //
+        //        if ($c_goods_type == '2') {
+        //            ?>
+        <!--            <li class="item"><a href="/ziyouxing/all/">自由行</a><span>&gt</span></li>-->
+        <!--        --><? // } ?>
+        <!--        --><? //
+        //        if ($c_goods_type == '3') {
+        //            ?>
+        <!--            <li class="item"><a href="/qianzheng/">签证</a><span>&gt</span></li>-->
+        <!--        --><? // } ?>
+        <!--        --><? //
+        //        if ($c_goods_type == '6') {
+        //            ?>
+        <!--            <li class="item"><a href="/youlun/">邮轮</a><span>&gt</span></li>-->
+        <!--        --><? // } ?>
         <?
         if ($c_goods_type == '1' || $c_goods_type == '2') {
             if (notnull($this_parent_catalog)) {
@@ -150,11 +150,11 @@
         <div class="detail-info">
             <div class="detail-title">
                 <a href="/product/detail-<?= $goodsId ?>-<?= $productId ?>.html"
-                   title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($data['goodsName'])?></a>
+                   title="<?= $db->to_gbk($data['goodsName']) ?>"><?= $db->to_gbk($data['goodsName']) ?></a>
                 <i class="tag-btn"><?= $db->to_gbk($data['typeNames']) ?></i>
             </div>
             <div class="d_row gray-c">
-                <span class="yellow-a">【编号：<?=$data['goodsId']?>】</span>
+                <span class="yellow-a">【编号：<?= $data['goodsId'] ?>】</span>
             </div>
             <div class="d-con">
                 <div class="d_row gray-c d_price">优惠价：
@@ -166,14 +166,16 @@
                             title="<?= $db->to_gbk($data['distCity']) ?>"><?= $db->to_gbk($db->jiequ(30, $data['distCity'])) ?></a>  </span><br/>
                     服务商： <span class="gray-b"><?= $db->to_gbk($data['shopName']) ?> </span><br/>
                     好评率： <span class="gray-b"><?
-                        function randomFloat($min = 0, $max = 1) {
+                        function randomFloat($min = 0, $max = 1)
+                        {
                             return $min + mt_rand() / mt_getrandmax() * ($max - $min);
                         }
-                        $randvalue = randomFloat(0.9,1) * 100;
-                        $randvalue = sprintf("%0.2f", $randvalue).'%';
-                        if($data['favorableRate'] == '0.0%' || $data['favorableRate'] == '0%') {
+
+                        $randvalue = randomFloat(0.9, 1) * 100;
+                        $randvalue = sprintf("%0.2f", $randvalue) . '%';
+                        if ($data['favorableRate'] == '0.0%' || $data['favorableRate'] == '0%') {
                             echo $randvalue;
-                        }else{
+                        } else {
                             echo $data['favorableRate'];
                         } ?> </span>
                 </div>
@@ -301,22 +303,22 @@
                     if (notnull($guess_list)) {
                         foreach ($guess_list as $val) {
                             $goods_image = $val['goods_image'];
-                            if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
+                            if (!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
                                 if ($val['goods_type'] == '4') {
                                     $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                                } else if($val['goods_type'] == '1'){
+                                } else if ($val['goods_type'] == '1') {
                                     $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                                 }
                                 ?>
                                 <li><a id="pro-like-img" target="_blank" href="<? echo $href; ?>"><img
-                                                src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>"
-                                                class="imgbox"></a>
+                                            src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>"
+                                            class="imgbox"></a>
                                     <div class="tname"><a id="pro-like-title" target="_blank"
                                                           href="<? echo $href; ?>"
-                                                          title="<?= $val['goods_name']; ?>"><?= jiequ($val['goods_name'],46); ?></a>
+                                                          title="<?= $val['goods_name']; ?>"><?= jiequ($val['goods_name'], 46); ?></a>
                                     </div>
                                     <div class="yellow-a"><sub>&yen;</sub> <span
-                                                class="font14"><?= $val['min_price'] ?></span> 起/人
+                                            class="font14"><?= $val['min_price'] ?></span> 起/人
                                     </div>
                                 </li>
                                 <?
@@ -521,7 +523,7 @@
                                                               title="<?= $val['goodsName']; ?>"><?= show_substr($val['goodsName'], 50) ?></a>
                                         </div>
                                         <div class="cYellow">&yen; <span
-                                                    class="font20"><?= $val['minPrice'] ?></span>
+                                                class="font20"><?= $val['minPrice'] ?></span>
                                             <span class="cYellow">起/人</span></div>
                                     </li>
                                     <?
@@ -594,6 +596,8 @@
                         $('.detail_byPart').html("");
                         $('.detail_byPart').html(datas);
                         $('.detail_byPart').show();
+                        $('.number').html("");
+                        $("#orderPrice").html("0");
                         //点击套餐吗，名称展开具体信息
 //                        for (var i = 0; i < $('.product_name1').length; i++) {
 //                            $('.product_name1').eq(i).attr("hide_flag", "1");
@@ -667,14 +671,15 @@
                 });
             }
         });
-    };
+    }
+    ;
     //套餐选择按钮
     function meal_button() {
         //套餐选择按钮
         for (var i = 0; i < $('.product_select1').length; i++) {
             $('.product_select1').eq(i).click(function () {
                 $('.fangchajia').html("");
-                $("#orderPrice").html("0");
+//                $("#orderPrice").html("0");
                 $('.product_select1').removeClass('select_selected');
                 $(this).addClass("select_selected");
                 packageId = $(this).find("input").eq(0).val();
@@ -822,8 +827,18 @@
     ;
 
     function order_window() {
+//        $.ajax({
+//            type: "POST",
+//            url: "",
+//            data: {},
+//            async: false,
+//            success: function () {
+//
+//            }
+//        })
         var biaoji1 = '';
         var biaoji2 = '';
+        var biaoji3 = '';
         var fenshu = $('#fenshu').val();
         var zongjia = $("#orderPrice").html();
         if ($('#startDate').val() == '') {
@@ -831,6 +846,12 @@
             return false;
         } else {
             biaoji1 = '1';
+        }
+        if ($('.product_select1').hasClass('select_selected')) {
+            biaoji3 = '1';
+        } else {
+            alert('亲，您没有选择套餐！');
+            return false;
         }
         if (zongjia != '0') {
             biaoji2 = '1';
@@ -849,10 +870,8 @@
         $('#packageNum').val(fenshu);
         $('#roomPrice').val(diffPrice);
         $('#goodsType').val(goodsType);
-        if (biaoji1 == '1' && biaoji2 == '1') {
+        if (biaoji1 == '1' && biaoji2 == '1' && biaoji3 == '1') {
             $('#chufa').submit();
-        } else {
-            alert('亲，套餐价不能为0！');
         }
     }
     ;

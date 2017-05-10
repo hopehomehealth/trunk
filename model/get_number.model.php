@@ -42,7 +42,7 @@ if($post['isPackage'] == 'true'){
     echo "<span class='fenshu'>
             <label for=\"\">¹ºÂò·ÝÊý:</label>
             <select id='fenshu' onchange='count_price()'>
-            <option value=\"0\">0</option>";
+            ";
             for ($i = $adultmin; $i <= $adultmax; $i++) {
                 echo "<option value=\"$i\">$i</option>";
             }
