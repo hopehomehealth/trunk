@@ -1,6 +1,6 @@
 <?
 
-//$db->check_cookie($loginUrl, $host);
+$db->check_cookie($loginUrl, $host);
 //截取
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
