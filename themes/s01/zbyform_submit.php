@@ -16,6 +16,7 @@ if(!defined('IN_CLOOTA')) {
 <link rel="stylesheet" type="text/css" href="/themes/s01/images/list.css">
 <script type="text/javascript" src="/themes/s01/js/jquery.js "></script>
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
+<script type="text/javascript" src="/themes/s01/js/date.js"></script>
 
 <title>周边游订单</title>
 </head>
@@ -603,28 +604,40 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['travellerBirthday']=='TRAV_NUM_ALL' || $taocan['travellerCredentials']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
-                                <input type="date" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_birthday_<?=$i?>"></span>
+                                <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>" placehoder="日期格式为"><span class="youwan_birthday_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
                             $('#youwan_birthday_<?=$i?>').blur(function(){
                                 if($('#youwan_birthday_<?=$i?>').val()==''){
                                     $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
-                                }else{
-                                   $('.youwan_birthday_<?=$i?>').hide();
+                                }else if(reg6.test($('#youwan_birthday_<?=$i?>').val())){
+                                    $('.youwan_birthday_<?=$i?>').show();
+                                    $('.youwan_birthday_<?=$i?>').html('');
+                                    youwanBirthday__flag_<?=$i?>=1;
+                                }else if(!reg6.test($('#youwan_birthday_<?=$i?>').val())){
+                                    $('.youwan_birthday_<?=$i?>').show();
+                                    $('.youwan_birthday_<?=$i?>').html('请输入正确的生日！').css('color','red');
+                                    youwanBirthday__flag_<?=$i?>=0;
                                 }
                             });
                             </script>
                             <?}elseif(($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0')||$taocan['travellerCredentials']=='TRAV_NUM_ONE'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
-                                <input type="date" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_idTips_<?=$i?>"></span>
+                                <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"><span class="youwan_idTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
                             $('#youwan_birthday_<?=$i?>').blur(function(){
                                 if($('#youwan_birthday_<?=$i?>').val()==''){
                                     $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
-                                }else{
-                                   $('.youwan_birthday_<?=$i?>').hide();
+                                }else if(reg6.test($('#youwan_birthday_<?=$i?>').val())){
+                                    $('.youwan_birthday_<?=$i?>').show();
+                                    $('.youwan_birthday_<?=$i?>').html('');
+                                    youwanBirthday__flag_<?=$i?>=1;
+                                }else if(!reg6.test($('#youwan_birthday_<?=$i?>').val())){
+                                    $('.youwan_birthday_<?=$i?>').show();
+                                    $('.youwan_birthday_<?=$i?>').html('请输入正确的生日！').css('color','red');
+                                    youwanBirthday__flag_<?=$i?>=0;
                                 }
                             });
                             </script>
@@ -706,6 +719,7 @@ var reg2 = /^1[34578]\d{9}$/;//匹配手机号
 var reg3 = /(^\d{15}$)|(^\d{17}(\d|X)$)/;//匹配身份证
 var reg4 = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;//匹配邮箱
 var reg5 = /^[A-Za-z]+$/;//英文名
+var reg6 = /^((((19|20)\d{2})-(0?(1|[3-9])|1[012])-(0?[1-9]|[12]\d|30))|(((19|20)\d{2})-(0?[13578]|1[02])-31)|(((19|20)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|((((19|20)([13579][26]|[2468][048]|0[48]))|(2000))-0?2-29))$/;
 var buyerName_flag=0,
     buyerPhone_flag=0,
     buyerEmail_flag=0,
