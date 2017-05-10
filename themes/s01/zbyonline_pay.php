@@ -166,6 +166,9 @@ if(!defined('IN_CLOOTA')) {
                     },
                     success: function (data)
                     {
+                        if ('false' ==$.trim(data)){
+                            alert('µ÷½Ó¿ÚÊ§°Ü');
+                        }
                         var data1 = data.split('<!')[0];
                         $('#imgimg').attr("src",data1);
                     }

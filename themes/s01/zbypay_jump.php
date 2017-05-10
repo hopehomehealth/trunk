@@ -23,6 +23,9 @@ if ($post['topayinfoid'] == '65') {
     $js = '<script>document.getElementById("form_payment").submit();</script>';
     echo $js;
 }else if ($post['topayinfoid'] == '71') {
+    if ($pay_parameter['status'] != '0000') {
+        echo 'false';
+    }
     $url = 'http://' . $host . '/travel/interface/pay/scanQRCode?code_url=' . $pay_parameter['data'];
 //    $url = "http://192.168.3.63/travel/interface/pay/scanQRCode?code_url=weixin://wxpay/bizpayurl?pr=RtE5qBO";
     echo $url;
