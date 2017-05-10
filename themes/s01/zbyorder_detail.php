@@ -114,11 +114,11 @@ if (!defined('IN_CLOOTA')) {
 
                         </tbody>
                     </table>
-                    <?if($order_detail_data['isPackage'] == 'false'){ ?>
-                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['payPrice']; ?></b></span></p>
-                    <? }else if($order_detail_data['isPackage'] == 'true') { ?>
+<!--                    --><?//if($order_detail_data['isPackage'] == 'false'){ ?>
+<!--                    <p><span>订单总金额：<b>&yen;--><?// echo $order_detail_data['payPrice']; ?><!--</b></span></p>-->
+<!--                    --><?// }else if($order_detail_data['isPackage'] == 'true') { ?>
                     <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['totalPrice']; ?></b></span></p>
-                    <? } ?>
+<!--                    --><?// } ?>
                 </div>
 
 
