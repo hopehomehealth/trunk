@@ -1,6 +1,6 @@
 <?
 
-$db->check_cookie($loginUrl, $host);
+//$db->check_cookie($loginUrl, $host);
 //截取
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
@@ -98,9 +98,9 @@ if($flag == 'check'){
         
     }
     $post['travellerList'] = json_encode($travellerList);
-
      //测试 先传空
      //var_dump($post);die;
+     //
      $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      if(!empty($orderCode)){
@@ -145,5 +145,4 @@ $data = $db->api_post($url, $fang);
 $arr = json_decode($data, true);
 $fangcha = $arr['data'];
 }
-
 ?>
