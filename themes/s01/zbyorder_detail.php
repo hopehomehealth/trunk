@@ -21,7 +21,7 @@ if (!defined('IN_CLOOTA')) {
 <!-- 订单详情 start -->
 <div id="orderDetail_mainBox">
     <div id="orderDetail_main">
-        <div class="orderDetail_main1">我的Bus365 &gt; 我的订单 &gt; <a href="">订单详情</a></div>
+        <div class="orderDetail_main1">我的Bus365 &gt; <a href="<?=$g_bus365_domain?>/index/order/orders/">我的订单 </a>&gt; <a href="">订单详情</a></div>
         <div class="orderDetail_main2">
             <div class="orderDetail_main2_title">订单详情</div>
 

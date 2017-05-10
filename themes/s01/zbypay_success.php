@@ -7,7 +7,8 @@ if(!defined('IN_CLOOTA')) {
 <html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="/themes/s01/images/pay_success.css">
-    <title>订单成功</title>
+<link rel="shortcut icon" type="image/png" href="http://www.bus365.com/public/images/bus365.png">
+<title>订单成功</title>
 </head>
 <body>
 <!--  head  start -->
