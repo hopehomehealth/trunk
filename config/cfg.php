@@ -35,9 +35,9 @@ $loginUrl				= 'http://wwwt.bus365.cn/login0';
 $registerUrl			= 'http://wwwt.bus365.cn/user/registerpage/?ismock=0';//×¢²áµØÖ·
 //http://wwwd.bus365.cn,http://wwwt.bus365.cn,http://wwwm.bus365.cn
 //https://www.bus365.cn
-$g_bus365_domain        = 'http://wwwd.bus365.cn';
-$g_self_domain			= 'http://traveld.bus365.cn';
+$g_bus365_domain        = 'http://wwwt.bus365.cn';
+$g_self_domain			= 'http://travelt.bus365.cn';
 ///-----------------------------------------------// DEBUGÄ£Ê½
-$g_console_debug		= true;
+$g_console_debug		= false;
 $g_is_demo_site			= false;
 ?>
