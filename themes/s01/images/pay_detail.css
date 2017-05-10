@@ -93,8 +93,8 @@
 .applyRefund_title_right{float: right;width: 45px;height: 45px;background: url("../images/close1.png") no-repeat center center;cursor: pointer;}
 
 .applyRefund_cont{width: 544px;height: 150px;overflow: hidden;}
-.applyRefund_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;background: url("../images/gantanhao.png") no-repeat left center;font-size: 20px;color: #333;}
-.applyRefund_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 230px;margin-right: 20px;}
+.applyRefund_cont_tips{margin:20px 0 30px 70px;line-height: 61px;padding-left: 51px;background: url("../images/gantanhao.png") no-repeat left center;font-size: 20px;color: #333;}
+.applyRefund_sure{width: 125px;height: 32px;line-height: 32px;text-align: center;color:white;font-size: 18px;background-color: #1fcc9e;border-radius: 5px;cursor: pointer;margin-left: 150px;margin-right: 20px;}
 .applyRefund_cancel{width: 125px;height: 30px;line-height: 30px;text-align: center;color:#1fcc9e;font-size: 18px;border:solid 1px #1fcc9e;border-radius: 5px;cursor: pointer;background-color: white;}
 
 /*确认会团*/
