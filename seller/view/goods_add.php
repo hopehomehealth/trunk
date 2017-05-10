@@ -402,7 +402,7 @@ $(document).ready(function(){
 				  <td><input type="time" name="ahead_time" value="23:59"/>
 					之前预订 </td>
 			</tr>
-			<tr>
+			<!-- <tr>
 			  <td align="right" height="70"><font color="red">*</font> 自定义分类：</td>
 			  <td>
 				<select name="shop_cat_id" id="shop_cat_id" class="span4"> 
@@ -434,7 +434,7 @@ $(document).ready(function(){
 				</select>
 				商家自定义的类别
 			  </td>
-			</tr> 
+			</tr>  -->
 			<?if($g_shop['is_verify_goods']!='1'){?>
 			<tr>
 			  <td align="right"><font color="red">*</font> 上下架：</td>
