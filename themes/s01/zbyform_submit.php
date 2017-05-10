@@ -44,7 +44,7 @@ if(!defined('IN_CLOOTA')) {
         <div class="zbyOrder_main_title">
             <img src="/themes/s01/images/zby_fillInOrder.jpg">
         </div>
-        <form name="write_form" id="write_form" method="post" action="<?=$g_self_domain?>/zhoubianyou/zbyform_submit-1.html?departDate=<?=$tc['departDate']?>&lvProductId=<?=$tc['lvProductId']?>&packageId=<?=$tc['packageId']?>&adultNum=<?=$_GET['adultNum']?>&childNum=<?=$_GET['childNum']?>&roomCount=<?=$_GET['roomCount']?>&payPrice=<?=$_GET['payPrice']?>&packageNum=<?=$_GET['packageNum']?>&goodsType=<?=$_GET['goodsType']?>&roomPrice=<?=$roomPrice?>&flag=check">
+        <form name="write_form" id="write_form" method="post" action="<?=$g_self_domain?>/zhoubianyou/zbyform_submit-2-check.html?<?=$url_form?>">
         <? if($is_package == 'false'){ ?>
             <div class="zbyOrder_main1">
             <br>游玩时间：<?=$tc['departDate']?>
@@ -68,7 +68,7 @@ if(!defined('IN_CLOOTA')) {
                                 <td id="adultPrice">
                                     <?=$taocan['adultPrice']?>
                                 </td>
-                                <td><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+                                <td><?if($jiahao==1){?>
                                     <span class="caculate" onselectstart="return false">
                                         <span class="subtract">-</span>
                                         <span class="counts" id='adultNum'><?=$adultNum?></span>
@@ -84,7 +84,7 @@ if(!defined('IN_CLOOTA')) {
                                 <td id="kidPrice">
                                     <?=$taocan['kidPrice']?>
                                 </td>
-                                <td><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+                                <td><?if($jiahao==1){?>
                                     <span class="caculate" onselectstart="return false">
                                         <span class="subtract">-</span>
                                         <span class="counts" id='kidNum'><?=$kidNum?></span>
@@ -101,7 +101,7 @@ if(!defined('IN_CLOOTA')) {
                                 <td title='因旅游过程中的住宿安排是两个床位的标准间，团费中是根据1名成人占1张床计算的。如出游人数（成人）为单数时，需要补足另外一个人床位的费用。如在实际旅游过程中能够安排3人间或同性拼房，所付房差费用回团后将根据实际发生情况减免退回。'>房差
                                 </td>
                                 <td id="diffPrice"><?=$diffPrice?></td>
-                                <td class="fangcha"><?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+                                <td class="fangcha"><?if($jiahao==1){?>
                                 <select id='diffPriceNum' onchange='get_price()'>
                                 <?foreach ($fangcha as $val) {?>
                                 <?if($val==$roomCount){?>
@@ -250,7 +250,7 @@ if(!defined('IN_CLOOTA')) {
                                 <td style="cursor:pointer;" onselectstart="return false"><?=$taocan['packageName']?>&nbsp;&nbsp;</td>
                                 <td><?=$tc['departDate']?>
                                 <td>
-                                <?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+                                <?if($jiahao==1){?>
                                 <span class="caculate" onselectstart="return false">
                                     <span class="subtract">-</span>
                                     <span class="counts" id='packageNum'><?=$packageNum?></span>
@@ -789,7 +789,7 @@ function check_form(){
         $('#payPricei').val(zongjia);
         $('#adultNumi').val(adultNum);
         $('#childNumi').val(kidNum);
-        <?if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){?>
+        <?if($jiahao==1){?>
         var diffPriceNum = $('#diffPriceNum').val();
         $('#roomCounti').val(diffPriceNum);
         <?}else{?>
