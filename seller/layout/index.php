@@ -25,7 +25,7 @@ if(!defined('IN_CLOOTA')) {
 				<li class="sidebar-line on">
 					<div class="relative"> <i class="icon"></i> <a class="parent-link f33" href="javascript:void(0);"><strong>产品管理</strong></a> <i class="arrow up"></i> </div>
 					<ul class="menu"> 
-						<li><a href="<?=url('shop_goods_cat.php')?>" class="<?=get_active('shop_goods_cat.php')?>">自定义分类</a></li> 
+						<!-- <li><a href="<?=url('shop_goods_cat.php')?>" class="<?=get_active('shop_goods_cat.php')?>">自定义分类</a></li> --> 
 						<?foreach ($g_product_type as $k => $v) { if($k == '1'){ ?> 
 						<li><a href="<?=url('goods_list.php')?>&goods_type=<?=$k?>" class="<?if(req('goods_type')==$k){?>active<?}?>"><?=$v?>产品 <span style="color:red">(<?=get_goods_count($k)?>)</span></a></li>
 						<?}else{}?>  
@@ -49,7 +49,7 @@ if(!defined('IN_CLOOTA')) {
 						<li><a href="<?=url('order.php')?>&state=5" class="<?=get_active_args('order.php', 'state', '5')?>"><?=$g_order_state['5']?> <?if($order_5>0){?><span style="color:red">(<?=$order_5?>)</span><?}?></a></li> 
 					</ul>
 				</li>  
-				<li class="sidebar-line on">
+				<!-- <li class="sidebar-line on">
 					<div class="relative"> <i class="icon ic3"></i> <a class="parent-link f33" href="javascript:void(0);"><strong>结算账单</strong></a> <i class="arrow"></i> </div>
 					<ul class="menu">
 						<?
@@ -60,7 +60,7 @@ if(!defined('IN_CLOOTA')) {
 						<li><a href="<?=url('order_report.php')?>&is_settle=0" class="<?=get_active_args('order_report.php', 'is_settle', '0')?>">未结算 <?if($settle_0>0){?><span style="color:red">(<?=$settle_0?>)</span><?}?></a></li> 
 					</ul>
 				</li>  
-			  
+							  
 				<li class="sidebar-line on">
 					<div class="relative"> <i class="icon ic3"></i> <a class="parent-link f33" href="javascript:void(0);"><strong>系统管理</strong></a> <i class="arrow"></i> </div>
 					<ul class="menu"> 
@@ -74,8 +74,8 @@ if(!defined('IN_CLOOTA')) {
 						<li><a href="/seller/logout" onclick="return confirm('确认退出账户？');" class="">安全退出</a></li>
 					</ul>
 				</li>   
-			  
-				<li><br/></li>
+							  
+				<li><br/></li> -->
 			</ul>  
 		</div>  
 	</div>
