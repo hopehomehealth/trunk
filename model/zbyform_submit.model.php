@@ -3,7 +3,7 @@
 if($_GET['flage']==1){
     $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $url_canshu = str_replace('?', '',substr($getUrl,stripos($getUrl, '?')));
-    $url_canshu = 'http://traveld.bus365.cn/zhoubianyou/zbyform_submit-2.html?'.$db->encrypt($url_canshu);
+    $url_canshu = $g_self_domain.'/zhoubianyou/zbyform_submit-2.html?'.$db->encrypt($url_canshu);
     header("location: $url_canshu");
 }
 if($_GET['flage']==2){
