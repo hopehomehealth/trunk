@@ -74,6 +74,9 @@ if($taocan['travellerName']=='TRAV_NUM_ONE'){
 $payPrice1 = $payPrice;
 //$adultNum = $adultNum;
 $kidNum = $childNum;
+if(empty($kidNum)){
+    $kidNum =0;
+}
 //生成订单
 $flag = req('flag');
 if($flag == 'check'){
