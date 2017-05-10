@@ -67,7 +67,7 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo1">
                     <ul>
                         <li>订单号：<? echo $order_detail_data['orderCode']; ?></li>
-                        <li class="sli">订单状态：<? echo $order_detail_data['orderStatusName']; if($order_detail_data['orderStatus'] == '2') echo '(审核中)'; if($order_detail_data['orderStatus'] == '9') echo "<span style='color:red;'>订单审核失败；您的款项预计予3-5个工作日原路返还；</span>"; ?></li>
+                        <li class="sli">订单状态：<? echo $order_detail_data['orderStatusName']; if($order_detail_data['orderStatus'] == '2') echo '(出单中)'; if($order_detail_data['orderStatus'] == '9') echo "<span style='color:red;'>订单审核失败；您的款项预计予3-5个工作日原路返还；</span>"; ?></li>
                         <li>下单时间：<? echo $order_detail_data['orderDate']; ?></li>
                         <li>支付方式：<? echo $order_detail_data['paymentType']; ?></li>
                     </ul>
@@ -114,8 +114,11 @@ if (!defined('IN_CLOOTA')) {
 
                         </tbody>
                     </table>
-
+                    <?if($order_detail_data['isPackage'] == 'false'){ ?>
+                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['payPrice']; ?></b></span></p>
+                    <? }else if($order_detail_data['isPackage'] == 'true') { ?>
                     <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['totalPrice']; ?></b></span></p>
+                    <? } ?>
                 </div>
 
 
