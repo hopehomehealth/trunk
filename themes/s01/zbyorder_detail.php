@@ -102,7 +102,7 @@ if (!defined('IN_CLOOTA')) {
                                 <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
                                 <td class="productPrice2"><? if (!empty($order_detail_data['kidNum'])) echo '成人&yen;'.$order_detail_data['adultPrice'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . '儿童&yen;' . $order_detail_data['kidPrice'] ; else echo '成人&yen;'.$order_detail_data['adultPrice'];?></td>
                                 <td class="productPrice2">&yen;<? echo $order_detail_data['diffPrice']; ?></td>
-                                <td class="productXiaoji">&yen;<? echo $order_detail_data['adultTotalFee'] + $order_detail_data['kidTotalFee'] + $order_detail_data['diffPrice']; ?></td>
+                                <td class="productXiaoji">&yen;<? echo $order_detail_data['adultPrice'] * $order_detail_data['adultNum'] + $order_detail_data['kidPrice'] *  $order_detail_data['kidNum']+ $order_detail_data['diffPrice']; ?></td>
                             </tr>
                         <? }else if($order_detail_data['isPackage'] == 'true') { ?>
                             <td class="productName" style="WORD-WRAP: break-word" width="500"><b><?echo $order_detail_data['goodsName'];?></b></td>
