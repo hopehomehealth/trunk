@@ -123,6 +123,7 @@
                         </li>
                     </ul>
                 </div>
+                <a class="spotAlbum"><span id="lunbo_pre" ></span><span id="lunbo_next" ></span></a>
             </div>
 
             <!-- 价格日历 -->
