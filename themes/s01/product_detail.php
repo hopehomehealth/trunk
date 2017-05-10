@@ -581,9 +581,25 @@
         v_url += "&yyyy=" + yyyy;
         v_url += "&mm=" + mm;
         var html_calendar = $.ajax({url: v_url, async: false});
+        $("#date_price").html(html_calendar.responseText);
         $("#date_price1").html(html_calendar.responseText);
         $('.date_blue').click(function () {
             if ($(this).find('.date_yen').eq(0).html() != "") {//$(this).html().split("<br>")[0]
+                $(this).css({
+                    "border":"solid 2px #f90"
+                }).siblings('.date_blue').css({
+                    "border":"solid 2px #fff"
+                });
+                for(var i=0;i<$('.date_blue').length;i++){
+                    $('.date_blue').attr('index',i);
+                    if($('.date_blue').eq(i).attr('dates')==$(this).attr('dates')){
+                        $('.date_blue').eq(i).css({
+                            "border":"solid 2px #f90"
+                        }).siblings('.date_blue').css({
+                            "border":"solid 2px #fff"
+                        });
+                    }
+                }
                 $('#startDate').val(yyyy + '-' + mm + '-' + $(this).find('b').html());
                 $('#v_calendar1').hide();
                 departDate = $('#startDate').val();

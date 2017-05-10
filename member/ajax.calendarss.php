@@ -46,12 +46,13 @@ $curr_ym_html = date('Y年m月', strtotime($yyyy.'-'.$mm.'-01'));
 	for ($i=1; $i<=$num_days; $i++){
 		if($i<10) $dd = '0'.$i; else $dd = $i;
 		$this_adult_price = $adult_price["$yyyy-$mm-$dd"];
+        $datas = $yyyy.$mm.$dd;
         if($this_adult_price>0){
             $this_adult_price = '<span class="date_yen_text" title="成人价格"></span>&yen;'.$this_adult_price.'起';
-            echo "<li class='date_blue' style='height:50px;cursor: pointer'><b style='font-weight: 500'>".$i."</b><br/><span class='date_yen'>".$this_adult_price."</span></li>";
+            echo "<li dates='$datas' class='date_blue' style='height:50px;cursor: pointer'><b style='font-weight: 500'>".$i."</b><br/><span class='date_yen'>".$this_adult_price."</span></li>";
         } else {
             $this_adult_price = '';
-            echo "<li class='date_blue' style='height:50px;color:#999;background-color: #f9f9f9;'><b style='font-weight: 500'>".$i."</b><br/><span class='date_yen'>"."$this_adult_price"."</span></li>";
+            echo "<li datas='$datas' class='date_blue' style='height:50px;color:#999;background-color: #f9f9f9;'><b style='font-weight: 500'>".$i."</b><br/><span class='date_yen'>"."$this_adult_price"."</span></li>";
         }
 	}
 	 

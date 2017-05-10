@@ -1,5 +1,5 @@
 .date_ul {list-style-type:none;clear:both;overflow:hidden;width:560px;background-color:#FFFFFF;/*padding-left:20px;*/}
-.date_ul li {float:left;width:66px;padding:3px 5px 0px 5px;margin:2px;}
+.date_ul li {float:left;width:66px;padding:3px;margin:2px;border:solid 2px #fff;}
 .date_grey{background-color:#F3F3F3;height:35px}
 .date_blue{background-color:#F3F3F3;color:#000;height:35px;line-height:1.5}
 .date_yen{font-family:arial;font-weight:bold;font-size:12px;float:right;margin-top:-1px;color:#FF9900}
