@@ -125,11 +125,11 @@ if(!defined('IN_CLOOTA')) {
             <script type="text/javascript">
 
             $(document).ready(function(){
-                                var adds = $('.add');
-                for (var i = 0; i < adds.length; i++) {
+                 var adds = $('.add');
+               for (var i = 0; i < adds.length; i++) {
                     adds[i].index = i;
-                    adds[i].onclick = function(){
-                        var count1 = $('.counts').eq(this.index).html();
+                       adds[i].onclick = function(){
+                       var count1 = $('.counts').eq(this.index).html();
                         var adultNum = $('#adultNum').html();
                         var kidNum = $('#kidNum').html();
                         var zongshu = Number(adultNum) + Number(kidNum);
@@ -138,19 +138,18 @@ if(!defined('IN_CLOOTA')) {
                         }else{
                             alert('亲,您已超过最大订购数量:<?=$taocan['max']?>');
                         }
-                        
-                        $('.counts').eq(this.index).html(count1);
+                         $('.counts').eq(this.index).html(count1);
                         $('.Num').eq(this.index).val(count1);
                         adultNum = $('#adultNum').html();
                         kidNum = $('#kidNum').html();
                         var adultPrice = $('#adultPrice').html();//成人价
                         var roomMax = <?=$roomMax?>;//房间的最大允许入住数量
-                        var goodsType = <?=$_GET['goodsType']?>;//当前产品的业务类型(自由行、跟团游)
+                        var goodsType = <?=$goodsType?>;//当前产品的业务类型(自由行、跟团游)
                         var isPackage = <?=$is_package?>;
                         var diffPrice = <?=$taocan['diffPrice']?>;//房差价
                         
                         var kidPrice = $('#kidPrice').html();//儿童价
-                         $.ajax({
+                        $.ajax({
                             type: "POST",
                             url: "<?=$g_self_domain?>/fangcha/",
                             data: {
@@ -183,7 +182,7 @@ if(!defined('IN_CLOOTA')) {
                         var adultNum = $('#adultNum').html();//成人数
                         var adultPrice = $('#adultPrice').html();//成人价
                         var roomMax = <?=$roomMax?>;//房间的最大允许入住数量
-                        var goodsType = <?=$_GET['goodsType']?>;//当前产品的业务类型(自由行、跟团游)
+                        var goodsType = <?=$goodsType?>;//当前产品的业务类型(自由行、跟团游)
                         var isPackage = <?=$is_package?>;
                         var diffPrice = <?=$taocan['diffPrice']?>;//房差价
                         var kidNum = $('#kidNum').html();//儿童数
@@ -271,7 +270,6 @@ if(!defined('IN_CLOOTA')) {
             </div>
             <script type="text/javascript">
             $(document).ready(function(){
-
                 var adds = $('.add');
                 for (var i = 0; i < adds.length; i++) {
                     adds[i].index = i;
