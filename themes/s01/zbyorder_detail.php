@@ -117,7 +117,7 @@ if (!defined('IN_CLOOTA')) {
 <!--                    --><?//if($order_detail_data['isPackage'] == 'false'){ ?>
 <!--                    <p><span>订单总金额：<b>&yen;--><?// echo $order_detail_data['payPrice']; ?><!--</b></span></p>-->
 <!--                    --><?// }else if($order_detail_data['isPackage'] == 'true') { ?>
-                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['totalPrice']; ?></b></span></p>
+                    <p><span>订单总金额：<b>&yen;<? echo $order_detail_data['totlePrice']; ?></b></span></p>
 <!--                    --><?// } ?>
                 </div>
 
@@ -307,7 +307,7 @@ if (!defined('IN_CLOOTA')) {
 </div>
 <!--去支付表单-->
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
-    <input type="hidden" name="payPrice" value="<?=$order_detail_data['payPrice']?>">
+    <input type="hidden" name="payPrice" value="<?=$order_detail_data['totlePrice']?>">
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$order_detail_data['goodsName']?>">
     <input type="hidden" name="payTime"  value="<?=$order_detail_data['leftPayTime']?>">
     <input type="hidden" name="lvGoodsName"  value="<?=$order_detail_data['lvgoodsName']?>">
