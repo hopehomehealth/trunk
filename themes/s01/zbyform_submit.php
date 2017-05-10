@@ -16,6 +16,7 @@ if(!defined('IN_CLOOTA')) {
 <link rel="stylesheet" type="text/css" href="/themes/s01/images/list.css">
 <script type="text/javascript" src="/themes/s01/js/jquery.js "></script>
 <script type="text/javascript" src="/themes/s01/js/common.js"></script>
+
 <title>周边游订单</title>
 </head>
 <body><?if (notnull($orderCode)){ ?>
@@ -326,22 +327,22 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['bookerName']=='true'){?>
                             <li>
                                 <label><b>＊</b>姓名：</label>
-                                <input type="text" name="bookerName" id="linker" value="">
-                                <span class="buyer_nameTips">购买人姓名不能为空！</span>
+                                <input type="text" class="saveHistory" name="bookerName" id="linker" value="<?php if(isset($_POST['bookerName'])){echo $_POST['bookerName'];}?>">
+                                <span class="buyer_nameTips">联系人姓名不能为空！</span>
                             </li>
                             <?}?>
                             <?if($taocan['bookerMobile']=='true'){?>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
-                                <input type="text" name="bookerMobile" id="mobile" value="">
+                                <input type="text" name="bookerMobile" class="saveHistory" id="mobile" value="<?php if(isset($_POST['bookerMobile'])){echo $_POST['bookerMobile'];}?>">
                                 <span>此手机用于接收订购与取票凭证的短信，请准确填写。</span>
-                                <span class="buyer_phoneTips">购买人手机号不能为空！</span>
+                                <span class="buyer_phoneTips">联系人手机号不能为空！</span>
                             </li>
                             <?}?>
                             <?if($taocan['bookerEmail']=='true'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
-                                <input type="text" name="bookerEmail" id="email" value="">
+                                <input type="text" name="bookerEmail" id="email" value="<?php if(isset($_POST['bookerEmail'])){echo $_POST['bookerEmail'];}?>">
                                 <span class="buyer_emailTips"></span>
                             </li>
                             <?}?>
@@ -358,7 +359,7 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['travellerName']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>姓名：</label>
-                                <input type="text" name="name_<?=$i?>" autocomplete="off" id="youwan_userName_<?=$i?>">
+                                <input type="text" name="name_<?=$i?>" id="youwan_userName_<?=$i?>" value="<?php if(isset($_POST["name_$i"])){echo $_POST["name_$i"];}?>">
                                 <span class="youwan_nameTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -375,7 +376,7 @@ if(!defined('IN_CLOOTA')) {
                             <?}elseif($taocan['travellerName']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>姓名：</label>
-                                <input type="text" name="name_<?=$i?>" autocomplete="off" id="youwan_userName_<?=$i?>">
+                                <input type="text" name="name_<?=$i?>" id="youwan_userName_<?=$i?>" value="<?php if(isset($_POST['name_'.$i])){echo $_POST['name_'.$i];}?>">
                                 <span class="youwan_nameTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -393,7 +394,7 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['travellerMobile']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
-                                <input type="text" name="mobile_<?=$i?>" autocomplete="off" id="youwan_userPhone_<?=$i?>">
+                                <input type="text" name="mobile_<?=$i?>" value="<?php if(isset($_POST['mobile_'.$i])){echo $_POST['mobile_'.$i];}?>" id="youwan_userPhone_<?=$i?>">
                                 <span class="youwan_phoneTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -414,7 +415,7 @@ if(!defined('IN_CLOOTA')) {
                             <?}elseif($taocan['travellerMobile']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
-                                <input type="text" name="mobile_<?=$i?>" autocomplete="off" id="youwan_userPhone_<?=$i?>">
+                                <input type="text" name="mobile_<?=$i?>" value="<?php if(isset($_POST['mobile_'.$i])){echo $_POST['mobile_'.$i];}?>" id="youwan_userPhone_<?=$i?>">
                                 <span class="youwan_phoneTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -436,7 +437,7 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['travellerEmail']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
-                                <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="">
+                                <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="<?php if(isset($_POST['email_'.$i])){echo $_POST['email_'.$i];}?>">
                                 <span class="youwan_emailTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -458,7 +459,7 @@ if(!defined('IN_CLOOTA')) {
                             <?}elseif($taocan['travellerEmail']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>邮箱：</label>
-                                <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="">
+                                <input type="text" name="email_<?=$i?>" id="youwan_email_<?=$i?>" value="<?php if(isset($_POST['email_'.$i])){echo $_POST['email_'.$i];}?>">
                                 <span class="youwan_emailTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -481,7 +482,7 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['travellerEnName']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>英文名</label>
-                                <input type="text" name="eName_<?=$i?>" autocomplete="off" id="youwan_eName_<?=$i?>">
+                                <input type="text" name="eName_<?=$i?>" id="youwan_eName_<?=$i?>" value="<?php if(isset($_POST['eName_'.$i])){echo $_POST['eName_'.$i];}?>">
                                 <span class="youwan_eNameTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -502,7 +503,7 @@ if(!defined('IN_CLOOTA')) {
                             <?}elseif($taocan['travellerEnName']=='TRAV_NUM_ONE' && $i=='0'){?>
                             <li>
                                 <label><b>＊</b>英文名</label>
-                                <input type="text" name="eName_<?=$i?>" autocomplete="off" id="youwan_eName_<?=$i?>">
+                                <input type="text" name="eName_<?=$i?>" value="<?php if(isset($_POST['eName_'.$i])){echo $_POST['eName_'.$i];}?>" id="youwan_eName_<?=$i?>">
                                 <span class="youwan_eNameTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -556,7 +557,7 @@ if(!defined('IN_CLOOTA')) {
                                 <select style="width: 138px;">
                                     <option>身份证</option>
                                 </select>
-                                <input type="text" name="credentials_<?=$i?>" autocomplete="off"  id="youwan_userIdcard_<?=$i?>">
+                                <input type="text" name="credentials_<?=$i?>" value="<?php if(isset($_POST['credentials_'.$i])){echo $_POST['credentials_'.$i];}?>"  id="youwan_userIdcard_<?=$i?>">
                                 <span class="youwan_idTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -580,7 +581,7 @@ if(!defined('IN_CLOOTA')) {
                                 <select style="width: 138px;">
                                     <option>身份证</option>
                                 </select>
-                                <input type="text" name="credentials_<?=$i?>" autocomplete="off"  id="youwan_userIdcard_<?=$i?>">
+                                <input type="text" name="credentials_<?=$i?>" value="<?php if(isset($_POST['credentials_'.$i])){echo $_POST['credentials_'.$i];}?>"  id="youwan_userIdcard_<?=$i?>">
                                 <span class="youwan_idTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
@@ -602,7 +603,7 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['travellerBirthday']=='TRAV_NUM_ALL' || $taocan['travellerCredentials']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
-                                <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_birthday_<?=$i?>"></span>
+                                <input type="date" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_birthday_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
                             $('#youwan_birthday_<?=$i?>').blur(function(){
@@ -616,7 +617,7 @@ if(!defined('IN_CLOOTA')) {
                             <?}elseif(($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0')||$taocan['travellerCredentials']=='TRAV_NUM_ONE'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
-                                <input type="date" name="birthday_<?=$i?>" autocomplete="off" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_idTips_<?=$i?>"></span>
+                                <input type="date" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"  min="1900-09-16" max="<?echo date("Y-m-d",time());?>"><span class="youwan_idTips_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
                             $('#youwan_birthday_<?=$i?>').blur(function(){
@@ -641,11 +642,11 @@ if(!defined('IN_CLOOTA')) {
                         <ul>
                            <li>
                                <label><b>＊</b>姓名：</label>
-                                <input type="text" name="emergencyName" autocomplete="off">
+                                <input type="text" name="emergencyName" value="<?php if(isset($_POST['emergencyName'])){echo $_POST['emergencyName'];}?>">
                             </li>
                             <li>
                                 <label><b>＊</b>手机号码：</label>
-                                <input type="text" name="emergencyMobile" autocomplete="off">
+                                <input type="text" name="emergencyMobile" value="<?php if(isset($_POST['emergencyMobile'])){echo $_POST['emergencyMobile'];}?>">
                                 <span></span>
                             </li>
                             
@@ -813,7 +814,7 @@ if($dingdan['status'] == '1000'){
        
     }
     echo '<script>alert('.$dingdan['msg'].')</script>';
-    echo '<script>window.history.back();</script>';    
+    
 }
 ?>
 </html>
