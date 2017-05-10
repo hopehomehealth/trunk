@@ -127,10 +127,10 @@
 .nengtuifou_cont_tips{margin:20px 0 30px 70px;line-height: 51px;padding-left: 51px;font-size: 20px;color: #333;}
 
 /*ÍË¿îÑ¡Ôñ¿ò*/
-.refundInfo{width: 500px;height: 500px;position: absolute;left: 50%;top:50%;margin-left: -250px;margin-top:-210px;background-color: white;z-index: 19999;border:solid 2px #ddd;border-radius: 2px;}
+.refundInfo{width: 500px;height: 500px;position: fixed;left: 50%;top:50%;margin-left: -250px;margin-top:-210px;background-color: white;z-index: 19999;border:solid 2px #ddd;border-radius: 2px;}
 .refundInfo_top{font-size:16px;color: #333;line-height:30px;width:460px;height: 30px;padding:0 20px;background-color: #eee;}
 .refundInfo_top h3{width: 120px;float: left;}
-.refundInfo_close{float: right;background: url("../images/close.png") no-repeat center center;width: 30px;height: 30px;position: absolute;right: 0;top:0;cursor: pointer;}
+.refundInfo_close{float: right;background: url("../images/guanbi.jpg") no-repeat center center;width: 30px;height: 30px;position: absolute;right: 0;top:0;cursor: pointer;}
 .refundInfoCont{width: 460px;height: 400px;line-height:24px;padding:40px 20px 0 20px;font-size: 13px;color: #666;letter-spacing: 1px;}
 .refundInfoCont1{width: 460px;height:25px;line-height: 25px;}
 .refundInfoCont1 span{float: left;width: 80px;height: 25px;font-size: 14px;color: #4d4d4d;}
