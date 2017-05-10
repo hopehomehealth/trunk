@@ -108,10 +108,11 @@ if (!defined('IN_CLOOTA')) {
                             <td class="productName" style="WORD-WRAP: break-word" width="500"><b><?echo $order_detail_data['goodsName'];?></b></td>
                             <td class="productOther"><? echo $order_detail_data['num']; ?></td>
                             <td class="productDate"><? echo $order_detail_data['playDate']; ?></td>
-                            <td class="productPrice2">&yen;<? echo $order_detail_data['adultPrice']; ?></td>
-                            <td class="productXiaoji">&yen;<? echo $order_detail_data['num'] * $order_detail_data['adultPrice']; ?></td>
+                            <td class="productPrice2">&yen;<? echo $order_detail_data['unitPrice']; ?></td>
+                            <td class="productXiaoji">&yen;<? echo $order_detail_data['num'] * $order_detail_data['unitPrice']; ?></td>
                         <? } ?>
 
+                        
                         </tbody>
                     </table>
 <!--                    --><?//if($order_detail_data['isPackage'] == 'false'){ ?>
