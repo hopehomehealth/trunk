@@ -145,7 +145,7 @@ if(!defined('IN_CLOOTA')) {
 				if($state==2){ 
 				?>  
 				<form target="frm" method="post" action="do.php?cmd=order_confirm&order_code=<?=$detail['order_code']?>"> 
-					<input type="submit" value="订单确认" class="btn btn-info" onclick="return confirm('确认确认吗？')">  
+					<input type="submit" value="订单确认" class="btn btn-info" onclick="return confirm('是否进行订单确认？')">  
 				</form>  
 				<?
 				}  
