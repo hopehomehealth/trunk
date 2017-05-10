@@ -604,7 +604,7 @@ if(!defined('IN_CLOOTA')) {
                             <?if($taocan['travellerBirthday']=='TRAV_NUM_ALL' || $taocan['travellerCredentials']=='TRAV_NUM_ALL'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
-                                <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>" placehoder="日期格式为"><span class="youwan_birthday_<?=$i?>"></span>
+                                <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"><?if($i==0){?><span>日期格式如下:1980-05-21</span><?}?><span class="youwan_birthday_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
                             $('#youwan_birthday_<?=$i?>').blur(function(){
@@ -624,7 +624,7 @@ if(!defined('IN_CLOOTA')) {
                             <?}elseif(($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0')||$taocan['travellerCredentials']=='TRAV_NUM_ONE'){?>
                             <li>
                                 <label><b>＊</b>生日</label>
-                                <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"><span class="youwan_idTips_<?=$i?>"></span>
+                                <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"><?if($i==0){?><span>日期格式如下:1980-05-21</span><?}?><span class="youwan_birthday_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
                             $('#youwan_birthday_<?=$i?>').blur(function(){
