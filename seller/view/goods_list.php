@@ -124,7 +124,7 @@ if(!defined('IN_CLOOTA')) {
 			  
 			  <td>  
 				<a href="?cmd=<?=base64_encode('goods_edit.php')?>&ac=copy&goods_id=<?=$val['goods_id']?>" style="cursor:pointer">¸´ÖÆ</a> &nbsp; 
-				<a href="preview.php?ac=goods&goods_id=<?=$val['goods_id']?>" target="_blank"><img src="static/image/view.gif" title="Ô¤ÀÀ"/></a> 
+				<a href="/product/detail-<?=$val['goods_id']?>-<?=$val['lv_product_id']?>.html" target="_blank"><img src="static/image/view.gif" title="Ô¤ÀÀ"/></a> 
 				&nbsp;
 				<a href="?cmd=<?=base64_encode('goods_edit.php')?>&goods_id=<?=$val['goods_id']?>" style="cursor:pointer"><img src="static/image/edit.gif" title="±à¼­"/></a> 
 				&nbsp;
