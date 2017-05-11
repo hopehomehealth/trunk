@@ -490,7 +490,7 @@
                             <dd style="padding-top: 10px;line-height: 13px;background: url(/themes/s01/images/dingwei.png) no-repeat 37px 9px;">
 <!--                                --><?// if ($val['aLiData'] != '飞猪自营') {
                                     ?>
-                                    到达城市：<span class="mr30" title="<?= $val['disCity']?>"><?= $val['disCity']; ?></span>
+                                    到达城市：<span class="mr30" title="<?= $val['distProv'].$val['distCity']?>"><?= zwjiequ($val['distProv'].$val['distCity'],60); ?></span>
 <!--                                    --><?//
 //                                } ?>
                             </dd>
