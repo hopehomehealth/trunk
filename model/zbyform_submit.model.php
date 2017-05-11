@@ -165,7 +165,7 @@ $fangcha = $arr['data'];
 }
 if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){
     $jiahao = 1;
-}
+} 
 /*if($_GET['flag']=='check'){
     $jiahao = '';
 }*/
