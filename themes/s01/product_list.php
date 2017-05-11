@@ -419,8 +419,8 @@
         if (notnull($zbyHotGoodsList)) {
 //            var_dump($zbyHotGoodsList);
             foreach ($zbyHotGoodsList as $val) {
-                echo "<pre>";
-                var_dump($val);
+//                echo "<pre>";
+//                var_dump($val);
                 $goodsImage = $val['goodsImage'];
                 $sku_list = get_sku_list($val['goodsId'], 5);
                 $goods_url = $val['pcALiDetailLink'];
