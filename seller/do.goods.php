@@ -82,7 +82,7 @@ if($cmd == 'goods_add'){
 		senderror('产品编号已存在');
 	}
  
-	$goods_image = get_ym_upfile('goods_image'); 
+	$goods_image = '/upfiles/801/'.get_ym_upfile('goods_image'); 
 	
 	if($goods_image==''){
 		senderror('必须上传产品主图');
@@ -103,7 +103,8 @@ if($cmd == 'goods_add'){
 	for($i=1; $i<=5; $i++){
 		$other_goods_image = get_ym_upfile('goods_image'.$i );  
 		if($other_goods_image!=''){
-			$sql = "INSERT INTO `t_goods_image` (`site_id` , `goods_id` , `filepath` , `filetype` , `file_size` ) VALUES ('$g_siteid', '$goods_id', '$other_goods_image', '', '' )";
+			$other_goods_image = '/upfiles/801/'.$other_goods_image;
+			$sql = "INSERT INTO `t_goods_image` (`site_id` , `goods_id` , `filepath` , `filetype` , `file_size`,`lv_product_id` ) VALUES ('$g_siteid', '$goods_id', '$other_goods_image', '1', '' ,'$goods_id')";
 			$db->query($sql);  
 		}
 	}  
@@ -345,7 +346,8 @@ if($cmd == 'goods_update'){
 			}
 		} else { 
 			if($other_goods_image!=''){
-				$sql = "INSERT INTO `t_goods_image` (`site_id` , `goods_id` , `filepath` , `filetype` , `file_size` ) VALUES ('$g_siteid', '$goods_id', '$other_goods_image', '', '' )";
+				$other_goods_image = '/upfiles/801/'.$other_goods_image;
+				$sql = "INSERT INTO `t_goods_image` (`site_id` , `goods_id` , `filepath` , `filetype` , `file_size`,`lv_product_id` ) VALUES ('$g_siteid', '$goods_id', '$other_goods_image', '1', '' ,'$goods_id')";
 				$db->query($sql);  
 			}
 		}
@@ -353,7 +355,7 @@ if($cmd == 'goods_update'){
  
 	
 	// 产品主题 
-	$goods_image = get_ym_upfile('goods_image' );  
+	$goods_image = jpgget_ym_upfile('goods_image' );  
 	
 	if($goods_image!=''){
 		$goods_image_sql = " , `goods_image`='$goods_image' ";
