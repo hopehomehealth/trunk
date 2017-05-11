@@ -14,7 +14,7 @@ if($_GET['flage']==2){
     $url_form = str_replace('?', '',substr($getUrl,stripos($getUrl, '?')));
 
 }
-$db->check_cookie($loginUrl, $host);
+//$db->check_cookie($loginUrl, $host);
 //截取
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
@@ -166,7 +166,8 @@ $fangcha = $arr['data'];
 if($taocan['travellerName']=='TRAV_NUM_ONE'||$taocan['travellerName']=='TRAV_NUM_NO'){
     $jiahao = 1;
 }
-if($_GET['check']=='check'){
+/*if($_GET['flag']=='check'){
     $jiahao = '';
-}
+}*/
+
 ?>
