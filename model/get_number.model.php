@@ -45,7 +45,7 @@ $childPriceInfo = $_SESSION['childPriceInfo'];
 //$childmax = $arrs['1'];
 
 if($post['isPackage'] == 'true'){
-    echo "<span class='fenshu'>
+    echo "<span class='fenshu' style='padding-left: 25px;'>
             <label for=\"\">购买份数:</label>
             <select id='fenshu' onchange='count_price()'>
             ";
@@ -56,7 +56,7 @@ if($post['isPackage'] == 'true'){
             <label for=\"\">其中包含:</label>
             成人：$adultNum  儿童：$kidNum
 
-            <a href=\"javascript:void(0);\" class=\"qijia\" style=\"\">起价说明</a>
+            <a href=\"javascript:void(0);\" class=\"qijia\" style=\"font-size: 12px;\">起价说明</a>
             <div class=\"qijia_tips\">
                         本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变.
             </div>

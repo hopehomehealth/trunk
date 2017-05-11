@@ -2530,7 +2530,7 @@ a:hover .ico-shopping {
 }
 
 .qijia {
-    background: url(/themes/s01/images/qijia.png) no-repeat left center;
+    background: url(/themes/s01/images/qijia.png) no-repeat 5px center;
     padding-left: 25px;
     margin-left: 10px;
     display: inline-block;

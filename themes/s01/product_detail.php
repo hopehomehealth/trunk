@@ -603,7 +603,7 @@
                     "border": "solid 2px #f90"
                 }).siblings('.date_blue').css({
                     "border": "solid 2px #fff"
-                }); 
+                });
                 for (var i = 0; i < $('.date_blue').length; i++) {
                     $('.date_blue').attr('index', i);
                     if ($('.date_blue').eq(i).attr('dates') == $(this).attr('dates')) {
@@ -879,12 +879,11 @@
             async: false,
             success: function (flag) {
                 if(flag != 1){
-                    alert('亲，该套餐不能预订！')
+                    alert(flag);
                     exit;
                 }
             }
         })
-
     }
     //开始预订
     function order_window() {
@@ -894,7 +893,7 @@
         var fenshu = $('#fenshu').val();
         var zongjia = $("#orderPrice").html();
         if ($('#startDate').val() == '') {
-            alert('亲，您没有选择出发日期！');
+            alert('尊敬的用户，您没有选择出发日期。');
             return false;
         } else {
             biaoji1 = '1';
@@ -902,7 +901,7 @@
         if ($('.product_select1').hasClass('select_selected')) {
             biaoji3 = '1';
         } else {
-            alert('亲，您没有选择套餐！');
+            alert('尊敬的用户，您没有选择套餐。');
             return false;
         }
         if (zongjia != '0') {
