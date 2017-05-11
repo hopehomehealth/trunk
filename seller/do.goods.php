@@ -332,22 +332,26 @@ if($cmd == 'goods_update'){
 	/// 上传其他图片 
 	for($i=1; $i<=5; $i++){
 		$other_goods_image = get_ym_upfile('goods_image'.$i ); 
-
+		
 		$exist_goods_image = req('exist_goods_image'.$i);
+
 		$exist_image_id = req('exist_image_id'.$i);
 
 		// 图片存在，文件也不为空
 		if($exist_image_id!='' && $other_goods_image!=''){
+			$exist_goods_image = '/upfiles/801/'.$exist_goods_image;
+			$other_goods_image = '/upfiles/801/'.$other_goods_image;
 			$sql = "UPDATE `t_goods_image` SET `filepath`='$other_goods_image' WHERE image_id='$exist_image_id'";
 			$db->query($sql); 
 			
 			// 删除老图片
 			$upload_dir = "$g_root/upfiles/$g_siteid/"; 
-			if(file_exists($upload_dir.$exist_goods_image)==true){
-				unlink($upload_dir.$exist_goods_image);
+			if(file_exists(/*$upload_dir.*/$exist_goods_image)==true){
+				unlink(/*$upload_dir.*/$exist_goods_image);
 			}
 		} else { 
 			if($other_goods_image!=''){
+				$exist_goods_image = '/upfiles/801/'.$exist_goods_image;
 				$other_goods_image = '/upfiles/801/'.$other_goods_image;
 				$sql = "INSERT INTO `t_goods_image` (`site_id` , `goods_id` , `filepath` , `filetype` , `file_size`,`lv_product_id` ) VALUES ('$g_siteid', '$goods_id', '$other_goods_image', '1', '' ,'$goods_id')";
 				$db->query($sql);  
@@ -360,7 +364,8 @@ if($cmd == 'goods_update'){
 	$goods_image = get_ym_upfile('goods_image' );  
 	
 	if($goods_image!=''){
-		$goods_image_sql = " , `goods_image`='$goods_image' ";
+		$goods_image = '/upfiles/801/'.$goods_image;
+		$goods_image_sql = " `goods_image`='$goods_image' ";
 	}
 
 	// 全文检索
