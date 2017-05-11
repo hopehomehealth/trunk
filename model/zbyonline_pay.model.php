@@ -1,11 +1,16 @@
 <?
 $db->check_cookie($loginUrl, $host);
-$goodsName = urldecode(req('goodsName'));
+$flag = req('flag');
 $payPrice = req('payPrice');
 $orderCode = req('orderCode');
 $payTime = req('payTime');
-$lvGoodsName = req('lvGoodsName');
-
+if($flag == '1') {
+    $goodsName = req('goodsName');
+    $lvGoodsName = req('lvGoodsName');
+}else if($flag == '2'){
+    $goodsName = utf8_to_gbk(req('goodsName'));
+    $lvGoodsName = utf8_to_gbk(req('lvGoodsName'));
+}
 
 $trans['token'] = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $pay_way = juhecurl($host . "/travel/interface/pay/getPayWays", $trans, 1);
