@@ -588,6 +588,15 @@
         var html_calendar = $.ajax({url: v_url, async: false});
         $("#date_price").html(html_calendar.responseText);
         $("#date_price1").html(html_calendar.responseText);
+        $('.date_blue').hover(function () {
+            if ($(this).find('.date_yen').eq(0).html() != "") {
+                $(this).css({
+                    "border": "solid 2px #f90"
+                }).siblings('.date_blue').css({
+                    "border": "solid 2px #fff"
+                });
+            }
+        })
         $('.date_blue').click(function () {
             if ($(this).find('.date_yen').eq(0).html() != "") {//$(this).html().split("<br>")[0]
                 $(this).css({
