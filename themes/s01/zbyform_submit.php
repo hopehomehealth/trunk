@@ -831,7 +831,7 @@ function check_form(){
             document.getElementById("write_form").submit(); 
         <?}?>
     }else{
-        alert('请先阅读旅游条款并同意条款');
+        alert('请先阅读旅游条款并同意条款'); 
     }
 }
 //动态创建
