@@ -307,7 +307,7 @@ if (!defined('IN_CLOOTA')) {
     </div>
 </div>
 <!--去支付表单-->
-<form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
+<form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-1.html" method="post" id="onlineForm">
     <input type="hidden" name="payPrice" value="<?=$order_detail_data['payPrice']?>">
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$order_detail_data['goodsName']?>">
     <input type="hidden" name="payTime"  value="<?=$order_detail_data['leftPayTime']?>">
