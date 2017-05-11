@@ -787,7 +787,6 @@ $('#mobile').blur(function(){
 
 
 function check_form(){
-
     if($('#tiaokuan').attr('hasCheck')=='1'){
         var kidNum = $('#kidNum').html();//儿童数
         if(kidNum==''){
@@ -825,10 +824,12 @@ function check_form(){
         if(kidNum==0 && adultNum==0){
             alert('游玩人数不能为0');
         }else{
-           document.getElementById("write_form").submit(); 
+           document.getElementById("write_form").submit();
+           $('.zbyOrder_main31_right').removeAttr("onclick");
         }
         <?}else{?>
             document.getElementById("write_form").submit(); 
+            $('.zbyOrder_main31_right').removeAttr("onclick");
         <?}?>
     }else{
         alert('请先阅读旅游条款并同意条款'); 
