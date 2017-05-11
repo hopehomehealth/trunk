@@ -482,7 +482,7 @@
                             <dd style="padding-top: 5px;line-height: 13px;background: url(/themes/s01/images/dingwei.png) no-repeat 37px 3px;">
                                 <? if ($val['aLiData'] != '飞猪自营') {
                                     ?>
-                                    出发城市：<span class="mr30"><?= $val['srcProv'].$val['srcCity'] ?></span>
+                                    出发城市：<span class="mr30"><? if($val['srcProv'] == $val['srcCity']) echo $val['srcCity']; else echo $val['srcProv'].$val['srcCity'] ?></span>
                                 <?
                                 } ?>
                             </dd>
