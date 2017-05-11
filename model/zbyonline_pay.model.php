@@ -11,7 +11,7 @@ if($flag == '1') {
     $goodsName = utf8_to_gbk(req('goodsName'));
     $lvGoodsName = utf8_to_gbk(req('lvGoodsName'));
 }
-echo $payTime;
+//echo $payTime;
 $trans['token'] = substr($_COOKIE['5fe845d7c136951446ff6a80b8144467'],1,-1);
 $pay_way = juhecurl($host . "/travel/interface/pay/getPayWays", $trans, 1);
 $pay_way = json_decode($pay_way, true);

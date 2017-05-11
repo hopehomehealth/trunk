@@ -72,6 +72,7 @@ $order_detail_data = $order_detail['data'];
 //var_dump($order_detail_data);
 $orderStatus = $order_detail_data['orderStatus'];
 $dataSources = $order_detail_data['dataSources'];
+$verifyFlag = $order_detail_data['verifyFlag'];
 
 //取消订单
 if($_GET['flag'] == 'cn'){
@@ -89,9 +90,9 @@ if($_GET['flag'] == 'cn'){
 
 //按钮对应状态判断
 $st = 1;
-if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8 || $orderStatus == 9){
+if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8 || $orderStatus == 9 || ($orderStatus == 2 && $verifyFlag == 1)){
     $st = 0;
-}elseif($orderStatus == 2){
+}elseif($orderStatus == 2 && $verifyFlag != 1){
     $st = 1;
 }elseif($orderStatus == 4){
     $st = 2;
