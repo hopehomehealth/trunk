@@ -104,12 +104,13 @@ if($cmd == 'order_st'){
     $post = array('orderCode' => $order_code, 'orderStatus' => $order_status, 'md5Str' => $md5Str, 'token' => $token);
     $confirm = $db->api_post($url, $post);
     $confirm = json_decode($confirm, true);
+    $confirm_data = $confirm['data'];
     if($confirm['status'] == '0000' && $order_status == '3') {
         echo "<script>alert('确认成功！');</script>";
     }else if($confirm['status'] == '0000' && $order_status == '4') {
         echo "<script>alert('确认回团成功！');</script>";
     }else if($confirm['status'] == '0000' && $order_status == '9') {
-        echo "<script>alert('审核未通过确认成功，稍后退款会打到您的账户上。');</script>";
+        echo "<script>alert('确认审核不通过成功！');</script>";
     }else{
         exit();
     }
