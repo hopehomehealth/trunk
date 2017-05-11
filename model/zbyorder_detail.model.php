@@ -47,7 +47,7 @@ if(req('flag') == 'rf'){
 //确认会团
 if(req('flag') == 'cf'){
     $post3 = array('orderCode' => $orderCode, 'token' => $token);
-    $confirm_return = juhecurl($host."/travel/interface/zby/confirmBackGroup",$post3, 1);
+    $confirm_return = juhecurl($host."/travel/interface/zby/v3.2/confirmBackGroup",$post3, 1);
     $confirm_return = json_decode($confirm_return, true);
     $confirm_return = array_iconv($confirm_return);
 //    var_dump($confirm_return);

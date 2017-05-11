@@ -419,8 +419,8 @@
         if (notnull($zbyHotGoodsList)) {
 //            var_dump($zbyHotGoodsList);
             foreach ($zbyHotGoodsList as $val) {
-//                echo "<pre>";
-//                var_dump($val);
+                echo "<pre>";
+                var_dump($val);
                 $goodsImage = $val['goodsImage'];
                 $sku_list = get_sku_list($val['goodsId'], 5);
                 $goods_url = $val['pcALiDetailLink'];
@@ -490,7 +490,7 @@
                             <dd style="padding-top: 10px;line-height: 13px;background: url(/themes/s01/images/dingwei.png) no-repeat 37px 9px;">
 <!--                                --><?// if ($val['aLiData'] != '飞猪自营') {
                                     ?>
-                                    到达城市：<span class="mr30" title="<?= $val['distProv'].$val['disCity']?>"><?= zwjiequ($value['distCity'], 52); ?></span>
+                                    到达城市：<span class="mr30" title="<?= $val['disCity']?>"><?= $val['disCity']; ?></span>
 <!--                                    --><?//
 //                                } ?>
                             </dd>
