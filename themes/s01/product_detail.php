@@ -603,7 +603,7 @@
                     "border": "solid 2px #f90"
                 }).siblings('.date_blue').css({
                     "border": "solid 2px #fff"
-                });
+                }); 
                 for (var i = 0; i < $('.date_blue').length; i++) {
                     $('.date_blue').attr('index', i);
                     if ($('.date_blue').eq(i).attr('dates') == $(this).attr('dates')) {
