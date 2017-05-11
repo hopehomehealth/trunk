@@ -450,7 +450,7 @@ $(document).ready(function(){
 			  <td style="width:170px;"> 
 			  <?
 			  if($goods['goods_image']!=""){
-							  $goods_image = "/upfiles/$g_siteid/".$goods['goods_image'];
+							  $goods_image = $goods['goods_image'];
 			  ?>
 			  <img src="<?=$goods_image?>" style="width:152px;" class="thumbnail"/><br/>
 			  <?
@@ -471,7 +471,7 @@ $(document).ready(function(){
 					<?if($images[$i]['image_id']!=''){?>
 					<div id="goods_images_<?=$images[$i]['image_id']?>"> 
 					<a href="do.php?cmd=goods_image_del&image_id=<?=$images[$i]['image_id']?>" target="frm" style="position:absolute;font-size:18px;color:red;margin-left:130px;" title="É¾³ý" onclick="return confirm('È·ÈÏÉ¾³ýÂð£¿')">¡Á</a>
-						<img src="http://<?=$g_site_domain?>/upfiles/<?=$g_siteid?>/<?=$images[$i]['filepath']?>"  style="width:152px"/> 
+						<img src="<?=$images[$i]['filepath']?>"  style="width:152px"/> 
 						
 					</div>
 					<?}else{?>
