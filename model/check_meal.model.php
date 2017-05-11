@@ -16,3 +16,4 @@ if($datas['timeMsg'] == '1' && $datas['dayMsg'] == '1' && $datas['skuMsg'] == '1
 } else {
     echo "0";
 }
+//echo var_dump($datas['skuMsg']);
