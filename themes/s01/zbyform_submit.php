@@ -605,19 +605,24 @@ if(!defined('IN_CLOOTA')) {
                                 <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"><?if($i==0){?><span>日期格式如下:1980-05-21</span><?}?><span class="youwan_birthday_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
+                            <?if($_GET['flag']=='check'){?>
+                                var youwanBirthday__flag=1;
+                            <?}else{?>
                             var youwanBirthday__flag=0;
+                            <?}?>
                             $('#youwan_birthday_<?=$i?>').blur(function(){
+                                
                                 if($('#youwan_birthday_<?=$i?>').val()==''){
                                     $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
-                                    
+                                    youwanBirthday__flag=0;
                                 }else if(reg6.test($('#youwan_birthday_<?=$i?>').val())){
                                     $('.youwan_birthday_<?=$i?>').show();
                                     $('.youwan_birthday_<?=$i?>').html('');
-                                    youwanBirthday__flag=1;
+                                   youwanBirthday__flag=1;
                                 }else if(!reg6.test($('#youwan_birthday_<?=$i?>').val())){
                                     $('.youwan_birthday_<?=$i?>').show();
                                     $('.youwan_birthday_<?=$i?>').html('请输入正确的生日！').css('color','red');
-                                    
+                                    youwanBirthday__flag=0;
                                 }
                             });
                             </script>
@@ -627,19 +632,25 @@ if(!defined('IN_CLOOTA')) {
                                 <input type="text" class="hhm-dateInputer" name="birthday_<?=$i?>" value="<?php if(isset($_POST['birthday_'.$i])){echo $_POST['birthday_'.$i];}?>" id="youwan_birthday_<?=$i?>"><?if($i==0){?><span>日期格式如下:1980-05-21</span><?}?><span class="youwan_birthday_<?=$i?>"></span>
                             </li>
                             <script type="text/javascript">
+
+                            <?if($_GET['flag']=='check'){?>
+                                var youwanBirthday__flag=1;
+                            <?}else{?>
                             var youwanBirthday__flag=0;
+                            <?}?>
                             $('#youwan_birthday_<?=$i?>').blur(function(){
+                                
                                 if($('#youwan_birthday_<?=$i?>').val()==''){
                                     $('.youwan_birthday_<?=$i?>').show().html('生日不能为空').css('color','red');
-                                    
+                                    youwanBirthday__flag=0;
                                 }else if(reg6.test($('#youwan_birthday_<?=$i?>').val())){
                                     $('.youwan_birthday_<?=$i?>').show();
                                     $('.youwan_birthday_<?=$i?>').html('');
-                                    youwanBirthday__flag=1;
+                                   youwanBirthday__flag=1;
                                 }else if(!reg6.test($('#youwan_birthday_<?=$i?>').val())){
                                     $('.youwan_birthday_<?=$i?>').show();
                                     $('.youwan_birthday_<?=$i?>').html('请输入正确的生日！').css('color','red');
-                                    
+                                   youwanBirthday__flag=0;
                                 }
                             });
                             </script>
@@ -803,11 +814,12 @@ function check_form(){
         var zongshu = Number(adultNum) + Number(kidNum);
         if(zongshu><?=$taocan['max']?>){
             alert('游玩人总数超过最大订购量:<?=$taocan['max']?>');
-            return false;
+            exit();
         }
         <?if($taocan['travellerBirthday']=='TRAV_NUM_ALL' || $taocan['travellerCredentials']=='TRAV_NUM_ALL' || ($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0')||$taocan['travellerCredentials']=='TRAV_NUM_ONE'){?>
+        
         if(youwanBirthday__flag==0){
-            alert('出生日期输入错误');return flase;
+            alert('出生日期输入错误');exit();
         }
         <?}?>
         if(kidNum==0 && adultNum==0){
