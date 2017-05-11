@@ -113,7 +113,7 @@ $(document).ready(function(){
   <li><a href="#tabs-6">其它设置</a></li>  
 
   <input type="button" value=" 返回 " class="btn pull-right" onclick="history.back()" style="margin-left:5px"/>
-  <a href="javascript:void(0)" onclick="window.open('preview.php?ac=goods&goods_id=<?=$goods['goods_id']?>')" target="_blank" class="btn btn-info pull-right " style="color:white;margin-left:5px"/>预览</a>
+  <a href="javascript:void(0)" onclick="window.open('/product/detail-<?=$goods['goods_id']?>-<?=$goods['lv_product_id']?>.html')" target="_blank" class="btn btn-info pull-right " style="color:white;margin-left:5px"/>预览</a>
   <input type="submit" value="立即发布" class="btn btn-warning pull-right"/>
 </ul>
 
@@ -430,7 +430,14 @@ $(document).ready(function(){
 					立即上架
 					<input type="radio" name="is_sale" value="0"  <?if($goods['is_sale']=='0'){?>checked<?}?>>
 					放入仓库 </td>
-        </tr> 
+        </tr>
+        <tr>
+			  <td align="right"><font color="red">*</font> 退改规则：</td>
+			  <td><input type="radio" name="change_ruler" value="UNRETREATANDCHANGE" <?if($sku['change_ruler']=='UNRETREATANDCHANGE'){?>checked<?}?>>
+				不可退改
+				<input type="radio" name="change_ruler" value="MANUALCHANGE" <?if($sku['change_ruler']=='MANUALCHANGE'){?>checked<?}?> >
+				人工退改 </td>
+		</tr> 
 	  </table>
 	</div>
 	<div class="tab-pane" id="tabs-3">   

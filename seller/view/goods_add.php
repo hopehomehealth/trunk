@@ -446,6 +446,13 @@ $(document).ready(function(){
 			<?}else{?>
 			<input type="hidden" name="is_sale" value="-1" >
 			<?}?>
+			<tr>
+			  <td align="right"><font color="red">*</font> 退改规则：</td>
+			  <td><input type="radio" name="change_ruler" value="UNRETREATANDCHANGE" checked>
+				不可退改
+				<input type="radio" name="change_ruler" value="MANUALCHANGE" >
+				人工退改 </td>
+			</tr>
 		</table> 
 	</div> 
 	<div class="tab-pane" id="tabs-3">   
