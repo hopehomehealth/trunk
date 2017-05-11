@@ -28,7 +28,7 @@
 .orderDetail_noEvaluate_main2 .zhongping{background-position: -32px 0px;}
 .orderDetail_noEvaluate_main2 .chaping{background-position: -64px 0px;}
 
-.dianpingneirong{width:905px;min-height:174px;overflow: hidden;border:solid 1px #e6e6e6;padding:25px 30px 25px 15px;font-size: 14px;line-height: 28px;color: #333;}
+.dianpingneirong{width:905px;min-height:174px;overflow: hidden;border:solid 1px #e6e6e6;padding:25px 30px 25px 15px;font-size: 14px;line-height: 28px;color: #333;word-wrap: break-word;}
 
 
 .evaluateCont{width: 770px;height:120px;margin:0 auto;}
