@@ -11,6 +11,9 @@ $goods = $db->get_one($sql);
 $sql = "SELECT * FROM t_zby_package WHERE goods_id='$goods_id' ";  
 $package = $db->get_one($sql);
 
+$sql = "SELECT * FROM t_goods_sku WHERE goods_id='$goods_id' ";  
+$sku = $db->get_one($sql);
+
 $c_goods_type = $goods['goods_type'];
  
 $sql = "SELECT * FROM t_shop WHERE site_id='$g_siteid' ORDER BY order_id ASC";  
@@ -40,7 +43,6 @@ function has_son_cat($parent_id){
 // 签证国家列表
 $sql = "SELECT * FROM `t_visa_zone`  ORDER BY `zone_letter` ASC";  
 $visa_zone_list = $db->get_all($sql); 
-
 $visa = unserialize($goods['visa_profile']); 
 ?>
 
