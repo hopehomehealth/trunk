@@ -805,9 +805,11 @@ function check_form(){
             alert('游玩人总数超过最大订购量:<?=$taocan['max']?>');
             return false;
         }
+        <?if($taocan['travellerBirthday']=='TRAV_NUM_ALL' || $taocan['travellerCredentials']=='TRAV_NUM_ALL' || ($taocan['travellerBirthday']=='TRAV_NUM_ONE' && $i=='0')||$taocan['travellerCredentials']=='TRAV_NUM_ONE'){?>
         if(youwanBirthday__flag==0){
-            alert('出生日期输入错误');return false;
+            alert('出生日期输入错误');return flase;
         }
+        <?}?>
         if(kidNum==0 && adultNum==0){
             alert('游玩人数不能为0');
         }else{
@@ -819,7 +821,6 @@ function check_form(){
     }else{
         alert('请先阅读旅游条款并同意条款');
     }
-
 }
 //动态创建
 
