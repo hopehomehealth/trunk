@@ -117,7 +117,7 @@ RewriteRule ^zhoubianyou/zbyform_submit-(1)-(check).html$    index\.php?cmd=zbyf
 RewriteRule ^zhoubianyou/zbyform_submit-(2)-(check).html$    index\.php?cmd=zbyform_submit&flage=2&flag=check&%1 [L]
 RewriteRule ^zhoubianyou/zbyform_submit-(2).html$    index\.php?cmd=zbyform_submit&flage=2&%1 [L]
 RewriteCond %{QUERY_STRING} ^(.*)$
-RewriteRule ^zhoubianyou/zbyonline_pay-(.*).html$    index\.php?cmd=zbyonline_pay&orderCode=$1&%1 [L]
+RewriteRule ^zhoubianyou/zbyonline_pay-(.*).html$    index\.php?cmd=zbyonline_pay&flag=$1&%1 [L]
 
 RewriteRule ^zhoubianyou/zbypay_jump-(.*)-(.*).html$    index\.php?cmd=zbypay_jump&topayinfoid=$1&orderno=$2 [L]
 RewriteRule ^zhoubianyou/zbypay_success-(.*).html$    index\.php?cmd=zbypay_success&orderCode=$1 [L]
