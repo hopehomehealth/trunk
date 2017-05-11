@@ -21,7 +21,7 @@ if(!defined('IN_CLOOTA')) {
 <title>÷‹±ﬂ”Œ∂©µ•</title>
 </head>
 <body><?if (notnull($orderCode)){ ?>
-    <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-<?=$orderCode;?>.html" method="post" id="onlineForm">
+    <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-1.html" method="post" id="onlineForm">
         <input type="hidden" name="payPrice" value="<?=$payPrice?>">
         <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName?>">
         <input type="hidden" name="payTime"  value="<?=$payTime?>">
