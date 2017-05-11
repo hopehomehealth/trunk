@@ -5,12 +5,18 @@ function to_gbk($str){
     return mb_convert_encoding($str, 'gbk', 'utf-8');
 }
 $post = array();
-$post['lvProductId'] = $_POST['productId'];
-$post['departDate'] = $_POST['departDate'];
-$post['packageId'] = $_POST['packageId'];
+//$post['lvProductId'] = $_POST['productId'];
+//$post['departDate'] = $_POST['departDate'];
+//$post['packageId'] = $_POST['packageId'];
 $post['isPackage'] = $_POST['isPackage'];
-$post['min'] = $_POST['min'];
-$post['max'] = $_POST['max'];
+//$post['min'] = $_POST['min'];
+//$post['max'] = $_POST['max'];
+//成人（份数）选购量
+$adultmin = $_POST['adultmin'];
+$adultmax = $_POST['adultmax'];
+//儿童选购量
+$childmin = $_POST['childmin'];
+$childmax = $_POST['childmax'];
 $adultNum = $_POST['adultNum'];
 if($adultNum == ''){
     $adultNum = '0';
@@ -23,20 +29,20 @@ if (!isset($_SESSION)){
     session_start();    
 }
 $childPriceInfo = $_SESSION['childPriceInfo'];
-//获取成人允许选购量
-$url = $host . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
-$data = $db->api_post($url, $post);
-$arr = json_decode($data, true);
-$datass = $arr['data'];
-$adultmin = $datass['0'];
-$adultmax = $datass['1'];
-//获取儿童允许选购量
-$url = $host . "/travel/interface/zby/v3.2/getNumberSelectionChild";
-$data = $db->api_post($url, $post);
-$arr = json_decode($data, true);
-$arrs = $arr['data'];
-$childmin = $arrs['0'];
-$childmax = $arrs['1'];
+////获取成人允许选购量
+//$url = $host . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
+//$data = $db->api_post($url, $post);
+//$arr = json_decode($data, true);
+//$datass = $arr['data'];
+//$adultmin = $datass['0'];
+//$adultmax = $datass['1'];
+////获取儿童允许选购量
+//$url = $host . "/travel/interface/zby/v3.2/getNumberSelectionChild";
+//$data = $db->api_post($url, $post);
+//$arr = json_decode($data, true);
+//$arrs = $arr['data'];
+//$childmin = $arrs['0'];
+//$childmax = $arrs['1'];
 
 if($post['isPackage'] == 'true'){
     echo "<span class='fenshu'>

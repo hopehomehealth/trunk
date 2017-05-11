@@ -39,6 +39,10 @@ foreach ($datas['list'] as $key => $val) {
     $min = to_gbk($val['min']);
     $max = to_gbk($val['max']);
     $roomMax = to_gbk($val['roomMax']);//最大房间数
+    $adultmin = $val['adultSku']['0'];//成人最小选购量
+    $adultmax = $val['adultSku']['1'];//成人最大选购量
+    $childmin = $val['childSku']['0'];//儿童最小选购量
+    $childmax = $val['childSku']['1'];//儿童最大选购量
     //判断按人还是按份，计算价格
     if ($isPackage == 'true') {
         $price = $adultPrice;
@@ -99,6 +103,10 @@ foreach ($datas['list'] as $key => $val) {
                 <input type='hidden' name='adultNum' value='$adultNum'>
                 <input type='hidden' name='kidNum' value='$kidNum'>
                 <input type='hidden' name='diffPrice' value='$diffPrice'>
+                <input type='hidden' name='adultmin' value='$adultmin'>
+                <input type='hidden' name='adultmax' value='$adultmax'>
+                <input type='hidden' name='childmin' value='$childmin'>
+                <input type='hidden' name='childmax' value='$childmax'>
             </li>
         </ul>
         <div class=\"hide_content\">

@@ -123,7 +123,7 @@
                         </li>
                     </ul>
                 </div>
-                <a class="spotAlbum"><span id="lunbo_pre" ></span><span id="lunbo_next" ></span></a>
+<!--                <a class="spotAlbum"><span id="lunbo_pre"></span><span id="lunbo_next"></span></a>-->
             </div>
 
             <!-- 价格日历 -->
@@ -557,6 +557,10 @@
     var packageId = '';
     var diffPrice = '';
     var diffPriceNum = '';
+    var adultmin = '';
+    var adultmax = '';
+    var childmin = '';
+    var childmax = '';
     var productId = "<?= $productId ?>";
     var goodsId = "<?= $goodsId ?>";
     var goodsType = "<?=$data['goodsType']?>";
@@ -587,17 +591,17 @@
         $('.date_blue').click(function () {
             if ($(this).find('.date_yen').eq(0).html() != "") {//$(this).html().split("<br>")[0]
                 $(this).css({
-                    "border":"solid 2px #f90"
+                    "border": "solid 2px #f90"
                 }).siblings('.date_blue').css({
-                    "border":"solid 2px #fff"
+                    "border": "solid 2px #fff"
                 });
-                for(var i=0;i<$('.date_blue').length;i++){
-                    $('.date_blue').attr('index',i);
-                    if($('.date_blue').eq(i).attr('dates')==$(this).attr('dates')){
+                for (var i = 0; i < $('.date_blue').length; i++) {
+                    $('.date_blue').attr('index', i);
+                    if ($('.date_blue').eq(i).attr('dates') == $(this).attr('dates')) {
                         $('.date_blue').eq(i).css({
-                            "border":"solid 2px #f90"
+                            "border": "solid 2px #f90"
                         }).siblings('.date_blue').css({
-                            "border":"solid 2px #fff"
+                            "border": "solid 2px #fff"
                         });
                     }
                 }
@@ -709,6 +713,10 @@
                 adultNum = $(this).find("input").eq(7).val();
                 kidNum = $(this).find("input").eq(8).val();
                 diffPrice = $(this).find("input").eq(9).val();
+                adultmin = $(this).find("input").eq(10).val();
+                adultmax = $(this).find("input").eq(11).val();
+                childmin = $(this).find("input").eq(12).val();
+                childmax = $(this).find("input").eq(13).val();
                 $.ajax({
                     type: "POST",
                     url: "/model/get_number.model.php",
@@ -720,7 +728,11 @@
                         "min": min,
                         "max": max,
                         "adultNum": adultNum,
-                        "kidNum": kidNum
+                        "kidNum": kidNum,
+                        "adultmin": adultmin,
+                        "adultmax": adultmax,
+                        "childmin": childmin,
+                        "childmax": childmax
                     },
                     async: true,
                     success: function (data) {
@@ -799,7 +811,7 @@
             $('.child_tips').hide();
         });
     }
-
+    //计算总价
     function get_price() {
         if (isPackage == 'false') {
             adultNum = $('#adult_num').val();
@@ -810,6 +822,7 @@
         }
     }
     ;
+    //获取房差
     function count_price() {
         if (isPackage == 'false') {
             adultNum = $('#adult_num').val();
@@ -842,17 +855,30 @@
         }
     }
     ;
+    //校验套餐
+    function check_meal() {
+        $.ajax({
+            type: "POST",
+            url: "/model/check_meal.model.php",
+            data: {
+                "packageId": packageId,
+                "lvProductId": productId,
+                "departDate": departDate,
+                "adultNum": adultNum,
+                "childNum": kidNum
+            },
+            async: false,
+            success: function (flag) {
+                if(flag !== 1){
+                    alert('亲，该套餐不能预订！')
+                    exit;
+                }
+            }
+        })
 
+    }
+    //开始预订
     function order_window() {
-//        $.ajax({
-//            type: "POST",
-//            url: "",
-//            data: {},
-//            async: false,
-//            success: function () {
-//
-//            }
-//        })
         var biaoji1 = '';
         var biaoji2 = '';
         var biaoji3 = '';
@@ -873,6 +899,7 @@
         if (zongjia != '0') {
             biaoji2 = '1';
         }
+//        check_meal();
         var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-1.html";
         $('#chufa').attr('action', url);
         $('#goodsId').val(goodsId);
