@@ -444,7 +444,7 @@
                                     echo $goods_url;
                                 } ?>" target="_blank" alt="<?= $val['goodsName']?>" title="<?= $val['goodsName']?>" <? if ($val['is_hot'] == 1){
                                                        ?>style="color:red;font-weight:bold;"<?
-                                } ?>><?=  $val['goodsName'] ?></a></dt>
+                                } ?>><?=  zwjiequ($val['goodsName'],108) ?></a></dt>
 
                             <?
                             //                    if(in_array($val['goods_type'],array(1,2,6))){
