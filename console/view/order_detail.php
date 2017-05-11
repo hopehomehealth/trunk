@@ -183,7 +183,7 @@ if (!defined('IN_CLOOTA')) {
             ?>
 
             <?
-            if ($state == 2) {
+            if ($state == 2 && $detail['data_sources'] == '1'){
                 ?>
                 <form target="frm" method="post"
                       action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=3"

@@ -99,12 +99,15 @@ if($cmd == 'order_st'){
     //调接口(确认)
 //    echo "<script>alert($order_status);</script>";
 //    echo $md5Str;
-    $url = $host . "/travel/interface/zbyV3.2/updateOrderAndUnifiedV3_2";//接口地址
+    $url = $host . "/travel/interface/zby/v3.2/returnZbystatus_v3.2";//接口地址
 //    $url =  "http://192.168.0.223:8080/travel/interface/zby/v3.2/returnZbystatus_v3.2";//接口地址
     $post = array('orderCode' => $order_code, 'orderStatus' => $order_status, 'md5Str' => $md5Str);
     $confirm = $db->api_post($url, $post);
     $confirm = json_decode($confirm, true);
     $confirm_data = $confirm['data'];
+    $dataSources = $confirm_data['dataSources'];
+    $state1 = $confirm_data['state'];
+    $verifyFlag = $confirm_data['verifyFlag'];
     if($confirm['status'] == '0000' && $order_status == '3') {
         echo "<script>alert('确认成功！');</script>";
     }else if($confirm['status'] == '0000' && $order_status == '4') {
