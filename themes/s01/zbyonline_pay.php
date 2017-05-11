@@ -28,12 +28,12 @@ if(!defined('IN_CLOOTA')) {
             </div>
             <div class="onlinePay_main1">
                 <div class="onlinePay_main1_simInfo">
-                    <div class="onlinePay_main1_left"><?echo $goodsName?></div>
-                    <div class="onlinePay_main1_right">应付金额 <b><?echo $payPrice?></b><span>元</span></div>
+                    <div class="onlinePay_main1_left"><?= $db->to_gbk($goodsName)?></div>
+                    <div class="onlinePay_main1_right">应付金额 <b><?= $payPrice?></b><span>元</span></div>
                 </div>
                 <div class="onlinePay_main1_allInfo">
-                    <p>订单编号：<?echo $orderCode;?></p>
-                    <p>商品描述：<?=$lvGoodsName;?></p>
+                    <p>订单编号：<?= $orderCode;?></p>
+                    <p>商品描述：<?= $db->to_gbk($lvGoodsName);?></p>
                     <p>交易类型：在线支付</p>
                     <p>建议您在<span><?= date("H:i:s", time() + ($payTime / 1000)) ?></span>之前完成付款，过期订单会自动取消哦。</p>
                 </div>
@@ -49,17 +49,17 @@ if(!defined('IN_CLOOTA')) {
                         if ($value['bankcode'] == 'alipayweb'){
                             ?>
                             <div class="onlinePay_main2_left">
-                                <input type="radio" name="topayinfoid" id="alipayweb" value="<?echo $value['id'];?>">
+                                <input type="radio" name="topayinfoid" id="alipayweb" value="<?= $value['id'];?>">
                                 <label for=""></label>
                             </div>
                         <? }else if($value['bankcode'] == 'wxqrcode') { ?>
                             <div class="onlinePay_main2_right">
-                                <input type="radio" name="topayinfoid" id="wxqrcode" value="<? echo $value['id']; ?>">
+                                <input type="radio" name="topayinfoid" id="wxqrcode" value="<?= $value['id']; ?>">
                                 <label for=""></label>
                             </div>
                         <? }else if($value['bankcode'] == 'unionall_web_wtz'){ ?>
                             <div class="onlinePay_main2_center">
-                                <input type="radio" name="topayinfoid" id="unionall" value="<?echo $value['id'];?>">
+                                <input type="radio" name="topayinfoid" id="unionall" value="<?= $value['id'];?>">
                                 <label for=""></label>
                             </div>
                             <?
