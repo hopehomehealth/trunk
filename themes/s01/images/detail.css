@@ -2438,7 +2438,7 @@ a:hover .ico-shopping {
     padding-left: 92px;
     padding-right: 32px;
     font-size: 14px;
-    height: 450px;
+    min-height: 360px;
     overflow: hidden;
     *zoom: 1
 }
