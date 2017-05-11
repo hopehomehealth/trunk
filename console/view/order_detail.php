@@ -183,7 +183,7 @@ if (!defined('IN_CLOOTA')) {
             ?>
 
             <?
-            if ($state == 2 && $detail['data_sources'] == '1'){
+            if ($state == 2 && $data_sources == '1'){
                 ?>
                 <form target="frm" method="post"
                       action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=3"
@@ -192,12 +192,14 @@ if (!defined('IN_CLOOTA')) {
                 </form>
 
                 <!--审核未通过-->
-                <form target="frm" method="post"
-                      action="do.php?cmd=order_st&order_code=<?= $detail['order_code']?>&order_status=9"
-                      style="float:left;margin-right:10px">
-                    <input type="submit" value="审核未通过" class="btn btn-info" onclick="return confirm('订单确定未审核通过吗？')">
-                </form>
-                <?
+                <?if($verifyFlag != '1') { ?>
+                    <form target="frm" method="post"
+                          action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=9"
+                          style="float:left;margin-right:10px">
+                        <input type="submit" value="审核未通过" class="btn btn-info" onclick="return confirm('订单确定未审核通过吗？')">
+                    </form>
+                    <?
+                }
             }
             ?>
 

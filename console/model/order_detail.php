@@ -4,7 +4,10 @@ if(!defined('IN_CLOOTA')) {
 }
 
 $order_code = req('order_code');
- 
+$state1 = req('state1');
+$dataSources = req('dataSources');
+$verifyFlag = req('verifyFlag');
+
 $sql = "SELECT a.*,c.lv_scenic_id,c.data_sources FROM t_user_order a, t_shop b, t_goods_thread c WHERE a.shop_id=b.shop_id AND a.lv_product_id=c.lv_product_id AND a.`site_id`='$g_siteid' AND a.`order_code`='$order_code' ";
 $detail = $db->get_one($sql);
  

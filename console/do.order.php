@@ -103,11 +103,14 @@ if($cmd == 'order_st'){
 //    $url =  "http://192.168.0.223:8080/travel/interface/zby/v3.2/returnZbystatus_v3.2";//接口地址
     $post = array('orderCode' => $order_code, 'orderStatus' => $order_status, 'md5Str' => $md5Str);
     $confirm = $db->api_post($url, $post);
+//    echo "<script>alert('$confirm');</script>";
     $confirm = json_decode($confirm, true);
     $confirm_data = $confirm['data'];
     $dataSources = $confirm_data['dataSources'];
     $state1 = $confirm_data['state'];
     $verifyFlag = $confirm_data['verifyFlag'];
+        echo "<script>alert('$verifyFlag');</script>";
+
     if($confirm['status'] == '0000' && $order_status == '3') {
         echo "<script>alert('确认成功！');</script>";
     }else if($confirm['status'] == '0000' && $order_status == '4') {
@@ -117,7 +120,7 @@ if($cmd == 'order_st'){
     }else{
         exit();
     }
-    $url = "./?cmd=".base64_encode("order_detail.php").'&order_code='.$order_code;
+    $url = "./?cmd=".base64_encode("order_detail.php").'&order_code='.$order_code.'&verifyFlag='.$verifyFlag.'&dataSources='.$dataSources.'&state1='.$state1;
     gourl($url);
 }
 
