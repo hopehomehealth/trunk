@@ -68,6 +68,7 @@ if($cmd == 'goods_add'){
 	$traveller_birthday			= req('traveller_birthday');//生日是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
 	$emergency					= req('emergency');//是否需要紧急联系人  true：需要；false：不需要	
 	$ahead_time					= req('ahead_time');//提前预订时间
+	$change_ruler				= req('change_ruler');//退改规则
 	if(notnull($goods_name) == false){ 
 		senderror('请填写产品名称');
 	} 
@@ -217,7 +218,7 @@ if($cmd == 'goods_add'){
 					$db->query($sql); 
 				} else { 
 
-					$sql = "INSERT INTO `t_goods_sku` (`service_type`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`,`lv_stock`,`ahead_day`,`ahead_time`) VALUES ('1','$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id','$sum_stock','$before_days','$ahead_time')"; 
+					$sql = "INSERT INTO `t_goods_sku` (`service_type`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`,`lv_stock`,`ahead_day`,`ahead_time`,`change_ruler`) VALUES ('1','$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id','$sum_stock','$before_days','$ahead_time','$change_ruler')"; 
 					$db->query($sql);
 				}
 			}
@@ -319,6 +320,7 @@ if($cmd == 'goods_update'){
 	$traveller_birthday			= req('traveller_birthday');//生日是否必填  (证件类型非身份证时需提供性别和出生日期，否则不显示)',
 	$emergency					= req('emergency');//是否需要紧急联系人  true：需要；false：不需要
  	$ahead_time					= req('ahead_time');//提前预订时间
+ 	$change_ruler				= req('change_ruler');//退改规则
 	if(notnull($goods_name) == false){ 
 		senderror('请填写产品名称');
 	} 
@@ -445,7 +447,7 @@ if($cmd == 'goods_update'){
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
 	$goods_cat_key = $db->get_value($sql); 
 	
-	$sql = "UPDATE `t_goods_thread` SET `shop_id`='$shop_id', `cat_id`='$goods_cat_id', `shop_cat_id`='$shop_cat_id', `cat_key`='$goods_cat_key', `goods_name`='$goods_name', `goods_code`='$goods_code', `goods_doc`='$goods_doc', `summary`='$summary' $goods_image_sql , `content`='$goods_content' , `content_day`='$content_day', `price_note`='$price_note', `unprice_note`='$unprice_note', `market_price`='$market_price', `real_price`='$real_price', `stock`='$stock', `ref_price`='$ref_price_txt', `stock`='$stock', `sale_type`='$sale_type', `sale_start`='$sale_start', `sale_end`='$sale_end', `ft`='$ft', `goods_package`='$goods_package', `goods_type`='$goods_type', `goods_zone`='$goods_zone', `src_prov`='$src_prov', `src_city`='$src_city', `dist_prov`='$dist_prov', `dist_city`='$dist_city', `line_days`='$line_days', `line_nights`='$line_nights', `goto_transport`='$goto_transport', `back_transport`='$back_transport', `before_days`='$before_days', `order_note`='$order_note', `line_tag`='$line_tag', `visa_zone_id`='$visa_zone_id', `visa_type`='$visa_type', `visa_profile`='$visa_profile', `ship_name`='$ship_name', `ship_line`='$ship_line', `ship_port`='$ship_port', `ship_brand`='$ship_brand', `is_sale`='$is_sale'  WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
+	$sql = "UPDATE `t_goods_thread` SET `shop_id`='$shop_id', `cat_id`='$goods_cat_id', `shop_cat_id`='$shop_cat_id', `cat_key`='$goods_cat_key', `goods_name`='$goods_name', `goods_code`='$goods_code', `goods_doc`='$goods_doc', `summary`='$summary', $goods_image_sql , `content`='$goods_content' , `content_day`='$content_day', `price_note`='$price_note', `unprice_note`='$unprice_note', `market_price`='$market_price', `real_price`='$real_price', `stock`='$stock', `ref_price`='$ref_price_txt', `stock`='$stock', `sale_type`='$sale_type', `sale_start`='$sale_start', `sale_end`='$sale_end', `ft`='$ft', `goods_package`='$goods_package', `goods_type`='$goods_type', `goods_zone`='$goods_zone', `src_prov`='$src_prov', `src_city`='$src_city', `dist_prov`='$dist_prov', `dist_city`='$dist_city', `line_days`='$line_days', `line_nights`='$line_nights', `goto_transport`='$goto_transport', `back_transport`='$back_transport', `before_days`='$before_days', `order_note`='$order_note', `line_tag`='$line_tag', `visa_zone_id`='$visa_zone_id', `visa_type`='$visa_type', `visa_profile`='$visa_profile', `ship_name`='$ship_name', `ship_line`='$ship_line', `ship_port`='$ship_port', `ship_brand`='$ship_brand', `is_sale`='$is_sale'  WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
 	$db->query($sql);
 	//套餐 修改
 	$sql = "UPDATE `t_zby_package` SET `room_max`='$room_max', `min`='$min', `max`='$max', `booker_name`='$booker_name', `booker_mobile`='$booker_mobile', `booker_email`='$booker_email', `traveller_name`='$traveller_name', `traveller_en_name`='$traveller_en_name', `traveller_mobile`='$traveller_mobile', `traveller_email`='$traveller_email', `traveller_person_type`='$traveller_person_type', `traveller_credentials`='$traveller_credentials', `traveller_credentials_type`='$traveller_credentials_type', `traveller_gender`='$traveller_gender', `traveller_birthday`='$traveller_birthday', `emergency`='$emergency' WHERE `goods_id`='$goods_id'";
