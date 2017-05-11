@@ -20,11 +20,16 @@ if($now_page<1){
 if(req('kw')!=''){
 	$qer .= " AND ( a.order_code='".req('kw')."' OR a.`goods_name` LIKE '%".req('kw')."%' OR b.`shop_name` LIKE '%".req('kw')."%' OR a.`linker` LIKE '%".req('kw')."%' OR a.mobile='".req('kw')."')";
 }
-if(req('state')!=''){
+if(req('state')!= '' && req('state') != '6' && req('state') != '2'){
 	$qer .= " AND a.`state`='".req('state')."'";
 }
-if(req('verifyFlag')!=''){
-    $qer .= " AND a.`verify_flag`='".req('verifyFlag')."'";
+if(req('state') == '2'){
+	$flag = "0";
+    $qer .= " AND a.`state`='".req('state')."' AND a.`verify_flag`='" . $flag."'";
+}
+if(req('state') == '6'){
+	$flag = "1";
+    $qer .= " AND a.`verify_flag`='".$flag."'";
 }
 
 $sql = "SELECT a.*,c.lv_scenic_id FROM t_user_order a, t_shop b, t_goods_thread c WHERE a.shop_id=b.shop_id AND a.lv_product_id=c.lv_product_id AND a.`site_id`='$g_siteid' $qer ORDER BY a.`order_id` DESC ";

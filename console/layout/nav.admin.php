@@ -72,9 +72,9 @@ $tip_total_shop = $db->get_value($sql);
                 </a>
                 <ul class="submenu" <?if(in_array($cmd, array('order.php','customized.php'))){?>style="display:block"<?}?>>
                     <li><a href="?cmd=<?=base64_encode('order.php')?>&state=1">待付款<span class="badge badge-warning pull-right"><?=get_order_count('1')?></span></a></li>
-					<li><a href="?cmd=<?=base64_encode('order.php')?>&state=2&verifyFlag=0">已付款<span class="badge badge-warning pull-right"><?=get_order_count('2')?></span></a></li>
+					<li><a href="?cmd=<?=base64_encode('order.php')?>&state=2">已付款<span class="badge badge-warning pull-right"><?=get_order_count('2')?></span></a></li>
 					<li><a href="?cmd=<?=base64_encode('order.php')?>&state=3">已确认<span class="badge badge-warning pull-right"><?=get_order_count('3')?></span></a></li>
-                    <li><a href="?cmd=<?=base64_encode('order.php')?>&verifyFlag=1">审核未通过<span class="badge badge-warning pull-right"><?=get_order_notgo_count('1')?></span></a></li>
+                    <li><a href="?cmd=<?=base64_encode('order.php')?>&state=6">审核未通过<span class="badge badge-warning pull-right"><?=get_order_notgo_count('1')?></span></a></li>
 					<li><a href="?cmd=<?=base64_encode('order.php')?>&state=4">已完成<span class="badge badge-warning pull-right"><?=get_order_count('4')?></span></a></li>
 					<li><a href="?cmd=<?=base64_encode('order.php')?>&state=5">已取消<span class="badge badge-warning pull-right"><?=get_order_count('5')?></span></a></li>
                     <li><a href="?cmd=<?=base64_encode('customized.php')?>">整团订单</a></li>  

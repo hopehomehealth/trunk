@@ -24,7 +24,7 @@ if(!defined('IN_CLOOTA')) {
 				<option value="3" <?if(req('state')=='3'){?>selected<?}?>>待完成</option>
 				<option value="4" <?if(req('state')=='4'){?>selected<?}?>>已完成</option>
 				<option value="5" <?if(req('state')=='5'){?>selected<?}?>>已取消</option>
-				<option value="9" <?if(req('state')=='9'){?>selected<?}?>>审核未通过</option>
+				<option value="6" <?if(req('state')=='6'){?>selected<?}?>>审核未通过</option>
 			</select>
 
 			<input type="image" src="static/image/find.gif" class="input_img"/>  
@@ -49,6 +49,10 @@ if(!defined('IN_CLOOTA')) {
 		foreach ($query_rows as $val){   
 			// 订单状态
 			$state = $val['state'];
+            $flag =  $val['verify_flag'];
+            if ($flag == '1'){
+                $state = '6';
+            }
 
 			// 联系人详情
 			$traffic = unserialize($val['traffic_snapshot']); 
@@ -120,7 +124,7 @@ if(!defined('IN_CLOOTA')) {
 				</td>
 							 
 				<td>
-					<span class="label label-warning"><?=$g_order_state[$state]?></span> 
+					<span class="label label-warning"><?=$g_order_state[$state]?></span>
 				</td>  
 
 				<td>
