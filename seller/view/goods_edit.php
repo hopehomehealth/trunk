@@ -425,6 +425,11 @@ $(document).ready(function(){
 				天预订 </td>
         </tr>
         <tr>
+				  <td align="right">游客需在：</td>
+				  <td><input type="time" name="ahead_time" value="<?=$sku['ahead_time']?>"/>
+					之前预订 </td>
+		</tr>
+        <tr>
 			  <td align="right"><font color="red">*</font> 上下架：</td>
 			  <td><input type="radio" name="is_sale" value="1" <?if($goods['is_sale']=='1'){?>checked<?}?>>
 					立即上架
