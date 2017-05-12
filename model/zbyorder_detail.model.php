@@ -114,6 +114,7 @@ foreach ($orderOperationList as $key => $value){
     if($value == 'refund') $refund = '1';//申请退款
     if($value == 'confirm') $confirm = '1';//确认会团
     if($value == 'evaluation') $evaluation = '1';//去评价
+    if($value == 'cancle') $cancle = '1';//去评价
 }
 echo $bookAgain;echo $refund;
 //if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8 || $orderStatus == 9 || ($orderStatus == 2 && $verifyFlag == 1)){

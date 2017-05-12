@@ -126,7 +126,7 @@ if (!defined('IN_CLOOTA')) {
 
 
                 <div class="orderBtnBox">
-                    <? if ($bookAgain == '1' && $refund != '1' && $evaluation != '1' && $confirm != '1' && $pay != '1') { ?>
+                    <? if ($bookAgain == '1' && $refund != '1' && $evaluation != '1' && $confirm != '1' && $pay != '1' && $cancle != '1') { ?>
                         <!-- 默认按钮（已取消、退款中。退款成功。退款失败）-->
                         <div class="orderBtn_default">
                             <button onclick="order_again()">再次预定</button>
@@ -152,7 +152,7 @@ if (!defined('IN_CLOOTA')) {
                             <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
                             <button class="querenhuituanbt">确认回团</button>
                         </div>
-                    <? } elseif($pay == '1'){ ?>
+                    <? } elseif($pay == '1' && $cancle == '1'){ ?>
                     <!--  //待付款-->
                     <!-- 待支付按钮 -->
                     <a class="orderBtn_noPay">
