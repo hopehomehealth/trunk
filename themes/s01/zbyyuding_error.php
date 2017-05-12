@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="/themes/s01/images/yudingError.css">
 </head>
 <?include ('head.php');?>
+
 <body>
 	<!-- 预定订单失败 start-->
 	<div id="zby_orderError_mainBox">
