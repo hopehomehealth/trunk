@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/menpiaoliebiao.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/list.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/zhoubianyoudianping.css">
+    <link rel="shortcut icon" type="image/png" href="http://www.bus365.com/public/images/bus365.png">
     <script type="text/javascript" src="/themes/s01/js/jquery.js "></script>
     <script type="text/javascript" src="/themes/s01/js/common.js"></script>
 </head>

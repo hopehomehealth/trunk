@@ -11,6 +11,7 @@ if($g_config['site_notice']!='' && $is_index==true){
 </div>
 <?}?>
 <link rel="stylesheet" type="text/css" href="/themes/s01/images/common.css">
+<link rel="shortcut icon" type="image/png" href="http://www.bus365.com/public/images/bus365.png">
 <div id="headbox">  
 	<!-- <div id="ota-topnav">
 		<div class="ota-container">

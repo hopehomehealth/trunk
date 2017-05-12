@@ -13,6 +13,7 @@ $orderCode = req('orderCode');
     <title>ÖÜ±ßÓÎÍË¿î</title>
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/common.css">
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/zhoubianyoushenqingtuikuan.css">
+    <link rel="shortcut icon" type="image/png" href="http://www.bus365.com/public/images/bus365.png">
 </head>
 <body>
 <!--  head  start -->

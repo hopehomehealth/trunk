@@ -7,6 +7,7 @@ if (!defined('IN_CLOOTA')) {
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="/themes/s01/images/pay_detail.css">
+    <link rel="shortcut icon" type="image/png" href="http://www.bus365.com/public/images/bus365.png">
     <title>周边游订单详情</title>
     <?include('static.php');?>
 </head>
