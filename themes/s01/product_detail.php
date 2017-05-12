@@ -416,7 +416,7 @@
                                         <? if ($v['tool']['house'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
                                                     class="fa fa-building-o"></em>
-                                                ×¡ËÞ£º<?= $db->to_gbk($v['tool']['food']) ?>
+                                                ×¡ËÞ£º<?= $db->to_gbk($v['tool']['house']) ?>
                                             </div>
                                             <?
                                         } ?>

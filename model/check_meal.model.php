@@ -11,7 +11,9 @@ $url =   $host . "/travel/interface/zby/v3.2/checkDataBeforePay";
 $data = $db->api_post($url, $post);
 $arr = json_decode($data, true);
 $datas = $arr['data'];
-if($datas['skuMsg'] !== '1'){
+if($datas['buyMsg'] !== '1'){
+    echo $db->to_gbk($datas['buyMsg']);
+} else if($datas['skuMsg'] !== '1'){
     echo $db->to_gbk($datas['skuMsg']);
 } else if ($datas['dayMsg'] !== '1'){
     echo $db->to_gbk($datas['dayMsg']);
