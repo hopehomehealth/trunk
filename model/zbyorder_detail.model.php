@@ -106,7 +106,7 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 
 
 //按钮对应状态判断
-$st = 1;
+$st = 2;
 foreach ($orderOperationList as $key => $value){
 //    echo $key;echo $value;
     if($value == 'pay') $st = 1;//去支付
