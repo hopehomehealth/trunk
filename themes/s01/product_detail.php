@@ -240,7 +240,7 @@
             <div class="form-btn">
 			<span style="width: 160px;display: inline-block;">套餐价：
 			<span id="orderPriceYes" style=""> <sub class="yellow-b">&yen;</sub><span
-                    class="form-price yellow-b" id="orderPrice">0</span></span> </span>
+                    class="form-price yellow-b" id="orderPrice">--</span></span> </span>
                 <span id="order_span">
 				<a onclick="order_window()" class="btn btn-lg"
                    id="order_button">开始预订</a>
@@ -602,7 +602,11 @@
         $('.date_blue').click(function () {
             if ($(this).find('.date_yen').eq(0).html() != "") {//$(this).html().split("<br>")[0]
                 $(this).css({
-                    "border": "solid 2px #f90"
+                    "border": "solid 2px #f90",
+                    "backgroundImage":"url(/themes/s01/images/date_select.png)",
+                    "backgroundRepeat":"no-repeat",
+                    "backgroundPosition":"right bottom",
+                    "backgroundColor":"#fef6eb"
                 }).siblings('.date_blue').css({
                     "border": "solid 2px #fff"
                 });
@@ -610,9 +614,14 @@
                     $('.date_blue').attr('index', i);
                     if ($('.date_blue').eq(i).attr('dates') == $(this).attr('dates')) {
                         $('.date_blue').eq(i).css({
-                            "border": "solid 2px #f90"
+                            "border": "solid 2px #f90",
+                            "backgroundImage":"url(/themes/s01/images/date_select.png)",
+                            "backgroundRepeat":"no-repeat",
+                            "backgroundPosition":"right bottom",
+                            "backgroundColor":"#fef6eb"
                         }).siblings('.date_blue').css({
-                            "border": "solid 2px #fff"
+                            "border": "solid 2px #fff",
+                            "backgroundImage":""
                         });
                     }
                 }
@@ -629,7 +638,7 @@
                         $('.detail_byPart').html(datas);
                         $('.detail_byPart').show();
                         $('.number').html("");
-                        $("#orderPrice").html("0");
+                        $("#orderPrice").html("--");
                         //点击套餐吗，名称展开具体信息
 //                        for (var i = 0; i < $('.product_name1').length; i++) {
 //                            $('.product_name1').eq(i).attr("hide_flag", "1");
@@ -750,7 +759,7 @@
                         $('.number').html("");
                         $('.number').html(data);
                         $('.number').show();
-                        $("#orderPrice").html();
+                        $("#orderPrice").html("--");
                         //起价提示qijia
                         $('.qijia').hover(function () {
                             $(this).css({
@@ -881,7 +890,6 @@
             url: "/model/check_meal.model.php",
             data: {
                 "packageId": packageId,
-                "lvProductId": productId,
                 "departDate": departDate,
                 "adultNum": adultNum,
                 "childNum": kidNum
@@ -917,7 +925,7 @@
         if (zongjia != '0') {
             biaoji2 = '1';
         }
-//        check_meal();
+        check_meal();
         var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-1.html";
         $('#chufa').attr('action', url);
         $('#goodsId').val(goodsId);
