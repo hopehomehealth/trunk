@@ -68,7 +68,7 @@ if (!defined('IN_CLOOTA')) {
                 <div class="orderInfo1">
                     <ul>
                         <li>订单号：<? echo $order_detail_data['orderCode']; ?></li>
-                        <li class="sli">订单状态：<? echo $order_detail_data['orderStatusName']; if($order_detail_data['orderStatus'] == '2' && $order_detail_data['verifyFlag'] != '1') echo '(出单中)'; if($order_detail_data['orderStatus'] == '2' && $order_detail_data['verifyFlag'] == '1') echo "<span style='color:red;'>(出单失败)(退款将在3-5个工作日会返回到您的支付账户上)</span>"; if($order_detail_data['state'] == '8') echo "<span style='color:red;'>(请联系bus65官方电话：400-0884365)</span>"; ?></li>
+                        <li class="sli">订单状态：<? echo $order_detail_data['orderStatusName']; if($order_detail_data['orderStatus'] == '2' && $order_detail_data['verifyFlag'] != '2') echo '(出单中)'; if($order_detail_data['orderStatus'] == '2' && $order_detail_data['verifyFlag'] == '2') echo "<span style='color:red;'>(出单失败)(退款将在3-5个工作日会返回到您的支付账户上)</span>"; if($order_detail_data['state'] == '8') echo "<span style='color:red;'>(请联系bus65官方电话：400-0884365)</span>"; ?></li>
                         <li>下单时间：<? echo $order_detail_data['orderDate']; ?></li>
                         <li>支付方式：<? echo $order_detail_data['paymentType']; ?></li>
                     </ul>
