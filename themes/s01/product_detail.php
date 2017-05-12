@@ -608,7 +608,9 @@
                     "backgroundPosition":"right bottom",
                     "backgroundColor":"#fef6eb"
                 }).siblings('.date_blue').css({
-                    "border": "solid 2px #fff"
+                    "border": "solid 2px #fff",
+                    "backgroundImage":"",
+                    "backgroundColor":"#f3f3f3"
                 });
                 for (var i = 0; i < $('.date_blue').length; i++) {
                     $('.date_blue').attr('index', i);
@@ -621,7 +623,8 @@
                             "backgroundColor":"#fef6eb"
                         }).siblings('.date_blue').css({
                             "border": "solid 2px #fff",
-                            "backgroundImage":""
+                            "backgroundImage":"",
+                            "backgroundColor":"#f3f3f3"
                         });
                     }
                 }
