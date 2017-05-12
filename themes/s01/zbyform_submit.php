@@ -525,8 +525,8 @@ if(!defined('IN_CLOOTA')) {
                             <li><?if($taocan['travellerPersonType']=='TRAV_NUM_ALL'){?>
                                     <label><b>＊</b>人群：</label>
                                     <select name="personType_<?=$i?>">
-                                        <option value="adult">成人</option>
-                                        <option value="child">儿童</option> 
+                                        <option value="adult" <?if($i<$adultNum){?>selected='selected'<?}?>>成人</option>
+                                        <option value="child" <?if($i>=$adultNum){?>selected='selected'<?}?>>儿童</option> 
                                     </select>
                                     <?}elseif($taocan['travellerPersonType']=='TRAV_NUM_ONE' && $i=='0'){?>
                                     <label><b>＊</b>人群：</label>
