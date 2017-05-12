@@ -125,33 +125,33 @@ if (!defined('IN_CLOOTA')) {
 
 
                 <div class="orderBtnBox">
-                    <? if ($st == 0) { ?>
+                    <? if ($st == 2) { ?>
                         <!-- 默认按钮（已取消、退款中。退款成功。退款失败）-->
                         <div class="orderBtn_default">
                             <button onclick="order_again()">再次预定</button>
                         </div>
-                    <? } elseif($st == 1){ ?>
+                    <? } elseif($st == 3){ ?>
                         <!-- //已支付 或者 已确认 并且  当前时间没有到出行日期-->
                         <!-- 已支付未确认/已支付已确认 按钮 -->
                         <div class="orderBtn_chupiaozhong">
                             <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
                             <button class="applyRefundBtn">申请退款</button>
                         </div>
-                    <? } elseif($st == 2){ ?>
+                    <? } elseif($st == 5){ ?>
                         <!-- //已完成-->
                         <!-- 已支付-已确认-评价 按钮 -->
                         <div class="orderBtn_hasUse">
                             <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
                             <button onclick="comment_commit()">去评价</button>
                         </div>
-                    <? } elseif($st == 3){ ?>
+                    <? } elseif($st == 4){ ?>
                         <!-- //已确认-->
                         <!-- 已支付-已确认-确认回团 按钮 -->
                         <div class="orderBtn_chupiaozhong">
                             <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
                             <button class="querenhuituanbt">确认回团</button>
                         </div>
-                    <? } elseif($st == 4){ ?>
+                    <? } elseif($st == 1){ ?>
                     <!--  //待付款-->
                     <!-- 待支付按钮 -->
                     <a class="orderBtn_noPay">

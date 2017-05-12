@@ -68,11 +68,12 @@ if ($order_detail['status'] != '0000') {
 }
 
 $order_detail_data = $order_detail['data'];
+$verifyFlag = $order_detail_data['verifyFlag'];
+$dataSources = $order_detail_data['dataSources'];
+$orderOperationList = $order_detail_data['orderOperationList'];
 //echo "<pre>";
 //var_dump($order_detail_data);
-$orderStatus = $order_detail_data['orderStatus'];
-$dataSources = $order_detail_data['dataSources'];
-$verifyFlag = $order_detail_data['verifyFlag'];
+
 
 //取消订单
 if($_GET['flag'] == 'cn'){
@@ -101,5 +102,28 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 }elseif($orderStatus == 1){
     $st = 4;
 }
+//$st = 4;
+
+
+//按钮对应状态判断
+$st = 1;
+foreach ($orderOperationList as $key => $value){
+    if($key == 'pay') $st = 1;//去支付
+    if($key == 'bookAgin') $st = 2;//再次预订
+    if($key == 'refund') $st = 3;//申请退款
+    if($key == 'confirm') $st = 4;//确认会团
+    if($key == 'evaluation') $st = 5;//去评价
+}
+//if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8 || $orderStatus == 9 || ($orderStatus == 2 && $verifyFlag == 1)){
+//    $st = 0;
+//}elseif($orderStatus == 2 && $verifyFlag != 1){
+//    $st = 1;
+//}elseif($orderStatus == 4){
+//    $st = 2;
+//}elseif($orderStatus == 3 && $dataSources == '1') {
+//    $st = 3;
+//}elseif($orderStatus == 1){
+//    $st = 4;
+//}
 //$st = 4;
 ?>
