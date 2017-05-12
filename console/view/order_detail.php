@@ -183,7 +183,7 @@ if (!defined('IN_CLOOTA')) {
             ?>
 
             <?
-            if ($state == 2 && $data_sources == '1'){
+            if ($state == 2 && $dataSources == '1'){
                 ?>
                 <form target="frm" method="post"
                       action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=3"
@@ -233,9 +233,10 @@ if (!defined('IN_CLOOTA')) {
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <td width="120"><strong>游客姓名</strong></td>
+                            <td width="30"><strong>游客姓名</strong></td>
+                            <td width="30"><strong>游客手机号</strong></td>
                             <td width="120"><strong>游客身份证</strong></td>
-                            <td width="80"><strong>游客年龄</strong></td>
+                            <td width="60"><strong>游客年龄</strong></td>
                         </tr>
                         </thead>
                         <?
@@ -248,7 +249,11 @@ if (!defined('IN_CLOOTA')) {
                                     </td>
 
                                     <td>
-                                        <?= $val['user_idcard'] ?>
+                                        <?= $val['user_phone'] ?>
+                                    </td>
+
+                                    <td>
+                                        <?= $val['user_credentials'] ?>
                                     </td>
 
                                     <td>

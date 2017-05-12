@@ -46,7 +46,9 @@ if(!defined('IN_CLOOTA')) {
 				<td width="50"><strong>详情</strong></td>
 			</tr>  
 		<?
-		foreach ($query_rows as $val){   
+		foreach ($query_rows as $val){
+//            echo "<pre>";
+//            var_dump($val);
 			// 订单状态
 			$state = $val['state'];
             $flag =  $val['verify_flag'];
@@ -128,7 +130,7 @@ if(!defined('IN_CLOOTA')) {
 				</td>  
 
 				<td>
-					<a href="<?=url('order_detail.php')?>&order_code=<?=$val['order_code']?>" target="_top" class="btn btn-small btn-info">详情</a> 
+					<a href="<?=url('order_detail.php')?>&order_code=<?=$val['order_code']?>&state1=<?=$val['state']?>&dataSources=<?=$val['data_sources']?>&verifyFlag=<?=$val['verify_flag']?>" target="_top" class="btn btn-small btn-info">详情</a>
 
 			</tr> 
 			<?}?>
