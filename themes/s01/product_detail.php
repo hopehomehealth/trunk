@@ -394,7 +394,7 @@
                             if (notnull($scheduling)) {
                                 foreach ($scheduling as $key => $v) {
                                     ?>
-                                    <div id="day1">
+                                    <div class="day1">
                                         <div class="detail-h5"><i
                                                 class="lv-icon ico-day">D<?= $key + 1 ?></i><?= $db->to_gbk($v['title']) ?>
                                         </div>
@@ -565,6 +565,7 @@
     var goodsId = "<?= $goodsId ?>";
     var goodsType = "<?=$data['goodsType']?>";
     $(document).ready(function () {
+        rute_position();
         change_calendar(<?=date("'Y','m'")?>);
         $('#startDate').focus(function () {
             $('#v_calendar1').show();
@@ -864,6 +865,14 @@
         }
     }
     ;
+    //行程定位
+    function rute_position(){
+        for (var i = 0; i < $('.detail-daylist li').length; i++) {
+            $('.detail-daylist li').eq(i).click(function () {
+                $(document).scrollTop($('.day1').eq($(this).index()).offset().top - 42)
+            });
+        }
+    }
     //校验套餐
     function check_meal() {
         $.ajax({
