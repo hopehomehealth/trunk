@@ -125,6 +125,8 @@ RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^zhoubianyou/zbyorder_detail-(.*).html$    index\.php?cmd=zbyorder_detail&orderCode=$1&%1 [L]
 RewriteCond %{QUERY_STRING} ^(.*)$
 RewriteRule ^zhoubianyou/zbyrefund-(.*).html$    index\.php?cmd=zbyrefund&orderCode=$1&%1 [L]
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^zhoubianyou/zbyyuding_error-(.*).html$    index\.php?cmd=zbyyuding_error&orderCode=$1&%1 [L]
 
 
 # Õ≈π∫
