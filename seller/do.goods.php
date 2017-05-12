@@ -132,7 +132,23 @@ if($cmd == 'goods_add'){
 		$day_tmp_array['tool']		= $_POST['day_tool'];
 		$day_tmp_array['content']	= $_POST['day_content'];
 		$day_tmp_array['image']		= $day_file_array;
-
+		$title    = $_POST['day_title'];
+		$tool     = $_POST['day_tool'];
+		$content  = $_POST['day_content'];
+		$image    = $day_file_array;
+		$t = 'traffic';$h = 'house';$f = 'food';
+	for($i=1; $i<=$line_days; $i++){
+		$tool_t = $tool[$i][$t];
+		$tool_h = $tool[$i][$h];
+		$tool_f = $tool[$i][$f];
+		$img_a  = $image[$i][1];
+		$img_b  = $image[$i][2];
+		$img_c  = $image[$i][3];
+		$img_d  = $image[$i][4];
+		$content[$i] = htmlspecialchars($content[$i]);
+		$content_day_tmp .= "{\"title\":\"$title[$i]\",\"tool\":{\"traffic\":\"$tool_t\",\"house\":\"$tool_h\",\"food\":\"$tool_f\"},\"content\":\"$content[$i]\",\"image\":[\"$img_a\",\"$img_b\",\"$img_c\",\"$img_d\"]},";
+	}
+	$content_day_v = '['.rtrim($content_day_tmp,",").']';
 		$content_day = addslashes(serialize($day_tmp_array));
 
 		/// 按天编辑内容转换为普通编辑内容
@@ -186,8 +202,8 @@ if($cmd == 'goods_add'){
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
 	$goods_cat_key = $db->get_value($sql);
  
-	$sql = "INSERT INTO `t_goods_thread` (`lv_product_id`,`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`,`data_sources`) 
-	VALUES ('$goods_id','$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '1', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft','1')"; 
+	$sql = "INSERT INTO `t_goods_thread` (`lv_product_id`,`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`,`data_sources`,`day_content_v`) 
+	VALUES ('$goods_id','$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '1', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft','1','$content_day_v')"; 
 	$db->query($sql);
 
 	//套餐添加
@@ -396,7 +412,23 @@ if($cmd == 'goods_update'){
 		$day_tmp_array['content'] = $_POST['day_content'];
 		$day_tmp_array['tool'] = $_POST['day_tool'];
 		$day_tmp_array['image'] = $day_file_array;
-
+		$title    = $_POST['day_title'];
+		$tool     = $_POST['day_tool'];
+		$content  = $_POST['day_content'];
+		$image    = $day_file_array;
+		$t = 'traffic';$h = 'house';$f = 'food';
+	for($i=1; $i<=$line_days; $i++){
+		$tool_t = $tool[$i][$t];
+		$tool_h = $tool[$i][$h];
+		$tool_f = $tool[$i][$f];
+		$img_a  = $image[$i][1];
+		$img_b  = $image[$i][2];
+		$img_c  = $image[$i][3];
+		$img_d  = $image[$i][4];
+		$content[$i] = htmlspecialchars($content[$i]);
+		$content_day_tmp .= "{\"title\":\"$title[$i]\",\"tool\":{\"traffic\":\"$tool_t\",\"house\":\"$tool_h\",\"food\":\"$tool_f\"},\"content\":\"$content[$i]\",\"image\":[\"$img_a\",\"$img_b\",\"$img_c\",\"$img_d\"]},";
+	}
+	$content_day_v = '['.rtrim($content_day_tmp,",").']';
 		$content_day = addslashes(serialize($day_tmp_array));
   
 		/// 按天编辑内容转换为普通编辑内容
@@ -452,8 +484,13 @@ if($cmd == 'goods_update'){
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
 	$goods_cat_key = $db->get_value($sql); 
 	
-	$sql = "UPDATE `t_goods_thread` SET `change_ruler`='$change_ruler',`shop_id`='$shop_id', `cat_id`='$goods_cat_id', `shop_cat_id`='$shop_cat_id', `cat_key`='$goods_cat_key', `goods_name`='$goods_name', `goods_code`='$goods_code', `goods_doc`='$goods_doc', `summary`='$summary', $goods_image_sql , `content`='$goods_content' , `content_day`='$content_day', `price_note`='$price_note', `unprice_note`='$unprice_note', `market_price`='$market_price', `real_price`='$real_price', `stock`='$stock', `ref_price`='$ref_price_txt', `stock`='$stock', `sale_type`='$sale_type', `sale_start`='$sale_start', `sale_end`='$sale_end', `ft`='$ft', `goods_package`='$goods_package', `goods_type`='$goods_type', `goods_zone`='$goods_zone', `src_prov`='$src_prov', `src_city`='$src_city', `dist_prov`='$dist_prov', `dist_city`='$dist_city', `line_days`='$line_days', `line_nights`='$line_nights', `goto_transport`='$goto_transport', `back_transport`='$back_transport', `before_days`='$before_days', `order_note`='$order_note', `line_tag`='$line_tag', `visa_zone_id`='$visa_zone_id', `visa_type`='$visa_type', `visa_profile`='$visa_profile', `ship_name`='$ship_name', `ship_line`='$ship_line', `ship_port`='$ship_port', `ship_brand`='$ship_brand', `is_sale`='$is_sale'  WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
+	$sql = "UPDATE `t_goods_thread` SET `day_content_v`='$content_day_v',`change_ruler`='$change_ruler',`shop_id`='$shop_id', `cat_id`='$goods_cat_id', `shop_cat_id`='$shop_cat_id', `cat_key`='$goods_cat_key', `goods_name`='$goods_name', `goods_code`='$goods_code', `goods_doc`='$goods_doc', `summary`='$summary', /*$goods_image_sql ,*/ `content`='$goods_content' , `content_day`='$content_day', `price_note`='$price_note', `unprice_note`='$unprice_note', `market_price`='$market_price', `real_price`='$real_price', `stock`='$stock', `ref_price`='$ref_price_txt', `stock`='$stock', `sale_type`='$sale_type', `sale_start`='$sale_start', `sale_end`='$sale_end', `ft`='$ft', `goods_package`='$goods_package', `goods_type`='$goods_type', `goods_zone`='$goods_zone', `src_prov`='$src_prov', `src_city`='$src_city', `dist_prov`='$dist_prov', `dist_city`='$dist_city', `line_days`='$line_days', `line_nights`='$line_nights', `goto_transport`='$goto_transport', `back_transport`='$back_transport', `before_days`='$before_days', `order_note`='$order_note', `line_tag`='$line_tag', `visa_zone_id`='$visa_zone_id', `visa_type`='$visa_type', `visa_profile`='$visa_profile', `ship_name`='$ship_name', `ship_line`='$ship_line', `ship_port`='$ship_port', `ship_brand`='$ship_brand', `is_sale`='$is_sale' WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
+
 	$db->query($sql);
+	//主图修改
+	$sql = "UPDATE `t_goods_thread` SET $goods_image_sql WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
+	$db->query($sql);
+
 	//套餐 修改
 	$sql = "UPDATE `t_zby_package` SET `room_max`='$room_max', `min`='$min', `max`='$max', `booker_name`='$booker_name', `booker_mobile`='$booker_mobile', `booker_email`='$booker_email', `traveller_name`='$traveller_name', `traveller_en_name`='$traveller_en_name', `traveller_mobile`='$traveller_mobile', `traveller_email`='$traveller_email', `traveller_person_type`='$traveller_person_type', `traveller_credentials`='$traveller_credentials', `traveller_credentials_type`='$traveller_credentials_type', `traveller_gender`='$traveller_gender', `traveller_birthday`='$traveller_birthday', `emergency`='$emergency' WHERE `goods_id`='$goods_id'";
 	$db->query($sql);
@@ -474,11 +511,11 @@ if($cmd == 'goods_update'){
 				$last_sku_id = $db->get_value($sql);
 				if($last_sku_id!=''){
 					
-					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
+					$sql = "UPDATE `t_goods_sku` SET `adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price',`ahead_day`='$before_days',`ahead_time`='$ahead_time' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
 					$db->query($sql); 
 				} else { 
 
-					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`,`ahead_day`/*,`ahead_time`*/) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$before_days'/*,'$ahead_time'*/)";
+					$sql = "INSERT INTO `t_goods_sku` (`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`,`ahead_day`,`ahead_time`) VALUES ('$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$before_days','$ahead_time')";
 					$db->query($sql);
 				}
 			}
