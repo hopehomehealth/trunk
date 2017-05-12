@@ -62,5 +62,5 @@
 
     <div id="_cfgwp"><span isenoughactivedaynum="true" version="6.0.5.8"></span></div>
 
-</div>
+</div><br/><br/><br/>
 <?include 'foot.php'?>
