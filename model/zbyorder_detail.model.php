@@ -108,13 +108,14 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 //按钮对应状态判断
 $st = 2;
 foreach ($orderOperationList as $key => $value){
-    echo $key;echo $value;
+//    echo $key;echo $value;
     if($value == 'pay') $pay = '1';//去支付
     if($value == 'bookAgain') $bookAgain = '1';//再次预订
     if($value == 'refund') $refund = '1';//申请退款
     if($value == 'confirm') $confirm = '1';//确认会团
     if($value == 'evaluation') $evaluation = '1';//去评价
 }
+echo $bookAgain;echo $refund;
 //if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8 || $orderStatus == 9 || ($orderStatus == 2 && $verifyFlag == 1)){
 //    $st = 0;
 //}elseif($orderStatus == 2 && $verifyFlag != 1){
