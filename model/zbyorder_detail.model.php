@@ -101,5 +101,5 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 }elseif($orderStatus == 1){
     $st = 4;
 }
-$st = 2;
+//$st = 4;
 ?>
