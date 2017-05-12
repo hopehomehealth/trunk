@@ -6,7 +6,7 @@ if (!defined('IN_CLOOTA')) {
 
 <ul class="nav nav-tabs">
     <li <? if (nav_active('order_detail.php')){ ?>class="active"<? } ?> style="padding-left:20px;">
-        <a href="?cmd=<?= base64_encode('order_detail.php') ?>">订单详情</a>
+        <a href="">订单详情</a>
     </li>
     <a href="javascript:void(0)" onclick="history.back()" class="pull-right btn btn-small">返回</a>
 </ul>
