@@ -108,11 +108,12 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 //按钮对应状态判断
 $st = 1;
 foreach ($orderOperationList as $key => $value){
-    if($key == 'pay') $st = 1;//去支付
-    if($key == 'bookAgin') $st = 2;//再次预订
-    if($key == 'refund') $st = 3;//申请退款
-    if($key == 'confirm') $st = 4;//确认会团
-    if($key == 'evaluation') $st = 5;//去评价
+//    echo $key;echo $value;
+    if($value == 'pay') $st = 1;//去支付
+    if($value == 'bookAgain') $st = 2;//再次预订
+    if($value == 'refund') $st = 3;//申请退款
+    if($value == 'confirm') $st = 4;//确认会团
+    if($value == 'evaluation') $st = 5;//去评价
 }
 //if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus == 8 || $orderStatus == 9 || ($orderStatus == 2 && $verifyFlag == 1)){
 //    $st = 0;
