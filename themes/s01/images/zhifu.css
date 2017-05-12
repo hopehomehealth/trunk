@@ -2,7 +2,7 @@
 #onlinePay_mainBox{width: 100%;overflow: hidden;}
 #onlinePay_main{width: 1190px;overflow: hidden;margin:25px auto 0;}
 .onlinePay_main_title{width: 1190px;height: 48px;margin-bottom: 25px;}
-.onlinePay_main1{width: 1148px;position:relative;overflow: hidden;border:solid 1px #ddd;padding:0 20px 30px;background-color: white;margin-bottom: 10px;}
+.onlinePay_main1{width: 1148px;position:relative;overflow: hidden;border:solid 1px #ddd;padding:0 20px 30px;background-color: white;margin-bottom: 10px;background-color: #e4f5ff;}
 .onlinePay_main1:hover{background-color: #e4f5ff;}
 .onlinePay_main1_simInfo{width: 1128px;height:58px;line-height: 58px;border-bottom: dashed 1px #ddd;font-size: 18px;color: #333;padding-left: 20px;}
 .onlinePay_main1_left{float: left;}
