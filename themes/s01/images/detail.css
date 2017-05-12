@@ -3419,7 +3419,8 @@ a:hover .ico-shopping {
 }
 
 .detail-content {
-    padding: 0 24px 24px
+    padding: 0 24px 24px;
+    margin-top: 20px;
 }
 
 .detail-h2 {

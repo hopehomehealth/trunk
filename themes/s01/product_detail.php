@@ -283,16 +283,7 @@
     <div class="detail_byPart">
     </div>
 
-    <!-- tabnav -->
-    <ul class="detail-tabnav unsticky">
-        <li class="selected" href="#special"><a href="#special">详细描述</a></li>
-        <li href="#itinerary" <? if ($c_goods['goods_type'] == '3'){ ?>style="display:none"<? } ?>><a href="#itinerary">行程安排</a>
-        </li>
-        <li href="#cost"><a href="#cost">费用说明</a></li>
-        <li href="#infomation"><a href="#infomation">预订须知</a></li>
-        <!--        <li href="#commentzone"><a href="#commentzone">游客点评</a></li>-->
-        <li class="last"><a class="btn" href="#searchzone">立即预订</a></li>
-    </ul>
+
     <div class="container">
         <div class="detail-main">
             <!-- 猜你喜欢 -->
@@ -332,6 +323,16 @@
 
             <!-- 详细内容 -->
             <div class="wrap detail-content">
+                <!-- tabnav -->
+                <ul class="detail-tabnav unsticky">
+                    <li class="selected" href="#special"><a href="#special">详细描述</a></li>
+                    <li href="#itinerary" <? if ($c_goods['goods_type'] == '3'){ ?>style="display:none"<? } ?>><a href="#itinerary">行程安排</a>
+                    </li>
+                    <li href="#cost"><a href="#cost">费用说明</a></li>
+                    <li href="#infomation"><a href="#infomation">预订须知</a></li>
+                    <!--        <li href="#commentzone"><a href="#commentzone">游客点评</a></li>-->
+                    <li class="last"><a class="btn" href="#searchzone">立即预订</a></li>
+                </ul>
                 <div id="special" class="toscroll">
                     <!-- 特别优惠 -->
                     <div class="detail-article" style="display:none">
