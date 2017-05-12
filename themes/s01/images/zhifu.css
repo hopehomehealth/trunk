@@ -39,11 +39,11 @@
 
 
 .nowPay{display:none;z-index:12;position:absolute;left:50%;top:50%;width:400px;height:200px;margin-top:-100px;margin-left:-200px;border:solid 2px #ddd;padding:10px;background:white;font-size:18px;line-height: 60px;}
-.nowPay button{height:30px;padding:0 20px;font-size:18px;color:white;background:#1fcc9e;border:none;border-radius:5px;}
+.nowPay button{height:30px;padding:0 20px;font-size:18px;color:white;background:#1fcc9e;border:none;border-radius:5px;line-height:30px;}
 .nowPay p{width:100%;text-align:center;}
 .nowPay .timeRun{width:100%;font-size:20px;text-align:center;}
 .timeRun b{color: #eb4545;}
-.onlineBtn3{margin:0 30px;}
+.onlineBtn3{margin:0 30px;text-align:center;height:60px;}
 
 
 
