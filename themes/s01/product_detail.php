@@ -907,7 +907,7 @@
         if (zongjia != '0') {
             biaoji2 = '1';
         }
-        check_meal();
+//        check_meal();
         var url = "<?= $g_self_domain ?>" + "/zhoubianyou/zbyform_submit-1.html";
         $('#chufa').attr('action', url);
         $('#goodsId').val(goodsId);
