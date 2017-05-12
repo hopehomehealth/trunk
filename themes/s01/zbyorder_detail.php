@@ -124,13 +124,14 @@ if (!defined('IN_CLOOTA')) {
                 </div>
 
 
+
                 <div class="orderBtnBox">
-                    <? if ($bookAgain == '1') { ?>
+                    <? if ($bookAgain == '1' && $refund != '1' && $evaluation != '1' && $confirm != '1' && $pay != '1') { ?>
                         <!-- 默认按钮（已取消、退款中。退款成功。退款失败）-->
                         <div class="orderBtn_default">
                             <button onclick="order_again()">再次预定</button>
                         </div>
-                    <? } elseif($bookAgain == '1' && $refund == '1'){ ?>
+                    <? } else if($bookAgain == '1' && $refund == '1'){ ?>
                         <!-- //已支付 或者 已确认 并且  当前时间没有到出行日期-->
                         <!-- 已支付未确认/已支付已确认 按钮 -->
                         <div class="orderBtn_chupiaozhong">
