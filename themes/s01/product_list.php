@@ -421,8 +421,9 @@
             foreach ($zbyHotGoodsList as $val) {
 //                echo "<pre>";
 //                var_dump($val);
-                $goodsImage = $val['goodsImage'];
-                echo $goodsImage;
+//                $goodsImage = $val['goodsImage'];
+                $goodsImage = "http://travelt.bus365.cn/upfiles/801/201705/2017051202080252902.jpg";
+//                echo $goodsImage;
                 $sku_list = get_sku_list($val['goodsId'], 5);
                 $goods_url = $val['pcALiDetailLink'];
                 $goodsId = $val['goodsId'];
