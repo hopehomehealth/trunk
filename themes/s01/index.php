@@ -619,12 +619,13 @@
                 $hot_goods = get_hot_goods_list('0', 5);
                 if (notnull($hot_goods)) {
                     foreach ($hot_goods as $val) {
+//                        var_dump($hot_goods);
                         $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
                         if ($val['goods_type'] == '4') {
                             $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
                             $goods_image = $val['goods_image'];
-                        } else {
+                        } else if ($val['goods_type'] == '1'){
                             $href = "/product/detail-" . $val['goods_id']. "-" . $val['lv_scenic_id'] . ".html";
                             $goods_image = $val['goods_image'];
                         }
