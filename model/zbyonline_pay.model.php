@@ -4,6 +4,7 @@ $flag = req('flag');
 $payPrice = req('payPrice');
 $orderCode = req('orderCode');
 $payTime = req('payTime');
+$departdate = req('departdate');
 if($flag == '1') {
     $goodsName = req('goodsName');
     $lvGoodsName = req('lvGoodsName');
