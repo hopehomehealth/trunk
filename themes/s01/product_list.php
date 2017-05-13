@@ -422,7 +422,7 @@
 //                echo "<pre>";
 //                var_dump($val);
                 $goodsImage = $val['goodsImage'];
-//                echo $goodsImage;
+                echo $goodsImage;
                 $sku_list = get_sku_list($val['goodsId'], 5);
                 $goods_url = $val['pcALiDetailLink'];
                 $goodsId = $val['goodsId'];
