@@ -25,6 +25,7 @@ if ($post['topayinfoid'] == '65') {
 }else if ($post['topayinfoid'] == '71') {
     if ($pay_parameter['status'] != '0000') {
         echo 'false';
+        exit;
     }
     $url = 'http://' . $host . '/travel/interface/pay/scanQRCode?code_url=' . $pay_parameter['data'];
 //    $url = "http://192.168.3.63/travel/interface/pay/scanQRCode?code_url=weixin://wxpay/bizpayurl?pr=RtE5qBO";
