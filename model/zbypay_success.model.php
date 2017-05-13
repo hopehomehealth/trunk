@@ -11,6 +11,10 @@ if ($pay_success['status'] != '0000'){
 }
 $pay_success_data = $pay_success['data'];
 
-
+$payPrice = $pay_success_data['payPrice'];
+$goodsName = $pay_success_data['goodsName'];
+$payTime = $pay_success_data['leftPayTime'];
+$lvGoodsName = $pay_success_data['lvGoodsName'];
+$orderCode = $pay_success_data['orderCode'];
 
 ?>

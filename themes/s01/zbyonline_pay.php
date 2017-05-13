@@ -109,7 +109,6 @@ if(!defined('IN_CLOOTA')) {
     <input type="hidden" name="payPrice" id="payPrice" value="<?=$payPrice?>">
 </form>
 
-
 <!--  foot  start -->
 <?include 'foot.php'?>
 <!--  foot  end -->
@@ -214,11 +213,13 @@ if(!defined('IN_CLOOTA')) {
                     data = $.trim(data);
 //                alert(data.length);
 //                alert(data);
-                    if(data == 'false'){
-                        window.location.href = "/zhoubianyou/zbyorder_detail-" + <?=$orderCode;?> +".html";
-                    } else{
-                        window.location.href = "/zhoubianyou/zbyorder_detail-" + <?=$orderCode;?> +".html";
+                    var url;
+                    if(data == 'true'){
+                        url= "/zhoubianyou/zbypay_success-" + <?=$orderCode;?> +".html";
+                    } else if(data == 'false'){
+                        url= "/zhoubianyou/zbyyuding_error-" + <?=$orderCode;?> +".html";
                     }
+
                 }
             });
 //            window.location.href = "/zhoubianyou/zbyorder_detail-" + <?//=$orderCode;?>// +".html";
