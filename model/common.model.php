@@ -181,8 +181,49 @@ function get_hot_goods_list($cat_id='0', $limit='2'){
     if($cat_id!='0'){
         $qer = " AND a.`cat_id`='$cat_id' ";
     }
-    $sql = "SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,$limit;";
-
+//    $sql = "SELECT * FROM ( SELECT a.goods_name AS goods_name, a.min_price AS min_price, a.goods_image AS goods_image, a.goods_id AS goods_id, a.goods_type AS goods_type, a.`lv_scenic_id` AS lv_scenic_id, a.`market_price` AS market_price FROM `t_goods_thread` a WHERE a.`is_hot` = '1' AND a.`is_sale` = 1 AND a.goods_type = 1 UNION SELECT tg.goods_name AS goods_name, MIN(sku.lv_b2b_price) AS min_price, img.lv_img_url AS goods_image, tg.lv_product_id AS goods_id, tg.goods_type AS goods_type, tg.lv_scenic_id AS lv_scenic_id, sku.lv_market_price AS market_price FROM t_goods_sku sku LEFT JOIN t_goods_thread tg ON tg.lv_product_id = sku.goods_id LEFT JOIN t_goods_image img ON img.lv_product_id = tg.lv_product_id WHERE sku.lv_good_status = 'true' AND sku.lv_product_status = 'true' AND tg.goods_type = 4 AND tg.is_hot = '1' ) AS aaa ORDER BY goods_id DESC LIMIT 0,$limit;";
+    $sql = "SELECT
+	*
+FROM
+	(
+		SELECT
+			a.goods_name AS goods_name,
+			a.min_price AS min_price,
+			a.goods_image AS goods_image,
+			a.goods_id AS goods_id,
+			a.goods_type AS goods_type,
+			a.`lv_product_id` AS lv_scenic_id,
+			a.`market_price` AS market_price
+		FROM
+			`t_goods_thread` a
+		WHERE
+			a.`is_hot` = '1'
+		AND a.`is_sale` = 1
+		AND a.goods_zone = 1
+ 		AND a.min_price > 0
+		AND a.serach_flag = 1
+		UNION
+			SELECT
+				tg.goods_name AS goods_name,
+				tg.min_ticket_price AS min_price,
+				tg.goods_image AS goods_image,
+				tg.lv_product_id AS goods_id,
+				tg.goods_type AS goods_type,
+				tg.lv_scenic_id AS lv_scenic_id,
+				tg.market_price AS market_price
+			FROM
+				t_goods_thread tg
+			WHERE
+			tg.goods_type = 4
+			AND tg.is_hot = '1'
+			AND tg.serach_flag = 1
+			AND tg.is_sale = 1
+			AND tg.min_ticket_price >0
+	) AS aaa
+ORDER BY
+	goods_id DESC
+LIMIT 0,$limit;";
+//    echo $sql;
     return $db->get_all($sql);
 }
 
