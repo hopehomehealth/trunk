@@ -619,33 +619,35 @@
                 $hot_goods = get_hot_goods_list('0', 5);
                 if (notnull($hot_goods)) {
                     foreach ($hot_goods as $val) {
+                        if(!empty($val['goods_id']) && !empty($val['lv_scenic_id'])) {
 //                        var_dump($hot_goods);
-                        $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
+                            $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
 
-                        if ($val['goods_type'] == '4') {
-                            $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
-                            $goods_image = $val['goods_image'];
-                        } else if ($val['goods_type'] == '1'){
-                            $href = "/product/detail-" . $val['goods_id']. "-" . $val['lv_scenic_id'] . ".html";
-                            $goods_image = $val['goods_image'];
-                        }
+                            if ($val['goods_type'] == '4') {
+                                $href = "/menpiao/ticket_detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                                $goods_image = $val['goods_image'];
+                            } else if ($val['goods_type'] == '1') {
+                                $href = "/product/detail-" . $val['goods_id'] . "-" . $val['lv_scenic_id'] . ".html";
+                                $goods_image = $val['goods_image'];
+                            }
 
-                        ?>
-                        <li class="">
-                            <a href="<? echo $href; ?>" title="<?= $val['goods_name'] ?>" data-gid="30000817"
-                               target="_blank">
-                                <div class="imgbox"><img src="<?= $goods_image ?>" alt="" class=""></div>
-                                <div class="name"><?= $val['goods_name'] ?></div>
-                                <i title="4星" class="icon ico-stars4">&nbsp;</i>
-                                <div class="yellow-a mt10"><sub>&yen;</sub>
-                                    <span class="num"><?= $val['min_price'] ?> </span> 起
-                                    <div class="zhe-group"><span>省</span> <span
-                                            class="zhe-info">&yen;<?= $val['market_price'] - $val['min_price'] ?></span>
+                            ?>
+                            <li class="">
+                                <a href="<? echo $href; ?>" title="<?= $val['goods_name'] ?>" data-gid="30000817"
+                                   target="_blank">
+                                    <div class="imgbox"><img src="<?= $goods_image ?>" alt="" class=""></div>
+                                    <div class="name"><?= $val['goods_name'] ?></div>
+                                    <i title="4星" class="icon ico-stars4">&nbsp;</i>
+                                    <div class="yellow-a mt10"><sub>&yen;</sub>
+                                        <span class="num"><?= $val['min_price'] ?> </span> 起
+                                        <div class="zhe-group"><span>省</span> <span
+                                                    class="zhe-info">&yen;<?= $val['market_price'] - $val['min_price'] ?></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                        <?
+                                </a>
+                            </li>
+                            <?
+                        }
                     }
                 }
                 ?>
