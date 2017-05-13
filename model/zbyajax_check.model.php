@@ -15,4 +15,6 @@ if(!empty($orderCode) && $flag == 'chk') {
     echo $isChange;
 //var_dump($refund_product);
 }
+if(!empty($orderCode) && $flag == 'chk') {
 
+}

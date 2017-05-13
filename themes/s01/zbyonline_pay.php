@@ -179,7 +179,7 @@ if(!defined('IN_CLOOTA')) {
                 var val = $("#unionall").val();
                 $('.nowPay').show();
                 $('#weChatPay').hide();
-                var t = 900;//倒计时的总秒数
+                var t = <?= $payTime/1000 ?>;//倒计时的总秒数
                 timer = setInterval(function () {
                     showTime(t);
                     t--;
@@ -202,7 +202,26 @@ if(!defined('IN_CLOOTA')) {
         });
         //支付完成
         $('.onlineBtn3').click(function () {
-            window.location.href = "/zhoubianyou/zbyorder_detail-" + <?=$orderCode;?> +".html";
+            $.ajax({
+                type: "POST",
+                url: "/model/zbyajax_check.model.php",
+                data: {
+                    "orderCode": orderCode,
+                    "flag" : 'complete'
+                },
+                async: false,
+                success: function (data) {
+                    data = $.trim(data);
+//                alert(data.length);
+//                alert(data);
+                    if(data == 'false'){
+                        window.location.href = "/zhoubianyou/zbyorder_detail-" + <?=$orderCode;?> +".html";
+                    } else{
+                        window.location.href = "/zhoubianyou/zbyorder_detail-" + <?=$orderCode;?> +".html";
+                    }
+                }
+            });
+//            window.location.href = "/zhoubianyou/zbyorder_detail-" + <?//=$orderCode;?>// +".html";
         });
         //重新选择支付方式
         $('.onlineBtn4').click(function () {
