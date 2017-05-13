@@ -4,7 +4,7 @@ $c_goods_id = req('goodsId');
 
 $goodsId = req('goodsId');
 $productId = req('productId');
-$url = $host . "/travel/interface/zbyV3.2/getZbyGoodsDtailV_3.2?goodsId=" . $goodsId;
+$url = $host . "/travel/interface/zby/v3.2/getZbyGoodsDtail_v3.2?goodsId=" . $goodsId;
 $rst = $db->api_post($url);
 $arr = json_decode($rst, true);
 $data = $arr['data'];
