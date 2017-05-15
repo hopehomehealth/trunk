@@ -289,6 +289,7 @@ if($cmd == 'goods_update'){
 	$goto_transport 	= req('goto_transport');  
 	$back_transport 	= req('back_transport');
 	$before_days	 	= req('before_days');
+	$line_tag			= addslashes(serialize($_POST['line_tag']));
 	// VISA
 	$visa_zone_id		= req('visa_zone_id');
 	$visa_type			= req('visa_type');
@@ -484,7 +485,7 @@ if($cmd == 'goods_update'){
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
 	$goods_cat_key = $db->get_value($sql); 
 	
-	$sql = "UPDATE `t_goods_thread` SET `day_content_v`='$content_day_v',`change_ruler`='$change_ruler',`shop_id`='$shop_id', `cat_id`='$goods_cat_id', `shop_cat_id`='$shop_cat_id', `cat_key`='$goods_cat_key', `goods_name`='$goods_name', `goods_code`='$goods_code', `goods_doc`='$goods_doc', `summary`='$summary', `content`='$goods_content' , `content_day`='$content_day', `price_note`='$price_note', `unprice_note`='$unprice_note', `market_price`='$market_price', `real_price`='$real_price', `stock`='$stock', `ref_price`='$ref_price_txt', `stock`='$stock', `sale_type`='$sale_type', `sale_start`='$sale_start', `sale_end`='$sale_end', `ft`='$ft', `goods_package`='$goods_package', `goods_type`='$goods_type', `goods_zone`='$goods_zone', `src_prov`='$src_prov', `src_city`='$src_city', `dist_prov`='$dist_prov', `dist_city`='$dist_city', `line_days`='$line_days', `line_nights`='$line_nights', `goto_transport`='$goto_transport', `back_transport`='$back_transport', `before_days`='$before_days', `order_note`='$order_note', /*`line_tag`='$line_tag',*/ `visa_zone_id`='$visa_zone_id', `visa_type`='$visa_type', `visa_profile`='$visa_profile', `ship_name`='$ship_name', `ship_line`='$ship_line', `ship_port`='$ship_port', `ship_brand`='$ship_brand', `is_sale`='$is_sale' WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
+	$sql = "UPDATE `t_goods_thread` SET `day_content_v`='$content_day_v',`change_ruler`='$change_ruler',`shop_id`='$shop_id', `cat_id`='$goods_cat_id', `shop_cat_id`='$shop_cat_id', `cat_key`='$goods_cat_key', `goods_name`='$goods_name', `goods_code`='$goods_code', `goods_doc`='$goods_doc', `summary`='$summary', `content`='$goods_content' , `content_day`='$content_day', `price_note`='$price_note', `unprice_note`='$unprice_note', `market_price`='$market_price', `real_price`='$real_price', `stock`='$stock', `ref_price`='$ref_price_txt', `stock`='$stock', `sale_type`='$sale_type', `sale_start`='$sale_start', `sale_end`='$sale_end', `ft`='$ft', `goods_package`='$goods_package', `goods_type`='$goods_type', `goods_zone`='$goods_zone', `src_prov`='$src_prov', `src_city`='$src_city', `dist_prov`='$dist_prov', `dist_city`='$dist_city', `line_days`='$line_days', `line_nights`='$line_nights', `goto_transport`='$goto_transport', `back_transport`='$back_transport', `before_days`='$before_days', `order_note`='$order_note', `line_tag`='$line_tag', `visa_zone_id`='$visa_zone_id', `visa_type`='$visa_type', `visa_profile`='$visa_profile', `ship_name`='$ship_name', `ship_line`='$ship_line', `ship_port`='$ship_port', `ship_brand`='$ship_brand', `is_sale`='$is_sale',`ahead_time`='$ahead_time' WHERE `site_id`='$g_siteid' AND `goods_id`='$goods_id'";
 
 	$db->query($sql);
 	
