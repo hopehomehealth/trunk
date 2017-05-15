@@ -20,13 +20,10 @@ if($now_page<1){
 if(req('kw')!=''){
 	$qer .= " AND ( a.order_code='".req('kw')."' OR a.`goods_name` LIKE '%".req('kw')."%' OR b.`shop_name` LIKE '%".req('kw')."%' OR a.`linker` LIKE '%".req('kw')."%' OR a.mobile='".req('kw')."')";
 }
-if(req('state')!= '' && req('state') != '6' && req('state') != '2'){
+if(req('state')!= '' && req('state') != '6'){
 	$qer .= " AND a.`state`='".req('state')."'";
 }
-if(req('state') == '2'){
-	$flag = "1";
-    $qer .= " AND a.`state`='".req('state')."' AND a.`verify_flag`='" . $flag."'";
-}
+
 if(req('state') == '6'){
 	$flag = "2";
     $qer .= " AND a.`verify_flag`='".$flag."'";
