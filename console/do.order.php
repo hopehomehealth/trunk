@@ -109,7 +109,7 @@ if($cmd == 'order_st'){
     $dataSources = $confirm_data['dataSources'];
     $state1 = $confirm_data['state'];
     $verifyFlag = $confirm_data['verifyFlag'];
-        echo "<script>alert('$verifyFlag');</script>";
+//        echo "<script>alert('$verifyFlag');</script>";
 
     if($confirm['status'] == '0000' && $order_status == '3') {
         echo "<script>alert('确认成功！');</script>";
