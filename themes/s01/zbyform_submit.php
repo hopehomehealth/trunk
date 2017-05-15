@@ -327,7 +327,7 @@ if(!defined('IN_CLOOTA')) {
                             <li>
                                 <label><b>＊</b>姓名：</label>
                                 <input type="text" class="saveHistory" name="bookerName" id="linker" value="<?php if(isset($_POST['bookerName'])){echo $_POST['bookerName'];}?>">
-                                <span class="buyer_nameTips">联系人姓名不能为空！</span>
+                                <span class="buyer_nameTips"></span>
                             </li>
                             <?}?>
                             <?if($taocan['bookerMobile']=='true'){?>
@@ -366,9 +366,14 @@ if(!defined('IN_CLOOTA')) {
                                 if($('#youwan_userName_<?=$i?>').val()==''){
                                     $('.youwan_nameTips_<?=$i?>').show().html('游玩人姓名不能为空').css('color','red');
                                     youwanName_flag_<?=$i?>=0;
-                                }else{
-                                    $('.youwan_nameTips_<?=$i?>').hide();
-                                    youwanName_flag_<?=$i?>=1;
+                                }else if(reg1.test($('#youwan_userName_<?=$i?>').val())){
+                                    $('.youwan_nameTips_<?=$i?>').show();
+                                    $('.youwan_nameTips_<?=$i?>').html('');
+                                    buyerEmail_flag=1;
+                                }else if(!reg1.test($('#youwan_userName_<?=$i?>').val())){
+                                    $('.youwan_nameTips_<?=$i?>').show();
+                                    $('.youwan_nameTips_<?=$i?>').html('请输入正确的姓名！').css('color','red');
+                                    buyerEmail_flag=0;
                                 }
                             });
                             </script>
@@ -383,9 +388,14 @@ if(!defined('IN_CLOOTA')) {
                                 if($('#youwan_userName_<?=$i?>').val()==''){
                                     $('.youwan_nameTips_<?=$i?>').show().html('游玩人姓名不能为空').css('color','red');
                                     youwanName_flag_<?=$i?>=0;
-                                }else{
-                                    $('.youwan_nameTips_<?=$i?>').hide();
-                                    youwanName_flag_<?=$i?>=1;
+                                }else if(reg1.test($('#youwan_userName_<?=$i?>').val())){
+                                    $('.youwan_nameTips_<?=$i?>').show();
+                                    $('.youwan_nameTips_<?=$i?>').html('');
+                                    buyerEmail_flag=1;
+                                }else if(!reg1.test($('#youwan_userName_<?=$i?>').val())){
+                                    $('.youwan_nameTips_<?=$i?>').show();
+                                    $('.youwan_nameTips_<?=$i?>').html('请输入正确的姓名！').css('color','red');
+                                    buyerEmail_flag=0;
                                 }
                             });
                             </script>
@@ -763,11 +773,16 @@ $('#email').blur(function(){
 
 $('#linker').blur(function(){
     if($('#linker').val()==''){
-        $('.buyer_nameTips').show();
+        $('.buyer_nameTips').show().html('联系人邮箱不能为空').css('color','red');
         buyerName_flag=0;
-    }else{
-        $('.buyer_nameTips').hide();
-        buyerName_flag=1;
+    }else if(reg1.test($('#linker').val())){
+        $('.buyer_nameTips').show();
+        $('.buyer_nameTips').html('');
+        buyerEmail_flag=1;
+    }else if(!reg1.test($('#linker').val())){
+        $('.buyer_nameTips').show();
+        $('.buyer_nameTips').html('请输入正确的姓名！').css('color','red');
+        buyerEmail_flag=0;
     }
 });
 $('#mobile').blur(function(){
