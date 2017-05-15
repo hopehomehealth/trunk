@@ -586,11 +586,11 @@
                 元抢购
             </div>
             <div class="box-border aside-qgo">
-                <div class="imgbox"><a href="/product/detail-<?= $fast_buy_goods_one['goods_id'] ?>.html"
+                <div class="imgbox"><a href="/product/detail-<?= $fast_buy_goods_one['goods_id'] ?>-<?= $fast_buy_goods_one['lv_product_id']?>.html"
                                        target="_blank" title="<?= $fast_buy_goods_one['goods_name'] ?>"><img
                             src="/upfiles/<?= $g_siteid ?>/<?= $fast_buy_goods_one['goods_image'] ?>"
                             alt="<?= $fast_buy_goods_one['goods_name'] ?>"></a><i class="home-icon qgo-arr"></i></div>
-                <div class="qgo-info"><a href="/product/detail-<?= $fast_buy_goods_one['goods_id'] ?>.html"
+                <div class="qgo-info"><a href="/product/detail-<?= $fast_buy_goods_one['goods_id'] ?>-<?= $fast_buy_goods_one['lv_product_id']?>.html"
                                          class="qname"
                                          title="<?= $fast_buy_goods_one['goods_name'] ?>"><?= $fast_buy_goods_one['goods_name'] ?></a>
                     <div class="gray-c"><?= show_substr(removehtml($fast_buy_goods_one['summary']), 100) ?></div>
@@ -599,7 +599,7 @@
                         原价：&yen;<?= $fast_buy_goods_one['market_price'] ?></div>
                 </div>
                 <div class="qgo-box"><a class="qgo-btn"
-                                        href="/product/detail-<?= $fast_buy_goods_one['goods_id'] ?>.html">立即抢购</a><sub>&yen;</sub>
+                                        href="/product/detail-<?= $fast_buy_goods_one['goods_id'] ?>-<?= $fast_buy_goods_one['lv_product_id']?>.html">立即抢购</a><sub>&yen;</sub>
                     <span class="num"><?= $fast_buy_goods_one['min_price'] ?></span> 起<i
                         class="home-icon home-zhe"><?= floor($fast_buy_goods_one['min_price'] / $fast_buy_goods_one['market_price'] * 10) ?>
                         折</i></div>
