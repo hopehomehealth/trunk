@@ -152,20 +152,20 @@ if (!defined('IN_CLOOTA')) {
 <!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
 <!--                            <button class="applyRefundBtn">申请退款</button>-->
 <!--                        </div>-->
-<!--                        <!-- //已完成-->-->
-<!--                        <!-- 已支付-已确认-评价 按钮 -->-->
+<!--                        <!-- //已完成-->
+<!--                        <!-- 已支付-已确认-评价 按钮 -->
 <!--                        <div class="orderBtn_hasUse">-->
 <!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
 <!--                            <button onclick="comment_commit()">去评价</button>-->
 <!--                        </div>-->
 <!--                        <!-- //已确认-->-->
-<!--                        <!-- 已支付-已确认-确认回团 按钮 -->-->
+<!--                        <!-- 已支付-已确认-确认回团 按钮 -->
 <!--                        <div class="orderBtn_chupiaozhong">-->
 <!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
 <!--                            <button class="querenhuituanbt">确认回团</button>-->
 <!--                        </div>-->
-<!--                    <!--  //待付款-->-->
-<!--                    <!-- 待支付按钮 -->-->
+<!--                    <!--  //待付款-->
+<!--                    <!-- 待支付按钮 -->
 <!--                    <a class="orderBtn_noPay">-->
 <!--                        <button style="margin-left:360px;" class="zby_cancel">取消订单</button>-->
 <!--                        <button onclick="pay_online()">去支付</button>-->
