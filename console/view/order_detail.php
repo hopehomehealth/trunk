@@ -192,7 +192,7 @@ if (!defined('IN_CLOOTA')) {
                 </form>
 
                 <!--ÉóºËÎ´Í¨¹ý-->
-                <?if($verifyFlag != '1') { ?>
+                <?if($verifyFlag != '2') { ?>
                     <form target="frm" method="post"
                           action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=9"
                           style="float:left;margin-right:10px">

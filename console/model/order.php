@@ -28,7 +28,7 @@ if(req('state') == '2'){
     $qer .= " AND a.`state`='".req('state')."' AND a.`verify_flag`='" . $flag."'";
 }
 if(req('state') == '6'){
-	$flag = "1";
+	$flag = "2";
     $qer .= " AND a.`verify_flag`='".$flag."'";
 }
 
