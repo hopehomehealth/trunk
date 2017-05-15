@@ -31,12 +31,12 @@
 		</div>
 	</div>
 	<!-- 预定订单成功 end-->
-
+<?echo $leftPayTime?>
 <!--去支付表单-->
 <form action="<?=$g_self_domain?>/zhoubianyou/zbyonline_pay-1.html" method="post" id="onlineForm">
     <input type="hidden" name="payPrice" value="<?=$payPrice?>">
     <input type="hidden" name="goodsName" id="goodsName" value="<?=$goodsName?>">
-    <input type="hidden" name="payTime"  value="<?=$leftPayTime?>">
+    <input type="hidden" name="payTime"  value="<?=$payTime?>">
     <input type="hidden" name="lvGoodsName"  value="<?=$lvGoodsName?>">
     <input type="hidden" name="orderCode"  value="<?=$orderCode?>">
 </form>

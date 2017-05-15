@@ -12,8 +12,8 @@ if ($pay_fail['status'] != '0000'){
     exit($pay_fail['msg']);
 }
 $pay_fail_data = $pay_fail['data'];
-
-
+//echo "<pre>";
+//var_dump($pay_fail_data);
 $payPrice = $pay_fail_data['payPrice'];
 $goodsName = $pay_fail_data['goodsName'];
 $payTime = $pay_fail_data['leftPayTime'];
