@@ -127,23 +127,37 @@ if (!defined('IN_CLOOTA')) {
 
                 <div class="orderBtnBox">
                     <?
+                    $count = count($orderOperationList);
+//                    echo $count;
                     foreach ($orderOperationList as $key => $value){
                         ?>
                         <!-- 默认按钮（已取消、退款中。退款成功。退款失败）-->
 
-                        <div class="orderBtn_default">
+                        <div class="orderBtn_default_<?= $count?>">
                             <? if($value == 'bookAgain'){ ?>
-                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
+                            <div class = "buttonClass">
+                            <button  onclick="order_again()">再次预定</button>
+                            </div>
                             <? }else if($value == 'refund'){ ?>
+                            <div class = "buttonClass">
                             <button class="applyRefundBtn">申请退款</button>
+                            </div>
                             <? } else if($value == 'evaluation'){ ?>
+                            <div class = "buttonClass">
                             <button onclick="comment_commit()">去评价</button>
+                            </div>
                             <? } else if($value == 'confirm') { ?>
+                            <div class = "buttonClass">
                             <button class="querenhuituanbt">确认回团</button>
+                            </div>
                             <? }else if($value == 'cancle') { ?>
-                            <button style="margin-left:360px;" class="zby_cancel">取消订单</button>
+                            <div class = "buttonClass">
+                            <button>取消订单</button>
+                            </div>
                             <? }else if($value == 'pay') { ?>
+                            <div class = "buttonClass">
                             <button onclick="pay_online()">去支付</button>
+                            </div>
                             <? }} ?>
                         </div>
                         <!-- //已支付 或者 已确认 并且  当前时间没有到出行日期-->

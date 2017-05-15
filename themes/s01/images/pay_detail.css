@@ -44,7 +44,12 @@
 
 .orderBtnBox{width: 1158px;overflow: hidden;margin-bottom: 50px;}
 .orderBtn_default{width: 1158px;}
-.orderBtn_default button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left: 490px;}
+.orderBtn_default_1 .buttonClass{float: left;}
+.orderBtn_default_2 .buttonClass{float: left;}
+.orderBtn_default_3 .buttonClass{float: left;}
+.orderBtn_default_1 button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left: 490px;}
+.orderBtn_default_2 button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
+.orderBtn_default_3 button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
 
 .orderBtn_success{width: 1158px;}
 .orderBtn_success button{width: 170px;height: 45px;background-color:#1fcc9e;font-size: 20px;text-align: center;line-height:45px;border-radius: 5px;color: #fff;margin-left:160px;}
