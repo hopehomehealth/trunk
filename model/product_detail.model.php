@@ -11,6 +11,16 @@ $data = $arr['data'];
 $scheduling = $data['scheduling'];
 $_SESSION['childPriceInfo'] = $db->to_gbk($data['childPriceInfo']);
 $c_goods_type = $data['goodsType'];
+if($data['srcProv'] == $data['departureCity']){
+    $chufa = $data['departureCity'];
+} else {
+    $chufa = $data['srcProv'].$data['departureCity'];
+}
+if($data['distProv'] == $data['distCity']){
+    $daoda = $data['distCity'];
+} else {
+    $daoda = $data['distProv'].$data['distCity'];
+}
 //»»√≈Õ∆ºˆ
 $pageSize = '6';
 $homePage = '1';
