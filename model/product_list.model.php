@@ -61,6 +61,8 @@ function get_product_list($keyWord)
         if ($product_list['status'] != '0000') {
             exit($product_list['msg']);
         }
+//        echo "<pre>";
+//        var_dump($product_list);
 
 
     }else {
