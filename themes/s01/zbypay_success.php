@@ -45,7 +45,7 @@ if(!defined('IN_CLOOTA')) {
                 <div class="zby_orderSuccess_main2_cont">
                     <ul>
                         <?
-                        $guess_list = get_guess_list(8);
+                        $guess_list = get_guess_list(10);
                         //                var_dump($guess_list);
                         if (notnull($guess_list)) {
                         foreach ($guess_list as $val) {
