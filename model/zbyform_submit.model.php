@@ -1,5 +1,4 @@
 <?
-
 if($_GET['flage']==1){
     $getUrl = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $url_canshu = str_replace('?', '',substr($getUrl,stripos($getUrl, '?')));
@@ -119,7 +118,7 @@ if($flag == 'check'){
      //测试 先传空
      //var_dump($post);die;
      //
-     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zbyV3.2/saveZbyOrder",$post),true),'utf-8','gbk');
+     $dingdan = array_iconv(json_decode($db->api_post("$host/travel/interface/zby/v3.2/saveZbyOrder_v3.2",$post),true),'utf-8','gbk');
      $orderCode = $dingdan['data']['orderCode'];
      if(!empty($orderCode)){
         $goodsName = $dingdan['data']['goodsName'];
