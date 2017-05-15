@@ -120,8 +120,8 @@ textarea {outline: none;}
 .searchMain1_l ul li{width: 148px;height: 25px;line-height: 25px;}
 .searchMain1_l ul li:hover{background-color:#1fcc9e;color: white;}
 
-.searchMain1_c{float: left;width: 315px;height: 26px;line-height: 26px;font-size: 12px;padding-left: 35px}
-.searchMain1_c input{display: block;width: 315px;height: 26px;line-height: 26px;}
+.searchMain1_c{float: left;width: 315px;height: 26px;line-height: 26px;font-size: 12px;padding-left: 10px}
+.searchMain1_c input{display: block;width: 380px;height: 26px;line-height: 26px;}
 .searchMain1_r{position:absolute;right:-180px;top:-2px;width:200px;height: 30px;cursor:pointer;background:url("/themes/s01/images/seach_03.png") no-repeat center center;}
 
 #search_auto{position: absolute;z-index:991;top: 51px;left: 396px;width:400px;overflow: hidden;background-color: white;}
