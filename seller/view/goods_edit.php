@@ -426,7 +426,7 @@ $(document).ready(function(){
         </tr>
         <tr>
 				  <td align="right">游客需在：</td>
-				  <td><input type="time" name="ahead_time" value="<?=$sku['ahead_time']?>"/>
+				  <td><input type="time" name="ahead_time" value="<?=$goods['ahead_time']?>"/>
 					之前预订 </td>
 		</tr>
         <tr>
