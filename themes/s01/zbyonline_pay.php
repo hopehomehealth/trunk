@@ -158,7 +158,7 @@ if(!defined('IN_CLOOTA')) {
                 var val = $("#wxqrcode").val();
                 $.ajax({
                     type: 'post',
-                    url: "/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
+                    url: "<?= $g_self_domain?>/zhoubianyou/zbypay_jump-" + val + "-" + <?=$orderCode;?> + ".html",
                     data: {
                         "val" : val,
                         "payPrice" : payPrice
@@ -215,10 +215,10 @@ if(!defined('IN_CLOOTA')) {
                     data = $.trim(data);
 //                alert(data.length);
                     if(data == 'true'){
-                       var url= "/zhoubianyou/zbypay_success-" + <?= $orderCode ?> +".html";
+                       var url= "<?= $g_self_domain?>/zhoubianyou/zbypay_success-" + <?= $orderCode ?> +".html";
                         window.location.href = url;
                     } else if(data == 'false'){
-                       var url= "/zhoubianyou/zbyyuding_error-" + orderCode +".html";
+                       var url= "<?= $g_self_domain?>/zhoubianyou/zbyyuding_error-" + orderCode +".html";
                         window.location.href = url;
                     }
                 }
@@ -255,10 +255,10 @@ if(!defined('IN_CLOOTA')) {
                     data = $.trim(data);
 //                alert(data.length);
                     if(data == 'true'){
-                        var url= "/zhoubianyou/zbypay_success-" + <?= $orderCode ?> +".html";
+                        var url= "<?= $g_self_domain?>/zhoubianyou/zbypay_success-" + <?= $orderCode ?> +".html";
                         window.location.href = url;
                     } else if(data == 'false'){
-                        var url= "/zhoubianyou/zbyyuding_error-" + orderCode +".html";
+                        var url= "<?= $g_self_domain?>/zhoubianyou/zbyyuding_error-" + orderCode +".html";
                         window.location.href = url;
                     }
                 }
