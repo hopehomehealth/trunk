@@ -21,10 +21,10 @@ if(!defined('IN_CLOOTA')) {
 				<option value="">订单状态</option>
 				<option value="1" <?if(req('state')=='1'){?>selected<?}?>>待付款</option>
 				<option value="2" <?if(req('state')=='2'){?>selected<?}?>>已付款</option>
-				<option value="3" <?if(req('state')=='3'){?>selected<?}?>>待完成</option>
+                <option value="6" <?if(req('state')=='6'){?>selected<?}?>>审核未通过</option>
+				<option value="3" <?if(req('state')=='3'){?>selected<?}?>>已确认</option>
 				<option value="4" <?if(req('state')=='4'){?>selected<?}?>>已完成</option>
 				<option value="5" <?if(req('state')=='5'){?>selected<?}?>>已取消</option>
-				<option value="6" <?if(req('state')=='6'){?>selected<?}?>>审核未通过</option>
 			</select>
 
 			<input type="image" src="static/image/find.gif" class="input_img"/>  
@@ -35,9 +35,9 @@ if(!defined('IN_CLOOTA')) {
 			<tr> 
 				<td><strong>订单号</strong></td>
 				<td><strong>下单时间</strong></td>
-				<td><strong>客户</strong></td>
+<!--				<td><strong>客户</strong></td>-->
 				<td><strong>商家</strong></td> 
-				<td><strong>名称/编码</strong></td> 
+				<td width="30%"><strong>名称/编码</strong></td>
 				<td><strong>出发日期</strong></td> 
 				<td><strong>人数</strong></td> 
 				<td><strong>金额</strong></td> 
@@ -52,7 +52,7 @@ if(!defined('IN_CLOOTA')) {
 			// 订单状态
 			$state = $val['state'];
             $flag =  $val['verify_flag'];
-            if ($flag == '2'){
+            if ($state == '2' && $flag == '2'){
                 $state = '6';
             }
 
@@ -63,7 +63,7 @@ if(!defined('IN_CLOOTA')) {
 			$shop = get_shop_detail_by_id($val['shop_id']); 
 
 			// 客户详情
-			$user = get_user_detail_by_id($val['user_id']); 
+			$user = get_user_detail_by_id($val['user_id']);
 					
 			// SKU
 			$goods_sku = get_goods_sku_by_id($val['sku_id']);
@@ -83,7 +83,7 @@ if(!defined('IN_CLOOTA')) {
 
 				<td><?=$val['addtime']?></td>
 
-				<td><?=$user['account']?></td>
+<!--				<td>--><?//=$user['account']?><!--</td>-->
 
 				<td>
 					<?
