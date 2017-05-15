@@ -127,7 +127,7 @@ if($flag == 'check'){
          $payPrice = $dingdan['data']['payPrice'];
          $peopleNum = $dingdan['data']['peopleNum'];
          $unitPrice = $dingdan['data']['unitPrice'];
-         $lvGoodsName = $dingdan['data']['lvGoodsName'];
+         $lvGoodsName = $dingdan['data']['lvGoodsName']; 
      }
      
 
