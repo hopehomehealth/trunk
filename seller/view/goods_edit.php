@@ -438,9 +438,9 @@ $(document).ready(function(){
         </tr>
         <tr>
 			  <td align="right"><font color="red">*</font> 退改规则：</td>
-			  <td><input type="radio" name="change_ruler" value="UNRETREATANDCHANGE" <?if($sku['change_ruler']=='UNRETREATANDCHANGE'){?>checked<?}?>>
+			  <td><input type="radio" name="change_ruler" value="UNRETREATANDCHANGE" <?if($goods['change_ruler']=='UNRETREATANDCHANGE'){?>checked<?}?>>
 				不可退改
-				<input type="radio" name="change_ruler" value="MANUALCHANGE" <?if($sku['change_ruler']=='MANUALCHANGE'){?>checked<?}?> >
+				<input type="radio" name="change_ruler" value="MANUALCHANGE" <?if($goods['change_ruler']=='MANUALCHANGE'){?>checked<?}?> >
 				人工退改 </td>
 		</tr> 
 	  </table>
