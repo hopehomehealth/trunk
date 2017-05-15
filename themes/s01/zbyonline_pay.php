@@ -231,6 +231,7 @@ if(!defined('IN_CLOOTA')) {
         });
         //微信支付确定按钮
         $('#weChatPay_sure').click(function () {
+            var orderCode = "<?= $orderCode ?>";
             clearInterval(timer);
             $('.nowPay').show();
             $('#weChatPay').hide();
@@ -242,7 +243,26 @@ if(!defined('IN_CLOOTA')) {
                     clearInterval(timer);
                 }
             }, 1000);
-            window.location.href = "/zhoubianyou/zbypay_success-" + <?=$orderCode;?> +".html";
+            $.ajax({
+                type: "POST",
+                url: "/model/zbyajax_check.model.php",
+                data: {
+                    "orderCode": orderCode,
+                    "flag" : 'complete'
+                },
+                async: false,
+                success: function (data) {
+                    data = $.trim(data);
+//                alert(data.length);
+                    if(data == 'true'){
+                        var url= "/zhoubianyou/zbypay_success-" + <?= $orderCode ?> +".html";
+                        window.location.href = url;
+                    } else if(data == 'false'){
+                        var url= "/zhoubianyou/zbyyuding_error-" + orderCode +".html";
+                        window.location.href = url;
+                    }
+                }
+            });
         });
     });
 
