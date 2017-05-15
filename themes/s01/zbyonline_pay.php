@@ -201,6 +201,8 @@ if(!defined('IN_CLOOTA')) {
         });
         //支付完成
         $('.onlineBtn3').click(function () {
+            var orderCode = "<?= $orderCode ?>";
+
             $.ajax({
                 type: "POST",
                 url: "/model/zbyajax_check.model.php",
@@ -212,17 +214,15 @@ if(!defined('IN_CLOOTA')) {
                 success: function (data) {
                     data = $.trim(data);
 //                alert(data.length);
-//                alert(data);
-                    var url;
                     if(data == 'true'){
-                        url= "/zhoubianyou/zbypay_success-" + <?=$orderCode;?> +".html";
+                       var url= "/zhoubianyou/zbypay_success-" + <?= $orderCode ?> +".html";
+                        window.location.href = url;
                     } else if(data == 'false'){
-                        url= "/zhoubianyou/zbyyuding_error-" + <?=$orderCode;?> +".html";
+                       var url= "/zhoubianyou/zbyyuding_error-" + orderCode +".html";
+                        window.location.href = url;
                     }
-
                 }
             });
-//            window.location.href = "/zhoubianyou/zbyorder_detail-" + <?//=$orderCode;?>// +".html";
         });
         //重新选择支付方式
         $('.onlineBtn4').click(function () {

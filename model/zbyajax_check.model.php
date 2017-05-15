@@ -17,6 +17,7 @@ if(!empty($orderCode) && $flag == 'chk') {
 }
 //判断用户是否完成支付
 if(!empty($orderCode) && $flag == 'complete') {
+
     $post2 = array('orderCode' => $orderCode, 'token' => $token);
     $complete = juhecurl($host . "/travel/interface/zby/v3.2/judgeIsPay", $post2, 1);
     $complete = json_decode($complete, true);
