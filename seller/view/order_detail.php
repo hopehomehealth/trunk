@@ -60,7 +60,7 @@ if(!defined('IN_CLOOTA')) {
 		<tr>
 			<td style="text-align:right"><strong>Ãû³Æ/±àÂë£º</strong></td>
 			<td>
-				<a href="preview.php?ac=goods&goods_id=<?=$detail['goods_id']?>" target="_blank"><?=$detail['goods_name']?><br/><?=$detail['goods_code']?></a> 
+				<a href="/product/detail-<?=$detail['goods_id']?>-<?=$detail['lv_product_id']?>.html" target="_blank"><?=$detail['goods_name']?><br/><?=$detail['goods_code']?></a> 
 			</td>
 		</tr>
 

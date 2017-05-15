@@ -79,7 +79,7 @@ if(!defined('IN_CLOOTA')) {
 			</td> 
 
 			<td>
-				<a href="preview.php?ac=goods&goods_id=<?=$val['goods_id']?>" target="_blank"><?=$val['goods_name']?><br/><?=$val['goods_code']?></a> 
+				<a href="/product/detail-<?=$val['goods_id']?>-<?=$val['lv_product_id']?>.html" target="_blank"><?=$val['goods_name']?><br/><?=$val['goods_code']?></a> 
 			</td>
 
 			<td><?=$val['departdate']?></td>
