@@ -52,7 +52,7 @@ if(!defined('IN_CLOOTA')) {
 			// ¶©µ¥×´Ì¬
 			$state = $val['state'];
             $flag =  $val['verify_flag'];
-            if ($flag == '1'){
+            if ($flag == '2'){
                 $state = '6';
             }
 
