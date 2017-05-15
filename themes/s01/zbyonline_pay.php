@@ -198,6 +198,28 @@ if(!defined('IN_CLOOTA')) {
         //微信支付
         $('#weChatPay_close').click(function () {
             $('#weChatPay').hide();
+            var orderCode = "<?= $orderCode ?>";
+
+            $.ajax({
+                type: "POST",
+                url: "/model/zbyajax_check.model.php",
+                data: {
+                    "orderCode": orderCode,
+                    "flag" : 'complete'
+                },
+                async: false,
+                success: function (data) {
+                    data = $.trim(data);
+//                alert(data.length);
+                    if(data == 'true'){
+                        var url= "<?= $g_self_domain?>/zhoubianyou/zbypay_success-" + <?= $orderCode ?> +".html";
+                        window.location.href = url;
+                    } else if(data == 'false'){
+                        var url= "<?= $g_self_domain?>/zhoubianyou/zbyyuding_error-" + orderCode +".html";
+                        window.location.href = url;
+                    }
+                }
+            });
         });
         //支付完成
         $('.onlineBtn3').click(function () {
