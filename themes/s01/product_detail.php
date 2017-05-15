@@ -33,13 +33,13 @@
         <!--            <li class="item"><a href="/youlun/">邮轮</a><span>&gt</span></li>-->
         <!--        --><? // } ?>
         <?
-        if ($c_goods_type == '1' || $c_goods_type == '2') {
+        if ($data['goodsType'] == '1' || $data['goodsType'] == '2') {
             if (notnull($this_parent_catalog)) {
                 $max_level = sizeof($this_parent_catalog) - 1;
                 for ($i = $max_level; $i >= 0; $i--) { //倒序
                     ?>
                     <li class="item"><a
-                            href="<?= $g_domain ?><?= $g_product_type_url[$c_goods_type] ?>/<?= $this_parent_catalog[$i]['cat_key'] ?>/"><?= $this_parent_catalog[$i]['cat_name'] ?></a><span>&gt</span>
+                            href="<?= $g_domain ?><?= $g_product_type_url[$data['goodsType']] ?>/<?= $this_parent_catalog[$i]['cat_key'] ?>/"><?= $this_parent_catalog[$i]['cat_name'] ?></a><span>&gt</span>
                     </li>
                     <?
                     $foot_cat_name = $this_parent_catalog[$i]['cat_name'];
@@ -326,7 +326,7 @@
                 <!-- tabnav -->
                 <ul class="detail-tabnav unsticky">
                     <li class="selected" href="#special"><a href="#special">详细描述</a></li>
-                    <li href="#itinerary" <? if ($c_goods['goods_type'] == '3'){ ?>style="display:none"<? } ?>><a href="#itinerary">行程安排</a>
+                    <li href="#itinerary" <? if ($data['goodsType'] == '3'){ ?>style="display:none"<? } ?>><a href="#itinerary">行程安排</a>
                     </li>
                     <li href="#cost"><a href="#cost">费用说明</a></li>
                     <li href="#infomation"><a href="#infomation">预订须知</a></li>
@@ -341,11 +341,12 @@
                     <!-- 产品亮点 -->
                     <!-- 产品亮点 -->
                     <div class="detail-article">
-                        <div class="detail-h3"><i class="lv-icon ico-h32">&nbsp;</i>详细描述</div>
+                        <div style="font-size: 16px;font-weight: bold;color: #333"><i class="lv-icon ico-h25">&nbsp;</i><i style="margin-left: 12px">详细描述</i></div>
                         <p>
                             <?
-                            $content = stripslashes($c_goods['content']);
-                            $content = str_replace('font-family', '~font-family', $content);
+//                            $content = stripslashes($data['content']);
+//                            $content = str_replace('font-family', '~font-family', $content);
+                            $content = $db->to_gbk($data['content']);
                             echo $content;
                             ?>
                         </p>
@@ -363,8 +364,8 @@
                 </div>
                 <!-- 行程推荐 -->
                 <div id="itinerary" class="toscroll"
-                     <? if ($c_goods['goods_type'] == '3'){ ?>style="display:none"<? } ?>>
-                    <div class="detail-article d-pad no-border">
+                     <? if ($data['goodsType'] == '3'){ ?>style="display:none"<? } ?>>
+                    <div class="detail-article e-pad no-border"><i class="lv-icon ico-h24" style="float: left;margin-right: 12px">&nbsp;</i>
                         <div class="detail-h3"><span class="fl">行程安排</span>
                             <div class="d-print"><a href="javascript:;" class="mr20" style="display: none"><em
                                         class="lv-icon ico-share"></em>分享</a> <a href="javascript:;" class="mr20"
@@ -562,6 +563,7 @@
     var adultmax = '';
     var childmin = '';
     var childmax = '';
+    var whereDiff = '';
     var productId = "<?= $productId ?>";
     var goodsId = "<?= $goodsId ?>";
     var goodsType = "<?=$data['goodsType']?>";
@@ -740,6 +742,7 @@
                 adultmax = $(this).find("input").eq(11).val();
                 childmin = $(this).find("input").eq(12).val();
                 childmax = $(this).find("input").eq(13).val();
+                whereDiff = $(this).find("input").eq(14).val();
                 $.ajax({
                     type: "POST",
                     url: "/model/get_number.model.php",
@@ -848,29 +851,36 @@
     //获取房差
     function count_price() {
         if (isPackage == 'false') {
-            adultNum = $('#adult_num').val();
-            kidNum = $('#kid_num').val();
-            var goodsType = "<?= $data['goodsType']?>";
-            $.ajax({
-                type: "POST",
-                url: "/member/ajax.price.php",
-                data: {
-                    "adultNum": adultNum,
-                    "roomMax": roomMax,
-                    "goodsType": goodsType,
-                    "isPackage": isPackage,
-                    "diffPrice": diffPrice
-                },
-                async: false,
-                success: function (dat) {
-                    $('.fangchajia').html("");
-                    $('.fangchajia').html(dat);
-                    $('.fangchajia').show();
-                    diffPriceNum = $('#diffPrice').val();
-                    var zongjia = adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
-                    $("#orderPrice").html(zongjia);
-                }
-            });
+            if (whereDiff == '1') {
+                adultNum = $('#adult_num').val();
+                kidNum = $('#kid_num').val();
+                var goodsType = "<?= $data['goodsType']?>";
+                $.ajax({
+                    type: "POST",
+                    url: "/member/ajax.price.php",
+                    data: {
+                        "adultNum": adultNum,
+                        "roomMax": roomMax,
+                        "goodsType": goodsType,
+                        "isPackage": isPackage,
+                        "diffPrice": diffPrice
+                    },
+                    async: false,
+                    success: function (dat) {
+                        $('.fangchajia').html("");
+                        $('.fangchajia').html(dat);
+                        $('.fangchajia').show();
+                        diffPriceNum = $('#diffPrice').val();
+                        var zongjia = adultPrice * adultNum + kidPrice * kidNum + diffPrice * diffPriceNum;
+                        $("#orderPrice").html(zongjia);
+                    }
+                });
+            } else {
+                adultNum = $('#adult_num').val();
+                kidNum = $('#kid_num').val();
+                var zongjia = adultPrice * adultNum + kidPrice * kidNum;
+                $("#orderPrice").html(zongjia);
+            }
         } else {
             var fenshu = $('#fenshu').val();
             var zongjia = adultPrice * fenshu;

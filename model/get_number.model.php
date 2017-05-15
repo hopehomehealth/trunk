@@ -5,12 +5,7 @@ function to_gbk($str){
     return mb_convert_encoding($str, 'gbk', 'utf-8');
 }
 $post = array();
-//$post['lvProductId'] = $_POST['productId'];
-//$post['departDate'] = $_POST['departDate'];
-//$post['packageId'] = $_POST['packageId'];
 $post['isPackage'] = $_POST['isPackage'];
-//$post['min'] = $_POST['min'];
-//$post['max'] = $_POST['max'];
 //成人（份数）选购量
 $adultmin = $_POST['adultmin'];
 $adultmax = $_POST['adultmax'];
@@ -29,6 +24,7 @@ if (!isset($_SESSION)){
     session_start();    
 }
 $childPriceInfo = $_SESSION['childPriceInfo'];
+
 ////获取成人允许选购量
 //$url = $host . "/travel/interface/zby/v3.2/getNumberSelection_v3.2";
 //$data = $db->api_post($url, $post);
@@ -58,7 +54,7 @@ if($post['isPackage'] == 'true'){
 
             <a href=\"javascript:void(0);\" class=\"qijia\" style=\"font-size: 12px;\">起价说明</a>
             <div class=\"qijia_tips\">
-                        本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变.
+                        本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变。
             </div>
             </span>";
 } else {
@@ -74,7 +70,7 @@ echo "</select>
 <div class=\"qijia1_tips\">
     <i></i>
     <div>
-        本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变.
+        本起价是指未包含附加服务（如单人房差、保险费等）的基本价格。您最终确认的价格将会随所选出行日、人数及服务项目而改变。
     </div>
 </div>
 <label for=\"\" style=\" padding-left: 25px;\">儿童</label>

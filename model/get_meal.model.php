@@ -31,6 +31,7 @@ foreach ($datas['list'] as $key => $val) {
     $packageNames = to_gbk($db->jiequ(18, $val['packageName']));
     $lvStock = to_gbk($val['skuList']['0']['lvStock']);//库存
     $changeRuler = to_gbk($val['skuList']['0']['changeRuler']);//退改规则
+    $whereDiff = $val['whereDiff'];//是否显示房差，0不显示，1显示
     $adultPrice = to_gbk($val['skuList']['0']['adultPrice']);
     $kidPrice = to_gbk($val['skuList']['0']['kidPrice']);
     $adultNum = to_gbk($val['adultNum']);
@@ -107,6 +108,7 @@ foreach ($datas['list'] as $key => $val) {
                 <input type='hidden' name='adultmax' value='$adultmax'>
                 <input type='hidden' name='childmin' value='$childmin'>
                 <input type='hidden' name='childmax' value='$childmax'>
+                <input type='hidden' name='whereDiff' value='$whereDiff'>
             </li>
         </ul>
         <div class=\"hide_content\">
