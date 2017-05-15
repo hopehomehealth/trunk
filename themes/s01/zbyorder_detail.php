@@ -126,40 +126,50 @@ if (!defined('IN_CLOOTA')) {
 
 
                 <div class="orderBtnBox">
-                    <? if ($bookAgain == '1' && $refund != '1' && $evaluation != '1' && $confirm != '1' && $pay != '1' && $cancle != '1') { ?>
+                    <?
+                    foreach ($orderOperationList as $key => $value){
+                        ?>
                         <!-- 默认按钮（已取消、退款中。退款成功。退款失败）-->
+
                         <div class="orderBtn_default">
-                            <button onclick="order_again()">再次预定</button>
+                            <? if($value == 'bookAgain'){ ?>
+                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
+                            <? }else if($value == 'refund'){ ?>
+                            <button class="applyRefundBtn">申请退款</button>
+                            <? } else if($value == 'evaluation'){ ?>
+                            <button onclick="comment_commit()">去评价</button>
+                            <? } else if($value == 'confirm') { ?>
+                            <button class="querenhuituanbt">确认回团</button>
+                            <? }else if($value == 'cancle') { ?>
+                            <button style="margin-left:360px;" class="zby_cancel">取消订单</button>
+                            <? }else if($value == 'pay') { ?>
+                            <button onclick="pay_online()">去支付</button>
+                            <? }} ?>
                         </div>
-                    <? } else if($bookAgain == '1' && $refund == '1'){ ?>
                         <!-- //已支付 或者 已确认 并且  当前时间没有到出行日期-->
                         <!-- 已支付未确认/已支付已确认 按钮 -->
-                        <div class="orderBtn_chupiaozhong">
-                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
-                            <button class="applyRefundBtn">申请退款</button>
-                        </div>
-                    <? } elseif($bookAgain == '1' && $evaluation == '1'){ ?>
-                        <!-- //已完成-->
-                        <!-- 已支付-已确认-评价 按钮 -->
-                        <div class="orderBtn_hasUse">
-                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
-                            <button onclick="comment_commit()">去评价</button>
-                        </div>
-                    <? } elseif($bookAgain == '1' && $confirm == '1'){ ?>
-                        <!-- //已确认-->
-                        <!-- 已支付-已确认-确认回团 按钮 -->
-                        <div class="orderBtn_chupiaozhong">
-                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>
-                            <button class="querenhuituanbt">确认回团</button>
-                        </div>
-                    <? } elseif($pay == '1' && $cancle == '1'){ ?>
-                    <!--  //待付款-->
-                    <!-- 待支付按钮 -->
-                    <a class="orderBtn_noPay">
-                        <button style="margin-left:360px;" class="zby_cancel">取消订单</button>
-                        <button onclick="pay_online()">去支付</button>
+<!--                        <div class="orderBtn_chupiaozhong">-->
+<!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
+<!--                            <button class="applyRefundBtn">申请退款</button>-->
+<!--                        </div>-->
+<!--                        <!-- //已完成-->-->
+<!--                        <!-- 已支付-已确认-评价 按钮 -->-->
+<!--                        <div class="orderBtn_hasUse">-->
+<!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
+<!--                            <button onclick="comment_commit()">去评价</button>-->
+<!--                        </div>-->
+<!--                        <!-- //已确认-->-->
+<!--                        <!-- 已支付-已确认-确认回团 按钮 -->-->
+<!--                        <div class="orderBtn_chupiaozhong">-->
+<!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
+<!--                            <button class="querenhuituanbt">确认回团</button>-->
+<!--                        </div>-->
+<!--                    <!--  //待付款-->-->
+<!--                    <!-- 待支付按钮 -->-->
+<!--                    <a class="orderBtn_noPay">-->
+<!--                        <button style="margin-left:360px;" class="zby_cancel">取消订单</button>-->
+<!--                        <button onclick="pay_online()">去支付</button>-->
                 </div>
-                <? } ?>
             </div>
         </div>
     </div>
