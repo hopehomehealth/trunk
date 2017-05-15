@@ -158,7 +158,7 @@ if (!defined('IN_CLOOTA')) {
 <!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
 <!--                            <button onclick="comment_commit()">去评价</button>-->
 <!--                        </div>-->
-<!--                        <!-- //已确认-->-->
+<!--                        <!-- //已确认-->
 <!--                        <!-- 已支付-已确认-确认回团 按钮 -->
 <!--                        <div class="orderBtn_chupiaozhong">-->
 <!--                            <button style="margin-left:360px;" onclick="order_again()">再次预定</button>-->
