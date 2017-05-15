@@ -184,7 +184,7 @@ if (!defined('IN_CLOOTA')) {
 
             <?
             if ($state == 2 && $dataSources == '1'){
-            if($verifyFlag != '1') {
+            if($verifyFlag == '0') {
                 ?>
                 <form target="frm" method="post"
                       action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=3"
@@ -193,7 +193,7 @@ if (!defined('IN_CLOOTA')) {
                 </form>
 
                 <!--ÉóºËÎ´Í¨¹ý-->
-                <? } if($verifyFlag != '2') { ?>
+                <? } if($verifyFlag == '0') { ?>
                     <form target="frm" method="post"
                           action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=9"
                           style="float:left;margin-right:10px">
