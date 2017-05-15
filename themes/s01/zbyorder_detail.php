@@ -129,6 +129,7 @@ if (!defined('IN_CLOOTA')) {
                     <?
                     $count = count($orderOperationList);
 //                    echo $count;
+                    if(notnull($orderOperationList)){
                     foreach ($orderOperationList as $key => $value){
                         ?>
                         <!-- 默认按钮（已取消、退款中。退款成功。退款失败）-->
@@ -159,8 +160,10 @@ if (!defined('IN_CLOOTA')) {
                             <div class = "buttonClass">
                             <button onclick="pay_online()">去支付</button>
                             </div>
-                            <? }} ?>
+                            <? } ?>
                         </div>
+                    <?}}?>
+
                         <!-- //已支付 或者 已确认 并且  当前时间没有到出行日期-->
                         <!-- 已支付未确认/已支付已确认 按钮 -->
 <!--                        <div class="orderBtn_chupiaozhong">-->
