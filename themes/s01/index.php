@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>旅游,周边游,景点门票【Bus365旅游】</title>
-    <? include('meta.php'); ?>
+    <? //include('meta.php'); ?>
     <? seo(); ?>
     <? load_mobile('http://' . $g_config['mobile_domain'] . '/'); ?>
 
