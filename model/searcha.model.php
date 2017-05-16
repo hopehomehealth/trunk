@@ -22,9 +22,9 @@ if(!empty($s_liebiao)){
             $jiequ = jiequ($value['goodsName'],54,$kongNum);
             echo '<li title='.($goodsName).'>'.($jiequ).'</li>';
 //            echo '<li title='.$goodsName.'>'.$jiequ.'</li>';
-        }
+        } 
     }
     echo '</ul>';
 }
-
+ 
 ?>
