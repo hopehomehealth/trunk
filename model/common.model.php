@@ -451,7 +451,7 @@ SELECT
 	td.lv_product_id AS goods_id,
 	td.goods_type AS goods_type,
 	td.lv_scenic_id AS lv_scenic_id,
-	td.min_price AS price,
+	td.min_ticket_price AS price,
 	td.goods_image AS image
 	
 FROM
@@ -463,6 +463,7 @@ AND a.`floor_id` = '$floor_id'
 AND td.`site_id` = '$g_siteid'
 AND td.goods_id IS NOT NULL
 AND td.goods_type = 4
+AND td.serach_flag = 1
 GROUP BY
 	td.goods_id
  
@@ -480,9 +481,9 @@ UNION
 	LEFT JOIN t_goods_thread tg ON tg.goods_id = tf.goods_id
 	WHERE
 		tf.site_id = '$g_siteid' AND tf.`floor_id` = '$floor_id' AND tg.`site_id` = '$g_siteid' AND tg.goods_id IS NOT NULL
-		AND tg.goods_zone = 1
+		AND tg.goods_zone = 1  AND tg.serach_flag = 1
 ) m WHERE m.price <> 0 ORDER BY m.`order_id` ASC $ler;";
-//	echo $sql;
+	//echo $sql;die;
 	return $db->get_all($sql);
 }
 
