@@ -13,7 +13,7 @@ $order_code = $arr['orderno'];
 $rst = $db->api_post($url, $arr);
 // 对象转数组
 $output = json_decode($rst, true);
-if ($fail_reason != '') {
+if ($fail_reason !== '') {
     if ($output['status'] == "0000") {
         // 写入驳回理由
         $sql = "UPDATE `t_refund_fee_apply` SET `fail_reason`='$fail_reason',`flag`='3' WHERE `order_code`='$order_code'";
