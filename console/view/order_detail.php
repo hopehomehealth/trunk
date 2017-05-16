@@ -213,18 +213,18 @@ if (!defined('IN_CLOOTA')) {
                 ?>
 
                 <?
-                if ($state == 3) {
+                if ($state == 3 && $dataSources == '1') {
                     ?>
-                    <? if (date('Ymd') >= date('Ymd', strtotime($detail['departdate']))) {
+<!--                    --><?// if (date('Ymd') >= date('Ymd', strtotime($detail['departdate']))) {
                         ?>
                         <form target="frm" method="post"
                               action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=4"
                               style="float:left;margin-right:10px">
-                            <input type="submit" value="完成交易" class="btn"
-                                   onclick="return confirm('确认完成交易吗？请确认是否已回团！！！')">
+                            <input type="submit" value="确认会团" class="btn btn-info"
+                                   onclick="return confirm('确定要确认回团吗？')">
                         </form>
-                        <?
-                    } ?>
+<!--                        --><?//
+//                    } ?>
                     <?
                 }
                 ?>
