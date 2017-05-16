@@ -1,5 +1,5 @@
 <?
-include('do.common.php');
+include('do.common.php'); 
 $arr['orderno'] = $_POST['orderno'];//订单号
 $arr['security'] = md5("098f6bcd4621d373cade4e832627b4f6");//签名
 $url = $host . "/travel/interface/applyReject";//接口地址

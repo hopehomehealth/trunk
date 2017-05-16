@@ -132,7 +132,7 @@ if (!defined('IN_CLOOTA')) {
                                         <? } ?>
                                     <? } ?>
                                 <? } else if ($val['goods_type'] == '1') { ?>
-                                    <? if ($val['flag'] == '0') { ?>
+                                    <? if ($val['flag'] == '0') { ?> 
                                         <span
                                             onclick="dialog_edit('./?cmd=<?= base64_encode('check_refund_status.php') ?>&orderno=<?= $val['order_code'] ?>&modal=true')"
                                             class="btn btn-info btn-small" style="cursor:pointer">ÍË¿î</span>

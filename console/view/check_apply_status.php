@@ -55,7 +55,7 @@ if (!defined('IN_CLOOTA')) {
 <!--        </tr>-->
         <tr>
             <td style="text-align:right"><strong>驳回理由：</strong></td>
-            <td><textarea  placeholder="请填写驳回理由..." style="resize:none;width:300px;height: 100px;margin: 0 auto;;border:solid 1px #ddd;padding:5px 10px;font-size: 12px;"  name="reason"></textarea></td>
+            <td><textarea  placeholder="请填写驳回理由..." style="resize:none;width:300px;height: 100px;margin: 0 auto;;border:solid 1px #ddd;padding:5px 10px;font-size: 12px;"  name="reason"></textarea></td> 
             <td><input type="hidden" name="orderno" value="<?= $arr['orderno'] ?>"></td>
         </tr>
         <tr>

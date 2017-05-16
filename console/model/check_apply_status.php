@@ -4,7 +4,7 @@ if(!defined('IN_CLOOTA')) {
 }
 
 $arr['orderno'] = req('orderno');//¶©µ¥ºÅ
-$orderno = $arr['orderno'];
+$orderno = $arr['orderno']; 
 
 $sql = "SELECT * FROM `t_refund_fee_apply` WHERE `order_code` = '$orderno'";
 $query_row = $db->get_one($sql);
