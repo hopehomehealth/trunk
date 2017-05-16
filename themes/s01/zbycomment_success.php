@@ -14,7 +14,7 @@
 
 <div id="myOrder_mainBox">
     <div id="myOrder_main">
-        <div class="currentPos">当前位置：<a href="">中国公路客票网</a> &gt; <a href = "http://wwwd.bus365.cn/index/order/orders/">我的订单</a> &gt; 点评成功</div>
+        <div class="currentPos">当前位置：<a href="">中国公路客票网</a> &gt; <a href = "<?= $g_bus365_domain?>/index/order/orders/">我的订单</a> &gt; 点评成功</div>
 
         <div class="myOrder_mainContent">
             <div class="myOrder_mainLeft">
