@@ -49,7 +49,7 @@ if(!defined('IN_CLOOTA')) {
             <div class="zbyOrder_main1">
             <br>游玩时间：<?=$tc['departDate']?>
                 <div class="zbyOrder_main1_title" title='<?=$taocan['goodsName']?>'>
-                    <?=jiequ(52,$taocan['goodsName'])?>
+                    <?=jiequ(50,$taocan['goodsName'])?>
                 </div>
                 <div class="zbyOrder_main1Cont">
                     <div class="zbyOrder_main1ContLeft">周边游</div>
@@ -231,7 +231,7 @@ if(!defined('IN_CLOOTA')) {
 
             <div class="zbyOrder_main11">
                 <div class="zbyOrder_main1_title" title='<?=$taocan['goodsName']?>'>
-                    <?=jiequ(52,$taocan['goodsName'])?>
+                    <?=jiequ(50,$taocan['goodsName'])?>
                 </div>
                 <div class="zbyOrder_main1Cont">
                     <div class="zbyOrder_main1ContLeft">周边游</div>
@@ -773,7 +773,7 @@ $('#email').blur(function(){
 
 $('#linker').blur(function(){
     if($('#linker').val()==''){
-        $('.buyer_nameTips').show().html('联系人邮箱不能为空').css('color','red');
+        $('.buyer_nameTips').show().html('联系人姓名不能为空').css('color','red');
         buyerName_flag=0;
     }else if(reg1.test($('#linker').val())){
         $('.buyer_nameTips').show();
