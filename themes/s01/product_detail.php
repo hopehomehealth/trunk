@@ -162,7 +162,7 @@
                     <span class="yellow-a"><i>&yen;</i> <em><?= $data['minPrice'] ?></em><sub> 起</sub></span>
                 </div>
                 <div class="d_row gray-c">
-                    出发地：<span class="gray-b"><?= $db->to_gbk($chufa) ?> </span><br/>
+                    出发地： <span class="gray-b"><?= $db->to_gbk($chufa) ?> </span><br/>
                     目的地： <span class="gray-b"><a
                             title="<?= $db->to_gbk($daoda) ?>"><?= $db->to_gbk($db->jiequ(30, $daoda)) ?></a>  </span><br/>
                     服务商： <span class="gray-b"><?= $db->to_gbk($data['shopName']) ?> </span><br/>
