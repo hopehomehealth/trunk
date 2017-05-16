@@ -485,7 +485,7 @@
 
 //                                                        $goods_image = "/upfiles/$g_siteid/" . $val['goods_image'];
                                                         $goods_image = $val['goods_image'];
-                                                        echo $goods_image;echo 'dsfsdfs';
+//                                                        echo $goods_image;echo 'dsfsdfs';
                                                         $goods_url = get_goods_url($val['cat_key'], $val['goods_id']);
                                                     if($val['goods_type'] == '4'){
                                                         $href = $g_self_domain . "/menpiao/ticket_detail-" . $val['goods_id'] ."-". $val['lv_scenic_id'] . ".html";}else if($val['goods_type'] == '1'){
