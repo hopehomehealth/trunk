@@ -2566,9 +2566,9 @@ a:hover .ico-shopping {
 }
 
 .qijia1_tips {
-    width: 220px;
+    /*width: 220px;*/
     display: none;
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding-top: 10px;
     position: relative;
     box-shadow: 0 2px 0 #e3e3e3;
@@ -2580,6 +2580,7 @@ a:hover .ico-shopping {
     border: solid 1px #cdd5e2;
     color: #333;
     line-height: 1.5;
+    zoom: 1;
     font-size: 12px;
 }
 
