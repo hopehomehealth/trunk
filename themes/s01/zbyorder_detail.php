@@ -154,7 +154,7 @@ if (!defined('IN_CLOOTA')) {
                             </div>
                             <? }else if($value == 'cancle') { ?>
                             <div class = "buttonClass">
-                            <button>取消订单</button>
+                            <button class="zby_cancel">取消订单</button>
                             </div>
                             <? }else if($value == 'pay') { ?>
                             <div class = "buttonClass">
