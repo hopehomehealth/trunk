@@ -202,8 +202,8 @@ if($cmd == 'goods_add'){
 	$sql = "SELECT `cat_key` FROM `t_goods_catalog` WHERE `cat_id`='$goods_cat_id'";
 	$goods_cat_key = $db->get_value($sql);
  
-	$sql = "INSERT INTO `t_goods_thread` (`lv_product_id`,`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`,`data_sources`,`day_content_v`) 
-	VALUES ('$goods_id','$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '1', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft','1','$content_day_v')"; 
+	$sql = "INSERT INTO `t_goods_thread` (`change_ruler`,`ahead_time`,`lv_product_id`,`goods_id`, `site_id`, `shop_id`, `cat_id`, `cat_key`, `goods_name`, `goods_code`, `goods_doc`, `goods_package`, `goods_type`, `goods_zone`, `src_prov`, `src_city`, `dist_prov`, `dist_city`, `line_days`, `line_nights`, `goto_transport`, `back_transport`, `before_days`, `order_note`, `line_tag`, `visa_zone_id`, `visa_type`, `visa_profile`, `ship_name`, `ship_line`, `ship_port`, `ship_brand`, `price_note`, `unprice_note`, `goods_image`, `summary`, `content`, `content_day`, `market_price` , `real_price`, `stock`, `ref_price`, `sale_type`, `sale_start`, `sale_end`, `is_hot` , `order_id`, `sale_number`, `is_sale`, `clicks` , `addtime`, `ft`,`data_sources`,`day_content_v`) 
+	VALUES ('$change_ruler','$ahead_time','$goods_id','$goods_id', '$g_siteid', '$shop_id', '$goods_cat_id', '$goods_cat_key', '$goods_name', '$goods_code', '$goods_doc', '$goods_package', '$goods_type', '1', '$src_prov', '$src_city', '$dist_prov', '$dist_city', '$line_days', '$line_nights', '$goto_transport', '$back_transport', '$before_days', '$order_note', '$line_tag', '$visa_zone_id', '$visa_type', '$visa_profile', '$ship_name', '$ship_line', '$ship_port', '$ship_brand', '$price_note', '$unprice_note', '$goods_image', '$summary', '$goods_content', '$content_day', '$market_price', '$real_price', '$stock', '$ref_price_txt', '$sale_type', '$sale_start', '$sale_end', '$is_hot', '$order_id', '$sale_number', '$is_sale', '$clicks', '$addtime', '$ft','1','$content_day_v')"; 
 	$db->query($sql);
 
 	//Ì×²ÍÌí¼Ó
@@ -230,11 +230,11 @@ if($cmd == 'goods_add'){
 				$last_sku_id = $db->get_value($sql);
 				if($last_sku_id!=''){
 					
-					$sql = "UPDATE `t_goods_sku` SET `change_ruler`='$change_ruler',`adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
+					$sql = "UPDATE `t_goods_sku` SET `change_ruler`='$change_ruler',`adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `lv_stock`='$sum_stock', `kid_stock`='$kid_stock',`adult_stock`='$adult_stock', `lv_market_price`='$lv_market_price' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
 					$db->query($sql); 
 				} else { 
 
-					$sql = "INSERT INTO `t_goods_sku` (`service_type`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`,`lv_stock`,`ahead_day`,`ahead_time`,`change_ruler`) VALUES ('1','$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$package_id','$sum_stock','$before_days','$ahead_time','$change_ruler')"; 
+					$sql = "INSERT INTO `t_goods_sku` (`service_type`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`, `package_id`,`lv_stock`,`ahead_day`,`ahead_time`,`change_ruler`) VALUES ('1','$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$adult_stock', '$kid_stock', '$lv_market_price','$package_id','$sum_stock','$before_days','$ahead_time','$change_ruler')"; 
 					$db->query($sql);
 				}
 			}
@@ -514,12 +514,12 @@ if($cmd == 'goods_update'){
 				$last_sku_id = $db->get_value($sql);
 				if($last_sku_id!=''){
 					
-					$sql = "UPDATE `t_goods_sku` SET `change_ruler`='$change_ruler',`adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `adult_stock`='$sum_stock', `kid_stock`='$kid_stock', `lv_market_price`='$lv_market_price',`ahead_day`='$before_days',`ahead_time`='$ahead_time' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
+					$sql = "UPDATE `t_goods_sku` SET `change_ruler`='$change_ruler',`adult_price`='$value', `kid_price`='$kid_price', `diff_price`='$diff_price', `lv_stock`='$sum_stock', `kid_stock`='$kid_stock',`adult_stock`='$adult_stock', `lv_market_price`='$lv_market_price',`ahead_day`='$before_days',`ahead_time`='$ahead_time' WHERE `site_id`='$g_siteid' AND `sku_id`='$last_sku_id'";
 					$db->query($sql);
 
 				} else { 
 
-					$sql = "INSERT INTO `t_goods_sku` (`change_ruler`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `adult_stock`, `kid_stock`, `lv_market_price`,`ahead_day`,`ahead_time`) VALUES ('$change_ruler','$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock', '$lv_market_price','$before_days','$ahead_time')";
+					$sql = "INSERT INTO `t_goods_sku` (`change_ruler`,`site_id`, `goods_id`, `departdate`, `adult_price`, `kid_price`, `diff_price`, `lv_stock`, `kid_stock`,`adult_stock`, `lv_market_price`,`ahead_day`,`ahead_time`) VALUES ('$change_ruler','$g_siteid', '$goods_id', '$key', '$value', '$kid_price', '$diff_price', '$sum_stock', '$kid_stock','$adult_stock','$lv_market_price','$before_days','$ahead_time')";
 					$db->query($sql);
 				}
 			}
