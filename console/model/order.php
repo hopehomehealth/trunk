@@ -31,7 +31,7 @@ if(req('state') == '6'){
 
 $sql = "SELECT a.*,c.lv_scenic_id,c.data_sources FROM t_user_order a, t_shop b, t_goods_thread c WHERE a.shop_id=b.shop_id AND a.lv_product_id=c.lv_product_id AND a.`site_id`='$g_siteid' $qer ORDER BY a.`order_id` DESC ";
 
-/// 查询总数 
+/// 查询总数
 $total_number = $db->get_value("SELECT COUNT(*) FROM ( $sql ) TMP"); 
  
 $sql .= " LIMIT ".(($now_page-1)*$pape_size).", $pape_size";

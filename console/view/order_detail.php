@@ -170,7 +170,7 @@ if (!defined('IN_CLOOTA')) {
         <tr>
             <td style="text-align:right"></td>
             <td>
-                <? if ($state == '1') { ?>
+                <? if ($state == '1' ) { ?>
                     <a href="do.php?cmd=order_close&order_code=<?= $detail['order_code'] ?>"
                        onclick="return confrim('确认取消订单吗？')" class="btn " target="_top"
                        style="float:left;margin-right:10px">取消订单</a>
@@ -189,7 +189,7 @@ if (!defined('IN_CLOOTA')) {
                 ?>
 
                 <?
-                if ($state == 2 && $dataSources == '1') {
+                if ($state == 2 && $dataSources == '1' && $state1 == 2) {
                     if ($verifyFlag == '0') {
                         ?>
                         <form target="frm" method="post"
@@ -220,7 +220,7 @@ if (!defined('IN_CLOOTA')) {
                         <form target="frm" method="post"
                               action="do.php?cmd=order_st&order_code=<?= $detail['order_code'] ?>&order_status=4"
                               style="float:left;margin-right:10px">
-                            <input type="submit" value="确认会团" class="btn btn-info"
+                            <input type="submit" value="确认回团" class="btn btn-info"
                                    onclick="return confirm('确定要确认回团吗？')">
                         </form>
 <!--                        --><?//

@@ -55,7 +55,6 @@ if(!defined('IN_CLOOTA')) {
             if ($state == '2' && $flag == '2'){
                 $state = '6';
             }
-
 			// 联系人详情
 			$traffic = unserialize($val['traffic_snapshot']); 
 
@@ -130,7 +129,7 @@ if(!defined('IN_CLOOTA')) {
 				</td>  
 
 				<td>
-					<a href="<?=url('order_detail.php')?>&order_code=<?=$val['order_code']?>&state1=<?=$val['state']?>&dataSources=<?=$val['data_sources']?>&verifyFlag=<?=$val['verify_flag']?>" target="_top" class="btn btn-small btn-info">详情</a>
+					<a href="<?=url('order_detail.php')?>&order_code=<?=$val['order_code']?>&state=<?=$val['state']?>&dataSources=<?=$val['data_sources']?>&verifyFlag=<?=$val['verify_flag']?>" target="_top" class="btn btn-small btn-info">详情</a>
 
 			</tr> 
 			<?}?>
