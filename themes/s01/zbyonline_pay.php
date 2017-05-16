@@ -233,7 +233,7 @@ if(!defined('IN_CLOOTA')) {
         $('#weChatPay_sure').click(function () {
             var orderCode = "<?= $orderCode ?>";
             clearInterval(timer);
-            $('.nowPay').show();
+            $('.nowPay').hide();
             $('#weChatPay').hide();
             var t = <?= $payTime/1000 ?>;//倒计时的总秒数
             timer = setInterval(function () {
