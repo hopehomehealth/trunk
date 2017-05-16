@@ -2638,13 +2638,13 @@ a:hover .ico-shopping {
 .lv-list .text dd {
 	font-family: "ËÎÌו";
 	line-height: 22px;
-	color: #b7b7b7;
+	color: #999;
 	font-size: 12px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	padding-left: 55px;
 }
 .lv-list .text dd span{
-	color: #777;
+	color: #666;
 }
 
 .lv-list .text td {
