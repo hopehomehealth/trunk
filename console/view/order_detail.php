@@ -189,7 +189,7 @@ if (!defined('IN_CLOOTA')) {
                 ?>
 
                 <?
-                if ($state == 2 && $dataSources == '1' && $state1 == 2) {
+                if ($state == 2 && $dataSources == '1') {
                     if ($verifyFlag == '0') {
                         ?>
                         <form target="frm" method="post"
@@ -212,7 +212,7 @@ if (!defined('IN_CLOOTA')) {
                 }
                 ?>
 
-                <?
+                <?echo $state;echo $dataSources;
                 if ($state == 3 && $dataSources == '1') {
                     ?>
 <!--                    --><?// if (date('Ymd') >= date('Ymd', strtotime($detail['departdate']))) {
