@@ -133,7 +133,7 @@ if($orderStatus == 5 || $orderStatus == 6 || $orderStatus == 7 || $orderStatus =
 	$st = 2;
 }elseif($credenceStatus == 'CREDENCE_NO_SEND' && $orderStatus == 2) {
 	$st = 3;
-}elseif($credenceStatus == 'USED' && $orderStatus == 2){
+}elseif(($credenceStatus == 'USED' && $orderStatus == 2) || $orderStatus == 4){
 	$st = 4;
 }
 $rstatus = req('rstatus');
