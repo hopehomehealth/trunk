@@ -30,10 +30,10 @@ $g_host_root_domain		= 'echinabus.cn';
 $g_host_console			= 'http://'.$_SERVER['HTTP_HOST'].'/console/';
 $g_shop_root_domain		= 'echinabus.cn';
 
-$host 					= 'wwwm.bus365.cn';//api address
-$loginUrl				= 'http://wwwm.bus365.cn/login0';
-$registerUrl			= 'http://wwwm.bus365.cn/user/registerpage/?ismock=0';//注册地址
-$g_bus365_domain        = 'http://wwwm.bus365.cn';
+$host 					= 'mraw.bus365.cn';//api address
+$loginUrl				= 'http://mraw.bus365.cn/login0';
+$registerUrl			= 'http://mraw.bus365.cn/user/registerpage/?ismock=0';//注册地址
+$g_bus365_domain        = 'http://mraw.bus365.cn';
 $g_self_domain			= 'http://travelm.bus365.cn';
 ///-----------------------------------------------// DEBUG模式
 $g_console_debug		= true;
