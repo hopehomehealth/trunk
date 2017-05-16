@@ -212,7 +212,8 @@ if (!defined('IN_CLOOTA')) {
                 }
                 ?>
 
-                <?echo $state;echo $dataSources;
+                <?
+//                echo $state;echo $dataSources;
                 if ($state == 3 && $dataSources == '1') {
                     ?>
 <!--                    --><?// if (date('Ymd') >= date('Ymd', strtotime($detail['departdate']))) {
