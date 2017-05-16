@@ -771,7 +771,7 @@ $('#email').blur(function(){
     }
 });
 
-$('#linker').blur(function(){
+$('#linker').blur(function(){ 
     if($('#linker').val()==''){
         $('.buyer_nameTips').show().html('联系人姓名不能为空').css('color','red');
         buyerName_flag=0;
