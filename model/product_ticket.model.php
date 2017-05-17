@@ -22,26 +22,17 @@ if($_GET['sc']=='asc'){
 
 
 //主题
+
 $zhuti = array_iconv(json_decode($db->api_post($host."/travel/interface/menpiao/getFilterCondition"),true),'utf-8','gbk');
 
-//列表
-if(empty($_GET['keyWord'])){
-	$liebiao = json_decode($db->api_post($host."/travel/interface/menpiao/getTicketGoodsList",$mm),true);
-}
-
 $data['pageSize'] = '10';
-$total = $liebiao['data']['total'];
-	$totalPage = ceil($total/$data['pageSize']);
-	if($totalPage<1){
-		$totalPage = 1;
-	}
+
 $pageNo = 1;
 $nextPage = 2;
 $prePage = 1;
 $data['pageNo'] = strval(1);
 $data['scenicTheme'] = gbk_to_utf8(req('scenicTheme'));//主题
 $data['isHot'] = req('hot');//推荐
-
 
 function jiequ($num,$data){
     if(mb_strlen($data,'gbk')>$num){
@@ -51,9 +42,6 @@ function jiequ($num,$data){
     }
 
 }
-
-
-
 
 if(!empty($_GET['pageNo'])){
 	$data['pageNo'] = strval($_GET['pageNo']);
@@ -66,11 +54,9 @@ $data['keyword'] = gbk_to_utf8(req('keyWord'));
 $keyWord = req('keyWord');
 $data['reqType'] ='web';
 $liebiao = array_iconv(json_decode($db->api_post($host."/travel/interface/menpiao/getTicketGoodsList",$data),true),'utf-8','gbk');
-$total = $liebiao['data']['total'];
-	$totalPage = ceil($total/$data['pageSize']);
-	if($totalPage<1){
-		$totalPage = 1;
-	}
+
+$totalPage = $liebiao['data']['totalPage'];
+
 if($prePage<1){
 	$prePage = 1;
 }
