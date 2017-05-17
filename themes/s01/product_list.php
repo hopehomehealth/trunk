@@ -471,23 +471,22 @@
                                             <dd style="background: url(<?= $tupian;?>) no-repeat 37px 10px;padding-top: 10px;line-height: 15px;"><?= $value['text'] ?>：<span class="mr30"
                                                         title="<? echo $value['desc']; ?>"><? echo zwjiequ(trim($value['desc']), 54); ?></span>
                                                 <br>
-                                                <!--                                        --><?//=$value['text']
-                                                ?><!--:<span class="mr30">--><?//=$value['desc']
-                                                ?><!--</span><br>--></dd>
+                                            </dd>
                                             <?
                                         }
                                     }
                                 } ?>
 
 
-
+                            <? if ($val['aLiData'] != '飞猪自营') {
+                            ?>
                             <dd style="padding-top: 5px;line-height: 13px;background: url(/themes/s01/images/dingwei.png) no-repeat 37px 3px;">
-                                <? if ($val['aLiData'] != '飞猪自营') {
-                                    ?>
+
                                     出发城市：<span class="mr30"><? if($val['srcProv'] == $val['srcCity']) echo $val['srcCity']; else echo $val['srcProv'].$val['srcCity'] ?></span>
-                                <?
-                                } ?>
+
                             </dd>
+                                <?
+                            } ?>
 
                             <dd style="padding-top: 10px;line-height: 13px;background: url(/themes/s01/images/dingwei.png) no-repeat 37px 9px;">
 <!--                                --><?// if ($val['aLiData'] != '飞猪自营') {
@@ -543,7 +542,7 @@
                                 echo $ziyingurl;
                             } ?>" target="_blank" class="btn  btn-sm">查看详情</a>
 <!--                            <div class="count"> </a></div>-->
-                            <?if($val['aLiData'] == '飞猪自营'){ ?><p style="text-align: center;color: #999;line-height: 28px;font-size: 12px;font-weight: bold;">本服务由飞猪提供</p><? } ?>
+                            <?if($val['aLiData'] == '飞猪自营'){ ?><p style="text-align: center;color: #999;line-height: 28px;font-size: 11px;">本服务由飞猪提供</p><? } ?>
                         </div>
                     </div>
                 </div>
