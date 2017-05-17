@@ -52,13 +52,13 @@
 
         /*//·ÖÒ³*/
         .spotList_main2_title {
-            width: 900px;
+            width: 915px;
             height: 36px;
         }
 
         .spotList_main2_title_right {
             float: right;
-            width: 160px;
+            width: 140px;
             height: 35px;
             line-height: 35px;
             font-size: 14px;

@@ -46,7 +46,7 @@ function get_product_list($keyWord)
 //    var_dump($post['keyWord']);
     if (!empty($post['keyword']) ||  $orderby == 'true'){
 
-        $post['pageSize'] = '35';
+        $post['pageSize'] = '10';
         $post['city'] = '';
         $post['city'] = gbk_to_utf8($post['city']);
 //        $post['pageNo'] = req('p');
