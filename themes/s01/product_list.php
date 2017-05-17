@@ -440,13 +440,13 @@
                         } ?>" target="_blank"> <img alt="<?= $val['goodsName'] ?>" src="<?= $goodsImage ?>"
                                     onerror="javascript:this.src='/themes/s01/images/lv_list_default.png' "> </a>
                         <dl class="text">
-                            <dt style="width:480px;height:52px;"><a href="<? if ($val['aLiData'] != '飞猪自营') {
+                            <dt style="width:540px;height:52px;"><a href="<? if ($val['aLiData'] != '飞猪自营') {
                                     echo $ziyingurl;
                                 } else {
                                     echo $goods_url;
                                 } ?>" target="_blank" alt="<?= $val['goodsName']?>" title="<?= $val['goodsName']?>" <? if ($val['is_hot'] == 1){
                                                        ?>style="color:red;font-weight:bold;"<?
-                                } ?>><?=  zwjiequ($val['goodsName'],108) ?></a></dt>
+                                } ?>><?=  zwjiequ($val['goodsName'],126) ?></a></dt>
 
                             <?
                             //                    if(in_array($val['goods_type'],array(1,2,6))){
