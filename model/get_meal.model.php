@@ -150,5 +150,7 @@ foreach ($datas['list'] as $key => $val) {
 //        <dd>3.礼包赠送与否及所赠内容由您入住日期和房型决定</dd>
 //    </dl>
 //</div>";
+
+dfsdfsdfsdf
 ?>
 

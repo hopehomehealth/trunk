@@ -39,7 +39,7 @@
                 for ($i = $max_level; $i >= 0; $i--) { //倒序
                     ?>
                     <li class="item"><a
-                            href="<?= $g_domain ?><?= $g_product_type_url[$data['goodsType']] ?>/<?= $this_parent_catalog[$i]['cat_key'] ?>/"><?= $this_parent_catalog[$i]['cat_name'] ?></a><span>&gt</span>
+                                href="<?= $g_domain ?><?= $g_product_type_url[$data['goodsType']] ?>/<?= $this_parent_catalog[$i]['cat_key'] ?>/"><?= $this_parent_catalog[$i]['cat_name'] ?></a><span>&gt</span>
                     </li>
                     <?
                     $foot_cat_name = $this_parent_catalog[$i]['cat_name'];
@@ -123,7 +123,7 @@
                         </li>
                     </ul>
                 </div>
-<!--                <a class="spotAlbum"><span id="lunbo_pre"></span><span id="lunbo_next"></span></a>-->
+                <!--                <a class="spotAlbum"><span id="lunbo_pre"></span><span id="lunbo_next"></span></a>-->
             </div>
 
             <!-- 价格日历 -->
@@ -164,7 +164,7 @@
                 <div class="d_row gray-c">
                     出发地： <span class="gray-b"><?= $db->to_gbk($chufa) ?> </span><br/>
                     目的地： <span class="gray-b"><a
-                            title="<?= $db->to_gbk($daoda) ?>"><?= $db->to_gbk($db->jiequ(30, $daoda)) ?></a>  </span><br/>
+                                title="<?= $db->to_gbk($daoda) ?>"><?= $db->to_gbk($db->jiequ(30, $daoda)) ?></a>  </span><br/>
                     服务商： <span class="gray-b"><?= $db->to_gbk($data['shopName']) ?> </span><br/>
                     好评率： <span class="gray-b"><?
                         function randomFloat($min = 0, $max = 1)
@@ -240,7 +240,7 @@
             <div class="form-btn">
 			<span style="width: 160px;display: inline-block;">套餐价：
 			<span id="orderPriceYes" style=""> <sub class="yellow-b">&yen;</sub><span
-                    class="form-price yellow-b" id="orderPrice">--</span></span> </span>
+                        class="form-price yellow-b" id="orderPrice">--</span></span> </span>
                 <span id="order_span">
 				<a onclick="order_window()" class="btn btn-lg"
                    id="order_button">开始预订</a>
@@ -303,14 +303,14 @@
                                 }
                                 ?>
                                 <li><a id="pro-like-img" target="_blank" href="<? echo $href; ?>"><img
-                                            src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>"
-                                            class="imgbox"></a>
+                                                src="<?= $goods_image ?>" alt="<?= $val['goods_name'] ?>"
+                                                class="imgbox"></a>
                                     <div class="tname"><a id="pro-like-title" target="_blank"
                                                           href="<? echo $href; ?>"
                                                           title="<?= $val['goods_name']; ?>"><?= jiequ($val['goods_name'], 46); ?></a>
                                     </div>
                                     <div class="yellow-a"><sub>&yen;</sub> <span
-                                            class="font14"><?= $val['min_price'] ?></span> 起/人
+                                                class="font14"><?= $val['min_price'] ?></span> 起/人
                                     </div>
                                 </li>
                                 <?
@@ -344,8 +344,8 @@
                         <div style="font-size: 16px;font-weight: bold;color: #333"><i class="lv-icon ico-h25">&nbsp;</i><i style="margin-left: 12px">详细描述</i></div>
                         <p>
                             <?
-//                            $content = stripslashes($data['content']);
-//                            $content = str_replace('font-family', '~font-family', $content);
+                            //                            $content = stripslashes($data['content']);
+                            //                            $content = str_replace('font-family', '~font-family', $content);
                             $content = $db->to_gbk($data['content']);
                             echo $content;
                             ?>
@@ -368,16 +368,16 @@
                     <div class="detail-article e-pad no-border"><i class="lv-icon ico-h24" style="float: left;margin-right: 12px">&nbsp;</i>
                         <div class="detail-h3"><span class="fl">行程安排</span>
                             <div class="d-print"><a href="javascript:;" class="mr20" style="display: none"><em
-                                        class="lv-icon ico-share"></em>分享</a> <a href="javascript:;" class="mr20"
-                                                                                 style="display: none"><em
-                                        class="lv-icon ico-email"></em>Email 行程</a> <a target="_blank"
-                                                                                       href="javascript:window.print()"><em
-                                        class="lv-icon ico-print"></em> 打印行程</a>
+                                            class="lv-icon ico-share"></em>分享</a> <a href="javascript:;" class="mr20"
+                                                                                     style="display: none"><em
+                                            class="lv-icon ico-email"></em>Email 行程</a> <a target="_blank"
+                                                                                           href="javascript:window.print()"><em
+                                            class="lv-icon ico-print"></em> 打印行程</a>
 
                             </div>
                         </div>
                         <div class="detail-map" style="display: none"><a class="go-bigmap" href="javascript:;"><i
-                                    class="lv-icon ico-map">&nbsp;</i> 大地图找酒店</a></div>
+                                        class="lv-icon ico-map">&nbsp;</i> 大地图找酒店</a></div>
                     </div>
                     <div class="detail-article d-pad no-border">
                         <ul class="detail-daylist">
@@ -398,7 +398,7 @@
                                     ?>
                                     <div class="day1">
                                         <div class="detail-h5"><i
-                                                class="lv-icon ico-day">D<?= $key + 1 ?></i><?= $db->to_gbk($v['title']) ?>
+                                                    class="lv-icon ico-day">D<?= $key + 1 ?></i><?= $db->to_gbk($v['title']) ?>
                                         </div>
                                         <div> <?= nl2br($db->to_gbk($v['content'])) ?> </div>
 
@@ -417,20 +417,20 @@
                                         <div style="clear:both"></div>
                                         <? if ($v['tool']['house'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
-                                                    class="fa fa-building-o"></em>
+                                                        class="fa fa-building-o"></em>
                                                 住宿：<?= $db->to_gbk($v['tool']['house']) ?>
                                             </div>
                                             <?
                                         } ?>
                                         <? if ($v['tool']['food'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
-                                                    class="fa fa-coffee"></em> 用餐：<?= $db->to_gbk($v['tool']['food']) ?>
+                                                        class="fa fa-coffee"></em> 用餐：<?= $db->to_gbk($v['tool']['food']) ?>
                                             </div>
                                             <?
                                         } ?>
                                         <? if ($v['tool']['traffic'] != '') { ?>
                                             <div class="detail-h5" style="float:left;margin-right:50px;"><em
-                                                    class="fa fa-bus"></em> 交通：<?= $db->to_gbk($v['tool']['traffic']) ?>
+                                                        class="fa fa-bus"></em> 交通：<?= $db->to_gbk($v['tool']['traffic']) ?>
                                             </div>
                                             <?
                                         } ?>
@@ -526,7 +526,7 @@
                                                               title="<?= $val['goodsName']; ?>"><?= show_substr($val['goodsName'], 50) ?></a>
                                         </div>
                                         <div class="cYellow">&yen; <span
-                                                class="font20"><?= $val['minPrice'] ?></span>
+                                                    class="font20"><?= $val['minPrice'] ?></span>
                                             <span class="cYellow">起/人</span></div>
                                     </li>
                                     <?
